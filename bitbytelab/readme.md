@@ -1,5 +1,5 @@
 ## Project Description
 
-* [live example](https://learning-zone.github.io/website-templates/gunmetal-portal/)
+* [live example](https:irtiq7.github.io/bitbytelab)
 
-![alt text](https://github.com/learning-zone/Website-Templates/blob/master/assets/Gunmetal.png "Gunmetal")
+![alt text](https://github.com/learning-zone/Website-Templates/blob/master/assets/Gunmetal.png "Bitbytelab")
