@@ -1,5 +1,4 @@
 ## Project Description
 
-* [live example](https:irtiq7.github.io/bitbytelab)
-
-![alt text](https://github.com/learning-zone/Website-Templates/blob/master/assets/Gunmetal.png "Bitbytelab")
+This is my website to share my passion for cutting edge technology and my 
+day to day experiments
