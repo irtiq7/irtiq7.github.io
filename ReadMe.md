@@ -1,3 +1,3 @@
-## Verilog HDL for foundamentals of Digital Design and Verification
+## Personal Blog
 
-This repository consist of verilog codes that come with the Udemy's course Verilog HDL for foundamentals of Digital Design and Verification
+This is my blog to share my passion for cutting edge technology and my day to day experiments
