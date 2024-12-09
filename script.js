@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     const imagePaths = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
-    const colors = ['#f0f8ff', '#ffe4b5', '#98fb98', '#ffb6c1'];
+    const colors = ['#ffb6c1','#f0f8ff', '#ffe4b5', '#98fb98', '#ffb6c1'];
 
     function changeBackground() {
         const currentTime = audio.currentTime;
