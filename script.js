@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (audio.paused) {
             audio.play();
             playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            startBackgroundChange();
         } else {
             audio.pause();
             playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            stopBackgroundChange();
         }
     });
 
@@ -65,34 +67,18 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-    const imagePaths = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
-    const colors = ['#ffb6c1','#f0f8ff', '#ffe4b5', '#98fb98', '#ffb6c1'];
+    const colors = ['#ffb6c1', '#f0f8ff', '#ffe4b5', '#98fb98', '#add8e6', '#ffb6c1', '#f0e68c', '#dda0dd', '#ff6347', '#4682b4'];
+    let backgroundChangeInterval;
 
-    function changeBackground() {
-        const currentTime = audio.currentTime;
-        let index;
-        if (currentTime < 10) {
-            index = 0;
-        } else if (currentTime >= 10 && currentTime < 20) {
-            index = 1;
-        } else if (currentTime >= 20 && currentTime < 30) {
-            index = 2;
-        } else {
-            index = 3;
-        }
-        const imagePath = imagePaths[index];
-        const img = new Image();
-        img.src = imagePath;
-        img.onload = function() {
-            document.body.style.backgroundImage = `url('${imagePath}')`;
-        };
-        img.onerror = function() {
-            document.body.style.backgroundImage = 'none';
-            document.body.style.backgroundColor = colors[index];
-        };
+    function startBackgroundChange() {
+        let colorIndex = 0;
+        backgroundChangeInterval = setInterval(() => {
+            document.body.style.backgroundColor = colors[colorIndex % colors.length];
+            colorIndex++;
+        }, 10000);  // Change background color every 10 seconds
     }
 
-    audio.addEventListener("play", function() {
-        setInterval(changeBackground, 1000);
-    });
+    function stopBackgroundChange() {
+        clearInterval(backgroundChangeInterval);
+    }
 });
