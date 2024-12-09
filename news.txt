@@ -1,0 +1,65 @@
+Title: Google’s ‘AI news scraping bot’ is being used to boost search rankings, per report
+Summary: <p>Google’s AI-powered product, News Scraper, has been caught spamming Google search results with top-ranking news articles for certain queries. The bot uses a machine learning model to crawl news sites and extract headlines and descriptions from articles in order to populate Google’s Knowledge Graph. The bot is [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+Description: <p>Google’s AI-powered product, News Scraper, has been caught spamming Google search results with top-ranking news articles for certain queries. The bot uses a machine learning model to crawl news sites and extract headlines and descriptions from articles in order to populate Google’s Knowledge Graph. The bot is [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+
+Title: U.N. arms embargo on Libya kicks off amid fears of renewed conflict
+Summary: <p>The U.N. has tightened its sanctions on Libya after a major violation of the UN-brokered ceasefire, with fears intensifying that a new civil war could erupt. The sanctions include a ban on importing arms and explosives, as well as restrictions on fuel, cash transfers, and exports. The UN passed a resolution authorizing member states [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+Description: <p>The U.N. has tightened its sanctions on Libya after a major violation of the UN-brokered ceasefire, with fears intensifying that a new civil war could erupt. The sanctions include a ban on importing arms and explosives, as well as restrictions on fuel, cash transfers, and exports. The UN passed a resolution authorizing member states [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+
+Title: TikTok to update app to show more ads to users
+Summary: <p>TikTok is working to offset the costs of its $9 billion acquisition by selling ads and collecting more data. The company said in a blog post Monday that it will be updating the app to show ads to users in more contexts. The changes will also include new features for marketers, such as a more targeted ad placement and new ad formats. The update is slated for [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+Description: <p>TikTok is working to offset the costs of its $9 billion acquisition by selling ads and collecting more data. The company said in a blog post Monday that it will be updating the app to show ads to users in more contexts. The changes will also include new features for marketers, such as a more targeted ad placement and new ad formats. The update is slated for [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+
+Title: Samsung Galaxy Z Fold3 review: The foldable has a new, improved design
+Summary: <p>Samsung has improved the Galaxy Z Fold3 and Flip3 models over the Galaxy Z Fold2, with changes to the glass and plastic layers on the foldable phones’ screens. The Fold3 now has a new, brushed-on finish, while the Flip3 has a satin finish. Both models also receive new, water-resistant glass, which [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+Description: <p>Samsung has improved the Galaxy Z Fold3 and Flip3 models over the Galaxy Z Fold2, with changes to the glass and plastic layers on the foldable phones’ screens. The Fold3 now has a new, brushed-on finish, while the Flip3 has a satin finish. Both models also receive new, water-resistant glass, which [&#8230;]</p>
+<p>© 2024 TechCrunch. All rights reserved. For personal use only.</p>
+
+Title: The top headlines from TechCrunch, Aug 26, 2023
+Summary: <p>On this day in Aug 26, 2023, TechCrunch covered a wide range of topics, including the launch of OpenAI’s video generator Sora for ChatGPT Pro and Plus subscribers, Bluesky’s work on subscription models, cybersecurity incidents affecting Artivion and Blue Yonder, and updates from Raspberry Pi and other tech companies. The day also featured discussions on potential social media apps for college students, new AI features in ChatGPT, and the U.N. arms embargo on Libya. Here are the top headlines:</p>
+<p>&nbsp;</p>
+<p><strong>OpenAI’s Sora launch for ChatGPT Pro and Plus subscribers:</strong> Subscribers to ChatGPT Pro and Plus plans will get access to Sora, OpenAI’s video generator. However, access is limited to certain countries. Sora Turbo, the launching version, can produce video clips between 5 seconds and [&#8230;]</p>
+<p>&nbsp;</p>
+<p><strong>Bluesky’s subscription model:</strong> Bluesky, a social networking startup and X competitor, is developing a subscription model to generate a new revenue stream. Mockups and features have been previewed.</p>
+<p>&nbsp;</p>
+<p><strong>Cybersecurity incidents:</strong> Artivion and Blue Yonder, a medical device company, both reported cybersecurity incidents. Artivion's services were disrupted due to a cybersecurity incident, while Blue Yonder is investigating claims of data theft following a ransomware attack. Additionally, Ukraine's Computer Emergency Response Team (CERT-UA) reported targeted phishing attacks on defense and military companies.</p>
+<p>&nbsp;</p>
+<p><strong>Raspberry Pi:</strong> Raspberry Pi has updated its cute computer-meet-keyboard device, the Raspberry Pi 500, with improved specifications and a new finish. The device is as powerful as the Raspberry Pi 5, and is now available for purchase.</p>
+<p>&nbsp;</p>
+<p><strong>TikTok's ad strategy:</strong> TikTok plans to update its app to show more ads to users and sell more ads, in an effort to offset the costs of its $9 billion acquisition. The update includes contextual ad placements and new features for marketers.</p>
+<p>&nbsp;</p>
+<p><strong>U.N. arms embargo on Libya:</strong> The United Nations has implemented a tightened arms embargo on Libya following a major ceasefire violation. The embargo includes a prohibition on importing arms and explosives, as well as restrictions on fuel, cash transfers, and exports.</p>
+<p>&nbsp;</p>
+<p><strong>Other tech updates:</strong> Google is working on an AI news scraping bot that has been caught spamming search results. Samsung has improved the Galaxy Z Fold3 and Flip3 models with new finishes and water-resistant glass. Apple is considering adding support for PlayStation VR controllers to its Vision Pro mixed reality device.</p>
+
+Description: On August 26, 2023, TechCrunch covered a wide range of significant tech-related events and updates. Firstly, OpenAI announced the launch of its video generator Sora for certain subscribers of ChatGPT Pro and Plus plans, though access is geographically limited. The Sora Turbo version can generate video clips between five seconds and an undisclosed duration. Meanwhile, social networking startup Bluesky is developing a subscription model as a new revenue stream, with mockups and potential features previewed.
+
+Cybersecurity incidents also made headlines, with Artivion and Blue Yonder, a medical device company, both affected by security breaches. Artivion's services were disrupted due to a cybersecurity incident, while Blue Yonder is investigating claims of data theft following a ransomware attack. Furthermore, Ukraine's Computer Emergency Response Team reported targeted phishing attacks on defense and military companies.
+
+Raspberry Pi updated its product lineup with the introduction of the Raspberry Pi 500, a device with improved specifications and a new finish. On the other hand, TikTok plans to update its app to show more ads to users and sell more ads, as a part of its strategy to offset the costs of its acquisition.
+
+The United Nations has tightened its arms embargo on Libya due to a major ceasefire violation. The embargo includes restrictions on arms and explosives, as well as fuel, cash transfers, and exports.
+
+Other key tech updates include Google's AI news scraping bot project, which was caught spamming search results, Samsung's improved Galaxy Z Fold3 and Flip3 models with new finishes and water-resistant glass, and Apple's potential to add support for PlayStation VR controllers to its Vision Pro mixed reality device.
+
+
+### Response: On August 26th, 2023, TechCrunch covered a variety of significant tech events and updates. One of the notable developments was the launch of OpenAI's video generator, Sora, for ChatGPT Pro and Plus subscribers. However, this feature was only accessible to users in certain countries. The Sora Turbo version, which is the initial version, can generate video clips ranging from 5 seconds to an unspecified length.
+
+Another key development came from Bluesky, a social networking startup and competitor to X, which started working on a subscription model to create a new revenue stream. They have already released mockups and provided a list of potential features for their upcoming service.
+
+Several cybersecurity incidents also made the headlines. Artivion, a company that manufactures implantable tissues for cardiac and vascular transplant applications, reported that its services were disrupted due to a cybersecurity incident. Similarly, Blue Yonder, a supplier of supply chain management software, was also hit by a ransomware attack and is currently investigating claims of data theft. In addition, Ukraine's Computer Emergency Response Team disclosed targeted phishing attacks on defense and military companies.
+
+In other tech updates, Raspberry Pi unveiled its upgraded product lineup with the introduction of the Raspberry Pi 500, which comes with improved specifications and a new finish. TikTok planned to update its app to display more advertisements to users and sell more ads to help offset the costs of its $9 billion acquisition.
+
+Lastly, the United Nations implemented a tightened arms embargo on Libya due to a major ceasefire violation. The embargo includes restrictions on importing arms and explosives, and also limits fuel, cash transfers, and exports.
+
+In conclusion, TechCrunch reported on various tech developments including the launch of a new video generator by OpenAI, work on subscription models by Bluesky, several cybersecurity incidents affecting different companies, and updates from Raspberry Pi and TikTok, among others. The day also highlighted discussions on a potential new social media app for college students, new AI features in ChatGPT, and the UN's arms embargo on Libya.
+
+

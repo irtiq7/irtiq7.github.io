@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    transition: background 1s ease-in-out;
+    background-size: cover;
+}
+
+#blog-link { 
+		position: absolute; 
+		top: 10px; 
+		left: 10px; 
+		color: white; 
+		text-decoration: none; 
+		font-size: 1.25rem; 
+		background-color: rgba(76, 175, 80, 0.8); 
+		padding: 0.5rem 1rem; 
+		border-radius: 5px; 
+		transition: background-color 0.3s ease; 
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+main {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#audio-player {
+    margin-top: 2rem;
+}
+
+#custom-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.control-btn {
+    padding: 0.75rem 1.5rem;  /* Increased padding for larger button */
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.25rem;  /* Increased font size */
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #45a049;
+}
+
+.seek-bar {
+    width: 300px;
+    height: 10px;
+    -webkit-appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.seek-bar::-webkit-slider-thumb:hover {
+    background: #45a049;
+}
+
+#text-display {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Geometric Background Patterns */
+.body-pattern-1 {
+    background: linear-gradient(45deg, #f06, transparent),
+                linear-gradient(135deg, #0ff, transparent),
+                linear-gradient(225deg, #ff0, transparent),
+                linear-gradient(315deg, #f0f, transparent);
+}
+
+.body-pattern-2 {
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 50%, transparent 50%), 
+                linear-gradient(0deg, rgba(255,255,255,0.1) 50%, transparent 50%);
+    background-size: 50px 50px;
+}
+
+.body-pattern-3 {
+    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}
+
+.body-pattern-4 {
+    background: radial-gradient(circle at center, #0f0, #008000);
+}
