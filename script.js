@@ -81,4 +81,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function stopBackgroundChange() {
         clearInterval(backgroundChangeInterval);
     }
+
+    // Add event listener for the tweet button
+    document.getElementById('tweet-link').addEventListener('click', function() {
+        const audioSrc = document.getElementById('audio').src;
+        const tweetText = `Check out this audio news: ${audioSrc}`;
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+        window.open(tweetUrl, '_blank');
+    });
 });

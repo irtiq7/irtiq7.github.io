@@ -12,17 +12,36 @@ body {
     background-size: cover;
 }
 
-#blog-link { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
+#button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#blog-link, #tweet-link { 
     color: white; 
     text-decoration: none; 
     font-size: 1.25rem; 
-    background-color: rgba(76, 175, 80, 0.8); 
     padding: 0.5rem 1rem; 
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
+    margin-right: 10px;
+}
+
+#blog-link {
+    background-color: rgba(76, 175, 80, 0.8); 
+}
+
+#tweet-link {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#blog-link:hover {
+    background-color: rgba(76, 175, 80, 1); 
+}
+
+#tweet-link:hover {
+    background-color: rgba(0, 0, 0, 1);
 }
 
 header {
