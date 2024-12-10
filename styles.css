@@ -13,16 +13,16 @@ body {
 }
 
 #blog-link { 
-		position: absolute; 
-		top: 10px; 
-		left: 10px; 
-		color: white; 
-		text-decoration: none; 
-		font-size: 1.25rem; 
-		background-color: rgba(76, 175, 80, 0.8); 
-		padding: 0.5rem 1rem; 
-		border-radius: 5px; 
-		transition: background-color 0.3s ease; 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.25rem; 
+    background-color: rgba(76, 175, 80, 0.8); 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
 }
 
 header {
@@ -134,4 +134,24 @@ main {
 
 .body-pattern-4 {
     background: radial-gradient(circle at center, #0f0, #008000);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    .control-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .seek-bar {
+        width: 100%;
+    }
+    #text-display {
+        font-size: 0.9rem;
+    }
 }
