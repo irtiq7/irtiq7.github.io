@@ -5,17 +5,64 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentDate = new Date().toLocaleDateString(undefined, options);
     currentDateElement.textContent = currentDate;
 
-    const audio = document.getElementById("audio");
+    const audioContainer = document.getElementById("audio-container");
     const playPauseBtn = document.getElementById("playPauseBtn");
     const seekBar = document.getElementById("seekBar");
     const currentTimeElem = document.getElementById("currentTime");
     const totalTimeElem = document.getElementById("totalTime");
-    const textDisplay = document.getElementById("text-display");
+    const audioFileNameElement = document.getElementById("audioFileName");
+    let audioElements = [];
+    let currentAudioIndex = 0;
+
+    // Function to load all .wav files dynamically
+    function loadAudioFiles() {
+        const audioFiles = ["news.wav", "news2.wav"]; // Add your .wav files here
+        audioFiles.forEach((file, index) => {
+            const audio = document.createElement("audio");
+            audio.id = `audio${index}`;
+            audio.src = file;
+            audioContainer.appendChild(audio);
+            audioElements.push(audio);
+        });
+    }
+
+    loadAudioFiles();
+
+    function playNextAudio() {
+        if (currentAudioIndex < audioElements.length - 1) {
+            currentAudioIndex++;
+            audioElements[currentAudioIndex].play();
+            updateSeekBar();
+            updateAudioFileName();
+        }
+    }
+
+    function updateSeekBar() {
+        const audio = audioElements[currentAudioIndex];
+        audio.addEventListener("timeupdate", function() {
+            const currentTime = audio.currentTime;
+            const duration = audio.duration;
+            const progress = (currentTime / duration) * 100;
+            seekBar.value = progress;
+            currentTimeElem.textContent = formatTime(currentTime);
+            totalTimeElem.textContent = formatTime(duration);
+        });
+
+        audio.addEventListener("ended", playNextAudio);
+    }
+
+    function updateAudioFileName() {
+        const audio = audioElements[currentAudioIndex];
+        audioFileNameElement.textContent = `Playing: ${audio.src.split('/').pop()}`;
+    }
 
     playPauseBtn.addEventListener("click", function() {
+        const audio = audioElements[currentAudioIndex];
         if (audio.paused) {
             audio.play();
             playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            updateSeekBar();
+            updateAudioFileName();
             startBackgroundChange();
         } else {
             audio.pause();
@@ -24,23 +71,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    audio.addEventListener("timeupdate", function() {
-        const currentTime = audio.currentTime;
-        const duration = audio.duration;
-        const progress = (currentTime / duration) * 100;
-        seekBar.value = progress;
-        currentTimeElem.textContent = formatTime(currentTime);
-        totalTimeElem.textContent = formatTime(duration);
-    });
-
     seekBar.addEventListener("input", function() {
+        const audio = audioElements[currentAudioIndex];
         const duration = audio.duration;
         const seekTime = (seekBar.value / 100) * duration;
         audio.currentTime = seekTime;
     });
 
-    audio.addEventListener("loadedmetadata", function() {
-        totalTimeElem.textContent = formatTime(audio.duration);
+    audioElements.forEach(audio => {
+        audio.addEventListener("loadedmetadata", function() {
+            totalTimeElem.textContent = formatTime(audio.duration);
+        });
     });
 
     function formatTime(seconds) {
@@ -53,10 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.text())
         .then(data => {
             const textLines = data.split('\n');
-            audio.addEventListener("play", function() {
+            audioElements[0].addEventListener("play", function() {
                 let lineIndex = 0;
                 const interval = setInterval(() => {
-                    if (audio.paused || audio.ended) {
+                    if (audioElements[0].paused || audioElements[0].ended) {
                         clearInterval(interval);
                     } else if (lineIndex < textLines.length) {
                         textDisplay.textContent += textLines[lineIndex] + '\n';
@@ -84,9 +125,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add event listener for the tweet button
     document.getElementById('tweet-link').addEventListener('click', function() {
-        const audioSrc = document.getElementById('audio').src;
+        const audioSrc = audioElements[currentAudioIndex].src;
         const tweetText = `Check out this audio news: ${audioSrc}`;
         const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
         window.open(tweetUrl, '_blank');
     });
+
 });
