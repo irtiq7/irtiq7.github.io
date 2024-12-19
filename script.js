@@ -10,86 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const seekBar = document.getElementById("seekBar");
     const currentTimeElem = document.getElementById("currentTime");
     const totalTimeElem = document.getElementById("totalTime");
-    const audioFileNameElement = document.getElementById("audioFileName");
-    let audioElements = [];
-    let currentAudioIndex = 0;
-
-    // Function to load all .wav files dynamically from the daily_news folder
-    function loadAudioFiles() {
-        fetch('daily_news/')
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(data, 'text/html');
-                const audioFiles = Array.from(doc.querySelectorAll('a'))
-                    .map(link => link.href)
-                    .filter(href => href.endsWith('.wav'));
-
-                audioFiles.forEach((file, index) => {
-                    const audio = document.createElement("audio");
-                    audio.id = `audio${index}`;
-                    audio.src = `daily_news/${file}`;
-                    audioContainer.appendChild(audio);
-                    audioElements.push(audio);
-                });
-
-                // Initialize the first audio element
-                if (audioElements.length > 0) {
-                    updateAudioFileName();
-                    updateSeekBar();
-                } else {
-                    console.error("No audio files found in the daily_news folder.");
-                }
-            })
-            .catch(error => {
-                console.error("Error loading audio files:", error);
-            });
-    }
-
-    loadAudioFiles();
-
-    function playNextAudio() {
-        if (currentAudioIndex < audioElements.length - 1) {
-            currentAudioIndex++;
-            audioElements[currentAudioIndex].play();
-            updateSeekBar();
-            updateAudioFileName();
-            changeBackgroundImage();
-        }
-    }
-
-    function updateSeekBar() {
-        const audio = audioElements[currentAudioIndex];
-        audio.addEventListener("timeupdate", function() {
-            const currentTime = audio.currentTime;
-            const duration = audio.duration;
-            const progress = (currentTime / duration) * 100;
-            seekBar.value = progress;
-            currentTimeElem.textContent = formatTime(currentTime);
-            totalTimeElem.textContent = formatTime(duration);
-        });
-
-        audio.addEventListener("ended", playNextAudio);
-    }
-
-    function updateAudioFileName() {
-        const audio = audioElements[currentAudioIndex];
-        audioFileNameElement.textContent = `Playing: ${audio.src.split('/').pop()}`;
-    }
-
-    function changeBackgroundImage() {
-        const images = ['url(image1.jpg)', 'url(image2.jpg)']; // Add your background images here
-        document.body.style.backgroundImage = images[currentAudioIndex % images.length];
-    }
+    const textDisplay = document.getElementById("text-display");
 
     playPauseBtn.addEventListener("click", function() {
         const audio = audioElements[currentAudioIndex];
         if (audio.paused) {
             audio.play();
             playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            updateSeekBar();
-            updateAudioFileName();
-            changeBackgroundImage();
             startBackgroundChange();
         } else {
             audio.pause();
@@ -157,4 +84,5 @@ document.addEventListener("DOMContentLoaded", function() {
         const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
         window.open(tweetUrl, '_blank');
     });
+
 });
