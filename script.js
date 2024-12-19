@@ -14,39 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let audioElements = [];
     let currentAudioIndex = 0;
 
-    // Function to load all .wav files dynamically from the daily_news folder
+    // Function to load all .wav files dynamically
     function loadAudioFiles() {
-        fetch('daily_news/')
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(data, 'text/html');
-                const audioFiles = Array.from(doc.querySelectorAll('a'))
-                    .map(link => link.href)
-                    .filter(href => href.endsWith('.wav'));
-
-                if (audioFiles.length === 0) {
-                    console.error("No audio files found in the daily_news folder.");
-                    return;
-                }
-
-                audioFiles.forEach((file, index) => {
-                    const audio = document.createElement("audio");
-                    audio.id = `audio${index}`;
-                    audio.src = file;
-                    audioContainer.appendChild(audio);
-                    audioElements.push(audio);
-                });
-
-                // Initialize the first audio element
-                if (audioElements.length > 0) {
-                    updateAudioFileName();
-                    updateSeekBar();
-                }
-            })
-            .catch(error => {
-                console.error("Error loading audio files:", error);
-            });
+        const audioFiles = ["news.wav", "news2.wav"]; // Add your .wav files here
+        audioFiles.forEach((file, index) => {
+            const audio = document.createElement("audio");
+            audio.id = `audio${index}`;
+            audio.src = file;
+            audioContainer.appendChild(audio);
+            audioElements.push(audio);
+        });
     }
 
     loadAudioFiles();
