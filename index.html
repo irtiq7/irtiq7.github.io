@@ -16,11 +16,12 @@
         <div class="overlay">
             <header>
                 <h1>Your Daily News using AI for <span id="currentDate"></span></h1>
+                <p id="audioFileName"></p>
             </header>
             <main>
                 <p class="headline"> Please Note: News is generated using AI. There may be mistakes.</p>
                 <div id="audio-player">
-                    <audio id="audio" src="news.wav"></audio>
+                    <div id="audio-container"></div>
                     <div id="custom-controls">
                         <button id="playPauseBtn" class="control-btn"><i class="fas fa-play"></i></button>
                         <input type="range" id="seekBar" value="0" max="100" class="seek-bar">
