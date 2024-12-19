@@ -25,10 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     .map(link => link.href)
                     .filter(href => href.endsWith('.wav'));
 
+                if (audioFiles.length === 0) {
+                    console.error("No audio files found in the daily_news folder.");
+                    return;
+                }
+
                 audioFiles.forEach((file, index) => {
                     const audio = document.createElement("audio");
                     audio.id = `audio${index}`;
-                    audio.src = `daily_news/${file}`;
+                    audio.src = file;
                     audioContainer.appendChild(audio);
                     audioElements.push(audio);
                 });
@@ -37,8 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (audioElements.length > 0) {
                     updateAudioFileName();
                     updateSeekBar();
-                } else {
-                    console.error("No audio files found in the daily_news folder.");
                 }
             })
             .catch(error => {
