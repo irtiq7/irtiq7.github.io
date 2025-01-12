@@ -1,89 +1,159 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Bitbytelab</title>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Bitbytelab</title>
+    <link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            margin: 0;
+            display: flex;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #sidebar {
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #sidebar h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #sidebar p {
+            margin: 10px 0;
+        }
+        #nav {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+        #nav li {
+            margin: 10px 0;
+        }
+        #nav a {
+            color: #99CC33;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: left; /* Align text to the left */
+        }
+        #nav a:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        #content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 50px;
+            background-color: #1e1e1e; /* Dark background for content */
+            color: #e0e0e0; /* Light text color */
+            border-radius: 10px;
+            flex-grow: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+        #content h1, #content h2, #content h3, #content h4 {
+            color: #fff; /* Light text color for headings */
+        }
+        .postdata {
+            font-size: 1em;
+            color: #fff;
+            background-color: #050505;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .highlighted {
+            background-color: #070707;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        a {
+            color: rgb(30, 255, 0); /* Change hyperlink color to red */
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <div id="sidebar">
+        <h1><a href="#">Bitbytelab</a></h1>
+        <p>A place to share my research on robot audition and signal processing.</p>
+        <ul id="nav">
+            <li><a href="https://irtiq7.github.io/blog.html">Home</a></li>
+            <li><a href="https://irtiq7.github.io/publications.html">Publications</a></li>
+            <li><a href="https://irtiq7.github.io/pitch_estimator.html">Pitch Estimator</a></li>
+            <li><a href="https://www.linkedin.com/in/usamasaqib/">CV</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1 class="highlighted"><a href="#" id="intro">Publications</a></h1>
+        <br>
+        <br>
 
-	<div id="sidebar">
-	
-			<h1><a href="#">Bitbytelab</a></h1>
-			
-			<p>
-				A place to share my research on robot audition and signal processing.
-			</p>
-			
-			<ul id="nav">
-			
-					<li><a href="https://irtiq7.github.io/blog.html">Home</a></li>
-					<li><a href="https://irtiq7.github.io/publications.html">Publications</a></li>
-					<li><a href="https://irtiq7.github.io/pitch_estimator.html">Pitch Estimator</a></li>
-					<li><a href="https://www.linkedin.com/in/usamasaqib/">CV</a></li>
-			</ul>
-	
-	</div>
-	
-	<div id="content">
-	
-			<h1 class="first"><a href="#" id="intro">Publications</a></h1>
-			<br>
-			<br>
-
-			<p class="postdata">
-			
-					Posted on 23.JAN.22 by <a href="#">Usama Saqib</a>
-			</p>
-			<p>
-			
-					The following are the conferences and journal I wrote during my Ph.D.
-					<br>
-					
-					<br>
-					<li><b>U. Saqib</b> and J. R. Jensen, "A Machine Learning framework for Acoustic Reflector Mapping, (2024), pp. 1-5 <a href ="https://arxiv.org/pdf/2409.12094">[LINK]</a></li>
-					<br>
-					<br>
-				
-					<li><b>U. Saqib</b>, M. G. Christensen, and J. R. Jensen, "Robust Acoustic Reflector Localization using a modified EM algorithm," EURASIP Journal on Audio, Speech, and Music Processing, 2024. <a href="https://link.springer.com/article/10.1186/s13636-024-00340-y" id="PaperG">[LINK]</a>
-					<br>
-					<br></li>
-				
-					<li><b>U. Saqib</b>, and R. Kerstens, "Perceiving the World With Sound: An Overview to Robot Audition." In M. Mellal (Ed.), Design and Control Advances in Robotics (pp. 30-59). IGI Global. 2023 <a href="https://doi.org/10.4018/978-1-6684-5381-0.ch003" id="PaperH">[LINK]</a>
-					<br>
-					<br></li>
-				
-					<li><b>U. Saqib</b>, and J. R. Jensen, "A Framework for Spatial Map Generation using Acoustic Echoes for Robotic Platforms," Elsevier's Robotics and Autonomous Systems 2021. <a href="https://www.sciencedirect.com/science/article/pii/S0921889021002633" id="PaperF">[LINK]</a>
-					<br>
-					<br></li>
-				
-					<li><b>U. Saqib</b>, A. Deleforge, and J. R. Jensen, "Detecting Acoustic Reflectors using Robot's Ego-Noise", Proc. 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, June 2021. <a href="https://ieeexplore.ieee.org/document/9414061" id="PaperE">[LINK]</a>
-					<br>
-					<br></li>
-
-					<li><b>U. Saqib</b>, and J. R. Jensen, "A model-based approach to acoustic reflector localization with a robotic platform," IEEE/RSJ International Conference on Intelligent Robots and Systems(IROS) Las Vegas, NV, USA, 2020, pp. 4499-4504. <a href="https://ieeexplore.ieee.org/document/9341437" id="PaperD">[LINK]</a>
-					<br>
-					<br></li>
-				
-					<li><b>U. Saqib</b>, S. Gannot, and J. R. Jensen, "Estimation of acoustic echoes using expectation-maximization methods," EURASIP Journal on Audio, Speech, and Music Processing, 2020, 12. <a href="https://link.springer.com/article/10.1186/s13636-020-00179-z" id="PaperC">[LINK]</a>
-					<br>
-					<br></li>
-
-					<li>J. R. Jensen, <b>U. Saqib</b> and S. Gannot, "An Em Method for Multichannel Toa and Doa Estimation of Acoustic Echoes," IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), New Paltz, NY, USA, 2019, pp. 120-124. <a href="https://ieeexplore.ieee.org/document/8937252" id="PaperB">[LINK]</a>
-					<br>
-					<br></li>
-				
-					<li><b>U. Saqib</b> and J. R. Jensen, "Sound-based Distance Estimation for Indoor Navigation in the Presence of Ego Noise, "European Signal Processing Conference (EUSIPCO), A Coruna, Spain, 2019, pp. 1-5. <a href="https://ieeexplore.ieee.org/abstract/document/8902694" id="PaperA">[LINK]</a>
-					<br>
-					<br></li></ul>
-
-
-
-				
-
-		
-			
-			</p>
-			
+        <p class="postdata">
+            Posted on 23.JAN.22 by <a href="#">Usama Saqib</a>
+        </p>
+        <p>
+            The following are the conferences and journal I wrote during my Ph.D.
+            <br>
+            <br>
+            <li><b>U. Saqib</b> and J. R. Jensen, "A Machine Learning framework for Acoustic Reflector Mapping, (2024), pp. 1-5 <a href ="https://arxiv.org/pdf/2409.12094">[LINK]</a></li>
+            <br>
+            <br>
+            <li><b>U. Saqib</b>, M. G. Christensen, and J. R. Jensen, "Robust Acoustic Reflector Localization using a modified EM algorithm," EURASIP Journal on Audio, Speech, and Music Processing, 2024. <a href="https://link.springer.com/article/10.1186/s13636-024-00340-y" id="PaperG">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b>, and R. Kerstens, "Perceiving the World With Sound: An Overview to Robot Audition." In M. Mellal (Ed.), Design and Control Advances in Robotics (pp. 30-59). IGI Global. 2023 <a href="https://doi.org/10.4018/978-1-6684-5381-0.ch003" id="PaperH">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b>, and J. R. Jensen, "A Framework for Spatial Map Generation using Acoustic Echoes for Robotic Platforms," Elsevier's Robotics and Autonomous Systems 2021. <a href="https://www.sciencedirect.com/science/article/pii/S0921889021002633" id="PaperF">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b>, A. Deleforge, and J. R. Jensen, "Detecting Acoustic Reflectors using Robot's Ego-Noise", Proc. 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, June 2021. <a href="https://ieeexplore.ieee.org/document/9414061" id="PaperE">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b>, and J. R. Jensen, "A model-based approach to acoustic reflector localization with a robotic platform," IEEE/RSJ International Conference on Intelligent Robots and Systems(IROS) Las Vegas, NV, USA, 2020, pp. 4499-4504. <a href="https://ieeexplore.ieee.org/document/9341437" id="PaperD">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b>, S. Gannot, and J. R. Jensen, "Estimation of acoustic echoes using expectation-maximization methods," EURASIP Journal on Audio, Speech, and Music Processing, 2020, 12. <a href="https://link.springer.com/article/10.1186/s13636-020-00179-z" id="PaperC">[LINK]</a>
+            <br>
+            <br></li>
+            <li>J. R. Jensen, <b>U. Saqib</b> and S. Gannot, "An Em Method for Multichannel Toa and Doa Estimation of Acoustic Echoes," IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), New Paltz, NY, USA, 2019, pp. 120-124. <a href="https://ieeexplore.ieee.org/document/8937252" id="PaperB">[LINK]</a>
+            <br>
+            <br></li>
+            <li><b>U. Saqib</b> and J. R. Jensen, "Sound-based Distance Estimation for Indoor Navigation in the Presence of Ego Noise, "European Signal Processing Conference (EUSIPCO), A Coruna, Spain, 2019, pp. 1-5. <a href="https://ieeexplore.ieee.org/abstract/document/8902694" id="PaperA">[LINK]</a>
+            <br>
+            <br></li>
+        </p>
+    </div>
 </body>
-</html> 
+</html>

@@ -10,8 +10,8 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #4b4242;
-            color: #333;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
             margin: 0;
             display: flex;
             animation: fadeIn 1s ease-in-out;
@@ -22,13 +22,9 @@
         }
         #sidebar {
             width: 300px;
-            background-color: #333;
+            background-color: #070707;
             color: #fff;
             padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         #sidebar h1 a {
             color: #fff;
@@ -61,20 +57,27 @@
         #content {
             max-width: 800px;
             margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 50px;
+            background-color: #1e1e1e; /* Dark background for content */
+            color: #e0e0e0; /* Light text color */
             border-radius: 10px;
             flex-grow: 1;
             animation: fadeIn 1s ease-in-out;
         }
         #content h1, #content h2, #content h3, #content h4 {
-            color: #333;
+            color: #fff; /* Light text color for headings */
         }
         .postdata {
             font-size: 1em;
             color: #fff;
-            background-color: #0c0c0c;
+            background-color: #050505;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .highlighted {
+            background-color: #070707;
+            color: #fff;
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 20px;
@@ -85,7 +88,7 @@
             border-radius: 10px;
         }
         a {
-            color: #c2650e;
+            color: rgb(30, 255, 0); /* Change hyperlink color to red */
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
         }
@@ -121,7 +124,7 @@
         <a href="https://www.producthunt.com/posts/creative-prompt-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-creative&#0045;prompt&#0045;ai" target="_blank">
             <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=540517&theme=light" alt="Creative&#0032;Prompt&#0032;AI - An&#0032;AI&#0032;software&#0032;to&#0032;use&#0032;open&#0045;source&#0032;LLM&#0032;to&#0032;generate&#0032;images&#0046; | Product Hunt" style="width: 250px; height: 54px;">
         </a>
-        <h2>CreativePromptAI</h2>
+        <h2><b>CreativePromptAI</b></h2>
         <p>A graphical user interface (GUI) to use open-source <strong>text-to-image</strong> large language model (LLM) from <strong>HuggingFace</strong> to generate images.</p>
         <h3>Introducing Creative Prompt AI: Your Ultimate AI-Powered Image Generation and Viewing Tool!</h3>
         <p>Are you ready to revolutionize the way you create and view images? Meet <strong>Creative Prompt AI</strong>, a powerful open-source desktop application designed to make AI image generation and viewing seamless and intuitive. Here's why you need to check it out:</p>
@@ -143,13 +146,13 @@
         <p align="center">
             <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/03.png?raw=true" alt="Creative_Prompt_AI_02">
         </p>
-        <ol>
+        <ul>
             <li><strong>Install Dependencies</strong>: Click the "Install Dependencies" button to set up your environment.</li>
             <li><strong>Copy Model</strong>: Copy model link from <strong>Hugging Face</strong></li>
             <li><strong>Load Model</strong>: Enter the model ID and download path, then click "Load Model" to initialize your AI model. (Note: If you change the model ID or LoRA weights then load the model again).</li>
             <li><strong>Generate Images</strong>: Input your prompt and click "Generate Images" to create a batch of stunning visuals.</li>
             <li><strong>View and Save</strong>: Use the interactive viewer to zoom in/out and save your favorite images.</li>
-        </ol>
+        </ul>
         <h4>Why Choose Creative Prompt AI?</h4>
         <ul>
             <li><strong>User-Friendly Interface</strong>: Designed with simplicity in mind, making it accessible for both beginners and experts.</li>
@@ -173,7 +176,7 @@
         </p>
         <a href="https://github.com/irtiq7/LOCC_Mapper">[LOCC Mapper]</a>: Line of Code and Connectivity (LOCC) Mapper
         Visualize, Analyze, and Map File Relationships in Your Codebase
-        <p>Introducing LOCC Mapper</p>
+        <h2><p>Introducing LOCC Mapper</p></h2>
         <p>The ultimate tool for developers and teams to gain deep insights into their codebases. Whether you're working on a small project or managing a large-scale application, LOCC Mapper is designed to help you understand and optimize your code structure effortlessly.</p>
         <p class="postdata">Posted on 23.JAN.22 by <a href="#">Usama Saqib</a></p>
         <p>Hi there!<br>Welcome to bitbytelab. My name is Usama Saqib. I received my Ph.D. in signal processing in robotics from Aalborg University, Denmark (2021), M.Sc in Embedded Systems Engineering (2015) and a B.Sc in Electrical Engineering (2011). I have a passion for cutting-edge technologies, especially, robotics and signal processing. During my Ph.D., I have authored several research papers and published my findings in several reputed conferences. My thesis is titled <a href="https://vbn.aau.dk/ws/files/528831183/PHD_US.pdf">"Acoustic Echo Estimation using the model-based approach with Application to Spatial Map Construction in Robotics."</a> In this blog, I share my passion for robotics and signal processing.</p>
