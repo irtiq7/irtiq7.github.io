@@ -5,13 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitbytelab</title>
     <link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #4b4242;
+            color: #333;
+            margin: 0;
+            display: flex;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #sidebar {
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #sidebar h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #sidebar p {
+            margin: 10px 0;
+        }
+        #nav {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+        #nav li {
+            margin: 10px 0;
+        }
+        #nav a {
+            color: #99CC33;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: left; /* Align text to the left */
+        }
+        #nav a:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        #content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            flex-grow: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+        #content h1, #content h2, #content h3, #content h4 {
+            color: #333;
+        }
+        .postdata {
+            font-size: 1em;
+            color: #fff;
+            background-color: #0c0c0c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        a {
+            color: #c2650e;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <div id="sidebar">
         <h1><a href="#">Bitbytelab</a></h1>
         <p>A place to share my research on robot audition and signal processing.</p>
         <ul id="nav">
-            <li><img src="https://media.licdn.com/dms/image/v2/C4D03AQHMf6IE-aXO5Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1573825115074?e=1731542400&v=beta&t=ampv_ANrSQxABUMJRtLa6FxMt5WPjl9pX7lOQkv3pwM" alt="Usama" width="150" height="150"></li>
             <li><a href="https://irtiq7.github.io/blog.html">Home</a></li>
             <li><a href="https://irtiq7.github.io/publications.html">Publications</a></li>
             <li><a href="https://irtiq7.github.io/pitch_estimator.html">Pitch Estimator</a></li>
@@ -21,21 +110,22 @@
     <div id="content">
         <h1 class="first"><a href="#" id="intro">TO INFINITY AND BEYOND ...</a></h1>
         <br>
+        <br>
         <p class="postdata">Posted on 14.Dec.24 by <a href="#">Usama Saqib</a></p>
         <p align="center">
-            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/logo.png?raw=true" alt="Creative_Prompt_AI" height="300" width="300">
+            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/logo.png?raw=true" alt="Creative_Prompt_AI" style="width:400px; height:auto;">
         </p>
         <a href="https://simplelister.com/product/creative-prompt-ai-" target="_blank" rel="noopener">
             <img src="https://simplelister.com/launched-badge" alt="SimpleLister Launched Badge" style="width:250px; height:auto;">
         </a>
         <a href="https://www.producthunt.com/posts/creative-prompt-ai?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-creative&#0045;prompt&#0045;ai" target="_blank">
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=540517&theme=light" alt="Creative&#0032;Prompt&#0032;AI - An&#0032;AI&#0032;software&#0032;to&#0032;use&#0032;open&#0045;source&#0032;LLM&#0032;to&#0032;generate&#0032;images&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="100" height="54">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=540517&theme=light" alt="Creative&#0032;Prompt&#0032;AI - An&#0032;AI&#0032;software&#0032;to&#0032;use&#0032;open&#0045;source&#0032;LLM&#0032;to&#0032;generate&#0032;images&#0046; | Product Hunt" style="width: 250px; height: 54px;">
         </a>
         <h2>CreativePromptAI</h2>
         <p>A graphical user interface (GUI) to use open-source <strong>text-to-image</strong> large language model (LLM) from <strong>HuggingFace</strong> to generate images.</p>
         <h3>Introducing Creative Prompt AI: Your Ultimate AI-Powered Image Generation and Viewing Tool!</h3>
         <p>Are you ready to revolutionize the way you create and view images? Meet <strong>Creative Prompt AI</strong>, a powerful open-source desktop application designed to make AI image generation and viewing seamless and intuitive. Here's why you need to check it out:</p>
-        <h4>🚀 Key Features:</h4>
+        <h4>Key Features:</h4>
         <ul>
             <li><strong>Easy Dependency Management</strong>: With a single click, install all necessary dependencies like <code>diffusers</code>, <code>torch</code>, and <code>Pillow</code>. No more hassle with manual installations!</li>
             <li><strong>Model Loading Made Simple</strong>: Load your preferred AI models effortlessly from <strong>HuggingFace</strong>. Just enter the model ID and download path, and let Creative Prompt AI handle the rest. It even supports LoRA weights for enhanced image generation.</li>
@@ -45,13 +135,13 @@
             <li><strong>Progress Tracking</strong>: Stay informed with a real-time progress bar that updates you on the status of your model loading and image generation processes.</li>
             <li><strong>Open Source and Extensible</strong>: Built around the Hugging Face API, Creative Prompt AI allows you to add any model from Hugging Face and incorporate LoRA weights. Customize and extend the tool to fit your unique needs.</li>
         </ul>
-        <h4>🎨 How It Works:</h4>
+        <h4>How It Works:</h4>
         <p><strong>Requirement: Nvidia CUDA Graphic Cards is a must!</strong></p>
         <p align="center">
-            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/02.png?raw=true" alt="Creative_Prompt_AI_01" height="600" width="800">
+            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/02.png?raw=true" alt="Creative_Prompt_AI_01">
         </p>
         <p align="center">
-            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/03.png?raw=true" alt="Creative_Prompt_AI_02" height="600" width="800">
+            <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/03.png?raw=true" alt="Creative_Prompt_AI_02">
         </p>
         <ol>
             <li><strong>Install Dependencies</strong>: Click the "Install Dependencies" button to set up your environment.</li>
@@ -60,14 +150,14 @@
             <li><strong>Generate Images</strong>: Input your prompt and click "Generate Images" to create a batch of stunning visuals.</li>
             <li><strong>View and Save</strong>: Use the interactive viewer to zoom in/out and save your favorite images.</li>
         </ol>
-        <h4>🌟 Why Choose Creative Prompt AI?</h4>
+        <h4>Why Choose Creative Prompt AI?</h4>
         <ul>
             <li><strong>User-Friendly Interface</strong>: Designed with simplicity in mind, making it accessible for both beginners and experts.</li>
             <li><strong>High-Quality Outputs</strong>: Leverage state-of-the-art AI models to produce high-resolution, visually appealing images.</li>
             <li><strong>Versatile Applications</strong>: Ideal for artists, designers, and anyone looking to explore the creative possibilities of AI.</li>
             <li><strong>Community-Driven</strong>: As an open-source project, you can contribute, customize, and enhance the tool to suit your specific needs.</li>
         </ul>
-        <h4>🚀 Future Development Idea:</h4>
+        <h4>Future Development Idea:</h4>
         <ul>
             <li>Add support to include <strong>Image-to-Image</strong> model</li>
             <li>Add support to use <strong>LLM</strong> model for text generation</li>
@@ -78,14 +168,13 @@
         <p><strong>Get Started Today!</strong></p>
         <p class="postdata">Posted on 14.SEPT.24 by <a href="#">Usama Saqib</a></p>
         <p>Hi there!<br>I made a new open-source project called LOOC Mapper. I made this software sometimes ago to help me with my codebase work especially when I am task in designing and rewriting new codes. This software help me understand the structure of my codebase and decice how many lines of code do I need to work on.</p>
-  
-		<p align="center">
-            <img src="https://raw.githubusercontent.com/irtiq7/LOCC_Mapper/main/image/logo.png?raw=true" alt="LOCC_MAPPER" height="500" width="500">
+        <p align="center">
+            <img src="https://raw.githubusercontent.com/irtiq7/LOCC_Mapper/main/image/logo.png" alt="LOCC_MAPPER" style="width:400px; height:auto;">
         </p>
         <a href="https://github.com/irtiq7/LOCC_Mapper">[LOCC Mapper]</a>: Line of Code and Connectivity (LOCC) Mapper
         Visualize, Analyze, and Map File Relationships in Your Codebase
         <p>Introducing LOCC Mapper</p>
-        <p>The ultimate tool for developers and teams to gain deep insights into their codebases. Whether you’re working on a small project or managing a large-scale application, LOCC Mapper is designed to help you understand and optimize your code structure effortlessly.</p>
+        <p>The ultimate tool for developers and teams to gain deep insights into their codebases. Whether you're working on a small project or managing a large-scale application, LOCC Mapper is designed to help you understand and optimize your code structure effortlessly.</p>
         <p class="postdata">Posted on 23.JAN.22 by <a href="#">Usama Saqib</a></p>
         <p>Hi there!<br>Welcome to bitbytelab. My name is Usama Saqib. I received my Ph.D. in signal processing in robotics from Aalborg University, Denmark (2021), M.Sc in Embedded Systems Engineering (2015) and a B.Sc in Electrical Engineering (2011). I have a passion for cutting-edge technologies, especially, robotics and signal processing. During my Ph.D., I have authored several research papers and published my findings in several reputed conferences. My thesis is titled <a href="https://vbn.aau.dk/ws/files/528831183/PHD_US.pdf">"Acoustic Echo Estimation using the model-based approach with Application to Spatial Map Construction in Robotics."</a> In this blog, I share my passion for robotics and signal processing.</p>
         <p class="postdata">Posted on 19.OCT.23 by <a href="#">Usama Saqib</a></p>
@@ -93,11 +182,11 @@
         <p class="postdata">Posted on 14.SEPT.22 by <a href="#">Usama Saqib</a></p>
         <p>Repository for my IROS 2020 paper is available! <a href="https://github.com/irtiq7/iROS2020">[LINK]</a><br>In this work, we proposed an audio processing algorithm that was tested on a proof of concept robotic platform to construct spatial map of an environment using echolocation.</p>
         <p align="center">
-            <img src="https://raw.githubusercontent.com/irtiq7/iROS2020/master/Pictures/robotSetup.jpg" alt="Robotic Platform" width="200">
+            <img src="https://raw.githubusercontent.com/irtiq7/iROS2020/master/Pictures/robotSetup.jpg" alt="Robotic Platform" width="300">
         </p>
         <p>The hardware required to build a similar platform is shown in the image below:</p>
         <p align="center">
-            <img src="https://raw.githubusercontent.com/irtiq7/iROS2020/master/Pictures/robotSetupIntruction.jpg" alt="Hardware Required" width="200">
+            <img src="https://raw.githubusercontent.com/irtiq7/iROS2020/master/Pictures/robotSetupIntruction.jpg" alt="Hardware Required" width="300">
         </p>
     </div>
 </body>
