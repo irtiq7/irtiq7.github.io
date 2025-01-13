@@ -14,6 +14,7 @@
             color: #e0e0e0; /* Light text color */
             margin: 0;
             display: flex;
+            flex-direction: column; /* Stack elements vertically on small screens */
             animation: fadeIn 1s ease-in-out;
         }
         @keyframes fadeIn {
@@ -21,7 +22,7 @@
             to { opacity: 1; }
         }
         #sidebar {
-            width: 300px;
+            width: 100%;
             background-color: #333;
             color: #fff;
             padding: 20px;
@@ -60,10 +61,11 @@
         }
         #content {
             max-width: 800px;
-            margin: 20px;
-            padding: 50px;
+            margin: 20px auto;
+            padding: 20px;
             background-color: #1e1e1e; /* Dark background for content */
             color: #e0e0e0; /* Light text color */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 10px;
             flex-grow: 1;
             animation: fadeIn 1s ease-in-out;
@@ -101,6 +103,14 @@
             text-decoration: underline;
             transform: scale(1.05);
         }
+        @media (min-width: 768px) {
+            body {
+                flex-direction: row; /* Side-by-side layout on larger screens */
+            }
+            #sidebar {
+                width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,9 +125,7 @@
         </ul>
     </div>
     <div id="content">
-        <h1 class="first"><a href="#" id="intro">TO INFINITY AND BEYOND ...</a></h1>
-        <br>
-        <br>
+        <h1 class="highlighted"><a href="#" id="intro">TO INFINITY AND BEYOND ...</a></h1>
         <p class="postdata">Posted on 14.Dec.24 by <a href="#">Usama Saqib</a></p>
         <p align="center">
             <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/logo.png?raw=true" alt="Creative_Prompt_AI" style="width:400px; height:auto;">
@@ -150,13 +158,13 @@
         <p align="center">
             <img src="https://github.com/irtiq7/CreativePromptAI/blob/main/images/03.png?raw=true" alt="Creative_Prompt_AI_02">
         </p>
-        <ul>
+        <ol>
             <li><strong>Install Dependencies</strong>: Click the "Install Dependencies" button to set up your environment.</li>
             <li><strong>Copy Model</strong>: Copy model link from <strong>Hugging Face</strong></li>
             <li><strong>Load Model</strong>: Enter the model ID and download path, then click "Load Model" to initialize your AI model. (Note: If you change the model ID or LoRA weights then load the model again).</li>
             <li><strong>Generate Images</strong>: Input your prompt and click "Generate Images" to create a batch of stunning visuals.</li>
             <li><strong>View and Save</strong>: Use the interactive viewer to zoom in/out and save your favorite images.</li>
-        </ul>
+        </ol>
         <h4>Why Choose Creative Prompt AI?</h4>
         <ul>
             <li><strong>User-Friendly Interface</strong>: Designed with simplicity in mind, making it accessible for both beginners and experts.</li>
