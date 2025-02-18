@@ -152,22 +152,6 @@
         #like-button a i {
             margin-right: 10px;
         }
-        #keyword-form {
-            margin-bottom: 20px;
-        }
-        #keyword-form input {
-            padding: 10px;
-            font-size: 1em;
-            margin-right: 10px;
-        }
-        #keyword-form button {
-            padding: 10px;
-            font-size: 1em;
-            background-color: #00bcd4;
-            border: none;
-            color: #ffffff;
-            cursor: pointer;
-        }
         #chart-container {
             width: 100%;
             max-width: 800px;
@@ -190,10 +174,6 @@
             </header>
             <main>
                 <p class="headline">Please Note: News is generated using AI. There may be mistakes.</p>
-                <form id="keyword-form">
-                    <input type="text" id="keyword-input" placeholder="Enter keyword">
-                    <button type="button" id="add-keyword-btn">Add Keyword</button>
-                </form>
                 <div id="rss-container">
                     <div class="rss-feed">
                         <div class="rss-title">Machine Learning Mastery</div>
@@ -222,8 +202,12 @@
     <script src="script.js"></script>
     <script>
         const showImages = false; // Set to false to hide images
-        const keywords = [];
+        const keywords = ['AI']; // Hardcoded keywords
         const keywordCounts = {};
+
+        keywords.forEach(keyword => {
+            keywordCounts[keyword] = [];
+        });
 
         const rssFeeds = [
             { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' },
@@ -248,24 +232,14 @@
                 })
                 .catch(error => console.error('Error fetching RSS feed:', error));
         });
-document.getElementById('like-link').addEventListener('click', function() {
+
+        document.getElementById('like-link').addEventListener('click', function() {
             const githubProfile = {
                 name: 'irtiq7',
                 link: 'https://github.com/irtiq7'
             };
             localStorage.setItem('githubProfile', JSON.stringify(githubProfile));
             alert('GitHub profile saved!');
-        });
-
-        document.getElementById('add-keyword-btn').addEventListener('click', function() {
-            const keyword = document.getElementById('keyword-input').value.trim();
-            if (keyword && !keywords.includes(keyword)) {
-                keywords.push(keyword);
-                keywordCounts[keyword] = [];
-                alert(`Keyword "${keyword}" added!`);
-                document.getElementById('keyword-input').value = '';
-                updateChart();
-            }
         });
 
         function updateChart() {
@@ -277,7 +251,7 @@ document.getElementById('like-link').addEventListener('click', function() {
                     label: keyword,
                     data: keywordCounts[keyword],
                     borderColor: `hsl(${index * 60}, 100%, 50%)`,
-                    fill: false
+fill: false
                 }))
             };
             new Chart(ctx, {
