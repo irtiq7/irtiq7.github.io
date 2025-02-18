@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI News</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -27,7 +27,7 @@
             font-size: 1.2em;
         }
         #app {
-           ;
+            display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
@@ -175,7 +175,7 @@
             <main>
                 <p class="headline">Please Note: News is generated using AI. There may be mistakes.</p>
                 <div id="chart-container">
-                    <canvas id="keyword-chart"></canvas>
+                    <div id="keyword-chart"></div>
                 </div>
                 <div id="rss-container">
                     <div class="rss-feed">
@@ -202,7 +202,7 @@
     <script src="script.js"></script>
     <script>
         const showImages = false; // Set to false to hide images
-        const keywords = ['Machine Learning']; // Hardcoded keywords
+        const keywords = ['AI', 'Machine Learning', 'Deep Learning']; // Hardcoded keywords
         const keywordCounts = {};
         const newsToDisplay = 5; // Number of news items to display
 
@@ -243,37 +243,28 @@
             alert('GitHub profile saved!');
         });
 
-        function updateChart() {
-            const ctx = document.getElementById('keyword-chart').getContext('2d');
-            const labels = Object.keys(keywordCounts);
-            const data = {
-                labels: labels,
-                datasets: labels.map((keyword, index) => ({
-                    label: keyword,
-		    data: keywordCounts[keyword],
-                    borderColor: `hsl(${index * 60}, 100%, 50%)`,
-                    fill: false
-                }))
-            };
-            new Chart(ctx, {
-                type: 'line',
-                data: data,
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: {
-                            type: 'time',
-                            time: {
-                                unit: 'day'
-                            }
-                        },
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        }
+function updateChart() {
+    const dates = Object.keys(keywordCounts[keywords[0]]);
+    const data = keywords.map((keyword, index) => ({
+        x: dates,
+        y: dates.map(date => keywordCounts[keyword][date] || 0),
+        type: 'scatter',
+        mode: 'lines+markers',
+        name: keyword,
+        line: { color: `hsl(${index * 60}, 100%, 50%)` }
+    }));
+
+    const layout = {
+        title: 'Keyword Frequency Over Time',
+        xaxis: { title: 'Date', type: 'category' }, // Set x-axis type to 'category'
+        yaxis: { title: 'Frequency' },
+        paper_bgcolor: '#121212', // Background color of the entire plot
+        plot_bgcolor: '#121212',  // Background color of the plotting area
+        font: { color: '#ffffff' } // Font color
+    };
+
+    Plotly.newPlot('keyword-chart', data, layout);
+}
 
         function trackKeywordsInFeeds() {
             rssFeeds.forEach(feed => {
