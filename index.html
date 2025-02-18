@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI News</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -36,7 +36,7 @@
             margin-bottom: 20px;
         }
         header h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0;
         }
         header span {
@@ -49,7 +49,7 @@
         }
         #rss-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             width: 100%;
         }
@@ -59,25 +59,49 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .rss-feed ul {
             list-style: none;
             padding: 0;
+            width: 100%;
         }
         .rss-feed li {
             margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .rss-feed a {
             color: #00bcd4;
             text-decoration: none;
+            font-size: 1.1em;
+            text-align: center;
         }
         .rss-feed a:hover {
             text-decoration: underline;
         }
         .rss-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 10px;
             color: #00bcd4;
+            text-align: center;
+        }
+        .rss-summary {
+            font-size: 1em;
+            color: #cccccc;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .rss-image {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
         #audio-player {
             position: fixed;
@@ -150,18 +174,6 @@
                         <div id="rss1"></div>
                     </div>
                     <div class="rss-feed">
-                        <div class="rss-title">MarkTechPost</div>
-                        <div id="rss2"></div>
-                    </div>
-                    <div class="rss-feed">
-                        <div class="rss-title">BAIR Blog</div>
-                        <div id="rss3"></div>
-                    </div>
-                    <div class="rss-feed">
-                        <div class="rss-title">MIT News</div>
-                        <div id="rss4"></div>
-                    </div>
-                    <div class="rss-feed">
                         <div class="rss-title">TechCrunch</div>
                         <div id="rss5"></div>
                     </div>
@@ -180,6 +192,8 @@
     <div id="headline-container"></div>
     <script src="script.js"></script>
     <script>
+        const showImages = false; // Set to false to hide images
+
         const rssFeeds = [
             { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' },
             { url: 'https://www.marktechpost.com/feed/', elementId: 'rss2' },
@@ -189,19 +203,14 @@
         ];
 
         rssFeeds.forEach(feed => {
-            fetch(feed.url)
-                .then(response => response.text())
+            fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
+                .then(response => response.json())
                 .then(data => {
-                    const parser = new DOMParser();
-                    const xml = parser.parseFromString(data, 'text/xml');
-                    const items = xml.querySelectorAll('item');
                     let html = '<ul>';
-                    items.forEach((item, index) => {
-                        if (index < 5) {
-                            const title = item.querySelector('title').textContent;
-                            const link = item.querySelector('link').textContent;
-                            html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-                        }
+                    data.items.slice(0, 5).forEach(item => {
+                        const summary = item.description.split(' ').slice(0, 20).join(' ') + '...';
+                        const image = showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" alt="Image">` : '';
+                        html += `<li>${image}<a href="${item.link}" target="_blank">${item.title}</a><p class="rss-summary">${summary}</p></li>`;
                     });
                     html += '</ul>';
                     document.getElementById(feed.elementId).innerHTML = html;
@@ -216,6 +225,11 @@
             };
             localStorage.setItem('githubProfile', JSON.stringify(githubProfile));
             alert('GitHub profile saved!');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentDate = new Date().toLocaleDateString();
+            document.getElementById('currentDate').textContent = currentDate;
         });
     </script>
 </body>
