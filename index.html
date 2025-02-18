@@ -4,13 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI News</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        #button-container {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+        #button-container a {
+            color: #ffffff;
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        #app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        header span {
+            color: #00bcd4;
+        }
+        .headline {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+        #rss-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+        .rss-feed {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rss-feed ul {
+            list-style: none;
+            padding: 0;
+        }
+        .rss-feed li {
+            margin-bottom: 10px;
+        }
+        .rss-feed a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        .rss-feed a:hover {
+            text-decoration: underline;
+        }
+        .rss-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #00bcd4;
+        }
+        #audio-player {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #custom-controls {
+            display: flex;
+            align-items: center;
+        }
+        #playPauseBtn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #seekBar {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        #currentTime, #totalTime {
+            font-size: 0.9em;
+        }
+        #like-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #like-button a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5em;
+            background-color: #00bcd4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        #like-button a i {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="button-container">
-        <a href="https://irtiq7.github.io/blog.html" target="_blank" id="blog-link"><i class="fas fa-blog"></i> </a>
-        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20audio%20news%20&url=https://irtiq7.github.io/news.wav" target="_blank" id="tweet-link"><i class="fab fa-x-twitter"></i> X</a>
+        <a href="https://github.com/irtiq7" target="_blank" id="like-link">
+            <i class="fas fa-thumbs-up"></i> 
+        </a>
+        <a href="https://irtiq7.github.io/blog.html" target="_blank" id="blog-link"><i class="fas fa-blog"></i></a>
     </div>
     <div id="app">
         <div class="overlay">
@@ -19,7 +143,29 @@
                 <p id="audioFileName"></p>
             </header>
             <main>
-                <p class="headline"> Please Note: News is generated using AI. There may be mistakes.</p>
+                <p class="headline">Please Note: News is generated using AI. There may be mistakes.</p>
+                <div id="rss-container">
+                    <div class="rss-feed">
+                        <div class="rss-title">Machine Learning Mastery</div>
+                        <div id="rss1"></div>
+                    </div>
+                    <div class="rss-feed">
+                        <div class="rss-title">MarkTechPost</div>
+                        <div id="rss2"></div>
+                    </div>
+                    <div class="rss-feed">
+                        <div class="rss-title">BAIR Blog</div>
+                        <div id="rss3"></div>
+                    </div>
+                    <div class="rss-feed">
+                        <div class="rss-title">MIT News</div>
+                        <div id="rss4"></div>
+                    </div>
+                    <div class="rss-feed">
+                        <div class="rss-title">TechCrunch</div>
+                        <div id="rss5"></div>
+                    </div>
+                </div>
                 <div id="audio-player">
                     <div id="audio-container"></div>
                     <div id="custom-controls">
@@ -33,5 +179,44 @@
     </div>
     <div id="headline-container"></div>
     <script src="script.js"></script>
+    <script>
+        const rssFeeds = [
+            { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' },
+            { url: 'https://www.marktechpost.com/feed/', elementId: 'rss2' },
+            { url: 'https://bair.berkeley.edu/blog/feed.xml', elementId: 'rss3' },
+            { url: 'https://news.mit.edu/rss/topic/artificial-intelligence', elementId: 'rss4' },
+            { url: 'https://techcrunch.com/feed/', elementId: 'rss5' }
+        ];
+
+        rssFeeds.forEach(feed => {
+            fetch(feed.url)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data, 'text/xml');
+                    const items = xml.querySelectorAll('item');
+                    let html = '<ul>';
+                    items.forEach((item, index) => {
+                        if (index < 5) {
+                            const title = item.querySelector('title').textContent;
+                            const link = item.querySelector('link').textContent;
+                            html += `<li><a href="${link}" target="_blank">${title}</a></li>`;
+                        }
+                    });
+                    html += '</ul>';
+                    document.getElementById(feed.elementId).innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching RSS feed:', error));
+        });
+
+        document.getElementById('like-link').addEventListener('click', function() {
+            const githubProfile = {
+                name: 'irtiq7',
+                link: 'https://github.com/irtiq7'
+            };
+            localStorage.setItem('githubProfile', JSON.stringify(githubProfile));
+            alert('GitHub profile saved!');
+        });
+    </script>
 </body>
 </html>
