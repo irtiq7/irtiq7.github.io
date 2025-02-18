@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI News</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -151,6 +152,27 @@
         #like-button a i {
             margin-right: 10px;
         }
+        #keyword-form {
+            margin-bottom: 20px;
+        }
+        #keyword-form input {
+            padding: 10px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        #keyword-form button {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #00bcd4;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        #chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -168,6 +190,10 @@
             </header>
             <main>
                 <p class="headline">Please Note: News is generated using AI. There may be mistakes.</p>
+                <form id="keyword-form">
+                    <input type="text" id="keyword-input" placeholder="Enter keyword">
+                    <button type="button" id="add-keyword-btn">Add Keyword</button>
+                </form>
                 <div id="rss-container">
                     <div class="rss-feed">
                         <div class="rss-title">Machine Learning Mastery</div>
@@ -186,6 +212,9 @@
                         <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
                     </div>
                 </div>
+                <div id="chart-container">
+                    <canvas id="keyword-chart"></canvas>
+                </div>
             </main>
         </div>
     </div>
@@ -193,6 +222,8 @@
     <script src="script.js"></script>
     <script>
         const showImages = false; // Set to false to hide images
+        const keywords = [];
+        const keywordCounts = {};
 
         const rssFeeds = [
             { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' },
@@ -217,8 +248,7 @@
                 })
                 .catch(error => console.error('Error fetching RSS feed:', error));
         });
-
-        document.getElementById('like-link').addEventListener('click', function() {
+document.getElementById('like-link').addEventListener('click', function() {
             const githubProfile = {
                 name: 'irtiq7',
                 link: 'https://github.com/irtiq7'
@@ -227,9 +257,76 @@
             alert('GitHub profile saved!');
         });
 
+        document.getElementById('add-keyword-btn').addEventListener('click', function() {
+            const keyword = document.getElementById('keyword-input').value.trim();
+            if (keyword && !keywords.includes(keyword)) {
+                keywords.push(keyword);
+                keywordCounts[keyword] = [];
+                alert(`Keyword "${keyword}" added!`);
+                document.getElementById('keyword-input').value = '';
+                updateChart();
+            }
+        });
+
+        function updateChart() {
+            const ctx = document.getElementById('keyword-chart').getContext('2d');
+            const labels = Object.keys(keywordCounts);
+            const data = {
+                labels: labels,
+                datasets: labels.map((keyword, index) => ({
+                    label: keyword,
+                    data: keywordCounts[keyword],
+                    borderColor: `hsl(${index * 60}, 100%, 50%)`,
+                    fill: false
+                }))
+            };
+            new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'day'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function trackKeywordsInFeeds() {
+            rssFeeds.forEach(feed => {
+                fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const today = new Date().toISOString().split('T')[0];
+                        data.items.forEach(item => {
+                            keywords.forEach(keyword => {
+                                if (item.title.includes(keyword) || item.description.includes(keyword)) {
+                                    if (!keywordCounts[keyword][today]) {
+                                        keywordCounts[keyword][today] = 0;
+                                    }
+                                    keywordCounts[keyword][today]++;
+                                }
+                            });
+                        });
+                        updateChart();
+                    })
+                    .catch(error => console.error('Error fetching RSS feed:', error));
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const currentDate = new Date().toLocaleDateString();
             document.getElementById('currentDate').textContent = currentDate;
+            trackKeywordsInFeeds();
+            setInterval(trackKeywordsInFeeds, 24 * 60 * 60 * 1000); // Update daily
         });
     </script>
 </body>
