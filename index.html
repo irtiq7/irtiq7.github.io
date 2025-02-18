@@ -157,6 +157,46 @@
             max-width: 800px;
             margin-bottom: 20px;
         }
+        #rss-details {
+            margin-top: 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .keyword-category {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .keyword-category h3 {
+            color: #00bcd4;
+            text-align: center;
+        }
+        .keyword-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .keyword-category li {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .keyword-category a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .keyword-category a:hover {
+            text-decoration: underline;
+        }
+        .keyword-category .rss-summary {
+            font-size: 1em;
+            color: #cccccc;
+            margin-bottom: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -177,16 +217,7 @@
                 <div id="chart-container">
                     <div id="keyword-chart"></div>
                 </div>
-                <div id="rss-container">
-                    <div class="rss-feed">
-                        <div class="rss-title">Machine Learning Mastery</div>
-                        <div id="rss1"></div>
-                    </div>
-                    <div class="rss-feed">
-                        <div class="rss-title">TechCrunch</div>
-                        <div id="rss5"></div>
-                    </div>
-                </div>
+                <div id="rss-details"></div>
                 <div id="audio-player">
                     <div id="audio-container"></div>
                     <div id="custom-controls">
@@ -267,6 +298,27 @@
             };
 
             Plotly.newPlot('keyword-chart', data, layout);
+
+            // Display RSS feed details under the graph
+            const rssDetails = document.getElementById('rss-details');
+            rssDetails.innerHTML = '';
+            keywords.forEach(keyword => {
+                const keywordSection = document.createElement('div');
+                keywordSection.className = 'keyword-category';
+                keywordSection.innerHTML = `<h3>${keyword}</h3>`;
+                const newsList = document.createElement('ul');
+                dates.forEach(date => {
+                    if (keywordNews[keyword][date]) {
+                        keywordNews[keyword][date].forEach(news => {
+                            const newsItem = document.createElement('li');
+                            newsItem.innerHTML = `<a href="${news.link}" target="_blank">${news.title}</a><p class="rss-summary">${news.summary}</p>`;
+                            newsList.appendChild(newsItem);
+                        });
+                    }
+                });
+                keywordSection.appendChild(newsList);
+                rssDetails.appendChild(keywordSection);
+            });
         }
 
         function trackKeywordsInFeeds() {
@@ -285,7 +337,11 @@
                                         keywordNews[keyword][today] = [];
                                     }
                                     keywordCounts[keyword][today]++;
-                                    keywordNews[keyword][today].push(item.title);
+                                    keywordNews[keyword][today].push({
+                                        title: item.title,
+                                        link: item.link,
+                                        summary: item.description.split(' ').slice(0, 20).join(' ') + '...'
+                                    });
                                 }
                             });
                         });
