@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily AI News</title>
-   stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body {
@@ -204,10 +204,12 @@
         const showImages = false; // Set to false to hide images
         const keywords = ['AI', 'Machine Learning', 'Deep Learning']; // Hardcoded keywords
         const keywordCounts = {};
+        const keywordNews = {}; // Store news items containing the keywords
         const newsToDisplay = 5; // Number of news items to display
 
         keywords.forEach(keyword => {
             keywordCounts[keyword] = [];
+            keywordNews[keyword] = [];
         });
 
         const rssFeeds = [
@@ -243,28 +245,29 @@
             alert('GitHub profile saved!');
         });
 
-function updateChart() {
-    const dates = Object.keys(keywordCounts[keywords[0]]);
-    const data = keywords.map((keyword, index) => ({
-        x: dates,
-        y: dates.map(date => keywordCounts[keyword][date] || 0),
-        type: 'scatter',
-        mode: 'lines+markers',
-        name: keyword,
-        line: { color: `hsl(${index * 60}, 100%, 50%)` }
-    }));
+        function updateChart() {
+            const dates = Object.keys(keywordCounts[keywords[0]]);
+            const data = keywords.map((keyword, index) => ({
+                x: dates,
+                y: dates.map(date => keywordCounts[keyword][date] || 0),
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: keyword,
+                line: { color: `hsl(${index * 60}, 100%, 50%)` },
+                text: dates.map(date => keywordNews[keyword][date] || '')
+            }));
 
-    const layout = {
-        title: 'Keyword Frequency Over Time',
-        xaxis: { title: 'Date', type: 'category' }, // Set x-axis type to 'category'
-        yaxis: { title: 'Frequency' },
-        paper_bgcolor: '#121212', // Background color of the entire plot
-        plot_bgcolor: '#121212',  // Background color of the plotting area
-        font: { color: '#ffffff' } // Font color
-    };
+            const layout = {
+                title: 'Keyword Frequency Over Time',
+                xaxis: { title: 'Date', type: 'category' }, // Set x-axis type to 'category'
+                yaxis: { title: 'Frequency' },
+                paper_bgcolor: '#121212', // Background color of the entire plot
+                plot_bgcolor: '#121212',  // Background color of the plotting area
+                font: { color: '#ffffff' } // Font color
+            };
 
-    Plotly.newPlot('keyword-chart', data, layout);
-}
+            Plotly.newPlot('keyword-chart', data, layout);
+        }
 
         function trackKeywordsInFeeds() {
             rssFeeds.forEach(feed => {
@@ -274,11 +277,15 @@ function updateChart() {
                         const today = new Date().toISOString().split('T')[0];
                         data.items.forEach(item => {
                             keywords.forEach(keyword => {
-                                if (item.title.includes(keyword) || item.description.includes(keyword)) {
+                                const titleCount = (item.title.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
+                                const descriptionCount = (item.description.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
+                                if ((titleCount === 1 && descriptionCount === 0) || (titleCount === 0 && descriptionCount === 1)) {
                                     if (!keywordCounts[keyword][today]) {
                                         keywordCounts[keyword][today] = 0;
+                                        keywordNews[keyword][today] = [];
                                     }
                                     keywordCounts[keyword][today]++;
+                                    keywordNews[keyword][today].push(item.title);
                                 }
                             });
                         });
