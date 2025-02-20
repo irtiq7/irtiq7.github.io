@@ -1,0 +1,17 @@
+{
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "frequency": 86400000,  // Update daily (in milliseconds)
+    "categories": [
+        {"title": "Machine Learning Mastery", "link": "https://machinelearningmastery.com/blog/feed/"},
+        {"title": "TechCrunch", "link": "https://techcrunch.com/feed/"},
+        {"title": "MIT", "link": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml"},
+        {"title": "The Verge", "link": "https://www.theverge.com/rss/index.xml"},
+        {"title": "Wired", "link": "https://www.wired.com/feed/rss"},
+        {"title": "Ars Technica", "link": "https://feeds.arstechnica.com/arstechnica/index"},
+        {"title": "CNET", "link": "https://www.cnet.com/rss/news/"},
+        {"title": "Gizmodo", "link": "https://gizmodo.com/rss"},
+        {"title": "Mashable", "link": "https://mashable.com/feed/"},
+        {"title": "Engadget", "link": "https://www.engadget.com/rss.xml"},
+        {"title": "ZDNet", "link": "https://www.zdnet.com/news/rss.xml"}
+    ]
+}
