@@ -11,7 +11,7 @@
             font-family: 'Arial', sans-serif;
             background-color: #121212;
             color: #ffffff;
-           : 0;
+            margin: 0;
             padding: 0;
         }
         #button-container {
@@ -349,10 +349,12 @@
         });
 
         function updateChart() {
-            const dates = Object.keys(keywordCounts[keywords[0]]);
-            const previousDay = new Date();
-            previousDay.setDate(previousDay.getDate() - 1);
-            const previousDayStr = previousDay.toISOString().split('T')[0];
+            const dates = [];
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                dates.push(date.toISOString().split('T')[0]);
+            }
 
             const data = keywords.map((keyword, index) => ({
                 x: dates,
@@ -402,24 +404,34 @@
                 fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
                     .then(response => response.json())
                     .then(data => {
-                        const today = new Date().toISOString().split('T')[0];
+                        const today = new Date();
+                        const pastWeek = [];
+                        for (let i = 6; i >= 0; i--) {
+                            const date = new Date();
+                            date.setDate(today.getDate() - i);
+                            pastWeek.push(date.toISOString().split('T')[0]);
+                        }
+
                         data.items.forEach(item => {
-                            keywords.forEach(keyword => {
-                                const titleCount = (item.title.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
-                                const descriptionCount = (item.description.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
-                                if ((titleCount === 1 && descriptionCount === 0) || (titleCount === 0 && descriptionCount === 1)) {
-                                    if (!keywordCounts[keyword][today]) {
-                                        keywordCounts[keyword][today] = 0;
-                                        keywordNews[keyword][today] = [];
+                            const itemDate = new Date(item.pubDate).toISOString().split('T')[0];
+                            if (pastWeek.includes(itemDate)) {
+                                keywords.forEach(keyword => {
+                                    const titleCount = (item.title.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
+                                    const descriptionCount = (item.description.match(new RegExp(`\\b${keyword}\\b`, 'gi')) || []).length;
+                                    if (titleCount > 0 || descriptionCount > 0) {
+                                        if (!keywordCounts[keyword][itemDate]) {
+                                            keywordCounts[keyword][itemDate] = 0;
+                                            keywordNews[keyword][itemDate] = [];
+                                        }
+                                        keywordCounts[keyword][itemDate]++;
+                                        keywordNews[keyword][itemDate].push({
+                                            title: item.title,
+                                            link: item.link,
+                                            summary: item.description.split(' ').slice(0, 20).join(' ') + '...'
+                                        });
                                     }
-                                    keywordCounts[keyword][today]++;
-                                    keywordNews[keyword][today].push({
-                                        title: item.title,
-                                        link: item.link,
-                                        summary: item.description.split(' ').slice(0, 20).join(' ') + '...'
-                                    });
-                                }
-                            });
+                                });
+                            }
                         });
                         saveData(); // Save data to localStorage
                         updateChart();
