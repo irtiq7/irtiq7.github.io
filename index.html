@@ -11,7 +11,7 @@
             font-family: 'Arial', sans-serif;
             background-color: #121212;
             color: #ffffff;
-            margin: 0;
+           : 0;
             padding: 0;
         }
         #button-container {
@@ -220,8 +220,8 @@
                     <div id="keyword-chart"></div>
                 </div>
                 <div id="rss-details"></div>
-<!--
                 <div id="rss-container">
+<!--
                     <div class="rss-feed">
                         <div class="rss-title">Machine Learning Mastery</div>
                         <div id="rss1"></div>
@@ -262,12 +262,12 @@
                         <div class="rss-title">Engadget</div>
                         <div id="rss12"></div>
                     </div>
-                    <div class="rss-feed">
+                     <div class="rss-feed">
                         <div class="rss-title">ZDNet</div>
                         <div id="rss13"></div>
                     </div>
-                </div>
 -->
+                </div>
                 <div id="audio-player">
                     <div id="audio-container"></div>
                     <div id="custom-controls">
@@ -303,14 +303,14 @@
         }
 
         keywords.forEach(keyword => {
-            keywordCounts[keyword] = [];
-            keywordNews[keyword] = [];
+            keywordCounts[keyword] = {};
+            keywordNews[keyword] = {};
         });
 
         const rssFeeds = [
-            { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' },
+<!--            { url: 'https://machinelearningmastery.com/blog/feed/', elementId: 'rss1' }, -->
             { url: 'https://www.marktechpost.com/feed/', elementId: 'rss2' },
-            { url: 'https://bair.berkeley.edu/blog/feed.xml', elementId: 'rss3' },
+<!--            { url: 'https://bair.berkeley.edu/blog/feed.xml', elementId: 'rss3' },       -->
             { url: 'https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml', elementId: 'rss4' },
             { url: 'https://techcrunch.com/feed/', elementId: 'rss5' },
             { url: 'https://www.theverge.com/rss/index.xml', elementId: 'rss6' },
