@@ -302,6 +302,13 @@
             }
         }
 
+        function clearData() {
+            keywords.forEach(keyword => {
+                keywordCounts[keyword] = {};
+                keywordNews[keyword] = {};
+            });
+        }
+
         keywords.forEach(keyword => {
             keywordCounts[keyword] = {};
             keywordNews[keyword] = {};
@@ -323,21 +330,24 @@
             { url: 'https://www.zdnet.com/news/rss.xml', elementId: 'rss13' }
         ];
 
-        rssFeeds.forEach(feed => {
-            fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
-                .then(response => response.json())
-                .then(data => {
-                    let html = '<ul>';
-                    data.items.slice(0, newsToDisplay).forEach(item => {
-                        const summary = item.description.split(' ').slice(0, 20).join(' ') + '...';
-                        const image = showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" alt="Image">` : '';
-                        html += `<li>${image}<a href="${item.link}" target="_blank">${item.title}</a><p class="rss-summary">${summary}</p></li>`;
-                    });
-                    html += '</ul>';
-                    document.getElementById(feed.elementId).innerHTML = html;
-                })
-                .catch(error => console.error('Error fetching RSS feed:', error));
-        });
+        function fetchRSSFeeds() {
+            clearData(); // Clear existing data before fetching new data
+            rssFeeds.forEach(feed => {
+                fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let html = '<ul>';
+                        data.items.slice(0, newsToDisplay).forEach(item => {
+                            const summary = item.description.split(' ').slice(0, 20).join(' ') + '...';
+                            const image = showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" alt="Image">` : '';
+                            html += `<li>${image}<a href="${item.link}" target="_blank">${item.title}</a><p class="rss-summary">${summary}</p></li>`;
+                        });
+                        html += '</ul>';
+                        document.getElementById(feed.elementId).innerHTML = html;
+                    })
+                    .catch(error => console.error('Error fetching RSS feed:', error));
+            });
+        }
 
         document.getElementById('like-link').addEventListener('click', function() {
             const githubProfile = {
@@ -444,6 +454,7 @@
             const currentDate = new Date().toLocaleDateString();
             document.getElementById('currentDate').textContent = currentDate;
             loadData(); // Load data from localStorage
+            fetchRSSFeeds(); // Fetch RSS feeds and clear existing data
             trackKeywordsInFeeds();
             setInterval(trackKeywordsInFeeds, 24 * 60 * 60 * 1000); // Update daily
         });
