@@ -229,14 +229,15 @@
       <main>
         <p class="headline">AI-generated content – Business Sector Analysis</p>
         <div id="graph-tabs">
+          <button data-chart="sector-pie-chart" class="tab">Pie Chart</button>
           <button data-chart="sector-line-chart" class="tab active">Line Chart</button>
           <button data-chart="sector-bar-chart" class="tab">Bar Chart</button>
-          <button data-chart="sector-pie-chart" class="tab">Pie Chart</button>
         </div>
         <div id="sector-charts-container">
+          <div id="sector-pie-chart" class="chart-container hidden"></div>
           <div id="sector-line-chart" class="chart-container"></div>
           <div id="sector-bar-chart" class="chart-container hidden"></div>
-          <div id="sector-pie-chart" class="chart-container hidden"></div>
+
         </div>
         <div id="image-toggle-container">
           <label>
@@ -509,9 +510,10 @@
 
         renderSectorCharts() {
           const agg = aggregateSectorData(this.feedsData, 30);
-          this.renderLineChart(agg);
-          this.renderBarChart(agg);
           this.renderPieChart(agg);
+          this.renderBarChart(agg);
+          this.renderLineChart(agg);
+
         }
 
         renderLineChart(agg) {
