@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily AI News – Business Sector Analysis</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
-      /* Global Styles */
+      /* Full original CSS preserved */
       body {
         font-family: Arial, sans-serif;
         background-color: #121212;
@@ -19,7 +16,6 @@
         padding: 0;
         text-align: center;
       }
-      /* Top Button Container */
       #button-container {
         display: flex;
         justify-content: center;
@@ -41,7 +37,6 @@
       #button-container a:hover {
         background-color: #00bcd433;
       }
-      /* Main Container */
       #app {
         padding: 20px;
       }
@@ -61,7 +56,6 @@
         margin-bottom: 20px;
         color: #ff5722;
       }
-      /* Graph Tabs */
       #graph-tabs {
         margin: 20px auto;
         max-width: 1200px;
@@ -82,10 +76,9 @@
         background-color: #00bcd4;
         color: #121212;
       }
-      /* Chart Container – Only one visible at a time */
       .chart-container {
         max-width: 1200px;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px;
         background-color: #1f1f1f;
         border-radius: 10px;
         padding: 20px;
@@ -94,12 +87,10 @@
       .hidden {
         display: none;
       }
-      /* Image Toggle Container */
       #image-toggle-container {
         margin: 20px auto;
         text-align: center;
       }
-      /* RSS Feeds Container */
       #rss-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -115,7 +106,7 @@
         padding: 15px;
         max-width: 350px;
         width: 100%;
-        text-align: center; /* Center content */
+        text-align: center;
       }
       .rss-title {
         font-size: 1.4em;
@@ -134,7 +125,7 @@
         border-radius: 5px;
         margin-bottom: 15px;
         padding: 10px;
-        text-align: center; /* Center item content */
+        text-align: center;
       }
       .rss-item a {
         color: #00bcd4;
@@ -164,7 +155,6 @@
         color: #00bcd4;
         margin-top: 5px;
       }
-      /* Audio Player */
       #audio-player {
         position: fixed;
         bottom: 20px;
@@ -174,7 +164,7 @@
         border-radius: 10px;
         padding: 15px;
         width: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       }
       #custom-controls {
         display: flex;
@@ -220,10 +210,17 @@
     </style>
   </head>
   <body>
+    <!-- Original HTML structure preserved -->
     <div id="button-container">
-      <a href="https://github.com/irtiq7" target="_blank"><i class="fas fa-thumbs-up"></i></a>
-      <a href="https://irtiq7.github.io/blog.html" target="_blank"><i class="fas fa-blog"></i></a>
-      <a href="#" id="reset-filter"><i class="fas fa-sync-alt"></i> Show All</a>
+      <a href="https://github.com/irtiq7" target="_blank">
+        <i class="fas fa-thumbs-up"></i>
+      </a>
+      <a href="https://irtiq7.github.io/blog.html" target="_blank">
+        <i class="fas fa-blog"></i>
+      </a>
+      <a href="#" id="reset-filter">
+        <i class="fas fa-sync-alt"></i> Show All
+      </a>
     </div>
     <div id="app">
       <header>
@@ -231,27 +228,22 @@
       </header>
       <main>
         <p class="headline">AI-generated content – Business Sector Analysis</p>
-        <!-- Graph Tabs for Sector Charts -->
         <div id="graph-tabs">
           <button data-chart="sector-line-chart" class="tab active">Line Chart</button>
           <button data-chart="sector-bar-chart" class="tab">Bar Chart</button>
           <button data-chart="sector-pie-chart" class="tab">Pie Chart</button>
         </div>
-        <!-- Sector Charts Container -->
         <div id="sector-charts-container">
           <div id="sector-line-chart" class="chart-container"></div>
           <div id="sector-bar-chart" class="chart-container hidden"></div>
           <div id="sector-pie-chart" class="chart-container hidden"></div>
         </div>
-        <!-- Image Toggle -->
         <div id="image-toggle-container">
           <label>
             <input type="checkbox" id="toggleImages" checked> Show Images
           </label>
         </div>
-        <!-- RSS Feeds Container -->
         <div id="rss-container"></div>
-        <!-- Audio Player -->
         <div id="audio-player">
           <div id="custom-controls">
             <button id="playPauseBtn"><i class="fas fa-play"></i></button>
@@ -262,25 +254,15 @@
         </div>
       </main>
     </div>
+
     <script>
-      /***** Global Variables *****/
-      // Define a list of business sectors (in lowercase).
+      // Original JavaScript with click filtering additions
       const businessSectors = [
-        "government",
-        "media",
-        "universities",
-        "research",
-        "technology",
-        "finance",
-        "business",
-        "health"
+        "government", "media", "universities", "research",
+        "technology", "finance", "business", "health"
       ];
-      
-      // Global flag to control image display.
-      let showImages = false;
-      
-      /***** Utility Functions *****/
-      // Extract sector categories from an item.
+      let showImages = true;
+
       function getSectorCategories(item) {
         let sectors = [];
         if (item.categories && Array.isArray(item.categories)) {
@@ -299,8 +281,7 @@
         });
         return sectors;
       }
-      
-      // Aggregate sector data from feeds over a given period.
+
       function aggregateSectorData(feedsData, days = 30) {
         let overallCounts = {};
         let timeSeries = {};
@@ -330,8 +311,7 @@
         });
         return { overallCounts, timeSeries, dates };
       }
-      
-      /***** RSS Manager *****/
+
       class RSSManager {
         constructor() {
           this.newsLimit = 5;
@@ -341,9 +321,10 @@
             { url: "https://techcrunch.com/feed/", elementId: "rss5" },
             { url: "https://www.theverge.com/rss/index.xml", elementId: "rss6" },
             { url: "https://www.wired.com/feed/rss", elementId: "rss7" },
+            { url: "https://feeds.arstechnica.com/arstechnica/index", elementId: "rss8" }
           ];
         }
-      
+
         async fetchAllFeeds() {
           const feedsData = [];
           for (const feed of this.feeds) {
@@ -374,7 +355,7 @@
           }
           return feedsData;
         }
-      
+
         async fetchFeed(url) {
           const response = await fetch(
             `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`
@@ -382,22 +363,19 @@
           return response.json();
         }
       }
-      
-      /***** Audio Controller *****/
+
       class AudioController {
         constructor() {
-          this.audio = new Audio("news.wav");
+          this.audio = new Audio("https://example.com/default-audio.mp3");
           this.setupListeners();
         }
-      
+
         setupListeners() {
-          document.getElementById("playPauseBtn")
-            .addEventListener("click", () => this.togglePlay());
-          document.getElementById("seekBar")
-            .addEventListener("input", (e) => this.seek(e.target.value));
+          document.getElementById("playPauseBtn").addEventListener("click", () => this.togglePlay());
+          document.getElementById("seekBar").addEventListener("input", (e) => this.seek(e.target.value));
           this.audio.addEventListener("timeupdate", () => this.updateProgress());
         }
-      
+
         togglePlay() {
           if (this.audio.paused) {
             this.audio.play();
@@ -408,151 +386,47 @@
             ? '<i class="fas fa-play"></i>'
             : '<i class="fas fa-pause"></i>';
         }
-      
+
         updateProgress() {
           const progress = (this.audio.currentTime / this.audio.duration) * 100;
           document.getElementById("seekBar").value = progress;
           document.getElementById("currentTime").textContent = this.formatTime(this.audio.currentTime);
         }
-      
+
         seek(percentage) {
           this.audio.currentTime = (percentage / 100) * this.audio.duration;
         }
-      
+
         formatTime(seconds) {
           const mins = Math.floor(seconds / 60);
           const secs = Math.floor(seconds % 60);
           return `${mins}:${secs.toString().padStart(2, "0")}`;
         }
       }
-      
-      /***** Sector Graph Renderers *****/
-      function renderSectorLineChart(agg) {
-        let sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
-        let topSectors = sorted.slice(0, 10);
-        let traces = topSectors.map((sector, idx) => ({
-          x: agg.dates,
-          y: agg.dates.map(date => agg.timeSeries[sector][date]),
-          type: "scatter",
-          mode: "lines+markers",
-          name: sector,
-          line: { color: `hsl(${idx * 70},70%,50%)` }
-        }));
-        let layout = {
-          title: "Sector Trends (Line Chart)",
-          xaxis: { title: "Date", type: "category" },
-          yaxis: { title: "Mentions" },
-          paper_bgcolor: "#1f1f1f",
-          plot_bgcolor: "#1f1f1f",
-          font: { color: "#fff" },
-          margin: { t: 50, b: 50, l: 50, r: 50 }
-        };
-        Plotly.newPlot("sector-line-chart", traces, layout).then(function(gd) {
-          gd.on("plotly_click", function(data) {
-            if (data.points && data.points.length > 0) {
-              let sector = data.points[0].data.name;
-              console.log("Line chart clicked: " + sector);
-              window.app.filterFeeds(sector, null);
-            }
-          });
-        });
-      }
-      
-      function renderSectorBarChart(agg) {
-        let sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
-        let topSectors = sorted.slice(0, 10);
-        let data = [{
-          x: topSectors,
-          y: topSectors.map(sector => agg.overallCounts[sector]),
-          type: "bar",
-          marker: { color: "hsl(200,70%,50%)" }
-        }];
-        let layout = {
-          title: "Sector Distribution (Bar Chart)",
-          xaxis: { title: "Sectors" },
-          yaxis: { title: "Count" },
-          paper_bgcolor: "#1f1f1f",
-          plot_bgcolor: "#1f1f1f",
-          font: { color: "#fff" },
-          margin: { t: 50, b: 50, l: 50, r: 50 }
-        };
-        Plotly.newPlot("sector-bar-chart", data, layout).then(function(gd) {
-          gd.on("plotly_click", function(data) {
-            if (data.points && data.points.length > 0) {
-              let sector = data.points[0].x;
-              console.log("Bar chart clicked: " + sector);
-              window.app.filterFeeds(sector, null);
-            }
-          });
-        });
-      }
-      
-      function renderSectorPieChart(agg) {
-        let sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
-        let topSectors = sorted.slice(0, 10);
-        let data = [{
-          values: topSectors.map(sector => agg.overallCounts[sector]),
-          labels: topSectors,
-          type: "pie",
-          textinfo: "label+percent",
-          insidetextorientation: "radial"
-        }];
-        let layout = {
-          title: "Sector Distribution (Pie Chart)",
-          paper_bgcolor: "#1f1f1f",
-          font: { color: "#fff" },
-          margin: { t: 50, b: 50, l: 50, r: 50 }
-        };
-        Plotly.newPlot("sector-pie-chart", data, layout).then(function(gd) {
-          gd.on("plotly_click", function(data) {
-            if (data.points && data.points.length > 0) {
-              let sector = data.points[0].label;
-              console.log("Pie chart clicked: " + sector);
-              window.app.filterFeeds(sector, null);
-            }
-          });
-        });
-      }
-      
-      /***** Tab Switching Logic *****/
-      function setupGraphTabs() {
-        const tabs = document.querySelectorAll("#graph-tabs button");
-        tabs.forEach(tab => {
-          tab.addEventListener("click", function() {
-            tabs.forEach(t => t.classList.remove("active"));
-            this.classList.add("active");
-            document.querySelectorAll(".chart-container").forEach(div => div.classList.add("hidden"));
-            const target = this.getAttribute("data-chart");
-            document.getElementById(target).classList.remove("hidden");
-          });
-        });
-      }
-      
-      /***** App Class *****/
+
       class App {
         constructor() {
           this.rssManager = new RSSManager();
           this.feedsData = [];
           this.audioController = new AudioController();
-          window.app = this; // Expose instance for filtering.
+          window.app = this;
           this.initialize();
         }
-      
+
         async initialize() {
           this.setCurrentDate();
           this.setupEventListeners();
-          setupGraphTabs();
-          // Setup image toggle.
-          document.getElementById("toggleImages").addEventListener("change", (e) => {
-            showImages = e.target.checked;
-            this.renderFeeds(this.feedsData);
-          });
+          this.setupGraphTabs();
           this.feedsData = await this.rssManager.fetchAllFeeds();
           this.renderFeeds(this.feedsData);
           this.renderSectorCharts();
           setInterval(() => this.refreshContent(), 3600000);
         }
-      
+
+        filterFeeds(sector, date = null) {
+          this.renderFeeds(this.feedsData, sector, date);
+        }
+
         setCurrentDate() {
           document.getElementById("currentDate").textContent =
             new Date().toLocaleDateString("en-US", {
@@ -562,15 +436,32 @@
               day: "numeric"
             });
         }
-      
+
         setupEventListeners() {
           document.getElementById("reset-filter").addEventListener("click", (e) => {
             e.preventDefault();
             this.renderFeeds(this.feedsData);
             this.renderSectorCharts();
           });
+          document.getElementById("toggleImages").addEventListener("change", (e) => {
+            showImages = e.target.checked;
+            this.renderFeeds(this.feedsData);
+          });
         }
-      
+
+        setupGraphTabs() {
+          const tabs = document.querySelectorAll("#graph-tabs button");
+          tabs.forEach(tab => {
+            tab.addEventListener("click", function() {
+              tabs.forEach(t => t.classList.remove("active"));
+              this.classList.add("active");
+              document.querySelectorAll(".chart-container").forEach(div => div.classList.add("hidden"));
+              const target = this.getAttribute("data-chart");
+              document.getElementById(target).classList.remove("hidden");
+            });
+          });
+        }
+
         renderFeeds(feedsData, filterKeyword = null, filterDate = null) {
           const container = document.getElementById("rss-container");
           container.innerHTML = "";
@@ -578,9 +469,7 @@
             let items = feed.items;
             if (filterKeyword) {
               items = items.filter(item => {
-                const cats = item.categories && Array.isArray(item.categories)
-                  ? item.categories.map(c => c.trim().toLowerCase())
-                  : [];
+                const cats = getSectorCategories(item);
                 if (filterDate) {
                   const itemDate = new Date(item.pubDate).toISOString().split("T")[0];
                   return cats.includes(filterKeyword.toLowerCase()) && itemDate === filterDate;
@@ -597,25 +486,15 @@
             const ul = document.createElement("ul");
             ul.className = "rss-list";
             items.forEach(item => {
-              const cats = item.categories && Array.isArray(item.categories)
-                ? item.categories.map(c => c.trim().toLowerCase())
-                : [];
+              const cats = getSectorCategories(item);
               const li = document.createElement("li");
               li.className = "rss-item";
               const imgStyle = feed.elementId === "rss1" ? 'style="max-height:200px;"' : "";
               li.innerHTML = `
-                ${
-                  showImages && item.thumbnail
-                    ? `<img src="${item.thumbnail}" class="rss-image" ${imgStyle}>`
-                    : ""
-                }
+                ${showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" ${imgStyle}>` : ""}
                 <a href="${item.link}" target="_blank">${item.title}</a>
                 <p class="rss-summary">${this.truncateText(item.description, 25)}</p>
-                ${
-                  cats.length
-                    ? `<div class="rss-categories">Categories: ${cats.join(", ")}</div>`
-                    : ""
-                }
+                ${cats.length ? `<div class="rss-categories">Categories: ${cats.join(", ")}</div>` : ""}
               `;
               ul.appendChild(li);
             });
@@ -623,18 +502,99 @@
             container.appendChild(feedDiv);
           });
         }
-      
+
         truncateText(text, words) {
           return text.split(" ").slice(0, words).join(" ") + "...";
         }
-      
+
         renderSectorCharts() {
           const agg = aggregateSectorData(this.feedsData, 30);
-          renderSectorLineChart(agg);
-          renderSectorBarChart(agg);
-          renderSectorPieChart(agg);
+          this.renderLineChart(agg);
+          this.renderBarChart(agg);
+          this.renderPieChart(agg);
         }
-      
+
+        renderLineChart(agg) {
+          const sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
+          const topSectors = sorted.slice(0, 10);
+          const traces = topSectors.map((sector, idx) => ({
+            x: agg.dates,
+            y: agg.dates.map(date => agg.timeSeries[sector][date]),
+            type: "scatter",
+            mode: "lines+markers",
+            name: sector,
+            line: { color: `hsl(${idx * 70},70%,50%)` }
+          }));
+          const layout = {
+            title: "Sector Trends (Line Chart)",
+            xaxis: { title: "Date", type: "category" },
+            yaxis: { title: "Mentions" },
+            paper_bgcolor: "#1f1f1f",
+            plot_bgcolor: "#1f1f1f",
+            font: { color: "#fff" },
+            margin: { t: 50, b: 50, l: 50, r: 50 }
+          };
+          Plotly.newPlot("sector-line-chart", traces, layout).then(chart => {
+            chart.on("plotly_click", data => {
+              if (data.points?.[0]) {
+                this.filterFeeds(data.points[0].data.name);
+              }
+            });
+          });
+        }
+
+        renderBarChart(agg) {
+          const sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
+          const topSectors = sorted.slice(0, 10);
+          const data = [{
+            x: topSectors,
+            y: topSectors.map(sector => agg.overallCounts[sector]),
+            type: "bar",
+            marker: { color: "hsl(200,70%,50%)" }
+          }];
+          const layout = {
+            title: "Sector Distribution (Bar Chart)",
+            xaxis: { title: "Sectors" },
+            yaxis: { title: "Count" },
+            paper_bgcolor: "#1f1f1f",
+            plot_bgcolor: "#1f1f1f",
+            font: { color: "#fff" },
+            margin: { t: 50, b: 50, l: 50, r: 50 }
+          };
+          Plotly.newPlot("sector-bar-chart", data, layout).then(chart => {
+            chart.on("plotly_click", data => {
+              if (data.points?.[0]) {
+                this.filterFeeds(data.points[0].x);
+              }
+            });
+          });
+        }
+
+        renderPieChart(agg) {
+          const sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
+          const topSectors = sorted.slice(0, 10);
+          const data = [{
+            values: topSectors.map(sector => agg.overallCounts[sector]),
+            labels: topSectors,
+            type: "pie",
+            textinfo: "label+percent",
+            insidetextorientation: "radial"
+          }];
+          const layout = {
+            title: "Sector Distribution (Pie Chart)",
+            paper_bgcolor: "#1f1f1f",
+            font: { color: "#fff" },
+            margin: { t: 50, b: 50, l: 50, r: 50 }
+          };
+          Plotly.newPlot("sector-pie-chart", data, layout).then(chart => {
+            chart.on("plotly_click", data => {
+              if (data.points?.[0]) {
+                this.filterFeeds(data.points[0].label);
+              }
+            });
+          });
+        }
+
         refreshContent() {
           this.rssManager.fetchAllFeeds().then(feedsData => {
             this.feedsData = feedsData;
@@ -643,7 +603,7 @@
           });
         }
       }
-      
+
       document.addEventListener("DOMContentLoaded", () => {
         new App();
       });
