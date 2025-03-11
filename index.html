@@ -16,12 +16,12 @@
             padding: 0;
             text-align: center;
         }
-        #button-container {
+        button-container {
             display: flex;
             justify-content: center;
             padding: 10px;
             background-color: #1f1f1f;
-                       top: 0;
+            top: 0;
             z-index: 100;
         }
         #button-container a {
@@ -206,7 +206,50 @@
                 right: 10px;
             }
         }
+
+        /* Add styles for the floating textbox */
+        #floatingTextbox {
+            position: fixed;
+            bottom: 80px; /* Adjusted to avoid overlap with audio player */
+            right: 20px;
+            width: 300px;
+            padding: 10px;
+            background-color: #1f1f1f;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        #question {
+            width: 100%;
+            padding: 10px;
+            background-color: #2d2d2d;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 5px;
+            resize: none;
+        }
+        #askButton {
+            margin-top: 10px;
+            padding: 15px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #askButton:hover {
+            background-color: #0056b3;
+        }
+        #loading {
+            display: none;
+            margin-top: 10px;
+            color: #00bcd4;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
 </head>
 <body>
     <!-- Original HTML structure preserved -->
@@ -251,6 +294,15 @@
             </div>
         </main>
     </div>
+
+    <!-- Floating Textbox -->
+    <div id="floatingTextbox">
+        <textarea id="question" rows="4" cols="30" placeholder="Ask a question..."></textarea>
+        <button id="askButton" onclick="askQuestion()">Ask</button>
+        <p id="loading">Loading...</p>
+        <p id="answer"></p>
+    </div>
+
     <script>
         // Original JavaScript with click filtering additions
         const businessSectors = [
@@ -258,7 +310,6 @@
             "technology", "finance", "business", "health", "ai"
         ];
         let showImages = true;
-
         function getSectorCategories(item) {
             let sectors = [];
             if (item.categories && Array.isArray(item.categories)) {
@@ -277,7 +328,6 @@
             });
             return sectors;
         }
-
         function aggregateSectorData(feedsData, days = 30) {
             let overallCounts = {};
             let timeSeries = {};
@@ -307,7 +357,6 @@
             });
             return { overallCounts, timeSeries, dates };
         }
-
         class RSSManager {
             constructor() {
                 this.newsLimit = 5;
@@ -320,7 +369,6 @@
                     { url: "https://feeds.arstechnica.com/arstechnica/index", elementId: "rss8" }
                 ];
             }
-
             async fetchAllFeeds() {
                 const feedsData = [];
                 for (const feed of this.feeds) {
@@ -351,7 +399,6 @@
                 }
                 return feedsData;
             }
-
             async fetchFeed(url) {
                 const response = await fetch(
                     `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`
@@ -359,19 +406,16 @@
                 return response.json();
             }
         }
-
         class AudioController {
             constructor() {
                 this.audio = new Audio("news.wav");
                 this.setupListeners();
             }
-
             setupListeners() {
                 document.getElementById("playPauseBtn").addEventListener("click", () => this.togglePlay());
                 document.getElementById("seekBar").addEventListener("input", (e) => this.seek(e.target.value));
                 this.audio.addEventListener("timeupdate", () => this.updateProgress());
             }
-
             togglePlay() {
                 if (this.audio.paused) {
                     this.audio.play();
@@ -382,24 +426,20 @@
                     ? '<i class="fas fa-play"></i>'
                     : '<i class="fas fa-pause"></i>';
             }
-
             updateProgress() {
                 const progress = (this.audio.currentTime / this.audio.duration) * 100;
                 document.getElementById("seekBar").value = progress;
                 document.getElementById("currentTime").textContent = this.formatTime(this.audio.currentTime);
             }
-
             seek(percentage) {
                 this.audio.currentTime = (percentage / 100) * this.audio.duration;
             }
-
             formatTime(seconds) {
                 const mins = Math.floor(seconds / 60);
                 const secs = Math.floor(seconds % 60);
                 return `${mins}:${secs.toString().padStart(2, "0")}`;
             }
         }
-
         class App {
             constructor() {
                 this.rssManager = new RSSManager();
@@ -408,7 +448,6 @@
                 window.app = this;
                 this.initialize();
             }
-
             async initialize() {
                 this.setCurrentDate();
                 this.setupEventListeners();
@@ -416,14 +455,12 @@
                 this.feedsData = await this.rssManager.fetchAllFeeds();
                 this.renderFeeds(this.feedsData);
                 this.renderSectorCharts();
-                setInterval(() => this.refreshContent(), 60000);  // Update every minute for real-time updates
-                setInterval(() => this.checkAlerts(), 60000);  // Check for alerts every minute
+                setInterval(() => this.refreshContent(), 60000); // Update every minute for real-time updates
+                setInterval(() => this.checkAlerts(), 60000); // Check for alerts every minute
             }
-
             filterFeeds(sector, date = null) {
                 this.renderFeeds(this.feedsData, sector, date);
             }
-
             setCurrentDate() {
                 document.getElementById("currentDate").textContent =
                     new Date().toLocaleDateString("en-US", {
@@ -433,7 +470,6 @@
                         day: "numeric"
                     });
             }
-
             setupEventListeners() {
                 document.getElementById("reset-filter").addEventListener("click", (e) => {
                     e.preventDefault();
@@ -445,7 +481,6 @@
                     this.renderFeeds(this.feedsData);
                 });
             }
-
             setupGraphTabs() {
                 const tabs = document.querySelectorAll("#graph-tabs button");
                 tabs.forEach(tab => {
@@ -458,7 +493,6 @@
                     });
                 });
             }
-
             renderFeeds(feedsData, filterKeyword = null, filterDate = null) {
                 const container = document.getElementById("rss-container");
                 container.innerHTML = "";
@@ -499,17 +533,14 @@
                     container.appendChild(feedDiv);
                 });
             }
-
             truncateText(text, words) {
                 return text.split(" ").slice(0, words).join(" ") + "...";
             }
-
             renderSectorCharts() {
                 const agg = aggregateSectorData(this.feedsData, 30);
                 this.renderPieChart(agg);
                 this.renderBarChart(agg);
             }
-
             renderBarChart(agg) {
                 const sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
                 const topSectors = sorted.slice(0, 10);
@@ -536,7 +567,6 @@
                     });
                 });
             }
-
             renderPieChart(agg) {
                 const sorted = Object.keys(agg.overallCounts).sort((a, b) => agg.overallCounts[b] - agg.overallCounts[a]);
                 const topSectors = sorted.slice(0, 10);
@@ -561,7 +591,6 @@
                     });
                 });
             }
-
             refreshContent() {
                 this.rssManager.fetchAllFeeds().then(feedsData => {
                     this.feedsData = feedsData;
@@ -569,22 +598,41 @@
                     this.renderSectorCharts();
                 });
             }
-
             checkAlerts() {
                 this.feedsData.forEach(feed => {
                     feed.items.forEach(item => {
                         const sentimentScore = analyzeSentiment(item.description);
-                        if (sentimentScore < -5) {  // Example threshold for negative sentiment
+                        if (sentimentScore < -5) { // Example threshold for negative sentiment
                             alert(`Negative sentiment detected in article: ${item.title}`);
                         }
                     });
                 });
             }
         }
-
         document.addEventListener("DOMContentLoaded", () => {
             new App();
         });
+
+        async function askQuestion() {
+            document.getElementById('loading').style.display = 'block';
+            const model = await qna.load();
+            const question = document.getElementById('question').value;
+            const passage = getRSSSummaries(); // Get all RSS summaries
+            const answers = await model.findAnswers(question, passage);
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('answer').innerText = answers.length ? answers[0].text : 'No answer found';
+        }
+
+        function getRSSSummaries() {
+            const summaries = [];
+            const feedsData = window.app.feedsData;
+            feedsData.forEach(feed => {
+                feed.items.forEach(item => {
+                    summaries.push(item.description);
+                });
+            });
+            return summaries.join(' ');
+        }
     </script>
 </body>
 </html>
