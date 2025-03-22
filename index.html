@@ -267,6 +267,22 @@
     <div id="app">
         <header>
             <h1>Daily AI News for <span id="currentDate"></span></h1>
+            <div style="margin-top: 10px;">
+                <label for="newsLimit" style="color: #00bcd4;">News per feed:</label>
+                <select id="newsLimit" style="
+                    background-color: #2d2d2d;
+                    color: #fff;
+                    border: 1px solid #00bcd4;
+                    padding: 5px;
+                    border-radius: 5px;
+                    margin-left: 10px;">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15" selected>15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
         </header>
         <main>
             <p class="headline">AI-generated content – Business Sector Analysis</p>
@@ -359,7 +375,7 @@
         }
         class RSSManager {
             constructor() {
-                this.newsLimit = 15;
+                this.newsLimit = parseInt(document.getElementById('newsLimit')?.value || 15);
                 this.feeds = [
                     { url: "https://www.marktechpost.com/feed/", elementId: "rss1" },
                     { url: "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", elementId: "rss4" },
@@ -369,6 +385,11 @@
                     { url: "https://feeds.arstechnica.com/arstechnica/index", elementId: "rss8" }
                 ];
             }
+
+            setNewsLimit(limit) {
+                this.newsLimit = parseInt(limit);
+            }
+
             async fetchAllFeeds() {
                 const feedsData = [];
                 for (const feed of this.feeds) {
@@ -481,6 +502,10 @@
                 document.getElementById("toggleImages").addEventListener("change", (e) => {
                     showImages = e.target.checked;
                     this.renderFeeds(this.feedsData);
+                });
+                document.getElementById("newsLimit").addEventListener("change", (e) => {
+                    this.rssManager.setNewsLimit(e.target.value);
+                    this.refreshContent();
                 });
             }
             setupGraphTabs() {
