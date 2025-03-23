@@ -267,21 +267,36 @@
     <div id="app">
         <header>
             <h1>Daily AI News for <span id="currentDate"></span></h1>
-            <div style="margin-top: 10px;">
-                <label for="newsLimit" style="color: #00bcd4;">News per feed:</label>
-                <select id="newsLimit" style="
-                    background-color: #2d2d2d;
-                    color: #fff;
-                    border: 1px solid #00bcd4;
-                    padding: 5px;
-                    border-radius: 5px;
-                    margin-left: 10px;">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15" selected>15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                </select>
+            <div style="margin-top: 10px; display: flex; gap: 20px; justify-content: center;">
+                <div>
+                    <label for="newsCategory" style="color: #00bcd4;">Category:</label>
+                    <select id="newsCategory" style="
+                        background-color: #2d2d2d;
+                        color: #fff;
+                        border: 1px solid #00bcd4;
+                        padding: 5px;
+                        border-radius: 5px;
+                        margin-left: 10px;">
+                        <option value="tech" selected>Technology</option>
+                        <option value="business">Business & Finance</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="newsLimit" style="color: #00bcd4;">News per feed:</label>
+                    <select id="newsLimit" style="
+                        background-color: #2d2d2d;
+                        color: #fff;
+                        border: 1px solid #00bcd4;
+                        padding: 5px;
+                        border-radius: 5px;
+                        margin-left: 10px;">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+                </div>
             </div>
         </header>
         <main>
@@ -320,70 +335,88 @@
     </div>   -->
 
     <script>
-        // Original JavaScript with click filtering additions
-        const techSector = [
-            "government", "media", "universities", "research",
-            "technology", "finance", "business", "health", "ai"
-        ];
-        let showImages = true;
-        function getSectorCategories(item) {
-            let sectors = [];
-            if (item.categories && Array.isArray(item.categories)) {
-                item.categories.forEach(cat => {
-                    let lower = cat.trim().toLowerCase();
-                    if (techSector.includes(lower) && !sectors.includes(lower)) {
-                        sectors.push(lower);
-                    }
-                });
+        // Move this before any class definitions
+        const newsCategories = {
+            tech: {
+                sectors: [
+                    "technology", "ai", "research", "cybersecurity",
+                    "robotics", "cloud", "software", "hardware"
+                ],
+                feeds: [
+                    { url: "https://www.marktechpost.com/feed/", elementId: "rss1" },
+                    { url: "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", elementId: "rss4" },
+                    { url: "https://techcrunch.com/feed/", elementId: "rss5" },
+                    { url: "https://www.theverge.com/rss/index.xml", elementId: "rss6" }
+                ]
+            },
+            business: {
+                sectors: [
+                    "finance", "business", "markets", "stocks",
+                    "economy", "trading", "investment", "banking"
+                ],
+                feeds: [
+                    { url: "https://www.forbes.com/business/feed/", elementId: "business1" },
+                    { url: "https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC", elementId: "business2" },
+                    { url: "https://www.ft.com/markets?format=rss", elementId: "business3" },
+                    { url: "https://feeds.bloomberg.com/markets/news.rss", elementId: "business4" }
+                ]
             }
-            let text = (item.title + " " + item.description).toLowerCase();
-            techSector.forEach(sector => {
-                if (text.includes(sector) && !sectors.includes(sector)) {
-                    sectors.push(sector);
-                }
-            });
-            return sectors;
-        }
+        };
+        // Original JavaScript with click filtering additions
+        let showImages = true;
         function aggregateSectorData(feedsData, days = 30) {
+            const currentCategory = window.app.rssManager.currentCategory;
+            const sectors = newsCategories[currentCategory].sectors;
+            
             let overallCounts = {};
             let timeSeries = {};
             let dates = [];
+            
+            // Generate dates array
             for (let i = days - 1; i >= 0; i--) {
                 let d = new Date();
                 d.setDate(d.getDate() - i);
                 let dateStr = d.toISOString().split("T")[0];
                 dates.push(dateStr);
             }
-            techSector.forEach(sector => {
+        
+            // Initialize data structures
+            sectors.forEach(sector => {
                 overallCounts[sector] = 0;
                 timeSeries[sector] = {};
-                dates.forEach(date => { timeSeries[sector][date] = 0; });
+                dates.forEach(date => { 
+                    timeSeries[sector][date] = 0; 
+                });
             });
+        
+            // Aggregate data
             feedsData.forEach(feed => {
                 feed.items.forEach(item => {
                     let pubDate = new Date(item.pubDate).toISOString().split("T")[0];
-                    let sectors = getSectorCategories(item);
-                    sectors.forEach(sector => {
-                        overallCounts[sector] = (overallCounts[sector] || 0) + 1;
-                        if (pubDate in timeSeries[sector]) {
-                            timeSeries[sector][pubDate]++;
+                    let itemSectors = window.app.getSectorCategories(item); // Use the App instance method
+                    itemSectors.forEach(sector => {
+                        if (sectors.includes(sector)) {
+                            overallCounts[sector] = (overallCounts[sector] || 0) + 1;
+                            if (pubDate in timeSeries[sector]) {
+                                timeSeries[sector][pubDate]++;
+                            }
                         }
                     });
                 });
             });
+        
             return { overallCounts, timeSeries, dates };
         }
         class RSSManager {
             constructor() {
                 this.newsLimit = parseInt(document.getElementById('newsLimit')?.value || 15);
-                this.feeds = [
-                    { url: "https://www.marktechpost.com/feed/", elementId: "rss1" },
-                    { url: "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", elementId: "rss4" },
-                    { url: "https://techcrunch.com/feed/", elementId: "rss5" },
-                    { url: "https://www.theverge.com/rss/index.xml", elementId: "rss6" },
-                    { url: "https://www.wired.com/feed/rss", elementId: "rss7" },
-                    { url: "https://feeds.arstechnica.com/arstechnica/index", elementId: "rss8" }
-                ];
+                this.currentCategory = 'tech';
+                this.setFeeds(this.currentCategory);
+            }
+
+            setFeeds(category) {
+                this.currentCategory = category;
+                this.feeds = newsCategories[category].feeds;
             }
 
             setNewsLimit(limit) {
@@ -395,29 +428,34 @@
                 for (const feed of this.feeds) {
                     try {
                         const data = await this.fetchFeed(feed.url);
-                        data.items = data.items.slice(0, this.newsLimit);
-                        feedsData.push({
-                            feedTitle: data.feed.title,
-                            elementId: feed.elementId,
-                            items: data.items
-                        });
+                        if (data && data.items) {
+                            data.items = data.items.slice(0, this.newsLimit);
+                            feedsData.push({
+                                feedTitle: data.feed?.title || feed.url,
+                                elementId: feed.elementId,
+                                items: data.items
+                            });
+                        }
                     } catch (error) {
                         console.error(`Error loading ${feed.url}:`, error);
                     }
                 }
-                if (!feedsData.length) {
+                
+                // Add dummy data if no feeds loaded
+                if (feedsData.length === 0) {
                     feedsData.push({
-                        feedTitle: "Dummy Feed",
-                        elementId: "dummy",
+                        feedTitle: "Sample Feed",
+                        elementId: "sample",
                         items: [{
+                            title: "Sample Article",
+                            description: "This is a sample article.",
+                            link: "#",
                             pubDate: new Date().toISOString(),
-                            title: "Dummy News: Government & Research",
-                            description: "This is a dummy article about government and research.",
-                            thumbnail: "https://via.placeholder.com/350x150",
-                            categories: ["government", "research"]
+                            categories: [this.currentCategory === 'tech' ? 'technology' : 'business']
                         }]
                     });
                 }
+                
                 return feedsData;
             }
              async fetchFeed(url) {
@@ -472,14 +510,27 @@
                 this.initialize();
             }
             async initialize() {
-                this.setCurrentDate();
-                this.setupEventListeners();
-                this.setupGraphTabs();
-                this.feedsData = await this.rssManager.fetchAllFeeds();
-                this.renderFeeds(this.feedsData);
-                this.renderSectorCharts();
-                setInterval(() => this.refreshContent(), 60000); // Update every minute for real-time updates
-                setInterval(() => this.checkAlerts(), 60000); // Check for alerts every minute
+                try {
+                    this.setCurrentDate();
+                    this.setupEventListeners();
+                    this.setupGraphTabs();
+                    
+                    // Fetch and render content
+                    this.feedsData = await this.rssManager.fetchAllFeeds();
+                    if (this.feedsData && this.feedsData.length > 0) {
+                        this.renderFeeds(this.feedsData);
+                        this.renderSectorCharts();
+                    } else {
+                        console.error("No feed data available");
+                    }
+                    
+                    // Set up refresh intervals
+                    setInterval(() => this.refreshContent(), 60000);
+                } catch (error) {
+                    console.error("Initialization error:", error);
+                    document.getElementById("rss-container").innerHTML = 
+                        '<div class="error">Error loading content. Please try again later.</div>';
+                }
             }
             filterFeeds(sector, date = null) {
                 this.renderFeeds(this.feedsData, sector, date);
@@ -507,6 +558,34 @@
                     this.rssManager.setNewsLimit(e.target.value);
                     this.refreshContent();
                 });
+                document.getElementById("newsCategory").addEventListener("change", (e) => {
+                    this.rssManager.setFeeds(e.target.value);
+                    document.querySelector('.headline').textContent = 
+                        `${e.target.value === 'tech' ? 'Technology' : 'Business & Finance'} Sector Analysis`;
+                    this.refreshContent();
+                });
+            }
+            getSectorCategories(item) {
+                const currentSectors = newsCategories[this.rssManager.currentCategory].sectors;
+                let sectors = [];
+                
+                if (item.categories && Array.isArray(item.categories)) {
+                    item.categories.forEach(cat => {
+                        let lower = cat.trim().toLowerCase();
+                        if (currentSectors.includes(lower) && !sectors.includes(lower)) {
+                            sectors.push(lower);
+                        }
+                    });
+                }
+        
+                let text = (item.title + " " + item.description).toLowerCase();
+                currentSectors.forEach(sector => {
+                    if (text.includes(sector) && !sectors.includes(sector)) {
+                        sectors.push(sector);
+                    }
+                });
+        
+                return sectors;
             }
             setupGraphTabs() {
                 const tabs = document.querySelectorAll("#graph-tabs button");
@@ -523,31 +602,37 @@
             renderFeeds(feedsData, filterKeyword = null, filterDate = null) {
                 const container = document.getElementById("rss-container");
                 container.innerHTML = "";
+                
                 feedsData.forEach(feed => {
-                    let items = feed.items;
+                    let items = feed.items || [];
+                    
                     if (filterKeyword) {
                         items = items.filter(item => {
-                            const cats = getSectorCategories(item);
+                            const cats = this.getSectorCategories(item);
                             if (filterDate) {
                                 const itemDate = new Date(item.pubDate).toISOString().split("T")[0];
                                 return cats.includes(filterKeyword.toLowerCase()) && itemDate === filterDate;
-                            } else {
-                                return cats.includes(filterKeyword.toLowerCase());
                             }
+                            return cats.includes(filterKeyword.toLowerCase());
                         });
                     }
+            
                     if (items.length === 0) return;
+            
                     const feedDiv = document.createElement("div");
                     feedDiv.className = "rss-feed";
                     feedDiv.id = feed.elementId;
                     feedDiv.innerHTML = `<div class="rss-title">${feed.feedTitle}</div>`;
+            
                     const ul = document.createElement("ul");
                     ul.className = "rss-list";
+            
                     items.forEach(item => {
-                        const cats = getSectorCategories(item);
+                        const cats = this.getSectorCategories(item); // Use this.getSectorCategories instead of global function
                         const li = document.createElement("li");
                         li.className = "rss-item";
                         const imgStyle = feed.elementId === "rss1" ? 'style="max-height:200px;"' : "";
+                        
                         li.innerHTML = `
                             ${showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" ${imgStyle}>` : ""}
                             <a href="${item.link}" target="_blank">${item.title}</a>
@@ -556,6 +641,7 @@
                         `;
                         ul.appendChild(li);
                     });
+            
                     feedDiv.appendChild(ul);
                     container.appendChild(feedDiv);
                 });
@@ -637,7 +723,8 @@
             }
         }
         document.addEventListener("DOMContentLoaded", () => {
-            new App();
+            const app = new App();
+            window.app = app;
         });
 
         async function askQuestion() {
