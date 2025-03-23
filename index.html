@@ -606,6 +606,9 @@
                 feedsData.forEach(feed => {
                     let items = feed.items || [];
                     
+                    // Sort items by date (newest first)
+                    items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+                    
                     if (filterKeyword) {
                         items = items.filter(item => {
                             const cats = this.getSectorCategories(item);
@@ -628,13 +631,27 @@
                     ul.className = "rss-list";
             
                     items.forEach(item => {
-                        const cats = this.getSectorCategories(item); // Use this.getSectorCategories instead of global function
+                        const cats = this.getSectorCategories(item);
                         const li = document.createElement("li");
                         li.className = "rss-item";
                         const imgStyle = feed.elementId === "rss1" ? 'style="max-height:200px;"' : "";
                         
+                        // Format the date
+                        const pubDate = new Date(item.pubDate);
+                        const formattedDate = pubDate.toLocaleString('en-US', {
+                            weekday: 'short',
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+                        
                         li.innerHTML = `
                             ${showImages && item.thumbnail ? `<img src="${item.thumbnail}" class="rss-image" ${imgStyle}>` : ""}
+                            <div class="post-date" style="color: #00bcd4; font-size: 0.8em; margin-bottom: 5px;">
+                                ${formattedDate}
+                            </div>
                             <a href="${item.link}" target="_blank">${item.title}</a>
                             <p class="rss-summary">${this.truncateText(item.description, 25)}</p>
                             ${cats.length ? `<div class="rss-categories">Categories: ${cats.join(", ")}</div>` : ""}
