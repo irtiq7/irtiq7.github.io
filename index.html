@@ -321,7 +321,7 @@
 
     <script>
         // Original JavaScript with click filtering additions
-        const businessSectors = [
+        const techSector = [
             "government", "media", "universities", "research",
             "technology", "finance", "business", "health", "ai"
         ];
@@ -331,13 +331,13 @@
             if (item.categories && Array.isArray(item.categories)) {
                 item.categories.forEach(cat => {
                     let lower = cat.trim().toLowerCase();
-                    if (businessSectors.includes(lower) && !sectors.includes(lower)) {
+                    if (techSector.includes(lower) && !sectors.includes(lower)) {
                         sectors.push(lower);
                     }
                 });
             }
             let text = (item.title + " " + item.description).toLowerCase();
-            businessSectors.forEach(sector => {
+            techSector.forEach(sector => {
                 if (text.includes(sector) && !sectors.includes(sector)) {
                     sectors.push(sector);
                 }
@@ -354,7 +354,7 @@
                 let dateStr = d.toISOString().split("T")[0];
                 dates.push(dateStr);
             }
-            businessSectors.forEach(sector => {
+            techSector.forEach(sector => {
                 overallCounts[sector] = 0;
                 timeSeries[sector] = {};
                 dates.forEach(date => { timeSeries[sector][date] = 0; });
