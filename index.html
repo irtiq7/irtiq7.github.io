@@ -340,25 +340,41 @@
             tech: {
                 sectors: [
                     "technology", "ai", "research", "cybersecurity",
-                    "robotics", "cloud", "software", "hardware"
+                    "robotics", "cloud", "software", "hardware",
+                    "machine learning", "data science", "quantum", "blockchain"
                 ],
                 feeds: [
-                    { url: "https://www.marktechpost.com/feed/", elementId: "rss1" },
-                    { url: "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", elementId: "rss4" },
-                    { url: "https://techcrunch.com/feed/", elementId: "rss5" },
-                    { url: "https://www.theverge.com/rss/index.xml", elementId: "rss6" }
+                    { url: "https://www.marktechpost.com/feed/", elementId: "rss1", name: "MarkTechPost" },
+                    { url: "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml", elementId: "rss4", name: "MIT AI News" },
+                    { url: "https://techcrunch.com/feed/", elementId: "rss5", name: "TechCrunch" },
+                    { url: "https://www.theverge.com/rss/index.xml", elementId: "rss6", name: "The Verge" },
+                    // New Tech Feeds
+                    { url: "https://www.wired.com/feed/rss", elementId: "tech1", name: "Wired" },
+                    { url: "https://www.artificialintelligence-news.com/feed/", elementId: "tech2", name: "AI News" },
+                    { url: "https://feeds.feedburner.com/ieee-spectrum", elementId: "tech3", name: "IEEE Spectrum" },
+                    { url: "https://www.scientificamerican.com/tech/feed/", elementId: "tech4", name: "Scientific American Tech" },
+                    { url: "https://www.technologyreview.com/feed", elementId: "tech5", name: "MIT Tech Review" },
+                    { url: "https://venturebeat.com/feed/", elementId: "tech6", name: "VentureBeat" }
                 ]
             },
             business: {
                 sectors: [
                     "finance", "business", "markets", "stocks",
-                    "economy", "trading", "investment", "banking"
+                    "economy", "trading", "investment", "banking",
+                    "cryptocurrency", "commodities", "forex", "earnings"
                 ],
                 feeds: [
-                    { url: "https://www.forbes.com/business/feed/", elementId: "business1" },
-                    { url: "https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC", elementId: "business2" },
-                    { url: "https://www.ft.com/markets?format=rss", elementId: "business3" },
-                    { url: "https://feeds.bloomberg.com/markets/news.rss", elementId: "business4" }
+                    { url: "https://www.forbes.com/business/feed/", elementId: "business1", name: "Forbes Business" },
+                    { url: "https://feeds.finance.yahoo.com/rss/2.0/headline?s=^GSPC", elementId: "business2", name: "Yahoo Finance" },
+                    { url: "https://www.ft.com/markets?format=rss", elementId: "business3", name: "Financial Times" },
+                    { url: "https://feeds.bloomberg.com/markets/news.rss", elementId: "business4", name: "Bloomberg Markets" },
+                    // New Business Feeds
+                    { url: "https://www.cnbc.com/id/10000664/device/rss/rss.html", elementId: "biz1", name: "CNBC Finance" },
+                    { url: "https://www.marketwatch.com/rss/topstories", elementId: "biz2", name: "MarketWatch" },
+                    { url: "https://www.wsj.com/xml/rss/3_7031.xml", elementId: "biz3", name: "WSJ Markets" },
+                    { url: "https://www.investing.com/rss/news.rss", elementId: "biz4", name: "Investing.com" },
+                    { url: "https://seekingalpha.com/feed.xml", elementId: "biz5", name: "Seeking Alpha" },
+                    { url: "https://www.reuters.com/rssFeed/businessNews", elementId: "biz6", name: "Reuters Business" }
                 ]
             }
         };
