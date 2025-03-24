@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
-        /* Full original CSS preserved */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -16,14 +15,38 @@
             padding: 0;
             text-align: center;
         }
-        button-container {
+
+        /* Layout Components */
+        #app {
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #00bcd4;
+        }
+
+        /* Navigation and Controls */
+        #button-container {
             display: flex;
             justify-content: center;
             padding: 10px;
             background-color: #1f1f1f;
+            position: sticky;
             top: 0;
             z-index: 100;
         }
+
         #button-container a {
             color: #fff;
             text-decoration: none;
@@ -33,35 +56,103 @@
             margin: 0 10px;
             transition: background-color 0.3s;
         }
+
         #button-container a:hover {
             background-color: #00bcd433;
         }
-        #app {
-            padding: 20px;
+
+        /* Category and Limit Selectors */
+        select {
+            background-color: #2d2d2d;
+            color: #fff;
+            border: 1px solid #00bcd4;
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 10px;
         }
-        header {
+
+        /* RSS Feed Container and Items */
+        #rss-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+            align-items: start;
+        }
+
+        .rss-feed {
             background-color: #1f1f1f;
-            padding: 20px;
+            border: 1px solid #333;
             border-radius: 10px;
-            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
+
+        .rss-title {
             color: #00bcd4;
-        }
-        .headline {
             font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #ff5722;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
         }
+
+        .rss-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rss-item {
+            background-color: #2d2d2d;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .rss-item a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .rss-item a:hover {
+            text-decoration: underline;
+        }
+
+        .rss-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .post-date {
+            color: #00bcd4;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+        }
+
+        .rss-categories {
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+
+        /* Charts */
         #graph-tabs {
             margin: 20px auto;
-            max-width: 1200px;
             display: flex;
             justify-content: center;
             gap: 10px;
         }
+
         #graph-tabs button {
             background-color: #1f1f1f;
             color: #fff;
@@ -70,11 +161,14 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
+            transition: all 0.3s ease;
         }
+
         #graph-tabs button.active {
             background-color: #00bcd4;
             color: #121212;
         }
+
         .chart-container {
             max-width: 1200px;
             margin: 0 auto 20px;
@@ -83,77 +177,12 @@
             padding: 20px;
             min-height: 400px;
         }
-        .hidden {
+
+        .chart-container.hidden {
             display: none;
         }
-        #image-toggle-container {
-            margin: 20px auto;
-            text-align: center;
-        }
-        #rss-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            justify-items: center;
-            padding: 20px;
-        }
-        .rss-feed {
-            background-color: #1f1f1f;
-            border: 1px solid #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            max-width: 350px;
-            width: 100%;
-            text-align: center;
-        }
-        .rss-title {
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            color: #00bcd4;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
-        .rss-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .rss-item {
-            background-color: #2d2d2d;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            padding: 10px;
-            text-align: center;
-        }
-        .rss-item a {
-            color: #00bcd4;
-            display: block;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-            text-decoration: none;
-        }
-        .rss-item a:hover {
-            text-decoration: underline;
-        }
-        .rss-summary {
-            font-size: 0.9em;
-            color: #ccc;
-            line-height: 1.4;
-        }
-        .rss-image {
-            width: 100%;
-            height: auto;
-            max-height: 300px;
-            object-fit: contain;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .rss-categories {
-            font-size: 0.8em;
-            color: #00bcd4;
-            margin-top: 5px;
-        }
+
+        /* Audio Player */
         #audio-player {
             position: fixed;
             bottom: 20px;
@@ -164,20 +193,23 @@
             padding: 15px;
             width: 300px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
         }
+
         #custom-controls {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 10px;
         }
+
         #seekBar {
             flex-grow: 1;
+            height: 4px;
             background: #333;
             border-radius: 2px;
             cursor: pointer;
-            height: 4px;
         }
+
         #playPauseBtn {
             background: none;
             border: none;
@@ -185,67 +217,19 @@
             cursor: pointer;
             font-size: 1.5em;
         }
-        #currentTime,
-        #totalTime {
-            font-size: 0.8em;
-            color: #888;
-        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            #graph-tabs {
-                flex-direction: column;
-            }
-            #rss-container {
-                grid-template-columns: 1fr;
-            }
-            header h1 {
-                font-size: 1.8em;
-            }
+            header h1 { font-size: 1.8em; }
+            #graph-tabs { flex-direction: column; }
+            #rss-container { grid-template-columns: 1fr; }
             #audio-player {
                 width: calc(100% - 40px);
                 bottom: 10px;
                 right: 10px;
             }
-        }
-
-        /* Add styles for the floating textbox */
-        #floatingTextbox {
-            position: fixed;
-            bottom: 80px; /* Adjusted to avoid overlap with audio player */
-            right: 20px;
-            width: 300px;
-            padding: 10px;
-            background-color: #1f1f1f;
-            color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1000;
-        }
-        #question {
-            width: 100%;
-            padding: 10px;
-            background-color: #2d2d2d;
-            color: #fff;
-            border: 1px solid #333;
-            border-radius: 5px;
-            resize: none;
-        }
-        #askButton {
-            margin-top: 10px;
-            padding: 15px;
-            width: 100%;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #askButton:hover {
-            background-color: #0056b3;
-        }
-        #loading {
-            display: none;
-            margin-top: 10px;
-            color: #00bcd4;
+            .rss-feed { max-width: 100%; }
+            .rss-image { max-height: 140px; }
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
@@ -485,9 +469,37 @@
         }
         class AudioController {
             constructor() {
-                this.audio = new Audio("news.wav");
+                this.audioFiles = {
+                    tech: "news.wav",
+                    business: "news2.wav"
+                };
+                this.audio = new Audio(this.audioFiles.tech); // Default to tech news
                 this.setupListeners();
             }
+
+            changeAudio(category) {
+                const wasPlaying = !this.audio.paused;
+                const currentTime = this.audio.currentTime;
+                
+                // Create new audio with selected category
+                this.audio.pause();
+                this.audio = new Audio(this.audioFiles[category]);
+                
+                // Setup event listener for the new audio object
+                this.audio.addEventListener("timeupdate", () => this.updateProgress());
+                
+                // If audio was playing, continue playing the new audio
+                if (wasPlaying) {
+                    this.audio.currentTime = currentTime;
+                    this.audio.play();
+                }
+                
+                // Update button state
+                document.getElementById("playPauseBtn").innerHTML = wasPlaying
+                    ? '<i class="fas fa-pause"></i>'
+                    : '<i class="fas fa-play"></i>';
+            }
+
             setupListeners() {
                 document.getElementById("playPauseBtn").addEventListener("click", () => this.togglePlay());
                 document.getElementById("seekBar").addEventListener("input", (e) => this.seek(e.target.value));
@@ -576,6 +588,7 @@
                 });
                 document.getElementById("newsCategory").addEventListener("change", (e) => {
                     this.rssManager.setFeeds(e.target.value);
+                    this.audioController.changeAudio(e.target.value); // Add this line
                     document.querySelector('.headline').textContent = 
                         `${e.target.value === 'tech' ? 'Technology' : 'Business & Finance'} Sector Analysis`;
                     this.refreshContent();
@@ -606,10 +619,18 @@
             setupGraphTabs() {
                 const tabs = document.querySelectorAll("#graph-tabs button");
                 tabs.forEach(tab => {
-                    tab.addEventListener("click", function () {
+                    tab.addEventListener("click", function() {
+                        // Remove active class from all tabs
                         tabs.forEach(t => t.classList.remove("active"));
+                        // Add active class to clicked tab
                         this.classList.add("active");
-                        document.querySelectorAll(".chart-container").forEach(div => div.classList.add("hidden"));
+                        
+                        // Hide all chart containers
+                        document.querySelectorAll(".chart-container").forEach(div => {
+                            div.classList.add("hidden");
+                        });
+                        
+                        // Show selected chart
                         const target = this.getAttribute("data-chart");
                         document.getElementById(target).classList.remove("hidden");
                     });
