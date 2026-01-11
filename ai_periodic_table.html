@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Elements Interactive Table</title>
+    <title>AI Elements & Products Interactive Framework</title>
     <style>
         * {
             margin: 0;
@@ -18,10 +18,11 @@
             min-height: 100vh;
             padding: 20px;
             background-attachment: fixed;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -77,6 +78,25 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        th::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 204, 255, 0.2), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            100% {
+                left: 100%;
+            }
         }
 
         td {
@@ -228,6 +248,161 @@
             font-weight: bold;
         }
 
+        /* Product Mapping Styles */
+        .products-section {
+            background: rgba(0, 15, 30, 0.8);
+            border: 2px solid #cc00ff;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .products-section h2 {
+            font-size: 2.2rem;
+            color: #cc00ff;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            background: rgba(10, 10, 30, 0.7);
+            border: 1px solid #6600cc;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 0, 204, 0.4);
+            border-color: #cc00ff;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(102, 0, 204, 0.1) 50%, transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #cc00ff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-name::before {
+            content: '•';
+            margin-right: 10px;
+            color: #00ccff;
+            font-size: 1.8rem;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #a0a0c0;
+            line-height: 1.6;
+        }
+
+        .product-elements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+            min-height: 40px;
+        }
+
+        .product-element {
+            background: rgba(0, 50, 100, 0.5);
+            border: 1px solid #0066cc;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            color: #00ccff;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 20px;
+        }
+
+        .reset-btn {
+            background: linear-gradient(45deg, #cc0000, #ff6600);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(204, 0, 0, 0.4);
+        }
+
+        .reset-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 7px 20px rgba(204, 0, 0, 0.6);
+        }
+
+        .reset-btn:active {
+            transform: scale(0.95);
+        }
+
+        .highlighted {
+            background: rgba(0, 255, 204, 0.25) !important;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.7) !important;
+            position: relative;
+            z-index: 20;
+        }
+
+        .highlighted::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .product-highlight {
+            background: rgba(102, 0, 204, 0.3) !important;
+            border-color: #cc00ff !important;
+        }
+
+        .active-section {
+            border-color: #00ffcc !important;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.5) !important;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -244,21 +419,32 @@
             .info-content {
                 font-size: 1.1rem;
             }
+            
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>AI Elements Framework</h1>
-            <p class="subtitle">An interactive guide to understanding key components of modern AI systems. Click on any element to learn more.</p>
+            <h1>AI Elements & Products Framework</h1>
+            <p class="subtitle">An interactive guide to understanding key components of modern AI systems and how they power popular AI products.</p>
         </header>
 
         <div class="glow glow-1"></div>
         <div class="glow glow-2"></div>
 
         <div class="instructions">
-            <p>Click on any <span class="highlight-instruction">neon-colored cell</span> to see detailed information about that AI element. The table is organized by <span class="highlight-instruction">rows (Primitives, Compositions, Deployment, Emerging)</span> and <span class="highlight-instruction">columns (Reactive, Retrieval, Orchestration, Validation, Models)</span>.</p>
+            <p>Click on any <span class="highlight-instruction">neon-colored cell</span> to learn about AI elements. 
+            Explore the <span class="highlight-instruction">AI Products section</span> to see which elements power popular services. 
+            Click a product to highlight its components in the table.</p>
         </div>
 
         <div class="table-container">
@@ -405,19 +591,27 @@
             </div>
         </div>
 
+        <div class="products-section">
+            <h2>AI Products & Services</h2>
+            <p>Click on any product below to see which AI elements power it. The corresponding cells in the framework table will be highlighted.</p>
+            
+            <div class="products-container" id="productsContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+            
+            <div class="controls">
+                <button class="reset-btn" id="resetHighlights">Reset Highlights</button>
+            </div>
+        </div>
+
         <div class="footer">
-            <p>AI Periodic Table • Interactive Guide • Created by Usama Saqib, PhD</p>
+            <p>AI Periodic Table • Product Mapping • Created by Usama Saqib, PhD</p>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const infoPanel = document.getElementById('infoPanel');
-            const infoAbb = document.getElementById('infoAbb');
-            const infoTitle = document.getElementById('infoTitle');
-            const infoContent = document.getElementById('infoContent');
-            
-            // Define all element descriptions
+            // Element data for the info panel
             const elementData = {
                 Pr: {
                     name: "Prompts",
@@ -489,6 +683,185 @@
                 }
             };
 
+            // Product data mapping products to AI elements
+            const productsData = [
+                {
+                    name: "ChatGPT (OpenAI)",
+                    description: "Conversational AI assistant with web access, code interpreter, and plugin ecosystem",
+                    elements: ["Pr", "Lg", "Ag", "Fc", "Rg", "Gr"]
+                },
+                {
+                    name: "Claude (Anthropic)",
+                    description: "Conversational AI focused on safety, constitutional AI principles, and long context windows",
+                    elements: ["Pr", "Lg", "Gr", "Re", "In"]
+                },
+                {
+                    name: "Gemini (Google)",
+                    description: "Multimodal AI assistant with image, audio, and video understanding capabilities",
+                    elements: ["Pr", "Lg", "Mm", "Vx", "Rg", "Gr"]
+                },
+                {
+                    name: "Llama (Meta)",
+                    description: "Open-source large language models with various sizes and specialized versions",
+                    elements: ["Lg", "Ft", "Sm", "Sy"]
+                },
+                {
+                    name: "Hugging Face",
+                    description: "Platform for building, training, and deploying machine learning models",
+                    elements: ["Ft", "Sm", "Em", "Vx", "Fw"]
+                },
+                {
+                    name: "LangChain",
+                    description: "Framework for developing applications powered by language models",
+                    elements: ["Fw", "Ag", "Rg", "Vx", "Fc"]
+                },
+                {
+                    name: "Perplexity.ai",
+                    description: "Answer engine focused on providing accurate, sourced information with web search",
+                    elements: ["Rg", "Pr", "Lg", "Vx", "Gr"]
+                },
+                {
+                    name: "Midjourney",
+                    description: "AI image generation service creating visuals from text prompts",
+                    elements: ["Mm", "Pr", "Sy", "Th"]
+                },
+                {
+                    name: "GitHub Copilot",
+                    description: "AI pair programmer that suggests code completions and entire functions",
+                    elements: ["Pr", "Lg", "Ft", "Gr"]
+                },
+                {
+                    name: "Pinecone",
+                    description: "Vector database service for building high-performance vector search applications",
+                    elements: ["Vx", "Em", "Fw"]
+                },
+                {
+                    name: "Character.ai",
+                    description: "Platform for creating and interacting with AI characters with distinct personalities",
+                    elements: ["Pr", "Lg", "Ag", "Th"]
+                },
+                {
+                    name: "RunwayML",
+                    description: "Creative suite for AI-powered video, image, and audio generation",
+                    elements: ["Mm", "Sy", "Fw", "Th"]
+                },
+                {
+                    name: "Microsoft Copilot",
+                    description: "AI assistant integrated across Microsoft 365 applications and Windows",
+                    elements: ["Pr", "Lg", "Ag", "Fc", "Rg", "Gr"]
+                },
+                {
+                    name: "Amazon Bedrock",
+                    description: "Managed service for building generative AI applications with foundation models",
+                    elements: ["Fw", "Ft", "Vx", "Gr", "Re"]
+                },
+                {
+                    name: "ElevenLabs",
+                    description: "AI voice generation and speech synthesis platform",
+                    elements: ["Mm", "Ft", "Sy", "Sm"]
+                },
+                {
+                    name: "Notion AI",
+                    description: "AI writing assistant integrated into the Notion workspace platform",
+                    elements: ["Pr", "Lg", "Gr", "In"]
+                },
+                {
+                    name: "Synthesia",
+                    description: "AI video generation platform creating personalized videos with virtual avatars",
+                    elements: ["Mm", "Sy", "Th", "Sm"]
+                },
+                {
+                    name: "Adobe Sensei",
+                    description: "AI technology powering creative tools in Adobe Creative Cloud",
+                    elements: ["Mm", "Em", "Th", "Sm"]
+                },
+                {
+                    name: "Jasper",
+                    description: "AI content creation platform for marketing and business content",
+                    elements: ["Pr", "Lg", "Gr", "Th"]
+                },
+                {
+                    name: "Lumen5",
+                    description: "AI video creation platform converting text content to engaging videos",
+                    elements: ["Mm", "Sy", "Vx", "Th"]
+                }
+            ];
+
+            // DOM elements
+            const infoPanel = document.getElementById('infoPanel');
+            const infoAbb = document.getElementById('infoAbb');
+            const infoTitle = document.getElementById('infoTitle');
+            const infoContent = document.getElementById('infoContent');
+            const productsContainer = document.getElementById('productsContainer');
+            const resetBtn = document.getElementById('resetHighlights');
+
+            // Render product cards
+            function renderProducts() {
+                productsContainer.innerHTML = '';
+                
+                productsData.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.dataset.elements = JSON.stringify(product.elements);
+                    
+                    // Create element tags
+                    const elementTags = product.elements.map(abb => {
+                        const element = elementData[abb];
+                        return `<span class="product-element" title="${element.name}">${abb}</span>`;
+                    }).join('');
+                    
+                    productCard.innerHTML = `
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-description">${product.description}</div>
+                        <div class="product-elements">
+                            ${elementTags}
+                        </div>
+                    `;
+                    
+                    productCard.addEventListener('click', () => highlightProductElements(product.elements, productCard));
+                    productsContainer.appendChild(productCard);
+                });
+            }
+
+            // Highlight elements for a selected product
+            function highlightProductElements(elementAbbs, selectedCard) {
+                // Reset all highlights first
+                resetHighlights();
+                
+                // Highlight the selected product card
+                document.querySelectorAll('.product-card').forEach(card => {
+                    card.classList.remove('product-highlight');
+                });
+                selectedCard.classList.add('product-highlight');
+                
+                // Highlight the corresponding cells in the table
+                elementAbbs.forEach(abb => {
+                    const cells = document.querySelectorAll(`td[data-abb="${abb}"]`);
+                    cells.forEach(cell => {
+                        cell.classList.add('highlighted');
+                    });
+                });
+                
+                // Scroll to the table
+                document.querySelector('.table-container').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Reset all highlights
+            function resetHighlights() {
+                // Remove highlights from table cells
+                document.querySelectorAll('.highlighted').forEach(cell => {
+                    cell.classList.remove('highlighted');
+                });
+                
+                // Remove highlights from product cards
+                document.querySelectorAll('.product-card').forEach(card => {
+                    card.classList.remove('product-highlight');
+                });
+            }
+
+            // Initialize elements
+            renderProducts();
+
             // Add click event listeners to all info cells
             document.querySelectorAll('.info-cell').forEach(cell => {
                 cell.addEventListener('click', function() {
@@ -511,8 +884,10 @@
                     }, 1500);
                 });
             });
+
+            // Reset button functionality
+            resetBtn.addEventListener('click', resetHighlights);
         });
     </script>
 </body>
-
 </html>
