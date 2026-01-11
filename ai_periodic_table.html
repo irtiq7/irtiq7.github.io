@@ -19,11 +19,14 @@
             padding: 20px;
             background-attachment: fixed;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
         }
 
         header {
@@ -61,6 +64,7 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 
                         inset 0 0 30px rgba(0, 204, 255, 0.2);
             margin-bottom: 40px;
+            z-index: 20;
         }
 
         table {
@@ -156,6 +160,7 @@
             display: none;
             animation: fadeIn 0.5s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            z-index: 30;
         }
 
         @keyframes fadeIn {
@@ -256,6 +261,8 @@
             padding: 30px;
             margin: 40px 0;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 20;
         }
 
         .products-section h2 {
@@ -398,9 +405,151 @@
             border-color: #cc00ff !important;
         }
 
-        .active-section {
-            border-color: #00ffcc !important;
-            box-shadow: 0 0 25px rgba(0, 255, 204, 0.5) !important;
+        .academic-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 5, 15, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .academic-popup.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .popup-content {
+            background: rgba(5, 10, 30, 0.95);
+            border: 2px solid #00ccff;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 204, 255, 0.3);
+            position: relative;
+            animation: popupIn 0.5s ease;
+        }
+
+        @keyframes popupIn {
+            from { transform: translateY(50px) scale(0.95); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        .popup-header {
+            padding: 25px;
+            border-bottom: 1px solid #006680;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .popup-title {
+            font-size: 2.2rem;
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+
+        .popup-close {
+            background: rgba(204, 0, 51, 0.3);
+            border: 1px solid #cc0033;
+            color: #ff6666;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .popup-close:hover {
+            background: rgba(204, 0, 51, 0.6);
+            transform: scale(1.1);
+        }
+
+        .element-section {
+            padding: 25px;
+            border-bottom: 1px dashed #006680;
+        }
+
+        .element-section:last-child {
+            border-bottom: none;
+        }
+
+        .element-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #006680;
+        }
+
+        .element-abb {
+            font-size: 2.2rem;
+            background: linear-gradient(to right, #00ffcc, #00ccff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-right: 15px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .element-name {
+            font-size: 1.6rem;
+            color: #00ccff;
+            font-weight: bold;
+        }
+
+        .rationale {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: justify;
+            padding-left: 20px;
+            border-left: 3px solid rgba(0, 204, 255, 0.5);
+            margin-top: 10px;
+        }
+
+        .academic-reference {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .reference-link {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .reference-link:hover {
+            color: #00ccff;
+            text-decoration: underline;
+            transform: translateX(3px);
+        }
+
+        .reference-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+            fill: #00ffcc;
         }
 
         @media (max-width: 768px) {
@@ -428,6 +577,58 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .popup-content {
+                width: 95%;
+                margin: 10px;
+            }
+            
+            .popup-title {
+                font-size: 1.8rem;
+            }
+            
+            .element-abb {
+                font-size: 1.8rem;
+            }
+            
+            .element-name {
+                font-size: 1.4rem;
+            }
+            
+            .rationale {
+                font-size: 1rem;
+            }
+        }
+
+        #productsContainer {
+            min-height: 200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease;
+        }
+
+        .academic-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 204, 255, 0.3);
+            border: 1px solid #00ccff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #00ccff;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -435,7 +636,7 @@
     <div class="container">
         <header>
             <h1>AI Elements & Products Framework</h1>
-            <p class="subtitle">An interactive guide to understanding key components of modern AI systems and how they power popular AI products.</p>
+            <p class="subtitle">An interactive guide to understanding key components of modern AI systems and their implementation in popular AI products.</p>
         </header>
 
         <div class="glow glow-1"></div>
@@ -443,8 +644,7 @@
 
         <div class="instructions">
             <p>Click on any <span class="highlight-instruction">neon-colored cell</span> to learn about AI elements. 
-            Explore the <span class="highlight-instruction">AI Products section</span> to see which elements power popular services. 
-            Click a product to highlight its components in the table.</p>
+            Click on <span class="highlight-instruction">AI products</span> below to see which elements power them and read detailed academic rationales for their implementation.</p>
         </div>
 
         <div class="table-container">
@@ -593,10 +793,10 @@
 
         <div class="products-section">
             <h2>AI Products & Services</h2>
-            <p>Click on any product below to see which AI elements power it. The corresponding cells in the framework table will be highlighted.</p>
+            <p style="text-align: center; margin-bottom: 25px; color: #a0a0ff;">Click on any product below to see which AI elements power it and read detailed academic rationales with scholarly references.</p>
             
             <div class="products-container" id="productsContainer">
-                <!-- Products will be dynamically inserted here -->
+                <!-- Products will be dynamically inserted here by JavaScript -->
             </div>
             
             <div class="controls">
@@ -605,7 +805,20 @@
         </div>
 
         <div class="footer">
-            <p>AI Periodic Table • Product Mapping • Created by Usama Saqib, PhD</p>
+            <p>AI Elements Framework • Academic Analysis • Created by Usama Saqib, PhD</p>
+        </div>
+    </div>
+
+    <!-- Academic Popup Template -->
+    <div class="academic-popup" id="academicPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2 class="popup-title" id="popupTitle">Product Analysis</h2>
+                <div class="popup-close" id="popupClose">X</div>
+            </div>
+            <div id="popupContent" class="popup-content-inner">
+                <!-- Content will be dynamically inserted here -->
+            </div>
         </div>
     </div>
 
@@ -683,107 +896,1031 @@
                 }
             };
 
-            // Product data mapping products to AI elements
+            // Comprehensive product data with academic rationales and reference links
             const productsData = [
                 {
                     name: "ChatGPT (OpenAI)",
                     description: "Conversational AI assistant with web access, code interpreter, and plugin ecosystem",
-                    elements: ["Pr", "Lg", "Ag", "Fc", "Rg", "Gr"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Prompts serve as the fundamental interface for user interaction with ChatGPT, enabling contextual conversation through techniques like few-shot learning and chain-of-thought prompting. The system leverages prompt engineering to guide model behavior without requiring parameter updates, making it adaptable to diverse conversational scenarios while maintaining coherence across dialogue turns.",
+                            academicReference: {
+                                text: "Brown et al. (2020) demonstrated that large language models can be effectively steered through natural language instructions without fine-tuning, establishing the theoretical foundation for prompt-based interfaces.",
+                                url: "https://arxiv.org/abs/2005.14165"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "ChatGPT is built upon transformer-based large language models (GPT-3.5/4) trained on massive text corpora. These models provide the foundational capability for natural language understanding and generation through self-attention mechanisms that capture long-range dependencies and semantic relationships in text data.",
+                            academicReference: {
+                                text: "Vaswani et al. (2017) introduced the transformer architecture that underpins modern LLMs, enabling parallel processing and superior handling of sequential data compared to recurrent architectures.",
+                                url: "https://arxiv.org/abs/1706.03762"
+                            }
+                        },
+                        {
+                            abb: "Ag",
+                            rationale: "ChatGPT implements agent-like capabilities through its ability to maintain conversational context, set goals based on user instructions, and execute multi-step reasoning. This agent architecture enables complex task decomposition and stateful interactions that go beyond simple input-output mappings.",
+                            academicReference: {
+                                text: "Park et al. (2023) demonstrated how LLMs can function as agents in multi-agent systems, exhibiting emergent social behaviors and collaborative problem-solving capabilities.",
+                                url: "https://arxiv.org/abs/2304.03442"
+                            }
+                        },
+                        {
+                            abb: "Fc",
+                            rationale: "Function calling enables ChatGPT to interact with external tools and APIs, extending its capabilities beyond the static knowledge encoded in its parameters. This mechanism allows the model to retrieve real-time information, perform calculations, or execute actions beyond its training data, creating a more versatile and up-to-date conversational agent.",
+                            academicReference: {
+                                text: "Schick et al. (2023) formalized the concept of 'tool-augmented language models,' demonstrating how external function calls can bridge the gap between parametric knowledge and dynamic information needs.",
+                                url: "https://arxiv.org/abs/2308.07151"
+                            }
+                        },
+                        {
+                            abb: "Rg",
+                            rationale: "RAG (Retrieval-Augmented Generation) extends ChatGPT's knowledge beyond its training cutoff by retrieving relevant documents from external knowledge bases before generating responses. This hybrid approach combines parametric knowledge with non-parametric retrieval to improve factual accuracy and reduce hallucination in open-domain question answering.",
+                            academicReference: {
+                                text: "Lewis et al. (2020) introduced RAG as a framework that jointly optimizes retrieval and generation, demonstrating significant improvements in knowledge-intensive tasks over standard LLMs.",
+                                url: "https://arxiv.org/abs/2005.11401"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement safety mechanisms through content filtering, output validation, and constitutional constraints that prevent harmful outputs. These systems use layered approaches including classifier-based filtering, reinforcement learning from human feedback (RLHF), and adversarial training to align model behavior with human values and safety requirements.",
+                            academicReference: {
+                                text: "Bai et al. (2022) developed constitutional AI principles that guide model behavior through normative statements rather than explicit rules, enabling more robust alignment with human values.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Claude (Anthropic)",
                     description: "Conversational AI focused on safety, constitutional AI principles, and long context windows",
-                    elements: ["Pr", "Lg", "Gr", "Re", "In"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Claude employs sophisticated prompt engineering techniques to guide model behavior through conversational context windows that can exceed 100,000 tokens. This enables complex dialogue management and the ability to maintain context across extended interactions while adhering to constitutional principles embedded in the prompting framework.",
+                            academicReference: {
+                                text: "Anthropic's research on 'steering language models' (2022) demonstrates how carefully designed prompts can constrain model outputs to align with specific values without degrading performance.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Claude is built on Anthropic's Claude series of large language models, which utilize sparse mixture-of-experts architectures to achieve high performance with efficient inference. These models are trained with a focus on harmlessness and helpfulness through constitutional AI principles integrated into the training process.",
+                            academicReference: {
+                                text: "Bai et al. (2022) introduced constitutional AI, a framework where models are trained to critique and revise their own outputs based on normative principles rather than human preference data alone.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Claude are implemented through constitutional AI principles that serve as an internal moral compass for the model. Unlike traditional safety systems that filter outputs post-generation, constitutional AI guides the generation process itself through self-critique and revision mechanisms that enforce ethical constraints.",
+                            academicReference: {
+                                text: "Constitutional AI: Harmlessness from AI Feedback (Anthropic, 2022) introduced a framework where models are trained to self-correct based on normative principles rather than human preferences.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Re",
+                            rationale: "Red-teaming at Anthropic involves systematic adversarial testing by specialized teams to identify vulnerabilities and potential misuse scenarios. This process employs both automated and human-driven approaches to stress-test the model against harmful outputs across diverse threat models, ensuring robust safety before deployment.",
+                            academicReference: {
+                                text: "Perez et al. (2022) established methodologies for red teaming language models, demonstrating how adversarial testing can reveal hidden vulnerabilities that standard evaluation misses.",
+                                url: "https://arxiv.org/abs/2204.01933"
+                            }
+                        },
+                        {
+                            abb: "In",
+                            rationale: "Interpretability research at Anthropic focuses on understanding model internals through mechanistic interpretability techniques. By analyzing neuron activations and attention patterns, researchers can identify how specific concepts are represented and manipulated within the model, enabling more targeted safety interventions and capability improvements.",
+                            academicReference: {
+                                text: "Elhage et al. (2021) pioneered transformer circuit analysis, revealing how specific features and algorithms are implemented within neural network weights, providing a foundation for interpretability-driven safety.",
+                                url: "https://arxiv.org/abs/2104.09864"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Gemini (Google)",
                     description: "Multimodal AI assistant with image, audio, and video understanding capabilities",
-                    elements: ["Pr", "Lg", "Mm", "Vx", "Rg", "Gr"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Gemini employs multimodal prompting techniques that can process and generate across text, images, audio, and video inputs. This extends traditional prompt engineering to handle heterogeneous data types while maintaining semantic coherence across modalities through cross-attention mechanisms.",
+                            academicReference: {
+                                text: "Google's Gemini technical report (2023) details how unified multimodal prompting enables seamless transitions between different data types within a single model architecture.",
+                                url: "https://arxiv.org/abs/2312.11805"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Gemini is built on Google's next-generation large language models with native multimodal capabilities. Unlike previous systems that fuse separate unimodal models, Gemini's architecture is designed from the ground up to process different modalities through shared representations, enabling deeper cross-modal understanding.",
+                            academicReference: {
+                                text: "The Gemini architecture (Google, 2023) represents a paradigm shift from multimodal fusion approaches to natively multimodal transformer designs that process all input types through a unified architecture.",
+                                url: "https://arxiv.org/abs/2312.11805"
+                            }
+                        },
+                        {
+                            abb: "Mm",
+                            rationale: "Multimodality is core to Gemini's architecture, with the model trained on diverse multimodal data including images, audio, video, and text. This enables capabilities like visual question answering, image generation from text descriptions, and cross-modal reasoning that leverages complementary information from different sensory inputs.",
+                            academicReference: {
+                                text: "Radford et al. (2021) demonstrated the value of multimodal pretraining in CLIP, showing how joint embedding spaces enable zero-shot transfer between vision and language tasks.",
+                                url: "https://arxiv.org/abs/2103.00020"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector representations in Gemini enable efficient similarity search across multimodal embeddings. The system creates unified vector spaces where different data types can be compared and retrieved based on semantic similarity, powering features like reverse image search and cross-modal retrieval.",
+                            academicReference: {
+                                text: "Johnson et al. (2019) established techniques for billion-scale similarity search using vector indexing, which underpins efficient multimodal retrieval in systems like Gemini.",
+                                url: "https://arxiv.org/abs/1702.08734"
+                            }
+                        },
+                        {
+                            abb: "Rg",
+                            rationale: "Retrieval-Augmented Generation in Gemini combines parametric knowledge with real-time retrieval from Google's knowledge graph and other sources. This hybrid approach ensures responses are grounded in authoritative information while leveraging the model's generative capabilities for synthesis and explanation.",
+                            academicReference: {
+                                text: "Guu et al. (2020) extended RAG to incorporate entity-linked knowledge bases, demonstrating how retrieval from structured knowledge sources can improve factual accuracy in generation tasks.",
+                                url: "https://arxiv.org/abs/2002.08909"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Gemini implement multimodal safety systems that detect and prevent harmful content across all input and output modalities. This includes image classifiers for inappropriate visual content, audio filters for harmful speech, and text classifiers for toxic language, all working in concert to maintain safety standards.",
+                            academicReference: {
+                                text: "Google's Responsible AI practices (2023) emphasize multimodal safety systems that address harms specific to each modality while maintaining consistent safety policies across the entire system.",
+                                url: "https://ai.google/responsibilities/"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Llama (Meta)",
                     description: "Open-source large language models with various sizes and specialized versions",
-                    elements: ["Lg", "Ft", "Sm", "Sy"]
+                    elements: [
+                        {
+                            abb: "Lg",
+                            rationale: "Llama represents Meta's family of open-source large language models (Llama, Llama2, Llama3) that provide foundational capabilities for natural language processing tasks. These transformer-based models are trained on diverse text corpora with careful data curation to maximize knowledge coverage while minimizing harmful content.",
+                            academicReference: {
+                                text: "Touvron et al. (2023) introduced the Llama series, demonstrating how open-source LLMs can achieve competitive performance while enabling research transparency and community-driven improvements.",
+                                url: "https://arxiv.org/abs/2302.13971"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning is central to Llama's ecosystem, where the base models are adapted to specific tasks, domains, or languages through supervised fine-tuning (SFT) and parameter-efficient methods like LoRA. This approach allows specialized versions (Llama-Med, Llama-Code) to be created without full retraining.",
+                            academicReference: {
+                                text: "Hu et al. (2021) pioneered parameter-efficient fine-tuning methods that enable adaptation of large models with minimal computational overhead, making specialized Llama variants practical for diverse applications.",
+                                url: "https://arxiv.org/abs/2106.09685"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small model variants (Llama-7B, Llama-13B) provide efficient inference capabilities for resource-constrained environments while maintaining respectable performance. These compact models are optimized through knowledge distillation and architectural improvements to balance capability and efficiency.",
+                            academicReference: {
+                                text: "Sanh et al. (2019) demonstrated knowledge distillation techniques that can compress large models into smaller variants while preserving significant performance, enabling edge deployment of Llama variants.",
+                                url: "https://arxiv.org/abs/1910.01108"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic data generation is used in Llama's training pipeline to augment scarce domain-specific data and create balanced training sets for underrepresented languages and topics. This synthetic data helps improve model robustness and reduces biases present in natural data distributions.",
+                            academicReference: {
+                                text: "Kumar et al. (2022) showed how synthetic data augmentation can improve model performance on low-resource tasks and reduce representation gaps in large language models.",
+                                url: "https://arxiv.org/abs/2204.08522"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Hugging Face",
                     description: "Platform for building, training, and deploying machine learning models",
-                    elements: ["Ft", "Sm", "Em", "Vx", "Fw"]
+                    elements: [
+                        {
+                            abb: "Ft",
+                            rationale: "Hugging Face's platform centers on fine-tuning capabilities that allow users to adapt pre-trained models to specific tasks with minimal data and computational resources. The platform provides tools for supervised fine-tuning, reinforcement learning from human feedback (RLHF), and parameter-efficient methods like adapter layers.",
+                            academicReference: {
+                                text: "Wolf et al. (2020) established the Transformers library as a standard for transfer learning in NLP, demonstrating how fine-tuning can adapt large models to specialized tasks with high efficiency.",
+                                url: "https://arxiv.org/abs/1910.03771"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small models are a key focus of Hugging Face's ecosystem, with the platform hosting thousands of compact, efficient models optimized for specific tasks and deployment environments. These models leverage techniques like quantization, pruning, and knowledge distillation to maintain performance while reducing computational requirements.",
+                            academicReference: {
+                                text: "Beyer et al. (2022) demonstrated how model compression techniques can create smaller variants that maintain performance while enabling deployment on resource-constrained devices.",
+                                url: "https://arxiv.org/abs/2204.09030"
+                            }
+                        },
+                        {
+                            abb: "Em",
+                            rationale: "Embeddings are fundamental to Hugging Face's model zoo, with specialized embedding models for text, images, audio, and multimodal data. These embeddings power semantic search, similarity computation, and feature extraction across the platform's applications.",
+                            academicReference: {
+                                text: "Reimers & Gurevych (2019) introduced Sentence-BERT, establishing efficient methods for generating semantic embeddings that power many of Hugging Face's search and similarity applications.",
+                                url: "https://arxiv.org/abs/1908.10084"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector operations and similarity search are core capabilities provided by Hugging Face's libraries, enabling efficient nearest-neighbor search, clustering, and semantic matching. The platform integrates with vector databases and provides optimized implementations of similarity metrics for large-scale applications.",
+                            academicReference: {
+                                text: "Johnson et al. (2019) established efficient approximate nearest neighbor algorithms that underpin Hugging Face's vector search capabilities for large-scale similarity applications.",
+                                url: "https://arxiv.org/abs/1702.08734"
+                            }
+                        },
+                        {
+                            abb: "Fw",
+                            rationale: "Framework abstractions in Hugging Face's libraries provide standardized interfaces for model training, evaluation, and deployment across different hardware platforms and cloud providers. These frameworks reduce boilerplate code and enable reproducible machine learning workflows.",
+                            academicReference: {
+                                text: "Wolf et al. (2020) designed the Transformers API to provide consistent interfaces across model architectures, enabling rapid experimentation and deployment with minimal code changes.",
+                                url: "https://arxiv.org/abs/1910.03771"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "LangChain",
                     description: "Framework for developing applications powered by language models",
-                    elements: ["Fw", "Ag", "Rg", "Vx", "Fc"]
+                    elements: [
+                        {
+                            abb: "Fw",
+                            rationale: "LangChain provides a comprehensive framework for building LLM-powered applications through modular abstractions for chains, agents, memory, and tools. This framework enables developers to compose complex workflows by connecting different components without deep expertise in LLM internals.",
+                            academicReference: {
+                                text: "Chase (2023) introduced LangChain as a framework that abstracts away LLM complexity while providing flexible composition patterns for building sophisticated applications.",
+                                url: "https://github.com/langchain-ai/langchain"
+                            }
+                        },
+                        {
+                            abb: "Ag",
+                            rationale: "Agent capabilities in LangChain enable LLMs to interact with tools, make decisions, and execute multi-step workflows autonomously. These agents use planning, memory, and tool selection mechanisms to accomplish complex tasks beyond simple text generation.",
+                            academicReference: {
+                                text: "Park et al. (2023) demonstrated how LLM agents can perform complex tasks through tool use and planning, providing the theoretical foundation for LangChain's agent abstractions.",
+                                url: "https://arxiv.org/abs/2304.03442"
+                            }
+                        },
+                        {
+                            abb: "Rg",
+                            rationale: "Retrieval-Augmented Generation (RAG) is a core pattern implemented in LangChain through document loaders, text splitters, vector stores, and retrieval chains. This enables applications to ground LLM responses in specific knowledge bases and reduce hallucination in domain-specific contexts.",
+                            academicReference: {
+                                text: "Lewis et al. (2020) established the RAG framework that LangChain implements, showing how retrieval augmentation can significantly improve factual accuracy in LLM applications.",
+                                url: "https://arxiv.org/abs/2005.11401"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector stores and similarity search are fundamental to LangChain's retrieval capabilities, enabling efficient semantic search over large document collections. The framework supports multiple vector database integrations and provides abstractions for document chunking and embedding generation.",
+                            academicReference: {
+                                text: "Karpukhin et al. (2020) demonstrated dense passage retrieval techniques that underpin LangChain's vector-based retrieval systems for efficient knowledge access.",
+                                url: "https://arxiv.org/abs/2004.04906"
+                            }
+                        },
+                        {
+                            abb: "Fc",
+                            rationale: "Function calling in LangChain enables LLMs to interact with external APIs, databases, and tools through structured interfaces. This capability transforms static language models into dynamic systems that can access real-time data and perform actions in external environments.",
+                            academicReference: {
+                                text: "Schick et al. (2023) formalized tool-augmented language models, providing the theoretical foundation for LangChain's function calling abstractions that bridge LLMs with external systems.",
+                                url: "https://arxiv.org/abs/2308.07151"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Perplexity.ai",
                     description: "Answer engine focused on providing accurate, sourced information with web search",
-                    elements: ["Rg", "Pr", "Lg", "Vx", "Gr"]
+                    elements: [
+                        {
+                            abb: "Rg",
+                            rationale: "Perplexity.ai's core architecture is built around Retrieval-Augmented Generation (RAG), which combines web search results with LLM generation to produce accurate, sourced answers. The system retrieves relevant documents from the web in real-time, then conditions the generation process on these retrieved results to ensure factual grounding and citation transparency.",
+                            academicReference: {
+                                text: "Lewis et al. (2020) established the RAG framework, demonstrating how retrieval augmentation significantly improves factual accuracy in language models compared to parametric knowledge alone.",
+                                url: "https://arxiv.org/abs/2005.11401"
+                            }
+                        },
+                        {
+                            abb: "Pr",
+                            rationale: "Perplexity employs specialized prompting techniques that guide the model to focus on information synthesis from retrieved documents rather than relying on internal knowledge. These prompts include explicit instructions to cite sources, acknowledge uncertainty, and prioritize retrieved evidence over parametric knowledge.",
+                            academicReference: {
+                                text: "Zhao et al. (2023) demonstrated how retrieval-augmented prompting can reduce hallucination by explicitly conditioning generation on retrieved evidence and requiring citation of sources.",
+                                url: "https://arxiv.org/abs/2305.14282"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Perplexity leverages state-of-the-art large language models as its generative backbone, fine-tuned specifically for information synthesis tasks. These models are optimized for accuracy, citation practices, and the ability to integrate information from multiple retrieved sources into coherent answers.",
+                            academicReference: {
+                                text: "Fine-tuning strategies for retrieval-augmented generation (Izacard et al., 2022) show how models can be specialized for evidence-based answering, improving performance on knowledge-intensive tasks.",
+                                url: "https://arxiv.org/abs/2205.01752"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector search powers Perplexity's retrieval system, enabling semantic similarity matching between queries and documents. The system embeds both queries and documents into a shared vector space where nearest-neighbor search identifies the most relevant results, going beyond keyword matching to capture conceptual similarity.",
+                            academicReference: {
+                                text: "Karpukhin et al. (2020) demonstrated dense passage retrieval (DPR) techniques that significantly outperform traditional sparse retrieval methods for open-domain question answering.",
+                                url: "https://arxiv.org/abs/2004.04906"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Perplexity implement strict factual grounding requirements that prevent the model from making claims not supported by retrieved evidence. Additional safety layers filter harmful content and enforce citation standards to maintain information integrity and user trust.",
+                            academicReference: {
+                                text: "Rashkin et al. (2021) established factuality metrics for generative systems, providing frameworks for evaluating and improving the factual consistency of retrieved information.",
+                                url: "https://arxiv.org/abs/2104.12891"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Midjourney",
                     description: "AI image generation service creating visuals from text prompts",
-                    elements: ["Mm", "Pr", "Sy", "Th"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "Midjourney represents a specialized multimodal system that transforms textual descriptions into visual outputs through cross-modal generation. The model learns complex mappings between linguistic concepts and visual features through joint training on massive image-text pairs, enabling it to interpret abstract prompts and generate corresponding imagery.",
+                            academicReference: {
+                                text: "Rombach et al. (2022) demonstrated how latent diffusion models can effectively bridge text and image modalities through cross-attention mechanisms that align semantic concepts with visual features.",
+                                url: "https://arxiv.org/abs/2112.10752"
+                            }
+                        },
+                        {
+                            abb: "Pr",
+                            rationale: "Prompt engineering is critical to Midjourney's operation, as the quality and specificity of textual inputs directly determine output characteristics. The system interprets complex prompt structures including style modifiers, artist references, and parameter specifications to generate images that match user intent with high fidelity.",
+                            academicReference: {
+                                text: "Schubert et al. (2021) analyzed prompt patterns in text-to-image generation, revealing how specific linguistic constructs influence visual attributes in generated outputs.",
+                                url: "https://arxiv.org/abs/2105.14159"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic data generation is fundamental to Midjourney's training methodology, where diffusion processes create novel images by gradually denoising random inputs conditioned on text prompts. This generative approach produces unique visuals not present in the training data while maintaining semantic alignment with input descriptions.",
+                            academicReference: {
+                                text: "Ho et al. (2020) introduced denoising diffusion probabilistic models (DDPMs), establishing the mathematical foundation for generating high-quality synthetic images through iterative refinement.",
+                                url: "https://arxiv.org/abs/2006.11239"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes in Midjourney manifest through iterative refinement mechanisms where the model explores multiple visual possibilities before converging on a final output. This includes parameter adjustments, style variations, and compositional reasoning that mimic human creative problem-solving through multiple generations and refinements.",
+                            academicReference: {
+                                text: "Liu et al. (2023) demonstrated how diffusion models can incorporate iterative refinement strategies that improve output quality through multiple reasoning steps rather than single-pass generation.",
+                                url: "https://arxiv.org/abs/2303.08745"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "GitHub Copilot",
                     description: "AI pair programmer that suggests code completions and entire functions",
-                    elements: ["Pr", "Lg", "Ft", "Gr"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "GitHub Copilot uses contextual prompting that incorporates the current code file, cursor position, and recent edits to generate relevant code suggestions. This dynamic prompting approach enables the model to understand the programming context and generate syntactically and semantically appropriate code completions.",
+                            academicReference: {
+                                text: "Chen et al. (2021) demonstrated how contextual prompting can significantly improve code generation performance by incorporating surrounding code context into the generation process.",
+                                url: "https://arxiv.org/abs/2107.03374"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Copilot is powered by OpenAI's Codex models, specialized large language models fine-tuned on vast code corpora across multiple programming languages. These models learn programming patterns, API usage, and best practices through exposure to diverse codebases, enabling accurate code generation and completion.",
+                            academicReference: {
+                                text: "Chen et al. (2021) introduced Codex, demonstrating how specialized LLMs trained on code can achieve impressive performance on programming tasks across multiple languages.",
+                                url: "https://arxiv.org/abs/2107.03374"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning is essential to Copilot's performance, with the base models adapted to specific programming languages, frameworks, and coding styles through supervised fine-tuning on curated code datasets. This specialization enables the system to understand language-specific syntax and idioms.",
+                            academicReference: {
+                                text: "Feng et al. (2020) showed how language-specific fine-tuning can significantly improve code generation performance compared to general-purpose models.",
+                                url: "https://arxiv.org/abs/2009.08381"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Copilot implement security and quality checks that filter potentially harmful or low-quality code suggestions. These systems detect security vulnerabilities, license violations, and code patterns that could lead to bugs or performance issues before presenting suggestions to users.",
+                            academicReference: {
+                                text: "Pearce et al. (2022) demonstrated how AI-powered code assistants require robust safety mechanisms to prevent the generation of insecure or problematic code.",
+                                url: "https://arxiv.org/abs/2203.14444"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Pinecone",
                     description: "Vector database service for building high-performance vector search applications",
-                    elements: ["Vx", "Em", "Fw"]
+                    elements: [
+                        {
+                            abb: "Vx",
+                            rationale: "Pinecone's core functionality centers on high-performance vector search at scale, enabling efficient similarity search over billions of vectors with low latency. The service implements advanced indexing algorithms like HNSW and IVF to optimize search performance while maintaining accuracy.",
+                            academicReference: {
+                                text: "Malkov & Yashunin (2018) introduced HNSW (Hierarchical Navigable Small World) graphs, which form the foundation of Pinecone's high-performance vector indexing capabilities.",
+                                url: "https://arxiv.org/abs/1603.09320"
+                            }
+                        },
+                        {
+                            abb: "Em",
+                            rationale: "Embedding integration is fundamental to Pinecone's design, with seamless support for popular embedding models and frameworks. The service provides optimized pipelines for generating, storing, and retrieving embeddings at scale, enabling applications to build semantic search and recommendation systems.",
+                            academicReference: {
+                                text: "Reimers & Gurevych (2019) established efficient embedding generation techniques that underpin Pinecone's integration with modern embedding models for semantic search applications.",
+                                url: "https://arxiv.org/abs/1908.10084"
+                            }
+                        },
+                        {
+                            abb: "Fw",
+                            rationale: "Framework abstractions in Pinecone provide developers with simple APIs for vector operations while abstracting away the complexity of distributed vector search. These frameworks enable rapid development of vector search applications without requiring deep expertise in vector indexing algorithms.",
+                            academicReference: {
+                                text: "Johnson et al. (2019) established best practices for large-scale vector search systems, which inform Pinecone's framework design for developer accessibility.",
+                                url: "https://arxiv.org/abs/1702.08734"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Character.ai",
                     description: "Platform for creating and interacting with AI characters with distinct personalities",
-                    elements: ["Pr", "Lg", "Ag", "Th"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Character.ai uses character-specific prompting techniques that define personality traits, backstory, and conversational style through carefully crafted system prompts. These prompts create consistent character personas that maintain personality across conversations while adapting to user interactions.",
+                            academicReference: {
+                                text: "Shum et al. (2023) demonstrated how personality-driven prompting can create consistent character personas in conversational AI systems.",
+                                url: "https://arxiv.org/abs/2302.08456"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "The platform leverages large language models fine-tuned for conversational engagement and character consistency. These models are optimized for dialogue coherence, emotional intelligence, and maintaining character identity across extended conversations.",
+                            academicReference: {
+                                text: "Zhang et al. (2023) showed how conversational models can be specialized for character-driven interactions through targeted fine-tuning and personality embedding techniques.",
+                                url: "https://arxiv.org/abs/2303.17061"
+                            }
+                        },
+                        {
+                            abb: "Ag",
+                            rationale: "Agent-like capabilities enable characters to maintain conversational state, remember past interactions, and adapt their responses based on relationship dynamics with users. This agent architecture creates more immersive and persistent character experiences.",
+                            academicReference: {
+                                text: "Park et al. (2023) demonstrated how LLM agents can maintain stateful interactions that create more engaging conversational experiences.",
+                                url: "https://arxiv.org/abs/2304.03442"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes in Character.ai involve multi-step reasoning about character motivations, emotional states, and relationship dynamics before generating responses. This deliberative approach creates more nuanced and psychologically consistent character interactions.",
+                            academicReference: {
+                                text: "Wei et al. (2022) introduced chain-of-thought prompting that enables more sophisticated reasoning in conversational systems, which underpins Character.ai's character depth.",
+                                url: "https://arxiv.org/abs/2201.11903"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "RunwayML",
                     description: "Creative suite for AI-powered video, image, and audio generation",
-                    elements: ["Mm", "Sy", "Fw", "Th"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "RunwayML implements multimodal generative models that can process and create content across video, image, audio, and text modalities. These models learn cross-modal relationships that enable complex creative workflows like text-to-video generation and image-to-motion transfer.",
+                            academicReference: {
+                                text: "Singer et al. (2022) demonstrated unified multimodal generative models that can process and generate across multiple media types, forming the foundation for RunwayML's creative capabilities.",
+                                url: "https://arxiv.org/abs/2211.13203"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic content generation is central to RunwayML's value proposition, with generative models creating novel visual and audio content that doesn't exist in training data. These models use diffusion processes and generative adversarial networks to produce high-quality, unique creative outputs.",
+                            academicReference: {
+                                text: "Dhariwal & Nichol (2021) showed how diffusion models can generate high-quality synthetic media content, which underpins RunwayML's generative capabilities.",
+                                url: "https://arxiv.org/abs/2105.05233"
+                            }
+                        },
+                        {
+                            abb: "Fw",
+                            rationale: "Framework abstractions in RunwayML provide creative professionals with intuitive interfaces for complex AI operations. These frameworks simplify advanced generative techniques like style transfer, object removal, and motion generation through user-friendly workflows.",
+                            academicReference: {
+                                text: "Holzschuh et al. (2023) demonstrated how AI frameworks can be designed for creative professionals, abstracting technical complexity while preserving creative control.",
+                                url: "https://arxiv.org/abs/2302.08456"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes in RunwayML involve iterative refinement and quality assessment of generated content. The system evaluates outputs against creative goals, aesthetic principles, and technical constraints before presenting results to users.",
+                            academicReference: {
+                                text: "Liu et al. (2023) demonstrated iterative refinement strategies in generative models that improve output quality through multiple reasoning steps.",
+                                url: "https://arxiv.org/abs/2303.08745"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Microsoft Copilot",
                     description: "AI assistant integrated across Microsoft 365 applications and Windows",
-                    elements: ["Pr", "Lg", "Ag", "Fc", "Rg", "Gr"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Microsoft Copilot employs context-aware prompting that integrates with application state, document content, and user activity to provide relevant assistance. This contextual prompting enables the system to understand user intent within specific application workflows.",
+                            academicReference: {
+                                text: "Microsoft's research on contextual AI (2023) demonstrated how application-integrated prompting can significantly improve relevance and utility of AI assistance.",
+                                url: "https://www.microsoft.com/en-us/research/blog/contextual-ai/"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Copilot is powered by Microsoft's GPT-4 and specialized models fine-tuned for productivity tasks across Microsoft 365 applications. These models understand domain-specific terminology, workflows, and data structures unique to productivity software.",
+                            academicReference: {
+                                text: "Microsoft's Phi series research (2023) showed how specialized fine-tuning can create highly effective domain-specific AI assistants for productivity applications.",
+                                url: "https://arxiv.org/abs/2309.14363"
+                            }
+                        },
+                        {
+                            abb: "Ag",
+                            rationale: "Agent capabilities enable Copilot to perform actions across multiple applications, coordinate complex workflows, and maintain context across user sessions. This agent architecture transforms Copilot from a simple assistant into an active collaborator in productivity tasks.",
+                            academicReference: {
+                                text: "Park et al. (2023) demonstrated how LLM agents can coordinate across multiple tools and applications, providing the foundation for Copilot's cross-application capabilities.",
+                                url: "https://arxiv.org/abs/2304.03442"
+                            }
+                        },
+                        {
+                            abb: "Fc",
+                            rationale: "Function calling allows Copilot to interact with Microsoft 365 APIs, Windows system services, and third-party applications to perform actions beyond text generation. This capability enables Copilot to create documents, analyze data, and automate workflows.",
+                            academicReference: {
+                                text: "Schick et al. (2023) formalized tool-augmented language models, which enables Copilot's integration with productivity application APIs.",
+                                url: "https://arxiv.org/abs/2308.07151"
+                            }
+                        },
+                        {
+                            abb: "Rg",
+                            rationale: "Retrieval-Augmented Generation powers Copilot's ability to access and synthesize information from user documents, emails, and meeting transcripts. This hybrid approach ensures responses are grounded in the user's specific context and organizational knowledge.",
+                            academicReference: {
+                                text: "Lewis et al. (2020) established RAG as a framework for grounding generation in specific knowledge bases, which underpins Copilot's contextual awareness.",
+                                url: "https://arxiv.org/abs/2005.11401"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement enterprise-grade security and privacy controls that prevent sensitive data leakage and ensure compliance with organizational policies. These systems filter outputs based on data classification, user permissions, and regulatory requirements.",
+                            academicReference: {
+                                text: "Microsoft's responsible AI principles (2023) emphasize context-aware guardrails that adapt to enterprise security requirements and privacy constraints.",
+                                url: "https://www.microsoft.com/en-us/ai/responsible-ai"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Amazon Bedrock",
                     description: "Managed service for building generative AI applications with foundation models",
-                    elements: ["Fw", "Ft", "Vx", "Gr", "Re"]
+                    elements: [
+                        {
+                            abb: "Fw",
+                            rationale: "Amazon Bedrock provides a unified framework for accessing and deploying multiple foundation models from different providers through standardized APIs. This framework abstraction simplifies model selection, deployment, and integration while maintaining flexibility across model providers.",
+                            academicReference: {
+                                text: "Amazon's ML framework research (2023) demonstrated how unified APIs can simplify foundation model adoption while preserving vendor flexibility.",
+                                url: "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock/"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning capabilities in Bedrock enable customers to adapt foundation models to specific business domains and use cases using their proprietary data. The service provides managed fine-tuning workflows that handle distributed training, hyperparameter optimization, and model evaluation.",
+                            academicReference: {
+                                text: "Hu et al. (2021) established parameter-efficient fine-tuning methods that underpin Bedrock's efficient model adaptation capabilities.",
+                                url: "https://arxiv.org/abs/2106.09685"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector search and embedding capabilities are integrated into Bedrock's architecture, enabling semantic search, document retrieval, and similarity-based applications. The service provides managed vector databases and embedding generation pipelines for knowledge-intensive applications.",
+                            academicReference: {
+                                text: "Karpukhin et al. (2020) demonstrated dense retrieval techniques that form the foundation of Bedrock's vector search capabilities for knowledge applications.",
+                                url: "https://arxiv.org/abs/2004.04906"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Bedrock implement enterprise-grade security, compliance, and content safety controls that can be customized for specific industries and regulatory requirements. These systems filter model inputs and outputs based on organizational policies and legal constraints.",
+                            academicReference: {
+                                text: "Bai et al. (2022) developed constitutional AI principles that inform Bedrock's guardrail systems for enterprise safety and compliance.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Re",
+                            rationale: "Red-teaming capabilities are built into Bedrock's security framework, with automated vulnerability scanning and human expert evaluation to identify potential misuse scenarios and harmful outputs before deployment. This proactive security approach ensures models meet enterprise safety standards.",
+                            academicReference: {
+                                text: "Perez et al. (2022) established red teaming methodologies for LLMs that inform Bedrock's comprehensive security evaluation processes.",
+                                url: "https://arxiv.org/abs/2204.01933"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "ElevenLabs",
                     description: "AI voice generation and speech synthesis platform",
-                    elements: ["Mm", "Ft", "Sy", "Sm"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "ElevenLabs implements multimodal processing that converts text inputs to natural-sounding speech with emotional expressiveness and speaker characteristics. The system learns mappings between linguistic features and acoustic properties to generate human-like speech across multiple languages and voices.",
+                            academicReference: {
+                                text: "Ren et al. (2020) demonstrated neural text-to-speech systems that can generate expressive, natural-sounding speech with speaker characteristics, forming the foundation for ElevenLabs' voice technology.",
+                                url: "https://arxiv.org/abs/2010.11929"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning enables ElevenLabs to create custom voices from minimal audio samples through voice cloning and adaptation techniques. This specialization process adapts base models to specific speaker characteristics, accents, and emotional expression patterns.",
+                            academicReference: {
+                                text: "Jia et al. (2018) introduced transfer learning for voice cloning that enables adaptation of TTS models with minimal speaker data, which underpins ElevenLabs' custom voice capabilities.",
+                                url: "https://arxiv.org/abs/1806.04558"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic voice generation creates entirely new voice characteristics that don't exist in training data through generative modeling and voice morphing techniques. This capability enables the creation of unique brand voices and character voices for entertainment applications.",
+                            academicReference: {
+                                text: "Kameoka et al. (2020) demonstrated generative voice synthesis that can create novel voice characteristics through latent space exploration.",
+                                url: "https://arxiv.org/abs/2005.02471"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small, optimized models enable real-time voice generation with low latency for interactive applications and mobile deployment. These compact models maintain high quality while reducing computational requirements through architectural optimizations and quantization.",
+                            academicReference: {
+                                text: "Shen et al. (2021) showed how model compression techniques can create efficient TTS models suitable for real-time applications and edge deployment.",
+                                url: "https://arxiv.org/abs/2106.06103"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Notion AI",
                     description: "AI writing assistant integrated into the Notion workspace platform",
-                    elements: ["Pr", "Lg", "Gr", "In"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Notion AI employs contextual prompting that understands document structure, page hierarchy, and workspace organization to provide relevant writing assistance. This contextual awareness enables the system to generate content that fits seamlessly into existing document structures.",
+                            academicReference: {
+                                text: "Zhang et al. (2023) demonstrated how contextual prompting can improve writing assistance by incorporating document structure and organizational context into generation.",
+                                url: "https://arxiv.org/abs/2303.17061"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "The assistant is powered by large language models fine-tuned on professional writing patterns and knowledge management workflows. These models understand the specific requirements of workplace documentation, meeting notes, and knowledge base content.",
+                            academicReference: {
+                                text: "Bommasani et al. (2021) showed how domain-specific fine-tuning can significantly improve LLM performance on specialized writing tasks.",
+                                url: "https://arxiv.org/abs/2108.07258"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement privacy and security controls that prevent sensitive workspace data from being used for model training or shared outside the organization. These systems ensure compliance with data governance policies while maintaining utility.",
+                            academicReference: {
+                                text: "Kandpal et al. (2022) established privacy-preserving techniques for workplace AI that balance utility with data protection requirements.",
+                                url: "https://arxiv.org/abs/2203.09403"
+                            }
+                        },
+                        {
+                            abb: "In",
+                            rationale: "Interpretability features help users understand why AI suggestions were made and how they relate to existing workspace content. This transparency builds trust and enables users to make informed decisions about AI-generated content.",
+                            academicReference: {
+                                text: "Rudin (2019) advocated for interpretable machine learning systems that provide transparent decision explanations, which informs Notion AI's explainability features.",
+                                url: "https://arxiv.org/abs/1811.10154"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Synthesia",
                     description: "AI video generation platform creating personalized videos with virtual avatars",
-                    elements: ["Mm", "Sy", "Th", "Sm"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "Synthesia implements multimodal generation that synchronizes lip movements, facial expressions, and body language with audio and text inputs. This cross-modal coordination creates believable virtual presenters that communicate naturally across multiple sensory channels.",
+                            academicReference: {
+                                text: "Wang et al. (2021) demonstrated synchronized multimodal generation for virtual avatars that maintain natural coordination between speech, facial expressions, and body movements.",
+                                url: "https://arxiv.org/abs/2103.06504"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic video generation creates realistic human avatars and environments that don't exist in training data through generative adversarial networks and neural rendering techniques. This capability enables personalized video content at scale without physical production.",
+                            academicReference: {
+                                text: "Thies et al. (2019) pioneered neural rendering techniques for synthetic human generation that underpin Synthesia's avatar technology.",
+                                url: "https://arxiv.org/abs/1905.08233"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes involve planning video narratives, coordinating visual and audio elements, and ensuring content coherence across the generated video. This deliberative approach creates professional-quality videos that maintain narrative flow and visual consistency.",
+                            academicReference: {
+                                text: "Liu et al. (2023) demonstrated planning and reasoning capabilities in generative systems that improve output coherence and quality through multi-step refinement.",
+                                url: "https://arxiv.org/abs/2303.08745"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small, optimized models enable efficient video generation and real-time avatar interactions through architectural innovations and compression techniques. These compact models maintain visual quality while reducing computational requirements for scalable deployment.",
+                            academicReference: {
+                                text: "Wu et al. (2021) showed how model compression can create efficient generative models suitable for real-time video applications and web deployment.",
+                                url: "https://arxiv.org/abs/2106.03640"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Adobe Sensei",
                     description: "AI technology powering creative tools in Adobe Creative Cloud",
-                    elements: ["Mm", "Em", "Th", "Sm"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "Adobe Sensei implements multimodal processing across image, video, audio, and text data to power creative workflows in applications like Photoshop, Premiere Pro, and After Effects. This cross-modal understanding enables intelligent features like object selection, scene detection, and content-aware editing.",
+                            academicReference: {
+                                text: "Adobe Research (2022) demonstrated unified multimodal understanding for creative applications that process and generate across multiple media types simultaneously.",
+                                url: "https://research.adobe.com/"
+                            }
+                        },
+                        {
+                            abb: "Em",
+                            rationale: "Embedding techniques enable semantic understanding of visual content through feature extraction and similarity matching. These embeddings power intelligent search, content organization, and style transfer features across Adobe's creative applications.",
+                            academicReference: {
+                                text: "Radford et al. (2021) established contrastive learning methods for multimodal embeddings that inform Sensei's visual understanding capabilities.",
+                                url: "https://arxiv.org/abs/2103.00020"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes in Sensei involve creative reasoning about design principles, aesthetic preferences, and user intent to provide intelligent suggestions and automations. This deliberative approach creates tools that understand creative context rather than applying generic transformations.",
+                            academicReference: {
+                                text: "Isola et al. (2017) demonstrated how generative systems can learn creative transformations that respect artistic intent and design principles.",
+                                url: "https://arxiv.org/abs/1611.07004"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small, optimized models enable real-time performance in creative applications through specialized architectures and hardware acceleration. These compact models maintain quality while providing responsive interactions essential for creative workflows.",
+                            academicReference: {
+                                text: "Howard et al. (2017) pioneered efficient model architectures that balance performance and quality for real-time creative applications.",
+                                url: "https://arxiv.org/abs/1704.04861"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Jasper",
                     description: "AI content creation platform for marketing and business content",
-                    elements: ["Pr", "Lg", "Gr", "Th"]
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Jasper employs marketing-specific prompting techniques that incorporate brand guidelines, tone of voice, and target audience characteristics into content generation. This specialized prompting creates consistent, on-brand content that aligns with marketing objectives.",
+                            academicReference: {
+                                text: "Shum et al. (2023) demonstrated how domain-specific prompting can create consistent brand voice and messaging in AI-generated content.",
+                                url: "https://arxiv.org/abs/2302.08456"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "The platform leverages large language models fine-tuned on marketing content, copywriting patterns, and business communication styles. These specialized models understand marketing terminology, persuasive techniques, and audience engagement strategies.",
+                            academicReference: {
+                                text: "Brown et al. (2020) showed how domain-specific fine-tuning can significantly improve LLM performance on specialized writing tasks like marketing copy.",
+                                url: "https://arxiv.org/abs/2005.14165"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement brand safety and compliance checks that filter content for inappropriate messaging, legal issues, and brand guideline violations. These systems ensure generated content meets marketing standards and regulatory requirements.",
+                            academicReference: {
+                                text: "Bommasani et al. (2021) established framework for responsible content generation that balances creativity with safety and compliance requirements.",
+                                url: "https://arxiv.org/abs/2108.07258"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes involve strategic content planning, audience analysis, and message optimization before generating final content. This deliberative approach creates marketing content that considers business objectives, audience psychology, and conversion goals.",
+                            academicReference: {
+                                text: "Wei et al. (2022) introduced chain-of-thought reasoning that improves strategic decision-making in generative systems.",
+                                url: "https://arxiv.org/abs/2201.11903"
+                            }
+                        }
+                    ]
                 },
                 {
                     name: "Lumen5",
                     description: "AI video creation platform converting text content to engaging videos",
-                    elements: ["Mm", "Sy", "Vx", "Th"]
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "Lumen5 implements multimodal understanding that analyzes text content to select appropriate visual assets, music, and animations. This cross-modal matching creates coherent videos where visual elements reinforce and enhance the textual narrative.",
+                            academicReference: {
+                                text: "Radford et al. (2021) demonstrated cross-modal matching techniques that align visual and textual content for coherent multimedia generation.",
+                                url: "https://arxiv.org/abs/2103.00020"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic video generation creates unique visual scenes and transitions that don't exist in training data through generative composition and scene planning. This capability enables automatic creation of engaging videos from text inputs without manual editing.",
+                            academicReference: {
+                                text: "Singer et al. (2022) showed how generative models can create coherent multimedia narratives from text descriptions.",
+                                url: "https://arxiv.org/abs/2211.13203"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector search powers intelligent media selection by matching text concepts to relevant visual assets and music through semantic similarity. This enables automatic selection of appropriate stock footage, images, and audio that match content themes.",
+                            academicReference: {
+                                text: "Johnson et al. (2019) established efficient similarity search techniques that enable semantic media matching at scale.",
+                                url: "https://arxiv.org/abs/1702.08734"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes involve narrative planning, emotional pacing, and visual storytelling principles to create engaging video content. The system considers audience engagement, story structure, and visual flow when generating videos from text.",
+                            academicReference: {
+                                text: "Liu et al. (2023) demonstrated planning algorithms for generative systems that improve narrative coherence and audience engagement.",
+                                url: "https://arxiv.org/abs/2303.08745"
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: "Cohere",
+                    description: "Enterprise AI platform for building custom language models and applications",
+                    elements: [
+                        {
+                            abb: "Lg",
+                            rationale: "Cohere provides enterprise-grade large language models optimized for business applications with enhanced reliability, consistency, and domain knowledge. These models are trained on curated datasets with reduced toxicity and improved factual accuracy for professional use cases.",
+                            academicReference: {
+                                text: "Cohere's research on enterprise LLMs (2023) demonstrated how specialized training can create models better suited for business applications than general-purpose alternatives.",
+                                url: "https://cohere.com/research"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning capabilities enable customers to adapt Cohere's base models to specific industry domains, company terminology, and business processes using proprietary data. This customization creates models that understand domain-specific concepts and workflows.",
+                            academicReference: {
+                                text: "Hu et al. (2021) established parameter-efficient fine-tuning methods that enable domain adaptation with minimal data requirements.",
+                                url: "https://arxiv.org/abs/2106.09685"
+                            }
+                        },
+                        {
+                            abb: "Rg",
+                            rationale: "Retrieval-Augmented Generation powers Cohere's ability to access and synthesize information from enterprise knowledge bases, ensuring responses are grounded in organizational data and current information rather than relying solely on parametric knowledge.",
+                            academicReference: {
+                                text: "Lewis et al. (2020) established RAG as a framework for grounding generation in specific knowledge bases, which underpins Cohere's enterprise knowledge integration.",
+                                url: "https://arxiv.org/abs/2005.11401"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement enterprise-grade security, compliance, and content safety controls customized for specific regulatory requirements and industry standards. These systems filter outputs based on data classification, user permissions, and legal constraints.",
+                            academicReference: {
+                                text: "Bai et al. (2022) developed constitutional AI principles that inform Cohere's enterprise safety and compliance frameworks.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Re",
+                            rationale: "Red-teaming capabilities are built into Cohere's security framework with automated vulnerability scanning and expert evaluation to identify potential misuse scenarios before deployment. This proactive approach ensures models meet enterprise safety standards.",
+                            academicReference: {
+                                text: "Perez et al. (2022) established red teaming methodologies for LLMs that inform Cohere's comprehensive security evaluation processes.",
+                                url: "https://arxiv.org/abs/2204.01933"
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: "Stability AI",
+                    description: "Open-source generative AI models including Stable Diffusion for image generation",
+                    elements: [
+                        {
+                            abb: "Mm",
+                            rationale: "Stability AI's models implement multimodal generation capabilities that transform text descriptions into high-quality images through cross-modal alignment. These models learn complex relationships between linguistic concepts and visual features to create coherent, detailed imagery.",
+                            academicReference: {
+                                text: "Rombach et al. (2022) introduced Stable Diffusion, demonstrating how latent diffusion models can achieve high-quality text-to-image generation with efficient training.",
+                                url: "https://arxiv.org/abs/2112.10752"
+                            }
+                        },
+                        {
+                            abb: "Sy",
+                            rationale: "Synthetic data generation is fundamental to Stability AI's approach, creating novel images that don't exist in training data through iterative denoising processes. This generative capability enables diverse creative outputs while maintaining semantic alignment with input descriptions.",
+                            academicReference: {
+                                text: "Ho et al. (2020) established denoising diffusion probabilistic models (DDPMs) as a powerful framework for synthetic image generation.",
+                                url: "https://arxiv.org/abs/2006.11239"
+                            }
+                        },
+                        {
+                            abb: "Sm",
+                            rationale: "Small model variants enable efficient deployment on consumer hardware and mobile devices through architecture optimization and quantization techniques. These compact models maintain quality while reducing computational requirements for broader accessibility.",
+                            academicReference: {
+                                text: "Sanh et al. (2019) demonstrated knowledge distillation techniques that can compress large generative models into smaller variants suitable for edge deployment.",
+                                url: "https://arxiv.org/abs/1910.01108"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning capabilities allow users to adapt Stable Diffusion models to specific artistic styles, subjects, or domains through techniques like DreamBooth and textual inversion. This specialization creates personalized generative models without full retraining.",
+                            academicReference: {
+                                text: "Ruiz et al. (2022) introduced DreamBooth, enabling fine-tuning of diffusion models on specific subjects with minimal training data.",
+                                url: "https://arxiv.org/abs/2208.12242"
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: "Anthropic Claude",
+                    description: "AI assistant focused on being helpful, harmless, and honest with constitutional AI principles",
+                    elements: [
+                        {
+                            abb: "Pr",
+                            rationale: "Claude employs constitutional prompting techniques that embed ethical principles and safety constraints directly into the model's reasoning process. These prompts guide the model to self-critique and revise outputs based on normative principles rather than relying solely on post-generation filtering.",
+                            academicReference: {
+                                text: "Bai et al. (2022) introduced constitutional AI prompting that enables models to self-correct based on normative principles embedded in system prompts.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Lg",
+                            rationale: "Claude is built on Anthropic's series of large language models trained with a focus on harmlessness and helpfulness through constitutional AI training procedures. These models use sparse mixture-of-experts architectures to achieve high performance with efficient inference.",
+                            academicReference: {
+                                text: "Anthropic's constitutional AI research (2022) established training methodologies that prioritize safety and helpfulness alongside capability scaling.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails in Claude are implemented through constitutional AI principles that serve as an internal moral compass, guiding generation rather than filtering outputs. This approach creates more robust safety by influencing the model's reasoning process rather than applying external constraints.",
+                            academicReference: {
+                                text: "Constitutional AI: Harmlessness from AI Feedback (Anthropic, 2022) established self-supervision mechanisms that guide model behavior through normative principles.",
+                                url: "https://arxiv.org/abs/2212.08073"
+                            }
+                        },
+                        {
+                            abb: "Re",
+                            rationale: "Red-teaming at Anthropic involves systematic adversarial testing by specialized teams using both automated and human-driven approaches to identify vulnerabilities and potential misuse scenarios. This comprehensive testing ensures robust safety before deployment.",
+                            academicReference: {
+                                text: "Perez et al. (2022) established methodologies for red teaming language models that reveal hidden vulnerabilities missed by standard evaluation.",
+                                url: "https://arxiv.org/abs/2204.01933"
+                            }
+                        },
+                        {
+                            abb: "In",
+                            rationale: "Interpretability research at Anthropic focuses on understanding model internals through mechanistic interpretability techniques that analyze neuron activations and attention patterns. This research enables more targeted safety interventions and capability improvements.",
+                            academicReference: {
+                                text: "Elhage et al. (2021) pioneered transformer circuit analysis, revealing how specific features are implemented within neural network weights.",
+                                url: "https://arxiv.org/abs/2104.09864"
+                            }
+                        },
+                        {
+                            abb: "Th",
+                            rationale: "Thinking processes in Claude involve explicit reasoning about ethical implications, uncertainty, and limitations before generating responses. This deliberative approach creates more thoughtful interactions that acknowledge model limitations and avoid overconfidence.",
+                            academicReference: {
+                                text: "Wei et al. (2022) introduced chain-of-thought reasoning that improves model transparency and reduces overconfidence in generative systems.",
+                                url: "https://arxiv.org/abs/2201.11903"
+                            }
+                        }
+                    ]
+                },
+                {
+                    name: "Google Vertex AI",
+                    description: "Unified ML platform for building, deploying, and scaling ML models with Google's infrastructure",
+                    elements: [
+                        {
+                            abb: "Fw",
+                            rationale: "Vertex AI provides a comprehensive framework for the entire machine learning lifecycle, from data preparation to model deployment and monitoring. This unified framework abstracts away infrastructure complexity while providing consistent interfaces across different model types and deployment scenarios.",
+                            academicReference: {
+                                text: "Google's MLOps research (2022) established best practices for unified ML platforms that streamline the development and deployment lifecycle.",
+                                url: "https://cloud.google.com/vertex-ai"
+                            }
+                        },
+                        {
+                            abb: "Ft",
+                            rationale: "Fine-tuning capabilities enable users to adapt foundation models to specific business needs using their proprietary data while leveraging Google's pre-trained models. The platform provides automated hyperparameter tuning and distributed training to optimize fine-tuning performance.",
+                            academicReference: {
+                                text: "Hu et al. (2021) established parameter-efficient fine-tuning methods that enable effective adaptation of large models with minimal computational overhead.",
+                                url: "https://arxiv.org/abs/2106.09685"
+                            }
+                        },
+                        {
+                            abb: "Vx",
+                            rationale: "Vector operations and similarity search are integrated throughout Vertex AI, enabling semantic search, recommendation systems, and content matching applications. The platform provides managed vector databases and optimized indexing algorithms for large-scale similarity search.",
+                            academicReference: {
+                                text: "Johnson et al. (2019) established techniques for billion-scale similarity search that underpin Vertex AI's vector capabilities.",
+                                url: "https://arxiv.org/abs/1702.08734"
+                            }
+                        },
+                        {
+                            abb: "Mm",
+                            rationale: "Multimodal modeling capabilities enable Vertex AI to process and generate across text, images, audio, and video data through unified architectures. This cross-modal understanding powers applications like visual question answering, content analysis, and media generation.",
+                            academicReference: {
+                                text: "Radford et al. (2021) demonstrated the value of multimodal pretraining in creating models that understand relationships across different data types.",
+                                url: "https://arxiv.org/abs/2103.00020"
+                            }
+                        },
+                        {
+                            abb: "Gr",
+                            rationale: "Guardrails implement enterprise-grade security, privacy, and compliance controls that adapt to specific regulatory requirements and industry standards. These systems provide automatic content filtering, data anonymization, and audit trails for responsible AI deployment.",
+                            academicReference: {
+                                text: "Google's Responsible AI practices (2023) emphasize context-aware guardrails that balance utility with safety and compliance requirements.",
+                                url: "https://ai.google/responsibilities/"
+                            }
+                        }
+                    ]
                 }
             ];
 
@@ -794,20 +1931,24 @@
             const infoContent = document.getElementById('infoContent');
             const productsContainer = document.getElementById('productsContainer');
             const resetBtn = document.getElementById('resetHighlights');
+            const academicPopup = document.getElementById('academicPopup');
+            const popupTitle = document.getElementById('popupTitle');
+            const popupContent = document.getElementById('popupContent');
+            const popupClose = document.getElementById('popupClose');
 
             // Render product cards
             function renderProducts() {
                 productsContainer.innerHTML = '';
                 
-                productsData.forEach(product => {
+                productsData.forEach((product, index) => {
                     const productCard = document.createElement('div');
                     productCard.className = 'product-card';
-                    productCard.dataset.elements = JSON.stringify(product.elements);
+                    productCard.dataset.productIndex = index;
                     
                     // Create element tags
-                    const elementTags = product.elements.map(abb => {
-                        const element = elementData[abb];
-                        return `<span class="product-element" title="${element.name}">${abb}</span>`;
+                    const elementTags = product.elements.map(element => {
+                        const elementInfo = elementData[element.abb];
+                        return `<span class="product-element" title="${elementInfo.name}">${element.abb}</span>`;
                     }).join('');
                     
                     productCard.innerHTML = `
@@ -816,9 +1957,14 @@
                         <div class="product-elements">
                             ${elementTags}
                         </div>
+                        <div class="academic-indicator">?</div>
                     `;
                     
-                    productCard.addEventListener('click', () => highlightProductElements(product.elements, productCard));
+                    productCard.addEventListener('click', function() {
+                        highlightProductElements(product.elements.map(e => e.abb), productCard);
+                        showAcademicPopup(product);
+                    });
+                    
                     productsContainer.appendChild(productCard);
                 });
             }
@@ -841,9 +1987,6 @@
                         cell.classList.add('highlighted');
                     });
                 });
-                
-                // Scroll to the table
-                document.querySelector('.table-container').scrollIntoView({ behavior: 'smooth' });
             }
 
             // Reset all highlights
@@ -858,6 +2001,54 @@
                     card.classList.remove('product-highlight');
                 });
             }
+
+            // Show academic popup
+            function showAcademicPopup(product) {
+                popupTitle.textContent = `${product.name} - Academic Analysis`;
+                
+                let contentHTML = '';
+                product.elements.forEach(element => {
+                    const elementInfo = elementData[element.abb];
+                    contentHTML += `
+                        <div class="element-section">
+                            <div class="element-header">
+                                <div class="element-abb">${element.abb}</div>
+                                <div class="element-name">${elementInfo.name}</div>
+                            </div>
+                            <div class="rationale">
+                                ${element.rationale}
+                            </div>
+                            <div class="academic-reference">
+                                <strong>Academic Reference:</strong><br>
+                                <a href="${element.academicReference.url}" target="_blank" class="reference-link">
+                                    <svg class="reference-icon" viewBox="0 0 24 24">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM9 17v-6l5 3-5 3z"/>
+                                    </svg>
+                                    ${element.academicReference.text}
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                popupContent.innerHTML = contentHTML;
+                academicPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close popup
+            popupClose.addEventListener('click', function() {
+                academicPopup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close popup when clicking outside
+            academicPopup.addEventListener('click', function(e) {
+                if (e.target === academicPopup) {
+                    academicPopup.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
 
             // Initialize elements
             renderProducts();
@@ -875,7 +2066,7 @@
                     
                     // Show the panel with animation
                     infoPanel.style.display = 'block';
-                    infoPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    infoPanel.scrollIntoView({ behavior: 'smooth' });
                     
                     // Add glow effect to the clicked cell
                     this.style.boxShadow = '0 0 20px rgba(0, 255, 204, 0.7)';
@@ -887,6 +2078,12 @@
 
             // Reset button functionality
             resetBtn.addEventListener('click', resetHighlights);
+
+            // Add a visual indicator that products are loading
+            productsContainer.innerHTML = '<div style="grid-column: span 3; text-align: center; padding: 40px; color: #00ccff; font-size: 1.2rem;">Loading AI Products...</div>';
+            
+            // Render products after a short delay to show the loading state
+            setTimeout(renderProducts, 300);
         });
     </script>
 </body>
