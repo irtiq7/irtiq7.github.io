@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Elements Interactive Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #0a0a1a 50%, #1a0a1a 100%);
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #00ffcc, #00ccff, #cc00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #00ccff;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .table-container {
+            position: relative;
+            border: 2px solid #00ccff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 
+                        inset 0 0 30px rgba(0, 204, 255, 0.2);
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(10, 10, 30, 0.7);
+        }
+
+        th {
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid #00ccff;
+            padding: 15px;
+            font-weight: bold;
+            color: #00ccff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        td {
+            border: 1px solid #006680;
+            padding: 25px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            min-height: 100px;
+        }
+
+        td:hover {
+            background: rgba(0, 50, 100, 0.3);
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .cell-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .abbreviation {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ffcc;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: 1.2rem;
+            color: #00ccff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .empty {
+            background: rgba(0, 10, 20, 0.5);
+            cursor: default;
+        }
+
+        .empty:hover {
+            transform: none;
+            background: rgba(0, 10, 20, 0.5);
+        }
+
+        .info-panel {
+            background: rgba(5, 10, 30, 0.95);
+            border: 2px solid #00ccff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-abbreviation {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #00ffcc, #00ccff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-right: 15px;
+        }
+
+        .info-title {
+            font-size: 2.2rem;
+            color: #00ccff;
+        }
+
+        .info-content {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: justify;
+            border-left: 3px solid #00ccff;
+            padding-left: 20px;
+        }
+
+        .highlight {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px 0;
+            color: #00ccff;
+            font-size: 1.1rem;
+            border-top: 1px solid #006680;
+            margin-top: 30px;
+        }
+
+        .glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 204, 255, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glow-1 {
+            top: 20%;
+            left: 15%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .glow-2 {
+            bottom: 25%;
+            right: 10%;
+            animation: float 12s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 20px); }
+        }
+
+        .instructions {
+            background: rgba(0, 20, 40, 0.7);
+            border: 1px solid #006680;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .highlight-instruction {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .abbreviation {
+                font-size: 2rem;
+            }
+            
+            .info-title {
+                font-size: 1.8rem;
+            }
+            
+            .info-content {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Elements Framework</h1>
+            <p class="subtitle">An interactive guide to understanding key components of modern AI systems. Click on any element to learn more.</p>
+        </header>
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+
+        <div class="instructions">
+            <p>Click on any <span class="highlight-instruction">neon-colored cell</span> to see detailed information about that AI element. The table is organized by <span class="highlight-instruction">rows (Primitives, Compositions, Deployment, Emerging)</span> and <span class="highlight-instruction">columns (Reactive, Retrieval, Orchestration, Validation, Models)</span>.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Q1<br>REACTIVE</th>
+                        <th>Q2<br>RETRIEVAL</th>
+                        <th>Q3<br>ORCHES.</th>
+                        <th>Q4<br>VALID.</th>
+                        <th>Q5<br>MODELS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>PRIMITIVES</th>
+                        <td class="info-cell" data-abb="Pr" data-name="Prompts">
+                            <div class="cell-content">
+                                <div class="abbreviation">Pr</div>
+                                <div class="name">Prompts</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Em" data-name="Embeddings">
+                            <div class="cell-content">
+                                <div class="abbreviation">Em</div>
+                                <div class="name">Embeddings</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="info-cell" data-abb="Lg" data-name="LLM">
+                            <div class="cell-content">
+                                <div class="abbreviation">Lg</div>
+                                <div class="name">LLM</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>COMPOSITIONS</th>
+                        <td class="info-cell" data-abb="Fc" data-name="Function call">
+                            <div class="cell-content">
+                                <div class="abbreviation">Fc</div>
+                                <div class="name">Function call</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Vx" data-name="Vector">
+                            <div class="cell-content">
+                                <div class="abbreviation">Vx</div>
+                                <div class="name">Vector</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Rg" data-name="RAG">
+                            <div class="cell-content">
+                                <div class="abbreviation">Rg</div>
+                                <div class="name">RAG</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Gr" data-name="Guardrails">
+                            <div class="cell-content">
+                                <div class="abbreviation">Gr</div>
+                                <div class="name">Guardrails</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Mm" data-name="Multimodal">
+                            <div class="cell-content">
+                                <div class="abbreviation">Mm</div>
+                                <div class="name">Multimodal</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>DEPLOYMENT</th>
+                        <td class="info-cell" data-abb="Ag" data-name="Agent">
+                            <div class="cell-content">
+                                <div class="abbreviation">Ag</div>
+                                <div class="name">Agent</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Ft" data-name="Finetune">
+                            <div class="cell-content">
+                                <div class="abbreviation">Ft</div>
+                                <div class="name">Finetune</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Fw" data-name="Framework">
+                            <div class="cell-content">
+                                <div class="abbreviation">Fw</div>
+                                <div class="name">Framework</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Re" data-name="Red-team">
+                            <div class="cell-content">
+                                <div class="abbreviation">Re</div>
+                                <div class="name">Red-team</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Sm" data-name="Small">
+                            <div class="cell-content">
+                                <div class="abbreviation">Sm</div>
+                                <div class="name">Small</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>EMERGING</th>
+                        <td class="info-cell" data-abb="Ma" data-name="Multi-agent">
+                            <div class="cell-content">
+                                <div class="abbreviation">Ma</div>
+                                <div class="name">Multi-agent</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Sy" data-name="Synthetic">
+                            <div class="cell-content">
+                                <div class="abbreviation">Sy</div>
+                                <div class="name">Synthetic</div>
+                            </div>
+                        </td>
+                        <td class="empty"></td>
+                        <td class="info-cell" data-abb="In" data-name="Interpret.">
+                            <div class="cell-content">
+                                <div class="abbreviation">In</div>
+                                <div class="name">Interpret.</div>
+                            </div>
+                        </td>
+                        <td class="info-cell" data-abb="Th" data-name="Thinking">
+                            <div class="cell-content">
+                                <div class="abbreviation">Th</div>
+                                <div class="name">Thinking</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+            <div class="info-header">
+                <div class="info-abbreviation" id="infoAbb">Pr</div>
+                <h2 class="info-title" id="infoTitle">Prompts</h2>
+            </div>
+            <div class="info-content" id="infoContent">
+                Text inputs that guide AI models to generate specific outputs. Prompts are the primary interface for interacting with language models, determining the context, instructions, and constraints for the AI's response. Effective prompting techniques include zero-shot, few-shot, and chain-of-thought prompting.
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AI Elements Framework • Interactive Guide • Created with HTML, CSS & JavaScript</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoPanel = document.getElementById('infoPanel');
+            const infoAbb = document.getElementById('infoAbb');
+            const infoTitle = document.getElementById('infoTitle');
+            const infoContent = document.getElementById('infoContent');
+            
+            // Define all element descriptions
+            const elementData = {
+                Pr: {
+                    name: "Prompts",
+                    description: "Text inputs that guide AI models to generate specific outputs. Prompts are the primary interface for interacting with language models, determining the context, instructions, and constraints for the AI's response. Effective prompting techniques include zero-shot, few-shot, and chain-of-thought prompting."
+                },
+                Em: {
+                    name: "Embeddings",
+                    description: "Numerical representations of text, images, or other data that capture semantic meaning in a vector space. Embeddings enable AI systems to understand relationships between concepts, measure similarity between items, and power search and recommendation systems. They are foundational for many NLP and computer vision applications."
+                },
+                Lg: {
+                    name: "LLM",
+                    description: "Large Language Models are deep learning models trained on vast text corpora to understand and generate human-like text. They use transformer architectures with billions of parameters to perform tasks like translation, summarization, and question answering. Modern LLMs like GPT, Claude, and Llama are the backbone of many AI applications."
+                },
+                Fc: {
+                    name: "Function call",
+                    description: "A mechanism that allows AI models to interact with external tools, APIs, or databases. Function calling enables models to retrieve real-time information, perform calculations, or execute actions beyond their training data, creating more powerful and practical AI systems."
+                },
+                Vx: {
+                    name: "Vector",
+                    description: "Mathematical representations of data points in multi-dimensional space. In AI, vectors (often called embeddings) represent words, sentences, or images numerically. Vector databases store and efficiently search these representations using similarity metrics like cosine similarity."
+                },
+                Rg: {
+                    name: "RAG",
+                    description: "Retrieval-Augmented Generation combines information retrieval with text generation. The system first retrieves relevant documents from a knowledge base, then uses that information to generate more accurate and factual responses. RAG is essential for applications requiring up-to-date or domain-specific knowledge."
+                },
+                Gr: {
+                    name: "Guardrails",
+                    description: "Safety mechanisms that prevent AI systems from generating harmful, biased, or inappropriate content. Guardrails include input filtering, output validation, and ethical constraints that ensure AI behavior aligns with human values and regulatory requirements."
+                },
+                Mm: {
+                    name: "Multimodal",
+                    description: "AI systems that can process and generate multiple types of data (text, images, audio, video) simultaneously. Multimodal models understand relationships between different data modalities, enabling applications like image captioning, visual question answering, and content creation across media types."
+                },
+                Ag: {
+                    name: "Agent",
+                    description: "An autonomous AI system that can perceive its environment, make decisions, and take actions to achieve specific goals. Agents may have memory, planning capabilities, and the ability to use tools. They form the basis of advanced AI applications like virtual assistants and automated workflows."
+                },
+                Ft: {
+                    name: "Finetune",
+                    description: "The process of further training a pre-trained model on a specific dataset to adapt it to a particular task or domain. Fine-tuning requires less data and computational resources than training from scratch and results in models with specialized capabilities for specific applications."
+                },
+                Fw: {
+                    name: "Framework",
+                    description: "Structured libraries and tools that simplify building and deploying AI applications. Frameworks like LangChain, LlamaIndex, and Haystack provide abstractions for common patterns (RAG, agents, etc.), enabling developers to focus on application logic rather than low-level implementation details."
+                },
+                Re: {
+                    name: "Red-team",
+                    description: "A process where specialized teams test AI systems for vulnerabilities, safety issues, and potential misuse. Red-teaming involves adversarial testing to identify weaknesses in model behavior, security, and ethical alignment before deployment."
+                },
+                Sm: {
+                    name: "Small",
+                    description: "Compact AI models optimized for efficiency and speed, often with fewer parameters than large language models. Small models are suitable for edge devices, mobile applications, and scenarios where latency and resource constraints are critical. They can be fine-tuned for specific tasks with minimal data."
+                },
+                Ma: {
+                    name: "Multi-agent",
+                    description: "Systems where multiple AI agents collaborate, compete, or communicate to solve complex problems. Each agent may have specialized capabilities, and their interactions can lead to emergent behaviors that surpass individual agent performance. Applications include complex simulations and distributed problem-solving."
+                },
+                Sy: {
+                    name: "Synthetic",
+                    description: "AI-generated data used for training, testing, or augmentation when real data is scarce, expensive, or sensitive. Synthetic data can be created through techniques like generative models, simulations, or data augmentation, providing diverse training examples while preserving privacy."
+                },
+                In: {
+                    name: "Interpret.",
+                    description: "Techniques to understand and explain how AI models make decisions. Interpretability methods include feature importance analysis, attention visualization, and counterfactual explanations, which help build trust, identify biases, and improve model performance."
+                },
+                Th: {
+                    name: "Thinking",
+                    description: "Advanced reasoning capabilities where AI models explicitly plan, reflect, and reason through problems step by step. Techniques like chain-of-thought prompting and self-consistency improve performance on complex reasoning tasks by mimicking human problem-solving approaches."
+                }
+            };
+
+            // Add click event listeners to all info cells
+            document.querySelectorAll('.info-cell').forEach(cell => {
+                cell.addEventListener('click', function() {
+                    const abb = this.getAttribute('data-abb');
+                    const element = elementData[abb];
+                    
+                    // Update the info panel
+                    infoAbb.textContent = abb;
+                    infoTitle.textContent = element.name;
+                    infoContent.textContent = element.description;
+                    
+                    // Show the panel with animation
+                    infoPanel.style.display = 'block';
+                    infoPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Add glow effect to the clicked cell
+                    this.style.boxShadow = '0 0 20px rgba(0, 255, 204, 0.7)';
+                    setTimeout(() => {
+                        this.style.boxShadow = '';
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
