@@ -1,12 +1,34 @@
 (function () {
   var REPO = "irtiq7/irtiq7.github.io";
-  var API = "https://api.github.com/repos/" + REPO + "/issues?state=open&per_page=100";
+  var API = "https://api.github.com/repos/" + REPO + "/issues?state=open&labels=approved&per_page=100";
   var BLOCKED = /\b(casino|viagra|crypto|seo|backlink|loan|betting|escort)\b/i;
 
-  // ---- form: open a pre-filled GitHub issue (requires a GitHub login)
+  // ---- form
+  var C = window.GUESTBOOK || {};
   var form = document.getElementById("gb-form");
   var err = document.getElementById("gb-error");
-  function fail(msg) { err.textContent = msg; err.hidden = false; }
+  var ok = document.getElementById("gb-ok");
+  var shownAt = Date.now();
+  var token = "";
+  var viaWorker = !!(C.endpoint && C.turnstileSiteKey);
+  function fail(msg) { err.textContent = msg; err.hidden = false; ok.hidden = true; }
+
+  if (viaWorker) {
+    document.getElementById("gb-name-row").hidden = false;
+    document.getElementById("gb-note-worker").hidden = false;
+    var holder = document.getElementById("gb-turnstile");
+    holder.hidden = false;
+    window.gbTurnstile = function () {
+      turnstile.render(holder, { sitekey: C.turnstileSiteKey, theme: "dark", callback: function (t) { token = t; } });
+    };
+    var ts = document.createElement("script");
+    ts.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=gbTurnstile";
+    ts.async = true;
+    document.head.appendChild(ts);
+  } else {
+    document.getElementById("gb-note-github").hidden = false;
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     err.hidden = true;
@@ -14,13 +36,33 @@
     var type = document.getElementById("gb-type").value;
     var title = document.getElementById("gb-title").value.trim();
     var msg = document.getElementById("gb-msg").value.trim();
+    var name = document.getElementById("gb-name").value.trim();
     if (title.length < 3 || msg.length < 10) return fail("Please write a title and a message of at least 10 characters.");
-    if ((msg.match(/https?:\/\//g) || []).length > 2) return fail("Please include at most two links, and explain them.");
+    if ((msg.match(/https?:\/\//g) || []).length > 1) return fail("Please include at most one link, and explain it.");
     if (BLOCKED.test(title + " " + msg)) return fail("This looks like spam. Please rephrase.");
-    var prefix = type === "Ask" ? "[Guestbook] Question: " : "[Guestbook] ";
-    var body = msg + "\n\n---\nPosted-by: human via irtiq7.github.io/guestbook";
-    var url = "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent(prefix + title) + "&body=" + encodeURIComponent(body);
-    window.open(url, "_blank", "noopener");
+
+    if (!viaWorker) {
+      var prefix = type === "Ask" ? "[Guestbook] Question: " : "[Guestbook] ";
+      var body = msg + "\n\n---\nPosted-by: human via irtiq7.github.io/guestbook";
+      window.open("https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent(prefix + title) + "&body=" + encodeURIComponent(body), "_blank", "noopener");
+      return;
+    }
+    if (!token) return fail("Please complete the bot check first.");
+    var btn = form.querySelector("button");
+    btn.disabled = true;
+    fetch(C.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: type, title: title, message: msg, name: name, token: token, t: shownAt, website: "" })
+    }).then(function (r) { return r.json().then(function (j) { return { r: r, j: j }; }); })
+      .then(function (x) {
+        if (!x.r.ok) throw new Error(x.j.error || "Something went wrong.");
+        form.reset(); ok.hidden = false; token = "";
+        if (window.turnstile) turnstile.reset();
+        shownAt = Date.now();
+      })
+      .catch(function (e2) { fail(e2.message); if (window.turnstile) { turnstile.reset(); token = ""; } })
+      .then(function () { btn.disabled = false; });
   });
 
   // ---- lists: read open issues from the public API

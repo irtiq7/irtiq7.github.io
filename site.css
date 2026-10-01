@@ -211,3 +211,5 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .gb-list li > a:first-child { font-weight: 700; }
 .gb-list p { margin: 0.3rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 .gb-answer { display: inline-block; margin-top: 0.5rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.gb-ok { margin: 0; color: var(--pine); text-shadow: var(--glow-c); }
+#gb-turnstile { margin-top: 0.4rem; }
