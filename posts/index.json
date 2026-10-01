@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "creative-prompt-ai",
+    "title": "Creative Prompt AI: a desktop app for open-source text-to-image models",
+    "date": "2024-12-14",
+    "summary": "An open-source desktop interface for generating images with Hugging Face text-to-image models, with LoRA support, batch generation and a built-in viewer."
+  },
+  {
+    "slug": "locc-mapper",
+    "title": "LOCC Mapper: measuring and mapping a codebase",
+    "date": "2024-09-14",
+    "summary": "A small open-source tool that counts lines of code per file type and visualizes how the files in a codebase are connected."
+  },
+  {
+    "slug": "pitch-estimator-web-audio",
+    "title": "A pitch estimator in the browser",
+    "date": "2023-10-19",
+    "summary": "A web demo that listens to the microphone and estimates the fundamental frequency of a sound in real time, using the CREPE neural network."
+  },
+  {
+    "slug": "iros-2020-echolocation-robot",
+    "title": "Code release: acoustic reflector localization on a robot (IROS 2020)",
+    "date": "2022-09-14",
+    "summary": "MATLAB code and hardware details for our IROS 2020 paper, which locates walls and glass surfaces with a single microphone and loudspeaker."
+  },
+  {
+    "slug": "welcome-to-bitbytelab",
+    "title": "Welcome to Bitbytelab",
+    "date": "2022-01-23",
+    "summary": "An introduction to this blog, where I share my work on robotics and signal processing."
+  }
+]

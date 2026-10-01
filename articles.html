@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Articles | Usama Saqib</title>
-  <meta name="description" content="Notes and write-ups by Usama Saqib.">
+  <meta name="description" content="Notes and write-ups by Usama Saqib on robotics, signal processing and software projects.">
   <meta name="theme-color" content="#0a0b14">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Articles | Usama Saqib">
-  <meta property="og:description" content="Notes and write-ups by Usama Saqib.">
+  <meta property="og:description" content="Notes and write-ups by Usama Saqib on robotics, signal processing and software projects.">
   <meta property="og:url" content="https://irtiq7.github.io/articles.html">
   <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
   <link rel="canonical" href="https://irtiq7.github.io/articles.html">
+  <link rel="alternate" type="application/json" href="posts/index.json" title="Article index (JSON)">
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -32,23 +33,39 @@
   <main id="main">
     <section class="page-hero"><div class="shell">
       <h1>Articles</h1>
-      <p class="page-lede">Notes and write-ups.</p>
+      <p class="page-lede">Notes and write-ups on robotics, signal processing and software projects. Every article is also available as plain Markdown (<a href="posts/index.json">index in JSON</a>).</p>
     </div></section>
     <section class="section-pad"><div class="shell pub-shell">
-      <ul id="article-list" class="article-list"><li>Loading&hellip;</li></ul>
+      <ul id="article-list" class="article-list">
+<!-- snapshot:articles:start -->
+<li data-snapshot><h3><a href="article.html?p=creative-prompt-ai">Creative Prompt AI: a desktop app for open-source text-to-image models</a></h3><p class="pub-venue">14 December 2024</p><p>An open-source desktop interface for generating images with Hugging Face text-to-image models, with LoRA support, batch generation and a built-in viewer.</p><p class="read-more"><a href="article.html?p=creative-prompt-ai">Read →</a><a href="posts/creative-prompt-ai.md">Markdown</a></p></li>
+<li data-snapshot><h3><a href="article.html?p=locc-mapper">LOCC Mapper: measuring and mapping a codebase</a></h3><p class="pub-venue">14 September 2024</p><p>A small open-source tool that counts lines of code per file type and visualizes how the files in a codebase are connected.</p><p class="read-more"><a href="article.html?p=locc-mapper">Read →</a><a href="posts/locc-mapper.md">Markdown</a></p></li>
+<li data-snapshot><h3><a href="article.html?p=pitch-estimator-web-audio">A pitch estimator in the browser</a></h3><p class="pub-venue">19 October 2023</p><p>A web demo that listens to the microphone and estimates the fundamental frequency of a sound in real time, using the CREPE neural network.</p><p class="read-more"><a href="article.html?p=pitch-estimator-web-audio">Read →</a><a href="posts/pitch-estimator-web-audio.md">Markdown</a></p></li>
+<li data-snapshot><h3><a href="article.html?p=iros-2020-echolocation-robot">Code release: acoustic reflector localization on a robot (IROS 2020)</a></h3><p class="pub-venue">14 September 2022</p><p>MATLAB code and hardware details for our IROS 2020 paper, which locates walls and glass surfaces with a single microphone and loudspeaker.</p><p class="read-more"><a href="article.html?p=iros-2020-echolocation-robot">Read →</a><a href="posts/iros-2020-echolocation-robot.md">Markdown</a></p></li>
+<li data-snapshot><h3><a href="article.html?p=welcome-to-bitbytelab">Welcome to Bitbytelab</a></h3><p class="pub-venue">23 January 2022</p><p>An introduction to this blog, where I share my work on robotics and signal processing.</p><p class="read-more"><a href="article.html?p=welcome-to-bitbytelab">Read →</a><a href="posts/welcome-to-bitbytelab.md">Markdown</a></p></li>
+<!-- snapshot:articles:end -->
+      </ul>
     </div></section>
   </main>
   <script>
+  // The list is pre-rendered by scripts/build-agent-snapshot.js; this refreshes it with the latest index.
+  function fmtDate(d) { return new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }); }
+  function link(href, text, cls) { var a = document.createElement("a"); a.href = href; a.textContent = text; if (cls) a.className = cls; return a; }
   fetch("posts/index.json?v=" + Date.now()).then(function (r) { return r.json(); }).then(function (posts) {
     var ul = document.getElementById("article-list"); ul.textContent = "";
     if (!posts.length) { var e = document.createElement("li"); e.textContent = "No articles yet."; ul.appendChild(e); return; }
     posts.forEach(function (p) {
-      var li = document.createElement("li"), h = document.createElement("h3"), a = document.createElement("a"), m = document.createElement("p"), s = document.createElement("p");
-      a.href = "article.html?p=" + encodeURIComponent(p.slug); a.textContent = p.title; h.appendChild(a);
-      m.className = "pub-venue"; m.textContent = p.date; s.textContent = p.summary || "";
-      li.appendChild(h); li.appendChild(m); li.appendChild(s); ul.appendChild(li);
+      var li = document.createElement("li"), h = document.createElement("h3"), m = document.createElement("p"), s = document.createElement("p"), more = document.createElement("p");
+      var url = "article.html?p=" + encodeURIComponent(p.slug);
+      h.appendChild(link(url, p.title));
+      m.className = "pub-venue"; m.textContent = fmtDate(p.date); s.textContent = p.summary || "";
+      more.className = "read-more"; more.appendChild(link(url, "Read →")); more.appendChild(link("posts/" + p.slug + ".md", "Markdown"));
+      li.appendChild(h); li.appendChild(m); li.appendChild(s); li.appendChild(more); ul.appendChild(li);
     });
-  }).catch(function () { document.getElementById("article-list").innerHTML = "<li>Could not load articles.</li>"; });
+  }).catch(function () {
+    var ul = document.getElementById("article-list");
+    if (!ul.querySelector("[data-snapshot]")) ul.innerHTML = "<li>Could not load articles.</li>";
+  });
   </script>
   <footer class="site-footer">
     <div class="shell footer-grid">
@@ -65,7 +82,7 @@
         <a href="guestbook.html">Guestbook</a>
         <a href="admin.html" rel="nofollow">Admin</a>
       </div>
-      <p class="footer-meta">Last updated October 2026</p>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
     </div>
   </footer>
 </body>

@@ -65,7 +65,7 @@
       .then(function () { btn.disabled = false; });
   });
 
-  // ---- lists: read open issues from the public API
+  // ---- lists: pre-rendered by scripts/build-agent-snapshot.js, refreshed here from the public API
   function el(tag, text, cls) {
     var n = document.createElement(tag);
     if (text) n.textContent = text;
@@ -103,7 +103,9 @@
     .catch(function () {
       var msg = "Could not load entries right now. You can read them on GitHub.";
       ["gb-questions", "gb-messages"].forEach(function (id) {
-        var ul = document.getElementById(id); ul.textContent = "";
+        var ul = document.getElementById(id);
+        if (ul.querySelector("[data-snapshot]")) return; // keep the snapshot (API rate limit is 60/hour per IP)
+        ul.textContent = "";
         var li = el("li", msg + " ");
         var a = el("a", "Open issues →"); a.href = "https://github.com/" + REPO + "/issues";
         li.appendChild(a); ul.appendChild(li);

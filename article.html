@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://irtiq7.github.io/article.html">
   <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
   <link rel="canonical" href="https://irtiq7.github.io/article.html">
+  <link rel="alternate" type="application/json" href="posts/index.json" title="Article index (JSON)">
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -35,7 +36,8 @@
       <p class="page-lede" id="a-meta"></p>
     </div></section>
     <section class="section-pad"><div class="shell pub-shell">
-      <div id="a-body" class="article-body">Loading&hellip;</div>
+      <div id="a-body" class="article-body"><p>Loading&hellip;</p><p class="pub-venue">Every article is also published as plain Markdown: the list is at <a href="posts/index.json">/posts/index.json</a> and each article is at <code>/posts/&lt;slug&gt;.md</code>, where the slug is the <code>p</code> parameter of this page's address.</p></div>
+      <p class="article-feedback">Comments or corrections? Leave a note in the <a href="guestbook.html">guestbook</a>.</p>
       <p><a href="articles.html">&larr; All articles</a></p>
     </div></section>
   </main>
@@ -43,6 +45,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
   <script>
   (function () {
+    function fmtDate(d) { return new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }); }
     var slug = new URLSearchParams(location.search).get("p") || "";
     var body = document.getElementById("a-body");
     if (!/^[a-z0-9-]+$/.test(slug)) { body.textContent = "Article not found."; return; }
@@ -53,7 +56,9 @@
       var meta = x[0].filter(function (p) { return p.slug === slug; })[0] || {};
       document.title = (meta.title || "Article") + " | Usama Saqib";
       document.getElementById("a-title").textContent = meta.title || "Article";
-      document.getElementById("a-meta").textContent = meta.date || "";
+      var info = document.getElementById("a-meta"), minutes = Math.max(1, Math.round(x[1].split(/\s+/).length / 220));
+      info.textContent = (meta.date ? fmtDate(meta.date) + " · " : "") + minutes + " min read · ";
+      var src = document.createElement("a"); src.href = "posts/" + slug + ".md"; src.textContent = "Markdown source"; info.appendChild(src);
       body.innerHTML = DOMPurify.sanitize(marked.parse(x[1]));
     }).catch(function () { body.textContent = "Article not found."; });
   })();
@@ -73,7 +78,7 @@
         <a href="guestbook.html">Guestbook</a>
         <a href="admin.html" rel="nofollow">Admin</a>
       </div>
-      <p class="footer-meta">Last updated October 2026</p>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
     </div>
   </footer>
 </body>

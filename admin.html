@@ -15,7 +15,7 @@
     <h1>Dashboard</h1>
 
     <section id="login">
-      <p>Sign in with a GitHub fine-grained personal access token for <code>irtiq7/irtiq7.github.io</code> with <strong>Contents: read and write</strong> and <strong>Issues: read and write</strong>
+      <p>Sign in with a GitHub fine-grained personal access token for <code>irtiq7/irtiq7.github.io</code> with <strong>Contents: read and write</strong> and <strong>Issues: read and write</strong>, plus <strong>Administration: read-only</strong> if you want repository traffic in Analytics
       (create one at <a href="https://github.com/settings/personal-access-tokens/new">github.com/settings/personal-access-tokens/new</a>). The token stays in this browser and is sent only to api.github.com.</p>
       <form id="login-form" class="admin-form">
         <label for="token">GitHub token</label>
@@ -32,6 +32,7 @@
         <button class="tab on" data-tab="articles" type="button">Articles</button>
         <button class="tab" data-tab="guestbook" type="button">Guestbook</button>
         <button class="tab" data-tab="files" type="button">Files</button>
+        <button class="tab" data-tab="analytics" type="button">Analytics</button>
       </div>
       <p id="status" role="status" hidden></p>
 
@@ -58,6 +59,15 @@
         <p>Approved items are shown on the guestbook page. Pending items are hidden until you approve them.</p>
         <button id="new-question" class="mini" type="button">Post a question for visitors</button>
         <ul id="issue-list" class="gb-list"></ul>
+      </div>
+
+      <div id="tab-analytics" hidden>
+        <h2 class="section-title">Analytics</h2>
+        <p>What GitHub can tell you about AI agents and bots. GitHub Pages keeps no visit logs, so anonymous crawlers and agents that only read the site cannot be seen here. Repository traffic covers the pages of <code>github.com/irtiq7/irtiq7.github.io</code>, not the website, and only the last 14 days.</p>
+        <button id="an-refresh" class="mini" type="button">Refresh</button>
+        <section class="an-panel" aria-labelledby="an-agents-h"><h3 id="an-agents-h">Self-identified AI agents (all time)</h3><div id="an-agents"></div></section>
+        <section class="an-panel" aria-labelledby="an-bots-h"><h3 id="an-bots-h">Bot accounts (last 90 days)</h3><div id="an-bots"></div></section>
+        <section class="an-panel" aria-labelledby="an-traffic-h"><h3 id="an-traffic-h">Repository traffic (last 14 days)</h3><div id="an-traffic"></div></section>
       </div>
 
       <div id="tab-files" hidden>
