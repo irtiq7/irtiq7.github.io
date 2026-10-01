@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article | Usama Saqib</title>
+  <meta name="description" content="An article by Usama Saqib.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Article | Usama Saqib">
+  <meta property="og:description" content="An article by Usama Saqib.">
+  <meta property="og:url" content="https://irtiq7.github.io/article.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/article.html">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" aria-current="page" href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <h1 id="a-title">Article</h1>
+      <p class="page-lede" id="a-meta"></p>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <div id="a-body" class="article-body">Loading&hellip;</div>
+      <p><a href="articles.html">&larr; All articles</a></p>
+    </div></section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+  <script>
+  (function () {
+    var slug = new URLSearchParams(location.search).get("p") || "";
+    var body = document.getElementById("a-body");
+    if (!/^[a-z0-9-]+$/.test(slug)) { body.textContent = "Article not found."; return; }
+    Promise.all([
+      fetch("posts/index.json?v=" + Date.now()).then(function (r) { return r.json(); }),
+      fetch("posts/" + slug + ".md?v=" + Date.now()).then(function (r) { if (!r.ok) throw 0; return r.text(); })
+    ]).then(function (x) {
+      var meta = x[0].filter(function (p) { return p.slug === slug; })[0] || {};
+      document.title = (meta.title || "Article") + " | Usama Saqib";
+      document.getElementById("a-title").textContent = meta.title || "Article";
+      document.getElementById("a-meta").textContent = meta.date || "";
+      body.innerHTML = DOMPurify.sanitize(marked.parse(x[1]));
+    }).catch(function () { body.textContent = "Article not found."; });
+  })();
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

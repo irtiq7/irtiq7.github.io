@@ -213,3 +213,27 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .gb-answer { display: inline-block; margin-top: 0.5rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .gb-ok { margin: 0; color: var(--pine); text-shadow: var(--glow-c); }
 #gb-turnstile { margin-top: 0.4rem; }
+
+/* Admin dashboard and articles */
+.admin { padding-block: 2rem 4rem; }
+.admin-form { display: grid; gap: 0.5rem; max-width: 760px; }
+.admin-form label { color: var(--pine); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.admin-form label.check { text-transform: none; letter-spacing: 0; color: var(--ink-soft); }
+.admin-form input:not([type=checkbox]), .admin-form select, .admin-form textarea { width: 100%; padding: 0.6rem 0.8rem; font: inherit; color: var(--ink); background: #05060d; border: 1px solid var(--line); border-radius: 0; }
+.admin-form input:focus, .admin-form select:focus, .admin-form textarea:focus { outline: none; border-color: var(--pine); box-shadow: var(--glow-c); }
+.admin-form button[type=submit], #f-save { justify-self: start; padding: 0.7rem 1.2rem; font: inherit; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #05060d; background: var(--pine); border: 0; cursor: pointer; box-shadow: var(--glow-c); }
+#f-save:disabled { opacity: 0.4; cursor: not-allowed; }
+.tabs { display: flex; gap: 0.5rem; margin: 1rem 0; border-bottom: 1px solid var(--line); }
+.tab { padding: 0.5rem 1rem; font: inherit; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); background: none; border: 1px solid transparent; border-bottom: 0; cursor: pointer; }
+.tab.on { color: var(--pine); border-color: var(--line); text-shadow: var(--glow-c); }
+.mini { margin-left: 0.6rem; padding: 0.2rem 0.6rem; font: inherit; font-size: 0.76rem; text-transform: uppercase; color: var(--pine); background: none; border: 1px solid var(--pine); cursor: pointer; }
+.mini.danger { color: var(--rust); border-color: var(--rust); }
+#status { padding: 0.6rem 0; }
+.article-body { max-width: 760px; }
+.article-body img { max-width: 100%; border: 1px solid var(--line); }
+.article-body pre { overflow-x: auto; padding: 0.9rem 1rem; background: #05060d; border: 1px solid var(--pine); }
+.article-body blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid var(--rust); color: var(--ink-soft); }
+.article-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--pine); }
+.article-list li { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
+.article-list h3 { margin: 0; }
+.article-list p { margin: 0.3rem 0 0; color: var(--ink-soft); }

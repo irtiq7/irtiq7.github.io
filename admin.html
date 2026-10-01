@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Usama Saqib</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+  <header class="site-header"><div class="shell nav-shell"><nav class="site-nav"><a href="index.html">← Back to site</a></nav></div></header>
+  <main id="main" class="shell admin">
+    <h1>Dashboard</h1>
+
+    <section id="login">
+      <p>Sign in with a GitHub fine-grained personal access token for <code>irtiq7/irtiq7.github.io</code> with <strong>Contents: read and write</strong> and <strong>Issues: read and write</strong>
+      (create one at <a href="https://github.com/settings/personal-access-tokens/new">github.com/settings/personal-access-tokens/new</a>). The token stays in this browser and is sent only to api.github.com.</p>
+      <form id="login-form" class="admin-form">
+        <label for="token">GitHub token</label>
+        <input id="token" type="password" autocomplete="off" required placeholder="github_pat_…">
+        <label class="check"><input id="remember" type="checkbox"> Remember on this device</label>
+        <button type="submit">Sign in &rarr;</button>
+        <p id="login-error" class="gb-error" hidden></p>
+      </form>
+    </section>
+
+    <section id="app" hidden>
+      <p class="pub-venue"><span id="who"></span> · <button id="logout" class="mini" type="button">Sign out</button></p>
+      <div class="tabs">
+        <button class="tab on" data-tab="articles" type="button">Articles</button>
+        <button class="tab" data-tab="guestbook" type="button">Guestbook</button>
+        <button class="tab" data-tab="files" type="button">Files</button>
+      </div>
+      <p id="status" role="status" hidden></p>
+
+      <div id="tab-articles">
+        <h2 class="section-title">Articles</h2>
+        <ul id="post-list" class="gb-list"></ul>
+        <h2 class="section-title" id="editor-head">New article</h2>
+        <form id="p-form" class="admin-form">
+          <button id="p-new" class="mini" type="button">Clear / new article</button>
+          <label for="p-title">Title</label><input id="p-title" required maxlength="140">
+          <label for="p-slug">Slug (URL name)</label><input id="p-slug" required maxlength="60" pattern="[a-z0-9-]+">
+          <label for="p-date">Date</label><input id="p-date" type="date" required>
+          <label for="p-summary">Summary (one or two sentences)</label><input id="p-summary" maxlength="300">
+          <label for="p-body">Body (Markdown)</label><textarea id="p-body" rows="14" required></textarea>
+          <label for="p-image">Insert image</label><input id="p-image" type="file" accept="image/*">
+          <button id="p-save" type="submit">Publish &rarr;</button>
+        </form>
+        <h3>Preview</h3>
+        <div id="p-preview" class="article-body"></div>
+      </div>
+
+      <div id="tab-guestbook" hidden>
+        <h2 class="section-title">Guestbook moderation</h2>
+        <p>Approved items are shown on the guestbook page. Pending items are hidden until you approve them.</p>
+        <button id="new-question" class="mini" type="button">Post a question for visitors</button>
+        <ul id="issue-list" class="gb-list"></ul>
+      </div>
+
+      <div id="tab-files" hidden>
+        <h2 class="section-title">Edit a file</h2>
+        <p>Edits are committed straight to <code>main</code>. Be careful with <code>.html</code> and <code>.css</code> files; a mistake goes live. You can always revert in the repository's history.</p>
+        <div class="admin-form">
+          <label for="f-select">File</label>
+          <select id="f-select"><option value="">Choose a file…</option></select>
+          <textarea id="f-text" rows="22" spellcheck="false" style="font-size:0.8rem"></textarea>
+          <label for="f-msg">Commit message (optional)</label><input id="f-msg" maxlength="120">
+          <button id="f-save" type="button" disabled>Save &amp; publish</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

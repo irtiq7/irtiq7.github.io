@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles | Usama Saqib</title>
+  <meta name="description" content="Notes and write-ups by Usama Saqib.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Articles | Usama Saqib">
+  <meta property="og:description" content="Notes and write-ups by Usama Saqib.">
+  <meta property="og:url" content="https://irtiq7.github.io/articles.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/articles.html">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" aria-current="page" href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Articles</h1>
+      <p class="page-lede">Notes and write-ups.</p>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <ul id="article-list" class="article-list"><li>Loading&hellip;</li></ul>
+    </div></section>
+  </main>
+  <script>
+  fetch("posts/index.json?v=" + Date.now()).then(function (r) { return r.json(); }).then(function (posts) {
+    var ul = document.getElementById("article-list"); ul.textContent = "";
+    if (!posts.length) { var e = document.createElement("li"); e.textContent = "No articles yet."; ul.appendChild(e); return; }
+    posts.forEach(function (p) {
+      var li = document.createElement("li"), h = document.createElement("h3"), a = document.createElement("a"), m = document.createElement("p"), s = document.createElement("p");
+      a.href = "article.html?p=" + encodeURIComponent(p.slug); a.textContent = p.title; h.appendChild(a);
+      m.className = "pub-venue"; m.textContent = p.date; s.textContent = p.summary || "";
+      li.appendChild(h); li.appendChild(m); li.appendChild(s); ul.appendChild(li);
+    });
+  }).catch(function () { document.getElementById("article-list").innerHTML = "<li>Could not load articles.</li>"; });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
