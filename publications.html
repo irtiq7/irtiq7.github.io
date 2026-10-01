@@ -1,169 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Bitbytelab</title>
-    <link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text color */
-            margin: 0;
-            display: flex;
-            flex-direction: column; /* Stack elements vertically on small screens */
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        #sidebar {
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #sidebar h1 a {
-            color: #fff;
-            text-decoration: none;
-        }
-        #sidebar p {
-            margin: 10px 0;
-        }
-        #nav {
-            list-style: none;
-            padding: 0;
-            width: 100%;
-        }
-        #nav li {
-            margin: 10px 0;
-        }
-        #nav a {
-            color: #99CC33;
-            text-decoration: none;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-            text-align: left; /* Align text to the left */
-        }
-        #nav a:hover {
-            background-color: #444;
-            transform: scale(1.05);
-        }
-        #content {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1e1e1e; /* Dark background for content */
-            color: #e0e0e0; /* Light text color */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            flex-grow: 1;
-            animation: fadeIn 1s ease-in-out;
-        }
-        #content h1, #content h2, #content h3, #content h4 {
-            color: #fff; /* Light text color for headings */
-        }
-        .postdata {
-            font-size: 1em;
-            color: #fff;
-            background-color: #050505;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .highlighted {
-            background-color: #070707;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        a {
-            color: rgb(30, 255, 0); /* Change hyperlink color to red */
-            text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
-        }
-        a:hover {
-            color: #ff4500;
-            text-decoration: underline;
-            transform: scale(1.05);
-        }
-        @media (min-width: 768px) {
-            body {
-                flex-direction: row; /* Side-by-side layout on larger screens */
-            }
-            #sidebar {
-                width: 300px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Usama Saqib</title>
+  <meta name="description" content="Usama Saqib is a postdoctoral researcher in the SQUARE group at the IT University of Copenhagen working on statistical signal processing, robot audition, and autonomous systems.">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Publications | Usama Saqib">
+  <meta property="og:description" content="Usama Saqib is a postdoctoral researcher in the SQUARE group at the IT University of Copenhagen working on statistical signal processing, robot audition, and autonomous systems.">
+  <meta property="og:url" content="https://irtiq7.github.io/publications.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/publications.html">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <div id="sidebar">
-        <h1><a href="#">Bitbytelab</a></h1>
-        <p>A place to share my research on robot audition and signal processing.</p>
-        <ul id="nav">
-            <li><a href="https://irtiq7.github.io/blog.html">Home</a></li>
-            <li><a href="https://irtiq7.github.io/publications.html">Publications</a></li>
-            <li><a href="https://irtiq7.github.io/pitch_estimator.html">Pitch Estimator</a></li>
-            <li><a href="https://www.linkedin.com/in/usamasaqib/">CV</a></li>
-        </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" aria-current="page" href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">CV / LinkedIn</a>
+      </nav>
     </div>
-    <div id="content">
-        <h1 class="highlighted"><a href="#" id="intro">Publications</a></h1>
-        <br>
-        <br>
-
-        <p class="postdata">
-            Posted on 23.JAN.22 by <a href="#">Usama Saqib</a>
-        </p>
-        <p>
-            The following are the conferences and journal I wrote during my Ph.D.
-            <br>
-            <br>
-            <li><b>U. Saqib</b> and J. R. Jensen, "A Machine Learning framework for Acoustic Reflector Mapping, (2024), pp. 1-5 <a href ="https://arxiv.org/pdf/2409.12094">[LINK]</a></li>
-            <br>
-            <br>
-            <li><b>U. Saqib</b>, M. G. Christensen, and J. R. Jensen, "Robust Acoustic Reflector Localization using a modified EM algorithm," EURASIP Journal on Audio, Speech, and Music Processing, 2024. <a href="https://link.springer.com/article/10.1186/s13636-024-00340-y" id="PaperG">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b>, and R. Kerstens, "Perceiving the World With Sound: An Overview to Robot Audition." In M. Mellal (Ed.), Design and Control Advances in Robotics (pp. 30-59). IGI Global. 2023 <a href="https://doi.org/10.4018/978-1-6684-5381-0.ch003" id="PaperH">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b>, and J. R. Jensen, "A Framework for Spatial Map Generation using Acoustic Echoes for Robotic Platforms," Elsevier's Robotics and Autonomous Systems 2021. <a href="https://www.sciencedirect.com/science/article/pii/S0921889021002633" id="PaperF">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b>, A. Deleforge, and J. R. Jensen, "Detecting Acoustic Reflectors using Robot's Ego-Noise", Proc. 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, June 2021. <a href="https://ieeexplore.ieee.org/document/9414061" id="PaperE">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b>, and J. R. Jensen, "A model-based approach to acoustic reflector localization with a robotic platform," IEEE/RSJ International Conference on Intelligent Robots and Systems(IROS) Las Vegas, NV, USA, 2020, pp. 4499-4504. <a href="https://ieeexplore.ieee.org/document/9341437" id="PaperD">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b>, S. Gannot, and J. R. Jensen, "Estimation of acoustic echoes using expectation-maximization methods," EURASIP Journal on Audio, Speech, and Music Processing, 2020, 12. <a href="https://link.springer.com/article/10.1186/s13636-020-00179-z" id="PaperC">[LINK]</a>
-            <br>
-            <br></li>
-            <li>J. R. Jensen, <b>U. Saqib</b> and S. Gannot, "An Em Method for Multichannel Toa and Doa Estimation of Acoustic Echoes," IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), New Paltz, NY, USA, 2019, pp. 120-124. <a href="https://ieeexplore.ieee.org/document/8937252" id="PaperB">[LINK]</a>
-            <br>
-            <br></li>
-            <li><b>U. Saqib</b> and J. R. Jensen, "Sound-based Distance Estimation for Indoor Navigation in the Presence of Ego Noise, "European Signal Processing Conference (EUSIPCO), A Coruna, Spain, 2019, pp. 1-5. <a href="https://ieeexplore.ieee.org/abstract/document/8902694" id="PaperA">[LINK]</a>
-            <br>
-            <br></li>
-        </p>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <h1>Publications</h1>
+      <p class="page-lede">Journal articles, conference papers, and a book chapter. A fuller list is on <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Google Scholar</a>, <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>, and my <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>.</p>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+        <section class="publication-group">
+          <h2>2024</h2>
+          <ul class="publication-list">
+          <li class="publication-item">
+            <span class="pub-year">2024</span>
+            <div>
+              <h3>A Machine Learning framework for Acoustic Reflector Mapping</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, J. R. Jensen</p>
+              <p class="pub-venue">arXiv preprint, 2024, pp. 1–5</p>
+              <div class="pub-links"><a href="https://arxiv.org/pdf/2409.12094">arXiv</a></div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="pub-year">2024</span>
+            <div>
+              <h3>Robust Acoustic Reflector Localization using a modified EM algorithm</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, M. G. Christensen, J. R. Jensen</p>
+              <p class="pub-venue">EURASIP Journal on Audio, Speech, and Music Processing, 2024</p>
+              <div class="pub-links"><a href="https://link.springer.com/article/10.1186/s13636-024-00340-y">Paper</a></div>
+            </div>
+          </li>
+          </ul>
+        </section>
+        <section class="publication-group">
+          <h2>2023</h2>
+          <ul class="publication-list">
+          <li class="publication-item">
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>Perceiving the World With Sound: An Overview to Robot Audition</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, R. Kerstens</p>
+              <p class="pub-venue">In M. Mellal (Ed.), Design and Control Advances in Robotics, pp. 30–59. IGI Global, 2023</p>
+              <div class="pub-links"><a href="https://doi.org/10.4018/978-1-6684-5381-0.ch003">Chapter</a></div>
+            </div>
+          </li>
+          </ul>
+        </section>
+        <section class="publication-group">
+          <h2>2021</h2>
+          <ul class="publication-list">
+          <li class="publication-item">
+            <span class="pub-year">2021</span>
+            <div>
+              <h3>A Framework for Spatial Map Generation using Acoustic Echoes for Robotic Platforms</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, J. R. Jensen</p>
+              <p class="pub-venue">Robotics and Autonomous Systems (Elsevier), 2021</p>
+              <div class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0921889021002633">Paper</a></div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="pub-year">2021</span>
+            <div>
+              <h3>Detecting Acoustic Reflectors using Robot's Ego-Noise</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, A. Deleforge, J. R. Jensen</p>
+              <p class="pub-venue">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, 2021</p>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/9414061">Paper</a></div>
+            </div>
+          </li>
+          </ul>
+        </section>
+        <section class="publication-group">
+          <h2>2020</h2>
+          <ul class="publication-list">
+          <li class="publication-item">
+            <span class="pub-year">2020</span>
+            <div>
+              <h3>A model-based approach to acoustic reflector localization with a robotic platform</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, J. R. Jensen</p>
+              <p class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Las Vegas, NV, USA, 2020, pp. 4499–4504</p>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/9341437">Paper</a></div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="pub-year">2020</span>
+            <div>
+              <h3>Estimation of acoustic echoes using expectation-maximization methods</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, S. Gannot, J. R. Jensen</p>
+              <p class="pub-venue">EURASIP Journal on Audio, Speech, and Music Processing, 2020, 12</p>
+              <div class="pub-links"><a href="https://link.springer.com/article/10.1186/s13636-020-00179-z">Paper</a></div>
+            </div>
+          </li>
+          </ul>
+        </section>
+        <section class="publication-group">
+          <h2>2019</h2>
+          <ul class="publication-list">
+          <li class="publication-item">
+            <span class="pub-year">2019</span>
+            <div>
+              <h3>An EM Method for Multichannel TOA and DOA Estimation of Acoustic Echoes</h3>
+              <p class="pub-authors">J. R. Jensen, <strong>U. Saqib</strong>, S. Gannot</p>
+              <p class="pub-venue">IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), New Paltz, NY, USA, 2019, pp. 120–124</p>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/8937252">Paper</a></div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="pub-year">2019</span>
+            <div>
+              <h3>Sound-based Distance Estimation for Indoor Navigation in the Presence of Ego Noise</h3>
+              <p class="pub-authors"><strong>U. Saqib</strong>, J. R. Jensen</p>
+              <p class="pub-venue">European Signal Processing Conference (EUSIPCO), A Coruña, Spain, 2019, pp. 1–5</p>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/8902694">Paper</a></div>
+            </div>
+          </li>
+          </ul>
+        </section>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
     </div>
+  </footer>
 </body>
 </html>
