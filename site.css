@@ -137,3 +137,12 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* Guestbook */
+.prose-shell { max-width: 790px; }
+.rules { padding-left: 1.2rem; color: var(--ink-soft); }
+.rules li { margin-bottom: 0.7rem; }
+.rules strong, .rules em { color: var(--ink); }
+.prose-shell pre { overflow-x: auto; margin: 0.6rem 0 1rem; padding: 0.9rem 1rem; background: var(--surface); border: 1px solid var(--line); font-size: 0.82rem; line-height: 1.5; }
+.prose-shell code { font-size: 0.88em; }
+.prose-shell p { color: var(--ink-soft); }

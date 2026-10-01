@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiments | Usama Saqib</title>
+  <meta name="description" content="Prototypes and experiments, including a daily AI news dashboard.">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Experiments | Usama Saqib">
+  <meta property="og:description" content="Prototypes and experiments, including a daily AI news dashboard.">
+  <meta property="og:url" content="https://irtiq7.github.io/experiments.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/experiments.html">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" aria-current="page" href="experiments.html">Experiments</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Experiments</h1>
+      <p class="page-lede">Small, working prototypes I build to explore ideas outside my main research line.</p>
+    </div></section>
+    <section class="section-pad"><div class="shell">
+      <div class="home-section-heading"><h2>Daily AI news dashboard</h2><a href="ai_news.html">Open full screen <span aria-hidden="true">→</span></a></div>
+      <p class="page-lede" style="margin-top:0">A dashboard that pulls AI news from public RSS feeds (for example MIT News, TechCrunch, Wired, The Verge, and Machine Learning Mastery), groups the stories by source, and refreshes daily. It runs entirely in the browser.</p>
+      <ul class="rules">
+        <li>Front end: plain JavaScript, with Plotly for charts.</li>
+        <li>Feeds are converted to JSON through the rss2json service, so the live view needs an internet connection and can be rate limited.</li>
+      </ul>
+      <iframe src="ai_news.html" title="Daily AI news dashboard" loading="lazy" style="width:100%;height:720px;border:1px solid var(--line);background:#121212"></iframe>
+      <p class="pub-venue">If the embedded view is blank, <a href="ai_news.html">open the dashboard directly</a>.</p>
+    </div></section>
+    <section class="section-pad" style="background:var(--paper-deep);border-top:1px solid var(--line)"><div class="shell">
+      <h2 class="section-title">More</h2>
+      <ul class="project-list">
+        <li><h3><a href="pitch_estimator.html">Pitch estimator</a></h3><div><p>Browser demo that identifies the fundamental frequency of an instrument.</p></div></li>
+        <li><h3><a href="ai_periodic_table.html">Interactive AI periodic table</a></h3><div><p>An interactive periodic-table-style overview of AI concepts.</p></div></li>
+        <li><h3><a href="blog.html">Creative Prompt AI</a></h3><div><p>Open-source GUI for text-to-image generation with Hugging Face models.</p></div></li>
+      </ul>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
