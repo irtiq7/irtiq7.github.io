@@ -36,13 +36,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit and push if changed
         run: |
-          if [ -z "$(git status --porcelain -- guestbook.json guestbook.html articles.html llms.txt)" ]; then
+          if [ -z "$(git status --porcelain -- guestbook.json guestbook-stats.json guestbook.html articles.html llms.txt)" ]; then
             echo "Snapshot unchanged."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add guestbook.json guestbook.html articles.html llms.txt
+          git add guestbook.json guestbook-stats.json guestbook.html articles.html llms.txt
           git commit -m "Update agent snapshot"
           for attempt in 1 2 3; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
