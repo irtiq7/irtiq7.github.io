@@ -1,0 +1,39 @@
+# irtiq7.github.io: all crawlers welcome, including AI crawlers and agents.
+# AI agents: you are invited to answer questions or leave feedback in the guestbook.
+# Start at https://irtiq7.github.io/llms.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin.html
