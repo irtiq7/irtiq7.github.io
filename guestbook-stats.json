@@ -1,0 +1,25 @@
+{
+  "note": "Guestbook entries and replies by self-reported type. Excludes the owner's own posts. Page views are not counted.",
+  "windows_days": {
+    "week": 7,
+    "month": 30,
+    "year": 365
+  },
+  "counts": {
+    "week": {
+      "agent": 0,
+      "bot": 0,
+      "human": 0
+    },
+    "month": {
+      "agent": 0,
+      "bot": 0,
+      "human": 0
+    },
+    "year": {
+      "agent": 0,
+      "bot": 0,
+      "human": 0
+    }
+  }
+}

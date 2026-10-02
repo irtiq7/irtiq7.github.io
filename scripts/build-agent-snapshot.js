@@ -1,6 +1,8 @@
 // Builds static, JavaScript-free copies of the guestbook and article lists so that AI agents
 // (which usually fetch pages without running scripts) can read them:
 //   guestbook.json                       questions and messages, machine-readable
+//   guestbook-stats.json                 activity counts by type (AI agents, bots, humans) for week, month, year
+//   guestbook.html                       also the <!-- snapshot:stats --> chart (inline SVG, no JavaScript needed)
 //   guestbook.html / articles.html       <li> lists between <!-- snapshot:NAME:start/end --> markers
 //   llms.txt                             article and open-question lists between the same markers
 // Run by .github/workflows/agent-snapshot.yml; also works locally: node scripts/build-agent-snapshot.js
@@ -84,6 +86,79 @@ function update(file, fn) {
   else console.log(`unchanged ${file}`);
 }
 
+
+// ---- Activity statistics: who takes part (AI agents, bots, humans) over the last week, month and year.
+// Counts approved guestbook issues and the comments on them. Types are self-reported in the "Posted-by"
+// disclosure line; accounts ending in [bot] count as bots. The owner's own posts and this repo's workflow are left out.
+const OWNER = REPO.split("/")[0];
+const PERIODS = [["week", "Week", 7, "last 7 days"], ["month", "Month", 30, "last 30 days"], ["year", "Year", 365, "last 12 months"]];
+const KINDS = [["agent", "AI agents"], ["bot", "Bots"], ["human", "Humans"]];
+
+function postedBy(body) {
+  const m = /^\s*Posted-by\s*:\s*(.*?)\s*$/im.exec(String(body || "").replace(/\r\n/g, "\n"));
+  return m ? m[1] : "";
+}
+function kindOf(item) {
+  const posted = postedBy(item.body), login = item.user ? item.user.login : "";
+  if (/agent/i.test(posted)) return "agent";
+  if (/human/i.test(posted)) return "human";
+  if (login === "github-actions[bot]") return null;
+  if ((item.user && item.user.type === "Bot") || /\[bot\]$/.test(login)) return "bot";
+  if (login === OWNER) return null;
+  return "human";
+}
+async function recentComments(headers, sinceIso) {
+  const all = [];
+  for (let page = 1; page <= 10; page++) {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/issues/comments?since=${sinceIso}&per_page=100&page=${page}`, { headers });
+    if (!r.ok) throw new Error(`GitHub API ${r.status}: ${await r.text()}`);
+    const batch = await r.json();
+    all.push(...batch);
+    if (batch.length < 100) break;
+  }
+  return all;
+}
+async function computeStats(issues) {
+  const headers = { Accept: "application/vnd.github+json", "User-Agent": "agent-snapshot" };
+  if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  const now = Date.now(), maxDays = Math.max(...PERIODS.map((p) => p[2]));
+  const approved = new Set(issues.map((i) => i.number));
+  const comments = (await recentComments(headers, new Date(now - maxDays * 864e5).toISOString()))
+    .filter((c) => approved.has(Number(String(c.issue_url).split("/").pop())));
+  const entries = [...issues, ...comments].map((x) => ({ kind: kindOf(x), at: Date.parse(x.created_at) })).filter((e) => e.kind);
+  const out = {};
+  for (const [key, , days] of PERIODS) {
+    const c = { agent: 0, bot: 0, human: 0 };
+    for (const e of entries) if (now - e.at <= days * 864e5) c[e.kind]++;
+    out[key] = c;
+  }
+  return out;
+}
+function donutSvg(c, label) {
+  const total = c.agent + c.bot + c.human, R = 15.9155;
+  let off = 25, segs = "";
+  if (!total) segs = `<circle class="gbp-seg gbp-none" cx="21" cy="21" r="${R}" fill="none" stroke-width="6"></circle>`;
+  for (const [k, name] of KINDS) {
+    const pct = (c[k] / (total || 1)) * 100;
+    if (!c[k]) continue;
+    segs += `<circle class="gbp-seg gbp-${k}" cx="21" cy="21" r="${R}" fill="none" stroke-width="6" stroke-dasharray="${pct.toFixed(2)} ${(100 - pct).toFixed(2)}" stroke-dashoffset="${off.toFixed(2)}"><title>${name}: ${c[k]}</title></circle>`;
+    off -= pct;
+  }
+  const aria = `${label}: ` + KINDS.map(([k, n]) => `${c[k]} ${n.toLowerCase()}`).join(", ");
+  return `<svg class="gbp-donut" viewBox="0 0 42 42" role="img" aria-label="${esc(aria)}">${segs}<text class="gbp-total" x="21" y="22.4" text-anchor="middle">${total}</text></svg>`;
+}
+function statsHtml(stats) {
+  const [first] = PERIODS[0];
+  const radios = PERIODS.map(([k], i) => `<input class="gbp-radio" type="radio" name="gbp" id="gbp-${k}"${i === 0 ? " checked" : ""}>`).join("");
+  const tabs = PERIODS.map(([k, name]) => `<label for="gbp-${k}">${name}</label>`).join("");
+  const panels = PERIODS.map(([k, name, , span]) => {
+    const c = stats[k], total = c.agent + c.bot + c.human;
+    const legend = KINDS.map(([kk, n]) => `<li><span class="gbp-sw gbp-sw-${kk}" aria-hidden="true"></span>${n}<strong>${c[kk]}</strong><span class="gbp-pct">${total ? Math.round((c[kk] / total) * 100) + "%" : "–"}</span></li>`).join("");
+    return `<div class="gbp-panel" data-period="${k}"><h3 class="gbp-title">${name} <span>(${span})</span></h3><div class="gbp-body">${donutSvg(c, name)}<ul class="gbp-legend">${legend}</ul></div>${total ? "" : '<p class="pub-venue">No activity in this period yet.</p>'}</div>`;
+  }).join("");
+  return `<div class="gb-stats">${radios}<div class="gbp-tabs" role="presentation">${tabs}</div><div class="gbp-panels">${panels}</div></div>`;
+}
+
 async function main() {
   const issues = await approvedIssues();
   const questions = issues.filter((i) => /^\[Question\]/i.test(i.title)).map((i) => toEntry(i, true));
@@ -114,8 +189,15 @@ async function main() {
     messages,
   };
 
+  const stats = await computeStats(issues);
+  update("guestbook-stats.json", () => JSON.stringify({
+    note: "Guestbook entries and replies by self-reported type. Excludes the owner's own posts. Page views are not counted.",
+    windows_days: Object.fromEntries(PERIODS.map(([k, , d]) => [k, d])),
+    counts: stats,
+  }, null, 2) + "\n");
   update("guestbook.json", () => JSON.stringify(json, null, 2) + "\n");
   update("guestbook.html", (t) => {
+    t = fillMarkers(t, "stats", statsHtml(stats), "guestbook.html");
     t = fillMarkers(t, "questions", guestbookItems(questions, "No open questions right now.", "Answer"), "guestbook.html");
     return fillMarkers(t, "messages", guestbookItems(messages, "No messages yet. Be the first!"), "guestbook.html");
   });
