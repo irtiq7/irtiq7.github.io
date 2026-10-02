@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robust Acoustic Reflector Localization using a modified EM algorithm | Usama Saqib</title>
+  <meta name="description" content="In robotics, echolocation has been used to detect acoustic reflectors, e.g., walls, as it aids the robotic platform to navigate in darkness and also helps detect transparent surfaces">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Robust Acoustic Reflector Localization using a modified EM algorithm | Usama Saqib">
+  <meta property="og:description" content="In robotics, echolocation has been used to detect acoustic reflectors, e.g., walls, as it aids the robotic platform to navigate in darkness and also helps detect transparent surfaces">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/robust-acoustic-reflector-localization-modified-em.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/robust-acoustic-reflector-localization-modified-em.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2024</p>
+      <h1>Robust Acoustic Reflector Localization using a modified EM algorithm</h1>
+      <p class="page-lede"><strong>Usama Saqib</strong>, Mads Græsbøll Christensen, Jesper Rindom Jensen</p>
+      <p class="pub-venue">EURASIP Journal on Audio, Speech, and Music Processing, vol. 2024, article 22, 2024</p>
+      <div class="pub-links"><a href="https://link.springer.com/article/10.1186/s13636-024-00340-y">Read the paper (Publisher)</a><a href="https://doi.org/10.1186/s13636-024-00340-y">DOI: 10.1186/s13636-024-00340-y</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>In robotics, echolocation has been used to detect acoustic reflectors, e.g., walls, as it aids the robotic platform to navigate in darkness and also helps detect transparent surfaces. However, the transfer function or response of an acoustic system, e.g., loudspeakers/emitters, contributes to non-ideal behavior within the acoustic systems that can contribute to a phase lag due to propagation delay. This non-ideal response can hinder the performance of a time-of-arrival (TOA) estimator intended for acoustic reflector localization especially when the estimation of multiple reflections is required. In this paper, we, therefore, propose a robust expectation-maximization (EM) algorithm that takes into account the response of acoustic systems to enhance the TOA estimation accuracy when estimating multiple reflections when the robot is placed in a corner of a room. A non-ideal transfer function is built with two parameters, which are estimated recursively within the estimator. To test the proposed method, a hardware proof-of-concept setup was built with two different designs. The experimental results show that the proposed method could detect an acoustic reflector up to a distance of 1.6 m with 60% accuracy under the signal-to-noise ratio (SNR) of 0 dB. Compared to the state-of-the-art EM algorithm, our proposed method provides improved performance when estimating TOA by 10% under a low SNR value.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@article{saqib2024robust,
+  title     = {Robust acoustic reflector localization using a modified {EM} algorithm},
+  author    = {Saqib, Usama and Christensen, Mads Gr{\ae}sb{\o}ll and Jensen, Jesper Rindom},
+  journal   = {EURASIP Journal on Audio, Speech, and Music Processing},
+  volume    = {2024},
+  pages     = {22},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1186/s13636-024-00340-y}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>

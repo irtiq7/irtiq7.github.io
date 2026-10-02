@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimation of acoustic echoes using expectation-maximization methods | Usama Saqib</title>
+  <meta name="description" content="Estimation problems like room geometry estimation and localization of acoustic reflectors are of great interest and importance in robot and drone audition">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Estimation of acoustic echoes using expectation-maximization methods | Usama Saqib">
+  <meta property="og:description" content="Estimation problems like room geometry estimation and localization of acoustic reflectors are of great interest and importance in robot and drone audition">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/estimation-of-acoustic-echoes-using-em.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/estimation-of-acoustic-echoes-using-em.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2020</p>
+      <h1>Estimation of acoustic echoes using expectation-maximization methods</h1>
+      <p class="page-lede"><strong>Usama Saqib</strong>, Sharon Gannot, Jesper Rindom Jensen</p>
+      <p class="pub-venue">EURASIP Journal on Audio, Speech, and Music Processing, vol. 2020, article 12, 2020</p>
+      <div class="pub-links"><a href="https://link.springer.com/article/10.1186/s13636-020-00179-z">Read the paper (Publisher)</a><a href="https://doi.org/10.1186/s13636-020-00179-z">DOI: 10.1186/s13636-020-00179-z</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>Estimation problems like room geometry estimation and localization of acoustic reflectors are of great interest and importance in robot and drone audition. Several methods for tackling these problems exist, but most of them rely on information about times-of-arrival (TOAs) of the acoustic echoes. These need to be estimated in practice, which is a difficult problem in itself, especially in robot applications which are characterized by high ego-noise. Moreover, even if TOAs are successfully extracted, the difficult problem of echolabeling needs to be solved. In this paper, we propose multiple expectation-maximization (EM) methods, for jointly estimating the TOAs and directions-of-arrival (DOA) of the echoes, with a uniform circular array (UCA) and a loudspeaker in its center for probing the environment. The different methods are derived to be optimal under different noise conditions. The experimental results show that the proposed methods outperform existing methods in terms of estimation accuracy in noisy conditions. For example, it can provide accurate estimates at SNR of 10 dB lower compared to TOA extraction from room impulse responses, which is often used. Furthermore, the results confirm that the proposed methods can account for scenarios with colored noise or faulty microphones. Finally, we show the applicability of the proposed methods in mapping of an indoor environment.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@article{saqib2020estimation,
+  title     = {Estimation of acoustic echoes using expectation-maximization methods},
+  author    = {Saqib, Usama and Gannot, Sharon and Jensen, Jesper Rindom},
+  journal   = {EURASIP Journal on Audio, Speech, and Music Processing},
+  volume    = {2020},
+  pages     = {12},
+  year      = {2020},
+  publisher = {Springer},
+  doi       = {10.1186/s13636-020-00179-z}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>

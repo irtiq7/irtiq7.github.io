@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An EM Method for Multichannel TOA and DOA Estimation of Acoustic Echoes | Usama Saqib</title>
+  <meta name="description" content="The time-of-arrivals (TOAs) of acoustic echoes is a prerequisite in, e.g., room geometry estimation and localization of acoustic reflectors, which can be an enabling technology for autonomous robots a">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An EM Method for Multichannel TOA and DOA Estimation of Acoustic Echoes | Usama Saqib">
+  <meta property="og:description" content="The time-of-arrivals (TOAs) of acoustic echoes is a prerequisite in, e.g., room geometry estimation and localization of acoustic reflectors, which can be an enabling technology for autonomous robots a">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/em-method-multichannel-toa-doa-estimation.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/em-method-multichannel-toa-doa-estimation.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2019</p>
+      <h1>An EM Method for Multichannel TOA and DOA Estimation of Acoustic Echoes</h1>
+      <p class="page-lede">Jesper Rindom Jensen, <strong>Usama Saqib</strong>, Sharon Gannot</p>
+      <p class="pub-venue">IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), New Paltz, NY, USA, 2019, pp. 120–124</p>
+      <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/8937252">Read the paper (IEEE Xplore)</a><a href="https://doi.org/10.1109/WASPAA.2019.8937252">DOI: 10.1109/WASPAA.2019.8937252</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>The time-of-arrivals (TOAs) of acoustic echoes is a prerequisite in, e.g., room geometry estimation and localization of acoustic reflectors, which can be an enabling technology for autonomous robots and drones. However, solving these problems alone using TOAs introduces the difficult problem of echolabeling. Moreover, it is typically suggested to estimate the TOAs by estimating the room impulse response, and finding the peaks of it, but this approach is vulnerable against noise (e.g., ego noise). We therefore propose an expectation-maximization (EM) method for estimating both the TOAs and direction-of-arrivals (DOAs) of acoustic echoes using a loudspeaker and a uniform circular array (UCA). Our results show that this approach is more robust against noise compared to the traditional peak finding approach. Moreover, they show that the TOA and DOA information can be combined to estimate wall positions directly without considering echolabeling.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@inproceedings{jensen2019em,
+  title     = {An {EM} Method for Multichannel {TOA} and {DOA} Estimation of Acoustic Echoes},
+  author    = {Jensen, Jesper Rindom and Saqib, Usama and Gannot, Sharon},
+  booktitle = {2019 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)},
+  pages     = {120--124},
+  year      = {2019},
+  publisher = {IEEE},
+  doi       = {10.1109/WASPAA.2019.8937252}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>

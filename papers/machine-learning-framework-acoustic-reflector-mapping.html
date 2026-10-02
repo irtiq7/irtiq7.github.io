@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Machine Learning framework for Acoustic Reflector Mapping | Usama Saqib</title>
+  <meta name="description" content="Sonar-based indoor mapping systems have been widely employed in robotics for several decades">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A Machine Learning framework for Acoustic Reflector Mapping | Usama Saqib">
+  <meta property="og:description" content="Sonar-based indoor mapping systems have been widely employed in robotics for several decades">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/machine-learning-framework-acoustic-reflector-mapping.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/machine-learning-framework-acoustic-reflector-mapping.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2024</p>
+      <h1>A Machine Learning framework for Acoustic Reflector Mapping</h1>
+      <p class="page-lede"><strong>Usama Saqib</strong>, Letizia Marchegiani, Jesper Rindom Jensen</p>
+      <p class="pub-venue">arXiv preprint arXiv:2409.12094 [cs.RO], 2024</p>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2409.12094">Read the paper (arXiv)</a><a href="https://arxiv.org/pdf/2409.12094">PDF</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>Sonar-based indoor mapping systems have been widely employed in robotics for several decades. While such systems are still the mainstream in underwater and pipe inspection settings, the vulnerability to noise reduced, over time, their general widespread usage in favour of other modalities (e.g., cameras, lidars), whose technologies were encountering, instead, extraordinary advancements. Nevertheless, mapping physical environments using acoustic signals and echolocation can bring significant benefits to robot navigation in adverse scenarios, thanks to their complementary characteristics compared to other sensors. Cameras and lidars, indeed, struggle in harsh weather conditions, when dealing with lack of illumination, or with non-reflective walls. Yet, for acoustic sensors to be able to generate accurate maps, noise has to be properly and effectively handled. Traditional signal processing techniques are not always a solution in those cases. In this paper, we propose a framework where machine learning is exploited to aid more traditional signal processing methods to cope with background noise, by removing outliers and artefacts from the generated maps using acoustic sensors. Our goal is to demonstrate that the performance of traditional echolocation mapping techniques can be greatly enhanced, even in particularly noisy conditions, facilitating the employment of acoustic sensors in state-of-the-art multi-modal robot navigation systems. Our simulated evaluation demonstrates that the system can reliably operate at an SNR of −10 dB. Moreover, we also show that the proposed method is capable of operating in different reverberate environments. In this paper, we also use the proposed method to map the outline of a simulated room using a robotic platform.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@misc{saqib2024machine,
+  title         = {A Machine Learning framework for Acoustic Reflector Mapping},
+  author        = {Saqib, Usama and Marchegiani, Letizia and Jensen, Jesper Rindom},
+  year          = {2024},
+  eprint        = {2409.12094},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2409.12094}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>

@@ -237,3 +237,19 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .article-list li { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
 .article-list h3 { margin: 0; }
 .article-list p { margin: 0.3rem 0 0; color: var(--ink-soft); }
+
+/* Paper pages */
+.bibtex { overflow-x: auto; margin: 0 0 0.8rem; padding: 1rem; background: #05060d; border: 1px solid var(--pine); color: #b8ffd9; font-size: 0.82rem; line-height: 1.5; white-space: pre; }
+.pub-authors a { text-decoration-color: var(--rust); }
+.page-lede a { text-decoration-color: var(--rust); }
+
+/* Paper pages */
+.bibtex { overflow-x: auto; margin: 0 0 0.8rem; padding: 1rem; background: #05060d; border: 1px solid var(--pine); color: #b8ffd9; font-size: 0.82rem; line-height: 1.5; white-space: pre; }
+.pub-authors a, .page-lede a { text-decoration-color: var(--rust); }
+
+/* Edit button (owner only) and agent box */
+.edit-fab { position: fixed; right: 1rem; bottom: 1rem; z-index: 50; padding: 0.55rem 0.9rem; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #05060d; background: var(--pine); text-decoration: none; box-shadow: var(--glow-c); }
+.edit-fab:hover { background: var(--rust); color: #fff; text-shadow: none; box-shadow: var(--glow-m); }
+.agent-box { margin-top: 1.5rem; border: 1px solid var(--line); padding: 0.8rem 1rem; }
+.agent-box summary { cursor: pointer; color: var(--pine); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
+.agent-box[open] summary { margin-bottom: 0.8rem; }

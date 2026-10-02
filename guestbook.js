@@ -15,7 +15,6 @@
 
   if (viaWorker) {
     document.getElementById("gb-name-row").hidden = false;
-    document.getElementById("gb-note-worker").hidden = false;
     var holder = document.getElementById("gb-turnstile");
     holder.hidden = false;
     window.gbTurnstile = function () {

@@ -38,7 +38,15 @@
   function showApp(user) {
     $("login").hidden = true; $("app").hidden = false;
     $("who").textContent = "Signed in as " + user;
-    loadPosts();
+    var q = new URLSearchParams(location.search), art = q.get("article"), file = q.get("edit");
+    loadPosts().then(function () {
+      if (art && /^[a-z0-9-]+$/.test(art)) {
+        var p = posts.filter(function (x) { return x.slug === art; })[0];
+        if (p) editPost(p); else status("Article not found.", true);
+      } else if (file && /^[A-Za-z0-9_\-.\/]+$/.test(file) && file.indexOf("..") < 0) {
+        showTab("files"); openFile(file);
+      }
+    });
   }
   function tryLogin(t, remember) {
     token = t.trim();
@@ -65,20 +73,19 @@
 
   // ---------- tabs
   var tabs = document.querySelectorAll("[data-tab]");
-  Array.prototype.forEach.call(tabs, function (b) {
-    b.addEventListener("click", function () {
-      Array.prototype.forEach.call(tabs, function (x) { x.classList.toggle("on", x === b); });
-      ["articles", "guestbook", "files"].forEach(function (t) { $("tab-" + t).hidden = t !== b.dataset.tab; });
-      status("");
-      if (b.dataset.tab === "guestbook") loadIssues();
-      if (b.dataset.tab === "files") loadTree();
-    });
-  });
+  function showTab(name) {
+    Array.prototype.forEach.call(tabs, function (x) { x.classList.toggle("on", x.dataset.tab === name); });
+    ["articles", "guestbook", "files"].forEach(function (t) { $("tab-" + t).hidden = t !== name; });
+    status("");
+    if (name === "guestbook") loadIssues();
+    if (name === "files") loadTree();
+  }
+  Array.prototype.forEach.call(tabs, function (b) { b.addEventListener("click", function () { showTab(b.dataset.tab); }); });
 
   // ---------- articles
   var posts = [];
   function loadPosts() {
-    getFile("posts/index.json").then(function (f) {
+    return getFile("posts/index.json").then(function (f) {
       posts = f ? JSON.parse(f.text) : [];
       var ul = $("post-list"); ul.textContent = "";
       if (!posts.length) ul.appendChild(el("li", "No articles yet."));
@@ -202,10 +209,16 @@
         .forEach(function (n) { var o = el("option", n.path); o.value = n.path; $("f-select").appendChild(o); });
     }).catch(function (e) { status(e.message, true); });
   }
-  $("f-select").addEventListener("change", function () {
-    var p = this.value; if (!p) return;
-    getFile(p).then(function (f) { curFile = { path: p, sha: f.sha }; $("f-text").value = f.text; $("f-save").disabled = false; }).catch(function (e) { status(e.message, true); });
-  });
+  function openFile(p) {
+    getFile(p).then(function (f) {
+      if (!f) throw new Error("File not found: " + p);
+      curFile = { path: p, sha: f.sha }; $("f-text").value = f.text; $("f-save").disabled = false;
+      var s = $("f-select"), has = Array.prototype.some.call(s.options, function (o) { return o.value === p; });
+      if (!has) { var o = el("option", p); o.value = p; s.appendChild(o); }
+      s.value = p; $("f-text").scrollIntoView();
+    }).catch(function (e) { status(e.message, true); });
+  }
+  $("f-select").addEventListener("change", function () { if (this.value) openFile(this.value); });
   $("f-save").addEventListener("click", function () {
     if (!curFile) return;
     var msg = $("f-msg").value.trim() || "Admin: edit " + curFile.path;

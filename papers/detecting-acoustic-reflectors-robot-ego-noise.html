@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detecting Acoustic Reflectors using Robot's Ego-Noise | Usama Saqib</title>
+  <meta name="description" content="In this paper, we propose a method to estimate the proximity of an acoustic reflector, e.g., a wall, using ego-noise, i.e., the noise produced by the moving parts of a listening robot">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Detecting Acoustic Reflectors using Robot's Ego-Noise | Usama Saqib">
+  <meta property="og:description" content="In this paper, we propose a method to estimate the proximity of an acoustic reflector, e.g., a wall, using ego-noise, i.e., the noise produced by the moving parts of a listening robot">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/detecting-acoustic-reflectors-robot-ego-noise.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/detecting-acoustic-reflectors-robot-ego-noise.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2021</p>
+      <h1>Detecting Acoustic Reflectors using Robot's Ego-Noise</h1>
+      <p class="page-lede"><strong>Usama Saqib</strong>, Antoine Deleforge, Jesper Rindom Jensen</p>
+      <p class="pub-venue">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, 2021, pp. 466–470</p>
+      <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/9414061">Read the paper (IEEE Xplore)</a><a href="https://arxiv.org/pdf/2111.08327">PDF</a><a href="https://arxiv.org/abs/2111.08327">arXiv version</a><a href="https://doi.org/10.1109/ICASSP39728.2021.9414061">DOI: 10.1109/ICASSP39728.2021.9414061</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>In this paper, we propose a method to estimate the proximity of an acoustic reflector, e.g., a wall, using ego-noise, i.e., the noise produced by the moving parts of a listening robot. This is achieved by estimating the times of arrival of acoustic echoes reflected from the surface. Simulated experiments show that the proposed nonintrusive approach is capable of accurately estimating the distance of a reflector up to 1 meter and outperforms a previously proposed intrusive approach under loud ego-noise conditions. The proposed method is helped by a probabilistic echo detector that estimates whether or not an acoustic reflector is within a short range of the robotic platform. This preliminary investigation paves the way towards a new kind of collision avoidance system that would purely rely on audio sensors rather than conventional proximity sensors.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@inproceedings{saqib2021detecting,
+  title     = {Detecting Acoustic Reflectors Using a Robot's Ego-Noise},
+  author    = {Saqib, Usama and Deleforge, Antoine and Jensen, Jesper Rindom},
+  booktitle = {ICASSP 2021 -- IEEE International Conference on Acoustics, Speech and Signal Processing},
+  pages     = {466--470},
+  year      = {2021},
+  publisher = {IEEE},
+  doi       = {10.1109/ICASSP39728.2021.9414061}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>

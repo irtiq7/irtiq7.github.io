@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You Should Be Properly Scoring Your Odometry | Usama Saqib</title>
+  <meta name="description" content="When we evaluate the performance of our odometry, it is common practice to score the estimated track against a ground truth">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="You Should Be Properly Scoring Your Odometry | Usama Saqib">
+  <meta property="og:description" content="When we evaluate the performance of our odometry, it is common practice to score the estimated track against a ground truth">
+  <meta property="og:url" content="https://irtiq7.github.io/papers/you-should-be-properly-scoring-your-odometry.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/papers/you-should-be-properly-scoring-your-odometry.html">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a href="../research.html">Research</a>
+        <a class="active" aria-current="page" href="../publications.html">Publications</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../articles.html">Articles</a>
+        <a href="../cv.html">CV</a>
+        <a href="../guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell pub-shell">
+      <p class="rule-label"><a href="../publications.html">&larr; Publications</a> &middot; 2026</p>
+      <h1>You Should Be Properly Scoring Your Odometry</h1>
+      <p class="page-lede"><a href="https://ronning.io/" rel="noopener">Ola Rønning</a>, <strong>Usama Saqib</strong>, <a href="https://wasowski.dukla.ch/" rel="noopener">Andrzej Wąsowski</a></p>
+      <p class="pub-venue">arXiv preprint arXiv:2609.25900 [cs.RO], 2026</p>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2609.25900">Read the paper (arXiv)</a><a href="https://arxiv.org/pdf/2609.25900">PDF</a></div>
+    </div></section>
+    <section class="section-pad"><div class="shell pub-shell">
+      <section class="publication-group"><h2>Abstract</h2>
+        <div class="article-body"><p>When we evaluate the performance of our odometry, it is common practice to score the estimated track against a ground truth. Unfortunately, scoring uses point metrics, such as the root mean square error, that ignore the covariance matrix which estimators like filters and smoothers already report. Using the covariance matters for two reasons. First, the covariance encodes the estimator's uncertainty, so it tells us whether the estimator trusts its own output. An overconfident estimator will not report itself lost. Second, the covariance weights the error in each direction of the estimate. Without the covariance, an estimator is unduly penalized for a high error in an uncertain direction. Instead of point metrics, we should use strictly proper scoring rules. These rules score the estimate together with its reported uncertainty. Strictly proper scoring rules recover the point metrics when no covariance is reported, and they diagnose covariance inconsistency when covariance is reported. Using a one-sided pairwise test, we show that two estimators can expose overconfidence in at least one of them without a ground truth. Strictly proper scoring rules and our pairwise test are available in our open-source framework smfeval. As a case study, we use smfeval to assess the uncertainty quality of the translational component of ground-based LiDAR-inertial odometry. Across four filters we find overconfidence - the worst case reports centimeter certainty with kilometer error. Knowing the filters are overconfident, we investigate the mechanism. The investigation traces overconfidence to filters crediting LiDAR measurements with more new information than they carry.</p></div></section>
+      <section class="publication-group"><h2>Cite</h2>
+        <pre id="bib" class="bibtex">@misc{ronning2026properly,
+  title         = {You Should Be Properly Scoring Your Odometry},
+  author        = {R{\o}nning, Ola and Saqib, Usama and W{\k{a}}sowski, Andrzej},
+  year          = {2026},
+  eprint        = {2609.25900},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2609.25900}
+}</pre>
+        <button class="mini" type="button" id="copy" style="margin-left:0">Copy BibTeX</button>
+        <span id="copied" class="pub-venue" hidden> Copied.</span></section>
+    </div></section>
+  </main>
+  <script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var t = document.getElementById("bib").textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      document.getElementById("copied").hidden = false;
+    }).catch(function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("bib"));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    });
+  });
+  </script>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="../guestbook.html">Guestbook</a>
+        <a href="../admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="../edit-link.js"></script>
+</body>
+</html>
