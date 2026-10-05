@@ -1,0 +1,551 @@
+{
+  "note": "Lean labels describe the outlet, not individual articles. They are taken from Media Bias/Fact Check (MBFC) and mapped to this scale: Left, Lean Left (MBFC Left-Center), Center (MBFC Least Biased), Lean Right (MBFC Right-Center), Right. Outlets without a verified public rating are 'Not rated'. Ratings are third-party opinions and are debated.",
+  "scale": [
+    "Left",
+    "Lean Left",
+    "Center",
+    "Lean Right",
+    "Right",
+    "Not rated"
+  ],
+  "topics": {
+    "research": {
+      "machine learning": [
+        "machine learning",
+        "deep learning",
+        "neural network",
+        "neural networks",
+        "learning"
+      ],
+      "language models": [
+        "language model",
+        "language models",
+        "llm",
+        "llms",
+        "gpt",
+        "transformer",
+        "transformers"
+      ],
+      "generative ai": [
+        "generative",
+        "diffusion",
+        "text-to-image",
+        "image generation"
+      ],
+      "computer vision": [
+        "vision",
+        "image",
+        "images",
+        "video",
+        "segmentation",
+        "detection"
+      ],
+      "robotics": [
+        "robot",
+        "robots",
+        "robotic",
+        "robotics",
+        "navigation",
+        "manipulation",
+        "autonomous"
+      ],
+      "speech & audio": [
+        "speech",
+        "audio",
+        "acoustic",
+        "acoustics",
+        "sound",
+        "microphone"
+      ],
+      "reinforcement learning": [
+        "reinforcement learning",
+        "policy",
+        "reward"
+      ],
+      "safety & alignment": [
+        "safety",
+        "alignment",
+        "robustness",
+        "interpretability",
+        "adversarial"
+      ],
+      "healthcare": [
+        "medical",
+        "clinical",
+        "health",
+        "healthcare",
+        "biology"
+      ],
+      "optimization": [
+        "optimization",
+        "convergence",
+        "gradient"
+      ]
+    },
+    "tech": {
+      "technology": [
+        "tech",
+        "technology"
+      ],
+      "ai": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "research": [
+        "research",
+        "study",
+        "researchers",
+        "paper"
+      ],
+      "cybersecurity": [
+        "cyber",
+        "cybersecurity",
+        "security",
+        "hack",
+        "hackers",
+        "breach",
+        "ransomware"
+      ],
+      "robotics": [
+        "robot",
+        "robots",
+        "robotics",
+        "drone",
+        "drones"
+      ],
+      "cloud": [
+        "cloud",
+        "aws",
+        "azure",
+        "data center",
+        "data centers"
+      ],
+      "software": [
+        "software",
+        "app",
+        "apps",
+        "developer",
+        "developers",
+        "open source"
+      ],
+      "hardware": [
+        "chip",
+        "chips",
+        "gpu",
+        "gpus",
+        "semiconductor",
+        "hardware",
+        "nvidia"
+      ],
+      "machine learning": [
+        "machine learning",
+        "deep learning",
+        "neural network",
+        "llm",
+        "llms",
+        "language model",
+        "language models"
+      ],
+      "data science": [
+        "data science",
+        "analytics",
+        "dataset",
+        "datasets"
+      ],
+      "quantum": [
+        "quantum"
+      ],
+      "blockchain": [
+        "blockchain",
+        "crypto",
+        "bitcoin",
+        "ethereum"
+      ]
+    },
+    "business": {
+      "finance": [
+        "finance",
+        "financial"
+      ],
+      "business": [
+        "business",
+        "company",
+        "companies",
+        "startup",
+        "startups",
+        "ceo"
+      ],
+      "markets": [
+        "market",
+        "markets",
+        "wall street"
+      ],
+      "stocks": [
+        "stock",
+        "stocks",
+        "shares",
+        "nasdaq",
+        "s&p"
+      ],
+      "economy": [
+        "economy",
+        "economic",
+        "inflation",
+        "gdp",
+        "recession",
+        "tariff",
+        "tariffs"
+      ],
+      "trading": [
+        "trading",
+        "trader",
+        "traders"
+      ],
+      "investment": [
+        "investment",
+        "investor",
+        "investors",
+        "funding",
+        "venture",
+        "valuation"
+      ],
+      "banking": [
+        "bank",
+        "banks",
+        "banking",
+        "lender",
+        "federal reserve",
+        "fed"
+      ],
+      "cryptocurrency": [
+        "cryptocurrency",
+        "crypto",
+        "bitcoin",
+        "ethereum",
+        "token"
+      ],
+      "commodities": [
+        "oil",
+        "gold",
+        "commodity",
+        "commodities",
+        "copper"
+      ],
+      "forex": [
+        "forex",
+        "currency",
+        "currencies",
+        "dollar",
+        "euro",
+        "yen"
+      ],
+      "earnings": [
+        "earnings",
+        "revenue",
+        "profit",
+        "quarter",
+        "guidance"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv cs.AI",
+      "category": "research",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "limit": 15,
+      "lean": {
+        "label": "Not rated",
+        "basis": "Preprint server, not a news outlet"
+      }
+    },
+    {
+      "id": "arxiv-cs-lg",
+      "name": "arXiv cs.LG",
+      "category": "research",
+      "url": "https://rss.arxiv.org/rss/cs.LG",
+      "limit": 15,
+      "lean": {
+        "label": "Not rated",
+        "basis": "Preprint server, not a news outlet"
+      }
+    },
+    {
+      "id": "arxiv-cs-ro",
+      "name": "arXiv cs.RO",
+      "category": "research",
+      "url": "https://rss.arxiv.org/rss/cs.RO",
+      "limit": 15,
+      "lean": {
+        "label": "Not rated",
+        "basis": "Preprint server, not a news outlet"
+      }
+    },
+    {
+      "id": "arxiv-eess-as",
+      "name": "arXiv eess.AS",
+      "category": "research",
+      "url": "https://rss.arxiv.org/rss/eess.AS",
+      "limit": 15,
+      "lean": {
+        "label": "Not rated",
+        "basis": "Preprint server, not a news outlet"
+      }
+    },
+    {
+      "id": "hf-blog",
+      "name": "Hugging Face Blog",
+      "category": "research",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Company research blog"
+      }
+    },
+    {
+      "id": "google-research",
+      "name": "Google Research",
+      "category": "research",
+      "url": "https://research.google/blog/rss/",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Company research blog"
+      }
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "category": "research",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Company research blog"
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "category": "research",
+      "url": "https://openai.com/news/rss.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Company blog"
+      }
+    },
+    {
+      "id": "bair",
+      "name": "Berkeley AI Research",
+      "category": "research",
+      "url": "https://bair.berkeley.edu/blog/feed.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "University research blog"
+      }
+    },
+    {
+      "id": "mit-ai",
+      "name": "MIT News: AI",
+      "category": "research",
+      "url": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "University news office"
+      }
+    },
+    {
+      "id": "marktechpost",
+      "name": "MarkTechPost",
+      "category": "tech",
+      "url": "https://www.marktechpost.com/feed/",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "category": "tech",
+      "url": "https://techcrunch.com/feed/",
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center, high factual reporting",
+        "url": "https://mediabiasfactcheck.com/techcrunch/"
+      }
+    },
+    {
+      "id": "the-verge",
+      "name": "The Verge",
+      "category": "tech",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center (-2.8), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/the-verge/"
+      }
+    },
+    {
+      "id": "wired",
+      "name": "Wired",
+      "category": "tech",
+      "url": "https://www.wired.com/feed/rss",
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center (-3.0), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/wired-magazine/"
+      }
+    },
+    {
+      "id": "ars-technica",
+      "name": "Ars Technica",
+      "category": "tech",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "lean": {
+        "label": "Center",
+        "basis": "MBFC: Least Biased (-0.6), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/ars-technica/"
+      }
+    },
+    {
+      "id": "ieee-spectrum",
+      "name": "IEEE Spectrum",
+      "category": "tech",
+      "url": "https://spectrum.ieee.org/feeds/feed.rss",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    },
+    {
+      "id": "sciam-tech",
+      "name": "Scientific American",
+      "category": "tech",
+      "url": "https://www.scientificamerican.com/platform/syndication/rss/",
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center, pro-science (-3.5), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/scientific-american/"
+      }
+    },
+    {
+      "id": "mit-tech-review",
+      "name": "MIT Technology Review",
+      "category": "tech",
+      "url": "https://www.technologyreview.com/feed/",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    },
+    {
+      "id": "venturebeat",
+      "name": "VentureBeat",
+      "category": "tech",
+      "url": "https://venturebeat.com/feed/",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No MBFC entry found"
+      }
+    },
+    {
+      "id": "forbes",
+      "name": "Forbes",
+      "category": "business",
+      "url": "https://www.forbes.com/business/feed/",
+      "lean": {
+        "label": "Center",
+        "basis": "MBFC: Least Biased (1.3), mostly factual",
+        "url": "https://mediabiasfactcheck.com/forbes/"
+      }
+    },
+    {
+      "id": "yahoo-finance",
+      "name": "Yahoo Finance",
+      "category": "business",
+      "url": "https://finance.yahoo.com/news/rssindex",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    },
+    {
+      "id": "ft",
+      "name": "Financial Times",
+      "category": "business",
+      "url": "https://www.ft.com/markets?format=rss",
+      "paywalled": true,
+      "lean": {
+        "label": "Center",
+        "basis": "MBFC: Least Biased (0.4), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/financial-times/"
+      }
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg Markets",
+      "category": "business",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "paywalled": true,
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center (-2.4), mostly factual",
+        "url": "https://mediabiasfactcheck.com/bloomberg/"
+      }
+    },
+    {
+      "id": "cnbc",
+      "name": "CNBC Finance",
+      "category": "business",
+      "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+      "lean": {
+        "label": "Lean Left",
+        "basis": "MBFC: Left-Center (-3.3), mostly factual",
+        "url": "https://mediabiasfactcheck.com/cnbc/"
+      }
+    },
+    {
+      "id": "marketwatch",
+      "name": "MarketWatch",
+      "category": "business",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "lean": {
+        "label": "Lean Right",
+        "basis": "MBFC: Right-Center (2.8), high factual reporting",
+        "url": "https://mediabiasfactcheck.com/marketwatch/"
+      }
+    },
+    {
+      "id": "wsj",
+      "name": "WSJ Markets",
+      "category": "business",
+      "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
+      "paywalled": true,
+      "lean": {
+        "label": "Lean Right",
+        "basis": "MBFC: Right-Center (4.2), mostly factual",
+        "url": "https://mediabiasfactcheck.com/wall-street-journal/"
+      }
+    },
+    {
+      "id": "investing",
+      "name": "Investing.com",
+      "category": "business",
+      "url": "https://www.investing.com/rss/news.rss",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    },
+    {
+      "id": "seeking-alpha",
+      "name": "Seeking Alpha",
+      "category": "business",
+      "url": "https://seekingalpha.com/feed.xml",
+      "lean": {
+        "label": "Not rated",
+        "basis": "No verified public rating"
+      }
+    }
+  ]
+}
