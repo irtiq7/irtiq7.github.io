@@ -1,0 +1,21 @@
+/* Contour Synth */
+.cs-shell { max-width: 1060px; }
+.cs-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem; }
+.cs-toolbar button { padding: 0.5rem 1rem; font: inherit; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); background: none; border: 1px solid var(--line); cursor: pointer; }
+.cs-toolbar button:hover:not(:disabled) { border-color: var(--pine); }
+.cs-toolbar button:disabled { opacity: 0.4; cursor: not-allowed; }
+.cs-toolbar .cs-primary { color: #05060d; background: var(--pine); border-color: var(--pine); font-weight: 700; box-shadow: var(--glow-c); min-width: 6rem; }
+.cs-toolbar .cs-primary[aria-pressed="true"] { background: var(--rust); border-color: var(--rust); color: #fff; box-shadow: var(--glow-m); }
+.cs-next-wrap { margin-left: auto; color: var(--ink-soft); font-size: 0.85rem; }
+.cs-canvas { display: block; width: 100%; height: clamp(320px, 55vh, 520px); border: 1px solid var(--pine); box-shadow: 0 0 18px rgba(0, 240, 255, 0.15); touch-action: none; cursor: crosshair; }
+.cs-status { min-height: 1.5em; margin: 0.6rem 0 0; color: var(--ink-soft); font-size: 0.85rem; }
+.cs-settings { display: flex; flex-wrap: wrap; gap: 0.8rem 1.6rem; align-items: center; margin: 1rem 0; padding: 1rem; background: var(--surface); border: 1px solid var(--line); font-size: 0.85rem; color: var(--ink-soft); }
+.cs-settings label { display: inline-flex; align-items: center; gap: 0.5rem; }
+.cs-settings select { padding: 0.35rem 0.5rem; font: inherit; color: var(--ink); background: #05060d; border: 1px solid var(--line); }
+.cs-settings input[type=range] { accent-color: var(--pine); width: 120px; }
+.cs-settings input[type=checkbox] { accent-color: var(--pine); }
+.cs-settings output { min-width: 4.5rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cs-legend { margin: 0 0 2rem; padding: 0; list-style: none; font-size: 0.85rem; color: var(--ink); }
+.cs-legend li { display: flex; align-items: center; gap: 0.6rem; padding: 0.25rem 0; }
+.cs-swatch { width: 18px; height: 4px; border-radius: 2px; flex: none; }
+@media (max-width: 620px) { .cs-next-wrap { margin-left: 0; width: 100%; } }

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contour Synth | Usama Saqib</title>
+  <meta name="description" content="Contour Synth: draw lines on a grid and hear each one as a melody. A small browser instrument built with the Web Audio API.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contour Synth | Usama Saqib">
+  <meta property="og:description" content="Contour Synth: draw lines on a grid and hear each one as a melody. A small browser instrument built with the Web Audio API.">
+  <meta property="og:url" content="https://irtiq7.github.io/contour.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/contour.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="contour.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" aria-current="page" href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Contour Synth</h1>
+      <p class="page-lede">Draw a line and it becomes music. Each line you draw is a contour: left to right is time, and higher on the grid means a higher note. Every contour gets its own instrument, and they all play together in a loop.</p>
+    </div></section>
+    <section class="section-pad"><div class="shell cs-shell">
+      <div class="cs-toolbar" role="group" aria-label="Playback">
+        <button id="cs-play" class="cs-primary" type="button" aria-pressed="false">Play</button>
+        <button id="cs-undo" type="button">Undo</button>
+        <button id="cs-clear" type="button">Clear</button>
+        <button id="cs-random" type="button">Random contour</button>
+        <span class="cs-next-wrap">Next instrument: <strong id="cs-next"></strong></span>
+      </div>
+      <canvas id="cs-canvas" class="cs-canvas" aria-label="Drawing grid. Draw lines to create melodies; the list below the grid describes each contour."></canvas>
+      <p id="cs-status" class="cs-status" role="status"></p>
+      <div class="cs-settings">
+        <label>Scale
+          <select id="cs-scale">
+            <option value="pentatonic">Major pentatonic</option>
+            <option value="major">Major</option>
+            <option value="minor">Natural minor</option>
+            <option value="dorian">Dorian</option>
+            <option value="blues">Blues</option>
+          </select></label>
+        <label>Key
+          <select id="cs-root">
+            <option value="0">C</option><option value="2">D</option><option value="3">E&#9837;</option><option value="4">E</option>
+            <option value="5">F</option><option value="7">G</option><option value="9">A</option><option value="10">B&#9837;</option>
+          </select></label>
+        <label>Tempo <input id="cs-tempo" type="range" min="60" max="180" value="100"> <output id="cs-tempo-out">100 BPM</output></label>
+        <label>Volume <input id="cs-volume" type="range" min="0" max="1" step="0.05" value="0.7"></label>
+        <label class="cs-check"><input id="cs-glide" type="checkbox"> Smooth glide (follow the line instead of snapping to notes)</label>
+      </div>
+      <ul id="cs-legend" class="cs-legend" aria-label="Contours"></ul>
+      <h2 class="section-title">How it works</h2>
+      <ul class="rules">
+        <li>The grid is a loop of two bars, divided into 32 sixteenth-note steps. The playhead moves from left to right and starts again at the end.</li>
+        <li>The horizontal lines are the notes of the chosen scale, over three octaves; the highlighted ones are the key note. A line's height at each step picks the note, and steps that stay on the same note are joined into one longer note.</li>
+        <li>Each contour gets the next instrument (Glass, Reed, Flute, Pad, Pluck, Brass), so several contours become a small ensemble. Up to eight contours play at once.</li>
+        <li>Turn on <em>Smooth glide</em> to hear the exact shape of each line, sliding between notes instead of stepping.</li>
+        <li>Press the space bar to play or stop. Without a mouse or touch screen, use <em>Random contour</em>.</li>
+        <li>Everything runs in your browser with the Web Audio API. Nothing is recorded or uploaded.</li>
+      </ul>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="contour.js"></script>
+  <script src="edit-link.js"></script>
+</body>
+</html>
