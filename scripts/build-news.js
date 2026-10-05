@@ -13,7 +13,9 @@ const { JSDOM, VirtualConsole } = require("jsdom");
 const { Readability } = require("@mozilla/readability");
 
 const ROOT = path.join(__dirname, "..");
-const NEWS = path.join(ROOT, "news");
+const NEWS = process.env.NEWS_DIR || path.join(ROOT, "news");
+const NOW = process.env.NEWS_NOW ? Date.parse(process.env.NEWS_NOW) : Date.now(); // overridable for tests
+const signals = require("./signals");
 const UA = "Mozilla/5.0 (compatible; irtiq7-news-builder; +https://irtiq7.github.io/ai_news.html)";
 const DEFAULT_LIMIT = 20;          // items kept per source
 const ARTICLE_FETCHES_PER_SOURCE = 20;
@@ -276,31 +278,81 @@ async function main() {
     console.log(`updated news/latest.json (${itemsOut.length} items)`);
   }
 
-  // Archive (slim) and trends
-  fs.mkdirSync(path.join(NEWS, "archive"), { recursive: true });
-  const today = day(Date.now());
-  const slim = itemsOut.map((i) => ({ id: i.id, c: i.category, s: i.sourceId, p: i.published, t: i.topics }));
-  const archFile = path.join(NEWS, "archive", today + ".json");
-  const archText = JSON.stringify(slim) + "\n";
-  if (!fs.existsSync(archFile) || fs.readFileSync(archFile, "utf8") !== archText) { fs.writeFileSync(archFile, archText); console.log(`updated news/archive/${today}.json`); }
-  for (const f of fs.readdirSync(path.join(NEWS, "archive"))) {
-    const d = f.replace(".json", ""); if (/^\d{4}-\d{2}-\d{2}$/.test(d) && Date.now() - Date.parse(d) > ARCHIVE_DAYS * 864e5) fs.unlinkSync(path.join(NEWS, "archive", f));
+  // ---- Archive: only items not seen on an earlier day, with the terms used for the signals
+  const archDir = path.join(NEWS, "archive");
+  fs.mkdirSync(archDir, { recursive: true });
+  const today = day(NOW);
+  const written = (file, text, label) => {
+    if (!fs.existsSync(file) || fs.readFileSync(file, "utf8") !== text) { fs.writeFileSync(file, text); console.log("updated " + label); }
+  };
+  const termLists = signals.pickTerms(itemsOut);
+  itemsOut.forEach((i, k) => { i._w = termLists[k]; });
+  const archFiles = fs.readdirSync(archDir).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f));
+  const earlier = new Set();
+  for (const f of archFiles) if (f !== today + ".json") for (const i of JSON.parse(fs.readFileSync(path.join(archDir, f), "utf8"))) earlier.add(i.id);
+  const slim = itemsOut.filter((i) => !earlier.has(i.id)).map((i) => {
+    const e = { id: i.id, c: i.category, s: i.sourceId, p: i.published, t: i.topics, w: i._w, n: i.title, u: i.url };
+    if (i.category === "business") { const m = signals.moodScore(i.title + " " + i.summary); if (m != null) e.m = m; }
+    return e;
+  });
+  written(path.join(archDir, today + ".json"), JSON.stringify(slim) + "\n", `news/archive/${today}.json`);
+  for (const f of fs.readdirSync(archDir)) {
+    const d = f.replace(".json", ""); if (/^\d{4}-\d{2}-\d{2}$/.test(d) && NOW - Date.parse(d) > ARCHIVE_DAYS * 864e5) fs.unlinkSync(path.join(archDir, f));
   }
   const all = new Map();
-  for (const f of fs.readdirSync(path.join(NEWS, "archive"))) for (const i of JSON.parse(fs.readFileSync(path.join(NEWS, "archive", f), "utf8"))) all.set(i.id, i);
-  const days = Array.from({ length: TREND_DAYS }, (_, k) => day(Date.now() - (TREND_DAYS - 1 - k) * 864e5));
+  for (const f of fs.readdirSync(archDir).sort()) for (const i of JSON.parse(fs.readFileSync(path.join(archDir, f), "utf8"))) all.set(i.id, i);
+  const arch = [...all.values()];
+
+  // ---- Topic trends (last 30 days, by published day)
+  const days = Array.from({ length: TREND_DAYS }, (_, k) => day(NOW - (TREND_DAYS - 1 - k) * 864e5));
   const trends = { days, categories: {} };
   for (const cat of Object.keys(sourcesFile.topics)) {
     const counts = {};
-    for (const i of all.values()) {
+    for (const i of arch) {
       if (i.c !== cat) continue;
       const di = days.indexOf(day(i.p)); if (di < 0) continue;
-      for (const t of i.t) (counts[t] = counts[t] || new Array(TREND_DAYS).fill(0))[di]++;
+      for (const t of i.t || []) (counts[t] = counts[t] || new Array(TREND_DAYS).fill(0))[di]++;
     }
     trends.categories[cat] = Object.fromEntries(Object.entries(counts).sort((a, b) => b[1].reduce((x, y) => x + y, 0) - a[1].reduce((x, y) => x + y, 0)).slice(0, 10));
   }
-  const tFile = path.join(NEWS, "trends.json"), tText = JSON.stringify(trends) + "\n";
-  if (!fs.existsSync(tFile) || fs.readFileSync(tFile, "utf8") !== tText) { fs.writeFileSync(tFile, tText); console.log("updated news/trends.json"); }
+  written(path.join(NEWS, "trends.json"), JSON.stringify(trends) + "\n", "news/trends.json");
+
+  // ---- Signals: emerging ideas, topic momentum, market mood, cross-outlet stories
+  const baseline = signals.baselineStats(arch, NOW);
+  const emerging = baseline.ready ? signals.computeEmerging(arch, NOW) : [];
+  const discussed = baseline.ready ? [] : signals.mostDiscussed(arch, NOW);
+  const mood = signals.computeMood(arch, NOW);
+  const scored = itemsOut.filter((i) => i.category === "business" && NOW - Date.parse(i.published) < 7 * 864e5)
+    .map((i) => ({ id: i.id, m: signals.moodScore(i.title + " " + i.summary) })).filter((x) => x.m != null);
+  mood.up = scored.filter((x) => x.m > 0).sort((a, b) => b.m - a.m).slice(0, 3).map((x) => x.id);
+  mood.down = scored.filter((x) => x.m < 0).sort((a, b) => a.m - b.m).slice(0, 3).map((x) => x.id);
+  const agreement = signals.clusterStories(itemsOut).map((g) => ({
+    title: g[0].title, outlets: new Set(g.map((x) => x.sourceId)).size, items: g.map((x) => ({ id: x.id, source: x.sourceId, lean: (sourcesFile.sources.find((s) => s.id === x.sourceId) || { lean: { label: "Not rated" } }).lean.label })),
+  }));
+  // every story id the page may need to show, with its title, link, outlet and date
+  const byId = new Map([...arch.map((i) => [i.id, { title: i.n, url: i.u, source: i.s, category: i.c, published: i.p }]), ...itemsOut.map((i) => [i.id, { title: i.title, url: i.url, source: i.sourceId, category: i.category, published: i.published }])]);
+  const wanted = new Set([...emerging.concat(discussed).flatMap((e) => e.examples), ...mood.up, ...mood.down, ...agreement.flatMap((a) => a.items.map((x) => x.id))]);
+  const refs = Object.fromEntries([...wanted].filter((id) => byId.has(id)).map((id) => [id, byId.get(id)]));
+  const signalsOut = {
+    as_of: today, baseline, provisional: !baseline.ready,
+    method: {
+      emerging: "Needs about three weeks of history. A term is flagged when it appears in at least 5 stories from at least 3 outlets in the last 7 days and at least 1.8 times as often as in the 3 weeks before. Until then the page lists the most discussed two-word phrases instead. Stage: early = only research sources, spreading = research plus tech or business, mainstream = no research mentions.",
+      momentum: "Stories per topic in the last 7 days compared with the average week in the 3 weeks before.",
+      mood: "Share of upbeat vs worried words in business headlines (word lists are published). A reading of the words, not of the market.",
+      agreement: "Headlines from different outlets that share most of their key words.",
+    },
+    sources: Object.fromEntries(sourcesFile.sources.map((x) => [x.id, { name: x.name, lean: x.lean.label }])), emerging, most_discussed: discussed, momentum: signals.computeMomentum(arch, NOW), mood, agreement, refs,
+  };
+  written(path.join(NEWS, "signals.json"), JSON.stringify(signalsOut) + "\n", "news/signals.json");
+
+  // ---- Forecast ledger: questions are written once and never edited; only outcomes are filled in later
+  const fFile = path.join(NEWS, "forecasts.json");
+  const ledger = fs.existsSync(fFile) ? JSON.parse(fs.readFileSync(fFile, "utf8")) : { model: signals.MODEL, forecasts: [] };
+  signals.resolveForecasts(ledger.forecasts, arch, NOW);
+  ledger.forecasts.push(...(baseline.ready ? signals.makeForecasts(emerging, ledger.forecasts, NOW, "emerging") : signals.makeForecasts(discussed, ledger.forecasts, NOW, "most-discussed")));
+  ledger.summary = signals.scoreboard(ledger.forecasts);
+  ledger.note = "Forecasts are made at most once a week from the emerging-ideas list and scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
+  written(fFile, JSON.stringify(ledger, null, 1) + "\n", "news/forecasts.json");
 }
 
 main().catch((e) => { console.error(e.message); process.exit(1); });

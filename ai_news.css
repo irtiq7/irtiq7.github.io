@@ -76,3 +76,30 @@
 .nc-actions .mini { margin-left: 0; text-decoration: none; }
 .empty { grid-column: 1 / -1; padding: 1rem 0; color: var(--ink-soft); }
 @media (max-width: 760px) { .insights { grid-template-columns: 1fr; } .chip-block { flex-direction: column; gap: 0.2rem; } .bar-row { grid-template-columns: 6.5rem 1fr 2rem; } }
+
+/* Signals page */
+.wide { max-width: 1060px; }
+.idea-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+.idea { padding: 1rem; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+.idea h3 { margin: 0; font-size: 1.05rem; overflow-wrap: anywhere; }
+.idea-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.6rem; flex-wrap: wrap; }
+.idea-why { margin: 0.5rem 0 0.2rem; font-size: 0.88rem; }
+.idea-stories { margin: 0.5rem 0; padding-left: 1.1rem; font-size: 0.82rem; }
+.idea-stories li { margin-bottom: 0.25rem; overflow-wrap: anywhere; }
+.stage-early { border-color: var(--pine); color: var(--pine); }
+.stage-spreading { border-color: var(--rust); color: var(--rust); }
+.stage-mainstream { border-color: var(--ink-soft); color: var(--ink-soft); }
+.mom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+.mom-col { padding: 1rem; background: var(--surface); border: 1px solid var(--line); }
+.mom-col h3 { margin: 0 0 0.4rem; font-size: 0.95rem; color: var(--pine); }
+.mom-col h4 { margin: 0.6rem 0 0.2rem; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+.mom-list { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+.mood-now { margin: 0.4rem 0; }
+.mood-heads { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.mood-heads h4 { margin: 0.8rem 0 0.2rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+#forecasts h3 { margin: 1.4rem 0 0.4rem; font-size: 0.95rem; color: var(--pine); }
+#forecasts .stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
+#forecasts .data-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+#forecasts .data-table th, #forecasts .data-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+#forecasts .data-table th { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; }
+#forecasts .table-wrap { overflow-x: auto; }

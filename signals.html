@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signals | Usama Saqib</title>
+  <meta name="description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Signals | Usama Saqib">
+  <meta property="og:description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts.">
+  <meta property="og:url" content="https://irtiq7.github.io/signals.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/signals.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="ai_news.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" aria-current="page" href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Signals</h1>
+      <p class="page-lede">What the news is talking about, and how well simple models predict that attention. This page describes patterns in research, technology and business coverage so you can learn how ideas travel. It does not say what anyone should do, and it is not investment, career or other advice.</p>
+      <p class="pub-venue" id="asof" role="status">Loading&hellip;</p>
+      <p class="small"><a href="ai_news.html">&larr; Back to the daily news</a></p>
+    </div></section>
+    <section class="section-pad"><div class="shell prose-shell wide">
+      <p id="sig-loading" class="muted">Loading&hellip;</p>
+      <div id="sig-body" hidden>
+        <details class="agent-box" open>
+          <summary>How to read this page</summary>
+          <ul class="rules">
+            <li><strong>Attention is not truth.</strong> A phrase being everywhere shows what outlets chose to write about, not that it is important or correct.</li>
+            <li><strong>Ideas often travel from research to industry press.</strong> The stage label only says where a phrase appears now: research sources, industry press, or both.</li>
+            <li><strong>Everything is traceable.</strong> Each signal links to the stories behind it, and the method is written next to it. The raw data is in <a href="news/signals.json">signals.json</a> and <a href="news/forecasts.json">forecasts.json</a>.</li>
+            <li><strong>Small data, honest limits.</strong> The page collects about 450 stories a day. Early readings are noisy and are labelled as such.</li>
+          </ul>
+        </details>
+
+        <h2 class="section-title" id="ideas-title">Ideas</h2>
+        <p class="muted" id="ideas-lede"></p>
+        <div id="stage-filters" class="chips"></div>
+        <div id="ideas" class="idea-grid"></div>
+
+        <h2 class="section-title">Topic momentum</h2>
+        <p class="muted small">Stories per topic in the last 7 days against the average week of the three weeks before.</p>
+        <div id="momentum" class="mom-grid"></div>
+
+        <h2 class="section-title">Tone of business headlines</h2>
+        <p class="muted small">A word count, not a market forecast: the balance of upbeat and worried words in business headlines.</p>
+        <div id="mood"></div>
+
+        <h2 class="section-title">Stories several outlets cover</h2>
+        <p class="muted small">Headlines from different outlets that share most of their key words, with each outlet's rating (of the outlet, not the story). Reading across outlets is a good way to see how framing differs.</p>
+        <div id="agreement" class="idea-grid"></div>
+
+        <h2 class="section-title">Forecast scoreboard</h2>
+        <p>Once a week the page writes down questions about its own data, for example whether a phrase will keep appearing, together with a probability from a stated model (a Poisson model that assumes this week's rate fades a little). Questions are never edited afterwards, each one covers 7 days, and the result is scored with the Brier score, <em>(probability &minus; outcome)&sup2;</em>. Always saying 50% scores 0.25, so a lower score means better than that benchmark. This is the idea of strictly proper scoring rules from my paper <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, applied to forecasts. The git history of <a href="news/forecasts.json">forecasts.json</a> is the audit trail.</p>
+        <div id="forecasts"></div>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="signals.js"></script>
+  <script src="edit-link.js"></script>
+</body>
+</html>

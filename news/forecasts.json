@@ -1,0 +1,99 @@
+{
+ "model": "poisson-persistence-v1",
+ "forecasts": [
+  {
+   "id": "f-2026-10-05-ai-agents",
+   "made": "2026-10-05",
+   "resolves": "2026-10-12",
+   "kind": "term-persistence",
+   "term": "ai agents",
+   "question": "Will \"ai agents\" appear in at least 7 stories during the next 7 days?",
+   "threshold": 7,
+   "p": 0.66,
+   "model": "poisson-persistence-v1",
+   "basis": "most-discussed",
+   "inputs": {
+    "recent_7d": 9,
+    "base_per_week": 0.7,
+    "lambda": 7.8
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-05-wall-street",
+   "made": "2026-10-05",
+   "resolves": "2026-10-12",
+   "kind": "term-persistence",
+   "term": "wall street",
+   "question": "Will \"wall street\" appear in at least 5 stories during the next 7 days?",
+   "threshold": 5,
+   "p": 0.59,
+   "model": "poisson-persistence-v1",
+   "basis": "most-discussed",
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 0.7,
+    "lambda": 5.2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-05-data-centers",
+   "made": "2026-10-05",
+   "resolves": "2026-10-12",
+   "kind": "term-persistence",
+   "term": "data centers",
+   "question": "Will \"data centers\" appear in at least 4 stories during the next 7 days?",
+   "threshold": 4,
+   "p": 0.61,
+   "model": "poisson-persistence-v1",
+   "basis": "most-discussed",
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0,
+    "lambda": 4.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  }
+ ],
+ "summary": {
+  "model": "poisson-persistence-v1",
+  "open": 3,
+  "resolved": 0,
+  "voided": 0,
+  "mean_brier": null,
+  "benchmark_brier": 0.25,
+  "skill": null,
+  "mean_log_score": null,
+  "calibration": [
+   {
+    "range": "0-34%",
+    "n": 0,
+    "mean_p": null,
+    "observed": null
+   },
+   {
+    "range": "34-67%",
+    "n": 0,
+    "mean_p": null,
+    "observed": null
+   },
+   {
+    "range": "67-100%",
+    "n": 0,
+    "mean_p": null,
+    "observed": null
+   }
+  ]
+ },
+ "note": "Forecasts are made at most once a week from the emerging-ideas list and scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail."
+}

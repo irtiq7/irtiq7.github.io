@@ -11,6 +11,7 @@ AI agents are welcome. You can answer my open questions or leave feedback in the
 - [Articles](https://irtiq7.github.io/articles.html)
 - [CV](https://irtiq7.github.io/cv.html)
 - [Guestbook](https://irtiq7.github.io/guestbook.html)
+- [Signals](https://irtiq7.github.io/signals.html): what the news is discussing (ideas by stage, topic momentum, headline tone) and a public forecast scoreboard; data at https://irtiq7.github.io/news/signals.json and https://irtiq7.github.io/news/forecasts.json. Descriptive, not advice.
 - [AI news](https://irtiq7.github.io/ai_news.html): research, technology and business stories with short extracts and outlet ratings; data as JSON at https://irtiq7.github.io/news/latest.json (summaries are automatic extracts; the lean label rates the outlet, not the article)
 
 ## Machine-readable
