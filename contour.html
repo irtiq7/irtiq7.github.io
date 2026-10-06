@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contour Synth | Usama Saqib</title>
-  <meta name="description" content="Contour Synth: draw lines on a grid and hear each one as a melody. A small browser instrument built with the Web Audio API.">
+  <meta name="description" content="Contour Synth: a drawing instrument. Lines play melodies, shapes play chords, colours pick the instrument.">
   <meta name="theme-color" content="#0a0b14">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contour Synth | Usama Saqib">
-  <meta property="og:description" content="Contour Synth: draw lines on a grid and hear each one as a melody. A small browser instrument built with the Web Audio API.">
+  <meta property="og:description" content="Contour Synth: a drawing instrument. Lines play melodies, shapes play chords, colours pick the instrument.">
   <meta property="og:url" content="https://irtiq7.github.io/contour.html">
   <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
   <link rel="canonical" href="https://irtiq7.github.io/contour.html">
@@ -33,44 +33,36 @@
   <main id="main">
     <section class="page-hero"><div class="shell">
       <h1>Contour Synth</h1>
-      <p class="page-lede">Draw a line and it becomes music. Each line you draw is a contour: left to right is time, and higher on the grid means a higher note. Every contour gets its own instrument, and they all play together in a loop.</p>
+      <p class="page-lede">A drawing instrument. Pick a colour and draw: every line becomes a voice in a looping piano roll. Lines play melodies, shapes play chords, and each colour is a different instrument over a soft drum groove.</p>
     </div></section>
     <section class="section-pad"><div class="shell cs-shell">
       <div class="cs-toolbar" role="group" aria-label="Playback">
         <button id="cs-play" class="cs-primary" type="button" aria-pressed="false">Play</button>
+        <button id="cs-shuffle" type="button">Shuffle</button>
         <button id="cs-undo" type="button">Undo</button>
         <button id="cs-clear" type="button">Clear</button>
-        <button id="cs-random" type="button">Random contour</button>
-        <span class="cs-next-wrap">Next instrument: <strong id="cs-next"></strong></span>
       </div>
-      <canvas id="cs-canvas" class="cs-canvas" aria-label="Drawing grid. Draw lines to create melodies; the list below the grid describes each contour."></canvas>
+      <div id="cs-palette" class="cs-palette" role="group" aria-label="Instrument colour"></div>
+      <canvas id="cs-canvas" class="cs-canvas" tabindex="0" aria-label="Drawing paper. Draw lines and shapes to make music; the status line below describes what will play."></canvas>
       <p id="cs-status" class="cs-status" role="status"></p>
       <div class="cs-settings">
-        <label>Scale
-          <select id="cs-scale">
-            <option value="pentatonic">Major pentatonic</option>
-            <option value="major">Major</option>
-            <option value="minor">Natural minor</option>
-            <option value="dorian">Dorian</option>
-            <option value="blues">Blues</option>
-          </select></label>
-        <label>Key
-          <select id="cs-root">
-            <option value="0">C</option><option value="2">D</option><option value="3">E&#9837;</option><option value="4">E</option>
-            <option value="5">F</option><option value="7">G</option><option value="9">A</option><option value="10">B&#9837;</option>
-          </select></label>
-        <label>Tempo <input id="cs-tempo" type="range" min="60" max="180" value="100"> <output id="cs-tempo-out">100 BPM</output></label>
-        <label>Volume <input id="cs-volume" type="range" min="0" max="1" step="0.05" value="0.7"></label>
-        <label class="cs-check"><input id="cs-glide" type="checkbox"> Smooth glide (follow the line instead of snapping to notes)</label>
+        <label>Key <select id="cs-root"></select></label>
+        <label>Scale <select id="cs-scale"></select></label>
+        <label>Range <select id="cs-range"><option value="1">1 octave</option><option value="2" selected>2 octaves</option><option value="3">3 octaves</option></select></label>
+        <span class="cs-octave">Octave <button id="cs-oct-down" type="button" aria-label="Octave down">&minus;</button><output id="cs-oct">0</output><button id="cs-oct-up" type="button" aria-label="Octave up">+</button></span>
+        <label>Tempo <input id="cs-tempo" type="range" min="50" max="180" value="96"> <output id="cs-tempo-out">96 BPM</output></label>
+        <button id="cs-tap" class="cs-tap" type="button">Tap tempo</button>
+        <label>Swing <select id="cs-swing"><option value="0">Off</option><option value="0.12">Light</option><option value="0.22">Medium</option><option value="0.33">Hard</option></select></label>
+        <label class="cs-check"><input id="cs-drums" type="checkbox" checked> Drums</label>
+        <label>Volume <input id="cs-volume" type="range" min="0" max="1" step="0.05" value="0.6"></label>
       </div>
-      <ul id="cs-legend" class="cs-legend" aria-label="Contours"></ul>
-      <h2 class="section-title">How it works</h2>
+      <h2 class="section-title">How to play</h2>
       <ul class="rules">
-        <li>The grid is a loop of two bars, divided into 32 sixteenth-note steps. The playhead moves from left to right and starts again at the end.</li>
-        <li>The horizontal lines are the notes of the chosen scale, over three octaves; the highlighted ones are the key note. A line's height at each step picks the note, and steps that stay on the same note are joined into one longer note.</li>
-        <li>Each contour gets the next instrument (Glass, Reed, Flute, Pad, Pluck, Brass), so several contours become a small ensemble. Up to eight contours play at once.</li>
-        <li>Turn on <em>Smooth glide</em> to hear the exact shape of each line, sliding between notes instead of stepping.</li>
-        <li>Press the space bar to play or stop. Without a mouse or touch screen, use <em>Random contour</em>.</li>
+        <li>The paper is a loop: the playhead sweeps from left to right and starts again. Left to right is time, and higher on the paper is a higher note.</li>
+        <li>Every grid cell a line passes through sounds when the playhead reaches it. A flat line holds a note, a slope plays a run, and a circle or wave plays its top and bottom together as a chord.</li>
+        <li>The horizontal lines are the notes of the key and scale you choose, so everything you draw stays in tune. The labelled lines are the key note in each octave.</li>
+        <li>Each colour is an instrument, and it stays selected until you pick another, so every line you draw uses it. Keys, pluck, bell, marimba and chime are struck and ring out; flute, strings, bass and 8-bit hold for as long as the line stays on a note.</li>
+        <li>Shuffle draws a ready-made shape to start from. Keep drawing while it plays and the loop changes as you go. The space bar plays and stops.</li>
         <li>Everything runs in your browser with the Web Audio API. Nothing is recorded or uploaded.</li>
       </ul>
     </div></section>
