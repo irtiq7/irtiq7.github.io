@@ -80,7 +80,16 @@
   }
 
   // ---------- rendering
-  function renderAll() { renderTabs(); renderChips(); renderSpectrum(); renderCharts(); renderList(); }
+  var UW = "underwater sensing";
+  function uwActive() { var t = active(state.topics); return state.cat === "research" && t.length === 1 && t[0] === UW; }
+  function renderTracker() {
+    var week = Date.now() - 7 * 864e5, n = 0, total = 0;
+    data.items.forEach(function (i) { if (i.topics.indexOf(UW) >= 0) { total++; if (Date.parse(i.published) >= week) n++; } });
+    $("uw-count").textContent = "(" + n + " this week, " + total + " total)";
+    $("uw-tracker").setAttribute("aria-pressed", uwActive() ? "true" : "false");
+    $("uw-tracker").classList.toggle("on", uwActive());
+  }
+  function renderAll() { renderTabs(); renderChips(); renderSpectrum(); renderCharts(); renderList(); renderTracker(); }
 
   function renderTabs() {
     var tabs = document.querySelectorAll("[data-cat]");
@@ -278,6 +287,11 @@
     Array.prototype.forEach.call(document.querySelectorAll("[data-view]"), function (b) { b.addEventListener("click", function () { setView(b.getAttribute("data-view")); renderAll(); }); });
     Array.prototype.forEach.call(document.querySelectorAll("[data-chart]"), function (b) { b.addEventListener("click", function () { state.chart = b.getAttribute("data-chart"); renderCharts(); }); });
     Array.prototype.forEach.call(document.querySelectorAll("[data-days]"), function (b) { b.addEventListener("click", function () { state.trendDays = parseInt(b.getAttribute("data-days"), 10); renderTrends(); }); });
+    $("uw-tracker").addEventListener("click", function () {
+      if (uwActive()) { state.topics = {}; }
+      else { state.cat = "research"; state.sources = {}; state.lean = ""; state.q = ""; state.sort = "new"; state.view = "all"; state.topics = {}; state.topics[UW] = true; $("q").value = ""; $("lean-select").value = ""; $("sort-select").value = "new"; setView("all"); savePrefs(); history.replaceState(null, "", "#research"); }
+      renderAll();
+    });
     $("reset-filters").addEventListener("click", resetFilters);
     if (window.speechSynthesis) $("tts").addEventListener("click", speak); else $("tts").hidden = true;
     window.addEventListener("beforeunload", function () { if (window.speechSynthesis) speechSynthesis.cancel(); });

@@ -80,6 +80,26 @@
         "optimization",
         "convergence",
         "gradient"
+      ],
+      "underwater sensing": [
+        "underwater",
+        "sonar",
+        "hydrophone",
+        "hydrophones",
+        "auv",
+        "auvs",
+        "rov",
+        "rovs",
+        "subsea",
+        "bathymetry",
+        "bathymetric",
+        "underwater acoustic",
+        "underwater acoustics",
+        "marine robotics",
+        "ocean sensing",
+        "seabed",
+        "submersible",
+        "submarine"
       ]
     },
     "tech": {
@@ -160,6 +180,26 @@
         "crypto",
         "bitcoin",
         "ethereum"
+      ],
+      "underwater sensing": [
+        "underwater",
+        "sonar",
+        "hydrophone",
+        "hydrophones",
+        "auv",
+        "auvs",
+        "rov",
+        "rovs",
+        "subsea",
+        "bathymetry",
+        "bathymetric",
+        "underwater acoustic",
+        "underwater acoustics",
+        "marine robotics",
+        "ocean sensing",
+        "seabed",
+        "submersible",
+        "submarine"
       ]
     },
     "business": {
@@ -351,6 +391,53 @@
       "lean": {
         "label": "Not rated",
         "basis": "University news office"
+      }
+    },
+    {
+      "id": "arxiv-underwater",
+      "name": "arXiv: underwater sensing",
+      "category": "research",
+      "url": "https://export.arxiv.org/api/query?search_query=%28abs%3Aunderwater+OR+abs%3Asonar+OR+abs%3Ahydrophone+OR+abs%3Asubsea+OR+abs%3Abathymetry+OR+abs%3A%22autonomous+underwater+vehicle%22+OR+abs%3A%22underwater+acoustic%22%29+AND+%28cat%3Acs.RO+OR+cat%3Aeess.SP+OR+cat%3Aeess.AS+OR+cat%3Acs.SD+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Aeess.IV%29&sortBy=submittedDate&sortOrder=descending&max_results=30",
+      "limit": 30,
+      "lean": {
+        "label": "Not rated",
+        "basis": "Preprint search: underwater, sonar, hydrophone, subsea, bathymetry"
+      }
+    },
+    {
+      "id": "frontiers-marine",
+      "name": "Frontiers in Marine Science",
+      "category": "research",
+      "url": "https://www.frontiersin.org/journals/marine-science/rss",
+      "limit": 15,
+      "filter": "underwater|sonar|hydrophone|acoustic|\\bAUVs?\\b|\\bROVs?\\b|subsea|seabed|bathymetr|submersible|marine robot|ocean (sensor|sensing|observ|glider)|sensor network",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Journal, filtered to underwater sensing topics"
+      }
+    },
+    {
+      "id": "physorg-ocean",
+      "name": "Phys.org: Oceanography",
+      "category": "research",
+      "url": "https://phys.org/rss-feed/earth-news/oceanography/",
+      "limit": 15,
+      "filter": "underwater|sonar|hydrophone|acoustic|\\bAUVs?\\b|\\bROVs?\\b|subsea|seabed|bathymetr|submersible|marine robot|ocean (sensor|sensing|observ|glider)|sensor network",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Science news wire, filtered to underwater sensing topics"
+      }
+    },
+    {
+      "id": "sciencedaily-ocean",
+      "name": "ScienceDaily: Oceanography",
+      "category": "research",
+      "url": "https://www.sciencedaily.com/rss/earth_climate/oceanography.xml",
+      "limit": 15,
+      "filter": "underwater|sonar|hydrophone|acoustic|\\bAUVs?\\b|\\bROVs?\\b|subsea|seabed|bathymetr|submersible|marine robot|ocean (sensor|sensing|observ|glider)|sensor network",
+      "lean": {
+        "label": "Not rated",
+        "basis": "Science news wire, filtered to underwater sensing topics"
       }
     },
     {

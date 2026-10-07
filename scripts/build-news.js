@@ -199,8 +199,9 @@ async function main() {
   const perSource = await pool(sourcesFile.sources, 6, async (src) => {
     try {
       const xml = await fetchText(src.url);
-      const entries = parseFeed(xml);
-      if (!entries.length) throw new Error("no items");
+      let entries = parseFeed(xml);
+      if (src.filter) { const re = new RegExp(src.filter, "i"); entries = entries.filter((e) => re.test(e.title + " " + stripHtml(e.html))); }
+      else if (!entries.length) throw new Error("no items");
       const now = Date.now();
       const items = entries.map((e) => ({ ...e, ts: Date.parse(e.date) })).map((e) => ({ ...e, ts: Number.isFinite(e.ts) && e.ts < now + 864e5 ? e.ts : now }))
         .sort((a, b) => b.ts - a.ts).slice(0, src.limit || DEFAULT_LIMIT);
