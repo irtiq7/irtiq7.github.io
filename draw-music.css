@@ -1,0 +1,46 @@
+/* Draw Music (loaded after site.css): cream paper, ink, hairlines and monospace, like the instrument it is modelled on */
+.wide { max-width: 1100px; }
+.dm-app { --paper: #faf9f7; --ink: #1a1916; --muted: #8a877e; --hair: #cfcabd; --raised: #fffefb; --record: #d85a30;
+  background: var(--paper); color: var(--ink); border: 1px solid var(--hair); padding: 1rem; font-family: var(--mono); font-size: 0.8rem; line-height: 1.5; border-radius: 4px; }
+.dm-app a { color: var(--ink); }
+.dm-wrap { border: 1px solid var(--hair); background: var(--paper); border-radius: 3px; overflow: hidden; }
+#dm-canvas { display: block; touch-action: none; cursor: crosshair; max-width: none; }
+.dm-rail { display: grid; gap: 0.6rem; margin: 0.8rem 0; }
+.dm-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.6rem; }
+.dm-btn, .dm-app label.dm-btn { font: inherit; font-size: 0.74rem; color: var(--ink); background: var(--raised); border: 1px solid var(--hair); border-radius: 999px; padding: 0.3rem 0.8rem; cursor: pointer; text-transform: none; letter-spacing: 0; }
+.dm-btn:hover:not(:disabled) { border-color: var(--ink); }
+.dm-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.dm-btn.on, .dm-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.dm-btn:focus-visible, .dm-play:focus-visible, .dm-dot:focus-visible { outline: 2px solid var(--record); outline-offset: 2px; }
+.dm-app select, .dm-app input[type=number] { font: inherit; font-size: 0.76rem; color: var(--ink); background: var(--raised); border: 1px solid var(--hair); border-radius: 3px; padding: 0.25rem 0.4rem; text-transform: none; }
+.dm-app input[type=number] { width: 4.3rem; }
+.dm-app input[type=range] { accent-color: var(--ink); width: 140px; }
+.dm-field { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--muted); text-transform: none; letter-spacing: 0; }
+.dm-palette { display: flex; gap: 0.4rem; }
+.dm-dot { width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--hair); cursor: pointer; padding: 0; }
+.dm-dot.on { box-shadow: 0 0 0 2px var(--ink); }
+.dm-hidden { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.dm-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; padding: 0.6rem 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+.dm-play { font: inherit; font-weight: 700; font-size: 0.85rem; min-width: 6.5rem; padding: 0.5rem 1.2rem; color: var(--paper); background: var(--ink); border: 0; border-radius: 999px; cursor: pointer; }
+.dm-play[aria-pressed="true"] { background: var(--record); }
+.dm-sep { width: 1px; height: 1.4rem; background: var(--hair); }
+.dm-status { min-height: 1.4em; margin: 0.5rem 0 0; color: var(--muted); }
+.dm-deck { margin: 0.8rem 0; border: 1px solid var(--hair); border-radius: 4px; background: var(--raised); padding: 0.6rem 0.8rem; }
+.dm-deck summary { cursor: pointer; font-weight: 700; }
+.dm-info { margin: 0.6rem 0; color: var(--muted); }
+.dm-grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.8rem; }
+.dm-box { display: grid; gap: 0.5rem; align-content: start; }
+.dm-h { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.dm-keys { display: block; cursor: pointer; touch-action: none; max-width: none; border: 1px solid var(--hair); }
+.dm-muted { color: var(--muted); }
+.dm-file { position: relative; display: inline-block; }
+.dm-file input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.dm-linesbox { margin-top: 0.8rem; }
+.dm-lines { list-style: none; margin: 0.4rem 0 0; padding: 0; display: grid; gap: 0.3rem; }
+.dm-lines li { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--hair); }
+.dm-lines .dm-none { color: var(--muted); border: 0; }
+.dm-swatch { display: inline-block; width: 1.4rem; height: 0.3rem; border-radius: 2px; }
+.dm-lname { min-width: 4rem; }
+.dm-x { font: inherit; font-size: 1rem; line-height: 1; color: var(--muted); background: none; border: 0; cursor: pointer; padding: 0 0.3rem; }
+.dm-x:hover { color: var(--record); }
+@media (max-width: 620px) { .dm-app { padding: 0.6rem; } .dm-app input[type=range] { width: 100px; } }

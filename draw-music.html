@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Draw Music | Usama Saqib</title>
+  <meta name="description" content="Draw free-hand lines on paper and press play. Every line is its own voice, snapped to the key and scale you choose.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Draw Music | Usama Saqib">
+  <meta property="og:description" content="Draw free-hand lines on paper and press play. Every line is its own voice, snapped to the key and scale you choose.">
+  <meta property="og:url" content="https://irtiq7.github.io/draw-music.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/draw-music.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="draw-music.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" aria-current="page" href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Draw Music</h1>
+      <p class="page-lede">Draw with the pen and press play. The height of your ink is the pitch, and left to right is time. Every line you draw is its own voice with its own sound, and the notes snap to the key and scale you choose, so it always sounds in tune.</p>
+      <p class="pub-venue">Runs in your browser and nothing is uploaded. Your drawing stays on this device.</p>
+    </div></section>
+
+    <section class="section-pad"><div class="shell wide">
+      <div class="dm-app">
+        <div id="dm-wrap" class="dm-wrap"><canvas id="dm-canvas" aria-label="Drawing paper: the height of a line is its pitch, and left to right is time" role="img"></canvas></div>
+
+        <div class="dm-rail">
+          <div class="dm-row" role="group" aria-label="Tools">
+            <button type="button" id="dm-pen" class="dm-btn" aria-pressed="true" title="Pen (P)">Pen</button>
+            <button type="button" id="dm-erase" class="dm-btn" aria-pressed="false" title="Eraser (E, or right mouse button)">Eraser</button>
+            <button type="button" id="dm-undo" class="dm-btn" title="Undo (Ctrl/Cmd+Z)">Undo</button>
+            <button type="button" id="dm-redo" class="dm-btn" title="Redo">Redo</button>
+            <button type="button" id="dm-clear" class="dm-btn" title="Start again">Restart</button>
+            <button type="button" id="dm-shuffle" class="dm-btn" title="Give every line a new random sound, or draw a random line">Shuffle</button>
+          </div>
+          <div class="dm-row" role="group" aria-label="Colours and sounds">
+            <div id="dm-palette" class="dm-palette"></div>
+            <label class="dm-field">Sound of this colour <select id="dm-sound"></select></label>
+            <button type="button" id="dm-auto" class="dm-btn on" aria-pressed="true" title="Each new line takes the next colour, so every line has its own sound">Next colour each line</button>
+            <button type="button" id="dm-recolor" class="dm-btn" aria-pressed="false" title="Change a palette colour">Colours</button>
+            <input type="color" id="dm-color" class="dm-hidden" aria-label="Pick a colour" tabindex="-1">
+            <button type="button" id="dm-grid" class="dm-btn on" aria-pressed="true" title="Show the notes and beats under the ink (G)">Grid</button>
+            <button type="button" id="dm-snap" class="dm-btn on" aria-pressed="true" title="Locked to key snaps lines to notes. Freehand slides the pitch along your line.">Locked to key</button>
+          </div>
+        </div>
+
+        <div class="dm-bar" role="group" aria-label="Playback">
+          <button type="button" id="dm-rewind" class="dm-btn" aria-label="Back to the start">&#9198;</button>
+          <button type="button" id="dm-play" class="dm-play" aria-pressed="false">&#9654; Play</button>
+          <label class="dm-field">Speed <input type="range" id="dm-bpm" min="60" max="200" step="1"></label>
+          <label class="dm-field"><input type="number" id="dm-bpm-num" min="60" max="200" aria-label="Beats per minute"> BPM</label>
+          <button type="button" id="dm-tap" class="dm-btn">Tap</button>
+          <span class="dm-sep" aria-hidden="true"></span>
+          <button type="button" id="dm-b-bass" class="dm-btn" aria-pressed="false" title="A bass line in the key">Bass</button>
+          <button type="button" id="dm-b-drums" class="dm-btn" aria-pressed="false" title="A drum pattern">Drums</button>
+          <button type="button" id="dm-b-arp" class="dm-btn" aria-pressed="false" title="An arpeggio in the key">Arpeggio</button>
+          <button type="button" id="dm-click" class="dm-btn" aria-pressed="false" title="A metronome click on every beat">Click</button>
+          <button type="button" id="dm-record" class="dm-btn" title="Record what you hear as an audio file">&#9679; Record</button>
+        </div>
+        <p id="dm-status" class="dm-status" role="status" aria-live="polite"></p>
+
+        <details class="dm-deck" open>
+          <summary>The instrument</summary>
+          <p id="dm-scale-info" class="dm-info" aria-live="polite"></p>
+          <div class="dm-grid2">
+            <div class="dm-box"><span class="dm-h">Key and scale</span>
+              <canvas id="dm-keys" class="dm-keys" aria-label="Piano keys: drag across them to change the key"></canvas>
+              <label class="dm-field">Key <select id="dm-key"></select></label>
+              <label class="dm-field">Scale <select id="dm-scale"></select></label>
+            </div>
+            <div class="dm-box"><span class="dm-h">Range</span>
+              <label class="dm-field">Range <select id="dm-range"></select></label>
+              <div class="dm-row"><button type="button" id="dm-oct-down" class="dm-btn" aria-label="Octave down">Octave &minus;</button><button type="button" id="dm-oct-up" class="dm-btn" aria-label="Octave up">Octave +</button><span id="dm-octave" class="dm-muted"></span></div>
+              <label class="dm-field">Tune <input type="number" id="dm-tune" min="-50" max="50" step="1"> cents</label>
+            </div>
+            <div class="dm-box"><span class="dm-h">Time</span>
+              <label class="dm-field">Length <select id="dm-bars"></select></label>
+              <label class="dm-field">Quantize <select id="dm-quant"></select></label>
+              <label class="dm-field">Swing <select id="dm-swing"></select></label>
+            </div>
+            <div class="dm-box"><span class="dm-h">Files</span>
+              <div class="dm-row"><button type="button" id="dm-midi" class="dm-btn" aria-pressed="false" title="Play a MIDI keyboard into the loop (Chrome or Edge)">MIDI in</button>
+              <button type="button" id="dm-wav" class="dm-btn">Export WAV</button><button type="button" id="dm-midi-out" class="dm-btn">Export MIDI</button></div>
+              <div class="dm-row"><button type="button" id="dm-save" class="dm-btn">Save</button><label class="dm-btn dm-file">Open <input type="file" id="dm-open" accept=".json,application/json"></label></div>
+            </div>
+          </div>
+        </details>
+
+        <div class="dm-linesbox"><span class="dm-h">Lines: each one is its own voice</span><ul id="dm-lines" class="dm-lines"></ul></div>
+      </div>
+
+      <details class="agent-box">
+        <summary>How to use it, and what you are hearing</summary>
+        <ul class="rules">
+          <li><strong>Draw:</strong> press and drag with the pen. Fine, slow strokes give fine detail. The height of the ink is the pitch and the position across is the time; the loop repeats.</li>
+          <li><strong>Every line is its own voice:</strong> by default each new line takes the next colour, and each colour has its own sound. Change a colour's sound, or a single line's sound in the list below.</li>
+          <li><strong>Locked to key or freehand:</strong> locked, your line is read in steps of the quantize length and snapped to notes of the scale, so there are no wrong notes. Freehand lets the pitch slide smoothly along your line.</li>
+          <li><strong>Key and scale:</strong> drag across the keys to change the key, even while it plays. Switch from major to minor, dorian or phrygian and hear the same drawing change its mood. The darker rows are the tonic, the “home” note.</li>
+          <li><strong>Quantize and swing:</strong> quantize is the shortest note. Triplets divide a beat in three instead of two, and swing delays the off-beat notes so a loop feels looser.</li>
+          <li><strong>Keys:</strong> space plays and stops, P is the pen, E the eraser, G the grid, and Ctrl/Cmd+Z undoes.</li>
+        </ul>
+      </details>
+    </div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="draw-music-core.js"></script>
+  <script src="draw-music.js"></script>
+  <script src="edit-link.js"></script>
+</body>
+</html>
