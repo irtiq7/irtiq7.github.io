@@ -21,7 +21,7 @@
       ],
       "summary_html": "A paper-and-ink version of the idea: draw free-hand lines and press play. Each colour is its own instrument, notes lock to the key and scale you choose or slide freely along your line, and you can add bass, drums and an arpeggio, swing, MIDI keyboard input, and export WAV or MIDI.",
       "llms": "browser instrument; draw free-hand lines on paper and press play, locked to a key and scale or freehand, with bass/drums/arpeggio, MIDI in, and WAV/MIDI export",
-      "hidden": false
+      "hidden": true
     },
     {
       "id": "creative-prompt-ai",
@@ -41,7 +41,7 @@
       ],
       "summary_html": "A browser demo that identifies the fundamental frequency of an instrument.",
       "llms": null,
-      "hidden": false
+      "hidden": true
     },
     {
       "id": "ai-periodic-table",
