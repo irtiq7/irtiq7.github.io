@@ -1,0 +1,69 @@
+{
+  "note": "Source of truth for the Projects page. Edit it from the admin dashboard (Projects tab): hiding a project removes it from the Projects page, llms.txt and (via robots.txt) from crawlers, and its page shows a notice to visitors.",
+  "projects": [
+    {
+      "id": "contour",
+      "title": "Contour Synth",
+      "url": "contour.html",
+      "pages": [
+        "contour.html"
+      ],
+      "summary_html": "Draw on a grid and hear it: every line you draw becomes a melody played by its own instrument, with scales, keys, tempo and a smooth-glide mode. Built with the Web Audio API.",
+      "llms": "browser drawing instrument; each colour is an instrument and every line or shape you draw plays in a looping piano roll",
+      "hidden": false
+    },
+    {
+      "id": "draw-music",
+      "title": "Draw Music",
+      "url": "draw-music.html",
+      "pages": [
+        "draw-music.html"
+      ],
+      "summary_html": "A paper-and-ink version of the idea: draw free-hand lines and press play. Each colour is its own instrument, notes lock to the key and scale you choose or slide freely along your line, and you can add bass, drums and an arpeggio, swing, MIDI keyboard input, and export WAV or MIDI.",
+      "llms": "browser instrument; draw free-hand lines on paper and press play, locked to a key and scale or freehand, with bass/drums/arpeggio, MIDI in, and WAV/MIDI export",
+      "hidden": false
+    },
+    {
+      "id": "creative-prompt-ai",
+      "title": "Creative Prompt AI",
+      "url": "article.html?p=creative-prompt-ai",
+      "pages": [],
+      "summary_html": "An open-source desktop GUI for generating images with text-to-image models from Hugging Face, with LoRA support and batch generation.",
+      "llms": null,
+      "hidden": false
+    },
+    {
+      "id": "pitch-estimator",
+      "title": "Pitch estimator",
+      "url": "pitch_estimator.html",
+      "pages": [
+        "pitch_estimator.html"
+      ],
+      "summary_html": "A browser demo that identifies the fundamental frequency of an instrument.",
+      "llms": null,
+      "hidden": false
+    },
+    {
+      "id": "ai-periodic-table",
+      "title": "Interactive AI periodic table",
+      "url": "ai_periodic_table.html",
+      "pages": [
+        "ai_periodic_table.html"
+      ],
+      "summary_html": "An interactive periodic-table-style overview of AI concepts.",
+      "llms": null,
+      "hidden": false
+    },
+    {
+      "id": "daily-ai-news",
+      "title": "Daily AI news",
+      "url": "ai_news.html",
+      "pages": [
+        "ai_news.html"
+      ],
+      "summary_html": "Research, technology and business news from public feeds, rebuilt daily. Each story has a short extract, reading time, topics and a source rating (left to right), plus search, filters, saved stories and topic trends. <a href=\"signals.html\">Signals</a> adds emerging ideas, topic momentum and a public forecast scoreboard.",
+      "llms": "research, technology and business stories with short extracts and outlet ratings; data as JSON at https://irtiq7.github.io/news/latest.json (summaries are automatic extracts; the lean label rates the outlet, not the article)",
+      "hidden": false
+    }
+  ]
+}

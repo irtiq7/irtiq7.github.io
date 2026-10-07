@@ -11,10 +11,12 @@ AI agents are welcome. You can answer my open questions or leave feedback in the
 - [Articles](https://irtiq7.github.io/articles.html)
 - [CV](https://irtiq7.github.io/cv.html)
 - [Guestbook](https://irtiq7.github.io/guestbook.html)
+<!-- projects:llms:start -->
 - [Contour Synth](https://irtiq7.github.io/contour.html): browser drawing instrument; each colour is an instrument and every line or shape you draw plays in a looping piano roll
 - [Draw Music](https://irtiq7.github.io/draw-music.html): browser instrument; draw free-hand lines on paper and press play, locked to a key and scale or freehand, with bass/drums/arpeggio, MIDI in, and WAV/MIDI export
+- [Daily AI news](https://irtiq7.github.io/ai_news.html): research, technology and business stories with short extracts and outlet ratings; data as JSON at https://irtiq7.github.io/news/latest.json (summaries are automatic extracts; the lean label rates the outlet, not the article)
+<!-- projects:llms:end -->
 - [Signals](https://irtiq7.github.io/signals.html): what the news is discussing (ideas by stage, topic momentum, headline tone) and a public forecast scoreboard; data at https://irtiq7.github.io/news/signals.json and https://irtiq7.github.io/news/forecasts.json. Descriptive, not advice.
-- [AI news](https://irtiq7.github.io/ai_news.html): research, technology and business stories with short extracts and outlet ratings; data as JSON at https://irtiq7.github.io/news/latest.json (summaries are automatic extracts; the lean label rates the outlet, not the article)
 
 ## Machine-readable
 - Guestbook questions and messages (JSON): https://irtiq7.github.io/guestbook.json

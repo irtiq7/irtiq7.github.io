@@ -32,6 +32,7 @@
         <button class="tab on" data-tab="articles" type="button">Articles</button>
         <button class="tab" data-tab="guestbook" type="button">Guestbook</button>
         <button class="tab" data-tab="files" type="button">Files</button>
+        <button class="tab" data-tab="projects" type="button">Projects</button>
         <button class="tab" data-tab="analytics" type="button">Analytics</button>
       </div>
       <p id="status" role="status" hidden></p>
@@ -61,6 +62,27 @@
         <ul id="issue-list" class="gb-list"></ul>
       </div>
 
+      <div id="tab-projects" hidden>
+        <h2 class="section-title">Projects</h2>
+        <p>Hide a project to take it off the Projects page and out of <code>llms.txt</code>, and to ask crawlers to skip it through <code>robots.txt</code>. Visitors who open its page see a short notice, and you still see the page with a banner while you are signed in. Nothing is deleted, so you can show it again at any time. Saving commits the change to the site.</p>
+        <ul id="proj-list" class="gb-list proj-list"></ul>
+        <p id="proj-dirty" class="pub-venue" hidden>You have unsaved changes.</p>
+        <div class="proj-actions">
+          <button id="proj-save" type="button" class="mini" disabled>Save changes</button>
+          <button id="proj-discard" type="button" class="mini" disabled>Discard</button>
+          <button id="proj-sync" type="button" class="mini" title="Rewrite the Projects page, llms.txt and robots.txt from the list above">Re-apply to the site</button>
+        </div>
+        <h3>Add a project</h3>
+        <form id="proj-form" class="admin-form">
+          <label for="pj-title">Title</label><input id="pj-title" maxlength="120" required>
+          <label for="pj-url">Link (a page on this site, for example my-demo.html)</label><input id="pj-url" maxlength="200" required placeholder="my-demo.html">
+          <label for="pj-pages">Pages to hide with it (optional, comma separated; defaults to the link)</label><input id="pj-pages" maxlength="300" placeholder="my-demo.html">
+          <label for="pj-summary">Summary (plain text)</label><textarea id="pj-summary" rows="3" maxlength="600" required></textarea>
+          <label class="check"><input id="pj-llms" type="checkbox" checked> Also describe it in llms.txt for AI agents</label>
+          <button type="submit">Add to the list</button>
+        </form>
+      </div>
+
       <div id="tab-analytics" hidden>
         <h2 class="section-title">Analytics</h2>
         <p>What GitHub can tell you about AI agents and bots. GitHub Pages keeps no visit logs, so anonymous crawlers and agents that only read the site cannot be seen here. Repository traffic covers the pages of <code>github.com/irtiq7/irtiq7.github.io</code>, not the website, and only the last 14 days.</p>
@@ -83,6 +105,7 @@
       </div>
     </section>
   </main>
+  <script src="projects-lib.js"></script>
   <script src="admin.js"></script>
 </body>
 </html>

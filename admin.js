@@ -75,10 +75,11 @@
   var tabs = document.querySelectorAll("[data-tab]");
   function showTab(name) {
     Array.prototype.forEach.call(tabs, function (x) { x.classList.toggle("on", x.dataset.tab === name); });
-    ["articles", "guestbook", "files", "analytics"].forEach(function (t) { $("tab-" + t).hidden = t !== name; });
+    ["articles", "guestbook", "files", "projects", "analytics"].forEach(function (t) { $("tab-" + t).hidden = t !== name; });
     status("");
     if (name === "guestbook") loadIssues();
     if (name === "files") loadTree();
+    if (name === "projects") loadProjects();
     if (name === "analytics") loadAnalytics();
   }
   Array.prototype.forEach.call(tabs, function (b) { b.addEventListener("click", function () { showTab(b.dataset.tab); }); });
@@ -200,6 +201,69 @@
     gh("/repos/" + REPO + "/issues", { method: "POST", body: { title: "[Question] " + q.trim().slice(0, 100), body: q.trim(), labels: ["approved"] } })
       .then(function () { status("Question posted."); loadIssues(); }).catch(function (e) { status(e.message, true); });
   });
+
+  // ---------- projects: hide, show, reorder, add and remove; the Projects page, llms.txt and robots.txt are generated from projects.json
+  var PL = window.ProjectsLib, projBase = [], projEdit = [], projSha = null, projNote = "";
+  function projDirty() { return JSON.stringify(projEdit) !== JSON.stringify(projBase); }
+  function loadProjects() {
+    return getFile("projects.json").then(function (f) {
+      var ul = $("proj-list"); ul.textContent = "";
+      if (!f) { ul.appendChild(el("li", "projects.json was not found in the repository.")); return; }
+      var d = PL.validate(JSON.parse(f.text));
+      if (!d) throw new Error("projects.json is not a valid project list.");
+      projBase = d.projects; projEdit = JSON.parse(JSON.stringify(projBase)); projSha = f.sha; projNote = d.note; renderProjects();
+    }).catch(function (e) { status(e.message, true); });
+  }
+  function renderProjects() {
+    var ul = $("proj-list"); ul.textContent = "";
+    if (!projEdit.length) ul.appendChild(el("li", "No projects yet. Add one below."));
+    projEdit.forEach(function (p, i) {
+      var li = document.createElement("li"), a = el("a", p.title); a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+      var head = el("strong"); head.appendChild(a);
+      li.appendChild(head); li.appendChild(el("span", p.hidden ? "  HIDDEN" : "  visible", p.hidden ? "pj-badge pj-hidden" : "pj-badge"));
+      li.appendChild(el("p", PL.stripTags(p.summary_html).slice(0, 160), "pub-venue"));
+      function btn(label, cls, fn, aria) { var b = el("button", label, "mini" + (cls ? " " + cls : "")); b.type = "button"; if (aria) b.setAttribute("aria-label", aria); b.addEventListener("click", fn); li.appendChild(b); return b; }
+      btn(p.hidden ? "Show" : "Hide", "", function () { p.hidden = !p.hidden; renderProjects(); });
+      btn("↑", "", function () { if (i > 0) { projEdit.splice(i - 1, 0, projEdit.splice(i, 1)[0]); renderProjects(); } }, "Move " + p.title + " up").disabled = i === 0;
+      btn("↓", "", function () { if (i < projEdit.length - 1) { projEdit.splice(i + 1, 0, projEdit.splice(i, 1)[0]); renderProjects(); } }, "Move " + p.title + " down").disabled = i === projEdit.length - 1;
+      btn("Delete", "danger", function () { if (confirm("Remove \"" + p.title + "\" from the list? (Its page file is not deleted.)")) { projEdit.splice(i, 1); renderProjects(); } });
+      ul.appendChild(li);
+    });
+    var dirty = projDirty();
+    $("proj-save").disabled = $("proj-discard").disabled = !dirty; $("proj-dirty").hidden = !dirty;
+  }
+  $("proj-discard").addEventListener("click", function () { projEdit = JSON.parse(JSON.stringify(projBase)); renderProjects(); status(""); });
+  $("proj-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var title = $("pj-title").value.trim(), url = $("pj-url").value.trim(), summary = $("pj-summary").value.trim();
+    var pages = $("pj-pages").value.split(",").map(function (x) { return x.trim(); }).filter(Boolean);
+    if (!pages.length && /\.html$/.test(url)) pages = [url];
+    if (!PL.safeUrl(url)) return status("The link must be a page on this site, such as my-demo.html (letters, numbers, - and _).", true);
+    if (pages.some(function (x) { return !PL.safePage(x); })) return status("Each page must be a file name ending in .html.", true);
+    var next = PL.validate({ projects: projEdit.concat([{ title: title, url: url, pages: pages, summary_html: PL.esc(summary), llms: $("pj-llms").checked ? summary : null, hidden: false }]) });
+    if (!next || next.projects.length !== projEdit.length + 1) return status("That project could not be added. Check the title and link.", true);
+    projEdit = next.projects; this.reset(); $("pj-llms").checked = true; renderProjects(); status("Added to the list. Press Save changes to publish it.");
+  });
+  // Write projects.json first (the source of truth), then the pages generated from it
+  function publishProjects() {
+    var data = PL.validate({ note: projNote, projects: projEdit });
+    if (!data) return status("The project list is not valid.", true);
+    status("Saving…");
+    return Promise.all([getFile("projects.html"), getFile("llms.txt"), getFile("robots.txt")]).then(function (r) {
+      var html = r[0] && PL.applyHtml(r[0].text, data.projects), llms = r[1] && PL.applyLlms(r[1].text, data.projects), robots = r[2] ? PL.applyRobots(r[2].text, data.projects) : null;
+      if (!html) throw new Error("projects.html has lost its <!-- projects:start --> markers, so nothing was changed.");
+      if (!llms) throw new Error("llms.txt has lost its <!-- projects:llms:start --> markers, so nothing was changed.");
+      var msg = "Admin: projects (" + PL.describe(projBase, data.projects) + ")", json = JSON.stringify(data, null, 2) + "\n", steps = [];
+      if (projDirty()) steps.push(function () { return putText("projects.json", json, msg, projSha); });
+      if (html !== r[0].text) steps.push(function () { return putText("projects.html", html, msg, r[0].sha); });
+      if (llms !== r[1].text) steps.push(function () { return putText("llms.txt", llms, msg, r[1].sha); });
+      if (robots != null && robots !== r[2].text) steps.push(function () { return putText("robots.txt", robots, msg, r[2].sha); });
+      return steps.reduce(function (p, s) { return p.then(s); }, Promise.resolve()).then(function () { return steps.length; });
+    }).then(function (n) { status(n ? "Saved. The site updates in a minute or two." : "Everything is already up to date."); return loadProjects(); })
+      .catch(function (e) { status(e.message, true); });
+  }
+  $("proj-save").addEventListener("click", publishProjects);
+  $("proj-sync").addEventListener("click", publishProjects);
 
   // ---------- analytics
   var OWNER = REPO.split("/")[0];
