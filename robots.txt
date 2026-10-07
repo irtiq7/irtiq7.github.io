@@ -5,35 +5,53 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: GPTBot
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: Claude-SearchBot
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: Claude-User
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin.html
+Disallow: /draw-music.html
+Disallow: /pitch_estimator.html
