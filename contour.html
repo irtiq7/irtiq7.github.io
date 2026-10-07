@@ -33,16 +33,20 @@
   <main id="main">
     <section class="page-hero"><div class="shell">
       <h1>Contour Synth</h1>
-      <p class="page-lede">A drawing instrument. Pick a colour and draw: every line becomes a voice in a looping piano roll. Lines play melodies, shapes play chords, and each colour is a different instrument over a soft drum groove.</p>
+      <p class="page-lede">A drawing instrument. Pick an instrument, choose the colour you want it to have, and draw: every line becomes a voice in a looping piano roll. Lines play melodies, shapes play chords, and each colour is a different instrument over a soft drum groove. Draw a whole picture, such as a city with a river, and listen to it.</p>
     </div></section>
     <section class="section-pad"><div class="shell cs-shell">
       <div class="cs-toolbar" role="group" aria-label="Playback">
         <button id="cs-play" class="cs-primary" type="button" aria-pressed="false">Play</button>
-        <button id="cs-shuffle" type="button">Shuffle</button>
-        <button id="cs-undo" type="button">Undo</button>
+        <button id="cs-pen" type="button" aria-pressed="true" title="Pen (P)">Pen</button>
+        <button id="cs-erase" type="button" aria-pressed="false" title="Eraser (E, or the right mouse button)">Eraser</button>
+        <button id="cs-undo" type="button" title="Undo (Ctrl or Cmd+Z)">Undo</button>
+        <button id="cs-redo" type="button" title="Redo">Redo</button>
         <button id="cs-clear" type="button">Clear</button>
+        <button id="cs-shuffle" type="button" title="A ready-made shape to start from">Shuffle</button>
+        <button id="cs-city" type="button" title="A city with a river, to see what a full picture sounds like">City example</button>
       </div>
-      <div id="cs-palette" class="cs-palette" role="group" aria-label="Instrument colour"></div>
+      <div id="cs-palette" class="cs-palette" role="group" aria-label="Instruments: pick one to draw with, or change its colour with the small circle"></div>
       <canvas id="cs-canvas" class="cs-canvas" tabindex="0" aria-label="Drawing paper. Draw lines and shapes to make music; the status line below describes what will play."></canvas>
       <p id="cs-status" class="cs-status" role="status"></p>
       <div class="cs-settings">
@@ -55,6 +59,14 @@
         <label>Swing <select id="cs-swing"><option value="0">Off</option><option value="0.12">Light</option><option value="0.22">Medium</option><option value="0.33">Hard</option></select></label>
         <label class="cs-check"><input id="cs-drums" type="checkbox" checked> Drums</label>
         <label>Volume <input id="cs-volume" type="range" min="0" max="1" step="0.05" value="0.6"></label>
+        <label>Length <select id="cs-length"><option value="0" selected>Auto</option><option value="1">1 bar</option><option value="2">2 bars</option><option value="4">4 bars</option></select></label>
+        <label>Detail <select id="cs-detail"><option value="16" selected>Normal</option><option value="32">Fine</option></select></label>
+        <label>Paper <select id="cs-paper"><option value="0" selected>Standard</option><option value="1">Large</option><option value="2">Huge</option></select></label>
+        <label>Line <select id="cs-width"><option value="2.5">Fine</option><option value="5" selected>Medium</option><option value="9">Bold</option></select></label>
+        <button id="cs-reset-colors" class="cs-tap" type="button">Reset colours</button>
+        <button id="cs-save" class="cs-tap" type="button">Save drawing</button>
+        <label class="cs-tap cs-file">Open <input id="cs-open" type="file" accept=".json,application/json"></label>
+        <button id="cs-picture" class="cs-tap" type="button">Save picture</button>
       </div>
       <h2 class="section-title">How to play</h2>
       <ul class="rules">
@@ -62,6 +74,9 @@
         <li>Every grid cell a line passes through sounds when the playhead reaches it. A flat line holds a note, a slope plays a run, and a circle or wave plays its top and bottom together as a chord.</li>
         <li>The horizontal lines are the notes of the key and scale you choose, so everything you draw stays in tune. The labelled lines are the key note in each octave.</li>
         <li>Each colour is an instrument, and it stays selected until you pick another, so every line you draw uses it. Keys, pluck, bell, marimba and chime are struck and ring out; flute, strings, bass and 8-bit hold for as long as the line stays on a note.</li>
+        <li>Every instrument has its own colour, and you choose it: click the small circle next to an instrument to change its colour, and every line already drawn with that instrument changes with it. Your colours are remembered on this device.</li>
+        <li>You can draw a complete picture. Buildings, a river, a bridge and a sun are all just lines, and each instrument plays what its colour draws. Press <em>City example</em> to see one. Use the eraser to tidy up, <em>Large</em> or <em>Huge</em> paper for room, and <em>Detail: Fine</em> for twice as many steps across the loop. When many lines cross at once, each instrument plays at most a few notes so it stays musical.</li>
+        <li>Save drawing keeps your picture as a file you can open again, and Save picture downloads it as an image. Your drawing is also kept in this browser automatically.</li>
         <li>Shuffle draws a ready-made shape to start from. Keep drawing while it plays and the loop changes as you go. The space bar plays and stops.</li>
         <li>Everything runs in your browser with the Web Audio API. Nothing is recorded or uploaded.</li>
       </ul>

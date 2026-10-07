@@ -21,3 +21,19 @@
 .cs-settings output { min-width: 1.5rem; color: var(--ink); text-align: center; font-variant-numeric: tabular-nums; }
 #cs-tempo-out { min-width: 4.5rem; text-align: left; }
 .cs-octave button, .cs-tap { padding: 0.3rem 0.6rem; }
+
+/* Instrument colours chosen by the player, eraser, and paper sizes */
+.cs-chip { display: inline-flex; align-items: center; gap: 0.1rem; padding: 0.2rem 0.2rem 0.2rem 0.3rem; border: 1px solid var(--line); border-radius: 999px; }
+.cs-chip:has(.cs-color[aria-pressed="true"]) { border-color: var(--c); box-shadow: 0 0 0 1px var(--c); }
+.cs-chip .cs-color { border: 0; padding: 0.2rem 0.65rem 0.2rem 0.2rem; box-shadow: none; }
+.cs-chip .cs-color[aria-pressed="true"] { box-shadow: none; }
+.cs-pick { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; padding: 0; border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 50%; background: none; cursor: pointer; overflow: hidden; }
+.cs-pick::-webkit-color-swatch-wrapper { padding: 0; }
+.cs-pick::-webkit-color-swatch { border: 0; border-radius: 50%; }
+.cs-pick::-moz-color-swatch { border: 0; border-radius: 50%; }
+.cs-pick:hover { border-color: #fff; }
+.cs-toolbar button[aria-pressed="true"]:not(.cs-primary) { color: #05060d; background: var(--pine); border-color: var(--pine); }
+.cs-canvas.cs-paper-1 { height: clamp(420px, 72vh, 700px); }
+.cs-canvas.cs-paper-2 { height: clamp(560px, 92vh, 920px); }
+.cs-file { position: relative; display: inline-block; cursor: pointer; }
+.cs-file input { position: absolute; width: 1px; height: 1px; opacity: 0; }
