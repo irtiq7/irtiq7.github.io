@@ -110,7 +110,7 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 .pub-authors strong { color: var(--ink); font-weight: 700; }
 .pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; margin-top: 0.7rem; font-size: 0.86rem; font-weight: 600; }
 .project-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
-.project-list li { display: grid; grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr); gap: clamp(2rem, 5vw, 4rem); padding-block: 1.4rem; border-bottom: 1px solid var(--line); }
+.project-list > li { display: grid; grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr); gap: clamp(2rem, 5vw, 4rem); padding-block: 1.4rem; border-bottom: 1px solid var(--line); }
 .project-list h3 { margin: 0; font-size: 1.16rem; line-height: 1.4; }
 .project-list p { margin: 0 0 0.5rem; color: var(--ink-soft); }
 
@@ -122,7 +122,7 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
   .profile-hero { grid-template-columns: minmax(0, 1fr) 185px; gap: 2rem; }
   .research-topic { grid-template-columns: 140px minmax(0, 1fr); gap: 1.5rem; }
   .research-footer { margin-left: 164px; }
-  .project-list li { grid-template-columns: 1fr; gap: 0.65rem; }
+  .project-list > li { grid-template-columns: 1fr; gap: 0.65rem; }
 }
 @media (max-width: 620px) {
   .shell { width: calc(100% - 2.5rem); }
@@ -183,8 +183,8 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .research-topic:not(:last-child)::before { border-left: 1px dashed rgba(0, 240, 255, 0.4); }
 .research-topic:not(:last-child)::after { border-color: var(--pine); }
 .publication-list, .updates, .project-list { border-top: 1px solid var(--pine); }
-.publication-item, .updates li, .project-list li { border-bottom: 1px solid var(--line); transition: background 160ms, box-shadow 160ms; }
-.publication-item:hover, .project-list li:hover { background: rgba(0, 240, 255, 0.04); box-shadow: inset 3px 0 0 var(--rust); }
+.publication-item, .updates li, .project-list > li { border-bottom: 1px solid var(--line); transition: background 160ms, box-shadow 160ms; }
+.publication-item:hover, .project-list > li:hover { background: rgba(0, 240, 255, 0.04); box-shadow: inset 3px 0 0 var(--rust); }
 .pub-authors strong { color: var(--pine); }
 .pub-links a, .quick-links a, .text-link { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.78rem; }
 .quick-links a { padding: 0 0.9rem; border: 1px solid var(--line); }
@@ -346,7 +346,8 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .proj-actions .mini { margin-left: 0; }
 
 /* Research page: summaries and lessons */
-.rs-label { margin: 1rem 0 0.3rem !important; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pine) !important; text-shadow: var(--glow-c); }
-.rs-learned { margin: 0 0 0.8rem; padding-left: 1.1rem; color: var(--ink-soft); }
-.rs-learned li { margin-bottom: 0.5rem; }
-.rs-papers { font-size: 0.82rem; }
+.project-list .rs-label { margin: 1rem 0 0.3rem; }
+.project-list .rs-lead { color: var(--pine); font-weight: 700; text-shadow: var(--glow-c); }
+.project-list .rs-learned { list-style: disc; list-style-type: disc; margin: 0 0 0.9rem; padding: 0 0 0 1.2rem; border: 0; color: var(--ink-soft); }
+.project-list .rs-learned li { display: list-item; margin: 0 0 0.5rem; padding: 0; border: 0; box-shadow: none; background: none; }
+.project-list .rs-papers { margin: 0; font-size: 0.82rem; }

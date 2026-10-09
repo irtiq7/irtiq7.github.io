@@ -37,49 +37,50 @@
     <section class="section-pad"><div class="shell">
       <ul class="project-list">
         <li><h3>Underwater localization and odometry</h3><div>
-          <p>With <a href="https://ronning.io/" rel="noopener">Ola Rønning</a> and <a href="https://wasowski.dukla.ch/" rel="noopener">Andrzej Wąsowski</a>, I study how an underwater vehicle can find its position without anything installed on the seabed. In <a href="papers/wave-robust-passive-auv-localization-fp-music.html">Wave-Robust Passive AUV Localization Using FP-MUSIC</a>, a single floating buoy carries a hydrophone array and an inertial sensor (IMU) and listens passively for beacons. Waves tilt and rotate the array between snapshots, which breaks standard subspace methods, so FP-MUSIC uses the IMU to correct the data before estimating the direction of arrival. A wideband matched filter then gives the range, and power asymmetry tells front from back. I presented this work at RSE&rsquo;26 in Barcelona and in a SQuaRe group talk. A companion preprint, <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, asks how estimators like these should be judged.</p>
-          <p class="rs-label">What I learned</p>
+          <p>With <a href="https://ronning.io/" rel="noopener">Ola Rønning</a> and <a href="https://wasowski.dukla.ch/" rel="noopener">Andrzej Wąsowski</a> I work on a simple question: how can an underwater vehicle know where it is when nothing is installed on the seabed? Our setup is a floating buoy with a hydrophone array and an inertial sensor (IMU) that listens to beacons. The trouble is the waves. They rock the buoy, so the array keeps changing its orientation, and the usual direction-finding methods stop working well.</p>
+          <p>In <a href="papers/wave-robust-passive-auv-localization-fp-music.html">FP-MUSIC</a> we use the IMU to correct for that motion before estimating the direction, and then use a matched filter to get the range. I presented this at RSE&rsquo;26 in Barcelona and in a SQuaRe group talk. A second paper, <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, asks how we should judge these estimators in the first place.</p>
+          <p class="rs-label"><span class="rs-lead">What I learned</span></p>
           <ul class="rs-learned">
-            <li>The motion of the platform cannot be ignored. In simulated sea states, correcting for wave-induced motion with the IMU raised the accuracy of separating two beacons 2&nbsp;m apart from about 45% to 75% at a moderate sea state.</li>
-            <li>Two methods can cover each other&rsquo;s weakness. MUSIC resolves direction and the wideband matched filter resolves time, and together they turn smeared ambiguity ridges into isolated localization peaks.</li>
-            <li>One error number hides whether an estimator knows how wrong it is. Scoring the estimate together with the uncertainty it reports (strictly proper scoring rules) showed overconfidence in all four LiDAR-inertial odometry filters we assessed. The worst case reported centimeter certainty with kilometer error, traced to filters crediting LiDAR measurements with more new information than they carry.</li>
+            <li>The motion of the sensor has to be part of the model. Correcting for the waves raised the accuracy of telling two beacons 2&nbsp;m apart from about 45% to 75% in simulation.</li>
+            <li>A single error number can fool you. When we scored odometry filters on how well they knew their own uncertainty, all four were overconfident.</li>
+            <li>In the worst case a filter claimed centimeter accuracy while its real error was kilometers.</li>
           </ul>
-          <p class="rs-papers"><strong>Papers:</strong> <a href="papers/wave-robust-passive-auv-localization-fp-music.html">FP-MUSIC (2026)</a> · <a href="papers/you-should-be-properly-scoring-your-odometry.html">Scoring odometry (2026)</a></p></div></li>
+          <p class="rs-papers">Papers: <a href="papers/wave-robust-passive-auv-localization-fp-music.html">FP-MUSIC</a> · <a href="papers/you-should-be-properly-scoring-your-odometry.html">Scoring odometry</a></p></div></li>
         <li><h3>Machine learning for acoustic mapping</h3><div>
-          <p>Sonar-style mapping lost ground to cameras and lidar because acoustic sensors are vulnerable to noise, yet echoes still work where light does not: in darkness, in harsh weather, and against non-reflective walls. In <a href="papers/machine-learning-framework-acoustic-reflector-mapping.html">A Machine Learning framework for Acoustic Reflector Mapping</a>, with Letizia Marchegiani and Jesper Rindom Jensen, machine learning cleans up a map built by traditional signal processing by removing outliers and artefacts.</p>
-          <p class="rs-label">What I learned</p>
+          <p>Mapping with sound has been overtaken by cameras and lidar, mostly because sound is noisy. But echoes still work in the dark, in bad weather, and against walls that do not reflect light. In this work, with Letizia Marchegiani and Jesper Rindom Jensen, I used machine learning to clean up the map that a normal signal processing method produces, by removing outliers and artefacts.</p>
+          <p class="rs-label"><span class="rs-lead">What I learned</span></p>
           <ul class="rs-learned">
-            <li>Machine learning helped most as a partner to a model-based estimator, not a replacement. It removes the outliers and artefacts that the signal-processing stage leaves in the map.</li>
-            <li>Handling noise decides whether an acoustic map is usable. In simulation the system kept working at a signal-to-noise ratio of &minus;10&nbsp;dB and in different reverberant rooms, and it recovered the outline of a simulated room. The evidence so far is from simulation.</li>
+            <li>Machine learning works well here as a helper for the signal processing, not as a replacement for it.</li>
+            <li>In simulation the cleaned-up maps still worked at a signal-to-noise ratio of &minus;10&nbsp;dB and in different reverberant rooms. So far this has only been tested in simulation.</li>
           </ul>
-          <p class="rs-papers"><strong>Papers:</strong> <a href="papers/machine-learning-framework-acoustic-reflector-mapping.html">ML framework for reflector mapping (2024)</a></p></div></li>
+          <p class="rs-papers">Papers: <a href="papers/machine-learning-framework-acoustic-reflector-mapping.html">A machine learning framework for acoustic reflector mapping</a></p></div></li>
         <li><h3>Acoustic echo estimation</h3><div>
-          <p>A reflector&rsquo;s position follows from the arrival times (TOAs) and directions of arrival (DOAs) of its echoes. On a robot these have to be estimated through the robot&rsquo;s own noise, and matching echoes to walls (echolabelling) is hard. I developed expectation-maximization (EM) estimators for this: for a single microphone on a drone, jointly for TOA and DOA with a circular microphone array around a loudspeaker, and finally a robust version that accounts for the loudspeaker&rsquo;s own response.</p>
-          <p class="rs-label">What I learned</p>
+          <p>When a robot sends out a sound, every wall sends back an echo. If I can tell when each echo arrives and from which direction, I can work out where the walls are. That is harder than it sounds, because the robot&rsquo;s own motors are loud and it is not obvious which echo belongs to which wall.</p>
+          <p>I used expectation-maximization (EM) to estimate the arrival times and the directions together, with a ring of microphones around a loudspeaker. I also made a version for a single microphone, and a later one that takes the loudspeaker&rsquo;s own response into account.</p>
+          <p class="rs-label"><span class="rs-lead">What I learned</span></p>
           <ul class="rs-learned">
-            <li>Model-based EM estimation beats peak-picking on room impulse responses when it is noisy. It gave accurate estimates at a signal-to-noise ratio about 10&nbsp;dB lower, and it coped with coloured noise and faulty microphones.</li>
-            <li>Estimating TOA and DOA together lets wall positions be found directly, without solving echolabelling first.</li>
-            <li>Hardware is not ideal. A loudspeaker&rsquo;s response adds a phase lag that hurts TOA estimates when there are several reflections. Estimating two parameters of that response inside the estimator improved TOA accuracy by about 10% at low signal-to-noise ratio, and a reflector up to 1.6&nbsp;m away was detected with 60% accuracy at 0&nbsp;dB.</li>
-            <li>Even one microphone and a known probe sound can estimate the distance to a reflector, in simulation to at least 2&nbsp;m despite strong drone ego-noise.</li>
+            <li>A model-based method holds up much better in noise than simply picking peaks from the room impulse response. It still gave good estimates when the noise was about 10&nbsp;dB stronger.</li>
+            <li>Estimating time and direction together means I do not have to match echoes to walls first.</li>
+            <li>The hardware matters. A loudspeaker never plays a perfect pulse, and estimating that imperfection inside the algorithm improved the arrival time accuracy by about 10% at low signal-to-noise ratio.</li>
           </ul>
-          <p class="rs-papers"><strong>Papers:</strong> <a href="papers/robust-acoustic-reflector-localization-modified-em.html">Modified EM (2024)</a> · <a href="papers/estimation-of-acoustic-echoes-using-em.html">EM methods (2020)</a> · <a href="papers/em-method-multichannel-toa-doa-estimation.html">Multichannel TOA/DOA (2019)</a> · <a href="papers/sound-based-distance-estimation-indoor-navigation.html">Distance estimation (2019)</a></p></div></li>
+          <p class="rs-papers">Papers: <a href="papers/robust-acoustic-reflector-localization-modified-em.html">Modified EM algorithm</a> · <a href="papers/estimation-of-acoustic-echoes-using-em.html">EM methods</a> · <a href="papers/em-method-multichannel-toa-doa-estimation.html">Multichannel TOA and DOA</a> · <a href="papers/sound-based-distance-estimation-indoor-navigation.html">Distance estimation with ego-noise</a></p></div></li>
         <li><h3>Reflector localization and spatial maps</h3><div>
-          <p>These papers turn echo estimates into maps. One method needs only a single microphone and a loudspeaker, as found on the NAO robot, to localize reflectors including glass. Another uses the robot&rsquo;s own ego-noise to estimate the distance to a wall. The full framework combines a non-linear least squares estimator with beamforming and an echo detector, and gives two mapping algorithms, single-channel (ScLAM) and multi-channel (McLAM).</p>
-          <p class="rs-label">What I learned</p>
+          <p>Once I know where one reflector is, I can start building a map. The first method needs only one microphone and one loudspeaker, which many robots such as NAO already have, and it can find glass walls that cameras and lasers miss. The next paper uses the robot&rsquo;s own motor noise to estimate how far away a wall is. The journal paper turns all of this into a full mapping framework with two algorithms, one for a single microphone and one for several.</p>
+          <p class="rs-label"><span class="rs-lead">What I learned</span></p>
           <ul class="rs-learned">
-            <li>Sound can sense what cameras and lidar miss. The method works in the audible range with ordinary robot hardware and detects transparent surfaces such as glass, which are common in offices.</li>
-            <li>Ego-noise can be used as a signal instead of fought as a nuisance. A non-intrusive method based on it estimated the distance to a reflector up to 1&nbsp;m in simulation and beat an intrusive approach under loud ego-noise.</li>
-            <li>Real conditions are harder than simulation. The framework detected a reflector up to 1.5&nbsp;m with 80% accuracy at a signal-to-diffuse-noise ratio of 0&nbsp;dB in simulation but needed 10&nbsp;dB in a real environment, a gap worth designing for. The earlier single-microphone method found a reflector at up to 1.5&nbsp;m in more than 60% of trials on a proof-of-concept robot.</li>
+            <li>Sound can sense things that light cannot, using hardware a robot already has.</li>
+            <li>Ego-noise can be used as a signal instead of only being a problem.</li>
+            <li>The hardest lesson was the gap between simulation and a real room. In simulation the framework found a reflector up to 1.5&nbsp;m away at a signal-to-diffuse-noise ratio of 0&nbsp;dB, but in the real environment it needed 10&nbsp;dB to reach the same 80% accuracy.</li>
           </ul>
-          <p class="rs-papers"><strong>Papers:</strong> <a href="papers/spatial-map-generation-using-acoustic-echoes.html">Spatial map generation (2022)</a> · <a href="papers/detecting-acoustic-reflectors-robot-ego-noise.html">Ego-noise (2021)</a> · <a href="papers/model-based-acoustic-reflector-localization-robotic-platform.html">Model-based reflector localization (2020)</a></p></div></li>
+          <p class="rs-papers">Papers: <a href="papers/spatial-map-generation-using-acoustic-echoes.html">Spatial map generation</a> · <a href="papers/detecting-acoustic-reflectors-robot-ego-noise.html">Detecting reflectors with ego-noise</a> · <a href="papers/model-based-acoustic-reflector-localization-robotic-platform.html">Model-based reflector localization</a></p></div></li>
         <li><h3>Robot audition</h3><div>
-          <p>The chapter <a href="papers/perceiving-the-world-with-sound.html">Perceiving the World With Sound</a>, with Robin Kerstens, introduces acoustic signal processing for robots. It starts with passive localization of sound sources, such as a human speaker in human-robot interaction, and builds up to active sensing with neural networks and spatial map generation, including the biological roots of active acoustic localization.</p>
-          <p class="rs-label">What I learned</p>
+          <p><a href="papers/perceiving-the-world-with-sound.html">Perceiving the World With Sound</a>, written with Robin Kerstens, is an introduction to how robots use sound. It starts with passive listening, finding where a sound such as a person speaking comes from. It then builds up to active sensing, where the robot sends out a sound and listens for the echoes, including neural networks and map building.</p>
+          <p class="rs-label"><span class="rs-lead">What I learned</span></p>
           <ul class="rs-learned">
-            <li>Robots are not limited to vision. Sound is another sensing channel, alongside lasers, inertial sensors and motor encoders, and it can locate both sources and surroundings.</li>
-            <li>The field moves from listening to probing: from passively locating a sound source to emitting a sound and reading its echoes, an idea borrowed from animal echolocation and the approach taken in my other papers on this page.</li>
+            <li>Robots do not have to rely on vision.</li>
+            <li>The step I find most interesting is the one from listening to probing, sending a sound and reading its echo. That idea comes from animals that use echolocation, and it is what my other papers build on.</li>
           </ul>
-          <p class="rs-papers"><strong>Papers:</strong> <a href="papers/perceiving-the-world-with-sound.html">Perceiving the World With Sound (2023)</a></p></div></li>
+          <p class="rs-papers">Papers: <a href="papers/perceiving-the-world-with-sound.html">Perceiving the World With Sound</a></p></div></li>
       </ul>
     </div></section>
   </main>
