@@ -57,6 +57,7 @@
         <span class="cs-octave">Octave <button id="cs-oct-down" type="button" aria-label="Octave down">&minus;</button><output id="cs-oct">0</output><button id="cs-oct-up" type="button" aria-label="Octave up">+</button></span>
         <label>Tempo <input id="cs-tempo" type="range" min="50" max="180" value="96"> <output id="cs-tempo-out">96 BPM</output></label>
         <button id="cs-tap" class="cs-tap" type="button">Tap tempo</button>
+        <label>Sound <select id="cs-follow"><option value="glide" selected>Follow line (in tune)</option><option value="exact">Follow line (exact)</option><option value="notes">Notes</option></select></label>
         <label>Swing <select id="cs-swing"><option value="0">Off</option><option value="0.12">Light</option><option value="0.22">Medium</option><option value="0.33">Hard</option></select></label>
         <label class="cs-check"><input id="cs-drums" type="checkbox" checked> Drums</label>
         <label>Volume <input id="cs-volume" type="range" min="0" max="1" step="0.05" value="0.6"></label>
@@ -72,7 +73,8 @@
       <h2 class="section-title">How to play</h2>
       <ul class="rules">
         <li>The paper is a loop: the playhead sweeps from left to right and starts again. Left to right is time, and higher on the paper is a higher note.</li>
-        <li>Every grid cell a line passes through sounds when the playhead reaches it. A flat line holds a note, a slope plays a run, and a circle or wave plays its top and bottom together as a chord.</li>
+        <li>Each line plays as one continuous voice while the playhead crosses it: the sound starts where the line starts, follows its shape up and down, and stops where it ends. Where a shape has a top and a bottom (a circle, a wave), both sound together as a chord.</li>
+        <li><em>Sound</em> sets how closely the pitch follows the line. <em>Follow line (in tune)</em> glides from note to note within the scale; <em>Follow line (exact)</em> follows the exact height, like a theremin; <em>Notes</em> plays one note per grid cell instead.</li>
         <li>The horizontal lines are the notes of the key and scale you choose, so everything you draw stays in tune. The labelled lines are the key note in each octave.</li>
         <li>Each colour is an instrument, and it stays selected until you pick another, so every line you draw uses it. Keys, pluck, bell, marimba and chime are struck and ring out; flute, strings, bass and 8-bit hold for as long as the line stays on a note.</li>
         <li>Every instrument has its own colour, and you choose it: click the small circle next to an instrument to change its colour, and every line already drawn with that instrument changes with it. Your colours are remembered on this device.</li>

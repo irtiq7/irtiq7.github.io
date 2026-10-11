@@ -5,7 +5,7 @@
 // Web Audio API only, no libraries.
 (function () {
   "use strict";
-  var MAX_STROKES = 400, MAX_POINTS = 4000, MAX_CHORD = 3, MAX_PER_INST = 4, MAX_NOTES = 12, STORE = "contour.v2";
+  var FINE = 4, MAX_STROKES = 400, MAX_POINTS = 4000, MAX_CHORD = 3, MAX_PER_INST = 4, MAX_NOTES = 12, STORE = "contour.v2";
   var SCALES = {
     "Major pentatonic": [0, 2, 4, 7, 9], "Minor pentatonic": [0, 3, 5, 7, 10],
     "Major": [0, 2, 4, 5, 7, 9, 11], "Minor": [0, 2, 3, 5, 7, 8, 10], "Harmonic minor": [0, 2, 3, 5, 7, 8, 11],
@@ -41,7 +41,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var canvas = $("cs-canvas"), ctx = canvas.getContext("2d");
   var strokes = [], current = null, inst = 0, tool = "pen", erasing = false, pointer = null, history = [], future = [], ERASE_R = 16;
-  var cfg = { scale: "Major pentatonic", root: 0, octaves: 2, shift: 0, bpm: 96, swing: 0, drums: true, length: 0, detail: 16, width: 5, paper: 0 };
+  var cfg = { scale: "Major pentatonic", root: 0, octaves: 2, shift: 0, bpm: 96, swing: 0, drums: true, length: 0, detail: 16, width: 5, paper: 0, follow: "glide" };
   var audio = null, bus, dry, verb, master, noise;
   var playing = false, step = 0, nextTime = 0, timer = null, stepLog = [], flashes = [];
 
@@ -80,6 +80,39 @@
       });
       return out.slice(0, MAX_CHORD);
     });
+    // Continuous voices: sample the line FINE times per step and follow each part of it (up to MAX_CHORD
+    // at once, bottom to top) for as long as it lasts, with its exact height in rows.
+    var N = n * FINE, cols = [];
+    for (var c = 0; c < N; c++) cols.push([]);
+    var last = null, top = ROWS() - 1;
+    s.pts.forEach(function (p) {
+      var col = Math.max(0, Math.min(N - 1, Math.floor(p.u * N))), rf = (1 - p.v) * top;
+      cols[col].push(rf);
+      if (last && !p.brk && Math.abs(col - last.col) > 1) {
+        var lo2 = Math.min(last.col, col), hi2 = Math.max(last.col, col);
+        for (var k2 = lo2 + 1; k2 < hi2; k2++) cols[k2].push(last.rf + (k2 - last.col) / (col - last.col) * (rf - last.rf));
+      }
+      last = { col: col, rf: rf };
+    });
+    var lanes = cols.map(function (vals) {
+      vals.sort(function (a, b) { return a - b; });
+      var out = [], group = [];
+      vals.forEach(function (v, i) {
+        group.push(v);
+        if (i === vals.length - 1 || vals[i + 1] - v > 1) { out.push(group.reduce(function (a, b) { return a + b; }, 0) / group.length); group = []; }
+      });
+      return out.slice(0, MAX_CHORD);
+    });
+    s.runs = [];
+    for (var lane = 0; lane < MAX_CHORD; lane++) {
+      var run = null;
+      for (var c2 = 0; c2 < N; c2++) {
+        var v = lanes[c2][lane];
+        if (v == null) { run = null; continue; }
+        if (!run) { run = { col: c2, rf: [] }; s.runs.push(run); }
+        run.rf.push(v);
+      }
+    }
     // A note starts where its row appears and lasts while the stroke stays on it.
     s.events = s.chords.map(function (rows, st) {
       return rows.filter(function (r) { return st === 0 || s.chords[st - 1].indexOf(r) < 0; }).map(function (r) {
@@ -224,17 +257,31 @@
   function osc(type, freq, t, end, dest, level, detune) {
     var o = audio.createOscillator(), g = audio.createGain();
     o.type = type; o.frequency.setValueAtTime(freq, t); if (detune) o.detune.value = detune;
+    if (made) { o.baseFreq = freq; made.push(o); }
     g.gain.value = level == null ? 1 : level; o.connect(g); g.connect(dest); o.start(t); o.stop(end);
     return o;
   }
+  var made = null; // set while building a voice that follows a line
   function lowpass(f, dest) { var b = audio.createBiquadFilter(); b.type = "lowpass"; b.frequency.value = f; b.connect(dest); return b; }
 
-  function play(ins, freq, t, dur, vel) {
+  // path (optional): { freqs: [...], dt: seconds between them, hits: [indexes where a new note starts] }.
+  // With a path the voice lasts the whole line and its pitch follows it; struck instruments ring down to
+  // a sustain and are struck again at every new note, so they never fall silent while the line goes on.
+  function play(ins, freq, t, dur, vel, path) {
     var amp = audio.createGain(), p = ins.peak * (vel || 1), end;
     amp.connect(bus);
     amp.gain.setValueAtTime(0, t); amp.gain.linearRampToValueAtTime(p, t + ins.attack);
-    if (ins.decay) { amp.gain.setTargetAtTime(0, t + ins.attack, ins.decay / 4); end = t + ins.decay * 1.6; }
+    if (path) {
+      var floor = ins.decay ? p * 0.4 : p, tau = ins.decay ? Math.min(0.35, ins.decay / 5) : 0.1;
+      if (ins.decay) amp.gain.setTargetAtTime(floor, t + ins.attack, tau);
+      path.hits.forEach(function (i) {
+        if (!i || !ins.decay) return;
+        var th = t + i * path.dt; amp.gain.setTargetAtTime(p, th, 0.004); amp.gain.setTargetAtTime(floor, th + 0.02, tau);
+      });
+      amp.gain.setTargetAtTime(0, t + dur, ins.decay ? Math.min(0.25, ins.decay / 6) : 0.07); end = t + dur + 1.2;
+    } else if (ins.decay) { amp.gain.setTargetAtTime(0, t + ins.attack, ins.decay / 4); end = t + ins.decay * 1.6; }
     else { amp.gain.setValueAtTime(p, t + Math.max(ins.attack, dur - 0.03)); amp.gain.setTargetAtTime(0, t + dur, 0.07); end = t + dur + 0.6; }
+    made = path ? [] : null;
     switch (ins.id) {
       case "keys":
         var kf = lowpass(3800, amp);
@@ -248,7 +295,7 @@
       case "bell":
         var mod = audio.createGain(); mod.gain.setValueAtTime(freq * 2.2, t); mod.gain.setTargetAtTime(freq * 0.2, t, 0.4);
         var car = osc("sine", freq, t, end, amp, 0.9);
-        var m = audio.createOscillator(); m.frequency.value = freq * 3.5; m.connect(mod); mod.connect(car.frequency); m.start(t); m.stop(end);
+        var m = audio.createOscillator(); m.frequency.value = freq * 3.5; bellMod = m; m.connect(mod); mod.connect(car.frequency); m.start(t); m.stop(end);
         break;
       case "marimba":
         osc("sine", freq, t, end, amp, 0.85);
@@ -273,7 +320,17 @@
       default: // 8-bit
         osc("square", freq, t, end, lowpass(3200, amp), 1);
     }
+    if (path) {
+      // every oscillator keeps its ratio to the fundamental and slides with the line
+      made.forEach(function (o) {
+        var ratio = o.baseFreq / freq, g = o.frequency;
+        path.freqs.forEach(function (f, i) { if (i) g.linearRampToValueAtTime(f * ratio, t + i * path.dt); });
+      });
+      if (bellMod) path.freqs.forEach(function (f, i) { if (i) bellMod.frequency.linearRampToValueAtTime(f * 3.5, t + i * path.dt); });
+    }
+    made = null; bellMod = null;
   }
+  var bellMod = null;
   function breath(t, dur, dest, level) {
     var s = audio.createBufferSource(), f = audio.createBiquadFilter(), g = audio.createGain();
     s.buffer = noise; f.type = "bandpass"; f.frequency.value = 2500; g.gain.setValueAtTime(level, t); g.gain.setTargetAtTime(0, t + dur * 0.5, 0.04);
@@ -328,6 +385,7 @@
         if (SNARE.indexOf(s16) >= 0) drum("snare", t);
         if (s16 % 2 === 0) drum("hat", t);
       }
+      if (cfg.follow !== "notes") { followAt(step, t, sd); nextTime += sd; step = (step + 1) % n; continue; }
       var list = notesAt(step), vel = Math.min(1, Math.sqrt(5 / Math.max(1, list.length)));
       list.forEach(function (nt) {
         var ins = INSTRUMENTS[nt.inst];
@@ -337,6 +395,35 @@
       nextTime += sd; step = (step + 1) % n;
     }
   }
+  // Pitch of a height in rows: snapped to the scale ("glide"), or exactly between scale notes ("exact").
+  function freqAt(rf) {
+    var top = ROWS() - 1; rf = Math.max(0, Math.min(top, rf));
+    if (cfg.follow !== "exact") return hz(midiOf(Math.round(rf)));
+    var lo = Math.floor(rf), hi = Math.min(top, lo + 1);
+    return hz(midiOf(lo) + (midiOf(hi) - midiOf(lo)) * (rf - lo));
+  }
+  // Start every line that begins in this step as one voice that follows it to its end.
+  function followAt(st, t, sd) {
+    var dt = sd / FINE, starting = [];
+    strokes.forEach(function (s) {
+      (s.runs || []).forEach(function (r) { if (Math.floor(r.col / FINE) === st) starting.push({ s: s, r: r }); });
+    });
+    var vel = Math.min(1, Math.sqrt(6 / Math.max(1, starting.length + liveVoices(t))));
+    thin(starting, MAX_NOTES).forEach(function (x) {
+      var ins = INSTRUMENTS[x.s.inst], r = x.r, t0 = t + (r.col % FINE) * dt, freqs = [], hits = [0], prevRow = Math.round(r.rf[0]);
+      r.rf.forEach(function (rf, i) {
+        freqs.push(freqAt(rf));
+        var row = Math.round(rf);
+        if (row !== prevRow) { hits.push(i); prevRow = row; }
+        if (i === 0 || row !== Math.round(r.rf[i - 1])) flashes.push({ t: t0 + i * dt, step: Math.floor((r.col + i) / FINE) % STEPS(), row: Math.max(0, Math.min(ROWS() - 1, row)), color: ins.color });
+      });
+      var dur = r.rf.length * dt;
+      voiceEnds.push(t0 + dur);
+      play(ins, freqs[0], t0, dur, vel * 0.9, { freqs: freqs, dt: dt, hits: hits });
+    });
+  }
+  var voiceEnds = [];
+  function liveVoices(t) { voiceEnds = voiceEnds.filter(function (e) { return e > t; }); return voiceEnds.length; }
   function playhead() {
     if (!playing || !audio) return -1;
     var now = audio.currentTime, last = null;
@@ -447,6 +534,7 @@
   $("cs-detail").addEventListener("change", function () { cfg.detail = Number(this.value); regrid(); restart(); });
   $("cs-paper").addEventListener("change", function () { cfg.paper = Number(this.value); canvas.className = "cs-canvas cs-paper-" + cfg.paper; persist(); resize(); });
   $("cs-width").addEventListener("change", function () { cfg.width = Number(this.value); persist(); draw(); });
+  $("cs-follow").addEventListener("change", function () { cfg.follow = this.value; persist(); });
   $("cs-drums").addEventListener("change", function () { cfg.drums = this.checked; persist(); });
   $("cs-volume").addEventListener("input", function () { if (master) master.gain.value = Number(this.value); });
   document.addEventListener("keydown", function (e) {
@@ -474,6 +562,7 @@
     cfg.swing = [0, 0.12, 0.22, 0.33].indexOf(Number(c.swing)) >= 0 ? Number(c.swing) : 0; cfg.drums = c.drums !== false;
     cfg.length = [0, 1, 2, 4].indexOf(Number(c.length)) >= 0 ? Number(c.length) : 0; cfg.detail = Number(c.detail) === 32 ? 32 : 16;
     cfg.width = [2.5, 5, 9].indexOf(Number(c.width)) >= 0 ? Number(c.width) : 5; cfg.paper = num(c.paper, 0, 2, 0);
+    cfg.follow = ["glide", "exact", "notes"].indexOf(c.follow) >= 0 ? c.follow : "glide";
     if (Array.isArray(o.colors)) INSTRUMENTS.forEach(function (ins, i) { if (/^#[0-9a-f]{6}$/i.test(o.colors[i])) ins.color = o.colors[i]; });
     strokes = [];
     o.strokes.slice(0, MAX_STROKES).forEach(function (s) {
@@ -487,7 +576,7 @@
   function syncControls() {
     $("cs-scale").value = cfg.scale; $("cs-root").value = cfg.root; $("cs-range").value = cfg.octaves; $("cs-oct").textContent = (cfg.shift > 0 ? "+" : "") + cfg.shift;
     setTempo(cfg.bpm); $("cs-swing").value = String(cfg.swing); $("cs-drums").checked = cfg.drums; $("cs-length").value = String(cfg.length); $("cs-detail").value = String(cfg.detail);
-    $("cs-paper").value = String(cfg.paper); $("cs-width").value = String(cfg.width); canvas.className = "cs-canvas cs-paper-" + cfg.paper; syncColors();
+    $("cs-follow").value = cfg.follow; $("cs-paper").value = String(cfg.paper); $("cs-width").value = String(cfg.width); canvas.className = "cs-canvas cs-paper-" + cfg.paper; syncColors();
   }
   function download(blob, name) { var url = URL.createObjectURL(blob), a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 2000); }
   $("cs-save").addEventListener("click", function () { download(new Blob([JSON.stringify(pack())], { type: "application/json" }), "contour-drawing.json"); status("Saved contour-drawing.json."); });
