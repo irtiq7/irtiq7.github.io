@@ -50,6 +50,17 @@
       <div id="cs-palette" class="cs-palette" role="group" aria-label="Instruments: pick one to draw with, or change its colour with the small circle"></div>
       <canvas id="cs-canvas" class="cs-canvas" tabindex="0" aria-label="Drawing paper. Draw lines and shapes to make music; the status line below describes what will play."></canvas>
       <p id="cs-status" class="cs-status" role="status"></p>
+      <div class="cs-share-row">
+        <button id="cs-share" class="cs-tap" type="button" title="Copy a link that opens this drawing with its settings">Share link</button>
+        <button id="cs-wav" class="cs-tap" type="button" title="Download two loops as a WAV audio file">Export WAV</button>
+        <button id="cs-midi" class="cs-tap" type="button" title="Download one loop as a MIDI file, one track per instrument">Export MIDI</button>
+      </div>
+      <details class="cs-mixer">
+        <summary>Mixer</summary>
+        <p class="cs-mix-help">Volume for each instrument. <strong>M</strong> mutes it; <strong>S</strong> solos it, so you hear only the soloed instruments.</p>
+        <div id="cs-mix" class="cs-mix"></div>
+        <button id="cs-mix-reset" class="cs-tap" type="button">Reset mixer</button>
+      </details>
       <div class="cs-settings">
         <label>Key <select id="cs-root"></select></label>
         <label>Scale <select id="cs-scale"></select></label>
@@ -79,8 +90,11 @@
         <li>Each colour is an instrument, and it stays selected until you pick another, so every line you draw uses it. Keys, pluck, bell, marimba and chime are struck and ring out; flute, strings, bass and 8-bit hold for as long as the line stays on a note.</li>
         <li>Every instrument has its own colour, and you choose it: click the small circle next to an instrument to change its colour, and every line already drawn with that instrument changes with it. Your colours are remembered on this device.</li>
         <li>You can draw a complete picture. Buildings, a river, a bridge and a sun are all just lines, and each instrument plays what its colour draws. Press <em>City example</em> to see one. Use the eraser to tidy up, <em>Large</em> or <em>Huge</em> paper for room, and <em>Detail: Fine</em> for twice as many steps across the loop. When many lines cross at once, each instrument plays at most a few notes so it stays musical.</li>
+        <li><em>Share link</em> copies a link that opens your drawing, with its key, scale, tempo, colours and mix, for anyone. The drawing travels inside the link itself; nothing is uploaded.</li>
+        <li><em>Export WAV</em> downloads two loops as an audio file, rendered with exactly the sounds you hear. <em>Export MIDI</em> downloads one loop with a track for each instrument and the drums, ready for GarageBand, Logic, Ableton or MuseScore. In the Follow-line modes, MIDI notes change wherever a line moves to a new note of the scale.</li>
+        <li>Open the <em>Mixer</em> to balance the instruments: a volume for each, plus mute and solo. Muted instruments are left out of the exports too.</li>
         <li>Save drawing keeps your picture as a file you can open again, and Save picture downloads it as an image. Your drawing is also kept in this browser automatically.</li>
-        <li>Shuffle draws a ready-made shape to start from. Keep drawing while it plays and the loop changes as you go. The space bar plays and stops.</li>
+        <li>Shuffle draws a ready-made picture to start from and plays it: a beach, mountains, a desert with pyramids, New York, Copenhagen or Sydney with their famous buildings, or an abstract shape in your selected instrument. Keep drawing while it plays and the loop changes as you go. The space bar plays and stops.</li>
         <li>Everything runs in your browser with the Web Audio API. Nothing is recorded or uploaded.</li>
       </ul>
     </div></section>
