@@ -63,11 +63,137 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-market",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "market",
+   "question": "Will \"market\" appear in at least 35 stories during the next 7 days?",
+   "threshold": 35,
+   "p": 0.8,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 47,
+    "base_per_week": 0,
+    "lambda": 39.9
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-stock",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "stock",
+   "question": "Will \"stock\" appear in at least 29 stories during the next 7 days?",
+   "threshold": 29,
+   "p": 0.74,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 38,
+    "base_per_week": 0,
+    "lambda": 32.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-beyond",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "beyond",
+   "question": "Will \"beyond\" appear in at least 15 stories during the next 7 days?",
+   "threshold": 15,
+   "p": 0.72,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 20,
+    "base_per_week": 0,
+    "lambda": 17
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-less",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "less",
+   "question": "Will \"less\" appear in at least 15 stories during the next 7 days?",
+   "threshold": 15,
+   "p": 0.72,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 20,
+    "base_per_week": 0,
+    "lambda": 17
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-firm",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "firm",
+   "question": "Will \"firm\" appear in at least 15 stories during the next 7 days?",
+   "threshold": 15,
+   "p": 0.72,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 20,
+    "base_per_week": 0,
+    "lambda": 17
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-12-service",
+   "made": "2026-10-12",
+   "resolves": "2026-10-19",
+   "kind": "term-persistence",
+   "term": "service",
+   "question": "Will \"service\" appear in at least 15 stories during the next 7 days?",
+   "threshold": 15,
+   "p": 0.72,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 20,
+    "base_per_week": 0,
+    "lambda": 17
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
   "model": "poisson-persistence-v1",
-  "open": 3,
+  "open": 9,
   "resolved": 0,
   "voided": 0,
   "mean_brier": null,
