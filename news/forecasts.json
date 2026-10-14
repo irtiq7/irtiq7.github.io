@@ -17,10 +17,10 @@
     "base_per_week": 0.7,
     "lambda": 7.8
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 16,
+   "brier": 0.116,
+   "log_score": 0.416
   },
   {
    "id": "f-2026-10-05-wall-street",
@@ -38,10 +38,10 @@
     "base_per_week": 0.7,
     "lambda": 5.2
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 22,
+   "brier": 0.168,
+   "log_score": 0.528
   },
   {
    "id": "f-2026-10-05-data-centers",
@@ -59,10 +59,10 @@
     "base_per_week": 0,
     "lambda": 4.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 14,
+   "brier": 0.152,
+   "log_score": 0.494
   },
   {
    "id": "f-2026-10-12-market",
@@ -193,13 +193,13 @@
  ],
  "summary": {
   "model": "poisson-persistence-v1",
-  "open": 9,
-  "resolved": 0,
+  "open": 6,
+  "resolved": 3,
   "voided": 0,
-  "mean_brier": null,
+  "mean_brier": 0.145,
   "benchmark_brier": 0.25,
-  "skill": null,
-  "mean_log_score": null,
+  "skill": 0.42,
+  "mean_log_score": 0.479,
   "calibration": [
    {
     "range": "0-34%",
@@ -209,9 +209,9 @@
    },
    {
     "range": "34-67%",
-    "n": 0,
-    "mean_p": null,
-    "observed": null
+    "n": 3,
+    "mean_p": 0.62,
+    "observed": 1
    },
    {
     "range": "67-100%",
