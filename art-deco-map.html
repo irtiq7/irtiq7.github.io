@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="visibility.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art Deco World Map | Usama Saqib</title>
+  <meta name="description" content="A map of Art Deco around the world: skyscrapers, stations, theatres, hotels, bridges and vintage posters, each with a preview, details and a link to its source.">
+  <meta name="theme-color" content="#0a0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Art Deco World Map | Usama Saqib">
+  <meta property="og:description" content="A map of Art Deco around the world: skyscrapers, stations, theatres, hotels, bridges and vintage posters, each with a preview, details and a link to its source.">
+  <meta property="og:url" content="https://irtiq7.github.io/art-deco-map.html">
+  <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
+  <link rel="canonical" href="https://irtiq7.github.io/art-deco-map.html">
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+  <link rel="stylesheet" href="art-deco-map.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a class="active" aria-current="page" href="projects.html">Projects</a>
+        <a href="articles.html">Articles</a>
+        <a href="cv.html">CV</a>
+        <a href="guestbook.html">Guestbook</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <h1>Art Deco World Map</h1>
+      <p class="page-lede">Art Deco spread from Paris in the 1920s to almost every continent: skyscrapers in New York, cinemas in Bombay, stations in London, hotels in Shanghai, and posters that sold trains, department stores and ocean liners. Pick a pin or browse the gallery to see a preview, what it is, who made it, and a link to the source.</p>
+      <p class="pub-venue" id="ad-count" role="status">Loading&hellip;</p>
+    </div></section>
+
+    <section class="section-pad"><div class="shell ad-wide">
+      <div class="ad-toolbar" role="group" aria-label="Find and filter">
+        <label class="ad-search"><span class="visually-hidden">Search places and posters</span>
+          <input id="ad-q" type="search" placeholder="Search a name, city, country or architect" autocomplete="off"></label>
+        <span class="ad-seg" role="group" aria-label="View">
+          <button type="button" class="ad-btn" id="ad-view-map" aria-pressed="true">Map</button>
+          <button type="button" class="ad-btn" id="ad-view-gallery" aria-pressed="false">Gallery</button>
+        </span>
+        <button type="button" class="ad-btn" id="ad-reset">Show all</button>
+      </div>
+      <div id="ad-chips" class="ad-chips" role="group" aria-label="Types"></div>
+
+      <div class="ad-layout">
+        <div class="ad-main">
+          <div id="ad-map" class="ad-map" role="region" aria-label="World map of Art Deco places and posters"></div>
+          <p id="ad-map-note" class="ad-note" hidden>The map could not be loaded, so here is the gallery instead.</p>
+          <ul id="ad-gallery" class="ad-gallery" hidden aria-label="Gallery"></ul>
+          <p id="ad-empty" class="ad-note" hidden>Nothing matches. Try another word or switch a type back on.</p>
+        </div>
+        <aside id="ad-panel" class="ad-panel" aria-live="polite" aria-label="Details">
+          <p class="ad-hint">Select a pin on the map, or a card in the gallery, to see its details here.</p>
+        </aside>
+      </div>
+
+      <p class="ad-note">Previews load from <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a> and link back to their source pages. Only images marked public domain or under a Creative Commons licence are included, and each one shows its credit. Copyright status can differ between countries. If something should not be here, tell me in the <a href="guestbook.html">guestbook</a> and I will remove it. Descriptions of places are short extracts from Wikipedia (CC BY-SA). Map data &copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors.</p>
+    </div></section>
+  </main>
+
+  <div id="ad-viewer" class="ad-viewer" role="dialog" aria-modal="true" aria-labelledby="ad-vw-title" hidden>
+    <div class="vw-bar">
+      <p id="ad-vw-title" class="vw-title"></p>
+      <div class="vw-tools">
+        <button type="button" class="ad-btn" id="vw-prev" aria-label="Previous item">&larr;</button>
+        <button type="button" class="ad-btn" id="vw-next" aria-label="Next item">&rarr;</button>
+        <button type="button" class="ad-btn" id="vw-out" aria-label="Zoom out">&minus;</button>
+        <button type="button" class="ad-btn" id="vw-in" aria-label="Zoom in">+</button>
+        <button type="button" class="ad-btn" id="vw-fit" aria-label="Fit to screen">Fit</button>
+        <a class="ad-btn" id="vw-orig" target="_blank" rel="noopener">Full size on Commons</a>
+        <button type="button" class="ad-btn" id="vw-close" aria-label="Close viewer">Close</button>
+      </div>
+    </div>
+    <div class="vw-stage" id="vw-stage" tabindex="0" aria-label="Image. Drag to move, scroll or pinch to zoom.">
+      <img id="vw-img" alt="" draggable="false">
+      <p id="vw-loading" class="vw-loading">Loading the high-resolution image&hellip;</p>
+    </div>
+    <p id="vw-credit" class="vw-credit"></p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <p class="footer-name">Usama Saqib</p>
+        <p>Statistical signal processing, robot audition, and autonomous systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=n0Sr370AAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://pure.itu.dk/da/persons/usama-saqib/">ITU profile</a>
+        <a href="https://dblp.dagstuhl.de/pid/253/6169.html">DBLP</a>
+        <a href="https://github.com/irtiq7">GitHub</a>
+        <a href="https://www.linkedin.com/in/usamasaqib/">LinkedIn</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="admin.html" rel="nofollow">Admin</a>
+      </div>
+      <p class="footer-meta">&copy; 2026 Usama Saqib. All rights reserved.<br>Last updated October 2026</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+  <script src="art-deco-map.js"></script>
+  <script src="edit-link.js"></script>
+</body>
+</html>

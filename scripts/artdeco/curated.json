@@ -1,0 +1,594 @@
+{
+ "buildings": [
+  {
+   "qid": "Q9188",
+   "cat": null
+  },
+  {
+   "qid": "Q79961",
+   "cat": null
+  },
+  {
+   "qid": "Q11274",
+   "cat": null
+  },
+  {
+   "qid": "Q169420",
+   "cat": null
+  },
+  {
+   "qid": "Q11277",
+   "cat": null
+  },
+  {
+   "qid": "Q205309",
+   "cat": null
+  },
+  {
+   "qid": "Q262041",
+   "cat": null
+  },
+  {
+   "qid": "Q680614",
+   "cat": null
+  },
+  {
+   "qid": "Q1139081",
+   "cat": null
+  },
+  {
+   "qid": "Q846006",
+   "cat": null
+  },
+  {
+   "qid": "Q726531",
+   "cat": null
+  },
+  {
+   "qid": "Q753437",
+   "cat": null
+  },
+  {
+   "qid": "Q810953",
+   "cat": null
+  },
+  {
+   "qid": "Q655175",
+   "cat": null
+  },
+  {
+   "qid": "Q2547885",
+   "cat": null
+  },
+  {
+   "qid": "Q1337772",
+   "cat": null
+  },
+  {
+   "qid": "Q894569",
+   "cat": null
+  },
+  {
+   "qid": "Q1107297",
+   "cat": null
+  },
+  {
+   "qid": "Q190670",
+   "cat": null
+  },
+  {
+   "qid": "Q59487",
+   "cat": null
+  },
+  {
+   "qid": "Q2419314",
+   "cat": null
+  },
+  {
+   "qid": "Q133599",
+   "cat": null
+  },
+  {
+   "qid": "Q209017",
+   "cat": null
+  },
+  {
+   "qid": "Q62397",
+   "cat": null
+  },
+  {
+   "qid": "Q244391",
+   "cat": null
+  },
+  {
+   "qid": "Q23812",
+   "cat": null
+  },
+  {
+   "qid": "Q2224700",
+   "cat": null
+  },
+  {
+   "qid": "Q1126189",
+   "cat": null
+  },
+  {
+   "qid": "Q2916686",
+   "cat": null
+  },
+  {
+   "qid": "Q645095",
+   "cat": null
+  },
+  {
+   "qid": "Q466979",
+   "cat": null
+  },
+  {
+   "qid": "Q844556",
+   "cat": null
+  },
+  {
+   "qid": "Q954653",
+   "cat": null
+  },
+  {
+   "qid": "Q4381425",
+   "cat": null
+  },
+  {
+   "qid": "Q2869431",
+   "cat": null
+  },
+  {
+   "qid": "Q2942435",
+   "cat": null
+  },
+  {
+   "qid": "Q3349144",
+   "cat": null
+  },
+  {
+   "qid": "Q1983213",
+   "cat": null
+  },
+  {
+   "qid": "Q153116",
+   "cat": null
+  },
+  {
+   "qid": "Q850377",
+   "cat": null
+  },
+  {
+   "qid": "Q2070225",
+   "cat": null
+  },
+  {
+   "qid": "Q2956104",
+   "cat": null
+  },
+  {
+   "qid": "Q1328348",
+   "cat": null
+  },
+  {
+   "qid": "Q3409860",
+   "cat": null
+  },
+  {
+   "qid": "Q821342",
+   "cat": null
+  },
+  {
+   "qid": "Q152129",
+   "cat": null
+  },
+  {
+   "qid": "Q1684725",
+   "cat": null
+  },
+  {
+   "qid": "Q1453586",
+   "cat": null
+  },
+  {
+   "qid": "Q190668",
+   "cat": null
+  },
+  {
+   "qid": "Q1758861",
+   "cat": null
+  },
+  {
+   "qid": "Q2622475",
+   "cat": null
+  },
+  {
+   "qid": "Q5461830",
+   "cat": null
+  },
+  {
+   "qid": "Q3267398",
+   "cat": null
+  },
+  {
+   "qid": "Q3478501",
+   "cat": null
+  },
+  {
+   "qid": "Q1141316",
+   "cat": null
+  },
+  {
+   "qid": "Q23804",
+   "cat": null
+  },
+  {
+   "qid": "Q1326540",
+   "cat": null
+  },
+  {
+   "qid": "Q1639613",
+   "cat": null
+  },
+  {
+   "qid": "Q2046787",
+   "cat": null
+  },
+  {
+   "qid": "Q3145589",
+   "cat": null,
+   "avoid": [
+    "Cannes (14598692510).jpg"
+   ]
+  },
+  {
+   "qid": "Q4504385",
+   "cat": null
+  },
+  {
+   "qid": "Q919808",
+   "cat": null
+  },
+  {
+   "qid": "Q3096348",
+   "cat": null
+  },
+  {
+   "qid": "Q3373107",
+   "cat": null
+  },
+  {
+   "qid": "Q3579104",
+   "cat": null
+  },
+  {
+   "qid": "Q4838596",
+   "cat": null
+  },
+  {
+   "qid": "Q129170",
+   "cat": null
+  },
+  {
+   "qid": "Q12410997",
+   "cat": null
+  },
+  {
+   "qid": "Q16616997",
+   "cat": null
+  },
+  {
+   "qid": "Q18006942",
+   "cat": null
+  },
+  {
+   "qid": "Q3331005",
+   "cat": null
+  },
+  {
+   "qid": "Q3361055",
+   "cat": null
+  },
+  {
+   "qid": "Q4982657",
+   "cat": null
+  },
+  {
+   "qid": "Q11073866",
+   "cat": null
+  },
+  {
+   "qid": "Q1756487",
+   "cat": null
+  },
+  {
+   "qid": "Q3146310",
+   "cat": null
+  },
+  {
+   "qid": "Q2982699",
+   "cat": null
+  },
+  {
+   "qid": "Q3507999",
+   "cat": null
+  },
+  {
+   "qid": "Q3376971",
+   "cat": null
+  },
+  {
+   "qid": "Q5769470",
+   "cat": null
+  },
+  {
+   "qid": "Q5379114",
+   "cat": null
+  },
+  {
+   "qid": "Q5591017",
+   "cat": null
+  },
+  {
+   "qid": "Q81193966",
+   "cat": null
+  },
+  {
+   "qid": "Q7691917",
+   "cat": null
+  },
+  {
+   "qid": "Q15909474",
+   "cat": null
+  },
+  {
+   "qid": "Q16764353",
+   "cat": null
+  },
+  {
+   "qid": "Q2398831",
+   "cat": null
+  },
+  {
+   "qid": "Q26220813",
+   "cat": null
+  },
+  {
+   "qid": "Q3527708",
+   "cat": null
+  },
+  {
+   "qid": "Q3289780",
+   "cat": null
+  },
+  {
+   "qid": "Q5073116",
+   "cat": null
+  },
+  {
+   "qid": "Q5338052",
+   "cat": null
+  },
+  {
+   "qid": "Q5395341",
+   "cat": null
+  },
+  {
+   "qid": "Q5613926",
+   "cat": null
+  },
+  {
+   "qid": "Q55779618",
+   "cat": null
+  },
+  {
+   "qid": "Q6749689",
+   "cat": null
+  },
+  {
+   "qid": "Q7307906",
+   "cat": null
+  },
+  {
+   "qid": "Q7126302",
+   "cat": null
+  },
+  {
+   "qid": "Q7431933",
+   "cat": null
+  },
+  {
+   "qid": "Q106535985",
+   "cat": null
+  },
+  {
+   "qid": "Q15181285",
+   "cat": null
+  },
+  {
+   "qid": "Q16745480",
+   "cat": null,
+   "avoid": [
+    "Gaiety Theatre, Ermita, Manila.JPG"
+   ]
+  },
+  {
+   "qid": "Q27919925",
+   "cat": null
+  },
+  {
+   "qid": "Q28943087",
+   "cat": null
+  },
+  {
+   "qid": "Q4811049",
+   "cat": null
+  },
+  {
+   "qid": "Q5316299",
+   "cat": null
+  },
+  {
+   "qid": "Q5567465",
+   "cat": null
+  },
+  {
+   "qid": "Q5954603",
+   "cat": null
+  },
+  {
+   "qid": "Q6139616",
+   "cat": null
+  },
+  {
+   "qid": "Q15767820",
+   "cat": null
+  },
+  {
+   "qid": "Q29378714",
+   "cat": null
+  },
+  {
+   "qid": "Q55049852",
+   "cat": null
+  },
+  {
+   "qid": "Q65120146",
+   "cat": null
+  },
+  {
+   "qid": "Q79310993",
+   "cat": null
+  },
+  {
+   "qid": "Q113635041",
+   "cat": null
+  },
+  {
+   "qid": "Q16252051",
+   "cat": null
+  },
+  {
+   "qid": "Q19895553",
+   "cat": null,
+   "avoid": [
+    "Karachi Streetshots2.jpg"
+   ]
+  },
+  {
+   "qid": "Q1001988",
+   "cat": null
+  },
+  {
+   "qid": "Q4996997",
+   "cat": null
+  },
+  {
+   "qid": "Q64022756",
+   "cat": "station"
+  },
+  {
+   "qid": "Q5209252",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q71842",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q933431",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q3079894",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q12060526",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q198019",
+   "cat": "station"
+  },
+  {
+   "qid": "Q985828",
+   "cat": "district"
+  },
+  {
+   "qid": "Q3307877",
+   "cat": "district"
+  },
+  {
+   "qid": "Q203380",
+   "cat": "district"
+  },
+  {
+   "qid": "Q3748980",
+   "cat": "tower"
+  },
+  {
+   "qid": "Q44440",
+   "cat": "bridge"
+  },
+  {
+   "qid": "Q7603582",
+   "cat": "theatre"
+  },
+  {
+   "qid": "Q1809902",
+   "cat": "theatre"
+  },
+  {
+   "qid": "Q3642",
+   "cat": "district"
+  },
+  {
+   "qid": "Q1015690",
+   "cat": "district",
+   "avoid": [
+    "Hastings Infobox Pic Montage.jpg"
+   ]
+  },
+  {
+   "qid": "Q6764005",
+   "cat": "station"
+  },
+  {
+   "qid": "Q1318379",
+   "cat": "station"
+  },
+  {
+   "qid": "Q7886082",
+   "cat": "station"
+  },
+  {
+   "qid": "Q735756",
+   "cat": "station"
+  },
+  {
+   "qid": "Q10853543",
+   "cat": "station",
+   "avoid": [
+    "New Orleans Lakefront Airport - Louisiana.jpg"
+   ]
+  },
+  {
+   "qid": "Q1148666",
+   "cat": "station",
+   "avoid": [
+    "Gare centrale de Montreal 04.jpg"
+   ]
+  },
+  {
+   "qid": "Q286666",
+   "cat": "station"
+  },
+  {
+   "qid": "Q2216143",
+   "cat": "station"
+  }
+ ]
+}
