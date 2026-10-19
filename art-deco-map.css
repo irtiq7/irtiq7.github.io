@@ -77,8 +77,29 @@
 .vw-credit { margin: 0; padding: 0.5rem 0.8rem; font-size: 0.76rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
 body.vw-open { overflow: hidden; }
 
+.ad-panel .close { display: none; }
 @media (max-width: 960px) {
   .ad-layout { grid-template-columns: 1fr; }
-  .ad-panel { position: static; max-height: none; }
-  .ad-map { height: 60vh; }
+  .ad-map { height: 68vh; height: 68svh; }
+  .ad-hint { display: none; }
+  /* put the map near the top: short hero, one scrolling row of chips */
+  .page-hero { padding-top: 0.8rem; padding-bottom: 0.6rem; }
+  .page-hero h1 { font-size: 1.6rem; margin: 0 0 0.3rem; }
+  .page-hero .page-lede { display: none; }
+  .page-hero .pub-venue { margin: 0; }
+  .section-pad:has(.ad-wide) { padding-top: 0.6rem; }
+  .ad-toolbar { gap: 0.5rem; margin-bottom: 0.5rem; }
+  .ad-search { flex: 1 1 100%; }
+  .ad-chips { flex-wrap: nowrap; overflow-x: auto; margin-bottom: 0.6rem; padding-bottom: 0.3rem; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .ad-chip { flex: 0 0 auto; }
+  /* details become a bottom sheet over the map, so nothing needs scrolling to reach */
+  .ad-panel { position: fixed; top: auto; left: 0; right: 0; bottom: 0; z-index: 1100; max-height: 52vh; max-height: 52svh; padding: 0.8rem 1rem 1.2rem; border-width: 1px 0 0; border-top: 2px solid var(--pine); box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.6); transform: translateY(105%); visibility: hidden; transition: transform 0.2s ease, visibility 0s 0.2s; overscroll-behavior: contain; }
+  .ad-panel.open { transform: none; visibility: visible; transition: transform 0.2s ease; }
+  .ad-panel .close { display: block; position: sticky; top: 0; float: right; z-index: 2; margin: -0.2rem -0.3rem 0 0.5rem; padding: 0.1rem 0.7rem; font-size: 1.3rem; line-height: 1.4; color: var(--ink); background: var(--surface); border: 1px solid var(--line); cursor: pointer; }
+  .ad-panel .pi { width: 38%; float: left; margin: 0 0.8rem 0.4rem 0; }
+  .ad-panel .pi img { max-height: 170px; }
+  .ad-panel .pi .zoom { font-size: 0.62rem; }
+  .ad-panel h2 { font-size: 1.02rem; }
+  body.ad-sheet { padding-bottom: 0; }
 }
+@media (prefers-reduced-motion: reduce) { .ad-panel, .ad-panel.open { transition: none; } }

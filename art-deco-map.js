@@ -151,6 +151,8 @@
   }
   function renderPanel(it) {
     var p = clear($("ad-panel")), c = catOf(it), im = it.image, idx = filtered.indexOf(it);
+    p.classList.add("open");
+    p.appendChild(h("button", { type: "button", class: "close", "aria-label": "Close details", onclick: closePanel, text: "\u00d7" }));
     p.appendChild(h("button", { type: "button", class: "pi", "aria-label": "View " + it.title + " larger", onclick: function () { openViewer(it); } }, [
       h("img", { src: imgUrl(im.file, 960), alt: im.alt || it.title, referrerpolicy: "no-referrer" }), h("span", { class: "zoom", text: "View large" })]));
     p.appendChild(h("span", { class: "tag", style: "color:" + c.color + ";border:1px solid " + c.color + ";padding:0 0.4rem", text: c.label }));
@@ -170,12 +172,14 @@
     (it.links || []).forEach(function (l) { var a = link(l.label, l.url); if (a) links.appendChild(a); });
     if (links.firstChild) p.appendChild(links);
     p.appendChild(h("div", { class: "nav" }, [
-      h("button", { type: "button", class: "ad-btn", onclick: function () { select(it, { pan: true }); }, text: "Show on map" }),
+      h("button", { type: "button", class: "ad-btn", onclick: function () { select(it, { pan: true }); if (narrow()) closePanel(); }, text: "Show on map" }),
       h("button", { type: "button", class: "ad-btn", onclick: function () { step(-1); }, "aria-label": "Previous item", text: "←" }),
       h("button", { type: "button", class: "ad-btn", onclick: function () { step(1); }, "aria-label": "Next item", text: "→" })
     ]));
     if (idx >= 0) p.appendChild(h("p", { class: "credit", text: "Item " + (idx + 1) + " of " + filtered.length + " in this selection." }));
   }
+  function narrow() { return !!(window.matchMedia && window.matchMedia("(max-width: 960px)").matches); }
+  function closePanel() { $("ad-panel").classList.remove("open"); }
   function step(d) {
     if (!filtered.length) return;
     var i = filtered.indexOf(current), n = i < 0 ? (d > 0 ? 0 : filtered.length - 1) : (i + d + filtered.length) % filtered.length;
@@ -255,7 +259,7 @@
     stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
     window.addEventListener("resize", function () { if (vw.open) fitView(); });
     document.addEventListener("keydown", function (e) {
-      if (!vw.open) return;
+      if (!vw.open) { if (e.key === "Escape" && narrow()) closePanel(); return; }
       var k = e.key;
       if (k === "Escape") { e.preventDefault(); closeViewer(); }
       else if (k === "ArrowLeft") { e.preventDefault(); viewerStep(-1); } else if (k === "ArrowRight") { e.preventDefault(); viewerStep(1); }
