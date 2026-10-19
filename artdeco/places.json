@@ -101,7 +101,7 @@
   "facts": [
    [
     "Type",
-    "Steel bridge"
+    "Through arch bridge"
    ]
   ],
   "image": {
@@ -298,7 +298,7 @@
   "kind": "building",
   "cat": "other",
   "title": "Ranfurly",
-  "place": "Central Otago District",
+  "place": "Otago Region",
   "country": "New Zealand",
   "lat": -45.13333,
   "lon": 170.1,
@@ -322,7 +322,7 @@
    "license": "CC BY-SA 3.0",
    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
    "page": "https://commons.wikimedia.org/wiki/File%3ARanfurlyhotel.jpg",
-   "alt": "Ranfurly, Central Otago District"
+   "alt": "Ranfurly, Otago Region"
   },
   "links": [
    {
@@ -521,7 +521,7 @@
   "facts": [
    [
     "Type",
-    "Sculpture"
+    "Built structure"
    ]
   ],
   "image": {
@@ -1109,7 +1109,7 @@
   "facts": [
    [
     "Type",
-    "Historic house museum"
+    "History museum"
    ]
   ],
   "image": {
@@ -1130,190 +1130,6 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q62397"
-   }
-  ]
- },
- {
-  "id": "arsenal-stadium",
-  "kind": "building",
-  "cat": "civic",
-  "title": "Arsenal Stadium",
-  "place": "London Borough of Islington",
-  "country": "United Kingdom",
-  "lat": 51.5577,
-  "lon": -0.10297,
-  "summary": "Arsenal Stadium is a defunct football stadium in Highbury, London, which was the home of Arsenal Football Club between 6 September 1913 and 7 May 2006. It was popularly known as \"Highbury\" from the name of the district in which it was located. The first reconstruction came in the 1930s, from which the Art Deco East and West Stands date.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Archibald Leitch"
-   ],
-   [
-    "Type",
-    "Association football venue"
-   ]
-  ],
-  "image": {
-   "file": "Arsenal Stadium Highbury east facade.jpg",
-   "w": 2514,
-   "h": 1836,
-   "author": "No machine-readable author provided. Qwghlm~commonswiki assumed (based on copyright claims).",
-   "license": "CC BY-SA 3.0",
-   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "page": "https://commons.wikimedia.org/wiki/File%3AArsenal_Stadium_Highbury_east_facade.jpg",
-   "alt": "Arsenal Stadium, London Borough of Islington"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q205309"
-   }
-  ]
- },
- {
-  "id": "thtre-des-champs-lyses",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Théâtre des Champs-Élysées",
-  "place": "Quartier des Champs-Élysées",
-  "country": "France",
-  "lat": 48.86583,
-  "lon": 2.30306,
-  "summary": "The Théâtre des Champs-Élysées (French pronunciation: [teɑtʁə de ʃɑ̃z‿elize]) is an entertainment venue standing at 15 avenue Montaigne in Paris. It is situated near Avenue des Champs-Élysées, from which it takes its name. Commissioned by impresario Gabriel Astruc, the theatre was built from 1911 to 1913 upon the designs of brothers Auguste Perret and Gustave Perret following a scheme by Henry van de Velde, and became the first example of Art Deco architecture in the city.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Henry van de Velde, Auguste Perret"
-   ],
-   [
-    "Type",
-    "Music venue"
-   ]
-  ],
-  "image": {
-   "file": "Le théâtre des Champs-Élysées à Paris, 2022.jpg",
-   "w": 5421,
-   "h": 4319,
-   "author": "Jean-Pierre Dalbéra",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ALe_th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es_%C3%A0_Paris%2C_2022.jpg",
-   "alt": "Théâtre des Champs-Élysées, Quartier des Champs-Élysées"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q726531"
-   }
-  ]
- },
- {
-  "id": "christ-the-redeemer",
-  "kind": "building",
-  "cat": "monument",
-  "title": "Christ the Redeemer",
-  "place": "Alto da Boa Vista",
-  "country": "Brazil",
-  "lat": -22.95192,
-  "lon": -43.21046,
-  "summary": "Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ]) is an Art Deco statue of Jesus in Rio de Janeiro, Brazil, created by French-Polish sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot and Romanian sculptor Gheorghe Leonida who sculpted the face.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Paul Landowski, Albert Caquot, Gheorghe Leonida"
-   ],
-   [
-    "Type",
-    "Pilgrimage site"
-   ]
-  ],
-  "image": {
-   "file": "Christ the Redeemer - Cristo Redentor.jpg",
-   "w": 2497,
-   "h": 3744,
-   "author": "Arne Müseler",
-   "license": "CC BY-SA 3.0 de",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChrist_the_Redeemer_-_Cristo_Redentor.jpg",
-   "alt": "Christ the Redeemer, Alto da Boa Vista"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q79961"
-   }
-  ]
- },
- {
-  "id": "chrysler-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Chrysler Building",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.75143,
-  "lon": -73.97572,
-  "summary": "The Chrysler Building is a 1,046-foot-tall (319 m), Art Deco-style supertall skyscraper in the East Midtown neighborhood of Manhattan, New York City, United States. Located at the intersection of 42nd Street and Lexington Avenue, it is the tallest steel-framed brick building in the world.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Chrysler_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "William Van Alen"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "Chrysler Building by David Shankbone Retouched.jpg",
-   "w": 1036,
-   "h": 3055,
-   "author": "w:User:Overand derivative work: Overand ( talk )",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChrysler_Building_by_David_Shankbone_Retouched.jpg",
-   "alt": "Chrysler Building, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Chrysler_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q11274"
    }
   ]
  },
@@ -1502,6 +1318,144 @@
   ]
  },
  {
+  "id": "arsenal-stadium",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Arsenal Stadium",
+  "place": "London Borough of Islington",
+  "country": "United Kingdom",
+  "lat": 51.5577,
+  "lon": -0.10297,
+  "summary": "Arsenal Stadium is a defunct football stadium in Highbury, London, which was the home of Arsenal Football Club between 6 September 1913 and 7 May 2006. It was popularly known as \"Highbury\" from the name of the district in which it was located. The first reconstruction came in the 1930s, from which the Art Deco East and West Stands date.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Archibald Leitch"
+   ],
+   [
+    "Type",
+    "Defunct sports venue"
+   ]
+  ],
+  "image": {
+   "file": "Arsenal Stadium Highbury east facade.jpg",
+   "w": 2514,
+   "h": 1836,
+   "author": "No machine-readable author provided. Qwghlm~commonswiki assumed (based on copyright claims).",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "page": "https://commons.wikimedia.org/wiki/File%3AArsenal_Stadium_Highbury_east_facade.jpg",
+   "alt": "Arsenal Stadium, London Borough of Islington"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q205309"
+   }
+  ]
+ },
+ {
+  "id": "thtre-des-champs-lyses",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Théâtre des Champs-Élysées",
+  "place": "Quartier des Champs-Élysées",
+  "country": "France",
+  "lat": 48.86583,
+  "lon": 2.30306,
+  "summary": "The Théâtre des Champs-Élysées (French pronunciation: [teɑtʁə de ʃɑ̃z‿elize]) is an entertainment venue standing at 15 avenue Montaigne in Paris. It is situated near Avenue des Champs-Élysées, from which it takes its name. Commissioned by impresario Gabriel Astruc, the theatre was built from 1911 to 1913 upon the designs of brothers Auguste Perret and Gustave Perret following a scheme by Henry van de Velde, and became the first example of Art Deco architecture in the city.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Henry van de Velde, Auguste Perret"
+   ],
+   [
+    "Type",
+    "Music venue"
+   ]
+  ],
+  "image": {
+   "file": "Le théâtre des Champs-Élysées à Paris, 2022.jpg",
+   "w": 5421,
+   "h": 4319,
+   "author": "Jean-Pierre Dalbéra",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ALe_th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es_%C3%A0_Paris%2C_2022.jpg",
+   "alt": "Théâtre des Champs-Élysées, Quartier des Champs-Élysées"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q726531"
+   }
+  ]
+ },
+ {
+  "id": "christ-the-redeemer",
+  "kind": "building",
+  "cat": "monument",
+  "title": "Christ the Redeemer",
+  "place": "Alto da Boa Vista",
+  "country": "Brazil",
+  "lat": -22.95192,
+  "lon": -43.21046,
+  "summary": "Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ]) is an Art Deco statue of Jesus in Rio de Janeiro, Brazil, created by French-Polish sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot and Romanian sculptor Gheorghe Leonida who sculpted the face.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Albert Caquot, Paul Landowski, Gheorghe Leonida"
+   ],
+   [
+    "Type",
+    "Monument"
+   ]
+  ],
+  "image": {
+   "file": "Christ the Redeemer - Cristo Redentor.jpg",
+   "w": 2497,
+   "h": 3744,
+   "author": "Arne Müseler",
+   "license": "CC BY-SA 3.0 de",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChrist_the_Redeemer_-_Cristo_Redentor.jpg",
+   "alt": "Christ the Redeemer, Alto da Boa Vista"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q79961"
+   }
+  ]
+ },
+ {
   "id": "the-el-dorado",
   "kind": "building",
   "cat": "home",
@@ -1594,6 +1548,834 @@
   ]
  },
  {
+  "id": "chrysler-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Chrysler Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.75143,
+  "lon": -73.97572,
+  "summary": "The Chrysler Building is a 1,046-foot-tall (319 m), Art Deco-style supertall skyscraper in the East Midtown neighborhood of Manhattan, New York City, United States. Located at the intersection of 42nd Street and Lexington Avenue, it is the tallest steel-framed brick building in the world.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Chrysler_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "William Van Alen"
+   ],
+   [
+    "Type",
+    "Skyscraper"
+   ]
+  ],
+  "image": {
+   "file": "Chrysler Building by David Shankbone Retouched.jpg",
+   "w": 1036,
+   "h": 3055,
+   "author": "w:User:Overand derivative work: Overand ( talk )",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChrysler_Building_by_David_Shankbone_Retouched.jpg",
+   "alt": "Chrysler Building, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Chrysler_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q11274"
+   }
+  ]
+ },
+ {
+  "id": "500-fifth-avenue",
+  "kind": "building",
+  "cat": "tower",
+  "title": "500 Fifth Avenue",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.7538,
+  "lon": -73.9813,
+  "summary": "500 Fifth Avenue is a 60-story, 697-foot-tall (212 m) office building on the northwest corner of Fifth Avenue and 42nd Street in the Midtown Manhattan neighborhood of New York City, New York, United States. The building was designed by Shreve, Lamb & Harmon in the Art Deco style and constructed from 1929 to 1931.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/500_Fifth_Avenue",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Shreve, Lamb & Harmon"
+   ],
+   [
+    "Type",
+    "Skyscraper"
+   ]
+  ],
+  "image": {
+   "file": "500 Fifth Avenue Panorama.jpg",
+   "w": 3137,
+   "h": 4186,
+   "author": "500_Fifth_Avenue_9299.JPG : Gryffindor 500_Fifth_Avenue_9300.JPG : Gryffindor derivative work: xavax",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A500_Fifth_Avenue_Panorama.jpg",
+   "alt": "500 Fifth Avenue, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/500_Fifth_Avenue"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q133599"
+   }
+  ]
+ },
+ {
+  "id": "empire-state-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Empire State Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.74833,
+  "lon": -73.98556,
+  "summary": "The Empire State Building is a 102-story, supertall skyscraper in the Midtown South neighborhood of Manhattan, New York City, United States. The building was designed in the Art Deco style by Shreve, Lamb & Harmon and constructed between 1930 and 1931. Its name is derived from \"Empire State\", the nickname of New York state.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Empire_State_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Shreve, Lamb & Harmon"
+   ],
+   [
+    "Type",
+    "Office building"
+   ]
+  ],
+  "image": {
+   "file": "Empire State Building (aerial view).jpg",
+   "w": 846,
+   "h": 1270,
+   "author": "Sam Valadi",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AEmpire_State_Building_%28aerial_view%29.jpg",
+   "alt": "Empire State Building, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Empire_State_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q9188"
+   }
+  ]
+ },
+ {
+  "id": "battersea-power-station",
+  "kind": "building",
+  "cat": "bridge",
+  "title": "Battersea Power Station",
+  "place": "London Borough of Wandsworth",
+  "country": "United Kingdom",
+  "lat": 51.4811,
+  "lon": -0.14444,
+  "summary": "Battersea Power Station is a preserved coal-fired power station located on the south bank of the River Thames in Nine Elms in the London Borough of Wandsworth. It was built by the London Power Company (LPC) to the design of Leonard Pearce, Engineer in Chief to the LPC, and CS Allott & Son Engineers. The architects were J. The station is one of the world's largest brick buildings and notable for its original, Art Deco interior fittings and decor.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Giles Gilbert Scott"
+   ],
+   [
+    "Type",
+    "Coal-fired power station"
+   ]
+  ],
+  "image": {
+   "file": "Battersea Power Station, London-22May2010.jpg",
+   "w": 5616,
+   "h": 3744,
+   "author": "Aurelien Guichard from London, United Kingdom",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABattersea_Power_Station%2C_London-22May2010.jpg",
+   "alt": "Battersea Power Station, London Borough of Wandsworth"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q810953"
+   }
+  ]
+ },
+ {
+  "id": "torrione-ina",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Torrione INA",
+  "place": "Brescia",
+  "country": "Italy",
+  "lat": 45.53852,
+  "lon": 10.21887,
+  "summary": "The Torrione INA (transl. \"INA Tower\"), also known as Torrione or Grattacielo, is a tall building in Brescia, Italy. Built between 1930 and 1932, it is the first skyscraper in Italy and also one of the first skyscrapers in Europe. The architectural style of this building is predominantly Art Deco, with influences from Chicago School.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Torrione_INA",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Marcello Piacentini"
+   ],
+   [
+    "Type",
+    "Tower"
+   ]
+  ],
+  "image": {
+   "file": "Torre in Piazza della Vittoria Brescia.jpg",
+   "w": 4652,
+   "h": 8444,
+   "author": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a message . This imag",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ATorre_in_Piazza_della_Vittoria_Brescia.jpg",
+   "alt": "Torrione INA, Brescia"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Torrione_INA"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q16616997"
+   }
+  ]
+ },
+ {
+  "id": "chicago-board-of-trade-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Chicago Board of Trade Building",
+  "place": "Illinois",
+  "country": "United States",
+  "lat": 41.87812,
+  "lon": -87.63225,
+  "summary": "The Chicago Board of Trade Building is a 44-story, 604-foot (184 m) Art Deco skyscraper located in the Chicago Loop, standing at the foot of the LaSalle Street \"canyon\".",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Chicago_Board_of_Trade_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Holabird & Root"
+   ],
+   [
+    "Type",
+    "Tower block"
+   ]
+  ],
+  "image": {
+   "file": "Chicago Board Of Trade Building (altered filtration version).jpg",
+   "w": 1871,
+   "h": 3778,
+   "author": "Joe Ravi ( Shutterstock iStock Dreamstime )",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChicago_Board_Of_Trade_Building_%28altered_filtration_version%29.jpg",
+   "alt": "Chicago Board of Trade Building, Illinois"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Chicago_Board_of_Trade_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2224700"
+   }
+  ]
+ },
+ {
+  "id": "boerentoren",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Boerentoren",
+  "place": "Antwerp",
+  "country": "Belgium",
+  "lat": 51.21864,
+  "lon": 4.40408,
+  "summary": "The Boerentoren (English: \"Farmers' Tower\"; officially the KBC Tower, originally the Torengebouw van Antwerpen) is a historic high-rise building in Antwerp, Belgium. Designed in Art Deco style by Jan Vanhoenacker, Émile Van Averbeke and Jos Smolderen, the Boerentoren was one of Europe's very first tall buildings.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Boerentoren",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Joseph Smolderen, Emiel Van Averbeke, Jan Vanhoenacker"
+   ],
+   [
+    "Type",
+    "Tower block"
+   ]
+  ],
+  "image": {
+   "file": "Boerentoren1.jpg",
+   "w": 2030,
+   "h": 2799,
+   "author": "User:Manfreeed",
+   "license": "CC BY-SA 2.5",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABoerentoren1.jpg",
+   "alt": "Boerentoren, Antwerp"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Boerentoren"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q59487"
+   }
+  ]
+ },
+ {
+  "id": "piscine-molitor",
+  "kind": "building",
+  "cat": "hotel",
+  "title": "Piscine Molitor",
+  "place": "16th arrondissement of Paris",
+  "country": "France",
+  "lat": 48.84517,
+  "lon": 2.25309,
+  "summary": "Piscine Molitor (English: Miller Swimming Pool, French pronunciation: [pisin molitɔʁ]; also known as the Piscines Auteuil-Molitor or the Grands établissements balnéaires d'Auteuil) is a swimming pool and hotel complex located in Porte Molitor, 16th arrondissement of Paris, Île-de-France, Paris, France. The pool is known for its Art Deco designs and the popular introduction of the bikini by Louis Réard on 5 July 1946.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Piscine_Molitor",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Jacques Rougerie, Alain-Charles Perrot, Lucien Pollet"
+   ],
+   [
+    "Type",
+    "Sports venue"
+   ]
+  ],
+  "image": {
+   "file": "Paris, piscine Molitor, 1 November 2015 003.jpg",
+   "w": 5184,
+   "h": 3456,
+   "author": "Fred Romero from Paris, France",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AParis%2C_piscine_Molitor%2C_1_November_2015_003.jpg",
+   "alt": "Piscine Molitor, 16th arrondissement of Paris"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Piscine_Molitor"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q645095"
+   }
+  ]
+ },
+ {
+  "id": "national-basilica-of-the-sacred-heart",
+  "kind": "building",
+  "cat": "religious",
+  "title": "National Basilica of the Sacred Heart",
+  "place": "Ganshoren",
+  "country": "Belgium",
+  "lat": 50.86667,
+  "lon": 4.31722,
+  "summary": "The National Basilica of the Sacred Heart (French: Basilique nationale du Sacré-Cœur; Dutch: Nationale Basiliek van het Heilig-Hart) is a Catholic minor basilica and parish church in Brussels, Belgium. It is dedicated to the Sacred Heart, inspired by the Basilique du Sacré-Cœur in Paris. The massive brick and reinforced concrete structure, in Art Deco style of neo-Byzantine inspiration, features two thinner towers and a nearly as high green copper dome that rises 89 metres (292 ft) above ground, dominating Brussels' north-western skyline.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Pierre Langerock, Albert Van huffel, Paul Rome"
+   ],
+   [
+    "Type",
+    "National shrine"
+   ]
+  ],
+  "image": {
+   "file": "1001 Basilica of the Sacred Heart in Brussels Photo by Giles Laurent.jpg",
+   "w": 8064,
+   "h": 6048,
+   "author": "Giles Laurent",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1001_Basilica_of_the_Sacred_Heart_in_Brussels_Photo_by_Giles_Laurent.jpg",
+   "alt": "National Basilica of the Sacred Heart, Ganshoren"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q846006"
+   }
+  ]
+ },
+ {
+  "id": "manila-metropolitan-theatre",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Manila Metropolitan Theatre",
+  "place": "",
+  "country": "Philippines",
+  "lat": 14.594,
+  "lon": 120.9805,
+  "summary": "The Manila Metropolitan Theater (Filipino: Tanghalang Metropolitan; also known as the Metropolitan Theater; abbreviated as the MET) is a historic Philippine Art Deco building located in Plaza Lawton in Ermita, Manila. It is recognized as the forefront of the Art Deco architectural style in the Philippines. Designed by architect Juan M.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Juan M. Arellano"
+   ],
+   [
+    "Type",
+    "Theatre building"
+   ]
+  ],
+  "image": {
+   "file": "Manila Metropolitan Theaterjwilz.jpg",
+   "w": 2576,
+   "h": 1932,
+   "author": "JWilz12345",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Metropolitan_Theaterjwilz.jpg",
+   "alt": "Manila Metropolitan Theatre"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1639613"
+   }
+  ]
+ },
+ {
+  "id": "1-wall-street",
+  "kind": "building",
+  "cat": "civic",
+  "title": "1 Wall Street",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.70722,
+  "lon": -74.01167,
+  "summary": "1 Wall Street (also known as the Irving Trust Company Building, the Bank of New York Building, and the BNY Mellon Building) is a 654-foot-tall (199 m) Art Deco skyscraper in the Financial District of Lower Manhattan, New York City, United States. The building, which occupies a full city block, consists of two sections.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/1_Wall_Street",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Ralph Thomas Walker"
+   ],
+   [
+    "Type",
+    "Bank building"
+   ]
+  ],
+  "image": {
+   "file": "1 Wall Street panoramic.jpg",
+   "w": 2963,
+   "h": 4109,
+   "author": "1_Wall_Street_001.JPG : Gryffindor 1_Wall_Street_002.JPG : Gryffindor derivative work: Justass ( talk )",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1_Wall_Street_panoramic.jpg",
+   "alt": "1 Wall Street, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/1_Wall_Street"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q209017"
+   }
+  ]
+ },
+ {
+  "id": "barclay-vesey-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Barclay-Vesey Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.71375,
+  "lon": -74.01292,
+  "summary": "The Barclay–Vesey Building (also known as 100 Barclay, the Verizon Building, and formerly the New York Telephone Company Building) is an office and residential building at 140 West Street in Lower Manhattan, New York City. The 32-story building was designed in the Art Deco style by Ralph Walker of Voorhees, Gmelin and Walker, and was Walker's first major commission as well as one of the first Art Deco skyscrapers.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Ralph Thomas Walker"
+   ],
+   [
+    "Type",
+    "Skyscraper"
+   ]
+  ],
+  "image": {
+   "file": "Barclay-Vesey Building 140 West Street.jpg",
+   "w": 2270,
+   "h": 3107,
+   "author": "Beyond My Ken",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABarclay-Vesey_Building_140_West_Street.jpg",
+   "alt": "Barclay-Vesey Building, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1983213"
+   }
+  ]
+ },
+ {
+  "id": "cine-callao",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Cine Callao",
+  "place": "Madrid",
+  "country": "Spain",
+  "lat": 40.42,
+  "lon": -3.7061,
+  "summary": "Cine Callao is a building located in Plaza de Callao in Madrid. It is a common venue for film premieres and press screenings. Designed by Luis Gutiérrez Soto, the facade features elements inspired by the Art Deco.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cine_Callao",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Luis Gutiérrez Soto"
+   ],
+   [
+    "Type",
+    "Movie theater"
+   ]
+  ],
+  "image": {
+   "file": "Cine Callao, Madrid, Spain 2012.jpg",
+   "w": 2356,
+   "h": 1566,
+   "author": "David Gordillo",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACine_Callao%2C_Madrid%2C_Spain_2012.jpg",
+   "alt": "Cine Callao, Madrid"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Cine_Callao"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5769470"
+   }
+  ]
+ },
+ {
+  "id": "broadway-mansions",
+  "kind": "building",
+  "cat": "hotel",
+  "title": "Broadway Mansions",
+  "place": "Beiwaitan Subdistrict",
+  "country": "People's Republic of China",
+  "lat": 31.24634,
+  "lon": 121.48548,
+  "summary": "The Broadway Mansions (simplified Chinese: 百老汇大厦; traditional Chinese: 百老匯大廈; pinyin: Bǎilǎohuì Dàshà, Shanghainese: Pahlowe Dusa) is a nineteen-floor Art Deco five-star hotel in Shanghai, China. and was for over five decades one of the primary symbols of Shanghai. Completed in 1934, the same year as the 19 feet taller Park Hotel.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Broadway_Mansions",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "P&T Architects & Engineers Ltd."
+   ],
+   [
+    "Type",
+    "Hotel"
+   ]
+  ],
+  "image": {
+   "file": "20112-Shanghai, Broadway Mansions.jpg",
+   "w": 2003,
+   "h": 3000,
+   "author": "xiquinhosilva",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A20112-Shanghai%2C_Broadway_Mansions.jpg",
+   "alt": "Broadway Mansions, Beiwaitan Subdistrict"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Broadway_Mansions"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q23804"
+   }
+  ]
+ },
+ {
+  "id": "radio-city-music-hall",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Radio City Music Hall",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.75972,
+  "lon": -73.97917,
+  "summary": "Radio City Music Hall (also known as Radio City) is an entertainment venue and theater at 1260 Avenue of the Americas, within Rockefeller Center, in the Midtown Manhattan neighborhood of New York City. Nicknamed \"The Showplace of the Nation\", it is the headquarters for the Rockettes. Radio City Music Hall was designed by Edward Durell Stone and Donald Deskey in the Art Deco style.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Edward Durell Stone"
+   ],
+   [
+    "Type",
+    "Concert hall"
+   ]
+  ],
+  "image": {
+   "file": "Radio City Music Hall (51395756913).jpg",
+   "w": 3585,
+   "h": 3585,
+   "author": "ajay_suresh",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ARadio_City_Music_Hall_%2851395756913%29.jpg",
+   "alt": "Radio City Music Hall, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q753437"
+   }
+  ]
+ },
+ {
+  "id": "palais-de-la-porte-dore",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Palais de la Porte Dorée",
+  "place": "12th arrondissement of Paris",
+  "country": "France",
+  "lat": 48.83528,
+  "lon": 2.40944,
+  "summary": "The Palais de la Porte Dorée (French pronunciation: [palɛ də la pɔʁt dɔʁe], lit. 'Palace of the Golden Gate') is an exhibit hall located on the edge of the Bois de Vincennes at 293, avenue Daumesnil, 12th arrondissement of Paris, France. It now houses the Musée de l'Histoire de l'Immigration, as well as a tropical aquarium in its cellar. The building is considered a landmark of Art Deco architecture.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Albert Laprade"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Palasi Porte Doree Entree.jpg",
+   "w": 3872,
+   "h": 2592,
+   "author": "AlSepPhoenix",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3APalasi_Porte_Doree_Entree.jpg",
+   "alt": "Palais de la Porte Dorée, 12th arrondissement of Paris"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1141316"
+   }
+  ]
+ },
+ {
+  "id": "freemasons-hall",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Freemasons' Hall",
+  "place": "London Borough of Camden",
+  "country": "United Kingdom",
+  "lat": 51.5151,
+  "lon": -0.121,
+  "summary": "Freemasons' Hall in London is the headquarters of the United Grand Lodge of England and the Supreme Grand Chapter of Royal Arch Masons of England, as well as being a meeting place for many Masonic Lodges in the London area. It is located in Great Queen Street between Holborn and Covent Garden and has been a Masonic meeting place since 1775. Parts of the building are open to the public daily, and its preserved classic Art Deco style, together with its regular use as a film and television location, have made it a tourist destination.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Thomas Sandby"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Freemasons' Hall, London.JPG",
+   "w": 1192,
+   "h": 1790,
+   "author": "Eluveitie",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AFreemasons%27_Hall%2C_London.JPG",
+   "alt": "Freemasons' Hall, London Borough of Camden"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1453586"
+   }
+  ]
+ },
+ {
+  "id": "cvijeta-zuzori-art-pavilion",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Cvijeta Zuzorić Art Pavilion",
+  "place": "Belgrade",
+  "country": "Serbia",
+  "lat": 44.8225,
+  "lon": 20.454,
+  "summary": "„Cvijeta Zuzorić“ Art Pavilion (Serbian: Уметнички павиљон \"Цвијета Зузорић\", Umetnički paviljon \"Cvijeta Zuzorić\") is an exhibition building in Belgrade, in Kalemegdan, situated in the park's section of Little Kalemegdan, next to the south-eastern front of the Belgrade fortress. It was built between 1927 and 1928 after the design of the architect Branislav Kojić, in the Art Deco architectural style.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Branislav Kojić"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Павиљон Цвијете Зузорић3.JPG",
+   "w": 3264,
+   "h": 2448,
+   "author": "PedjaNbg",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%B0%D0%B2%D0%B8%D1%99%D0%BE%D0%BD_%D0%A6%D0%B2%D0%B8%D1%98%D0%B5%D1%82%D0%B5_%D0%97%D1%83%D0%B7%D0%BE%D1%80%D0%B8%D1%9B3.JPG",
+   "alt": "Cvijeta Zuzorić Art Pavilion, Belgrade"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q3373107"
+   }
+  ]
+ },
+ {
   "id": "boston-manor-tube-station",
   "kind": "building",
   "cat": "station",
@@ -1615,7 +2397,7 @@
    ],
    [
     "Type",
-    "London Underground station"
+    "Station located on surface"
    ]
   ],
   "image": {
@@ -1774,328 +2556,6 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q23812"
-   }
-  ]
- },
- {
-  "id": "battersea-power-station",
-  "kind": "building",
-  "cat": "bridge",
-  "title": "Battersea Power Station",
-  "place": "London Borough of Wandsworth",
-  "country": "United Kingdom",
-  "lat": 51.4811,
-  "lon": -0.14444,
-  "summary": "Battersea Power Station is a preserved coal-fired power station located on the south bank of the River Thames in Nine Elms in the London Borough of Wandsworth. It was built by the London Power Company (LPC) to the design of Leonard Pearce, Engineer in Chief to the LPC, and CS Allott & Son Engineers. The architects were J. The station is one of the world's largest brick buildings and notable for its original, Art Deco interior fittings and decor.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Giles Gilbert Scott"
-   ],
-   [
-    "Type",
-    "Coal-fired power station"
-   ]
-  ],
-  "image": {
-   "file": "Battersea Power Station, London-22May2010.jpg",
-   "w": 5616,
-   "h": 3744,
-   "author": "Aurelien Guichard from London, United Kingdom",
-   "license": "CC BY-SA 2.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABattersea_Power_Station%2C_London-22May2010.jpg",
-   "alt": "Battersea Power Station, London Borough of Wandsworth"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q810953"
-   }
-  ]
- },
- {
-  "id": "torrione-ina",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Torrione INA",
-  "place": "Brescia",
-  "country": "Italy",
-  "lat": 45.53852,
-  "lon": 10.21887,
-  "summary": "The Torrione INA (transl. \"INA Tower\"), also known as Torrione or Grattacielo, is a tall building in Brescia, Italy. Built between 1930 and 1932, it is the first skyscraper in Italy and also one of the first skyscrapers in Europe. The architectural style of this building is predominantly Art Deco, with influences from Chicago School.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Torrione_INA",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Marcello Piacentini"
-   ],
-   [
-    "Type",
-    "Tower"
-   ]
-  ],
-  "image": {
-   "file": "Torre in Piazza della Vittoria Brescia.jpg",
-   "w": 4652,
-   "h": 8444,
-   "author": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a message . This imag",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ATorre_in_Piazza_della_Vittoria_Brescia.jpg",
-   "alt": "Torrione INA, Brescia"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Torrione_INA"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q16616997"
-   }
-  ]
- },
- {
-  "id": "500-fifth-avenue",
-  "kind": "building",
-  "cat": "tower",
-  "title": "500 Fifth Avenue",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.7538,
-  "lon": -73.9813,
-  "summary": "500 Fifth Avenue is a 60-story, 697-foot-tall (212 m) office building on the northwest corner of Fifth Avenue and 42nd Street in the Midtown Manhattan neighborhood of New York City, New York, United States. The building was designed by Shreve, Lamb & Harmon in the Art Deco style and constructed from 1929 to 1931.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/500_Fifth_Avenue",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Shreve, Lamb & Harmon"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "500 Fifth Avenue Panorama.jpg",
-   "w": 3137,
-   "h": 4186,
-   "author": "500_Fifth_Avenue_9299.JPG : Gryffindor 500_Fifth_Avenue_9300.JPG : Gryffindor derivative work: xavax",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3A500_Fifth_Avenue_Panorama.jpg",
-   "alt": "500 Fifth Avenue, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/500_Fifth_Avenue"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q133599"
-   }
-  ]
- },
- {
-  "id": "empire-state-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Empire State Building",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.74833,
-  "lon": -73.98556,
-  "summary": "The Empire State Building is a 102-story, supertall skyscraper in the Midtown South neighborhood of Manhattan, New York City, United States. The building was designed in the Art Deco style by Shreve, Lamb & Harmon and constructed between 1930 and 1931. Its name is derived from \"Empire State\", the nickname of New York state.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Empire_State_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Shreve, Lamb & Harmon"
-   ],
-   [
-    "Type",
-    "Office building"
-   ]
-  ],
-  "image": {
-   "file": "Empire State Building (aerial view).jpg",
-   "w": 846,
-   "h": 1270,
-   "author": "Sam Valadi",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AEmpire_State_Building_%28aerial_view%29.jpg",
-   "alt": "Empire State Building, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Empire_State_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q9188"
-   }
-  ]
- },
- {
-  "id": "vytautas-the-great-war-museum",
-  "kind": "building",
-  "cat": "civic",
-  "title": "Vytautas the Great War Museum",
-  "place": "Kaunas",
-  "country": "Lithuania",
-  "lat": 54.9,
-  "lon": 23.9119,
-  "summary": "The Vytautas the Great War Museum (Lithuanian: Vytauto Didžiojo karo muziejus) is a museum in Kaunas, Lithuania. It was built in Art Deco and early functionalism style. Originally it was established in 1921 by Vladas Nagevičius but later it was decided to move to a larger location.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Vladimiras Dubeneckis, Kārlis Reisons"
-   ],
-   [
-    "Type",
-    "Military museum"
-   ]
-  ],
-  "image": {
-   "file": "Vytauto Didžiojo karo muziejus (aut. A. Užbalis).jpg",
-   "w": 850,
-   "h": 506,
-   "author": "Vdkaromuziejus",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AVytauto_Did%C5%BEiojo_karo_muziejus_%28aut._A._U%C5%BEbalis%29.jpg",
-   "alt": "Vytautas the Great War Museum, Kaunas"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q3267398"
-   }
-  ]
- },
- {
-  "id": "chicago-board-of-trade-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Chicago Board of Trade Building",
-  "place": "Illinois",
-  "country": "United States",
-  "lat": 41.87812,
-  "lon": -87.63225,
-  "summary": "The Chicago Board of Trade Building is a 44-story, 604-foot (184 m) Art Deco skyscraper located in the Chicago Loop, standing at the foot of the LaSalle Street \"canyon\".",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Chicago_Board_of_Trade_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Holabird & Root"
-   ],
-   [
-    "Type",
-    "Tower block"
-   ]
-  ],
-  "image": {
-   "file": "Chicago Board Of Trade Building (altered filtration version).jpg",
-   "w": 1871,
-   "h": 3778,
-   "author": "Joe Ravi ( Shutterstock iStock Dreamstime )",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChicago_Board_Of_Trade_Building_%28altered_filtration_version%29.jpg",
-   "alt": "Chicago Board of Trade Building, Illinois"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Chicago_Board_of_Trade_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q2224700"
-   }
-  ]
- },
- {
-  "id": "boerentoren",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Boerentoren",
-  "place": "Antwerp",
-  "country": "Belgium",
-  "lat": 51.21864,
-  "lon": 4.40408,
-  "summary": "The Boerentoren (English: \"Farmers' Tower\"; officially the KBC Tower, originally the Torengebouw van Antwerpen) is a historic high-rise building in Antwerp, Belgium. Designed in Art Deco style by Jan Vanhoenacker, Émile Van Averbeke and Jos Smolderen, the Boerentoren was one of Europe's very first tall buildings.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Boerentoren",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Joseph Smolderen, Emiel Van Averbeke, Jan Vanhoenacker"
-   ],
-   [
-    "Type",
-    "Tower block"
-   ]
-  ],
-  "image": {
-   "file": "Boerentoren1.jpg",
-   "w": 2030,
-   "h": 2799,
-   "author": "User:Manfreeed",
-   "license": "CC BY-SA 2.5",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABoerentoren1.jpg",
-   "alt": "Boerentoren, Antwerp"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Boerentoren"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q59487"
    }
   ]
  },
@@ -2305,7 +2765,7 @@
    ],
    [
     "Type",
-    "Department store"
+    "Architectural heritage monument"
    ]
   ],
   "image": {
@@ -2376,370 +2836,48 @@
   ]
  },
  {
-  "id": "piscine-molitor",
-  "kind": "building",
-  "cat": "hotel",
-  "title": "Piscine Molitor",
-  "place": "16th arrondissement of Paris",
-  "country": "France",
-  "lat": 48.84517,
-  "lon": 2.25309,
-  "summary": "Piscine Molitor (English: Miller Swimming Pool, French pronunciation: [pisin molitɔʁ]; also known as the Piscines Auteuil-Molitor or the Grands établissements balnéaires d'Auteuil) is a swimming pool and hotel complex located in Porte Molitor, 16th arrondissement of Paris, Île-de-France, Paris, France. The pool is known for its Art Deco designs and the popular introduction of the bikini by Louis Réard on 5 July 1946.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Piscine_Molitor",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Jacques Rougerie, Alain-Charles Perrot, Lucien Pollet"
-   ],
-   [
-    "Type",
-    "Sports venue"
-   ]
-  ],
-  "image": {
-   "file": "Paris, piscine Molitor, 1 November 2015 003.jpg",
-   "w": 5184,
-   "h": 3456,
-   "author": "Fred Romero from Paris, France",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AParis%2C_piscine_Molitor%2C_1_November_2015_003.jpg",
-   "alt": "Piscine Molitor, 16th arrondissement of Paris"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Piscine_Molitor"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q645095"
-   }
-  ]
- },
- {
-  "id": "national-basilica-of-the-sacred-heart",
-  "kind": "building",
-  "cat": "religious",
-  "title": "National Basilica of the Sacred Heart",
-  "place": "Ganshoren",
-  "country": "Belgium",
-  "lat": 50.86667,
-  "lon": 4.31722,
-  "summary": "The National Basilica of the Sacred Heart (French: Basilique nationale du Sacré-Cœur; Dutch: Nationale Basiliek van het Heilig-Hart) is a Catholic minor basilica and parish church in Brussels, Belgium. It is dedicated to the Sacred Heart, inspired by the Basilique du Sacré-Cœur in Paris. The massive brick and reinforced concrete structure, in Art Deco style of neo-Byzantine inspiration, features two thinner towers and a nearly as high green copper dome that rises 89 metres (292 ft) above ground, dominating Brussels' north-western skyline.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Pierre Langerock, Albert Van huffel, Paul Rome"
-   ],
-   [
-    "Type",
-    "Minor basilica"
-   ]
-  ],
-  "image": {
-   "file": "1001 Basilica of the Sacred Heart in Brussels Photo by Giles Laurent.jpg",
-   "w": 8064,
-   "h": 6048,
-   "author": "Giles Laurent",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A1001_Basilica_of_the_Sacred_Heart_in_Brussels_Photo_by_Giles_Laurent.jpg",
-   "alt": "National Basilica of the Sacred Heart, Ganshoren"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q846006"
-   }
-  ]
- },
- {
-  "id": "manila-metropolitan-theatre",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Manila Metropolitan Theatre",
-  "place": "",
-  "country": "Philippines",
-  "lat": 14.594,
-  "lon": 120.9805,
-  "summary": "The Manila Metropolitan Theater (Filipino: Tanghalang Metropolitan; also known as the Metropolitan Theater; abbreviated as the MET) is a historic Philippine Art Deco building located in Plaza Lawton in Ermita, Manila. It is recognized as the forefront of the Art Deco architectural style in the Philippines. Designed by architect Juan M.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Juan M. Arellano"
-   ],
-   [
-    "Type",
-    "Theatre building"
-   ]
-  ],
-  "image": {
-   "file": "Manila Metropolitan Theaterjwilz.jpg",
-   "w": 2576,
-   "h": 1932,
-   "author": "JWilz12345",
-   "license": "CC0",
-   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Metropolitan_Theaterjwilz.jpg",
-   "alt": "Manila Metropolitan Theatre"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1639613"
-   }
-  ]
- },
- {
-  "id": "riga-central-market",
-  "kind": "building",
-  "cat": "shop",
-  "title": "Riga Central Market",
-  "place": "Riga",
-  "country": "Latvia",
-  "lat": 56.944,
-  "lon": 24.116,
-  "summary": "Riga Central Market (Latvian: Rīgas Centrāltirgus) is Europe's largest market and bazaar in Riga, Latvia. It is one of the most notable structures from the 20th century in Latvia and has been included in the UNESCO World Heritage Site list together with Old Riga in 1998. It was planned from 1922 and built from 1924 to 1930. The main structures of the market are five pavilions constructed by reusing old German Zeppelin hangars and incorporating Neoclassicism and Art Deco styles.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Riga_Central_Market",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Pāvils Dreijmanis, Pavel Pavlov"
-   ],
-   [
-    "Type",
-    "Market hall"
-   ]
-  ],
-  "image": {
-   "file": "Mercado Central, Riga, Letonia, 2012-08-07, DD 01.JPG",
-   "w": 5064,
-   "h": 2417,
-   "author": "Diego Delso",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AMercado_Central%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG",
-   "alt": "Riga Central Market, Riga"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Riga_Central_Market"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q190670"
-   }
-  ]
- },
- {
-  "id": "telephones-company-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Telephones Company Building",
-  "place": "Bucharest",
-  "country": "Romania",
-  "lat": 44.43629,
-  "lon": 26.09757,
-  "summary": "Telephones Company Building (Romanian: Palatul Telefoanelor) is an Art Deco office building located on Calea Victoriei in Bucharest, Romania. It is now owned by Telekom România.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Telephones_Company_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Louis S. Weeks"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Telephones Company Building, Bucharest.jpg",
-   "w": 3072,
-   "h": 4080,
-   "author": "Richard Nevell",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ATelephones_Company_Building%2C_Bucharest.jpg",
-   "alt": "Telephones Company Building, Bucharest"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Telephones_Company_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q4982657"
-   }
-  ]
- },
- {
-  "id": "carew-tower",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Carew Tower",
-  "place": "Cincinnati",
-  "country": "United States",
-  "lat": 39.10083,
-  "lon": -84.5132,
-  "summary": "Carew Tower is a 49-story, 574-foot (175 m) Art Deco skyscraper in downtown Cincinnati, Ohio. The second-tallest building in the city, it was Cincinnati's tallest from 1930 until 2011, when it was surpassed by Great American Tower at Queen City Square. The tower is named after Mabley & Carew department store proprietor Joseph T.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Carew_Tower",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Walter W. Ahlschlager"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "Carew Tower, Cincinnati, Ohio.jpg",
-   "w": 1424,
-   "h": 2144,
-   "author": "EEJCC",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ACarew_Tower%2C_Cincinnati%2C_Ohio.jpg",
-   "alt": "Carew Tower, Cincinnati"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Carew_Tower"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q152129"
-   }
-  ]
- },
- {
-  "id": "estdio-do-pacaembu",
+  "id": "vytautas-the-great-war-museum",
   "kind": "building",
   "cat": "civic",
-  "title": "Estádio do Pacaembu",
-  "place": "São Paulo",
-  "country": "Brazil",
-  "lat": -23.54864,
-  "lon": -46.66511,
-  "summary": "The Estádio do Pacaembu (Portuguese pronunciation: [isˈtadʒiu du pakaẽˈbu]; lit. 'Pacaembu Stadium', named after the Pacaembu neighbourhood), currently known as Mercado Livre Arena Pacaembu for sponsorship reasons, is an association football stadium in São Paulo, Brazil. Located in the Pacaembu neighbourhood, it is owned by Municipal Prefecture of São Paulo. The stadium was listed by the São Paulo state Council for the Defense of Historical, Archaeological, Artistic and Tourist Heritage (CONDEPHAAT) in 1998 due to its Art Deco style, characteristic of the period in which it was built.",
+  "title": "Vytautas the Great War Museum",
+  "place": "Kaunas",
+  "country": "Lithuania",
+  "lat": 54.9,
+  "lon": 23.9119,
+  "summary": "The Vytautas the Great War Museum (Lithuanian: Vytauto Didžiojo karo muziejus) is a museum in Kaunas, Lithuania. It was built in Art Deco and early functionalism style. Originally it was established in 1921 by Vladas Nagevičius but later it was decided to move to a larger location.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium",
+   "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
-    "Architect",
-    "Ramos de Azevedo"
+    "Architects",
+    "Vladimiras Dubeneckis, Kārlis Reisons"
    ],
    [
     "Type",
-    "Multi-purpose stadium"
+    "Built structure"
    ]
   ],
   "image": {
-   "file": "Estadio Municipal do Pacaembú. - panoramio.jpg",
-   "w": 2844,
-   "h": 1896,
-   "author": "joao batista Shimoto",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AEstadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg",
-   "alt": "Estádio do Pacaembu, São Paulo"
+   "file": "Vytauto Didžiojo karo muziejus (aut. A. Užbalis).jpg",
+   "w": 850,
+   "h": 506,
+   "author": "Vdkaromuziejus",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AVytauto_Did%C5%BEiojo_karo_muziejus_%28aut._A._U%C5%BEbalis%29.jpg",
+   "alt": "Vytautas the Great War Museum, Kaunas"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium"
+    "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q655175"
-   }
-  ]
- },
- {
-  "id": "pont-de-sant-jordi",
-  "kind": "building",
-  "cat": "bridge",
-  "title": "Pont de Sant Jordi",
-  "place": "Alcoy",
-  "country": "Spain",
-  "lat": 38.7,
-  "lon": -0.47518,
-  "summary": "The San Jorge Bridge (Pont de Sant Jordi in Valencian, Puente de San Jorge in Spanish), is a bridge located in Alcoy (Alicante), Valencian Community, Spain, crossing the Serpis River. The style of the bridge is the art déco, is considered to be the most popular image of the city.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Víctor Eusa"
-   ],
-   [
-    "Type",
-    "Art déco bridge"
-   ]
-  ],
-  "image": {
-   "file": "Pont de Sant Jordi, Alcoi, País Valencià.JPG",
-   "w": 3664,
-   "h": 2748,
-   "author": "Joanbanjo",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3APont_de_Sant_Jordi%2C_Alcoi%2C_Pa%C3%ADs_Valenci%C3%A0.JPG",
-   "alt": "Pont de Sant Jordi, Alcoy"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q18006942"
+    "url": "https://www.wikidata.org/wiki/Q3267398"
    }
   ]
  },
@@ -2811,7 +2949,7 @@
    ],
    [
     "Type",
-    "Hotel building"
+    "Architectural heritage monument"
    ]
   ],
   "image": {
@@ -2928,70 +3066,70 @@
   ]
  },
  {
-  "id": "radio-city-music-hall",
+  "id": "riga-central-market",
   "kind": "building",
-  "cat": "theatre",
-  "title": "Radio City Music Hall",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.75972,
-  "lon": -73.97917,
-  "summary": "Radio City Music Hall (also known as Radio City) is an entertainment venue and theater at 1260 Avenue of the Americas, within Rockefeller Center, in the Midtown Manhattan neighborhood of New York City. Nicknamed \"The Showplace of the Nation\", it is the headquarters for the Rockettes. Radio City Music Hall was designed by Edward Durell Stone and Donald Deskey in the Art Deco style.",
+  "cat": "shop",
+  "title": "Riga Central Market",
+  "place": "Riga",
+  "country": "Latvia",
+  "lat": 56.944,
+  "lon": 24.116,
+  "summary": "Riga Central Market (Latvian: Rīgas Centrāltirgus) is Europe's largest market and bazaar in Riga, Latvia. It is one of the most notable structures from the 20th century in Latvia and has been included in the UNESCO World Heritage Site list together with Old Riga in 1998. It was planned from 1922 and built from 1924 to 1930. The main structures of the market are five pavilions constructed by reusing old German Zeppelin hangars and incorporating Neoclassicism and Art Deco styles.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
+   "url": "https://en.wikipedia.org/wiki/Riga_Central_Market",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
-    "Architect",
-    "Edward Durell Stone"
+    "Architects",
+    "Pāvils Dreijmanis, Pavel Pavlov"
    ],
    [
     "Type",
-    "Concert hall"
+    "Market hall"
    ]
   ],
   "image": {
-   "file": "Radio City Music Hall (51395756913).jpg",
-   "w": 3585,
-   "h": 3585,
-   "author": "ajay_suresh",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ARadio_City_Music_Hall_%2851395756913%29.jpg",
-   "alt": "Radio City Music Hall, Manhattan"
+   "file": "Mercado Central, Riga, Letonia, 2012-08-07, DD 01.JPG",
+   "w": 5064,
+   "h": 2417,
+   "author": "Diego Delso",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AMercado_Central%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG",
+   "alt": "Riga Central Market, Riga"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall"
+    "url": "https://en.wikipedia.org/wiki/Riga_Central_Market"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q753437"
+    "url": "https://www.wikidata.org/wiki/Q190670"
    }
   ]
  },
  {
-  "id": "palais-de-la-porte-dore",
+  "id": "telephones-company-building",
   "kind": "building",
-  "cat": "civic",
-  "title": "Palais de la Porte Dorée",
-  "place": "12th arrondissement of Paris",
-  "country": "France",
-  "lat": 48.83528,
-  "lon": 2.40944,
-  "summary": "The Palais de la Porte Dorée (French pronunciation: [palɛ də la pɔʁt dɔʁe], lit. 'Palace of the Golden Gate') is an exhibit hall located on the edge of the Bois de Vincennes at 293, avenue Daumesnil, 12th arrondissement of Paris, France. It now houses the Musée de l'Histoire de l'Immigration, as well as a tropical aquarium in its cellar. The building is considered a landmark of Art Deco architecture.",
+  "cat": "tower",
+  "title": "Telephones Company Building",
+  "place": "Bucharest",
+  "country": "Romania",
+  "lat": 44.43629,
+  "lon": 26.09757,
+  "summary": "Telephones Company Building (Romanian: Palatul Telefoanelor) is an Art Deco office building located on Calea Victoriei in Bucharest, Romania. It is now owned by Telekom România.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e",
+   "url": "https://en.wikipedia.org/wiki/Telephones_Company_Building",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Albert Laprade"
+    "Louis S. Weeks"
    ],
    [
     "Type",
@@ -2999,115 +3137,23 @@
    ]
   ],
   "image": {
-   "file": "Palasi Porte Doree Entree.jpg",
-   "w": 3872,
-   "h": 2592,
-   "author": "AlSepPhoenix",
+   "file": "Telephones Company Building, Bucharest.jpg",
+   "w": 3072,
+   "h": 4080,
+   "author": "Richard Nevell",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3APalasi_Porte_Doree_Entree.jpg",
-   "alt": "Palais de la Porte Dorée, 12th arrondissement of Paris"
+   "page": "https://commons.wikimedia.org/wiki/File%3ATelephones_Company_Building%2C_Bucharest.jpg",
+   "alt": "Telephones Company Building, Bucharest"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e"
+    "url": "https://en.wikipedia.org/wiki/Telephones_Company_Building"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1141316"
-   }
-  ]
- },
- {
-  "id": "freemasons-hall",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Freemasons' Hall",
-  "place": "London Borough of Camden",
-  "country": "United Kingdom",
-  "lat": 51.5151,
-  "lon": -0.121,
-  "summary": "Freemasons' Hall in London is the headquarters of the United Grand Lodge of England and the Supreme Grand Chapter of Royal Arch Masons of England, as well as being a meeting place for many Masonic Lodges in the London area. It is located in Great Queen Street between Holborn and Covent Garden and has been a Masonic meeting place since 1775. Parts of the building are open to the public daily, and its preserved classic Art Deco style, together with its regular use as a film and television location, have made it a tourist destination.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Thomas Sandby"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Freemasons' Hall, London.JPG",
-   "w": 1192,
-   "h": 1790,
-   "author": "Eluveitie",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AFreemasons%27_Hall%2C_London.JPG",
-   "alt": "Freemasons' Hall, London Borough of Camden"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1453586"
-   }
-  ]
- },
- {
-  "id": "cvijeta-zuzori-art-pavilion",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Cvijeta Zuzorić Art Pavilion",
-  "place": "Belgrade",
-  "country": "Serbia",
-  "lat": 44.8225,
-  "lon": 20.454,
-  "summary": "„Cvijeta Zuzorić“ Art Pavilion (Serbian: Уметнички павиљон \"Цвијета Зузорић\", Umetnički paviljon \"Cvijeta Zuzorić\") is an exhibition building in Belgrade, in Kalemegdan, situated in the park's section of Little Kalemegdan, next to the south-eastern front of the Belgrade fortress. It was built between 1927 and 1928 after the design of the architect Branislav Kojić, in the Art Deco architectural style.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Branislav Kojić"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Павиљон Цвијете Зузорић3.JPG",
-   "w": 3264,
-   "h": 2448,
-   "author": "PedjaNbg",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%B0%D0%B2%D0%B8%D1%99%D0%BE%D0%BD_%D0%A6%D0%B2%D0%B8%D1%98%D0%B5%D1%82%D0%B5_%D0%97%D1%83%D0%B7%D0%BE%D1%80%D0%B8%D1%9B3.JPG",
-   "alt": "Cvijeta Zuzorić Art Pavilion, Belgrade"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q3373107"
+    "url": "https://www.wikidata.org/wiki/Q4982657"
    }
   ]
  },
@@ -3342,70 +3388,24 @@
   ]
  },
  {
-  "id": "1-wall-street",
-  "kind": "building",
-  "cat": "civic",
-  "title": "1 Wall Street",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.70722,
-  "lon": -74.01167,
-  "summary": "1 Wall Street (also known as the Irving Trust Company Building, the Bank of New York Building, and the BNY Mellon Building) is a 654-foot-tall (199 m) Art Deco skyscraper in the Financial District of Lower Manhattan, New York City, United States. The building, which occupies a full city block, consists of two sections.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/1_Wall_Street",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Ralph Thomas Walker"
-   ],
-   [
-    "Type",
-    "Bank building"
-   ]
-  ],
-  "image": {
-   "file": "1 Wall Street panoramic.jpg",
-   "w": 2963,
-   "h": 4109,
-   "author": "1_Wall_Street_001.JPG : Gryffindor 1_Wall_Street_002.JPG : Gryffindor derivative work: Justass ( talk )",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3A1_Wall_Street_panoramic.jpg",
-   "alt": "1 Wall Street, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/1_Wall_Street"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q209017"
-   }
-  ]
- },
- {
-  "id": "barclay-vesey-building",
+  "id": "carew-tower",
   "kind": "building",
   "cat": "tower",
-  "title": "Barclay-Vesey Building",
-  "place": "Manhattan",
+  "title": "Carew Tower",
+  "place": "Cincinnati",
   "country": "United States",
-  "lat": 40.71375,
-  "lon": -74.01292,
-  "summary": "The Barclay–Vesey Building (also known as 100 Barclay, the Verizon Building, and formerly the New York Telephone Company Building) is an office and residential building at 140 West Street in Lower Manhattan, New York City. The 32-story building was designed in the Art Deco style by Ralph Walker of Voorhees, Gmelin and Walker, and was Walker's first major commission as well as one of the first Art Deco skyscrapers.",
+  "lat": 39.10083,
+  "lon": -84.5132,
+  "summary": "Carew Tower is a 49-story, 574-foot (175 m) Art Deco skyscraper in downtown Cincinnati, Ohio. The second-tallest building in the city, it was Cincinnati's tallest from 1930 until 2011, when it was surpassed by Great American Tower at Queen City Square. The tower is named after Mabley & Carew department store proprietor Joseph T.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building",
+   "url": "https://en.wikipedia.org/wiki/Carew_Tower",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Ralph Thomas Walker"
+    "Walter W. Ahlschlager"
    ],
    [
     "Type",
@@ -3413,115 +3413,115 @@
    ]
   ],
   "image": {
-   "file": "Barclay-Vesey Building 140 West Street.jpg",
-   "w": 2270,
-   "h": 3107,
-   "author": "Beyond My Ken",
+   "file": "Carew Tower, Cincinnati, Ohio.jpg",
+   "w": 1424,
+   "h": 2144,
+   "author": "EEJCC",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABarclay-Vesey_Building_140_West_Street.jpg",
-   "alt": "Barclay-Vesey Building, Manhattan"
+   "page": "https://commons.wikimedia.org/wiki/File%3ACarew_Tower%2C_Cincinnati%2C_Ohio.jpg",
+   "alt": "Carew Tower, Cincinnati"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building"
+    "url": "https://en.wikipedia.org/wiki/Carew_Tower"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1983213"
+    "url": "https://www.wikidata.org/wiki/Q152129"
    }
   ]
  },
  {
-  "id": "cine-callao",
+  "id": "estdio-do-pacaembu",
   "kind": "building",
-  "cat": "theatre",
-  "title": "Cine Callao",
-  "place": "Madrid",
+  "cat": "civic",
+  "title": "Estádio do Pacaembu",
+  "place": "São Paulo",
+  "country": "Brazil",
+  "lat": -23.54864,
+  "lon": -46.66511,
+  "summary": "The Estádio do Pacaembu (Portuguese pronunciation: [isˈtadʒiu du pakaẽˈbu]; lit. 'Pacaembu Stadium', named after the Pacaembu neighbourhood), currently known as Mercado Livre Arena Pacaembu for sponsorship reasons, is an association football stadium in São Paulo, Brazil. Located in the Pacaembu neighbourhood, it is owned by Municipal Prefecture of São Paulo. The stadium was listed by the São Paulo state Council for the Defense of Historical, Archaeological, Artistic and Tourist Heritage (CONDEPHAAT) in 1998 due to its Art Deco style, characteristic of the period in which it was built.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Ramos de Azevedo"
+   ],
+   [
+    "Type",
+    "Stadium"
+   ]
+  ],
+  "image": {
+   "file": "Estadio Municipal do Pacaembú. - panoramio.jpg",
+   "w": 2844,
+   "h": 1896,
+   "author": "joao batista Shimoto",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AEstadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg",
+   "alt": "Estádio do Pacaembu, São Paulo"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q655175"
+   }
+  ]
+ },
+ {
+  "id": "pont-de-sant-jordi",
+  "kind": "building",
+  "cat": "bridge",
+  "title": "Pont de Sant Jordi",
+  "place": "Alcoy",
   "country": "Spain",
-  "lat": 40.42,
-  "lon": -3.7061,
-  "summary": "Cine Callao is a building located in Plaza de Callao in Madrid. It is a common venue for film premieres and press screenings. Designed by Luis Gutiérrez Soto, the facade features elements inspired by the Art Deco.",
+  "lat": 38.7,
+  "lon": -0.47518,
+  "summary": "The San Jorge Bridge (Pont de Sant Jordi in Valencian, Puente de San Jorge in Spanish), is a bridge located in Alcoy (Alicante), Valencian Community, Spain, crossing the Serpis River. The style of the bridge is the art déco, is considered to be the most popular image of the city.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Cine_Callao",
+   "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Luis Gutiérrez Soto"
+    "Víctor Eusa"
    ],
    [
     "Type",
-    "Movie theater"
+    "Art déco bridge"
    ]
   ],
   "image": {
-   "file": "Cine Callao, Madrid, Spain 2012.jpg",
-   "w": 2356,
-   "h": 1566,
-   "author": "David Gordillo",
-   "license": "CC BY-SA 2.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ACine_Callao%2C_Madrid%2C_Spain_2012.jpg",
-   "alt": "Cine Callao, Madrid"
+   "file": "Pont de Sant Jordi, Alcoi, País Valencià.JPG",
+   "w": 3664,
+   "h": 2748,
+   "author": "Joanbanjo",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3APont_de_Sant_Jordi%2C_Alcoi%2C_Pa%C3%ADs_Valenci%C3%A0.JPG",
+   "alt": "Pont de Sant Jordi, Alcoy"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Cine_Callao"
+    "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q5769470"
-   }
-  ]
- },
- {
-  "id": "broadway-mansions",
-  "kind": "building",
-  "cat": "hotel",
-  "title": "Broadway Mansions",
-  "place": "Beiwaitan Subdistrict",
-  "country": "People's Republic of China",
-  "lat": 31.24634,
-  "lon": 121.48548,
-  "summary": "The Broadway Mansions (simplified Chinese: 百老汇大厦; traditional Chinese: 百老匯大廈; pinyin: Bǎilǎohuì Dàshà, Shanghainese: Pahlowe Dusa) is a nineteen-floor Art Deco five-star hotel in Shanghai, China. and was for over five decades one of the primary symbols of Shanghai. Completed in 1934, the same year as the 19 feet taller Park Hotel.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Broadway_Mansions",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "P&T Architects & Engineers Ltd."
-   ],
-   [
-    "Type",
-    "Hotel"
-   ]
-  ],
-  "image": {
-   "file": "20112-Shanghai, Broadway Mansions.jpg",
-   "w": 2003,
-   "h": 3000,
-   "author": "xiquinhosilva",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A20112-Shanghai%2C_Broadway_Mansions.jpg",
-   "alt": "Broadway Mansions, Beiwaitan Subdistrict"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Broadway_Mansions"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q23804"
+    "url": "https://www.wikidata.org/wiki/Q18006942"
    }
   ]
  },
@@ -3639,7 +3639,7 @@
    ],
    [
     "Type",
-    "Toll bridge"
+    "Steel bridge"
    ]
   ],
   "image": {
@@ -3844,6 +3844,282 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q3527708"
+   }
+  ]
+ },
+ {
+  "id": "eastern-columbia-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Eastern Columbia Building",
+  "place": "Los Angeles",
+  "country": "United States",
+  "lat": 34.04275,
+  "lon": -118.25623,
+  "summary": "The Eastern Columbia Building, also known as the Eastern Columbia Lofts, is a thirteen-story Art Deco building designed by Claud Beelman located at 849 S. Broadway in the Broadway Theater District of Downtown Los Angeles. It opened on September 12, 1930, after just nine months of construction.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Eastern_Columbia_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Claud Wilbur Beelman"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Eastern Columbia Tower - Los Angeles.jpg",
+   "w": 2000,
+   "h": 2997,
+   "author": "Galkab",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AEastern_Columbia_Tower_-_Los_Angeles.jpg",
+   "alt": "Eastern Columbia Building, Los Angeles"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Eastern_Columbia_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q71842"
+   }
+  ]
+ },
+ {
+  "id": "buffalo-central-terminal",
+  "kind": "building",
+  "cat": "station",
+  "title": "Buffalo Central Terminal",
+  "place": "Buffalo",
+  "country": "United States",
+  "lat": 42.8896,
+  "lon": -78.8305,
+  "summary": "Buffalo Central Terminal is a historic former railroad station in Buffalo, New York. An active station from 1929 to 1979, the 17-story Art Deco style station was designed by architects Fellheimer & Wagner for the New York Central Railroad.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Buffalo_Central_Terminal",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Alfred T. Fellheimer"
+   ],
+   [
+    "Type",
+    "Union station"
+   ]
+  ],
+  "image": {
+   "file": "Buffalo Central Terminal 1.jpg",
+   "w": 2540,
+   "h": 2048,
+   "author": "Dave Pape",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABuffalo_Central_Terminal_1.jpg",
+   "alt": "Buffalo Central Terminal, Buffalo"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Buffalo_Central_Terminal"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1318379"
+   }
+  ]
+ },
+ {
+  "id": "gledden-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Gledden Building",
+  "place": "Western Australia",
+  "country": "Australia",
+  "lat": -31.95377,
+  "lon": 115.85714,
+  "summary": "The Gledden Building is an Art Deco office building in Perth, Western Australia. The building was constructed on land that had been bequeathed to the University of Western Australia by surveyor Robert Gledden.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Gledden_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Harold Boas"
+   ],
+   [
+    "Type",
+    "Office building"
+   ]
+  ],
+  "image": {
+   "file": "Gledden 001.JPG",
+   "w": 1704,
+   "h": 2272,
+   "author": "Dingo dude",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AGledden_001.JPG",
+   "alt": "Gledden Building, Western Australia"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Gledden_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5567465"
+   }
+  ]
+ },
+ {
+  "id": "teatro-broadway",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Teatro Broadway",
+  "place": "Buenos Aires",
+  "country": "Argentina",
+  "lat": -34.60363,
+  "lon": -58.38312,
+  "summary": "The Teatro Broadway is an Art Deco style theatre in Buenos Aires, Argentina which opened on October 11, 1930. Located near the centre of the city at 1155 Corrientes Avenue, it was designed by the architect Jorge Kálnay.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Broadway_Theatre_(Buenos_Aires)",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Jorge Kálnay"
+   ],
+   [
+    "Type",
+    "Movie theater"
+   ]
+  ],
+  "image": {
+   "file": "Teatro Broadway (Buenos Aires).JPG",
+   "w": 1536,
+   "h": 2048,
+   "author": "Elsapucai (photo) Jorge Kálnay (1894–1957) (building)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ATeatro_Broadway_%28Buenos_Aires%29.JPG",
+   "alt": "Teatro Broadway, Buenos Aires"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Broadway_Theatre_(Buenos_Aires)"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q6139616"
+   }
+  ]
+ },
+ {
+  "id": "manila-jai-alai-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Manila Jai Alai Building",
+  "place": "Manila",
+  "country": "Philippines",
+  "lat": 14.58472,
+  "lon": 120.98417,
+  "summary": "The Manila Jai Alai Building was a building designed by American architects Welton Becket and Walter Wurdeman that functioned as a building for which jai alai games were held. It was built in the Streamline Moderne style in 1940 and survived the Battle of Manila. It was considered as the finest Art Deco building in Asia, until its demolition.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Manila_Jai_Alai_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Welton Becket"
+   ],
+   [
+    "Type",
+    "Long fronton"
+   ]
+  ],
+  "image": {
+   "file": "Manila Jai Alai Building in 1955.jpg",
+   "w": 945,
+   "h": 637,
+   "author": "USN",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Jai_Alai_Building_in_1955.jpg",
+   "alt": "Manila Jai Alai Building, Manila"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Manila_Jai_Alai_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q6749689"
+   }
+  ]
+ },
+ {
+  "id": "vijali-ghar",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Vijali Ghar",
+  "place": "Ahmedabad district",
+  "country": "India",
+  "lat": 23.02627,
+  "lon": 72.58159,
+  "summary": "Vijali Ghar, also known as Electricity House, is an office building on Relief Road, Ahmedabad, Gujarat, India. It is an Art Deco building designed by Claude Batley.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Vijali_Ghar",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Claude Batley"
+   ],
+   [
+    "Type",
+    "Office building"
+   ]
+  ],
+  "image": {
+   "file": "Electricity House Ahmedabad 1.jpg",
+   "w": 6000,
+   "h": 4000,
+   "author": "Imfarhad7",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AElectricity_House_Ahmedabad_1.jpg",
+   "alt": "Vijali Ghar, Ahmedabad district"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Vijali_Ghar"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q106535985"
    }
   ]
  },
@@ -4170,282 +4446,6 @@
   ]
  },
  {
-  "id": "eastern-columbia-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Eastern Columbia Building",
-  "place": "Los Angeles",
-  "country": "United States",
-  "lat": 34.04275,
-  "lon": -118.25623,
-  "summary": "The Eastern Columbia Building, also known as the Eastern Columbia Lofts, is a thirteen-story Art Deco building designed by Claud Beelman located at 849 S. Broadway in the Broadway Theater District of Downtown Los Angeles. It opened on September 12, 1930, after just nine months of construction.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Eastern_Columbia_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Claud Wilbur Beelman"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Eastern Columbia Tower - Los Angeles.jpg",
-   "w": 2000,
-   "h": 2997,
-   "author": "Galkab",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AEastern_Columbia_Tower_-_Los_Angeles.jpg",
-   "alt": "Eastern Columbia Building, Los Angeles"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Eastern_Columbia_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q71842"
-   }
-  ]
- },
- {
-  "id": "buffalo-central-terminal",
-  "kind": "building",
-  "cat": "station",
-  "title": "Buffalo Central Terminal",
-  "place": "Buffalo",
-  "country": "United States",
-  "lat": 42.8896,
-  "lon": -78.8305,
-  "summary": "Buffalo Central Terminal is a historic former railroad station in Buffalo, New York. An active station from 1929 to 1979, the 17-story Art Deco style station was designed by architects Fellheimer & Wagner for the New York Central Railroad.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Buffalo_Central_Terminal",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Alfred T. Fellheimer"
-   ],
-   [
-    "Type",
-    "Union station"
-   ]
-  ],
-  "image": {
-   "file": "Buffalo Central Terminal 1.jpg",
-   "w": 2540,
-   "h": 2048,
-   "author": "Dave Pape",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABuffalo_Central_Terminal_1.jpg",
-   "alt": "Buffalo Central Terminal, Buffalo"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Buffalo_Central_Terminal"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1318379"
-   }
-  ]
- },
- {
-  "id": "gledden-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Gledden Building",
-  "place": "Western Australia",
-  "country": "Australia",
-  "lat": -31.95377,
-  "lon": 115.85714,
-  "summary": "The Gledden Building is an Art Deco office building in Perth, Western Australia. The building was constructed on land that had been bequeathed to the University of Western Australia by surveyor Robert Gledden.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Gledden_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Harold Boas"
-   ],
-   [
-    "Type",
-    "Office building"
-   ]
-  ],
-  "image": {
-   "file": "Gledden 001.JPG",
-   "w": 1704,
-   "h": 2272,
-   "author": "Dingo dude",
-   "license": "CC BY 3.0",
-   "license_url": "https://creativecommons.org/licenses/by/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AGledden_001.JPG",
-   "alt": "Gledden Building, Western Australia"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Gledden_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q5567465"
-   }
-  ]
- },
- {
-  "id": "teatro-broadway",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Teatro Broadway",
-  "place": "Buenos Aires",
-  "country": "Argentina",
-  "lat": -34.60363,
-  "lon": -58.38312,
-  "summary": "The Teatro Broadway is an Art Deco style theatre in Buenos Aires, Argentina which opened on October 11, 1930. Located near the centre of the city at 1155 Corrientes Avenue, it was designed by the architect Jorge Kálnay.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Broadway_Theatre_(Buenos_Aires)",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Jorge Kálnay"
-   ],
-   [
-    "Type",
-    "Movie theater"
-   ]
-  ],
-  "image": {
-   "file": "Teatro Broadway (Buenos Aires).JPG",
-   "w": 1536,
-   "h": 2048,
-   "author": "Elsapucai (photo) Jorge Kálnay (1894–1957) (building)",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3ATeatro_Broadway_%28Buenos_Aires%29.JPG",
-   "alt": "Teatro Broadway, Buenos Aires"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Broadway_Theatre_(Buenos_Aires)"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q6139616"
-   }
-  ]
- },
- {
-  "id": "manila-jai-alai-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Manila Jai Alai Building",
-  "place": "Manila",
-  "country": "Philippines",
-  "lat": 14.58472,
-  "lon": 120.98417,
-  "summary": "The Manila Jai Alai Building was a building designed by American architects Welton Becket and Walter Wurdeman that functioned as a building for which jai alai games were held. It was built in the Streamline Moderne style in 1940 and survived the Battle of Manila. It was considered as the finest Art Deco building in Asia, until its demolition.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Manila_Jai_Alai_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Welton Becket"
-   ],
-   [
-    "Type",
-    "Long fronton"
-   ]
-  ],
-  "image": {
-   "file": "Manila Jai Alai Building in 1955.jpg",
-   "w": 945,
-   "h": 637,
-   "author": "USN",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Jai_Alai_Building_in_1955.jpg",
-   "alt": "Manila Jai Alai Building, Manila"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Manila_Jai_Alai_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q6749689"
-   }
-  ]
- },
- {
-  "id": "vijali-ghar",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Vijali Ghar",
-  "place": "Ahmedabad district",
-  "country": "India",
-  "lat": 23.02627,
-  "lon": 72.58159,
-  "summary": "Vijali Ghar, also known as Electricity House, is an office building on Relief Road, Ahmedabad, Gujarat, India. It is an Art Deco building designed by Claude Batley.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Vijali_Ghar",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Claude Batley"
-   ],
-   [
-    "Type",
-    "Office building"
-   ]
-  ],
-  "image": {
-   "file": "Electricity House Ahmedabad 1.jpg",
-   "w": 6000,
-   "h": 4000,
-   "author": "Imfarhad7",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AElectricity_House_Ahmedabad_1.jpg",
-   "alt": "Vijali Ghar, Ahmedabad district"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Vijali_Ghar"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q106535985"
-   }
-  ]
- },
- {
   "id": "los-angeles-union-station",
   "kind": "building",
   "cat": "station",
@@ -4463,7 +4463,7 @@
   "facts": [
    [
     "Type",
-    "Union station"
+    "Station located on surface"
    ]
   ],
   "image": {
@@ -5290,7 +5290,7 @@
   "kind": "building",
   "cat": "tower",
   "title": "Hoover Building",
-  "place": "London Borough of Ealing",
+  "place": "Perivale",
   "country": "United Kingdom",
   "lat": 51.5336,
   "lon": -0.31889,
@@ -5303,7 +5303,7 @@
   "facts": [
    [
     "Type",
-    "Factory"
+    "Supermarket"
    ]
   ],
   "image": {
@@ -5314,7 +5314,7 @@
    "license": "CC BY-SA 2.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
    "page": "https://commons.wikimedia.org/wiki/File%3AHoover_Building.jpg",
-   "alt": "Hoover Building, London Borough of Ealing"
+   "alt": "Hoover Building, Perivale"
   },
   "links": [
    {
@@ -7340,5 +7340,1316 @@
    }
   ],
   "loc_note": "Washington, D.C., seat of the Department of the Interior; the poster itself shows no particular park"
+ },
+ {
+  "id": "japan-obama",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Sea bathing at Obama",
+  "place": "Obama, Fukui",
+  "country": "Japan",
+  "lat": 35.4954,
+  "lon": 135.7468,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Japanese railway poster of the 1930s advertising sea bathing at Obama in Fukui. A rock arch stands over a green bay with small boats and a waterfall, and a red line of railway stops runs along the bottom edge.",
+  "facts": [
+   [
+    "Advertises",
+    "Sea bathing, Obama (Fukui)"
+   ],
+   [
+    "Issued by",
+    "Osaka and Nagoya Rail Agency"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - 01.jpg",
+   "w": 2056,
+   "h": 3000,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_01.jpg",
+   "alt": "Sea bathing at Obama (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_01.jpg"
+   },
+   {
+    "label": "Wikipedia: Obama, Fukui",
+    "url": "https://en.wikipedia.org/wiki/Obama,_Fukui"
+   }
+  ]
+ },
+ {
+  "id": "japan-yunoyama",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Autumn leaves at Yunoyama Onsen",
+  "place": "Yunoyama Onsen, Mie",
+  "country": "Japan",
+  "lat": 35.0207,
+  "lon": 136.4263,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Autumn travel poster for the hot spring resort of Yunoyama. Orange and red maple leaves fill the foreground above a stream and a small bridge, with bold flat colours and the title written in large red characters.",
+  "facts": [
+   [
+    "Advertises",
+    "Autumn leaves, Yunoyama Onsen"
+   ],
+   [
+    "Issued by",
+    "Osaka and Nagoya Rail Agency"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - 05.jpg",
+   "w": 2011,
+   "h": 3000,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_05.jpg",
+   "alt": "Autumn leaves at Yunoyama Onsen (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_05.jpg"
+   }
+  ],
+  "loc_note": "Yunoyama Onsen, Mie Prefecture, named in the poster title"
+ },
+ {
+  "id": "japan-hakusan",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Hakusan, ready to be climbed",
+  "place": "Mount Hakusan, Ishikawa",
+  "country": "Japan",
+  "lat": 36.1553,
+  "lon": 136.7716,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "A poster that works like a map: the green slopes of Mount Hakusan are drawn in layers with marked climbing routes and huts, and the title is set as a large character at the top. It was issued to encourage summer climbing by train.",
+  "facts": [
+   [
+    "Advertises",
+    "Climbing Mount Hakusan"
+   ],
+   [
+    "Issued by",
+    "Nagoya Rail Agency"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - 08.jpg",
+   "w": 2035,
+   "h": 3000,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_08.jpg",
+   "alt": "Hakusan, ready to be climbed (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_08.jpg"
+   },
+   {
+    "label": "Wikipedia: Mount Haku",
+    "url": "https://en.wikipedia.org/wiki/Mount_Haku"
+   }
+  ]
+ },
+ {
+  "id": "japan-yamanashi",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Fields of colour, Yamanashi",
+  "place": "Yamanashi Prefecture",
+  "country": "Japan",
+  "lat": 35.6639,
+  "lon": 138.5683,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Autumn poster for Yamanashi Prefecture. A snow-capped peak rises behind a green valley with a river, a dark rock face stands in the foreground, and a red railway line with its stops runs along the bottom.",
+  "facts": [
+   [
+    "Advertises",
+    "Autumn colour, Yamanashi"
+   ],
+   [
+    "Issued by",
+    "Japanese Railways"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - 10.jpg",
+   "w": 2045,
+   "h": 3000,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_10.jpg",
+   "alt": "Fields of colour, Yamanashi (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_10.jpg"
+   }
+  ]
+ },
+ {
+  "id": "japan-kumgang",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Mount Kumgang in Korea",
+  "place": "Mount Kumgang, Korea",
+  "country": "North Korea",
+  "lat": 38.6,
+  "lon": 128.05,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Dramatic poster for Mount Kumgang, then a tourist destination in Japanese-ruled Korea. Dark jagged cliffs rise out of pale mist, with the name in large red characters below and timetable details in small print.",
+  "facts": [
+   [
+    "Advertises",
+    "Mount Kumgang (Diamond Mountains)"
+   ],
+   [
+    "Issued by",
+    "Japanese Tourist Bureau"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - 12.jpg",
+   "w": 2121,
+   "h": 3000,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_12.jpg",
+   "alt": "Mount Kumgang in Korea (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_12.jpg"
+   },
+   {
+    "label": "Wikipedia: Kumgangsan",
+    "url": "https://en.wikipedia.org/wiki/Kumgangsan"
+   }
+  ]
+ },
+ {
+  "id": "japan-ontake-shosenkyo",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Ontake Shosenkyo valley",
+  "place": "Shosenkyo, Yamanashi",
+  "country": "Japan",
+  "lat": 35.7333,
+  "lon": 138.5817,
+  "date": "1930s",
+  "by": "Nagoya Train Agency",
+  "summary": "Poster for the Shosenkyo gorge in Yamanashi in autumn. Red leaves frame a footbridge over the valley, and a cluster of grapes at the lower right points to the prefecture's vineyards.",
+  "facts": [
+   [
+    "Advertises",
+    "Ontake Shosenkyo valley"
+   ],
+   [
+    "Issued by",
+    "Nagoya Train Agency"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster - Ontake Shosenkyo Valley.jpg",
+   "w": 1973,
+   "h": 2938,
+   "author": "Nagoya Train Agency",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_Ontake_Shosenkyo_Valley.jpg",
+   "alt": "Ontake Shosenkyo valley (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_-_Ontake_Shosenkyo_Valley.jpg"
+   }
+  ],
+  "loc_note": "Shosenkyo gorge, named in the poster title"
+ },
+ {
+  "id": "japan-kyoto-leaves",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "To Kyoto: autumn leaves",
+  "place": "Kyoto",
+  "country": "Japan",
+  "lat": 35.0116,
+  "lon": 135.7681,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Kyoto poster on a red ground, with a white beam sweeping down the sheet scattered with falling maple leaves and a tiny figure carrying a load across a bridge. The single large character at the top reads Kyoto.",
+  "facts": [
+   [
+    "Advertises",
+    "Travel to Kyoto"
+   ],
+   [
+    "Issued by",
+    "Japanese Government Railways"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster Kyoto 1.jpg",
+   "w": 750,
+   "h": 1029,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Kyoto_1.jpg",
+   "alt": "To Kyoto: autumn leaves (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Kyoto_1.jpg"
+   },
+   {
+    "label": "Wikipedia: Kyoto",
+    "url": "https://en.wikipedia.org/wiki/Kyoto"
+   }
+  ]
+ },
+ {
+  "id": "japan-kyoto-maiko",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "To Kyoto: maiko among maples",
+  "place": "Kyoto",
+  "country": "Japan",
+  "lat": 35.0036,
+  "lon": 135.7788,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Poster showing a young woman in a kimono with ornamented hair, in profile against a pale landscape of hills and a pagoda, with maple leaves around her. “To Kyoto” is written along the bottom.",
+  "facts": [
+   [
+    "Advertises",
+    "Travel to Kyoto"
+   ],
+   [
+    "Issued by",
+    "Japanese Government Railways"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster Kyoto 2.jpg",
+   "w": 750,
+   "h": 1034,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Kyoto_2.jpg",
+   "alt": "To Kyoto: maiko among maples (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Kyoto_2.jpg"
+   },
+   {
+    "label": "Wikipedia: Kyoto",
+    "url": "https://en.wikipedia.org/wiki/Kyoto"
+   }
+  ],
+  "loc_note": "Kyoto"
+ },
+ {
+  "id": "japan-nikko-ski",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Skiing in Nikko",
+  "place": "Nikko, Tochigi",
+  "country": "Japan",
+  "lat": 36.75,
+  "lon": 139.5985,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Winter sports poster in a bold modern layout: a stylised ski and a sweeping snow slope in blue and orange, with the word for skiing in red and the place name Nikko in large yellow characters. The lower band names the Tochigi prefecture sports association.",
+  "facts": [
+   [
+    "Advertises",
+    "Skiing at Nikko"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "1930s Japan Travel Poster Nikko.jpg",
+   "w": 1500,
+   "h": 2210,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Nikko.jpg",
+   "alt": "Skiing in Nikko (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1930s_Japan_Travel_Poster_Nikko.jpg"
+   },
+   {
+    "label": "Wikipedia: Nikkō, Tochigi",
+    "url": "https://en.wikipedia.org/wiki/Nikkō,_Tochigi"
+   }
+  ]
+ },
+ {
+  "id": "japan-hizen-hama",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Hizen-Hama shrine festival",
+  "place": "Hizen-Hama, Saga",
+  "country": "Japan",
+  "lat": 33.0881,
+  "lon": 130.0981,
+  "date": "1930s",
+  "by": "Japanese Government Railways",
+  "summary": "Railway poster for Hizen-Hama in Saga. A shrine hall with red pillars and a broad blue-black roof is set among rounded pines on a red-edged sheet, and festival dates are printed in Japanese down the left side.",
+  "facts": [
+   [
+    "Advertises",
+    "Hizen-Hama (Saga)"
+   ],
+   [
+    "Issued by",
+    "Japanese Government Railways"
+   ],
+   [
+    "Year",
+    "1930s"
+   ]
+  ],
+  "image": {
+   "file": "Japan Travel Poster Hizen-Hama.jpg",
+   "w": 2808,
+   "h": 3632,
+   "author": "Japanese Government Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AJapan_Travel_Poster_Hizen-Hama.jpg",
+   "alt": "Hizen-Hama shrine festival (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AJapan_Travel_Poster_Hizen-Hama.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://www.reddit.com/r/translator/comments/7dcvq7/japanese_english_japanese_travel_poster_from_the/"
+   }
+  ],
+  "loc_note": "Hizen-Hama, named in the title"
+ },
+ {
+  "id": "monza-1933",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Gran Premio d'Italia, Monza",
+  "place": "Monza",
+  "country": "Italy",
+  "lat": 45.6156,
+  "lon": 9.2811,
+  "date": "1933",
+  "by": "Araca",
+  "summary": "Poster for the Italian Grand Prix at Monza on 10 September 1933, issued by the Reale Automobile Club d'Italia. A red racing car is drawn head-on in simplified geometric shapes against bold blue lettering; the date is given in the Fascist calendar as year XI.",
+  "facts": [
+   [
+    "Advertises",
+    "Gran Premio d'Italia, 10 September 1933"
+   ],
+   [
+    "Organiser",
+    "Reale Automobile Club d'Italia"
+   ],
+   [
+    "Artist",
+    "Araca"
+   ]
+  ],
+  "image": {
+   "file": "1933-09-10 Monza poster.jpg",
+   "w": 732,
+   "h": 1024,
+   "author": "Araca (Enzo Forlivesi Montanari)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1933-09-10_Monza_poster.jpg",
+   "alt": "Gran Premio d'Italia, Monza (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3A1933-09-10_Monza_poster.jpg"
+   },
+   {
+    "label": "Wikipedia: 1933 Italian Grand Prix",
+    "url": "https://en.wikipedia.org/wiki/1933_Italian_Grand_Prix"
+   }
+  ]
+ },
+ {
+  "id": "broders-marseille",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Marseille, gateway to North Africa",
+  "place": "Marseille",
+  "country": "France",
+  "lat": 43.2965,
+  "lon": 5.3698,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Travel poster for the railway company PLM by Roger Broders, headed “Marseille, porte de l'Afrique du Nord”. Ship funnels and a white liner fill the foreground, with the harbour and the hilltop basilica of Notre-Dame de la Garde behind.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Flickr - …trialsanderrors - Marseille, travel poster for PLM, ca. 1930.jpg",
+   "w": 2402,
+   "h": 3901,
+   "author": "Roger Broders",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_%E2%80%A6trialsanderrors_-_Marseille%2C_travel_poster_for_PLM%2C_ca._1930.jpg",
+   "alt": "Marseille, gateway to North Africa (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_%E2%80%A6trialsanderrors_-_Marseille%2C_travel_poster_for_PLM%2C_ca._1930.jpg"
+   },
+   {
+    "label": "Wikipedia: Marseille",
+    "url": "https://en.wikipedia.org/wiki/Marseille"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "broders-monte-carlo",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Monte-Carlo",
+  "place": "Monte Carlo",
+  "country": "Monaco",
+  "lat": 43.7384,
+  "lon": 7.4246,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "PLM travel poster by Roger Broders. A couple in the foreground watch a tennis match on clay courts that curve along the bay, with spectators filling the terrace and the name in heavy black capitals.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Flickr - …trialsanderrors - Monte-Carlo, travel poster for PLM, ca. 1930.jpg",
+   "w": 2592,
+   "h": 4171,
+   "author": "Roger Broders",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_%E2%80%A6trialsanderrors_-_Monte-Carlo%2C_travel_poster_for_PLM%2C_ca._1930.jpg",
+   "alt": "Monte-Carlo (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_%E2%80%A6trialsanderrors_-_Monte-Carlo%2C_travel_poster_for_PLM%2C_ca._1930.jpg"
+   },
+   {
+    "label": "Wikipedia: Monte Carlo",
+    "url": "https://en.wikipedia.org/wiki/Monte_Carlo"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "italian-lakes-enit",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Italian Lakes",
+  "place": "Lake Como, Lombardy",
+  "country": "Italy",
+  "lat": 45.9,
+  "lon": 9.2563,
+  "date": "c. 1930",
+  "by": "Printed by Grafiche Modiano for ENIT",
+  "summary": "Italian State Tourist Board poster showing a lake among mountains with a church bell tower, red roofs and a tall cypress. The scene is drawn in flat colours with heavy black lettering at the bottom.",
+  "facts": [
+   [
+    "Issued by",
+    "ENIT, Italian State Tourist Board"
+   ],
+   [
+    "Printer",
+    "Grafiche Modiano"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ]
+  ],
+  "image": {
+   "file": "Italian Lakes, travel poster for ENIT, ca. 1930.jpg",
+   "w": 3091,
+   "h": 5015,
+   "author": "Printed by Grafiche Modiano for ENIT (Ente Nazionale Italiano per il Turismo)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AItalian_Lakes%2C_travel_poster_for_ENIT%2C_ca._1930.jpg",
+   "alt": "Italian Lakes (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AItalian_Lakes%2C_travel_poster_for_ENIT%2C_ca._1930.jpg"
+   }
+  ],
+  "loc_note": "Pin set on Lake Como as a representative lake; the poster does not name which lake"
+ },
+ {
+  "id": "yangtze-gorges",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Beauty and grandeur: the Yangtze gorges",
+  "place": "Yangtze Gorges",
+  "country": "China",
+  "lat": 30.8231,
+  "lon": 111.0033,
+  "date": "c. 1930",
+  "by": "Unknown artist for Butterfield & Swire",
+  "summary": "Travel poster for the Yangtze gorges issued for the shipping agents Butterfield & Swire. Tourist boats pass between steep cliffs crowned with a temple, in layered flat colours, with the invitation “all amaze and thrill you” and a black band for reservations.",
+  "facts": [
+   [
+    "Issued for",
+    "Butterfield & Swire"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Subject",
+    "Yangtze river gorges"
+   ]
+  ],
+  "image": {
+   "file": "Beauty and grandeur, the Yangtze gorges, travel poster, ca. 1930.jpg",
+   "w": 2382,
+   "h": 3825,
+   "author": "Unknown artist for Butterfield & Swire (Shanghai, Hong Kong)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABeauty_and_grandeur%2C_the_Yangtze_gorges%2C_travel_poster%2C_ca._1930.jpg",
+   "alt": "Beauty and grandeur: the Yangtze gorges (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ABeauty_and_grandeur%2C_the_Yangtze_gorges%2C_travel_poster%2C_ca._1930.jpg"
+   },
+   {
+    "label": "Wikipedia: Three Gorges",
+    "url": "https://en.wikipedia.org/wiki/Three_Gorges"
+   }
+  ]
+ },
+ {
+  "id": "commonwealth-railways-1951",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "To the east in air-conditioned comfort",
+  "place": "Trans-Australian Railway, South Australia",
+  "country": "Australia",
+  "lat": 32.4926,
+  "lon": 137.7686,
+  "date": "1951",
+  "by": "Commonwealth Railways",
+  "summary": "Australian rail poster in streamline style: a red diesel-electric train with a rounded nose races toward the viewer over a yellow plain under the slogan “To the east in air-conditioned comfort”. It promotes the Trans-Australian Railway.",
+  "facts": [
+   [
+    "Issued by",
+    "Commonwealth Railways"
+   ],
+   [
+    "Year",
+    "1951"
+   ],
+   [
+    "Line",
+    "Trans-Australian Railway"
+   ]
+  ],
+  "image": {
+   "file": "Commonwealth Railways poster -- To the east in air-conditioned comfort (Trans-Australian Railway), 1951.jpg",
+   "w": 1225,
+   "h": 2023,
+   "author": "Commonwealth Railways",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACommonwealth_Railways_poster_--_To_the_east_in_air-conditioned_comfort_%28Trans-Australian_Railway%29%2C_1951.jpg",
+   "alt": "To the east in air-conditioned comfort (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ACommonwealth_Railways_poster_--_To_the_east_in_air-conditioned_comfort_%28Trans-Australian_Railway%29%2C_1951.jpg"
+   },
+   {
+    "label": "Wikipedia: Trans-Australian Railway",
+    "url": "https://en.wikipedia.org/wiki/Trans-Australian_Railway"
+   }
+  ],
+  "loc_note": "Port Augusta, where the Commonwealth Railways were based; the poster names the line, not a place"
+ },
+ {
+  "id": "nz-railways-cheap-travel",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Cheap travel by train",
+  "place": "Wellington",
+  "country": "New Zealand",
+  "lat": -41.2866,
+  "lon": 174.7756,
+  "date": "1930s",
+  "by": "New Zealand Railways",
+  "summary": "New Zealand Railways holiday poster built on a sunburst of red, yellow and blue with cut-out figures around a central disc that reads “Cheap travel by train”. Small text promotes Christmas and New Year holidays and says fares average less than a penny a mile.",
+  "facts": [
+   [
+    "Issued by",
+    "New Zealand Railways"
+   ],
+   [
+    "Year",
+    "1930s"
+   ],
+   [
+    "Fare claim",
+    "Under 1d per mile"
+   ]
+  ],
+  "image": {
+   "file": "New Zealand Railway poster - Cheap Travel by Train 1930-1939 (10468990864).jpg",
+   "w": 2583,
+   "h": 4038,
+   "author": "Archives New Zealand from New Zealand",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ANew_Zealand_Railway_poster_-_Cheap_Travel_by_Train_1930-1939_%2810468990864%29.jpg",
+   "alt": "Cheap travel by train (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ANew_Zealand_Railway_poster_-_Cheap_Travel_by_Train_1930-1939_%2810468990864%29.jpg"
+   }
+  ],
+  "loc_note": "Wellington, seat of New Zealand Railways; the poster is national"
+ },
+ {
+  "id": "intourist-moscow",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Moscow (Intourist)",
+  "place": "Moscow",
+  "country": "Russia",
+  "lat": 55.752,
+  "lon": 37.6175,
+  "date": "c. 1930",
+  "by": "Unknown artist for Intourist",
+  "summary": "Soviet tourism poster for Intourist showing a Kremlin tower in red brick with green roof, set against a blue-green sky and modern city blocks. Text at the foot says tours to the USSR were arranged by Intourist and the main travel bureaus of the world.",
+  "facts": [
+   [
+    "Issued by",
+    "Intourist, for foreign tourists"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ]
+  ],
+  "image": {
+   "file": "Moscow (Travel poster).jpg",
+   "w": 1220,
+   "h": 1800,
+   "author": "Неизвестный художник (не указан в выходных данных плаката; отсутствует авторская монограмма или подпись)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AMoscow_%28Travel_poster%29.jpg",
+   "alt": "Moscow (Intourist) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AMoscow_%28Travel_poster%29.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://retours.eu/en/39-intourist-USSR-posters/"
+   },
+   {
+    "label": "Wikipedia: Intourist",
+    "url": "https://en.wikipedia.org/wiki/Intourist"
+   }
+  ]
+ },
+ {
+  "id": "intourist-odessa-istanbul",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Odessa–Istanbul, 34 hours",
+  "place": "Odessa",
+  "country": "Ukraine",
+  "lat": 46.4825,
+  "lon": 30.7233,
+  "date": "c. 1930",
+  "by": "Unknown artist for the USSR Black Sea State Steamship Line",
+  "summary": "Poster for the Soviet Black Sea steamship line. A large liner at the right sits beside a film strip with views of Odessa, and the ports along the route (including Istanbul, Piraeus, Jaffa and Port Said) are listed beneath. The headline promises 34 hours between Odessa and Istanbul.",
+  "facts": [
+   [
+    "Issued by",
+    "USSR Black Sea State Steamship Line"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Route",
+    "Odessa to the Near East"
+   ]
+  ],
+  "image": {
+   "file": "Odessa–Istanbul (Travel poster).jpg",
+   "w": 1000,
+   "h": 1461,
+   "author": "Неизвестный художник (не указан в выходных данных плаката; отсутствует авторская монограмма или подпись)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AOdessa%E2%80%93Istanbul_%28Travel_poster%29.jpg",
+   "alt": "Odessa–Istanbul, 34 hours (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AOdessa%E2%80%93Istanbul_%28Travel_poster%29.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://www.grad-london.com/whatson/see-ussr/"
+   },
+   {
+    "label": "Wikipedia: Odesa",
+    "url": "https://en.wikipedia.org/wiki/Odesa"
+   }
+  ]
+ },
+ {
+  "id": "casino-de-paris-gorille",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Le Gorille et la femme, Casino de Paris",
+  "place": "Casino de Paris",
+  "country": "France",
+  "lat": 48.8767,
+  "lon": 2.3367,
+  "date": "1925",
+  "by": "Charles Gir",
+  "summary": "Offset-printed poster by Charles Gir for a Casino de Paris revue in 1925. A black gorilla carries a limp woman in his arms against a cream ground, the title in heavy red capitals above and the venue name below.",
+  "facts": [
+   [
+    "Advertises",
+    "Revue at the Casino de Paris"
+   ],
+   [
+    "Year",
+    "1925"
+   ],
+   [
+    "Artist",
+    "Charles Gir"
+   ]
+  ],
+  "image": {
+   "file": "Poster Charles Gir 1925.png",
+   "w": 405,
+   "h": 550,
+   "author": "Charles Gir",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APoster_Charles_Gir_1925.png",
+   "alt": "Le Gorille et la femme, Casino de Paris (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APoster_Charles_Gir_1925.png"
+   },
+   {
+    "label": "Wikipedia: Casino de Paris",
+    "url": "https://en.wikipedia.org/wiki/Casino_de_Paris"
+   }
+  ]
+ },
+ {
+  "id": "expo-1925-poster",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "International Exhibition of Modern Decorative and Industrial Arts, 1925",
+  "place": "Paris",
+  "country": "France",
+  "lat": 48.8584,
+  "lon": 2.3135,
+  "date": "1925",
+  "by": "See the Commons record",
+  "summary": "Official poster for the 1925 Paris exhibition from which Art Deco takes its name. A pale ground carries a stylised rose-like form and a column of smoke above a small boat, with the exhibition title and “April–October 1925” set below.",
+  "facts": [
+   [
+    "Event",
+    "Exposition internationale des arts décoratifs et industriels modernes"
+   ],
+   [
+    "Dates",
+    "April–October 1925"
+   ]
+  ],
+  "image": {
+   "file": "Poster Expo 1925.JPG",
+   "w": 514,
+   "h": 800,
+   "author": "Creator:Charles Loupot Johann von Stein",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APoster_Expo_1925.JPG",
+   "alt": "International Exhibition of Modern Decorative and Industrial Arts, 1925 (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APoster_Expo_1925.JPG"
+   },
+   {
+    "label": "Wikipedia: Exposition Internationale des Arts Décoratifs et Industriels Modernes",
+    "url": "https://en.wikipedia.org/wiki/Exposition_Internationale_des_Arts_D%C3%A9coratifs_et_Industriels_Modernes"
+   }
+  ],
+  "loc_note": "Paris, host city; the exhibition ran along the Seine near the Esplanade des Invalides"
+ },
+ {
+  "id": "expo-1925-bourdelle",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "1925 Paris exhibition, poster by Antoine Bourdelle",
+  "place": "Paris",
+  "country": "France",
+  "lat": 48.8584,
+  "lon": 2.3135,
+  "date": "1925",
+  "by": "Antoine Bourdelle",
+  "summary": "Another poster for the 1925 exhibition, designed by the sculptor Antoine Bourdelle for the Ministry of Commerce and Industry. A winged figure with a horse is drawn in a bronze-brown relief style above the line “Par labeur et par génie” and the exhibition details.",
+  "facts": [
+   [
+    "Issued by",
+    "Ministère du commerce et de l'industrie"
+   ],
+   [
+    "Year",
+    "1925"
+   ],
+   [
+    "Artist",
+    "Antoine Bourdelle"
+   ]
+  ],
+  "image": {
+   "file": "Ministère du commerce et de l'industrie. Exposition internationale des arts décoratifs et industriels modernes affiche, Antoine Bourdelle.jpg",
+   "w": 8151,
+   "h": 12124,
+   "author": "Bourdelle, Antoine (1861-1929). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AMinist%C3%A8re_du_commerce_et_de_l%27industrie._Exposition_internationale_des_arts_d%C3%A9coratifs_et_industriels_modernes_affiche%2C_Antoine_Bourdelle.jpg",
+   "alt": "1925 Paris exhibition, poster by Antoine Bourdelle (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AMinist%C3%A8re_du_commerce_et_de_l%27industrie._Exposition_internationale_des_arts_d%C3%A9coratifs_et_industriels_modernes_affiche%2C_Antoine_Bourdelle.jpg"
+   }
+  ],
+  "loc_note": "Paris, host city of the exhibition"
+ },
+ {
+  "id": "norblin-zakopane",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Poland: Zakopane",
+  "place": "Zakopane",
+  "country": "Poland",
+  "lat": 49.2992,
+  "lon": 19.9496,
+  "date": "c. 1925",
+  "by": "Stefan Norblin",
+  "summary": "Polish State Railways poster by Stefan Norblin. A highlander in a white wool cape and traditional dress leans on his stick before the snowy Tatra Mountains, with “Polska Zakopane” in heavy letters and the title in Polish, French and English.",
+  "facts": [
+   [
+    "Issued by",
+    "Polish State Railways"
+   ],
+   [
+    "Year",
+    "c. 1925"
+   ],
+   [
+    "Artist",
+    "Stefan Norblin"
+   ]
+  ],
+  "image": {
+   "file": "Stefan Norblin - Polska - Zakopane (poster ca. 1925).png",
+   "w": 314,
+   "h": 505,
+   "author": "Stefan Norblin",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_Polska_-_Zakopane_%28poster_ca._1925%29.png",
+   "alt": "Poland: Zakopane (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_Polska_-_Zakopane_%28poster_ca._1925%29.png"
+   },
+   {
+    "label": "Wikipedia: Zakopane",
+    "url": "https://en.wikipedia.org/wiki/Zakopane"
+   }
+  ]
+ },
+ {
+  "id": "norblin-krakow",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Poland: Kraków",
+  "place": "Kraków",
+  "country": "Poland",
+  "lat": 50.054,
+  "lon": 19.9353,
+  "date": "c. 1935",
+  "by": "Stefan Norblin",
+  "summary": "Polish State Railways poster for Kraków by Stefan Norblin. The dark silhouette of the Wawel hill cathedral and castle stands against an orange sky, with the city name in a thin, tall typeface.",
+  "facts": [
+   [
+    "Issued by",
+    "Polish State Railways"
+   ],
+   [
+    "Year",
+    "c. 1935"
+   ],
+   [
+    "Artist",
+    "Stefan Norblin"
+   ]
+  ],
+  "image": {
+   "file": "Stefan Norblin - KRAKÓW.jpg",
+   "w": 1200,
+   "h": 1923,
+   "author": "Stefan Norblin",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_KRAK%C3%93W.jpg",
+   "alt": "Poland: Kraków (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_KRAK%C3%93W.jpg"
+   },
+   {
+    "label": "Wikipedia: Wawel",
+    "url": "https://en.wikipedia.org/wiki/Wawel"
+   }
+  ]
+ },
+ {
+  "id": "norblin-warszawa",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Poland: Warsaw",
+  "place": "Warsaw",
+  "country": "Poland",
+  "lat": 52.2497,
+  "lon": 21.0122,
+  "date": "c. 1925",
+  "by": "Stefan Norblin",
+  "summary": "Poster for Warsaw by Stefan Norblin: the Old Town's tall tenements and church towers are painted in warm reds and yellows against a dark border, with a boat on the Vistula below and the city name across the bottom.",
+  "facts": [
+   [
+    "Issued by",
+    "Polish State Railways"
+   ],
+   [
+    "Year",
+    "c. 1925"
+   ],
+   [
+    "Artist",
+    "Stefan Norblin"
+   ]
+  ],
+  "image": {
+   "file": "Stefan Norblin - WARSZAWA.jpg",
+   "w": 1200,
+   "h": 1916,
+   "author": "Stefan Norblin",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_WARSZAWA.jpg",
+   "alt": "Poland: Warsaw (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_WARSZAWA.jpg"
+   },
+   {
+    "label": "Wikipedia: Warsaw Old Town",
+    "url": "https://en.wikipedia.org/wiki/Warsaw_Old_Town"
+   }
+  ]
+ },
+ {
+  "id": "norblin-wilno",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Poland: Wilno (Vilnius)",
+  "place": "Vilnius",
+  "country": "Lithuania",
+  "lat": 54.6872,
+  "lon": 25.2797,
+  "date": "c. 1930",
+  "by": "Stefan Norblin",
+  "summary": "Poster for Wilno, now Vilnius, which was part of Poland between the wars. The old town's towers and roofs are shown as a layered blue silhouette beneath a yellow sky, with the name in white capitals.",
+  "facts": [
+   [
+    "Issued by",
+    "Polish State Railways"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Artist",
+    "Stefan Norblin"
+   ]
+  ],
+  "image": {
+   "file": "Stefan Norblin - WILNO.jpg",
+   "w": 1200,
+   "h": 1804,
+   "author": "Stefan Norblin",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_WILNO.jpg",
+   "alt": "Poland: Wilno (Vilnius) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_WILNO.jpg"
+   },
+   {
+    "label": "Wikipedia: Vilnius",
+    "url": "https://en.wikipedia.org/wiki/Vilnius"
+   }
+  ],
+  "loc_note": "Vilnius, which the poster calls Wilno"
+ },
+ {
+  "id": "norblin-silesia",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Poland: Upper Silesia",
+  "place": "Katowice, Upper Silesia",
+  "country": "Poland",
+  "lat": 50.2649,
+  "lon": 19.0238,
+  "date": "c. 1925",
+  "by": "Stefan Norblin",
+  "summary": "Polish State Railways poster for Upper Silesia, the coal and industry region. A miner with a pickaxe over his shoulder stands against a smoky skyline of chimneys, above the region's name in Polish, French, English and German.",
+  "facts": [
+   [
+    "Issued by",
+    "Polish State Railways"
+   ],
+   [
+    "Year",
+    "c. 1925"
+   ],
+   [
+    "Artist",
+    "Stefan Norblin"
+   ]
+  ],
+  "image": {
+   "file": "Stefan Norblin - Polska. Górny Śląsk (ok. 1925).jpg",
+   "w": 3000,
+   "h": 4843,
+   "author": "Stefan Norblin",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_Polska._G%C3%B3rny_%C5%9Al%C4%85sk_%28ok._1925%29.jpg",
+   "alt": "Poland: Upper Silesia (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AStefan_Norblin_-_Polska._G%C3%B3rny_%C5%9Al%C4%85sk_%28ok._1925%29.jpg"
+   },
+   {
+    "label": "Wikipedia: Upper Silesia",
+    "url": "https://en.wikipedia.org/wiki/Upper_Silesia"
+   }
+  ],
+  "loc_note": "Katowice, the main city of Upper Silesia"
+ },
+ {
+  "id": "vef-minox-1939",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "VEF Minox, “The new way”",
+  "place": "Riga",
+  "country": "Latvia",
+  "lat": 56.9496,
+  "lon": 24.1052,
+  "date": "1939",
+  "by": "Unknown",
+  "summary": "1939 advertisement for the Minox miniature camera made by VEF in Riga. The small silver camera floats in a dark, rain-streaked night, with the brand name above and the Latvian slogan “Jaunais ceļš” (The new way) in red script.",
+  "facts": [
+   [
+    "Advertises",
+    "VEF Minox camera"
+   ],
+   [
+    "Year",
+    "1939"
+   ],
+   [
+    "Maker",
+    "VEF, Riga"
+   ]
+  ],
+  "image": {
+   "file": "VEF MINOX 1939 Publicity.jpg",
+   "w": 383,
+   "h": 520,
+   "author": "Unknown author Unknown author",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AVEF_MINOX_1939_Publicity.jpg",
+   "alt": "VEF Minox, “The new way” (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AVEF_MINOX_1939_Publicity.jpg"
+   },
+   {
+    "label": "Wikipedia: Minox",
+    "url": "https://en.wikipedia.org/wiki/Minox"
+   }
+  ]
  }
 ]

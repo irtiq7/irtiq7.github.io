@@ -285,11 +285,96 @@ POSTERS = [
     dict(id="wpa-wildlife-1940", file="DontKillWildlifeWPA1940.jpg", title="Don't kill our wild life", date="c. 1940", by="WPA Federal Art Project", place="Washington, D.C.", country="United States", q="Q61",
          summary="Poster from the US Works Progress Administration, around 1940, urging safe driving in national parks. Two deer leap across a forest road at night, caught in a car's headlights. It carries the name of the Department of the Interior's National Park Service.",
          facts=[["Issued by", "US Department of the Interior, National Park Service"], ["Date", "c. 1940"], ["Programme", "Works Progress Administration"]], loc="Washington, D.C., seat of the Department of the Interior; the poster itself shows no particular park"),
+    # More posters from the Commons Art Deco poster category and travel-poster collections. Placement is the place advertised (or the printer's/event city).
+    dict(id="japan-obama", file="1930s Japan Travel Poster - 01.jpg", title="Sea bathing at Obama", date="1930s", by="Japanese Government Railways", place="Obama, Fukui", country="Japan", ll=(35.4954, 135.7468),
+         summary="Japanese railway poster of the 1930s advertising sea bathing at Obama in Fukui. A rock arch stands over a green bay with small boats and a waterfall, and a red line of railway stops runs along the bottom edge.",
+         facts=[["Advertises", "Sea bathing, Obama (Fukui)"], ["Issued by", "Osaka and Nagoya Rail Agency"], ["Year", "1930s"]], wiki=W + "Obama,_Fukui"),
+    dict(id="japan-yunoyama", file="1930s Japan Travel Poster - 05.jpg", title="Autumn leaves at Yunoyama Onsen", date="1930s", by="Japanese Government Railways", place="Yunoyama Onsen, Mie", country="Japan", ll=(35.0207, 136.4263),
+         summary="Autumn travel poster for the hot spring resort of Yunoyama. Orange and red maple leaves fill the foreground above a stream and a small bridge, with bold flat colours and the title written in large red characters.",
+         facts=[["Advertises", "Autumn leaves, Yunoyama Onsen"], ["Issued by", "Osaka and Nagoya Rail Agency"], ["Year", "1930s"]], loc="Yunoyama Onsen, Mie Prefecture, named in the poster title"),
+    dict(id="japan-hakusan", file="1930s Japan Travel Poster - 08.jpg", title="Hakusan, ready to be climbed", date="1930s", by="Japanese Government Railways", place="Mount Hakusan, Ishikawa", country="Japan", ll=(36.1553, 136.7716),
+         summary="A poster that works like a map: the green slopes of Mount Hakusan are drawn in layers with marked climbing routes and huts, and the title is set as a large character at the top. It was issued to encourage summer climbing by train.",
+         facts=[["Advertises", "Climbing Mount Hakusan"], ["Issued by", "Nagoya Rail Agency"], ["Year", "1930s"]], wiki=W + "Mount_Haku"),
+    dict(id="japan-yamanashi", file="1930s Japan Travel Poster - 10.jpg", title="Fields of colour, Yamanashi", date="1930s", by="Japanese Government Railways", place="Yamanashi Prefecture", country="Japan", ll=(35.6639, 138.5683),
+         summary="Autumn poster for Yamanashi Prefecture. A snow-capped peak rises behind a green valley with a river, a dark rock face stands in the foreground, and a red railway line with its stops runs along the bottom.",
+         facts=[["Advertises", "Autumn colour, Yamanashi"], ["Issued by", "Japanese Railways"], ["Year", "1930s"]]),
+    dict(id="japan-kumgang", file="1930s Japan Travel Poster - 12.jpg", title="Mount Kumgang in Korea", date="1930s", by="Japanese Government Railways", place="Mount Kumgang, Korea", country="North Korea", ll=(38.6, 128.05),
+         summary="Dramatic poster for Mount Kumgang, then a tourist destination in Japanese-ruled Korea. Dark jagged cliffs rise out of pale mist, with the name in large red characters below and timetable details in small print.",
+         facts=[["Advertises", "Mount Kumgang (Diamond Mountains)"], ["Issued by", "Japanese Tourist Bureau"], ["Year", "1930s"]], wiki=W + "Kumgangsan"),
+    dict(id="japan-ontake-shosenkyo", file="1930s Japan Travel Poster - Ontake Shosenkyo Valley.jpg", title="Ontake Shosenkyo valley", date="1930s", by="Nagoya Train Agency", place="Shosenkyo, Yamanashi", country="Japan", ll=(35.7333, 138.5817),
+         summary="Poster for the Shosenkyo gorge in Yamanashi in autumn. Red leaves frame a footbridge over the valley, and a cluster of grapes at the lower right points to the prefecture's vineyards.",
+         facts=[["Advertises", "Ontake Shosenkyo valley"], ["Issued by", "Nagoya Train Agency"], ["Year", "1930s"]], loc="Shosenkyo gorge, named in the poster title"),
+    dict(id="japan-kyoto-leaves", file="1930s Japan Travel Poster Kyoto 1.jpg", title="To Kyoto: autumn leaves", date="1930s", by="Japanese Government Railways", place="Kyoto", country="Japan", ll=(35.0116, 135.7681),
+         summary="Kyoto poster on a red ground, with a white beam sweeping down the sheet scattered with falling maple leaves and a tiny figure carrying a load across a bridge. The single large character at the top reads Kyoto.",
+         facts=[["Advertises", "Travel to Kyoto"], ["Issued by", "Japanese Government Railways"], ["Year", "1930s"]], wiki=W + "Kyoto"),
+    dict(id="japan-kyoto-maiko", file="1930s Japan Travel Poster Kyoto 2.jpg", title="To Kyoto: maiko among maples", date="1930s", by="Japanese Government Railways", place="Kyoto", country="Japan", ll=(35.0036, 135.7788),
+         summary="Poster showing a young woman in a kimono with ornamented hair, in profile against a pale landscape of hills and a pagoda, with maple leaves around her. “To Kyoto” is written along the bottom.",
+         facts=[["Advertises", "Travel to Kyoto"], ["Issued by", "Japanese Government Railways"], ["Year", "1930s"]], wiki=W + "Kyoto", loc="Kyoto"),
+    dict(id="japan-nikko-ski", file="1930s Japan Travel Poster Nikko.jpg", title="Skiing in Nikko", date="1930s", by="Japanese Government Railways", place="Nikko, Tochigi", country="Japan", ll=(36.75, 139.5985),
+         summary="Winter sports poster in a bold modern layout: a stylised ski and a sweeping snow slope in blue and orange, with the word for skiing in red and the place name Nikko in large yellow characters. The lower band names the Tochigi prefecture sports association.",
+         facts=[["Advertises", "Skiing at Nikko"], ["Year", "1930s"]], wiki=W + "Nikkō,_Tochigi"),
+    dict(id="japan-hizen-hama", file="Japan Travel Poster Hizen-Hama.jpg", title="Hizen-Hama shrine festival", date="1930s", by="Japanese Government Railways", place="Hizen-Hama, Saga", country="Japan", ll=(33.0881, 130.0981),
+         summary="Railway poster for Hizen-Hama in Saga. A shrine hall with red pillars and a broad blue-black roof is set among rounded pines on a red-edged sheet, and festival dates are printed in Japanese down the left side.",
+         facts=[["Advertises", "Hizen-Hama (Saga)"], ["Issued by", "Japanese Government Railways"], ["Year", "1930s"]], loc="Hizen-Hama, named in the title"),
+    dict(id="monza-1933", file="1933-09-10 Monza poster.jpg", title="Gran Premio d'Italia, Monza", date="1933", by="Araca", place="Monza", country="Italy", ll=(45.6156, 9.2811),
+         summary="Poster for the Italian Grand Prix at Monza on 10 September 1933, issued by the Reale Automobile Club d'Italia. A red racing car is drawn head-on in simplified geometric shapes against bold blue lettering; the date is given in the Fascist calendar as year XI.",
+         facts=[["Advertises", "Gran Premio d'Italia, 10 September 1933"], ["Organiser", "Reale Automobile Club d'Italia"], ["Artist", "Araca"]], wiki=W + "1933_Italian_Grand_Prix"),
+    dict(id="broders-marseille", file="Flickr - …trialsanderrors - Marseille, travel poster for PLM, ca. 1930.jpg", title="Marseille, gateway to North Africa", date="c. 1930", by="Roger Broders", place="Marseille", country="France", ll=(43.2965, 5.3698),
+         summary="Travel poster for the railway company PLM by Roger Broders, headed “Marseille, porte de l'Afrique du Nord”. Ship funnels and a white liner fill the foreground, with the harbour and the hilltop basilica of Notre-Dame de la Garde behind.",
+         facts=[["Issued by", "Paris–Lyon–Méditerranée railway (PLM)"], ["Year", "c. 1930"], ["Artist", "Roger Broders"]], artist="Roger Broders", wiki=W + "Marseille"),
+    dict(id="broders-monte-carlo", file="Flickr - …trialsanderrors - Monte-Carlo, travel poster for PLM, ca. 1930.jpg", title="Monte-Carlo", date="c. 1930", by="Roger Broders", place="Monte Carlo", country="Monaco", ll=(43.7384, 7.4246),
+         summary="PLM travel poster by Roger Broders. A couple in the foreground watch a tennis match on clay courts that curve along the bay, with spectators filling the terrace and the name in heavy black capitals.",
+         facts=[["Issued by", "Paris–Lyon–Méditerranée railway (PLM)"], ["Year", "c. 1930"], ["Artist", "Roger Broders"]], artist="Roger Broders", wiki=W + "Monte_Carlo"),
+    dict(id="italian-lakes-enit", file="Italian Lakes, travel poster for ENIT, ca. 1930.jpg", title="Italian Lakes", date="c. 1930", by="Printed by Grafiche Modiano for ENIT", place="Lake Como, Lombardy", country="Italy", ll=(45.9, 9.2563),
+         summary="Italian State Tourist Board poster showing a lake among mountains with a church bell tower, red roofs and a tall cypress. The scene is drawn in flat colours with heavy black lettering at the bottom.",
+         facts=[["Issued by", "ENIT, Italian State Tourist Board"], ["Printer", "Grafiche Modiano"], ["Year", "c. 1930"]], loc="Pin set on Lake Como as a representative lake; the poster does not name which lake"),
+    dict(id="yangtze-gorges", file="Beauty and grandeur, the Yangtze gorges, travel poster, ca. 1930.jpg", title="Beauty and grandeur: the Yangtze gorges", date="c. 1930", by="Unknown artist for Butterfield & Swire", place="Yangtze Gorges", country="China", ll=(30.8231, 111.0033),
+         summary="Travel poster for the Yangtze gorges issued for the shipping agents Butterfield & Swire. Tourist boats pass between steep cliffs crowned with a temple, in layered flat colours, with the invitation “all amaze and thrill you” and a black band for reservations.",
+         facts=[["Issued for", "Butterfield & Swire"], ["Year", "c. 1930"], ["Subject", "Yangtze river gorges"]], wiki=W + "Three_Gorges"),
+    dict(id="commonwealth-railways-1951", file="Commonwealth Railways poster -- To the east in air-conditioned comfort (Trans-Australian Railway), 1951.jpg", title="To the east in air-conditioned comfort", date="1951", by="Commonwealth Railways", place="Trans-Australian Railway, South Australia", country="Australia", ll=(32.4926, 137.7686),
+         summary="Australian rail poster in streamline style: a red diesel-electric train with a rounded nose races toward the viewer over a yellow plain under the slogan “To the east in air-conditioned comfort”. It promotes the Trans-Australian Railway.",
+         facts=[["Issued by", "Commonwealth Railways"], ["Year", "1951"], ["Line", "Trans-Australian Railway"]], wiki=W + "Trans-Australian_Railway", loc="Port Augusta, where the Commonwealth Railways were based; the poster names the line, not a place"),
+    dict(id="nz-railways-cheap-travel", file="New Zealand Railway poster - Cheap Travel by Train 1930-1939 (10468990864).jpg", title="Cheap travel by train", date="1930s", by="New Zealand Railways", place="Wellington", country="New Zealand", ll=(-41.2866, 174.7756),
+         summary="New Zealand Railways holiday poster built on a sunburst of red, yellow and blue with cut-out figures around a central disc that reads “Cheap travel by train”. Small text promotes Christmas and New Year holidays and says fares average less than a penny a mile.",
+         facts=[["Issued by", "New Zealand Railways"], ["Year", "1930s"], ["Fare claim", "Under 1d per mile"]], loc="Wellington, seat of New Zealand Railways; the poster is national"),
+    dict(id="intourist-moscow", file="Moscow (Travel poster).jpg", title="Moscow (Intourist)", date="c. 1930", by="Unknown artist for Intourist", place="Moscow", country="Russia", ll=(55.752, 37.6175),
+         summary="Soviet tourism poster for Intourist showing a Kremlin tower in red brick with green roof, set against a blue-green sky and modern city blocks. Text at the foot says tours to the USSR were arranged by Intourist and the main travel bureaus of the world.",
+         facts=[["Issued by", "Intourist, for foreign tourists"], ["Year", "c. 1930"]], wiki=W + "Intourist"),
+    dict(id="intourist-odessa-istanbul", file="Odessa–Istanbul (Travel poster).jpg", title="Odessa–Istanbul, 34 hours", date="c. 1930", by="Unknown artist for the USSR Black Sea State Steamship Line", place="Odessa", country="Ukraine", ll=(46.4825, 30.7233),
+         summary="Poster for the Soviet Black Sea steamship line. A large liner at the right sits beside a film strip with views of Odessa, and the ports along the route (including Istanbul, Piraeus, Jaffa and Port Said) are listed beneath. The headline promises 34 hours between Odessa and Istanbul.",
+         facts=[["Issued by", "USSR Black Sea State Steamship Line"], ["Year", "c. 1930"], ["Route", "Odessa to the Near East"]], wiki=W + "Odesa"),
+    dict(id="casino-de-paris-gorille", file="Poster Charles Gir 1925.png", title="Le Gorille et la femme, Casino de Paris", date="1925", by="Charles Gir", place="Casino de Paris", country="France", ll=(48.8767, 2.3367),
+         summary="Offset-printed poster by Charles Gir for a Casino de Paris revue in 1925. A black gorilla carries a limp woman in his arms against a cream ground, the title in heavy red capitals above and the venue name below.",
+         facts=[["Advertises", "Revue at the Casino de Paris"], ["Year", "1925"], ["Artist", "Charles Gir"]], wiki=W + "Casino_de_Paris"),
+    dict(id="expo-1925-poster", file="Poster Expo 1925.JPG", title="International Exhibition of Modern Decorative and Industrial Arts, 1925", date="1925", by="See the Commons record", place="Paris", country="France", ll=(48.8584, 2.3135),
+         summary="Official poster for the 1925 Paris exhibition from which Art Deco takes its name. A pale ground carries a stylised rose-like form and a column of smoke above a small boat, with the exhibition title and “April–October 1925” set below.",
+         facts=[["Event", "Exposition internationale des arts décoratifs et industriels modernes"], ["Dates", "April–October 1925"]], wiki=W + "Exposition_Internationale_des_Arts_D%C3%A9coratifs_et_Industriels_Modernes", loc="Paris, host city; the exhibition ran along the Seine near the Esplanade des Invalides"),
+    dict(id="expo-1925-bourdelle", file="Ministère du commerce et de l'industrie. Exposition internationale des arts décoratifs et industriels modernes affiche, Antoine Bourdelle.jpg", title="1925 Paris exhibition, poster by Antoine Bourdelle", date="1925", by="Antoine Bourdelle", place="Paris", country="France", ll=(48.8584, 2.3135),
+         summary="Another poster for the 1925 exhibition, designed by the sculptor Antoine Bourdelle for the Ministry of Commerce and Industry. A winged figure with a horse is drawn in a bronze-brown relief style above the line “Par labeur et par génie” and the exhibition details.",
+         facts=[["Issued by", "Ministère du commerce et de l'industrie"], ["Year", "1925"], ["Artist", "Antoine Bourdelle"]], loc="Paris, host city of the exhibition"),
+    dict(id="norblin-zakopane", file="Stefan Norblin - Polska - Zakopane (poster ca. 1925).png", title="Poland: Zakopane", date="c. 1925", by="Stefan Norblin", place="Zakopane", country="Poland", ll=(49.2992, 19.9496),
+         summary="Polish State Railways poster by Stefan Norblin. A highlander in a white wool cape and traditional dress leans on his stick before the snowy Tatra Mountains, with “Polska Zakopane” in heavy letters and the title in Polish, French and English.",
+         facts=[["Issued by", "Polish State Railways"], ["Year", "c. 1925"], ["Artist", "Stefan Norblin"]], artist="Stefan Norblin", wiki=W + "Zakopane"),
+    dict(id="norblin-krakow", file="Stefan Norblin - KRAKÓW.jpg", title="Poland: Kraków", date="c. 1935", by="Stefan Norblin", place="Kraków", country="Poland", ll=(50.0540, 19.9353),
+         summary="Polish State Railways poster for Kraków by Stefan Norblin. The dark silhouette of the Wawel hill cathedral and castle stands against an orange sky, with the city name in a thin, tall typeface.",
+         facts=[["Issued by", "Polish State Railways"], ["Year", "c. 1935"], ["Artist", "Stefan Norblin"]], artist="Stefan Norblin", wiki=W + "Wawel"),
+    dict(id="norblin-warszawa", file="Stefan Norblin - WARSZAWA.jpg", title="Poland: Warsaw", date="c. 1925", by="Stefan Norblin", place="Warsaw", country="Poland", ll=(52.2497, 21.0122),
+         summary="Poster for Warsaw by Stefan Norblin: the Old Town's tall tenements and church towers are painted in warm reds and yellows against a dark border, with a boat on the Vistula below and the city name across the bottom.",
+         facts=[["Issued by", "Polish State Railways"], ["Year", "c. 1925"], ["Artist", "Stefan Norblin"]], artist="Stefan Norblin", wiki=W + "Warsaw_Old_Town"),
+    dict(id="norblin-wilno", file="Stefan Norblin - WILNO.jpg", title="Poland: Wilno (Vilnius)", date="c. 1930", by="Stefan Norblin", place="Vilnius", country="Lithuania", ll=(54.6872, 25.2797),
+         summary="Poster for Wilno, now Vilnius, which was part of Poland between the wars. The old town's towers and roofs are shown as a layered blue silhouette beneath a yellow sky, with the name in white capitals.",
+         facts=[["Issued by", "Polish State Railways"], ["Year", "c. 1930"], ["Artist", "Stefan Norblin"]], artist="Stefan Norblin", wiki=W + "Vilnius", loc="Vilnius, which the poster calls Wilno"),
+    dict(id="norblin-silesia", file="Stefan Norblin - Polska. Górny Śląsk (ok. 1925).jpg", title="Poland: Upper Silesia", date="c. 1925", by="Stefan Norblin", place="Katowice, Upper Silesia", country="Poland", ll=(50.2649, 19.0238),
+         summary="Polish State Railways poster for Upper Silesia, the coal and industry region. A miner with a pickaxe over his shoulder stands against a smoky skyline of chimneys, above the region's name in Polish, French, English and German.",
+         facts=[["Issued by", "Polish State Railways"], ["Year", "c. 1925"], ["Artist", "Stefan Norblin"]], artist="Stefan Norblin", wiki=W + "Upper_Silesia", loc="Katowice, the main city of Upper Silesia"),
+    dict(id="vef-minox-1939", file="VEF MINOX 1939 Publicity.jpg", title="VEF Minox, “The new way”", date="1939", by="Unknown", place="Riga", country="Latvia", ll=(56.9496, 24.1052),
+         summary="1939 advertisement for the Minox miniature camera made by VEF in Riga. The small silver camera floats in a dark, rain-streaked night, with the brand name above and the Latvian slogan “Jaunais ceļš” (The new way) in red script.",
+         facts=[["Advertises", "VEF Minox camera"], ["Year", "1939"], ["Maker", "VEF, Riga"]], wiki=W + "Minox"),
 ]
 
 
 def build_posters():
-    qids = sorted({p["q"] for p in POSTERS})
+    qids = sorted({p["q"] for p in POSTERS if p.get("q")})
     d = http("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({"action": "wbgetentities", "ids": "|".join(qids), "props": "claims", "format": "json"}))
     coords = {}
     for q, ent in d["entities"].items():
@@ -311,6 +396,9 @@ def build_posters():
         if not img:
             print("poster skipped (licence not allowed or file missing):", p["title"], file=sys.stderr)
             continue
+        if p.get("ll"):
+            coords[p["id"]] = p["ll"]
+            p["q"] = p["id"]
         if p["q"] not in coords:
             print("no coordinates for", p["q"], p["title"], file=sys.stderr)
             continue
