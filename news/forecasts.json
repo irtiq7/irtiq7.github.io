@@ -189,11 +189,137 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-roadster",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "roadster",
+   "question": "Will \"roadster\" appear in at least 8 stories during the next 7 days?",
+   "threshold": 8,
+   "p": 0.61,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 10,
+    "base_per_week": 0,
+    "lambda": 8.5
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-uncertainty",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "uncertainty",
+   "question": "Will \"uncertainty\" appear in at least 11 stories during the next 7 days?",
+   "threshold": 11,
+   "p": 0.73,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 15,
+    "base_per_week": 0.3,
+    "lambda": 12.8
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-quarter",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "quarter",
+   "question": "Will \"quarter\" appear in at least 14 stories during the next 7 days?",
+   "threshold": 14,
+   "p": 0.67,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 18,
+    "base_per_week": 0.7,
+    "lambda": 15.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-stake",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "stake",
+   "question": "Will \"stake\" appear in at least 7 stories during the next 7 days?",
+   "threshold": 7,
+   "p": 0.64,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 9,
+    "base_per_week": 0,
+    "lambda": 7.7
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-coreweave",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "coreweave",
+   "question": "Will \"coreweave\" appear in at least 7 stories during the next 7 days?",
+   "threshold": 7,
+   "p": 0.64,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 9,
+    "base_per_week": 0,
+    "lambda": 7.7
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-property",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "property",
+   "question": "Will \"property\" appear in at least 6 stories during the next 7 days?",
+   "threshold": 6,
+   "p": 0.67,
+   "model": "poisson-persistence-v1",
+   "basis": "emerging",
+   "inputs": {
+    "recent_7d": 8,
+    "base_per_week": 0,
+    "lambda": 6.8
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
   "model": "poisson-persistence-v1",
-  "open": 6,
+  "open": 12,
   "resolved": 3,
   "voided": 0,
   "mean_brier": 0.145,
