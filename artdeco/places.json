@@ -101,7 +101,7 @@
   "facts": [
    [
     "Type",
-    "Through arch bridge"
+    "Steel bridge"
    ]
   ],
   "image": {
@@ -298,7 +298,7 @@
   "kind": "building",
   "cat": "other",
   "title": "Ranfurly",
-  "place": "Otago Region",
+  "place": "Central Otago District",
   "country": "New Zealand",
   "lat": -45.13333,
   "lon": 170.1,
@@ -322,7 +322,7 @@
    "license": "CC BY-SA 3.0",
    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
    "page": "https://commons.wikimedia.org/wiki/File%3ARanfurlyhotel.jpg",
-   "alt": "Ranfurly, Otago Region"
+   "alt": "Ranfurly, Central Otago District"
   },
   "links": [
    {
@@ -521,7 +521,7 @@
   "facts": [
    [
     "Type",
-    "Built structure"
+    "Sculpture"
    ]
   ],
   "image": {
@@ -928,7 +928,7 @@
   "kind": "building",
   "cat": "civic",
   "title": "M. K. Čiurlionis National Art Museum",
-  "place": "Kaunas",
+  "place": "Kaunas City Municipality",
   "country": "Lithuania",
   "lat": 54.9,
   "lon": 23.91139,
@@ -952,7 +952,7 @@
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "page": "https://commons.wikimedia.org/wiki/File%3AM._K._Ciurlionis_National_Art_Museum_%282018%29.jpg",
-   "alt": "M. K. Čiurlionis National Art Museum, Kaunas"
+   "alt": "M. K. Čiurlionis National Art Museum, Kaunas City Municipality"
   },
   "links": [
    {
@@ -1109,7 +1109,7 @@
   "facts": [
    [
     "Type",
-    "History museum"
+    "Historic house museum"
    ]
   ],
   "image": {
@@ -1130,6 +1130,98 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q62397"
+   }
+  ]
+ },
+ {
+  "id": "arsenal-stadium",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Arsenal Stadium",
+  "place": "London Borough of Islington",
+  "country": "United Kingdom",
+  "lat": 51.5577,
+  "lon": -0.10297,
+  "summary": "Arsenal Stadium is a defunct football stadium in Highbury, London, which was the home of Arsenal Football Club between 6 September 1913 and 7 May 2006. It was popularly known as \"Highbury\" from the name of the district in which it was located. The first reconstruction came in the 1930s, from which the Art Deco East and West Stands date.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Archibald Leitch"
+   ],
+   [
+    "Type",
+    "Defunct sports venue"
+   ]
+  ],
+  "image": {
+   "file": "Arsenal Stadium Highbury east facade.jpg",
+   "w": 2514,
+   "h": 1836,
+   "author": "No machine-readable author provided. Qwghlm~commonswiki assumed (based on copyright claims).",
+   "license": "CC BY-SA 3.0",
+   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "page": "https://commons.wikimedia.org/wiki/File%3AArsenal_Stadium_Highbury_east_facade.jpg",
+   "alt": "Arsenal Stadium, London Borough of Islington"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q205309"
+   }
+  ]
+ },
+ {
+  "id": "thtre-des-champs-lyses",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Théâtre des Champs-Élysées",
+  "place": "Quartier des Champs-Élysées",
+  "country": "France",
+  "lat": 48.86583,
+  "lon": 2.30306,
+  "summary": "The Théâtre des Champs-Élysées (French pronunciation: [teɑtʁə de ʃɑ̃z‿elize]) is an entertainment venue standing at 15 avenue Montaigne in Paris. It is situated near Avenue des Champs-Élysées, from which it takes its name. Commissioned by impresario Gabriel Astruc, the theatre was built from 1911 to 1913 upon the designs of brothers Auguste Perret and Gustave Perret following a scheme by Henry van de Velde, and became the first example of Art Deco architecture in the city.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Henry van de Velde, Auguste Perret"
+   ],
+   [
+    "Type",
+    "Music venue"
+   ]
+  ],
+  "image": {
+   "file": "Le théâtre des Champs-Élysées à Paris, 2022.jpg",
+   "w": 5421,
+   "h": 4319,
+   "author": "Jean-Pierre Dalbéra",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ALe_th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es_%C3%A0_Paris%2C_2022.jpg",
+   "alt": "Théâtre des Champs-Élysées, Quartier des Champs-Élysées"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q726531"
    }
   ]
  },
@@ -1318,282 +1410,6 @@
   ]
  },
  {
-  "id": "arsenal-stadium",
-  "kind": "building",
-  "cat": "civic",
-  "title": "Arsenal Stadium",
-  "place": "London Borough of Islington",
-  "country": "United Kingdom",
-  "lat": 51.5577,
-  "lon": -0.10297,
-  "summary": "Arsenal Stadium is a defunct football stadium in Highbury, London, which was the home of Arsenal Football Club between 6 September 1913 and 7 May 2006. It was popularly known as \"Highbury\" from the name of the district in which it was located. The first reconstruction came in the 1930s, from which the Art Deco East and West Stands date.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Archibald Leitch"
-   ],
-   [
-    "Type",
-    "Defunct sports venue"
-   ]
-  ],
-  "image": {
-   "file": "Arsenal Stadium Highbury east facade.jpg",
-   "w": 2514,
-   "h": 1836,
-   "author": "No machine-readable author provided. Qwghlm~commonswiki assumed (based on copyright claims).",
-   "license": "CC BY-SA 3.0",
-   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-   "page": "https://commons.wikimedia.org/wiki/File%3AArsenal_Stadium_Highbury_east_facade.jpg",
-   "alt": "Arsenal Stadium, London Borough of Islington"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Arsenal_Stadium"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q205309"
-   }
-  ]
- },
- {
-  "id": "thtre-des-champs-lyses",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Théâtre des Champs-Élysées",
-  "place": "Quartier des Champs-Élysées",
-  "country": "France",
-  "lat": 48.86583,
-  "lon": 2.30306,
-  "summary": "The Théâtre des Champs-Élysées (French pronunciation: [teɑtʁə de ʃɑ̃z‿elize]) is an entertainment venue standing at 15 avenue Montaigne in Paris. It is situated near Avenue des Champs-Élysées, from which it takes its name. Commissioned by impresario Gabriel Astruc, the theatre was built from 1911 to 1913 upon the designs of brothers Auguste Perret and Gustave Perret following a scheme by Henry van de Velde, and became the first example of Art Deco architecture in the city.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Henry van de Velde, Auguste Perret"
-   ],
-   [
-    "Type",
-    "Music venue"
-   ]
-  ],
-  "image": {
-   "file": "Le théâtre des Champs-Élysées à Paris, 2022.jpg",
-   "w": 5421,
-   "h": 4319,
-   "author": "Jean-Pierre Dalbéra",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ALe_th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es_%C3%A0_Paris%2C_2022.jpg",
-   "alt": "Théâtre des Champs-Élysées, Quartier des Champs-Élysées"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_des_Champs-%C3%89lys%C3%A9es"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q726531"
-   }
-  ]
- },
- {
-  "id": "christ-the-redeemer",
-  "kind": "building",
-  "cat": "monument",
-  "title": "Christ the Redeemer",
-  "place": "Alto da Boa Vista",
-  "country": "Brazil",
-  "lat": -22.95192,
-  "lon": -43.21046,
-  "summary": "Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ]) is an Art Deco statue of Jesus in Rio de Janeiro, Brazil, created by French-Polish sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot and Romanian sculptor Gheorghe Leonida who sculpted the face.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Albert Caquot, Paul Landowski, Gheorghe Leonida"
-   ],
-   [
-    "Type",
-    "Monument"
-   ]
-  ],
-  "image": {
-   "file": "Christ the Redeemer - Cristo Redentor.jpg",
-   "w": 2497,
-   "h": 3744,
-   "author": "Arne Müseler",
-   "license": "CC BY-SA 3.0 de",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChrist_the_Redeemer_-_Cristo_Redentor.jpg",
-   "alt": "Christ the Redeemer, Alto da Boa Vista"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q79961"
-   }
-  ]
- },
- {
-  "id": "the-el-dorado",
-  "kind": "building",
-  "cat": "home",
-  "title": "The El Dorado",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.78833,
-  "lon": -73.9675,
-  "summary": "The El Dorado (also spelled the Eldorado) is a cooperative apartment building at 300 Central Park West, between 90th and 91st Streets adjacent to Central Park, on the Upper West Side of Manhattan in New York City, United States. It was constructed from 1929 to 1931 and was designed by architect of record Margon & Holder and consulting architect Emery Roth in the Art Deco style.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/The_El_Dorado",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Emery Roth"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "The Eldorado Apartments.jpg",
-   "w": 1045,
-   "h": 1848,
-   "author": "Hu Totya",
-   "license": "CC BY 3.0",
-   "license_url": "https://creativecommons.org/licenses/by/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AThe_Eldorado_Apartments.jpg",
-   "alt": "The El Dorado, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/The_El_Dorado"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q850377"
-   }
-  ]
- },
- {
-  "id": "palace-of-fine-arts",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Palace of Fine arts",
-  "place": "Cuauhtémoc",
-  "country": "Mexico",
-  "lat": 19.43528,
-  "lon": -99.14139,
-  "summary": "The Palacio de Bellas Artes (\"Palace of Fine Arts\") is a prominent cultural center in Mexico City. It hosts performing arts events, literature events and plastic arts galleries and exhibitions (including important permanent Mexican murals). The exterior of the building is primarily Art Nouveau and Neoclassical and the interior is primarily Art Deco.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Adamo Boari, Federico Ernesto Mariscal Piña"
-   ],
-   [
-    "Type",
-    "Arts center"
-   ]
-  ],
-  "image": {
-   "file": "Atardecer En Bellas Artes Vertical (128312121).jpeg",
-   "w": 1366,
-   "h": 2048,
-   "author": "Octavio Alonso Maya Castro",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AAtardecer_En_Bellas_Artes_Vertical_%28128312121%29.jpeg",
-   "alt": "Palace of Fine arts, Cuauhtémoc"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1139081"
-   }
-  ]
- },
- {
-  "id": "chrysler-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Chrysler Building",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.75143,
-  "lon": -73.97572,
-  "summary": "The Chrysler Building is a 1,046-foot-tall (319 m), Art Deco-style supertall skyscraper in the East Midtown neighborhood of Manhattan, New York City, United States. Located at the intersection of 42nd Street and Lexington Avenue, it is the tallest steel-framed brick building in the world.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Chrysler_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "William Van Alen"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "Chrysler Building by David Shankbone Retouched.jpg",
-   "w": 1036,
-   "h": 3055,
-   "author": "w:User:Overand derivative work: Overand ( talk )",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChrysler_Building_by_David_Shankbone_Retouched.jpg",
-   "alt": "Chrysler Building, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Chrysler_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q11274"
-   }
-  ]
- },
- {
   "id": "500-fifth-avenue",
   "kind": "building",
   "cat": "tower",
@@ -1686,94 +1502,94 @@
   ]
  },
  {
-  "id": "battersea-power-station",
+  "id": "christ-the-redeemer",
   "kind": "building",
-  "cat": "bridge",
-  "title": "Battersea Power Station",
-  "place": "London Borough of Wandsworth",
-  "country": "United Kingdom",
-  "lat": 51.4811,
-  "lon": -0.14444,
-  "summary": "Battersea Power Station is a preserved coal-fired power station located on the south bank of the River Thames in Nine Elms in the London Borough of Wandsworth. It was built by the London Power Company (LPC) to the design of Leonard Pearce, Engineer in Chief to the LPC, and CS Allott & Son Engineers. The architects were J. The station is one of the world's largest brick buildings and notable for its original, Art Deco interior fittings and decor.",
+  "cat": "monument",
+  "title": "Christ the Redeemer",
+  "place": "Alto da Boa Vista",
+  "country": "Brazil",
+  "lat": -22.95192,
+  "lon": -43.21046,
+  "summary": "Christ the Redeemer (Portuguese: Cristo Redentor, standard Brazilian Portuguese: [ˈkɾistu ʁedẽˈtoʁ]) is an Art Deco statue of Jesus in Rio de Janeiro, Brazil, created by French-Polish sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva Costa, in collaboration with French engineer Albert Caquot and Romanian sculptor Gheorghe Leonida who sculpted the face.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station",
+   "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
-    "Architect",
-    "Giles Gilbert Scott"
+    "Architects",
+    "Paul Landowski, Albert Caquot, Gheorghe Leonida"
    ],
    [
     "Type",
-    "Coal-fired power station"
+    "Pilgrimage site"
    ]
   ],
   "image": {
-   "file": "Battersea Power Station, London-22May2010.jpg",
-   "w": 5616,
+   "file": "Christ the Redeemer - Cristo Redentor.jpg",
+   "w": 2497,
    "h": 3744,
-   "author": "Aurelien Guichard from London, United Kingdom",
-   "license": "CC BY-SA 2.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABattersea_Power_Station%2C_London-22May2010.jpg",
-   "alt": "Battersea Power Station, London Borough of Wandsworth"
+   "author": "Arne Müseler",
+   "license": "CC BY-SA 3.0 de",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChrist_the_Redeemer_-_Cristo_Redentor.jpg",
+   "alt": "Christ the Redeemer, Alto da Boa Vista"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station"
+    "url": "https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q810953"
+    "url": "https://www.wikidata.org/wiki/Q79961"
    }
   ]
  },
  {
-  "id": "torrione-ina",
+  "id": "chrysler-building",
   "kind": "building",
   "cat": "tower",
-  "title": "Torrione INA",
-  "place": "Brescia",
-  "country": "Italy",
-  "lat": 45.53852,
-  "lon": 10.21887,
-  "summary": "The Torrione INA (transl. \"INA Tower\"), also known as Torrione or Grattacielo, is a tall building in Brescia, Italy. Built between 1930 and 1932, it is the first skyscraper in Italy and also one of the first skyscrapers in Europe. The architectural style of this building is predominantly Art Deco, with influences from Chicago School.",
+  "title": "Chrysler Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.75143,
+  "lon": -73.97572,
+  "summary": "The Chrysler Building is a 1,046-foot-tall (319 m), Art Deco-style supertall skyscraper in the East Midtown neighborhood of Manhattan, New York City, United States. Located at the intersection of 42nd Street and Lexington Avenue, it is the tallest steel-framed brick building in the world.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Torrione_INA",
+   "url": "https://en.wikipedia.org/wiki/Chrysler_Building",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Marcello Piacentini"
+    "William Van Alen"
    ],
    [
     "Type",
-    "Tower"
+    "Skyscraper"
    ]
   ],
   "image": {
-   "file": "Torre in Piazza della Vittoria Brescia.jpg",
-   "w": 4652,
-   "h": 8444,
-   "author": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a message . This imag",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ATorre_in_Piazza_della_Vittoria_Brescia.jpg",
-   "alt": "Torrione INA, Brescia"
+   "file": "Chrysler Building by David Shankbone Retouched.jpg",
+   "w": 1036,
+   "h": 3055,
+   "author": "w:User:Overand derivative work: Overand ( talk )",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChrysler_Building_by_David_Shankbone_Retouched.jpg",
+   "alt": "Chrysler Building, Manhattan"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Torrione_INA"
+    "url": "https://en.wikipedia.org/wiki/Chrysler_Building"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q16616997"
+    "url": "https://www.wikidata.org/wiki/Q11274"
    }
   ]
  },
@@ -1870,512 +1686,6 @@
   ]
  },
  {
-  "id": "piscine-molitor",
-  "kind": "building",
-  "cat": "hotel",
-  "title": "Piscine Molitor",
-  "place": "16th arrondissement of Paris",
-  "country": "France",
-  "lat": 48.84517,
-  "lon": 2.25309,
-  "summary": "Piscine Molitor (English: Miller Swimming Pool, French pronunciation: [pisin molitɔʁ]; also known as the Piscines Auteuil-Molitor or the Grands établissements balnéaires d'Auteuil) is a swimming pool and hotel complex located in Porte Molitor, 16th arrondissement of Paris, Île-de-France, Paris, France. The pool is known for its Art Deco designs and the popular introduction of the bikini by Louis Réard on 5 July 1946.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Piscine_Molitor",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Jacques Rougerie, Alain-Charles Perrot, Lucien Pollet"
-   ],
-   [
-    "Type",
-    "Sports venue"
-   ]
-  ],
-  "image": {
-   "file": "Paris, piscine Molitor, 1 November 2015 003.jpg",
-   "w": 5184,
-   "h": 3456,
-   "author": "Fred Romero from Paris, France",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AParis%2C_piscine_Molitor%2C_1_November_2015_003.jpg",
-   "alt": "Piscine Molitor, 16th arrondissement of Paris"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Piscine_Molitor"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q645095"
-   }
-  ]
- },
- {
-  "id": "national-basilica-of-the-sacred-heart",
-  "kind": "building",
-  "cat": "religious",
-  "title": "National Basilica of the Sacred Heart",
-  "place": "Ganshoren",
-  "country": "Belgium",
-  "lat": 50.86667,
-  "lon": 4.31722,
-  "summary": "The National Basilica of the Sacred Heart (French: Basilique nationale du Sacré-Cœur; Dutch: Nationale Basiliek van het Heilig-Hart) is a Catholic minor basilica and parish church in Brussels, Belgium. It is dedicated to the Sacred Heart, inspired by the Basilique du Sacré-Cœur in Paris. The massive brick and reinforced concrete structure, in Art Deco style of neo-Byzantine inspiration, features two thinner towers and a nearly as high green copper dome that rises 89 metres (292 ft) above ground, dominating Brussels' north-western skyline.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Pierre Langerock, Albert Van huffel, Paul Rome"
-   ],
-   [
-    "Type",
-    "National shrine"
-   ]
-  ],
-  "image": {
-   "file": "1001 Basilica of the Sacred Heart in Brussels Photo by Giles Laurent.jpg",
-   "w": 8064,
-   "h": 6048,
-   "author": "Giles Laurent",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A1001_Basilica_of_the_Sacred_Heart_in_Brussels_Photo_by_Giles_Laurent.jpg",
-   "alt": "National Basilica of the Sacred Heart, Ganshoren"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q846006"
-   }
-  ]
- },
- {
-  "id": "manila-metropolitan-theatre",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Manila Metropolitan Theatre",
-  "place": "",
-  "country": "Philippines",
-  "lat": 14.594,
-  "lon": 120.9805,
-  "summary": "The Manila Metropolitan Theater (Filipino: Tanghalang Metropolitan; also known as the Metropolitan Theater; abbreviated as the MET) is a historic Philippine Art Deco building located in Plaza Lawton in Ermita, Manila. It is recognized as the forefront of the Art Deco architectural style in the Philippines. Designed by architect Juan M.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Juan M. Arellano"
-   ],
-   [
-    "Type",
-    "Theatre building"
-   ]
-  ],
-  "image": {
-   "file": "Manila Metropolitan Theaterjwilz.jpg",
-   "w": 2576,
-   "h": 1932,
-   "author": "JWilz12345",
-   "license": "CC0",
-   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Metropolitan_Theaterjwilz.jpg",
-   "alt": "Manila Metropolitan Theatre"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1639613"
-   }
-  ]
- },
- {
-  "id": "1-wall-street",
-  "kind": "building",
-  "cat": "civic",
-  "title": "1 Wall Street",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.70722,
-  "lon": -74.01167,
-  "summary": "1 Wall Street (also known as the Irving Trust Company Building, the Bank of New York Building, and the BNY Mellon Building) is a 654-foot-tall (199 m) Art Deco skyscraper in the Financial District of Lower Manhattan, New York City, United States. The building, which occupies a full city block, consists of two sections.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/1_Wall_Street",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Ralph Thomas Walker"
-   ],
-   [
-    "Type",
-    "Bank building"
-   ]
-  ],
-  "image": {
-   "file": "1 Wall Street panoramic.jpg",
-   "w": 2963,
-   "h": 4109,
-   "author": "1_Wall_Street_001.JPG : Gryffindor 1_Wall_Street_002.JPG : Gryffindor derivative work: Justass ( talk )",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3A1_Wall_Street_panoramic.jpg",
-   "alt": "1 Wall Street, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/1_Wall_Street"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q209017"
-   }
-  ]
- },
- {
-  "id": "barclay-vesey-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Barclay-Vesey Building",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.71375,
-  "lon": -74.01292,
-  "summary": "The Barclay–Vesey Building (also known as 100 Barclay, the Verizon Building, and formerly the New York Telephone Company Building) is an office and residential building at 140 West Street in Lower Manhattan, New York City. The 32-story building was designed in the Art Deco style by Ralph Walker of Voorhees, Gmelin and Walker, and was Walker's first major commission as well as one of the first Art Deco skyscrapers.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Ralph Thomas Walker"
-   ],
-   [
-    "Type",
-    "Skyscraper"
-   ]
-  ],
-  "image": {
-   "file": "Barclay-Vesey Building 140 West Street.jpg",
-   "w": 2270,
-   "h": 3107,
-   "author": "Beyond My Ken",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ABarclay-Vesey_Building_140_West_Street.jpg",
-   "alt": "Barclay-Vesey Building, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1983213"
-   }
-  ]
- },
- {
-  "id": "cine-callao",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Cine Callao",
-  "place": "Madrid",
-  "country": "Spain",
-  "lat": 40.42,
-  "lon": -3.7061,
-  "summary": "Cine Callao is a building located in Plaza de Callao in Madrid. It is a common venue for film premieres and press screenings. Designed by Luis Gutiérrez Soto, the facade features elements inspired by the Art Deco.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Cine_Callao",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Luis Gutiérrez Soto"
-   ],
-   [
-    "Type",
-    "Movie theater"
-   ]
-  ],
-  "image": {
-   "file": "Cine Callao, Madrid, Spain 2012.jpg",
-   "w": 2356,
-   "h": 1566,
-   "author": "David Gordillo",
-   "license": "CC BY-SA 2.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ACine_Callao%2C_Madrid%2C_Spain_2012.jpg",
-   "alt": "Cine Callao, Madrid"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Cine_Callao"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q5769470"
-   }
-  ]
- },
- {
-  "id": "broadway-mansions",
-  "kind": "building",
-  "cat": "hotel",
-  "title": "Broadway Mansions",
-  "place": "Beiwaitan Subdistrict",
-  "country": "People's Republic of China",
-  "lat": 31.24634,
-  "lon": 121.48548,
-  "summary": "The Broadway Mansions (simplified Chinese: 百老汇大厦; traditional Chinese: 百老匯大廈; pinyin: Bǎilǎohuì Dàshà, Shanghainese: Pahlowe Dusa) is a nineteen-floor Art Deco five-star hotel in Shanghai, China. and was for over five decades one of the primary symbols of Shanghai. Completed in 1934, the same year as the 19 feet taller Park Hotel.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Broadway_Mansions",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "P&T Architects & Engineers Ltd."
-   ],
-   [
-    "Type",
-    "Hotel"
-   ]
-  ],
-  "image": {
-   "file": "20112-Shanghai, Broadway Mansions.jpg",
-   "w": 2003,
-   "h": 3000,
-   "author": "xiquinhosilva",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A20112-Shanghai%2C_Broadway_Mansions.jpg",
-   "alt": "Broadway Mansions, Beiwaitan Subdistrict"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Broadway_Mansions"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q23804"
-   }
-  ]
- },
- {
-  "id": "radio-city-music-hall",
-  "kind": "building",
-  "cat": "theatre",
-  "title": "Radio City Music Hall",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.75972,
-  "lon": -73.97917,
-  "summary": "Radio City Music Hall (also known as Radio City) is an entertainment venue and theater at 1260 Avenue of the Americas, within Rockefeller Center, in the Midtown Manhattan neighborhood of New York City. Nicknamed \"The Showplace of the Nation\", it is the headquarters for the Rockettes. Radio City Music Hall was designed by Edward Durell Stone and Donald Deskey in the Art Deco style.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Edward Durell Stone"
-   ],
-   [
-    "Type",
-    "Concert hall"
-   ]
-  ],
-  "image": {
-   "file": "Radio City Music Hall (51395756913).jpg",
-   "w": 3585,
-   "h": 3585,
-   "author": "ajay_suresh",
-   "license": "CC BY 2.0",
-   "license_url": "https://creativecommons.org/licenses/by/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ARadio_City_Music_Hall_%2851395756913%29.jpg",
-   "alt": "Radio City Music Hall, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q753437"
-   }
-  ]
- },
- {
-  "id": "palais-de-la-porte-dore",
-  "kind": "building",
-  "cat": "civic",
-  "title": "Palais de la Porte Dorée",
-  "place": "12th arrondissement of Paris",
-  "country": "France",
-  "lat": 48.83528,
-  "lon": 2.40944,
-  "summary": "The Palais de la Porte Dorée (French pronunciation: [palɛ də la pɔʁt dɔʁe], lit. 'Palace of the Golden Gate') is an exhibit hall located on the edge of the Bois de Vincennes at 293, avenue Daumesnil, 12th arrondissement of Paris, France. It now houses the Musée de l'Histoire de l'Immigration, as well as a tropical aquarium in its cellar. The building is considered a landmark of Art Deco architecture.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Albert Laprade"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Palasi Porte Doree Entree.jpg",
-   "w": 3872,
-   "h": 2592,
-   "author": "AlSepPhoenix",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3APalasi_Porte_Doree_Entree.jpg",
-   "alt": "Palais de la Porte Dorée, 12th arrondissement of Paris"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1141316"
-   }
-  ]
- },
- {
-  "id": "freemasons-hall",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Freemasons' Hall",
-  "place": "London Borough of Camden",
-  "country": "United Kingdom",
-  "lat": 51.5151,
-  "lon": -0.121,
-  "summary": "Freemasons' Hall in London is the headquarters of the United Grand Lodge of England and the Supreme Grand Chapter of Royal Arch Masons of England, as well as being a meeting place for many Masonic Lodges in the London area. It is located in Great Queen Street between Holborn and Covent Garden and has been a Masonic meeting place since 1775. Parts of the building are open to the public daily, and its preserved classic Art Deco style, together with its regular use as a film and television location, have made it a tourist destination.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Thomas Sandby"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Freemasons' Hall, London.JPG",
-   "w": 1192,
-   "h": 1790,
-   "author": "Eluveitie",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AFreemasons%27_Hall%2C_London.JPG",
-   "alt": "Freemasons' Hall, London Borough of Camden"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1453586"
-   }
-  ]
- },
- {
-  "id": "cvijeta-zuzori-art-pavilion",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Cvijeta Zuzorić Art Pavilion",
-  "place": "Belgrade",
-  "country": "Serbia",
-  "lat": 44.8225,
-  "lon": 20.454,
-  "summary": "„Cvijeta Zuzorić“ Art Pavilion (Serbian: Уметнички павиљон \"Цвијета Зузорић\", Umetnički paviljon \"Cvijeta Zuzorić\") is an exhibition building in Belgrade, in Kalemegdan, situated in the park's section of Little Kalemegdan, next to the south-eastern front of the Belgrade fortress. It was built between 1927 and 1928 after the design of the architect Branislav Kojić, in the Art Deco architectural style.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Branislav Kojić"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Павиљон Цвијете Зузорић3.JPG",
-   "w": 3264,
-   "h": 2448,
-   "author": "PedjaNbg",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%B0%D0%B2%D0%B8%D1%99%D0%BE%D0%BD_%D0%A6%D0%B2%D0%B8%D1%98%D0%B5%D1%82%D0%B5_%D0%97%D1%83%D0%B7%D0%BE%D1%80%D0%B8%D1%9B3.JPG",
-   "alt": "Cvijeta Zuzorić Art Pavilion, Belgrade"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q3373107"
-   }
-  ]
- },
- {
   "id": "boston-manor-tube-station",
   "kind": "building",
   "cat": "station",
@@ -2397,7 +1707,7 @@
    ],
    [
     "Type",
-    "Station located on surface"
+    "London Underground station"
    ]
   ],
   "image": {
@@ -2560,70 +1870,24 @@
   ]
  },
  {
-  "id": "general-electric-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "General Electric Building",
-  "place": "Manhattan",
-  "country": "United States",
-  "lat": 40.75722,
-  "lon": -73.9725,
-  "summary": "The General Electric Building, also known as 570 Lexington Avenue, is a skyscraper at the southwestern corner of Lexington Avenue and 51st Street in Midtown Manhattan, New York City. The building, designed by Cross & Cross and completed in 1931, was known as the RCA Victor Building during its construction. 570 Lexington Avenue contains a 50-floor, 640-foot-tall (200 m) stylized Gothic octagonal brick tower, with elaborate Art Deco decorations of lightning bolts showing the power of electricity.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/General_Electric_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architects",
-    "Cross & Cross, John Walter Cross"
-   ],
-   [
-    "Type",
-    "Office building"
-   ]
-  ],
-  "image": {
-   "file": "General Electric Building 570 Lexington.jpg",
-   "w": 1528,
-   "h": 2870,
-   "author": "Fletcher6",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AGeneral_Electric_Building_570_Lexington.jpg",
-   "alt": "General Electric Building, Manhattan"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/General_Electric_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q244391"
-   }
-  ]
- },
- {
-  "id": "70-pine-street",
+  "id": "the-el-dorado",
   "kind": "building",
   "cat": "home",
-  "title": "70 Pine Street",
+  "title": "The El Dorado",
   "place": "Manhattan",
   "country": "United States",
-  "lat": 40.70639,
-  "lon": -74.0075,
-  "summary": "70 Pine Street (formerly known as the 60 Wall Tower, Cities Service Building, and American International Building) is a 67-story, 952-foot (290 m) residential skyscraper in the Financial District of Lower Manhattan, New York City, New York, U.S. Designed by the architectural firm of Clinton & Russell, Holton & George in the Art Deco style, 70 Pine Street was constructed between 1930 and 1932 as an office building.",
+  "lat": 40.78833,
+  "lon": -73.9675,
+  "summary": "The El Dorado (also spelled the Eldorado) is a cooperative apartment building at 300 Central Park West, between 90th and 91st Streets adjacent to Central Park, on the Upper West Side of Manhattan in New York City, United States. It was constructed from 1929 to 1931 and was designed by architect of record Margon & Holder and consulting architect Emery Roth in the Art Deco style.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/70_Pine_Street",
+   "url": "https://en.wikipedia.org/wiki/The_El_Dorado",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Clinton and Russell"
+    "Emery Roth"
    ],
    [
     "Type",
@@ -2631,253 +1895,207 @@
    ]
   ],
   "image": {
-   "file": "American International Building3.JPG",
-   "w": 1755,
-   "h": 2189,
-   "author": "Clément Bardot",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AAmerican_International_Building3.JPG",
-   "alt": "70 Pine Street, Manhattan"
+   "file": "The Eldorado Apartments.jpg",
+   "w": 1045,
+   "h": 1848,
+   "author": "Hu Totya",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AThe_Eldorado_Apartments.jpg",
+   "alt": "The El Dorado, Manhattan"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/70_Pine_Street"
+    "url": "https://en.wikipedia.org/wiki/The_El_Dorado"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q262041"
+    "url": "https://www.wikidata.org/wiki/Q850377"
    }
   ]
  },
  {
-  "id": "anzac-memorial",
+  "id": "palace-of-fine-arts",
   "kind": "building",
-  "cat": "civic",
-  "title": "Anzac Memorial",
-  "place": "City of Sydney",
-  "country": "Australia",
-  "lat": -33.87572,
-  "lon": 151.21094,
-  "summary": "The Anzac Memorial is a heritage-listed war memorial, museum and monument located in Hyde Park South near Liverpool Street in the CBD of Sydney, New South Wales, Australia. The Art Deco monument was designed by C. Bruce Dellit, with the exterior adorned with monumental figural reliefs and sculptures by Rayner Hoff, and built from 1932 to 1934 by Kell & Rigby.",
+  "cat": "theatre",
+  "title": "Palace of Fine arts",
+  "place": "Cuauhtémoc",
+  "country": "Mexico",
+  "lat": 19.43528,
+  "lon": -99.14139,
+  "summary": "The Palacio de Bellas Artes (\"Palace of Fine Arts\") is a prominent cultural center in Mexico City. It hosts performing arts events, literature events and plastic arts galleries and exhibitions (including important permanent Mexican murals). The exterior of the building is primarily Art Nouveau and Neoclassical and the interior is primarily Art Deco.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Anzac_Memorial",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Bruce Dellit"
-   ],
-   [
-    "Type",
-    "Military museum"
-   ]
-  ],
-  "image": {
-   "file": "ANZAC Memorial Sydney Australia - June 2007.jpg",
-   "w": 1600,
-   "h": 1200,
-   "author": "Digital fuel ( talk )",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AANZAC_Memorial_Sydney_Australia_-_June_2007.jpg",
-   "alt": "Anzac Memorial, City of Sydney"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Anzac_Memorial"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q844556"
-   }
-  ]
- },
- {
-  "id": "coit-tower",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Coit Tower",
-  "place": "San Francisco",
-  "country": "United States",
-  "lat": 37.8025,
-  "lon": -122.40583,
-  "summary": "Coit Tower ( KOYT; also known as Coit Memorial Tower) is a 210-foot (64 m) tower in the Telegraph Hill neighborhood of San Francisco, California, overlooking the city and San Francisco Bay. The tower, in the city's Pioneer Park, was built between 1932 and 1933 using Lillie Hitchcock Coit's bequest to beautify the city of San Francisco. The Art Deco tower, built of unpainted reinforced concrete, was designed by architects Arthur Brown Jr. and Henry Temple Howard.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Coit_Tower",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Arthur Brown, Jr."
-   ],
-   [
-    "Type",
-    "Observation tower"
-   ]
-  ],
-  "image": {
-   "file": "Coit Tower 2021.jpg",
-   "w": 2768,
-   "h": 3721,
-   "author": "Chris6d",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ACoit_Tower_2021.jpg",
-   "alt": "Coit Tower, San Francisco"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Coit_Tower"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q1107297"
-   }
-  ]
- },
- {
-  "id": "central-universal-department-store",
-  "kind": "building",
-  "cat": "shop",
-  "title": "Central Universal Department Store",
-  "place": "Kyiv",
-  "country": "Ukraine",
-  "lat": 50.44528,
-  "lon": 30.52083,
-  "summary": "Central Universal Department Store Kyiv (Ukrainian: Центральний універсальний магазин Київ, romanized: Tsentralnyi universalnyi mahazyn Kyiv [tsenˈtrɑlʲnɪj ʊni⁽ʲ⁾werˈsɑlʲnɪj mɐɦɐˈzɪn ˈkɪjiu̯]) or TsUM Kyiv (Ukrainian: ЦУМ Київ) is Ukraine's one and only department store of the classical format. The department store's building in the Art Deco style was erected from 1936 to 1939.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/TsUM_Kyiv",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Daniil Fridman"
-   ],
-   [
-    "Type",
-    "Architectural heritage monument"
-   ]
-  ],
-  "image": {
-   "file": "Крещатик 38 дробь 2 Киев 2012 01.JPG",
-   "w": 3008,
-   "h": 2000,
-   "author": "AMY",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9A%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D0%BA_38_%D0%B4%D1%80%D0%BE%D0%B1%D1%8C_2_%D0%9A%D0%B8%D0%B5%D0%B2_2012_01.JPG",
-   "alt": "Central Universal Department Store, Kyiv"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/TsUM_Kyiv"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q4504385"
-   }
-  ]
- },
- {
-  "id": "florin-court",
-  "kind": "building",
-  "cat": "home",
-  "title": "Florin Court",
-  "place": "London",
-  "country": "United Kingdom",
-  "lat": 51.5209,
-  "lon": -0.09871,
-  "summary": "Florin Court is an Art Deco / Streamline Moderne Grade II residential building on the eastern side of Charterhouse Square in Smithfield, London.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Florin_Court",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Guy Morgan"
-   ],
-   [
-    "Type",
-    "Residential building"
-   ]
-  ],
-  "image": {
-   "file": "Florin Court (2).jpg",
-   "w": 2816,
-   "h": 2112,
-   "author": "CAGW",
-   "license": "CC BY-SA 2.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AFlorin_Court_%282%29.jpg",
-   "alt": "Florin Court, London"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Florin_Court"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q5461830"
-   }
-  ]
- },
- {
-  "id": "vytautas-the-great-war-museum",
-  "kind": "building",
-  "cat": "civic",
-  "title": "Vytautas the Great War Museum",
-  "place": "Kaunas",
-  "country": "Lithuania",
-  "lat": 54.9,
-  "lon": 23.9119,
-  "summary": "The Vytautas the Great War Museum (Lithuanian: Vytauto Didžiojo karo muziejus) is a museum in Kaunas, Lithuania. It was built in Art Deco and early functionalism style. Originally it was established in 1921 by Vladas Nagevičius but later it was decided to move to a larger location.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum",
+   "url": "https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architects",
-    "Vladimiras Dubeneckis, Kārlis Reisons"
+    "Adamo Boari, Federico Ernesto Mariscal Piña"
    ],
    [
     "Type",
-    "Built structure"
+    "Arts center"
    ]
   ],
   "image": {
-   "file": "Vytauto Didžiojo karo muziejus (aut. A. Užbalis).jpg",
-   "w": 850,
-   "h": 506,
-   "author": "Vdkaromuziejus",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AVytauto_Did%C5%BEiojo_karo_muziejus_%28aut._A._U%C5%BEbalis%29.jpg",
-   "alt": "Vytautas the Great War Museum, Kaunas"
+   "file": "Atardecer En Bellas Artes Vertical (128312121).jpeg",
+   "w": 1366,
+   "h": 2048,
+   "author": "Octavio Alonso Maya Castro",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AAtardecer_En_Bellas_Artes_Vertical_%28128312121%29.jpeg",
+   "alt": "Palace of Fine arts, Cuauhtémoc"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum"
+    "url": "https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q3267398"
+    "url": "https://www.wikidata.org/wiki/Q1139081"
+   }
+  ]
+ },
+ {
+  "id": "national-basilica-of-the-sacred-heart",
+  "kind": "building",
+  "cat": "religious",
+  "title": "National Basilica of the Sacred Heart",
+  "place": "Ganshoren",
+  "country": "Belgium",
+  "lat": 50.86667,
+  "lon": 4.31722,
+  "summary": "The National Basilica of the Sacred Heart (French: Basilique nationale du Sacré-Cœur; Dutch: Nationale Basiliek van het Heilig-Hart) is a Catholic minor basilica and parish church in Brussels, Belgium. It is dedicated to the Sacred Heart, inspired by the Basilique du Sacré-Cœur in Paris. The massive brick and reinforced concrete structure, in Art Deco style of neo-Byzantine inspiration, features two thinner towers and a nearly as high green copper dome that rises 89 metres (292 ft) above ground, dominating Brussels' north-western skyline.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Albert Van huffel, Pierre Langerock, Paul Rome"
+   ],
+   [
+    "Type",
+    "National shrine"
+   ]
+  ],
+  "image": {
+   "file": "1001 Basilica of the Sacred Heart in Brussels Photo by Giles Laurent.jpg",
+   "w": 8064,
+   "h": 6048,
+   "author": "Giles Laurent",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1001_Basilica_of_the_Sacred_Heart_in_Brussels_Photo_by_Giles_Laurent.jpg",
+   "alt": "National Basilica of the Sacred Heart, Ganshoren"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Basilica_of_the_Sacred_Heart,_Brussels"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q846006"
+   }
+  ]
+ },
+ {
+  "id": "battersea-power-station",
+  "kind": "building",
+  "cat": "bridge",
+  "title": "Battersea Power Station",
+  "place": "London Borough of Wandsworth",
+  "country": "United Kingdom",
+  "lat": 51.4811,
+  "lon": -0.14444,
+  "summary": "Battersea Power Station is a preserved coal-fired power station located on the south bank of the River Thames in Nine Elms in the London Borough of Wandsworth. It was built by the London Power Company (LPC) to the design of Leonard Pearce, Engineer in Chief to the LPC, and CS Allott & Son Engineers. The architects were J. The station is one of the world's largest brick buildings and notable for its original, Art Deco interior fittings and decor.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Giles Gilbert Scott"
+   ],
+   [
+    "Type",
+    "Coal-fired power station"
+   ]
+  ],
+  "image": {
+   "file": "Battersea Power Station, London-22May2010.jpg",
+   "w": 5616,
+   "h": 3744,
+   "author": "Aurelien Guichard from London, United Kingdom",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ABattersea_Power_Station%2C_London-22May2010.jpg",
+   "alt": "Battersea Power Station, London Borough of Wandsworth"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Battersea_Power_Station"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q810953"
+   }
+  ]
+ },
+ {
+  "id": "torrione-ina",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Torrione INA",
+  "place": "Brescia",
+  "country": "Italy",
+  "lat": 45.53852,
+  "lon": 10.21887,
+  "summary": "The Torrione INA (transl. \"INA Tower\"), also known as Torrione or Grattacielo, is a tall building in Brescia, Italy. Built between 1930 and 1932, it is the first skyscraper in Italy and also one of the first skyscrapers in Europe. The architectural style of this building is predominantly Art Deco, with influences from Chicago School.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Torrione_INA",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Marcello Piacentini"
+   ],
+   [
+    "Type",
+    "Tower"
+   ]
+  ],
+  "image": {
+   "file": "Torre in Piazza della Vittoria Brescia.jpg",
+   "w": 4652,
+   "h": 8444,
+   "author": "This Photo was taken by Wolfgang Moroder . Feel free to use my photos, but please mention me as the author and send me a message . This imag",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ATorre_in_Piazza_della_Vittoria_Brescia.jpg",
+   "alt": "Torrione INA, Brescia"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Torrione_INA"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q16616997"
    }
   ]
  },
@@ -2949,7 +2167,7 @@
    ],
    [
     "Type",
-    "Architectural heritage monument"
+    "Hotel building"
    ]
   ],
   "image": {
@@ -3158,6 +2376,466 @@
   ]
  },
  {
+  "id": "carew-tower",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Carew Tower",
+  "place": "Cincinnati",
+  "country": "United States",
+  "lat": 39.10083,
+  "lon": -84.5132,
+  "summary": "Carew Tower is a 49-story, 574-foot (175 m) Art Deco skyscraper in downtown Cincinnati, Ohio. The second-tallest building in the city, it was Cincinnati's tallest from 1930 until 2011, when it was surpassed by Great American Tower at Queen City Square. The tower is named after Mabley & Carew department store proprietor Joseph T.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Carew_Tower",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Walter W. Ahlschlager"
+   ],
+   [
+    "Type",
+    "Skyscraper"
+   ]
+  ],
+  "image": {
+   "file": "Carew Tower, Cincinnati, Ohio.jpg",
+   "w": 1424,
+   "h": 2144,
+   "author": "EEJCC",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACarew_Tower%2C_Cincinnati%2C_Ohio.jpg",
+   "alt": "Carew Tower, Cincinnati"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Carew_Tower"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q152129"
+   }
+  ]
+ },
+ {
+  "id": "estdio-do-pacaembu",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Estádio do Pacaembu",
+  "place": "São Paulo",
+  "country": "Brazil",
+  "lat": -23.54864,
+  "lon": -46.66511,
+  "summary": "The Estádio do Pacaembu (Portuguese pronunciation: [isˈtadʒiu du pakaẽˈbu]; lit. 'Pacaembu Stadium', named after the Pacaembu neighbourhood), currently known as Mercado Livre Arena Pacaembu for sponsorship reasons, is an association football stadium in São Paulo, Brazil. Located in the Pacaembu neighbourhood, it is owned by Municipal Prefecture of São Paulo. The stadium was listed by the São Paulo state Council for the Defense of Historical, Archaeological, Artistic and Tourist Heritage (CONDEPHAAT) in 1998 due to its Art Deco style, characteristic of the period in which it was built.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Ramos de Azevedo"
+   ],
+   [
+    "Type",
+    "Stadium"
+   ]
+  ],
+  "image": {
+   "file": "Estadio Municipal do Pacaembú. - panoramio.jpg",
+   "w": 2844,
+   "h": 1896,
+   "author": "joao batista Shimoto",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AEstadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg",
+   "alt": "Estádio do Pacaembu, São Paulo"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q655175"
+   }
+  ]
+ },
+ {
+  "id": "vytautas-the-great-war-museum",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Vytautas the Great War Museum",
+  "place": "Kaunas",
+  "country": "Lithuania",
+  "lat": 54.9,
+  "lon": 23.9119,
+  "summary": "The Vytautas the Great War Museum (Lithuanian: Vytauto Didžiojo karo muziejus) is a museum in Kaunas, Lithuania. It was built in Art Deco and early functionalism style. Originally it was established in 1921 by Vladas Nagevičius but later it was decided to move to a larger location.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Kārlis Reisons, Vladimiras Dubeneckis"
+   ],
+   [
+    "Type",
+    "Military museum"
+   ]
+  ],
+  "image": {
+   "file": "Vytauto Didžiojo karo muziejus (aut. A. Užbalis).jpg",
+   "w": 850,
+   "h": 506,
+   "author": "Vdkaromuziejus",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AVytauto_Did%C5%BEiojo_karo_muziejus_%28aut._A._U%C5%BEbalis%29.jpg",
+   "alt": "Vytautas the Great War Museum, Kaunas"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great_War_Museum"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q3267398"
+   }
+  ]
+ },
+ {
+  "id": "pont-de-sant-jordi",
+  "kind": "building",
+  "cat": "bridge",
+  "title": "Pont de Sant Jordi",
+  "place": "Alcoy",
+  "country": "Spain",
+  "lat": 38.7,
+  "lon": -0.47518,
+  "summary": "The San Jorge Bridge (Pont de Sant Jordi in Valencian, Puente de San Jorge in Spanish), is a bridge located in Alcoy (Alicante), Valencian Community, Spain, crossing the Serpis River. The style of the bridge is the art déco, is considered to be the most popular image of the city.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Víctor Eusa"
+   ],
+   [
+    "Type",
+    "Art déco bridge"
+   ]
+  ],
+  "image": {
+   "file": "Pont de Sant Jordi, Alcoi, País Valencià.JPG",
+   "w": 3664,
+   "h": 2748,
+   "author": "Joanbanjo",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3APont_de_Sant_Jordi%2C_Alcoi%2C_Pa%C3%ADs_Valenci%C3%A0.JPG",
+   "alt": "Pont de Sant Jordi, Alcoy"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q18006942"
+   }
+  ]
+ },
+ {
+  "id": "piscine-molitor",
+  "kind": "building",
+  "cat": "hotel",
+  "title": "Piscine Molitor",
+  "place": "16th arrondissement of Paris",
+  "country": "France",
+  "lat": 48.84517,
+  "lon": 2.25309,
+  "summary": "Piscine Molitor (English: Miller Swimming Pool, French pronunciation: [pisin molitɔʁ]; also known as the Piscines Auteuil-Molitor or the Grands établissements balnéaires d'Auteuil) is a swimming pool and hotel complex located in Porte Molitor, 16th arrondissement of Paris, Île-de-France, Paris, France. The pool is known for its Art Deco designs and the popular introduction of the bikini by Louis Réard on 5 July 1946.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Piscine_Molitor",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "Alain-Charles Perrot, Lucien Pollet, Jacques Rougerie"
+   ],
+   [
+    "Type",
+    "Sports venue"
+   ]
+  ],
+  "image": {
+   "file": "Paris, piscine Molitor, 1 November 2015 003.jpg",
+   "w": 5184,
+   "h": 3456,
+   "author": "Fred Romero from Paris, France",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AParis%2C_piscine_Molitor%2C_1_November_2015_003.jpg",
+   "alt": "Piscine Molitor, 16th arrondissement of Paris"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Piscine_Molitor"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q645095"
+   }
+  ]
+ },
+ {
+  "id": "radio-city-music-hall",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Radio City Music Hall",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.75972,
+  "lon": -73.97917,
+  "summary": "Radio City Music Hall (also known as Radio City) is an entertainment venue and theater at 1260 Avenue of the Americas, within Rockefeller Center, in the Midtown Manhattan neighborhood of New York City. Nicknamed \"The Showplace of the Nation\", it is the headquarters for the Rockettes. Radio City Music Hall was designed by Edward Durell Stone and Donald Deskey in the Art Deco style.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Edward Durell Stone"
+   ],
+   [
+    "Type",
+    "Concert hall"
+   ]
+  ],
+  "image": {
+   "file": "Radio City Music Hall (51395756913).jpg",
+   "w": 3585,
+   "h": 3585,
+   "author": "ajay_suresh",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ARadio_City_Music_Hall_%2851395756913%29.jpg",
+   "alt": "Radio City Music Hall, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Radio_City_Music_Hall"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q753437"
+   }
+  ]
+ },
+ {
+  "id": "palais-de-la-porte-dore",
+  "kind": "building",
+  "cat": "civic",
+  "title": "Palais de la Porte Dorée",
+  "place": "12th arrondissement of Paris",
+  "country": "France",
+  "lat": 48.83528,
+  "lon": 2.40944,
+  "summary": "The Palais de la Porte Dorée (French pronunciation: [palɛ də la pɔʁt dɔʁe], lit. 'Palace of the Golden Gate') is an exhibit hall located on the edge of the Bois de Vincennes at 293, avenue Daumesnil, 12th arrondissement of Paris, France. It now houses the Musée de l'Histoire de l'Immigration, as well as a tropical aquarium in its cellar. The building is considered a landmark of Art Deco architecture.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Albert Laprade"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Palasi Porte Doree Entree.jpg",
+   "w": 3872,
+   "h": 2592,
+   "author": "AlSepPhoenix",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3APalasi_Porte_Doree_Entree.jpg",
+   "alt": "Palais de la Porte Dorée, 12th arrondissement of Paris"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Palais_de_la_Porte_Dor%C3%A9e"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1141316"
+   }
+  ]
+ },
+ {
+  "id": "freemasons-hall",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Freemasons' Hall",
+  "place": "London Borough of Camden",
+  "country": "United Kingdom",
+  "lat": 51.5151,
+  "lon": -0.121,
+  "summary": "Freemasons' Hall in London is the headquarters of the United Grand Lodge of England and the Supreme Grand Chapter of Royal Arch Masons of England, as well as being a meeting place for many Masonic Lodges in the London area. It is located in Great Queen Street between Holborn and Covent Garden and has been a Masonic meeting place since 1775. Parts of the building are open to the public daily, and its preserved classic Art Deco style, together with its regular use as a film and television location, have made it a tourist destination.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Thomas Sandby"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Freemasons' Hall, London.JPG",
+   "w": 1192,
+   "h": 1790,
+   "author": "Eluveitie",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AFreemasons%27_Hall%2C_London.JPG",
+   "alt": "Freemasons' Hall, London Borough of Camden"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Freemasons%27_Hall,_London"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1453586"
+   }
+  ]
+ },
+ {
+  "id": "cvijeta-zuzori-art-pavilion",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Cvijeta Zuzorić Art Pavilion",
+  "place": "Belgrade",
+  "country": "Serbia",
+  "lat": 44.8225,
+  "lon": 20.454,
+  "summary": "„Cvijeta Zuzorić“ Art Pavilion (Serbian: Уметнички павиљон \"Цвијета Зузорић\", Umetnički paviljon \"Cvijeta Zuzorić\") is an exhibition building in Belgrade, in Kalemegdan, situated in the park's section of Little Kalemegdan, next to the south-eastern front of the Belgrade fortress. It was built between 1927 and 1928 after the design of the architect Branislav Kojić, in the Art Deco architectural style.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Branislav Kojić"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Павиљон Цвијете Зузорић3.JPG",
+   "w": 3264,
+   "h": 2448,
+   "author": "PedjaNbg",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9F%D0%B0%D0%B2%D0%B8%D1%99%D0%BE%D0%BD_%D0%A6%D0%B2%D0%B8%D1%98%D0%B5%D1%82%D0%B5_%D0%97%D1%83%D0%B7%D0%BE%D1%80%D0%B8%D1%9B3.JPG",
+   "alt": "Cvijeta Zuzorić Art Pavilion, Belgrade"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Cvijeta_Zuzori%C4%87_Art_Pavilion"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q3373107"
+   }
+  ]
+ },
+ {
+  "id": "manila-metropolitan-theatre",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Manila Metropolitan Theatre",
+  "place": "",
+  "country": "Philippines",
+  "lat": 14.594,
+  "lon": 120.9805,
+  "summary": "The Manila Metropolitan Theater (Filipino: Tanghalang Metropolitan; also known as the Metropolitan Theater; abbreviated as the MET) is a historic Philippine Art Deco building located in Plaza Lawton in Ermita, Manila. It is recognized as the forefront of the Art Deco architectural style in the Philippines. Designed by architect Juan M.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Juan M. Arellano"
+   ],
+   [
+    "Type",
+    "Theatre building"
+   ]
+  ],
+  "image": {
+   "file": "Manila Metropolitan Theaterjwilz.jpg",
+   "w": 2576,
+   "h": 1932,
+   "author": "JWilz12345",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AManila_Metropolitan_Theaterjwilz.jpg",
+   "alt": "Manila Metropolitan Theatre"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Manila_Metropolitan_Theater"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q1639613"
+   }
+  ]
+ },
+ {
   "id": "central-market",
   "kind": "building",
   "cat": "shop",
@@ -3204,11 +2882,57 @@
   ]
  },
  {
+  "id": "general-electric-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "General Electric Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.75722,
+  "lon": -73.9725,
+  "summary": "The General Electric Building, also known as 570 Lexington Avenue, is a skyscraper at the southwestern corner of Lexington Avenue and 51st Street in Midtown Manhattan, New York City. The building, designed by Cross & Cross and completed in 1931, was known as the RCA Victor Building during its construction. 570 Lexington Avenue contains a 50-floor, 640-foot-tall (200 m) stylized Gothic octagonal brick tower, with elaborate Art Deco decorations of lightning bolts showing the power of electricity.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/General_Electric_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architects",
+    "John Walter Cross, Cross & Cross"
+   ],
+   [
+    "Type",
+    "Office building"
+   ]
+  ],
+  "image": {
+   "file": "General Electric Building 570 Lexington.jpg",
+   "w": 1528,
+   "h": 2870,
+   "author": "Fletcher6",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AGeneral_Electric_Building_570_Lexington.jpg",
+   "alt": "General Electric Building, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/General_Electric_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q244391"
+   }
+  ]
+ },
+ {
   "id": "london-school-of-hygiene-and-tropical-medicine",
   "kind": "building",
   "cat": "civic",
   "title": "London School of Hygiene and Tropical Medicine",
-  "place": "London Borough of Camden",
+  "place": "Bloomsbury",
   "country": "United Kingdom",
   "lat": 51.52098,
   "lon": -0.1304,
@@ -3236,7 +2960,7 @@
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
    "page": "https://commons.wikimedia.org/wiki/File%3ALondon_School_of_Hygiene_%26_Tropical_Medicine_building.jpg",
-   "alt": "London School of Hygiene and Tropical Medicine, London Borough of Camden"
+   "alt": "London School of Hygiene and Tropical Medicine, Bloomsbury"
   },
   "links": [
    {
@@ -3388,24 +3112,70 @@
   ]
  },
  {
-  "id": "carew-tower",
+  "id": "1-wall-street",
   "kind": "building",
-  "cat": "tower",
-  "title": "Carew Tower",
-  "place": "Cincinnati",
+  "cat": "civic",
+  "title": "1 Wall Street",
+  "place": "Manhattan",
   "country": "United States",
-  "lat": 39.10083,
-  "lon": -84.5132,
-  "summary": "Carew Tower is a 49-story, 574-foot (175 m) Art Deco skyscraper in downtown Cincinnati, Ohio. The second-tallest building in the city, it was Cincinnati's tallest from 1930 until 2011, when it was surpassed by Great American Tower at Queen City Square. The tower is named after Mabley & Carew department store proprietor Joseph T.",
+  "lat": 40.70722,
+  "lon": -74.01167,
+  "summary": "1 Wall Street (also known as the Irving Trust Company Building, the Bank of New York Building, and the BNY Mellon Building) is a 654-foot-tall (199 m) Art Deco skyscraper in the Financial District of Lower Manhattan, New York City, United States. The building, which occupies a full city block, consists of two sections.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Carew_Tower",
+   "url": "https://en.wikipedia.org/wiki/1_Wall_Street",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Walter W. Ahlschlager"
+    "Ralph Thomas Walker"
+   ],
+   [
+    "Type",
+    "Bank building"
+   ]
+  ],
+  "image": {
+   "file": "1 Wall Street panoramic.jpg",
+   "w": 2963,
+   "h": 4109,
+   "author": "1_Wall_Street_001.JPG : Gryffindor 1_Wall_Street_002.JPG : Gryffindor derivative work: Justass ( talk )",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3A1_Wall_Street_panoramic.jpg",
+   "alt": "1 Wall Street, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/1_Wall_Street"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q209017"
+   }
+  ]
+ },
+ {
+  "id": "barclay-vesey-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Barclay-Vesey Building",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.71375,
+  "lon": -74.01292,
+  "summary": "The Barclay–Vesey Building (also known as 100 Barclay, the Verizon Building, and formerly the New York Telephone Company Building) is an office and residential building at 140 West Street in Lower Manhattan, New York City. The 32-story building was designed in the Art Deco style by Ralph Walker of Voorhees, Gmelin and Walker, and was Walker's first major commission as well as one of the first Art Deco skyscrapers.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Ralph Thomas Walker"
    ],
    [
     "Type",
@@ -3413,115 +3183,345 @@
    ]
   ],
   "image": {
-   "file": "Carew Tower, Cincinnati, Ohio.jpg",
-   "w": 1424,
-   "h": 2144,
-   "author": "EEJCC",
+   "file": "Barclay-Vesey Building 140 West Street.jpg",
+   "w": 2270,
+   "h": 3107,
+   "author": "Beyond My Ken",
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3ACarew_Tower%2C_Cincinnati%2C_Ohio.jpg",
-   "alt": "Carew Tower, Cincinnati"
+   "page": "https://commons.wikimedia.org/wiki/File%3ABarclay-Vesey_Building_140_West_Street.jpg",
+   "alt": "Barclay-Vesey Building, Manhattan"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Carew_Tower"
+    "url": "https://en.wikipedia.org/wiki/Barclay%E2%80%93Vesey_Building"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q152129"
+    "url": "https://www.wikidata.org/wiki/Q1983213"
    }
   ]
  },
  {
-  "id": "estdio-do-pacaembu",
+  "id": "cine-callao",
+  "kind": "building",
+  "cat": "theatre",
+  "title": "Cine Callao",
+  "place": "Madrid",
+  "country": "Spain",
+  "lat": 40.42,
+  "lon": -3.7061,
+  "summary": "Cine Callao is a building located in Plaza de Callao in Madrid. It is a common venue for film premieres and press screenings. Designed by Luis Gutiérrez Soto, the facade features elements inspired by the Art Deco.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cine_Callao",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Luis Gutiérrez Soto"
+   ],
+   [
+    "Type",
+    "Movie theater"
+   ]
+  ],
+  "image": {
+   "file": "Cine Callao, Madrid, Spain 2012.jpg",
+   "w": 2356,
+   "h": 1566,
+   "author": "David Gordillo",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACine_Callao%2C_Madrid%2C_Spain_2012.jpg",
+   "alt": "Cine Callao, Madrid"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Cine_Callao"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5769470"
+   }
+  ]
+ },
+ {
+  "id": "broadway-mansions",
+  "kind": "building",
+  "cat": "hotel",
+  "title": "Broadway Mansions",
+  "place": "Beiwaitan Subdistrict",
+  "country": "People's Republic of China",
+  "lat": 31.24634,
+  "lon": 121.48548,
+  "summary": "The Broadway Mansions (simplified Chinese: 百老汇大厦; traditional Chinese: 百老匯大廈; pinyin: Bǎilǎohuì Dàshà, Shanghainese: Pahlowe Dusa) is a nineteen-floor Art Deco five-star hotel in Shanghai, China. and was for over five decades one of the primary symbols of Shanghai. Completed in 1934, the same year as the 19 feet taller Park Hotel.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Broadway_Mansions",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "P&T Architects & Engineers Ltd."
+   ],
+   [
+    "Type",
+    "Hotel"
+   ]
+  ],
+  "image": {
+   "file": "20112-Shanghai, Broadway Mansions.jpg",
+   "w": 2003,
+   "h": 3000,
+   "author": "xiquinhosilva",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A20112-Shanghai%2C_Broadway_Mansions.jpg",
+   "alt": "Broadway Mansions, Beiwaitan Subdistrict"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Broadway_Mansions"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q23804"
+   }
+  ]
+ },
+ {
+  "id": "70-pine-street",
+  "kind": "building",
+  "cat": "home",
+  "title": "70 Pine Street",
+  "place": "Manhattan",
+  "country": "United States",
+  "lat": 40.70639,
+  "lon": -74.0075,
+  "summary": "70 Pine Street (formerly known as the 60 Wall Tower, Cities Service Building, and American International Building) is a 67-story, 952-foot (290 m) residential skyscraper in the Financial District of Lower Manhattan, New York City, New York, U.S. Designed by the architectural firm of Clinton & Russell, Holton & George in the Art Deco style, 70 Pine Street was constructed between 1930 and 1932 as an office building.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/70_Pine_Street",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Clinton and Russell"
+   ],
+   [
+    "Type",
+    "Skyscraper"
+   ]
+  ],
+  "image": {
+   "file": "American International Building3.JPG",
+   "w": 1755,
+   "h": 2189,
+   "author": "Clément Bardot",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AAmerican_International_Building3.JPG",
+   "alt": "70 Pine Street, Manhattan"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/70_Pine_Street"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q262041"
+   }
+  ]
+ },
+ {
+  "id": "anzac-memorial",
   "kind": "building",
   "cat": "civic",
-  "title": "Estádio do Pacaembu",
-  "place": "São Paulo",
-  "country": "Brazil",
-  "lat": -23.54864,
-  "lon": -46.66511,
-  "summary": "The Estádio do Pacaembu (Portuguese pronunciation: [isˈtadʒiu du pakaẽˈbu]; lit. 'Pacaembu Stadium', named after the Pacaembu neighbourhood), currently known as Mercado Livre Arena Pacaembu for sponsorship reasons, is an association football stadium in São Paulo, Brazil. Located in the Pacaembu neighbourhood, it is owned by Municipal Prefecture of São Paulo. The stadium was listed by the São Paulo state Council for the Defense of Historical, Archaeological, Artistic and Tourist Heritage (CONDEPHAAT) in 1998 due to its Art Deco style, characteristic of the period in which it was built.",
+  "title": "Anzac Memorial",
+  "place": "City of Sydney",
+  "country": "Australia",
+  "lat": -33.87572,
+  "lon": 151.21094,
+  "summary": "The Anzac Memorial is a heritage-listed war memorial, museum and monument located in Hyde Park South near Liverpool Street in the CBD of Sydney, New South Wales, Australia. The Art Deco monument was designed by C. Bruce Dellit, with the exterior adorned with monumental figural reliefs and sculptures by Rayner Hoff, and built from 1932 to 1934 by Kell & Rigby.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium",
+   "url": "https://en.wikipedia.org/wiki/Anzac_Memorial",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Ramos de Azevedo"
+    "Bruce Dellit"
    ],
    [
     "Type",
-    "Stadium"
+    "Military museum"
    ]
   ],
   "image": {
-   "file": "Estadio Municipal do Pacaembú. - panoramio.jpg",
-   "w": 2844,
-   "h": 1896,
-   "author": "joao batista Shimoto",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AEstadio_Municipal_do_Pacaemb%C3%BA._-_panoramio.jpg",
-   "alt": "Estádio do Pacaembu, São Paulo"
+   "file": "ANZAC Memorial Sydney Australia - June 2007.jpg",
+   "w": 1600,
+   "h": 1200,
+   "author": "Digital fuel ( talk )",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AANZAC_Memorial_Sydney_Australia_-_June_2007.jpg",
+   "alt": "Anzac Memorial, City of Sydney"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Pacaembu_Stadium"
+    "url": "https://en.wikipedia.org/wiki/Anzac_Memorial"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q655175"
+    "url": "https://www.wikidata.org/wiki/Q844556"
    }
   ]
  },
  {
-  "id": "pont-de-sant-jordi",
+  "id": "coit-tower",
   "kind": "building",
-  "cat": "bridge",
-  "title": "Pont de Sant Jordi",
-  "place": "Alcoy",
-  "country": "Spain",
-  "lat": 38.7,
-  "lon": -0.47518,
-  "summary": "The San Jorge Bridge (Pont de Sant Jordi in Valencian, Puente de San Jorge in Spanish), is a bridge located in Alcoy (Alicante), Valencian Community, Spain, crossing the Serpis River. The style of the bridge is the art déco, is considered to be the most popular image of the city.",
+  "cat": "tower",
+  "title": "Coit Tower",
+  "place": "San Francisco",
+  "country": "United States",
+  "lat": 37.8025,
+  "lon": -122.40583,
+  "summary": "Coit Tower ( KOYT; also known as Coit Memorial Tower) is a 210-foot (64 m) tower in the Telegraph Hill neighborhood of San Francisco, California, overlooking the city and San Francisco Bay. The tower, in the city's Pioneer Park, was built between 1932 and 1933 using Lillie Hitchcock Coit's bequest to beautify the city of San Francisco. The Art Deco tower, built of unpainted reinforced concrete, was designed by architects Arthur Brown Jr. and Henry Temple Howard.",
   "summary_src": {
    "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge",
+   "url": "https://en.wikipedia.org/wiki/Coit_Tower",
    "license": "CC BY-SA 4.0"
   },
   "facts": [
    [
     "Architect",
-    "Víctor Eusa"
+    "Arthur Brown, Jr."
    ],
    [
     "Type",
-    "Art déco bridge"
+    "Observation tower"
    ]
   ],
   "image": {
-   "file": "Pont de Sant Jordi, Alcoi, País Valencià.JPG",
-   "w": 3664,
-   "h": 2748,
-   "author": "Joanbanjo",
-   "license": "CC BY-SA 3.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3APont_de_Sant_Jordi%2C_Alcoi%2C_Pa%C3%ADs_Valenci%C3%A0.JPG",
-   "alt": "Pont de Sant Jordi, Alcoy"
+   "file": "Coit Tower 2021.jpg",
+   "w": 2768,
+   "h": 3721,
+   "author": "Chris6d",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACoit_Tower_2021.jpg",
+   "alt": "Coit Tower, San Francisco"
   },
   "links": [
    {
     "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/San_Jorge_Bridge"
+    "url": "https://en.wikipedia.org/wiki/Coit_Tower"
    },
    {
     "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q18006942"
+    "url": "https://www.wikidata.org/wiki/Q1107297"
+   }
+  ]
+ },
+ {
+  "id": "central-universal-department-store",
+  "kind": "building",
+  "cat": "shop",
+  "title": "Central Universal Department Store",
+  "place": "Kyiv",
+  "country": "Ukraine",
+  "lat": 50.44528,
+  "lon": 30.52083,
+  "summary": "Central Universal Department Store Kyiv (Ukrainian: Центральний універсальний магазин Київ, romanized: Tsentralnyi universalnyi mahazyn Kyiv [tsenˈtrɑlʲnɪj ʊni⁽ʲ⁾werˈsɑlʲnɪj mɐɦɐˈzɪn ˈkɪjiu̯]) or TsUM Kyiv (Ukrainian: ЦУМ Київ) is Ukraine's one and only department store of the classical format. The department store's building in the Art Deco style was erected from 1936 to 1939.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/TsUM_Kyiv",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Daniil Fridman"
+   ],
+   [
+    "Type",
+    "Department store"
+   ]
+  ],
+  "image": {
+   "file": "Крещатик 38 дробь 2 Киев 2012 01.JPG",
+   "w": 3008,
+   "h": 2000,
+   "author": "AMY",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A%D0%9A%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D0%BA_38_%D0%B4%D1%80%D0%BE%D0%B1%D1%8C_2_%D0%9A%D0%B8%D0%B5%D0%B2_2012_01.JPG",
+   "alt": "Central Universal Department Store, Kyiv"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/TsUM_Kyiv"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q4504385"
+   }
+  ]
+ },
+ {
+  "id": "florin-court",
+  "kind": "building",
+  "cat": "home",
+  "title": "Florin Court",
+  "place": "London",
+  "country": "United Kingdom",
+  "lat": 51.5209,
+  "lon": -0.09871,
+  "summary": "Florin Court is an Art Deco / Streamline Moderne Grade II residential building on the eastern side of Charterhouse Square in Smithfield, London.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Florin_Court",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Guy Morgan"
+   ],
+   [
+    "Type",
+    "Residential building"
+   ]
+  ],
+  "image": {
+   "file": "Florin Court (2).jpg",
+   "w": 2816,
+   "h": 2112,
+   "author": "CAGW",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AFlorin_Court_%282%29.jpg",
+   "alt": "Florin Court, London"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Florin_Court"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5461830"
    }
   ]
  },
@@ -3685,7 +3685,7 @@
    ],
    [
     "Type",
-    "London Underground station"
+    "Underground station"
    ]
   ],
   "image": {
@@ -3844,6 +3844,144 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q3527708"
+   }
+  ]
+ },
+ {
+  "id": "chapel-of-the-most-blessed-sacrament",
+  "kind": "building",
+  "cat": "religious",
+  "title": "Chapel of the Most Blessed Sacrament",
+  "place": "Manila",
+  "country": "Philippines",
+  "lat": 14.56428,
+  "lon": 120.99379,
+  "summary": "The Chapel of the Most Blessed Sacrament (Building code: MBS; also known as MBS Chapel) is the main and largest chapel of De La Salle University in Manila, Philippines. It is located on the second floor of the southernmost wing of the St. La Salle Hall, the oldest building of the university. The chapel was designed in Art Deco style by the commissioned architect, Tomás Mapúa.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Chapel_of_the_Most_Blessed_Sacrament",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Tomás Mapúa"
+   ],
+   [
+    "Type",
+    "Chapel"
+   ]
+  ],
+  "image": {
+   "file": "Chapel of the Most Blessed Sacrament at De La Salle University, Manila.jpg",
+   "w": 2560,
+   "h": 1920,
+   "author": "Mithril_Cloud",
+   "license": "CC BY 2.5",
+   "license_url": "https://creativecommons.org/licenses/by/2.5",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChapel_of_the_Most_Blessed_Sacrament_at_De_La_Salle_University%2C_Manila.jpg",
+   "alt": "Chapel of the Most Blessed Sacrament, Manila"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Chapel_of_the_Most_Blessed_Sacrament"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5073116"
+   }
+  ]
+ },
+ {
+  "id": "omaha-union-station",
+  "kind": "building",
+  "cat": "station",
+  "title": "Omaha Union Station",
+  "place": "Omaha",
+  "country": "United States",
+  "lat": 41.25153,
+  "lon": -95.92828,
+  "summary": "The Union Station, at 801 South 10th Street in Omaha, Nebraska, known also as Union Passenger Terminal, is \"one of the finest examples of Art Deco architecture in the Midwest\".",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Omaha_Union_Station",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Gilbert Stanley Underwood"
+   ],
+   [
+    "Type",
+    "Union station"
+   ]
+  ],
+  "image": {
+   "file": "Inside Union Station (Omaha).JPG",
+   "w": 1600,
+   "h": 1200,
+   "author": "Original uploader was Robertmoo40 at en.wikipedia",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AInside_Union_Station_%28Omaha%29.JPG",
+   "alt": "Omaha Union Station, Omaha"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Omaha_Union_Station"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q7886082"
+   }
+  ]
+ },
+ {
+  "id": "basurto-building",
+  "kind": "building",
+  "cat": "tower",
+  "title": "Basurto Building",
+  "place": "Mexico City",
+  "country": "Mexico",
+  "lat": 19.41379,
+  "lon": -99.16978,
+  "summary": "The Basurto Building (Edificio Basurto) is located in the Condesa area of Mexico City, a work of architect Francisco J. Serrano, built between 1940 and 1945. Its design is post- Art Deco.",
+  "summary_src": {
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Basurto_Building",
+   "license": "CC BY-SA 4.0"
+  },
+  "facts": [
+   [
+    "Architect",
+    "Francisco J. Serrano"
+   ],
+   [
+    "Type",
+    "Building"
+   ]
+  ],
+  "image": {
+   "file": "Edificio Basurto - Colonia Condesa - Ciudad de México - 5.jpg",
+   "w": 4000,
+   "h": 6000,
+   "author": "ProtoplasmaKid",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AEdificio_Basurto_-_Colonia_Condesa_-_Ciudad_de_M%C3%A9xico_-_5.jpg",
+   "alt": "Basurto Building, Mexico City"
+  },
+  "links": [
+   {
+    "label": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Basurto_Building"
+   },
+   {
+    "label": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27919925"
    }
   ]
  },
@@ -4120,144 +4258,6 @@
    {
     "label": "Wikidata",
     "url": "https://www.wikidata.org/wiki/Q106535985"
-   }
-  ]
- },
- {
-  "id": "chapel-of-the-most-blessed-sacrament",
-  "kind": "building",
-  "cat": "religious",
-  "title": "Chapel of the Most Blessed Sacrament",
-  "place": "Manila",
-  "country": "Philippines",
-  "lat": 14.56428,
-  "lon": 120.99379,
-  "summary": "The Chapel of the Most Blessed Sacrament (Building code: MBS; also known as MBS Chapel) is the main and largest chapel of De La Salle University in Manila, Philippines. It is located on the second floor of the southernmost wing of the St. La Salle Hall, the oldest building of the university. The chapel was designed in Art Deco style by the commissioned architect, Tomás Mapúa.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Chapel_of_the_Most_Blessed_Sacrament",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Tomás Mapúa"
-   ],
-   [
-    "Type",
-    "Chapel"
-   ]
-  ],
-  "image": {
-   "file": "Chapel of the Most Blessed Sacrament at De La Salle University, Manila.jpg",
-   "w": 2560,
-   "h": 1920,
-   "author": "Mithril_Cloud",
-   "license": "CC BY 2.5",
-   "license_url": "https://creativecommons.org/licenses/by/2.5",
-   "page": "https://commons.wikimedia.org/wiki/File%3AChapel_of_the_Most_Blessed_Sacrament_at_De_La_Salle_University%2C_Manila.jpg",
-   "alt": "Chapel of the Most Blessed Sacrament, Manila"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Chapel_of_the_Most_Blessed_Sacrament"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q5073116"
-   }
-  ]
- },
- {
-  "id": "omaha-union-station",
-  "kind": "building",
-  "cat": "station",
-  "title": "Omaha Union Station",
-  "place": "Omaha",
-  "country": "United States",
-  "lat": 41.25153,
-  "lon": -95.92828,
-  "summary": "The Union Station, at 801 South 10th Street in Omaha, Nebraska, known also as Union Passenger Terminal, is \"one of the finest examples of Art Deco architecture in the Midwest\".",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Omaha_Union_Station",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Gilbert Stanley Underwood"
-   ],
-   [
-    "Type",
-    "Union station"
-   ]
-  ],
-  "image": {
-   "file": "Inside Union Station (Omaha).JPG",
-   "w": 1600,
-   "h": 1200,
-   "author": "Original uploader was Robertmoo40 at en.wikipedia",
-   "license": "Public domain",
-   "license_url": "",
-   "page": "https://commons.wikimedia.org/wiki/File%3AInside_Union_Station_%28Omaha%29.JPG",
-   "alt": "Omaha Union Station, Omaha"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Omaha_Union_Station"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q7886082"
-   }
-  ]
- },
- {
-  "id": "basurto-building",
-  "kind": "building",
-  "cat": "tower",
-  "title": "Basurto Building",
-  "place": "Mexico City",
-  "country": "Mexico",
-  "lat": 19.41379,
-  "lon": -99.16978,
-  "summary": "The Basurto Building (Edificio Basurto) is located in the Condesa area of Mexico City, a work of architect Francisco J. Serrano, built between 1940 and 1945. Its design is post- Art Deco.",
-  "summary_src": {
-   "name": "Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Basurto_Building",
-   "license": "CC BY-SA 4.0"
-  },
-  "facts": [
-   [
-    "Architect",
-    "Francisco J. Serrano"
-   ],
-   [
-    "Type",
-    "Building"
-   ]
-  ],
-  "image": {
-   "file": "Edificio Basurto - Colonia Condesa - Ciudad de México - 5.jpg",
-   "w": 4000,
-   "h": 6000,
-   "author": "ProtoplasmaKid",
-   "license": "CC BY-SA 4.0",
-   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File%3AEdificio_Basurto_-_Colonia_Condesa_-_Ciudad_de_M%C3%A9xico_-_5.jpg",
-   "alt": "Basurto Building, Mexico City"
-  },
-  "links": [
-   {
-    "label": "Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Basurto_Building"
-   },
-   {
-    "label": "Wikidata",
-    "url": "https://www.wikidata.org/wiki/Q27919925"
    }
   ]
  },
@@ -5891,7 +5891,7 @@
   "facts": [
    [
     "Type",
-    "Residential building"
+    "Multi-story urban building"
    ]
   ],
   "image": {
@@ -8651,5 +8651,1421 @@
     "url": "https://en.wikipedia.org/wiki/Minox"
    }
   ]
+ },
+ {
+  "id": "plm-marseille-cote-azur",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Marseille, starting point for the Côte d'Azur",
+  "place": "Marseille",
+  "country": "France",
+  "lat": 43.2965,
+  "lon": 5.3698,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM. The black front of a steam locomotive looms at the left over an open touring car on the quay, with the blue sea and a distant coast behind. “Marseille, point de départ de la Côte d'Azur” runs diagonally across the foot.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "P. L. M. Marseille, point de départ de la Côte d'Azur.jpg",
+   "w": 8834,
+   "h": 12486,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AP._L._M._Marseille%2C_point_de_d%C3%A9part_de_la_C%C3%B4te_d%27Azur.jpg",
+   "alt": "Marseille, starting point for the Côte d'Azur (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AP._L._M._Marseille%2C_point_de_d%C3%A9part_de_la_C%C3%B4te_d%27Azur.jpg"
+   },
+   {
+    "label": "Wikipedia: Marseille",
+    "url": "https://en.wikipedia.org/wiki/Marseille"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-chamonix-martigny",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Chamonix–Martigny, through the Trient gorges",
+  "place": "Chamonix",
+  "country": "France",
+  "lat": 45.9237,
+  "lon": 6.8694,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM showing a small train on a cliff-side line through the gorges of the Trient, with pine forest and snowy peaks above. The title reads “Chamonix–Martigny, par les gorges du Trient”.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM, Chamonix-Martigny affiche, Roger Broders.jpg",
+   "w": 7804,
+   "h": 12704,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Chamonix-Martigny_affiche%2C_Roger_Broders.jpg",
+   "alt": "Chamonix–Martigny, through the Trient gorges (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Chamonix-Martigny_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Chamonix",
+    "url": "https://en.wikipedia.org/wiki/Chamonix"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-grasse",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Grasse, the town of flowers and perfumes",
+  "place": "Grasse",
+  "country": "France",
+  "lat": 43.6584,
+  "lon": 6.9225,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM. Two stylish women in 1920s dress walk under plane trees toward the old town of Grasse, with a pink band of roses along the bottom beside the title “La ville des fleurs et des parfums”.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM, Grasse, station climatique, la ville des fleurs et des parfums affiche, Roger Broders.jpg",
+   "w": 9828,
+   "h": 13385,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Grasse%2C_station_climatique%2C_la_ville_des_fleurs_et_des_parfums_affiche%2C_Roger_Broders.jpg",
+   "alt": "Grasse, the town of flowers and perfumes (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Grasse%2C_station_climatique%2C_la_ville_des_fleurs_et_des_parfums_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Grasse",
+    "url": "https://en.wikipedia.org/wiki/Grasse"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-brevent",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Chamonix–Planpraz cable car, Le Brévent",
+  "place": "Chamonix",
+  "country": "France",
+  "lat": 45.9323,
+  "lon": 6.8419,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM advertising the Planpraz cable car up Le Brévent, 2,000 m above Chamonix and facing Mont Blanc. A dark cable-car pylon and cabin cut across a white snow-covered massif.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM Funiculaire Chamonix-Planpraz. Le Brevent, 2000 m d'altitude face au Mont Blanc affiche, Roger Broders.jpg",
+   "w": 9622,
+   "h": 13793,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM_Funiculaire_Chamonix-Planpraz._Le_Brevent%2C_2000_m_d%27altitude_face_au_Mont_Blanc_affiche%2C_Roger_Broders.jpg",
+   "alt": "Chamonix–Planpraz cable car, Le Brévent (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM_Funiculaire_Chamonix-Planpraz._Le_Brevent%2C_2000_m_d%27altitude_face_au_Mont_Blanc_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Chamonix",
+    "url": "https://en.wikipedia.org/wiki/Chamonix"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-thonon",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Thonon-les-Bains: its waters, the lake, the mountain",
+  "place": "Thonon-les-Bains",
+  "country": "France",
+  "lat": 46.3706,
+  "lon": 6.4799,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM with a large white sail on Lake Geneva in the foreground, the town and a lake steamer behind, and a snowy mountain above.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM, Thonon Les Bains, ses eaux, le lac, la montagne affiche, Roger Broders.jpg",
+   "w": 7848,
+   "h": 12616,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Thonon_Les_Bains%2C_ses_eaux%2C_le_lac%2C_la_montagne_affiche%2C_Roger_Broders.jpg",
+   "alt": "Thonon-les-Bains: its waters, the lake, the mountain (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM%2C_Thonon_Les_Bains%2C_ses_eaux%2C_le_lac%2C_la_montagne_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Thonon-les-Bains",
+    "url": "https://en.wikipedia.org/wiki/Thonon-les-Bains"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-chamonix-hockey-1930",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Chamonix, ice hockey world championship",
+  "place": "Chamonix",
+  "country": "France",
+  "lat": 45.9237,
+  "lon": 6.8694,
+  "date": "1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM announcing the ice hockey world championship at Chamonix, 27 January to 2 February 1930. Players in red and blue strips chase the puck in the foreground, with the stadium and flags beneath snowy mountains.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Event",
+    "Ice hockey world championship, 27 Jan – 2 Feb 1930"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM. Chamonix, Championnat du monde de hockey sur gla -ce, 27 janvier-2 février 1930 - affiche - Roger Broders - btv1b90128370.jpg",
+   "w": 8025,
+   "h": 12778,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM._Chamonix%2C_Championnat_du_monde_de_hockey_sur_gla_-ce%2C_27_janvier-2_f%C3%A9vrier_1930_-_affiche_-_Roger_Broders_-_btv1b90128370.jpg",
+   "alt": "Chamonix, ice hockey world championship (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM._Chamonix%2C_Championnat_du_monde_de_hockey_sur_gla_-ce%2C_27_janvier-2_f%C3%A9vrier_1930_-_affiche_-_Roger_Broders_-_btv1b90128370.jpg"
+   },
+   {
+    "label": "Wikipedia: Chamonix",
+    "url": "https://en.wikipedia.org/wiki/Chamonix"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-annecy",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Lake Annecy",
+  "place": "Annecy",
+  "country": "France",
+  "lat": 45.8992,
+  "lon": 6.1294,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM of Lake Annecy: dark cypresses and a white chalet in the foreground, a small steamer on the lake and layered blue-violet mountains behind.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "PLM. Lac d'Annecy affiche, Roger Broders.jpg",
+   "w": 7785,
+   "h": 12391,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3APLM._Lac_d%27Annecy_affiche%2C_Roger_Broders.jpg",
+   "alt": "Lake Annecy (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3APLM._Lac_d%27Annecy_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Annecy",
+    "url": "https://en.wikipedia.org/wiki/Annecy"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-calvi",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "The beach at Calvi, Corsica",
+  "place": "Calvi, Corsica",
+  "country": "France",
+  "lat": 42.5683,
+  "lon": 8.7576,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM. A woman in a black swimsuit and a bright orange wrap stands on the beach, with the citadel of Calvi across the bay and the title “La plage de Calvi, Corse” along the bottom.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Paris, Lyon, Méditerranée, La Plage de Calvi-Corse affiche, Roger Broders.jpg",
+   "w": 10178,
+   "h": 13643,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AParis%2C_Lyon%2C_M%C3%A9diterran%C3%A9e%2C_La_Plage_de_Calvi-Corse_affiche%2C_Roger_Broders.jpg",
+   "alt": "The beach at Calvi, Corsica (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AParis%2C_Lyon%2C_M%C3%A9diterran%C3%A9e%2C_La_Plage_de_Calvi-Corse_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Calvi, Haute-Corse",
+    "url": "https://en.wikipedia.org/wiki/Calvi,_Haute-Corse"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-avignon",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Avignon, the city of the popes",
+  "place": "Avignon",
+  "country": "France",
+  "lat": 43.9493,
+  "lon": 4.8055,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "English-language PLM poster by Roger Broders. The Palais des Papes and the broken Pont d'Avignon stand over the Rhône, framed by a dark banner reading “Roman & Mediaeval France”. Text offers excursions by luxurious motor coach from Avignon.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Roman & Mediaeval France. P. L. M. Avignon, The City of the papes. affiche, Roger Broders.jpg",
+   "w": 8908,
+   "h": 13403,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ARoman_%26_Mediaeval_France._P._L._M._Avignon%2C_The_City_of_the_papes._affiche%2C_Roger_Broders.jpg",
+   "alt": "Avignon, the city of the popes (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ARoman_%26_Mediaeval_France._P._L._M._Avignon%2C_The_City_of_the_papes._affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Avignon",
+    "url": "https://en.wikipedia.org/wiki/Avignon"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-sainte-maxime",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Sainte-Maxime, winter and summer beach",
+  "place": "Sainte-Maxime",
+  "country": "France",
+  "lat": 43.3086,
+  "lon": 6.6366,
+  "date": "c. 1930",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM. A tall palm leans across the sheet over a bay with sailing boats and red sails, with the village on the shore behind. The title reads “Sainte-Maxime, plage d'hiver et d'été”.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Cote d'Azur-La Cote des Maures, PLM, Sainte-Maxime, plage d'hiver et d'été affiche, Roger Broders.jpg",
+   "w": 9696,
+   "h": 13774,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ACote_d%27Azur-La_Cote_des_Maures%2C_PLM%2C_Sainte-Maxime%2C_plage_d%27hiver_et_d%27%C3%A9t%C3%A9_affiche%2C_Roger_Broders.jpg",
+   "alt": "Sainte-Maxime, winter and summer beach (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ACote_d%27Azur-La_Cote_des_Maures%2C_PLM%2C_Sainte-Maxime%2C_plage_d%27hiver_et_d%27%C3%A9t%C3%A9_affiche%2C_Roger_Broders.jpg"
+   },
+   {
+    "label": "Wikipedia: Sainte-Maxime",
+    "url": "https://en.wikipedia.org/wiki/Sainte-Maxime"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "nord-dunkerque-1929",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Dunkirk (Chemin de fer du Nord)",
+  "place": "Dunkirk",
+  "country": "France",
+  "lat": 51.0343,
+  "lon": 2.3768,
+  "date": "1929",
+  "by": "Roger Broders",
+  "summary": "1929 poster by Roger Broders, published by the town's tourist office for the Chemin de fer du Nord. A man in a naval cap and a woman in a pale dress lean on a ship's rail looking toward the harbour and the town's belfry.",
+  "facts": [
+   [
+    "Issued by",
+    "Chemin de fer du Nord, with the Dunkirk tourist office"
+   ],
+   [
+    "Year",
+    "1929"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Chemin de fer du Nord. Dunkerque (Nord). Editée par l'Essi, Syndicat d'initiative.jpg",
+   "w": 8132,
+   "h": 12419,
+   "author": "Broders, Roger (1883-1953). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChemin_de_fer_du_Nord._Dunkerque_%28Nord%29._Edit%C3%A9e_par_l%27Essi%2C_Syndicat_d%27initiative.jpg",
+   "alt": "Dunkirk (Chemin de fer du Nord) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AChemin_de_fer_du_Nord._Dunkerque_%28Nord%29._Edit%C3%A9e_par_l%27Essi%2C_Syndicat_d%27initiative.jpg"
+   },
+   {
+    "label": "Wikipedia: Dunkirk",
+    "url": "https://en.wikipedia.org/wiki/Dunkirk"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "simplon-orient-express",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Simplon-Orient-Express",
+  "place": "Istanbul",
+  "country": "Turkey",
+  "lat": 41.0082,
+  "lon": 28.9784,
+  "date": "c. 1920s",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for the Simplon-Orient-Express, set over a map of the route from London and Paris through Milan, Belgrade and Bucharest to Constantinople. A British guardsman stands at the left and a figure in a fez at the right, with the mosques of Istanbul along the skyline.",
+  "facts": [
+   [
+    "Service",
+    "Simplon-Orient-Express"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ],
+   [
+    "Route",
+    "London – Paris – Bucharest – Athens – Constantinople"
+   ]
+  ],
+  "image": {
+   "file": "Simplon-Orient-Express, Plakat von Roger Broders.jpg",
+   "w": 2287,
+   "h": 3200,
+   "author": "Roger Broders (1883-1953)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASimplon-Orient-Express%2C_Plakat_von_Roger_Broders.jpg",
+   "alt": "Simplon-Orient-Express (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ASimplon-Orient-Express%2C_Plakat_von_Roger_Broders.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://www.christies.com.cn/en/lot/lot-5469319"
+   },
+   {
+    "label": "Wikipedia: Simplon Orient Express",
+    "url": "https://en.wikipedia.org/wiki/Simplon_Orient_Express"
+   }
+  ],
+  "loc_note": "Istanbul, the line's far end; the poster covers the whole route",
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "plm-marseille-expo-1922",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Marseille, national colonial exhibition",
+  "place": "Marseille",
+  "country": "France",
+  "lat": 43.2965,
+  "lon": 5.3698,
+  "date": "1922",
+  "by": "Roger Broders",
+  "summary": "Roger Broders poster for PLM advertising the national colonial exhibition at Marseille, April to November 1922. A white liner with red funnels and a crowded harbour fill the foreground against a yellow sky with the basilica of Notre-Dame de la Garde above.",
+  "facts": [
+   [
+    "Issued by",
+    "Paris–Lyon–Méditerranée railway (PLM)"
+   ],
+   [
+    "Event",
+    "Exposition nationale coloniale, April–November 1922"
+   ],
+   [
+    "Artist",
+    "Roger Broders"
+   ]
+  ],
+  "image": {
+   "file": "Paris-Lyon-Méditerranée. Marseille. Exposition nationale coloniale. Avril-novembre 1922.jpg",
+   "w": 425,
+   "h": 600,
+   "author": "Roger Broders (1883 - 1953)",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AParis-Lyon-M%C3%A9diterran%C3%A9e._Marseille._Exposition_nationale_coloniale._Avril-novembre_1922.jpg",
+   "alt": "Marseille, national colonial exhibition (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AParis-Lyon-M%C3%A9diterran%C3%A9e._Marseille._Exposition_nationale_coloniale._Avril-novembre_1922.jpg"
+   },
+   {
+    "label": "Wikipedia: Marseille",
+    "url": "https://en.wikipedia.org/wiki/Marseille"
+   }
+  ],
+  "artist_note": {
+   "text": "Roger Broders (born Paris, France, 1883, died, Paris, 1953) was a French illustrator and artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Roger_Broders",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "cappiello-marseille-1922",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Marseille colonial exhibition, by Cappiello",
+  "place": "Marseille",
+  "country": "France",
+  "lat": 43.2965,
+  "lon": 5.3698,
+  "date": "1922",
+  "by": "Leonetto Cappiello",
+  "summary": "Poster for the 1922 colonial exhibition at Marseille by Leonetto Cappiello. A woman draped in the tricolour stands with arms raised over a heap of fruit and figures at the base, with the dark blue ground carrying “Exposition coloniale, Marseille 1922”.",
+  "facts": [
+   [
+    "Event",
+    "Colonial exhibition, Marseille 1922"
+   ],
+   [
+    "Artist",
+    "Leonetto Cappiello"
+   ]
+  ],
+  "image": {
+   "file": "Exposition coloniale, Marseille 1922 - (affiche) (Epreuve au format 120 x 75 cm) - Leonetto Cappiello - btv1b9015066w.jpg",
+   "w": 9185,
+   "h": 14673,
+   "author": "Leonetto Cappiello",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AExposition_coloniale%2C_Marseille_1922_-_%28affiche%29_%28Epreuve_au_format_120_x_75_cm%29_-_Leonetto_Cappiello_-_btv1b9015066w.jpg",
+   "alt": "Marseille colonial exhibition, by Cappiello (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AExposition_coloniale%2C_Marseille_1922_-_%28affiche%29_%28Epreuve_au_format_120_x_75_cm%29_-_Leonetto_Cappiello_-_btv1b9015066w.jpg"
+   },
+   {
+    "label": "Wikipedia: Leonetto Cappiello",
+    "url": "https://en.wikipedia.org/wiki/Leonetto_Cappiello"
+   }
+  ],
+  "artist_note": {
+   "text": "Leonetto Cappiello (9 April 1875 – 2 February 1942) was an Italian-born French poster artist, painter, and caricaturist who mainly lived and worked in Paris.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Leonetto_Cappiello",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "valerio-manche-ocean",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Rapide Manche–Océan",
+  "place": "Paris",
+  "country": "France",
+  "lat": 48.8761,
+  "lon": 2.3249,
+  "date": "1930",
+  "by": "Roger de Valerio",
+  "summary": "Roger de Valerio poster for the Chemins de fer de l'État. A map of the line is drawn as a blue route running south from Newhaven and Dieppe through Rouen and Nantes to Bordeaux and the Pyrenees, beside a dark stylised figure in a hat. The title is “Rapide Manche–Océan”.",
+  "facts": [
+   [
+    "Issued by",
+    "Chemins de fer de l'État"
+   ],
+   [
+    "Year",
+    "1930"
+   ],
+   [
+    "Artist",
+    "Roger de Valerio"
+   ]
+  ],
+  "image": {
+   "file": "Chemins de fer de l'Etat. affiche, R. de Valerio.jpg",
+   "w": 7777,
+   "h": 12437,
+   "author": "Valerio, Roger de (1886-1951). Illustrateur",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChemins_de_fer_de_l%27Etat._affiche%2C_R._de_Valerio.jpg",
+   "alt": "Rapide Manche–Océan (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AChemins_de_fer_de_l%27Etat._affiche%2C_R._de_Valerio.jpg"
+   }
+  ],
+  "loc_note": "Paris Saint-Lazare, the State railway's terminus; the poster covers the whole route"
+ },
+ {
+  "id": "valerio-london-paris",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "London–Paris, Southern Railway and Chemins de fer de l'État",
+  "place": "Paris",
+  "country": "France",
+  "lat": 48.8761,
+  "lon": 2.3249,
+  "date": "1930",
+  "by": "Roger de Valerio",
+  "summary": "Roger de Valerio poster in a constructivist layout: diagonal red lettering and blue circles mark the stops between London and Paris Saint-Lazare, with the text giving six services a day. It was issued jointly by the Southern Railway and the French State railways.",
+  "facts": [
+   [
+    "Issued by",
+    "Southern Railway and Chemins de fer de l'État"
+   ],
+   [
+    "Year",
+    "1930"
+   ],
+   [
+    "Artist",
+    "Roger de Valerio"
+   ]
+  ],
+  "image": {
+   "file": "Londres-Paris. Southern Railway. Chemins de fer de l'Etat, 6 six services par jour. Paris St Lazare-Londres affiche, R. de Valerio.jpg",
+   "w": 7975,
+   "h": 12424,
+   "author": "Valerio, Roger de (1886-1951). Illustrateur",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3ALondres-Paris._Southern_Railway._Chemins_de_fer_de_l%27Etat%2C_6_six_services_par_jour._Paris_St_Lazare-Londres_affiche%2C_R._de_Valerio.jpg",
+   "alt": "London–Paris, Southern Railway and Chemins de fer de l'État (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ALondres-Paris._Southern_Railway._Chemins_de_fer_de_l%27Etat%2C_6_six_services_par_jour._Paris_St_Lazare-Londres_affiche%2C_R._de_Valerio.jpg"
+   }
+  ],
+  "loc_note": "Paris Saint-Lazare, the French terminus of the service"
+ },
+ {
+  "id": "air-france-dransy-1933",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Air France, by Dransy",
+  "place": "Paris",
+  "country": "France",
+  "lat": 48.8566,
+  "lon": 2.3522,
+  "date": "1933",
+  "by": "Dransy",
+  "summary": "1933 Air France poster by Dransy. A uniformed pilot in a white cap holds a map of France up over his head as a monoplane flies above it, against a circle like a globe, with “Air France” in heavy capitals below.",
+  "facts": [
+   [
+    "Advertises",
+    "Air France"
+   ],
+   [
+    "Year",
+    "1933"
+   ],
+   [
+    "Artist",
+    "Dransy"
+   ]
+  ],
+  "image": {
+   "file": "Air France - affiche - Dransy - btv1b90166861.jpg",
+   "w": 9179,
+   "h": 11898,
+   "author": "Dransy (1883-1945). Illustrateur",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AAir_France_-_affiche_-_Dransy_-_btv1b90166861.jpg",
+   "alt": "Air France, by Dransy (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AAir_France_-_affiche_-_Dransy_-_btv1b90166861.jpg"
+   },
+   {
+    "label": "Wikipedia: Air France",
+    "url": "https://en.wikipedia.org/wiki/Air_France"
+   }
+  ],
+  "loc_note": "Paris, where Air France was based; the poster is not tied to a place"
+ },
+ {
+  "id": "expo-coloniale-1931",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Paris Colonial Exposition, 1931",
+  "place": "Bois de Vincennes, Paris",
+  "country": "France",
+  "lat": 48.8353,
+  "lon": 2.4349,
+  "date": "1931",
+  "by": "Victor Jean Desmeures",
+  "summary": "Poster for the Exposition coloniale internationale in Paris, 1931. Three faces in a column — a man in a white turban, a woman in dark headcloth and a figure in a wide-brimmed hat — are set under bold lettering. Vertical text reads “Le tour du monde en un jour”.",
+  "facts": [
+   [
+    "Event",
+    "Exposition coloniale internationale, 1931"
+   ],
+   [
+    "Artist",
+    "Victor Jean Desmeures"
+   ]
+  ],
+  "image": {
+   "file": "Affiche exposition coloniale internationale.jpg",
+   "w": 2569,
+   "h": 3405,
+   "author": "Desmeures, Victor Jean",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AAffiche_exposition_coloniale_internationale.jpg",
+   "alt": "Paris Colonial Exposition, 1931 (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AAffiche_exposition_coloniale_internationale.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0000821194"
+   },
+   {
+    "label": "Wikipedia: Paris Colonial Exposition",
+    "url": "https://en.wikipedia.org/wiki/Paris_Colonial_Exposition"
+   }
+  ],
+  "loc_note": "Bois de Vincennes, where the 1931 exhibition was held"
+ },
+ {
+  "id": "expo-coloniale-1931-dransy",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Visit the 1931 Colonial Exposition (French Railways)",
+  "place": "Bois de Vincennes, Paris",
+  "country": "France",
+  "lat": 48.8353,
+  "lon": 2.4349,
+  "date": "1931",
+  "by": "Dransy",
+  "summary": "Dransy poster for the French railways: a woman in green drapery stretches an arm up beside a white landmark, with text urging visits to the International Colonial Exposition in Paris, May to November 1931, with reduced fares and direct trains.",
+  "facts": [
+   [
+    "Issued by",
+    "Chemins de fer français"
+   ],
+   [
+    "Event",
+    "Exposition coloniale internationale, May–November 1931"
+   ],
+   [
+    "Artist",
+    "Dransy"
+   ]
+  ],
+  "image": {
+   "file": "Chemins de Fer Français. Visitez l'Exposition coloniale internationale - Paris, mai-novembre 1931. Billets à prix réduits - Trains directs affiche, Dransy.jpg",
+   "w": 7767,
+   "h": 12286,
+   "author": "Dransy (1883-1945). Illustrateur",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File%3AChemins_de_Fer_Fran%C3%A7ais._Visitez_l%27Exposition_coloniale_internationale_-_Paris%2C_mai-novembre_1931._Billets_%C3%A0_prix_r%C3%A9duits_-_Trains_directs_affiche%2C_Dransy.jpg",
+   "alt": "Visit the 1931 Colonial Exposition (French Railways) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AChemins_de_Fer_Fran%C3%A7ais._Visitez_l%27Exposition_coloniale_internationale_-_Paris%2C_mai-novembre_1931._Billets_%C3%A0_prix_r%C3%A9duits_-_Trains_directs_affiche%2C_Dransy.jpg"
+   },
+   {
+    "label": "Wikipedia: Paris Colonial Exposition",
+    "url": "https://en.wikipedia.org/wiki/Paris_Colonial_Exposition"
+   }
+  ],
+  "loc_note": "Bois de Vincennes, site of the exhibition"
+ },
+ {
+  "id": "strasbourg-expo-1924",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Strasbourg colonial exhibition: African village",
+  "place": "Strasbourg",
+  "country": "France",
+  "lat": 48.5846,
+  "lon": 7.7584,
+  "date": "1924",
+  "by": "Jean Jacoby",
+  "summary": "Jean Jacoby's 1924 poster for the colonial, agricultural and industrial exhibition at Strasbourg. A figure in green robes plays a stringed instrument beside a white fortified gateway, on a bright red ground, above the words “Village africain”.",
+  "facts": [
+   [
+    "Event",
+    "Exposition coloniale, agricole et industrielle, Strasbourg, July–October 1924"
+   ],
+   [
+    "Artist",
+    "Jean Jacoby"
+   ]
+  ],
+  "image": {
+   "file": "Jean Jacoby-Exposition coloniale-Strasbourg (1924).jpg",
+   "w": 982,
+   "h": 1530,
+   "author": "Jean Jacoby",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AJean_Jacoby-Exposition_coloniale-Strasbourg_%281924%29.jpg",
+   "alt": "Strasbourg colonial exhibition: African village (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AJean_Jacoby-Exposition_coloniale-Strasbourg_%281924%29.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://www.numistral.fr/ark:/12148/btv1b102094035"
+   }
+  ],
+  "loc_note": "Strasbourg, host city",
+  "artist_note": {
+   "text": "Jean Lucien Nicolas Jacoby (March 26, 1891 – September 9, 1936) was a Luxembourgish artist.",
+   "name": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Jean_Jacoby",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ {
+  "id": "wpa-see-america-arches",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "See America: Double Arch",
+  "place": "Arches National Park, Utah",
+  "country": "United States",
+  "lat": 38.6896,
+  "lon": -109.5399,
+  "date": "c. 1938",
+  "by": "Frank S. Nicholson",
+  "summary": "WPA poster for the United States Travel Bureau by Frank S. Nicholson, with the red-brown rock of Double Arch in Arches National Park and two riders below it in flat, simplified shapes under the slogan “See America”.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration, for the US Travel Bureau"
+   ],
+   [
+    "Year",
+    "c. 1938"
+   ],
+   [
+    "Artist",
+    "Frank S. Nicholson"
+   ]
+  ],
+  "image": {
+   "file": "See America, WPA poster, ca. 1938.jpg",
+   "w": 3197,
+   "h": 4072,
+   "author": "Frank S. Nicholson for the Works Progress Administration Federal Art Project",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_WPA_poster%2C_ca._1938.jpg",
+   "alt": "See America: Double Arch (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_WPA_poster%2C_ca._1938.jpg"
+   },
+   {
+    "label": "Wikipedia: Arches National Park",
+    "url": "https://en.wikipedia.org/wiki/Arches_National_Park"
+   }
+  ]
+ },
+ {
+  "id": "wpa-see-america-cavern",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "See America: the cavern",
+  "place": "Carlsbad Caverns, New Mexico",
+  "country": "United States",
+  "lat": 32.1479,
+  "lon": -104.5567,
+  "date": "c. 1937",
+  "by": "Alexander Dux",
+  "summary": "WPA poster for the US Travel Bureau showing two visitors in a cavern, with bright blue stalactite columns against dark rock and “See America” in pale capitals.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration, for the US Travel Bureau"
+   ],
+   [
+    "Year",
+    "c. 1937"
+   ],
+   [
+    "Artist",
+    "Alexander Dux"
+   ]
+  ],
+  "image": {
+   "file": "See America, WPA poster, ca. 1937.jpg",
+   "w": 3015,
+   "h": 3880,
+   "author": "Alexander Dux for the Works Progress Administration New York City Federal Art Project",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_WPA_poster%2C_ca._1937.jpg",
+   "alt": "See America: the cavern (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_WPA_poster%2C_ca._1937.jpg"
+   }
+  ],
+  "loc_note": "Pin set on Carlsbad Caverns as a representative cavern; the poster does not name the place"
+ },
+ {
+  "id": "wpa-montana-mountain",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "See America: welcome to Montana (mountains)",
+  "place": "Montana",
+  "country": "United States",
+  "lat": 46.8797,
+  "lon": -110.3626,
+  "date": "c. 1937",
+  "by": "M. Weitzman",
+  "summary": "WPA poster for the US Travel Bureau promoting Montana. A rider on horseback is dwarfed by a huge dark snow-capped peak in simple geometric planes, with “Welcome to Montana” in the lower band.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration, for the US Travel Bureau"
+   ],
+   [
+    "Year",
+    "c. 1937"
+   ],
+   [
+    "Artist",
+    "M. Weitzman"
+   ]
+  ],
+  "image": {
+   "file": "See America, Welcome to Montana, WPA poster, ca. 1937.jpg",
+   "w": 2999,
+   "h": 3838,
+   "author": "M. Weitzman for the Works Progress Administration Federal Art Project",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_Welcome_to_Montana%2C_WPA_poster%2C_ca._1937.jpg",
+   "alt": "See America: welcome to Montana (mountains) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_Welcome_to_Montana%2C_WPA_poster%2C_ca._1937.jpg"
+   },
+   {
+    "label": "Wikipedia: Montana",
+    "url": "https://en.wikipedia.org/wiki/Montana"
+   }
+  ],
+  "loc_note": "Montana, the state advertised; the pin is at its centre"
+ },
+ {
+  "id": "wpa-montana-tipis",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "See America: welcome to Montana (tipis)",
+  "place": "Montana",
+  "country": "United States",
+  "lat": 46.8797,
+  "lon": -110.3626,
+  "date": "c. 1937",
+  "by": "Richard Hall",
+  "summary": "A second WPA Montana poster, by Richard Hall: a cluster of white tipis and a rider on a green meadow below layered pale mountains and clouds, under “See America”.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration, for the US Travel Bureau"
+   ],
+   [
+    "Year",
+    "c. 1937"
+   ],
+   [
+    "Artist",
+    "Richard Hall"
+   ]
+  ],
+  "image": {
+   "file": "See America, Welcome to Montana, WPA poster, ca. 1937 (1).jpg",
+   "w": 3060,
+   "h": 3921,
+   "author": "Richard Hall for the Works Progress Administration Federal Art Project",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_Welcome_to_Montana%2C_WPA_poster%2C_ca._1937_%281%29.jpg",
+   "alt": "See America: welcome to Montana (tipis) (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ASee_America%2C_Welcome_to_Montana%2C_WPA_poster%2C_ca._1937_%281%29.jpg"
+   },
+   {
+    "label": "Wikipedia: Montana",
+    "url": "https://en.wikipedia.org/wiki/Montana"
+   }
+  ],
+  "loc_note": "Montana, the state advertised; the pin is at its centre"
+ },
+ {
+  "id": "wpa-puerto-rico",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Discover Puerto Rico",
+  "place": "San Juan",
+  "country": "Puerto Rico",
+  "lat": 18.4709,
+  "lon": -66.1245,
+  "date": "c. 1938",
+  "by": "Frank Nicholson",
+  "summary": "WPA tourism poster for Puerto Rico by Frank Nicholson. A cannon sits on the wall of El Morro castle in San Juan looking down a cliff to the sea, with the slogan “Where the Americas meet”.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration"
+   ],
+   [
+    "Year",
+    "c. 1936–40"
+   ],
+   [
+    "Artist",
+    "Frank Nicholson"
+   ]
+  ],
+  "image": {
+   "file": "Discover Puerto Rico U.S.A., WPA poster - cannon.jpg",
+   "w": 2191,
+   "h": 2799,
+   "author": "Frank Nicholson for the Works Progress Administration, New York City Federal Art Project",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ADiscover_Puerto_Rico_U.S.A.%2C_WPA_poster_-_cannon.jpg",
+   "alt": "Discover Puerto Rico (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ADiscover_Puerto_Rico_U.S.A.%2C_WPA_poster_-_cannon.jpg"
+   },
+   {
+    "label": "Wikipedia: Castillo San Felipe del Morro",
+    "url": "https://en.wikipedia.org/wiki/Castillo_San_Felipe_del_Morro"
+   }
+  ]
+ },
+ {
+  "id": "wpa-noah-lafayette",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Noah, a human comedy",
+  "place": "Lafayette Theatre, Harlem",
+  "country": "United States",
+  "lat": 40.8136,
+  "lon": -73.9427,
+  "date": "1936",
+  "by": "Aida McKenzie",
+  "summary": "Federal Theatre Project poster for the Negro Unit's production of André Obey's “Noah” at the Lafayette Theatre in Harlem. Noah and a crowd of animals — lions, giraffes and an elephant — sail in a red ark in a rainstorm.",
+  "facts": [
+   [
+    "Production",
+    "“Noah” by André Obey, WPA Federal Theatre Negro Unit"
+   ],
+   [
+    "Year",
+    "1936"
+   ],
+   [
+    "Artist",
+    "Aida McKenzie"
+   ]
+  ],
+  "image": {
+   "file": "Noah, a human comedy, WPA poster, 1936.jpg",
+   "w": 2440,
+   "h": 3730,
+   "author": "Aida McKenzie",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3ANoah%2C_a_human_comedy%2C_WPA_poster%2C_1936.jpg",
+   "alt": "Noah, a human comedy (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ANoah%2C_a_human_comedy%2C_WPA_poster%2C_1936.jpg"
+   },
+   {
+    "label": "Wikipedia: Lafayette Theatre (Harlem)",
+    "url": "https://en.wikipedia.org/wiki/Lafayette_Theatre_(Harlem)"
+   }
+  ]
+ },
+ {
+  "id": "wpa-brookfield-zoo",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Visit the Brookfield Zoo by the “L”",
+  "place": "Brookfield, Illinois",
+  "country": "United States",
+  "lat": 41.8317,
+  "lon": -87.8352,
+  "date": "c. 1937",
+  "by": "Arlington Gregg",
+  "summary": "WPA poster in bold flat shapes: a panda balances on one leg, its black limbs as heavy bars on a white body and green swirls behind. The slogan reads “Brookfield Zoo — by the L”.",
+  "facts": [
+   [
+    "Programme",
+    "Works Progress Administration, Federal Art Project"
+   ],
+   [
+    "Year",
+    "c. 1937"
+   ],
+   [
+    "Artist",
+    "Arlington Gregg"
+   ]
+  ],
+  "image": {
+   "file": "Visit the Brookfield Zoo, WPA poster, ca. 1937.jpg",
+   "w": 916,
+   "h": 1461,
+   "author": "Arlington Gregg",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AVisit_the_Brookfield_Zoo%2C_WPA_poster%2C_ca._1937.jpg",
+   "alt": "Visit the Brookfield Zoo by the “L” (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AVisit_the_Brookfield_Zoo%2C_WPA_poster%2C_ca._1937.jpg"
+   },
+   {
+    "label": "Wikipedia: Brookfield Zoo",
+    "url": "https://en.wikipedia.org/wiki/Brookfield_Zoo"
+   }
+  ]
+ },
+ {
+  "id": "lner-fraserburgh",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "Fraserburgh: glorious sands",
+  "place": "Fraserburgh, Scotland",
+  "country": "United Kingdom",
+  "lat": 57.691,
+  "lon": -2.0053,
+  "date": "c. 1930",
+  "by": "Henry George Gawthorn",
+  "summary": "LNER railway poster by Henry George Gawthorn for Fraserburgh: a wide sandy beach with bathers, striped tents and coloured umbrellas, and the town skyline behind. The text lists sands, bathing, golf and tennis.",
+  "facts": [
+   [
+    "Issued by",
+    "London and North Eastern Railway"
+   ],
+   [
+    "Year",
+    "c. 1930"
+   ],
+   [
+    "Artist",
+    "Henry George Gawthorn"
+   ]
+  ],
+  "image": {
+   "file": "Henry George Gawthorn - 6f84a88862.jpg",
+   "w": 1200,
+   "h": 1934,
+   "author": "Henry George Gawthorn",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AHenry_George_Gawthorn_-_6f84a88862.jpg",
+   "alt": "Fraserburgh: glorious sands (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AHenry_George_Gawthorn_-_6f84a88862.jpg"
+   },
+   {
+    "label": "Source of the image",
+    "url": "https://www.invaluable.com/artist/t5uuoo70r0/"
+   },
+   {
+    "label": "Wikipedia: Fraserburgh",
+    "url": "https://en.wikipedia.org/wiki/Fraserburgh"
+   }
+  ]
+ },
+ {
+  "id": "klm-soesterberg-1933",
+  "kind": "poster",
+  "cat": "poster",
+  "title": "KLM sightseeing flights from Soesterberg",
+  "place": "Soesterberg",
+  "country": "Netherlands",
+  "lat": 52.1303,
+  "lon": 5.2889,
+  "date": "1933",
+  "by": "Eduard Ijdo (printer)",
+  "summary": "Dutch poster for KLM sightseeing flights from Soesterberg airfield on 17, 18 and 19 April 1933. A silver high-wing Fokker airliner with its registration PH-AKL is drawn above heavy blue lettering that lists the flights and the fare.",
+  "facts": [
+   [
+    "Advertises",
+    "KLM Rondvluchten, 17–19 April 1933"
+   ],
+   [
+    "Year",
+    "1933"
+   ],
+   [
+    "Printer",
+    "Eduard Ijdo, Leiden"
+   ]
+  ],
+  "image": {
+   "file": "KLM RONDVLUCHTEN SOESTERBERG 17 18 19 EN APRIL 1933 - affiche - btv1b101069995.jpg",
+   "w": 1371,
+   "h": 1972,
+   "author": "N.V BOEK-EN Steendrukkerij Eduard Idjo Leiden. Graphiste",
+   "license": "Public domain",
+   "license_url": "",
+   "page": "https://commons.wikimedia.org/wiki/File%3AKLM_RONDVLUCHTEN_SOESTERBERG_17_18_19_EN_APRIL_1933_-_affiche_-_btv1b101069995.jpg",
+   "alt": "KLM sightseeing flights from Soesterberg (poster)"
+  },
+  "links": [
+   {
+    "label": "Poster on Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AKLM_RONDVLUCHTEN_SOESTERBERG_17_18_19_EN_APRIL_1933_-_affiche_-_btv1b101069995.jpg"
+   },
+   {
+    "label": "Wikipedia: Soesterberg Air Base",
+    "url": "https://en.wikipedia.org/wiki/Soesterberg_Air_Base"
+   }
+  ],
+  "loc_note": "Soesterberg airfield"
  }
 ]

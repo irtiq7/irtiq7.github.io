@@ -72,7 +72,7 @@
       "pages": [
         "art-deco-map.html"
       ],
-      "summary_html": "A world map of Art Deco: about 135 buildings, stations, theatres, hotels and bridges plus 55 vintage posters, each with a short description, a gallery view and a zoomable high-resolution viewer. Previews are linked from Wikimedia Commons with credit, not copied.",
+      "summary_html": "A world map of Art Deco: about 135 buildings, stations, theatres, hotels and bridges plus 84 vintage posters, each with a short description, a gallery view and a zoomable high-resolution viewer. Previews are linked from Wikimedia Commons with credit, not copied.",
       "llms": "interactive world map and gallery of Art Deco buildings, stations and vintage posters with descriptions and a high-resolution viewer; data at https://irtiq7.github.io/artdeco/places.json",
       "hidden": false
     }
