@@ -103,3 +103,26 @@
 #forecasts .data-table th, #forecasts .data-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 #forecasts .data-table th { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; }
 #forecasts .table-wrap { overflow-x: auto; }
+
+/* Signals: question cards */
+.q-list { display: grid; gap: 1rem; margin: 1rem 0 2rem; }
+.q-card { padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--line); }
+.q-card:target { border-color: var(--pine); box-shadow: var(--glow-c); }
+.q-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.q-title { margin: 0.3rem 0 0; font-size: 1.05rem; line-height: 1.35; overflow-wrap: anywhere; }
+.q-kind { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.q-prob { text-align: right; min-width: 5.5rem; }
+.q-prob strong { display: block; font-size: 1.6rem; line-height: 1.1; color: var(--pine); text-shadow: var(--glow-c); }
+.q-prob span { font-size: 0.7rem; color: var(--ink-soft); }
+.q-prob.yes strong { color: #7cff6b; text-shadow: none; } .q-prob.no strong { color: var(--rust); text-shadow: var(--glow-m); }
+.q-meta { margin: 0.5rem 0; font-size: 0.8rem; color: var(--ink-soft); }
+.q-more > summary { cursor: pointer; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--pine); }
+.q-sec { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed var(--line); }
+.q-sec h5 { margin: 0 0 0.4rem; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.q-sec p { margin: 0 0 0.5rem; font-size: 0.88rem; }
+.q-note { color: var(--gold); }
+.q-result { font-weight: 700; color: var(--ink); }
+.q-snip { display: block; color: var(--ink-soft); font-size: 0.78rem; }
+.spark { width: 100%; max-width: 420px; height: auto; display: block; margin: 0.5rem 0; }
+.spark .sp-old { fill: #3b4170; } .spark .sp-week { fill: var(--pine); } .spark .sp-after { fill: var(--rust); } .spark .sp-div { stroke: var(--ink-soft); stroke-dasharray: 3 3; }
+.spark .axis { fill: var(--ink-soft); font-size: 9px; font-family: var(--mono); }

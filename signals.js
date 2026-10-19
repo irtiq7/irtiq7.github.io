@@ -118,9 +118,65 @@
     rows.forEach(function (r) { tb.appendChild(h("tr", {}, r.map(function (c) { return h("td", { text: c == null ? "" : String(c) }); }))); });
     t.appendChild(tb); return h("div", { class: "table-wrap" }, [t]);
   }
+  function snip(t, n) { t = String(t || "").replace(/\s+/g, " ").trim(); return t.length > n ? t.slice(0, n).replace(/\s+\S*$/, "") + "…" : t; }
+  // Daily counts as small bars: the 21 days before the question, then (once resolved) the days it covered
+  function spark(before, after, days) {
+    var n = before.length + (after ? after.length + 1 : 0), W = 420, H = 64, bw = W / n, max = Math.max(1, Math.max.apply(null, before.concat(after || [])));
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + (H + 14), class: "spark", role: "img", "aria-label": "Stories per day: " + before.join(", ") + (after ? " then, during the question: " + after.join(", ") : "") });
+    function bar(v, i, cls) { var hh = v ? Math.max(2, v / max * H) : 1; var r = svg("rect", { x: i * bw + 1, y: H - hh, width: Math.max(1, bw - 2), height: hh, class: cls }); r.appendChild(svg("title", {}, [document.createTextNode(String(v) + (v === 1 ? " story" : " stories"))])); s.appendChild(r); }
+    before.forEach(function (v, i) { bar(v, i, i >= before.length - 7 ? "sp-week" : "sp-old"); });
+    if (after) { s.appendChild(svg("line", { x1: before.length * bw + bw / 2, x2: before.length * bw + bw / 2, y1: 0, y2: H, class: "sp-div" })); after.forEach(function (v, i) { bar(v, before.length + 1 + i, "sp-after"); }); }
+    var l = svg("text", { x: 0, y: H + 11, class: "axis" }); l.textContent = days && days[0] ? days[0].slice(5) : ""; s.appendChild(l);
+    var r = svg("text", { x: W, y: H + 11, "text-anchor": "end", class: "axis" }); r.textContent = after ? "after the question" : (days && days.length ? days[days.length - 1].slice(5) : ""); s.appendChild(r);
+    return s;
+  }
+  function sect(title, kids) { return h("section", { class: "q-sec" }, [h("h5", { text: title })].concat(kids.filter(Boolean))); }
+  function bulletless(lines) { return lines.filter(Boolean).map(function (t) { return typeof t === "string" ? h("p", { text: t }) : t; }); }
+
+  function questionCard(f) {
+    var c = f.context, m = c.mentions, r = c.reasoning, done = f.outcome !== null && !f.void, spread = f.kind === "term-spread";
+    var kind = spread ? "Will it reach industry press?" : "Will it keep making news?";
+    var usual = m.base_per_week, rate = m.ratio;
+    var run = "This week: " + m.recent + " stories from " + m.outlets + " outlets. " + (usual ? "A week this size would normally have about " + usual + ", so it is running at roughly " + rate + " times its usual level." : "It was almost absent in the weeks before.");
+    var cats = m.by_category, where = ["research", "tech", "business"].map(function (k) { return ({ research: "research", tech: "tech", business: "business" }[k]) + " " + (cats[k] || 0); }).join(" · ");
+    var seen = Object.keys(m.first_seen || {}).map(function (k) { return { k: k, d: m.first_seen[k] }; }).sort(function (a, b) { return a.d < b.d ? -1 : 1; }).map(function (x) { return ({ research: "research", tech: "tech press", business: "business press" }[x.k]) + " " + fmtDay(x.d); }).join(" → ");
+    var peak = m.peak && m.peak.share != null && m.peak.share >= 0.4 && m.recent >= 4 ? h("p", { class: "q-note", text: Math.round(m.peak.share * 100) + "% of this week's mentions came on a single day (" + fmtDay(m.peak.day) + "), so this looks like one burst of coverage more than steady attention. Step 2 below shows how often phrases like this held their level." }) : null;
+    // what it is
+    var what = c.definition
+      ? [h("p", { text: c.definition.text }), h("p", { class: "muted small" }, ["From Wikipedia: ", h("a", { href: c.definition.url, rel: "noopener", target: "_blank", text: c.definition.title }), " (CC BY-SA). It describes the name, not this week's news."])]
+      : [h("p", { class: "muted", text: "No encyclopedia page matched this exact name, so the headlines below are the best description of what it is." })];
+    // why we are asking
+    var ex = (c.examples || []).map(function (e) { return h("li", {}, [h("a", { href: e.url, rel: "noopener", target: "_blank", text: e.title }), h("span", { class: "muted small", text: " — " + (sig.sources[e.source] ? sig.sources[e.source].name : e.source) + (e.published ? ", " + fmtDay(e.published.slice(0, 10)) : "") }), e.summary ? h("span", { class: "q-snip", text: snip(e.summary, 170) }) : null]); });
+    var why = bulletless([run, "Where it appears: " + where + (seen ? ". First seen: " + seen + (m.lag_days != null ? " (" + m.lag_days + " days from research to industry press)" : "") + "." : "."), peak]).concat([spark(m.daily, done && f.daily_after ? f.daily_after : null, m.days), ex.length ? h("ul", { class: "idea-stories" }, ex) : null]);
+    // how the probability was reached
+    var how;
+    if (spread) {
+      var b = r.backtest || {};
+      how = bulletless([
+        "Research phrases only sometimes reach tech or business coverage, and how often is not well known yet. In the history collected so far, " + (b.cases || 0) + " comparable research-only phrases could be checked and " + (b.hits || 0) + " reached industry headlines within " + (b.horizon_days || 14) + " days.",
+        "With so few cases the estimate leans on a stated starting guess of " + pct(b.prior || 0.25) + ", pulled toward that history. Result: " + pct(r.final_p) + ". This number will become more reliable as more weeks are collected."
+      ]);
+    } else {
+      var bt = r.backtest || {}, adj = bt.shift == null ? 0 : bt.shift;
+      how = bulletless([
+        "Step 1, the pace. At this week's pace we would expect about " + r.expected + " stories next week and the bar is " + r.threshold + ". A simple model that assumes the pace roughly holds puts the chance of reaching the bar at " + pct(r.model_p) + ".",
+        bt.cases ? "Step 2, a reality check. In the weeks already collected, " + bt.cases + " comparable phrases (at least 6 stories from 3 outlets in a week) were tested against the same kind of bar, over " + bt.origins + " overlapping starting days, so this is a small sample. " + pct(bt.rate) + " of them reached it, while the simple model had predicted " + pct(bt.mean_model) + " on average. " + (adj < -0.05 ? "The model was too optimistic, so this probability is lowered." : adj > 0.05 ? "The model was too cautious, so this probability is raised." : "The model was about right, so it is left almost unchanged.") : "Step 2 was skipped because there is not enough history yet.",
+        "Result: " + pct(r.final_p) + " that it reaches " + r.threshold + " stories."
+      ]);
+    }
+    var body = [sect("What it is", what), sect("Why this question", why), sect(done ? "How the probability was reached (written before the result)" : "How the probability was reached", how), sect("What counts as yes", [h("p", { text: c.resolution })])];
+    if (done && f.result_note) body.unshift(sect("What happened", [h("p", { class: "q-result", text: (f.outcome ? "Yes. " : "No. ") + "It appeared in " + f.observed + (f.observed === 1 ? " story" : " stories") + " against a bar of " + f.threshold + ". " + f.result_note }), h("p", { class: "muted small", text: "Probability said " + pct(f.p) + "; Brier score " + f.brier + " (0 is perfect, 0.25 is what always saying 50% would score)." })]));
+    var head = h("div", { class: "q-head" }, [h("div", {}, [h("span", { class: "tag q-kind", text: kind }), h("h4", { class: "q-title", text: f.question })]),
+      h("div", { class: "q-prob" + (done ? (f.outcome ? " yes" : " no") : "") }, [h("strong", { text: done ? (f.outcome ? "Yes" : "No") : pct(f.p) }), h("span", { text: done ? "said " + pct(f.p) : "chance of yes" })])]);
+    var summary = (done ? "Asked " : "Asked ") + fmtDay(f.made) + (done ? ", resolved " : ", resolves ") + fmtDay(f.resolves) + ". " + (m.recent + " stories this week" + (usual ? " vs about " + usual + " usual" : ", almost none before"));
+    return h("article", { class: "q-card", id: f.id }, [head, h("p", { class: "q-meta", text: summary }), h("details", { class: "q-more" }, [h("summary", { text: "Show the evidence and reasoning" })].concat(body))]);
+  }
+
   function renderForecasts() {
     var s = fc.summary, list = fc.forecasts, box = clear($("forecasts"));
+    var isNew = function (f) { return f.model === "burst-persistence-v2" && f.context; };
     var openF = list.filter(function (f) { return f.outcome === null && !f.void; }), done = list.filter(function (f) { return f.outcome !== null; }).reverse();
+    var openNew = openF.filter(isNew), openOld = openF.filter(function (f) { return !isNew(f); }), doneNew = done.filter(isNew), doneOld = done.filter(function (f) { return !isNew(f); });
     var firstResult = openF.map(function (f) { return f.resolves; }).sort()[0];
     function tile(label, value, sub) { return h("div", { class: "stat-tile" }, [h("p", { class: "stat-label", text: label }), h("p", { class: "stat-value", text: value }), sub ? h("p", { class: "stat-sub", text: sub }) : null]); }
     box.appendChild(h("div", { class: "stat-tiles" }, [
@@ -129,15 +185,29 @@
       tile("Brier score", s.mean_brier == null ? "—" : String(s.mean_brier), "lower is better; 0.25 = always saying 50%"),
       tile("Skill vs 50%", s.skill == null ? "—" : (s.skill > 0 ? "+" : "") + s.skill, "above 0 beats the benchmark")
     ]));
+    if (s.by_model) {
+      var names = { "poisson-persistence-v1": "Method 1 (until 19 Oct 2026)", "burst-persistence-v2": "Method 2 (from 19 Oct 2026)" };
+      box.appendChild(table(["Method", "Open", "Resolved", "Brier score"], Object.keys(s.by_model).map(function (k) { var m = s.by_model[k]; return [names[k] || k, m.open, m.resolved, m.mean_brier == null ? "—" : m.mean_brier]; }), ""));
+    }
+    if (fc.methods) {
+      box.appendChild(h("details", { class: "agent-box" }, [h("summary", { text: "How the questions changed" })].concat(Object.keys(fc.methods).map(function (k) { return h("p", { class: "small" }, [h("strong", { text: (names2(k)) + ". " }), fc.methods[k]]); }))));
+    }
     box.appendChild(h("h3", { text: "Open questions" }));
-    box.appendChild(table(["Question", "Probability", "Resolves", "Based on"], openF.map(function (f) { return [f.question, pct(f.p), fmtDay(f.resolves), f.basis === "emerging" ? "emerging list" : "most-discussed list"]; }), "No open questions."));
+    box.appendChild(h("p", { class: "muted small", text: "Open each question for what the phrase is, the stories behind it, how the probability was worked out, and exactly what counts as yes." }));
+    box.appendChild(openNew.length ? h("div", { class: "q-list" }, openNew.map(questionCard)) : h("p", { class: "muted", text: "No open questions from the current method yet. A new set is written each week." }));
+    if (openOld.length) box.appendChild(h("details", { class: "agent-box" }, [h("summary", { text: "Earlier questions from method 1 (" + openOld.length + " open)" }),
+      h("p", { class: "muted small", text: "These were written before the method change. They counted any word in the headline or summary, so several are ordinary words that appear every week. They stay in the record and are scored like the rest." }),
+      table(["Question", "Probability", "Resolves"], openOld.map(function (f) { return [f.question, pct(f.p), fmtDay(f.resolves)]; }), "None.")]));
     box.appendChild(h("h3", { text: "Resolved" }));
-    box.appendChild(table(["Question", "Probability", "Seen", "Outcome", "Brier"], done.map(function (f) { return f.void ? [f.question, pct(f.p), "—", "void", "—"] : [f.question, pct(f.p), f.observed + " (needed " + f.threshold + ")", f.outcome ? "Yes" : "No", f.brier]; }), "Nothing has resolved yet. Each question covers 7 days and is scored the day after."));
+    box.appendChild(doneNew.length ? h("div", { class: "q-list" }, doneNew.map(questionCard)) : h("p", { class: "muted", text: "No question from the current method has resolved yet. Each covers 7 days (or 14 for research-to-industry questions) and is scored the day after." }));
+    if (doneOld.length) box.appendChild(h("details", { class: "agent-box" }, [h("summary", { text: "Resolved questions from method 1 (" + doneOld.length + ")" }),
+      table(["Question", "Probability", "Seen", "Outcome", "Brier"], doneOld.map(function (f) { return f.void ? [f.question, pct(f.p), "—", "void", "—"] : [f.question, pct(f.p), f.observed + " (needed " + f.threshold + ")", f.outcome ? "Yes" : "No", f.brier]; }), "None.")]));
     if (s.resolved >= 12) {
       box.appendChild(h("h3", { text: "Calibration" }));
       box.appendChild(table(["Said", "Questions", "Average stated", "Happened"], s.calibration.map(function (c) { return [c.range, c.n, c.mean_p == null ? "—" : pct(c.mean_p), c.observed == null ? "—" : pct(c.observed)]; }), ""));
     } else box.appendChild(h("p", { class: "muted small", text: "A calibration table (did “70%” questions happen about 70% of the time?) appears after 12 questions have resolved." }));
   }
+  function names2(k) { return k === "poisson-persistence-v1" ? "Method 1" : k === "burst-persistence-v2" ? "Method 2" : k; }
 
   function init() {
     $("asof").textContent = "Data as of " + fmtDay(sig.as_of) + (sig.provisional ? " · history still building" : "");

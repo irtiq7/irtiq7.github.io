@@ -191,6 +191,55 @@ async function pool(items, n, fn) {
 }
 
 // ---------- main
+// ---------- short definitions from Wikipedia (CC BY-SA), cached in news/definitions.json
+// A definition is accepted only when the page title matches the term, because redirects can land on a different idea ("world model" goes to "Mental model").
+const WIKI_UA = "irtiq7-news-builder (https://irtiq7.github.io)";
+const normTitle = (t) => String(t).replace(/\s*\(.*?\)\s*/g, " ").replace(/[^a-z0-9]+/gi, " ").trim().toLowerCase();
+async function wikiJson(url) {
+  const r = await fetch(url, { headers: { "User-Agent": WIKI_UA, Accept: "application/json" }, signal: AbortSignal.timeout(10000) });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  return r.json();
+}
+function twoSentences(t) {
+  // split only where a sentence really ends: punctuation, whitespace, then a capital letter, digit or opening quote ("Character.ai" and "U.S." stay whole)
+  const sents = String(t || "").replace(/\s+/g, " ").trim().split(/(?<=[.!?])\s+(?=[A-Z0-9"“(])/);
+  let out = ""; for (const x of sents.slice(0, 2)) { if ((out + " " + x).trim().length > 360 && out) break; out = (out + " " + x).trim(); }
+  return out.slice(0, 420);
+}
+async function lookupDefinition(label) {
+  const want = normTitle(label);
+  const fixStart = (d) => { // "Character.ai" arrives as "ai is a ...": put the lost start back, or drop the extract
+    const ex = String(d.extract || "").trim(), first = ex.split(/\s+/)[0] || "";
+    if (!/^[a-z]/.test(first)) return ex;
+    return d.title.toLowerCase().endsWith(first.toLowerCase()) ? d.title.slice(0, d.title.length - first.length) + ex : "";
+  };
+  const accept = (d) => d && d.type === "standard" && normTitle(d.title) === want && fixStart(d) ? { text: twoSentences(fixStart(d)), title: d.title, url: (d.content_urls && d.content_urls.desktop && d.content_urls.desktop.page) || "https://en.wikipedia.org/wiki/" + encodeURIComponent(d.title.replace(/ /g, "_")), source: "Wikipedia" } : null;
+  try { const d = accept(await wikiJson("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(label.replace(/ /g, "_")))); if (d) return d; } catch (e) { /* try search */ }
+  const hits = await wikiJson("https://en.wikipedia.org/w/api.php?action=opensearch&limit=3&format=json&search=" + encodeURIComponent(label));
+  for (const title of (hits[1] || [])) {
+    if (normTitle(title) !== want) continue;
+    const d = accept(await wikiJson("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(title.replace(/ /g, "_")))); if (d) return d;
+  }
+  return null;
+}
+async function loadDefinitions(labels, file) {
+  const cache = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : {}, defs = new Map();
+  for (const label of labels) {
+    const key = label.toLowerCase(), hit = cache[key];
+    if (hit && (hit.def || NOW - Date.parse(hit.checked) < 14 * 864e5)) { defs.set(key, hit.def); continue; }
+    try { const def = await lookupDefinition(label); cache[key] = { checked: day(NOW), def }; defs.set(key, def); await sleep(300); }
+    catch (e) { console.log(`no definition for "${label}": ${e.message}`); }
+  }
+  const sorted = Object.fromEntries(Object.keys(cache).sort().map((k) => [k, cache[k]]));
+  fs.writeFileSync(file, JSON.stringify(sorted, null, 1) + "\n");
+  return defs;
+}
+
+// Page furniture that leaks into extracts ("In Brief Posted: 9:30 AM PDT · October 18, 2026 Image Credits:...")
+function tidySnippet(t) {
+  return String(t || "").replace(/\b(?:In Brief\s*)?Posted:[^.]*?\b20\d\d\b\s*(?:Image Credits?:\s*\S+(?:\s+\S+)?\s*)?/gi, "").replace(/\bImage Credits?:\s*\S+(?:\s+\S+)?\s*/gi, "").replace(/\s+/g, " ").trim();
+}
+
 async function main() {
   const prevFile = path.join(NEWS, "latest.json");
   const prev = fs.existsSync(prevFile) ? JSON.parse(fs.readFileSync(prevFile, "utf8")) : null;
@@ -303,6 +352,7 @@ async function main() {
   const all = new Map();
   for (const f of fs.readdirSync(archDir).sort()) for (const i of JSON.parse(fs.readFileSync(path.join(archDir, f), "utf8"))) all.set(i.id, i);
   const arch = [...all.values()];
+  arch.forEach((i) => { i.tw = signals.titleTerms(i.n || ""); }); // terms from headlines only, so steady words look steady
 
   // ---- Topic trends (last 30 days, by published day)
   const days = Array.from({ length: TREND_DAYS }, (_, k) => day(NOW - (TREND_DAYS - 1 - k) * 864e5));
@@ -320,8 +370,8 @@ async function main() {
 
   // ---- Signals: emerging ideas, topic momentum, market mood, cross-outlet stories
   const baseline = signals.baselineStats(arch, NOW);
-  const emerging = baseline.ready ? signals.computeEmerging(arch, NOW) : [];
-  const discussed = baseline.ready ? [] : signals.mostDiscussed(arch, NOW);
+  const emerging = baseline.ready ? signals.computeEmerging(arch, NOW, { field: "tw", minRecent: 5, minRatio: 2.2, specific: true }) : [];
+  const discussed = baseline.ready ? [] : signals.mostDiscussed(arch, NOW, { field: "tw" });
   const mood = signals.computeMood(arch, NOW);
   const scored = itemsOut.filter((i) => i.category === "business" && NOW - Date.parse(i.published) < 7 * 864e5)
     .map((i) => ({ id: i.id, m: signals.moodScore(i.title + " " + i.summary) })).filter((x) => x.m != null);
@@ -331,7 +381,7 @@ async function main() {
     title: g[0].title, outlets: new Set(g.map((x) => x.sourceId)).size, items: g.map((x) => ({ id: x.id, source: x.sourceId, lean: (sourcesFile.sources.find((s) => s.id === x.sourceId) || { lean: { label: "Not rated" } }).lean.label })),
   }));
   // every story id the page may need to show, with its title, link, outlet and date
-  const byId = new Map([...arch.map((i) => [i.id, { title: i.n, url: i.u, source: i.s, category: i.c, published: i.p }]), ...itemsOut.map((i) => [i.id, { title: i.title, url: i.url, source: i.sourceId, category: i.category, published: i.published }])]);
+  const byId = new Map([...arch.map((i) => [i.id, { title: i.n, url: i.u, source: i.s, category: i.c, published: i.p }]), ...itemsOut.map((i) => [i.id, { summary: tidySnippet(i.summary).slice(0, 240), title: i.title, url: i.url, source: i.sourceId, category: i.category, published: i.published }])]);
   const wanted = new Set([...emerging.concat(discussed).flatMap((e) => e.examples), ...mood.up, ...mood.down, ...agreement.flatMap((a) => a.items.map((x) => x.id))]);
   const refs = Object.fromEntries([...wanted].filter((id) => byId.has(id)).map((id) => [id, byId.get(id)]));
   const signalsOut = {
@@ -350,9 +400,26 @@ async function main() {
   const fFile = path.join(NEWS, "forecasts.json");
   const ledger = fs.existsSync(fFile) ? JSON.parse(fs.readFileSync(fFile, "utf8")) : { model: signals.MODEL, forecasts: [] };
   signals.resolveForecasts(ledger.forecasts, arch, NOW);
-  ledger.forecasts.push(...(baseline.ready ? signals.makeForecasts(emerging, ledger.forecasts, NOW, "emerging") : signals.makeForecasts(discussed, ledger.forecasts, NOW, "most-discussed")));
+  // Research-only phrases are a small pool, so they qualify at 4 stories instead of 6
+  const earlyPool = baseline.ready ? signals.computeEmerging(arch, NOW, { field: "tw", minRecent: 4, minRatio: 2.2, specific: true }).filter((e) => e.stage === "early") : [];
+  const candidates = baseline.ready ? emerging.concat(earlyPool.filter((e) => !emerging.some((x) => x.term === e.term))) : discussed;
+  const wantQuestions = !ledger.forecasts.some((f) => f.model === signals.MODEL2 && NOW - Date.parse(f.made) < 7 * 864e5);
+  let defs = new Map();
+  if (wantQuestions) {
+    // look up names only for the few candidates that can become questions
+    const titlesOf = (term) => arch.filter((i) => (i.tw || []).includes(term)).map((i) => i.n);
+    const labels = candidates.slice(0, 14).map((e) => signals.labelFor(e.term, titlesOf(e.term)));
+    defs = await loadDefinitions(labels, path.join(NEWS, "definitions.json"));
+  }
+  const ctx = { items: arch, sourceCount: sourcesFile.sources.length, story: (id) => { const r = refs[id] || byId.get(id); return r ? { title: r.title, url: r.url, source: r.source, category: r.category, published: r.published, summary: r.summary || "" } : null; }, define: (label) => defs.get(label.toLowerCase()) || null };
+  // story() needs every story that may be quoted, not only those already in refs
+  ledger.forecasts.push(...signals.makeForecastsV2(candidates, ledger.forecasts, NOW, ctx, baseline.ready ? "emerging" : "most-discussed"));
   ledger.summary = signals.scoreboard(ledger.forecasts);
-  ledger.note = "Forecasts are made at most once a week from the emerging-ideas list and scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
+  ledger.note = "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
+  ledger.methods = {
+    "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
+    "burst-persistence-v2": "From 19 October 2026. Terms come from headlines only. A phrase counts as emerging only when it is used at least 2.2 times as often as in the previous three weeks, in at least 5 stories from at least 3 outlets (4 for research-only phrases). Probabilities are corrected using how often comparable phrases held their level in the weeks already collected. Phrases still confined to research sources get a different question: will they reach tech or business coverage?",
+  };
   written(fFile, JSON.stringify(ledger, null, 1) + "\n", "news/forecasts.json");
 }
 

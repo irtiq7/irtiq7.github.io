@@ -67,8 +67,9 @@
         <p class="muted small">Headlines from different outlets that share most of their key words, with each outlet's rating (of the outlet, not the story). Reading across outlets is a good way to see how framing differs.</p>
         <div id="agreement" class="idea-grid"></div>
 
-        <h2 class="section-title">Forecast scoreboard</h2>
-        <p>Once a week the page writes down questions about its own data, for example whether a phrase will keep appearing, together with a probability from a stated model (a Poisson model that assumes this week's rate fades a little). Questions are never edited afterwards, each one covers 7 days, and the result is scored with the Brier score, <em>(probability &minus; outcome)&sup2;</em>. Always saying 50% scores 0.25, so a lower score means better than that benchmark. This is the idea of strictly proper scoring rules from my paper <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, applied to forecasts. The git history of <a href="news/forecasts.json">forecasts.json</a> is the audit trail.</p>
+        <h2 class="section-title">Forecasts and open questions</h2>
+        <p>Once a week the page picks a few ideas that are getting unusual attention and asks a question about each, such as whether it will still be in the news next week, or whether an idea that so far appears only in research will reach tech or business coverage. Each question is written down with a probability and all of its evidence, so you can see what it is, why it was asked, and how the number was reached. Nothing is edited afterwards, and each is checked against the stories collected when its window ends.</p>
+        <p>Probabilities are scored with the Brier score, <em>(probability &minus; outcome)&sup2;</em>. Always saying 50% scores 0.25, so lower is better than that benchmark. This is the idea of strictly proper scoring rules from my paper <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, applied to forecasts. The git history of <a href="news/forecasts.json">forecasts.json</a> is the audit trail. These questions are about attention in the news, not about whether anything is true or worth acting on.</p>
         <div id="forecasts"></div>
       </div>
     </div></section>

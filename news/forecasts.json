@@ -315,11 +315,874 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-character-ai",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "character.ai",
+   "label": "Character.AI",
+   "threshold": 5,
+   "p": 0.39,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Character.AI\" be in at least 5 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": {
+     "text": "Character.ai is a generative AI chatbot service where users can engage in conversations with customizable characters. It was designed by the developers of Google LaMDA, Noam Shazeer and Daniel de Freitas.",
+     "title": "Character.ai",
+     "url": "https://en.wikipedia.org/wiki/Character.ai",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 0,
+     "ratio": 13,
+     "outlets": 5,
+     "by_category": {
+      "research": 0,
+      "tech": 5,
+      "business": 1
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-13",
+      "count": 3,
+      "share": 0.5
+     },
+     "first_seen": {
+      "tech": "2026-10-13",
+      "business": "2026-10-13"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "2afd84a218",
+      "title": "Disney Asked Character.AI to Go Bankrupt for a Get-Out-of-Lawsuits Card",
+      "url": "https://www.wired.com/story/disney-asked-characterai-to-go-bankrupt-for-a-get-out-of-lawsuits-card/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-19T09:00:00.000Z",
+      "summary": "This week, Character.AI declared bankruptcy. Disney also hired the “majority” of Character.AI’s employees, including the CEO, and agreed that it would let some of the now-Disney employees help keep Character.AI operational for five months.C"
+     },
+     {
+      "id": "6a083a36de",
+      "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+      "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-18T16:30:00.000Z",
+      "summary": "chatbot startup Character.AI filed for bankruptcy earlier this week, many of its employees will have the opportunity to take jobs at Disney."
+     },
+     {
+      "id": "738aed8dcc",
+      "title": "Now that Character.AI is going bankrupt, what happens to all of its users’ data?",
+      "url": "https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-10-14T18:47:54.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.1,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.58,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.39
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"character.ai\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 0,
+    "lambda": 5.1
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-coreweave",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "coreweave",
+   "label": "CoreWeave",
+   "threshold": 4,
+   "p": 0.43,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"CoreWeave\" be in at least 4 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": {
+     "text": "CoreWeave, Inc. is an American cloud-computing company based in Livingston, New Jersey. As of 2026, the company operates 51 AI data centers, specialized data centers designed for higher parallel computing performance via heavy use of graphics processing units (GPUs).",
+     "title": "CoreWeave",
+     "url": "https://en.wikipedia.org/wiki/CoreWeave",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0,
+     "ratio": 11,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 5
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-13",
+      "count": 1,
+      "share": 0.2
+     },
+     "first_seen": {
+      "business": "2026-10-13"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "b283fdad7b",
+      "title": "CoreWeave Can Survive, But Shareholders Could Still Lose (Rating Downgrade)",
+      "url": "https://seekingalpha.com/article/4955017-coreweave-can-survive-but-shareholders-could-still-lose?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-10-18T03:59:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "bda51c97fd",
+      "title": "CoreWeave Woes Risk Shutting Down AI Junk Market: Credit Weekly",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-17/coreweave-woes-risk-shutting-down-ai-junk-market-credit-weekly",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-10-17T14:27:13.000Z",
+      "summary": ""
+     },
+     {
+      "id": "f2ce02d462",
+      "title": "Sizing CoreWeave’s ‘unlimited’ insurance capital",
+      "url": "https://www.ft.com/content/6b9b0cb6-2d47-46e4-bc00-febb182a5af7",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-10-16T10:24:31.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.3,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.61,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.43
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"coreweave\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0,
+    "lambda": 4.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-homeview",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "homeview",
+   "label": "HomeView",
+   "threshold": 5,
+   "p": 0.41,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"HomeView\" be in at least 5 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": {
+     "text": "The HomeView is a smart speaker developed by Apple. Part of the Apple Home family, it was announced on October 13, 2026, alongside the Apple TV 4K and the HomePod mini 2.",
+     "title": "HomeView",
+     "url": "https://en.wikipedia.org/wiki/HomeView",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 0.7,
+     "ratio": 5.3,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 6,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-13",
+      "count": 2,
+      "share": 0.33
+     },
+     "first_seen": {
+      "tech": "2026-10-11"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "6e5bf67749",
+      "title": "Apple’s HomeView is just the latest threat to online recipe writers",
+      "url": "https://www.theverge.com/tech/1012820/apple-homeview-recipe-formatting",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-10-17T12:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "97b696edc2",
+      "title": "We Got Hot and Heavy With Meta’s Muse—and Baffled by Apple’s HomeView",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-we-got-hot-and-heavy-with-metas-muse-and-underwhelmed-by-apples-homeview/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-15T21:18:15.000Z",
+      "summary": ""
+     },
+     {
+      "id": "9f793ae726",
+      "title": "Apple’s first smart display is the 7-inch HomeView for $299",
+      "url": "https://arstechnica.com/apple/2026/10/apple-homeview-smart-home-hub-opens-for-preorders-at-299/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-10-13T15:29:17.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.2,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.59,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.41
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"homeview\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 0.7,
+    "lambda": 5.2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-elizabeth-holmes",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "elizabeth holmes",
+   "label": "Elizabeth Holmes",
+   "threshold": 4,
+   "p": 0.45,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Elizabeth Holmes\" be in at least 4 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": {
+     "text": "Elizabeth Anne Holmes is an American businesswoman convicted of fraud in connection with her health technology company Theranos. Holmes founded Theranos in 2003, and its valuation soared in the early 2010s after it claimed to have revolutionized blood testing by developing methods that needed only very small volumes of blood, such as from a fingerprick.",
+     "title": "Elizabeth Holmes",
+     "url": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0.7,
+     "ratio": 4.5,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 4,
+      "business": 1
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-19",
+      "count": 2,
+      "share": 0.4
+     },
+     "first_seen": {
+      "tech": "2026-10-08",
+      "business": "2026-10-17"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "9e5bc0ca20",
+      "title": "Nathan Fielder’s Surprise Call From Elizabeth Holmes: ‘I Trust You’",
+      "url": "https://www.wired.com/story/nathan-fielder-tells-us-everything/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-19T11:30:00.000Z",
+      "summary": "I told A24, “I don’t really know what the angle is, but there is something tickling in my brain.”She was about to go to prison, so we didn’t know what was gonna happen. So that’s why I’m more curious about your experiences—because you can t"
+     },
+     {
+      "id": "c9a3210396",
+      "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
+      "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-18T19:03:38.000Z",
+      "summary": "“You Can See Everything” is already a box office sensation, with a $15 million opening weekend (based on Sunday estimates). That’s the second biggest opening weekend ever for a documentary film."
+     },
+     {
+      "id": "a507ae9246",
+      "title": "Elizabeth Holmes Documentary ‘You Can See Everything’ Eyes $12 Million Opening Weekend",
+      "url": "https://www.forbes.com/sites/timlammers/2026/10/16/elizabeth-holmes-documentary-you-can-see-everything-eyes-12-million-opening-weekend/",
+      "source": "forbes",
+      "category": "business",
+      "published": "2026-10-17T01:56:15.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.4,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.63,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.45
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"elizabeth holmes\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0.7,
+    "lambda": 4.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-ai-trade",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "ai trade",
+   "label": "AI Trade",
+   "threshold": 5,
+   "p": 0.57,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"AI Trade\" be in at least 5 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 7,
+     "base_per_week": 1.5,
+     "ratio": 3.8,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 7
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      3,
+      1,
+      1,
+      0,
+      0
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-15",
+      "count": 3,
+      "share": 0.43
+     },
+     "first_seen": {
+      "business": "2026-10-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "09a4d1b5c4",
+      "title": "Chinese Stocks Turn Biggest Losers as Global AI Trade Stumbles",
+      "url": "https://www.bloomberg.com/news/articles/2026-10-17/chinese-stocks-turn-biggest-losers-as-global-ai-trade-stumbles",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-10-17T00:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "6286a842e2",
+      "title": "New Cracks in AI Trade Push Wall Street to Worst Week Since June",
+      "url": "https://www.wsj.com/finance/stocks/us-death-penalty-execution-rates-41ea3427?mod=rss_markets_main",
+      "source": "wsj",
+      "category": "business",
+      "published": "2026-10-16T22:43:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "393c5be63a",
+      "title": "Why the AI trade is not set up for a rebound like July’s, according to JPMorgan",
+      "url": "https://www.marketwatch.com/story/why-the-ai-trade-is-not-set-up-for-a-rebound-like-julys-according-to-jpmorgan-5ae511db?mod=mw_rss_topstories",
+      "source": "marketwatch",
+      "category": "business",
+      "published": "2026-10-15T08:53:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6.2,
+     "expected": 6,
+     "threshold": 5,
+     "model_p": 0.74,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.57
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"ai trade\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 7,
+    "base_per_week": 1.5,
+    "lambda": 6.2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-gemini-argon",
+   "made": "2026-10-19",
+   "resolves": "2026-10-26",
+   "kind": "term-persistence",
+   "term": "gemini argon",
+   "label": "Gemini Argon",
+   "threshold": 4,
+   "p": 0.47,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Gemini Argon\" be in at least 4 stories between 2026-10-20 and 2026-10-26?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 1.5,
+     "ratio": 2.8,
+     "outlets": 3,
+     "by_category": {
+      "research": 3,
+      "tech": 2,
+      "business": 0
+     },
+     "daily": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+     ],
+     "peak": {
+      "day": "2026-10-13",
+      "count": 4,
+      "share": 0.8
+     },
+     "first_seen": {
+      "tech": "2026-10-04",
+      "research": "2026-09-30"
+     },
+     "lag_days": 4
+    },
+    "examples": [
+     {
+      "id": "a57776da8f",
+      "title": "Google Releases Gemini 4 Argon API With 1M Token Output Limit",
+      "url": "https://www.marktechpost.com/2026/10/13/google-gemini-4-argon-api-release/",
+      "source": "marktechpost",
+      "category": "tech",
+      "published": "2026-10-14T05:03:34.000Z",
+      "summary": ""
+     },
+     {
+      "id": "471508c04c",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "source": "deepmind",
+      "category": "research",
+      "published": "2026-10-13T19:43:07.000Z",
+      "summary": "Gemini 4 Argon is a step forward in what models can do — especially when it comes to deep work in complex, real-world tasks across domains including coding, finance, legal, cybersecurity, and science. Meanwhile, Google’s own security teams "
+     },
+     {
+      "id": "caa6203fc5",
+      "title": "Gemini 4 Argon begins rolling out in Gemini app and Antigravity, but only if you pay",
+      "url": "https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-10-13T16:00:02.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.5,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.65,
+     "backtest": {
+      "cases": 734,
+      "hits": 344,
+      "origins": 3,
+      "horizon_days": 7,
+      "rate": 0.47,
+      "mean_model": 0.66,
+      "shift": -0.76
+     },
+     "final_p": 0.47
+    },
+    "resolution": "Counts distinct stories published 2026-10-20 to 2026-10-26 (UTC) whose headline contains \"gemini argon\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 1.5,
+    "lambda": 4.5
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
   "model": "poisson-persistence-v1",
-  "open": 12,
+  "by_model": {
+   "poisson-persistence-v1": {
+    "resolved": 3,
+    "open": 12,
+    "mean_brier": 0.145
+   },
+   "burst-persistence-v2": {
+    "resolved": 0,
+    "open": 6,
+    "mean_brier": null
+   }
+  },
+  "open": 18,
   "resolved": 3,
   "voided": 0,
   "mean_brier": 0.145,
@@ -347,5 +1210,9 @@
    }
   ]
  },
- "note": "Forecasts are made at most once a week from the emerging-ideas list and scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail."
+ "note": "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.",
+ "methods": {
+  "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
+  "burst-persistence-v2": "From 19 October 2026. Terms come from headlines only. A phrase counts as emerging only when it is used at least 2.2 times as often as in the previous three weeks, in at least 5 stories from at least 3 outlets (4 for research-only phrases). Probabilities are corrected using how often comparable phrases held their level in the weeks already collected. Phrases still confined to research sources get a different question: will they reach tech or business coverage?"
+ }
 }

@@ -5,7 +5,7 @@
 const STOP = new Set(("a about above after again against all also am an and any are as at be because been before being below between both but by can could did do does doing down during each few for from further had has have having he her here hers him his how i if in into is it its just like me more most my new no nor not now of off on once only or other our out over own same she should so some such than that the their them then there these they this those through to too under until up us very was we were what when where which while who whom why will with would you your says say said one two three year years first last may might much many get gets got make makes made use used using via per still back even")
   .split(" "));
 // Words that are common in news but say nothing about an idea
-const GENERIC = new Set(("tech news report reports company companies people time week today according announced announces launch launches launched latest show shows review guide best price deal deals day days amid top big way need needs real good great take takes plans plan could says story stories read watch video photos here's inside why's weekly daily monthly update updates ceo cfo cto help found public open getty image images photo credit source sources statement including includes included percent million billion trillion across around another january february march april june july august september october november december monday tuesday wednesday thursday friday saturday sunday language prediction found")
+const GENERIC = new Set(("tech news report reports company companies people time week today according announced announces launch launches launched latest show shows review guide best price deal deals day days amid top big way need needs real good great take takes plans plan could says story stories read watch video photos here's inside why's weekly daily monthly update updates ceo cfo cto help found public open getty image images photo credit source sources statement including includes included percent million billion trillion across around another january february march april june july august september october november december monday tuesday wednesday thursday friday saturday sunday language prediction found firm firms service services quarter quarters stake stakes property efforts effort rebound market markets shares stock stocks growth gets deal says could may might")
   .split(" "));
 
 const DAY = 864e5;
@@ -32,6 +32,8 @@ function extractTerms(text) {
   }
   return [...out];
 }
+// Terms for one headline. Used for every archived story, so a word that is steadily common looks steady instead of new.
+function titleTerms(title) { return extractTerms(title); }
 // Pick the terms worth archiving for each item: repeated ones first (they can trend), then rarer title terms
 function pickTerms(items, perItem = 15) {
   const per = items.map((i) => ({ title: new Set(extractTerms(i.title)), all: extractTerms(i.title + ". " + (i.summary || "")) }));
@@ -58,13 +60,13 @@ function moodScore(text) {
 
 // ---------- emerging ideas
 // items: archive entries {id, c: category, s: source id, p: published ISO, w: [terms], t: [topics], m: mood}
-function collect(items, now) {
+function collect(items, now, field = "w") {
   const recentFrom = now - 7 * DAY, baseFrom = now - 28 * DAY, catFrom = now - 14 * DAY;
   const terms = new Map();
   const entry = (t) => terms.get(t) || terms.set(t, { recent: new Set(), base: new Set(), src: new Set(), cats: new Set(), first: {}, ex: [] }).get(t);
   for (const it of items) {
     const ts = Date.parse(it.p); if (!Number.isFinite(ts) || ts > now + DAY) continue;
-    for (const t of it.w || []) {
+    for (const t of it[field] || []) {
       const e = entry(t);
       if (!e.first[it.c] || ts < Date.parse(e.first[it.c])) e.first[it.c] = it.p;
       if (ts >= recentFrom) { e.recent.add(it.id); e.src.add(it.s); e.ex.push({ id: it.id, ts }); }
@@ -74,22 +76,29 @@ function collect(items, now) {
   }
   return terms;
 }
-function describe(term, e) {
+function describe(term, e, baseExpected) {
   const stage = e.cats.has("research") ? (e.cats.has("tech") || e.cats.has("business") ? "spreading" : "early") : "mainstream";
   const f = e.first, rs = f.research ? Date.parse(f.research) : null;
   const later = [f.tech, f.business].filter(Boolean).map((x) => Date.parse(x)).sort((a, b) => a - b)[0];
   return {
-    term, stage, recent: e.recent.size, base_per_week: Math.round(e.base.size / 3 * 10) / 10, outlets: e.src.size, is_new: e.base.size === 0,
+    term, stage, recent: e.recent.size, base_per_week: Math.round((baseExpected == null ? e.base.size / 3 : baseExpected) * 10) / 10, outlets: e.src.size, is_new: e.base.size === 0,
     first_seen: Object.fromEntries(Object.entries(f).map(([c, v]) => [c, dayStr(Date.parse(v))])),
     lag_days: rs && later && later > rs ? Math.round((later - rs) / DAY) : null,
     examples: e.ex.sort((a, b) => b.ts - a.ts).slice(0, 3).map((x) => x.id),
   };
 }
+// How many stories each window holds. Coverage grew over time, so compare shares of coverage, not raw counts.
+function windowTotals(items, now) {
+  let r = 0, b = 0;
+  for (const it of items) { const ts = Date.parse(it.p); if (!Number.isFinite(ts) || ts > now + DAY) continue; if (ts >= now - 7 * DAY) r++; else if (ts >= now - 28 * DAY) b++; }
+  return { recent: r, base: b, scale: b ? r / b : 0 };
+}
 // Is there enough older data to say a term is unusually frequent? (Needs about three weeks of history.)
 function baselineStats(items, now) {
-  const days = new Set(); let n = 0;
-  for (const it of items) { const ts = Date.parse(it.p); if (ts >= now - 28 * DAY && ts < now - 7 * DAY) { n++; days.add(dayStr(ts)); } }
-  return { items: n, days: days.size, ready: n >= 150 && days.size >= 7, needs: "at least 150 stories on at least 7 different days, all older than a week" };
+  const per = new Map(); let n = 0;
+  for (const it of items) { const ts = Date.parse(it.p); if (ts >= now - 28 * DAY && ts < now - 7 * DAY) { n++; per.set(dayStr(ts), (per.get(dayStr(ts)) || 0) + 1); } }
+  const full = [...per.values()].filter((c) => c >= 100).length;
+  return { items: n, days: full, ready: n >= 150 && full >= 7, needs: "at least 7 older days (more than a week old) with 100 or more stories each" };
 }
 function dropSubsumed(rows, max) {
   const chosen = [];
@@ -101,23 +110,25 @@ function dropSubsumed(rows, max) {
 }
 // Terms used much more than usual. Only meaningful once baselineStats().ready.
 function computeEmerging(items, now, opts = {}) {
-  const minRecent = opts.minRecent || 5, minSources = opts.minSources || 3;
-  const rows = [];
-  for (const [term, e] of collect(items, now)) {
+  const minRecent = opts.minRecent || 5, minSources = opts.minSources || 3, minRatio = opts.minRatio || 1.8;
+  const rows = [], T = windowTotals(items, now);
+  for (const [term, e] of collect(items, now, opts.field || "w")) {
     if (e.recent.size < minRecent || e.src.size < minSources) continue;
-    const ratio = (e.recent.size / 7 + 0.05) / (e.base.size / 21 + 0.05);
-    if (ratio < 1.8) continue;
-    rows.push({ ...describe(term, e), ratio: Math.round(ratio * 10) / 10, score: ratio * Math.log(1 + e.recent.size) * Math.log(1 + e.src.size) });
+    const baseExpected = e.base.size * T.scale; // what the earlier share of coverage would give in a window this size
+    const ratio = (e.recent.size + 0.5) / (baseExpected + 0.5);
+    if (ratio < minRatio) continue;
+    if (opts.specific && !term.includes(" ") && !tokenNameLike(rawForm(term, items.filter((i) => (i[opts.field || "w"] || []).includes(term)).map((i) => i.n)))) continue;
+    rows.push({ ...describe(term, e, baseExpected), ratio: Math.round(ratio * 10) / 10, score: ratio * Math.log(1 + e.recent.size) * Math.log(1 + e.src.size) });
   }
   rows.sort((a, b) => b.score - a.score);
   const out = dropSubsumed(rows, opts.max || 24); out.forEach((r) => delete r.score); return out;
 }
 // Fallback while history is short: the two-word phrases mentioned most this week (not yet "emerging").
 function mostDiscussed(items, now, opts = {}) {
-  const rows = [];
-  for (const [term, e] of collect(items, now)) {
+  const rows = [], T = windowTotals(items, now);
+  for (const [term, e] of collect(items, now, opts.field || "w")) {
     if (!term.includes(" ") || e.recent.size < (opts.minRecent || 5) || e.src.size < 3) continue;
-    rows.push({ ...describe(term, e), score: e.recent.size * Math.log(1 + e.src.size) });
+    rows.push({ ...describe(term, e, e.base.size * T.scale), score: e.recent.size * Math.log(1 + e.src.size) });
   }
   rows.sort((a, b) => b.score - a.score);
   const out = dropSubsumed(rows, opts.max || 12); out.forEach((r) => delete r.score); return out;
@@ -181,8 +192,113 @@ function clusterStories(items) {
     .sort((a, b) => new Set(b.map((x) => x.sourceId)).size - new Set(a.map((x) => x.sourceId)).size || (a[0].published < b[0].published ? 1 : -1)).slice(0, 10);
 }
 
+// ---------- evidence for one term
+// Daily story counts (distinct stories whose headline contains the term), ending on the last complete day.
+function dailyCounts(items, term, now, field = "tw", days = 21) {
+  const end = Math.floor(now / DAY), labels = Array.from({ length: days }, (_, k) => dayStr((end - (days - 1 - k)) * DAY)), ids = labels.map(() => new Set());
+  for (const it of items) {
+    if (!(it[field] || []).includes(term)) continue;
+    const k = labels.indexOf(dayStr(Date.parse(it.p))); if (k >= 0) ids[k].add(it.id);
+  }
+  return { days: labels, counts: ids.map((x) => x.size) };
+}
+function categorySplit(items, term, now, field = "tw") {
+  const out = { research: 0, tech: 0, business: 0 }, seen = new Set();
+  for (const it of items) {
+    if (seen.has(it.id) || Date.parse(it.p) < now - 7 * DAY || Date.parse(it.p) > now + DAY || !(it[field] || []).includes(term)) continue;
+    seen.add(it.id); out[it.c] = (out[it.c] || 0) + 1;
+  }
+  return out;
+}
+// The name people use for the term in headlines: the most common capitalised phrase around it, for example "Tesla Roadster"
+function labelFor(term, titles) {
+  const want = term.split(" "), counts = new Map();
+  for (const title of titles) {
+    const tk = tokens(title);
+    for (let i = 0; i + want.length <= tk.length; i++) {
+      if (!want.every((w, j) => tk[i + j].low === w)) continue;
+      let a = i, b = i + want.length - 1;
+      const cap = (x) => /^[A-Z]/.test(x.raw) && !STOP.has(x.low);
+      while (a > 0 && cap(tk[a - 1]) && b - a < 2) a--;
+      while (b + 1 < tk.length && cap(tk[b + 1]) && b - a < 2) b++;
+      const phrase = tk.slice(a, b + 1).map((x) => x.raw).join(" ");
+      if (tk.slice(a, b + 1).every(cap) && phrase.toLowerCase().includes(term)) counts.set(phrase, (counts.get(phrase) || 0) + 1);
+    }
+  }
+  const best = [...counts.entries()].filter(([, n]) => n >= 2).sort((x, y) => y[1] - x[1] || y[0].length - x[0].length)[0];
+  return best ? best[0] : term;
+}
+// Does a label read like a name or a phrase, as opposed to an ordinary word that starts a headline?
+const nameLike = (l) => l.includes(" ") || /[a-z0-9.][A-Z]/.test(l) || /^[A-Z0-9][A-Z0-9.]+$/.test(l);
+// A single word is only a name if the word itself looks like one: CamelCase, an acronym, or it contains a digit or a dot.
+// A leading capital proves nothing, because headlines capitalise ordinary words.
+const tokenNameLike = (raw) => /[a-z0-9.\-][A-Z]/.test(raw) || /^[A-Z0-9][A-Z0-9.\-]+$/.test(raw) || /\d/.test(raw) || /[a-z]\.[a-z]/i.test(raw);
+function rawForm(term, titles) { // the most common way the single word is written in headlines
+  const counts = new Map();
+  for (const t of titles) for (const tk of tokens(t)) if (tk.low === term) counts.set(tk.raw, (counts.get(tk.raw) || 0) + 1);
+  return [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || term;
+}
+const sigmoid = (x) => 1 / (1 + Math.exp(-x)), logit = (p) => Math.log(p / (1 - p));
+const round2 = (x) => Math.round(x * 100) / 100;
+
+// ---------- backtest: how often did comparable phrases hold their level in the weeks we already have?
+// Population: terms with at least minRecent stories from at least 3 outlets in a 7-day window. Question: did the next 7 days reach 75% of that count?
+// Also learns how far the Poisson model's probabilities were from what happened, so they can be corrected.
+function backtest(items, now, field = "tw", opts = {}) {
+  const H = 7, minRecent = opts.minRecent || 6, last = Math.floor(now / DAY) - 1;
+  const perDay = new Map(), byTerm = new Map();
+  for (const it of items) {
+    const d = Math.floor(Date.parse(it.p) / DAY); if (!Number.isFinite(d) || d > last) continue;
+    perDay.set(d, (perDay.get(d) || 0) + 1);
+    for (const t of it[field] || []) (byTerm.get(t) || byTerm.set(t, []).get(t)).push({ d, id: it.id, s: it.s });
+  }
+  const covered = (a, b) => { let n = 0; for (let d = a; d <= b; d++) if ((perDay.get(d) || 0) >= 100) n++; return n; };
+  const firstDay = Math.min(...[...perDay.keys()]);
+  let cases = 0, hits = 0, sumModel = 0, origins = 0;
+  for (let o = firstDay + 7; o + H - 1 <= last; o++) {
+    if (covered(o - 7, o - 1) < 5 || covered(o, o + H - 1) < 5) continue;
+    origins++;
+    for (const arr of byTerm.values()) {
+      const a = new Set(), srcs = new Set(), b = new Set(); let base = 0;
+      for (const x of arr) {
+        if (x.d >= o - 7 && x.d <= o - 1) { a.add(x.id); srcs.add(x.s); } else if (x.d >= o && x.d <= o + H - 1) b.add(x.id); else if (x.d >= o - 28 && x.d < o - 7) base++;
+      }
+      if (a.size < minRecent || srcs.size < 3) continue;
+      const k = Math.max(3, Math.round(0.75 * a.size)), lambda = 0.85 * a.size + 0.15 * (base / 3);
+      cases++; hits += b.size >= k ? 1 : 0; sumModel += poissonTailGE(k, lambda);
+    }
+  }
+  if (!cases) return { cases: 0, origins, rate: null, mean_model: null, shift: 0 };
+  const rate = hits / cases, meanModel = sumModel / cases, w = cases / (cases + 30);
+  const clip = (x) => Math.min(0.97, Math.max(0.03, x));
+  return { cases, hits, origins, horizon_days: H, rate: round2(rate), mean_model: round2(meanModel), shift: Math.round(w * (logit(clip(rate)) - logit(clip(meanModel))) * 100) / 100 };
+}
+// Research-only phrases: how often did one also show up in tech or business headlines within 14 days? Too little history for a reliable rate, so it is shrunk toward a stated prior.
+function backtestSpread(items, now, field = "tw", opts = {}) {
+  const H = 14, last = Math.floor(now / DAY) - 1, byTerm = new Map();
+  for (const it of items) {
+    const d = Math.floor(Date.parse(it.p) / DAY); if (!Number.isFinite(d) || d > last) continue;
+    for (const t of it[field] || []) (byTerm.get(t) || byTerm.set(t, []).get(t)).push({ d, id: it.id, s: it.s, c: it.c });
+  }
+  const days = [...byTerm.values()].flat().map((x) => x.d), firstDay = days.length ? Math.min(...days) : last;
+  let cases = 0, hits = 0;
+  for (let o = firstDay + 7; o + H - 1 <= last; o++) for (const arr of byTerm.values()) {
+    const a = new Set(), srcs = new Set(); let industryBefore = false, after = false;
+    for (const x of arr) {
+      if (x.d >= o - 7 && x.d <= o - 1) { if (x.c === "research") { a.add(x.id); srcs.add(x.s); } else industryBefore = true; }
+      else if (x.d < o - 7 && x.c !== "research") industryBefore = true;
+      else if (x.d >= o && x.d <= o + H - 1 && x.c !== "research") after = true;
+    }
+    if (a.size < (opts.minRecent || 4) || srcs.size < 3 || industryBefore) continue;
+    cases++; hits += after ? 1 : 0;
+  }
+  const prior = opts.prior || 0.25, strength = 8;
+  return { cases, hits, horizon_days: H, rate: cases ? round2(hits / cases) : null, prior, p: round2(Math.min(0.9, Math.max(0.05, (hits + prior * strength) / (cases + strength)))) };
+}
+
 // ---------- forecast ledger
 const MODEL = "poisson-persistence-v1";
+const MODEL2 = "burst-persistence-v2";
 function poissonTailGE(k, lambda) {
   if (k <= 0) return 1;
   let term = Math.exp(-lambda), cdf = term;
@@ -204,6 +320,61 @@ function makeForecasts(candidates, existing, now, basis = "emerging", count = 6)
     };
   });
 }
+// ctx: { items (archive with .tw), story(id) -> {title,url,source,category,published,summary}, define(label, term) -> {text,url,title}|null }
+// Every figure the page shows about a question is written into it now and never changed. Only the result is added later.
+function makeForecastsV2(candidates, existing, now, ctx, basis = "emerging", count = 6) {
+  const madeDay = dayStr(now);
+  if (existing.some((f) => f.model === MODEL2 && now - Date.parse(f.made) < 7 * DAY)) return [];
+  const items = ctx.items, persistence = backtest(items, now, "tw"), spread = backtestSpread(items, now, "tw");
+  const titlesOf = (term) => items.filter((i) => (i.tw || []).includes(term)).map((i) => i.n);
+  const out = [], chosenIds = [];
+  // One question per story cluster: skip a candidate whose stories are mostly the same stories as one already chosen
+  const weekIds = (term) => new Set(items.filter((i) => (i.tw || []).includes(term) && Date.parse(i.p) >= now - 7 * DAY).map((i) => i.id));
+  const overlaps = (term) => { const a = weekIds(term); return chosenIds.some((b) => { let n = 0; for (const x of a) if (b.has(x)) n++; return n / Math.max(1, Math.min(a.size, b.size)) >= 0.5; }); };
+  const take = (term) => chosenIds.push(weekIds(term));
+  // Prefer named things and two-word phrases over a bare common word
+  const rank = (e) => { const l = labelFor(e.term, titlesOf(e.term)); return l !== e.term && l.toLowerCase() === e.term && nameLike(l) ? 2 : e.term.includes(" ") ? 1 : 0; };
+  const eligible = candidates.filter((x) => x.recent >= (x.stage === "early" ? 4 : 5)).map((e, i) => ({ e, i, r: rank(e) })).sort((a, b) => b.r - a.r || a.i - b.i).map((x) => x.e);
+  const early = eligible.filter((e) => e.stage === "early" && basis === "emerging"), rest = eligible.filter((e) => !early.includes(e));
+  const build = (e, isSpread) => {
+    const label = labelFor(e.term, titlesOf(e.term)), daily = dailyCounts(items, e.term, now, "tw", 21), split = categorySplit(items, e.term, now, "tw");
+    const last7 = daily.counts.slice(-7), peak = Math.max(...last7), peakDay = daily.days.slice(-7)[last7.indexOf(peak)], total7 = last7.reduce((a, b) => a + b, 0);
+    const seen = new Set(), examples = [];
+    const recentItems = items.filter((i) => (i.tw || []).includes(e.term) && Date.parse(i.p) >= now - 7 * DAY).sort((a, b) => (a.p < b.p ? 1 : -1));
+    for (const it of recentItems) { const st = ctx.story(it.id); if (st && !seen.has(st.source)) { seen.add(st.source); examples.push({ id: it.id, ...st }); if (examples.length >= 3) break; } }
+    const mentions = { recent: e.recent, base_per_week: e.base_per_week, ratio: e.ratio || null, outlets: e.outlets, by_category: split, daily: daily.counts, days: daily.days, peak: { day: peakDay, count: peak, share: total7 ? round2(peak / total7) : null }, first_seen: e.first_seen, lag_days: e.lag_days };
+    const definition = ctx.define ? ctx.define(label, e.term) : null, idBase = `f-${madeDay}-${e.term.replace(/[^a-z0-9]+/g, "-")}`;
+    if (isSpread) {
+      const end = dayStr(now + 14 * DAY), p = spread.p;
+      return {
+        id: idBase, made: madeDay, resolves: end, kind: "term-spread", term: e.term, label, threshold: 1, p, model: MODEL2, basis,
+        question: `Will "${label}", so far only in research coverage, reach a tech or business story by ${end}?`,
+        context: { definition, mentions, examples, reasoning: { kind: "spread", backtest: spread, final_p: p }, resolution: `Counts distinct tech or business stories published ${dayStr(now + DAY)} to ${end} (UTC) whose headline contains "${e.term}". One is enough for yes.` },
+        inputs: { recent_7d: e.recent, base_per_week: e.base_per_week }, outcome: null, observed: null, brier: null, log_score: null,
+      };
+    }
+    const k = Math.max(3, Math.round(0.75 * e.recent)), lambda = 0.85 * e.recent + 0.15 * e.base_per_week;
+    const pm = Math.min(0.98, Math.max(0.02, poissonTailGE(k, lambda))), p = round2(Math.min(0.97, Math.max(0.03, sigmoid(logit(pm) + persistence.shift))));
+    const start = dayStr(now + DAY), end = dayStr(now + 7 * DAY);
+    return {
+      id: idBase, made: madeDay, resolves: end, kind: "term-persistence", term: e.term, label, threshold: k, p, model: MODEL2, basis,
+      question: `Will "${label}" be in at least ${k} stories between ${start} and ${end}?`,
+      context: { definition, mentions, examples, reasoning: { kind: "persistence", lambda: Math.round(lambda * 10) / 10, expected: Math.round(lambda), threshold: k, model_p: round2(pm), backtest: persistence, final_p: p },
+        resolution: `Counts distinct stories published ${start} to ${end} (UTC) whose headline contains "${e.term}", across the ${ctx.sourceCount || "tracked"} sources this site reads. ${k} or more is yes.` },
+      inputs: { recent_7d: e.recent, base_per_week: e.base_per_week, lambda: Math.round(lambda * 10) / 10 }, outcome: null, observed: null, brier: null, log_score: null,
+    };
+  };
+  for (const e of early) { if (out.length >= Math.min(2, count) || overlaps(e.term)) continue; out.push(build(e, true)); take(e.term); }
+  for (const e of rest) { if (out.length >= count) break; if (overlaps(e.term)) continue; out.push(build(e, false)); take(e.term); }
+  return out;
+}
+// A plain description of how the window went, from the numbers only
+function describeOutcome(f, daily) {
+  const sum = daily.reduce((a, b) => a + b, 0), peak = Math.max(...daily), mid = Math.floor(daily.length / 2);
+  const first = daily.slice(0, mid).reduce((a, b) => a + b, 0), second = daily.slice(mid).reduce((a, b) => a + b, 0);
+  const shape = sum === 0 ? "no mentions at all" : first >= 2 * Math.max(1, second) ? "mentions faded as the window went on" : second >= 2 * Math.max(1, first) ? "mentions kept building" : "mentions stayed fairly even";
+  return `${sum} ${sum === 1 ? "story" : "stories"} over ${daily.length} days, at most ${peak} on any one day; ${shape}.`;
+}
 // Fill in outcomes for forecasts whose window is over. Only the result fields are ever written.
 function resolveForecasts(forecasts, items, now) {
   for (const f of forecasts) {
@@ -212,8 +383,15 @@ function resolveForecasts(forecasts, items, now) {
     if (now < end + DAY) continue;
     const inWindow = items.filter((i) => { const t = Date.parse(i.p); return t >= start && t < end; });
     if (inWindow.length < 50) { f.void = "too little data was collected in the window"; continue; }
-    f.observed = new Set(inWindow.filter((i) => (i.w || []).includes(f.term)).map((i) => i.id)).size;
+    const field = f.model === MODEL2 ? "tw" : "w";
+    const hit = (i) => (i[field] || []).includes(f.term) && (f.kind !== "term-spread" || i.c !== "research");
+    f.observed = new Set(inWindow.filter(hit).map((i) => i.id)).size;
     f.outcome = f.observed >= f.threshold ? 1 : 0;
+    if (f.model === MODEL2) {
+      const nDays = Math.round((end - start) / DAY), ids = Array.from({ length: nDays }, () => new Set());
+      inWindow.filter(hit).forEach((i) => { const k = Math.floor((Date.parse(i.p) - start) / DAY); if (k >= 0 && k < nDays) ids[k].add(i.id); });
+      f.daily_after = ids.map((x) => x.size); f.result_note = describeOutcome(f, f.daily_after);
+    }
     f.brier = Math.round((f.p - f.outcome) ** 2 * 1000) / 1000;
     f.log_score = Math.round(-Math.log(f.outcome ? f.p : 1 - f.p) * 1000) / 1000;
   }
@@ -227,8 +405,13 @@ function scoreboard(forecasts) {
     const g = done.filter((f) => f.p >= lo && f.p < hi);
     return { range: `${Math.round(lo * 100)}-${Math.min(100, Math.round(hi * 100))}%`, n: g.length, mean_p: g.length ? Math.round((g.reduce((a, f) => a + f.p, 0) / g.length) * 100) / 100 : null, observed: g.length ? Math.round((g.reduce((a, f) => a + f.outcome, 0) / g.length) * 100) / 100 : null };
   });
-  return { model: MODEL, open: forecasts.filter((f) => f.outcome === null && !f.void).length, resolved: n, voided: forecasts.filter((f) => f.void).length,
+  const byModel = {};
+  for (const m of [MODEL, MODEL2]) {
+    const g = done.filter((f) => (f.model || MODEL) === m);
+    byModel[m] = { resolved: g.length, open: forecasts.filter((f) => (f.model || MODEL) === m && f.outcome === null && !f.void).length, mean_brier: g.length ? Math.round((g.reduce((a, f) => a + f.brier, 0) / g.length) * 1000) / 1000 : null };
+  }
+  return { model: MODEL, by_model: byModel, open: forecasts.filter((f) => f.outcome === null && !f.void).length, resolved: n, voided: forecasts.filter((f) => f.void).length,
     mean_brier: bs, benchmark_brier: 0.25, skill: bs == null ? null : Math.round((1 - bs / 0.25) * 100) / 100, mean_log_score: mean("log_score"), calibration: bins };
 }
 
-module.exports = { STOP, GENERIC, MOOD, extractTerms, pickTerms, moodScore, computeEmerging, mostDiscussed, baselineStats, computeMomentum, computeMood, dataCoverage, clusterStories, makeForecasts, resolveForecasts, scoreboard, poissonTailGE, MODEL, dayStr };
+module.exports = { nameLike, tokenNameLike, rawForm, STOP, GENERIC, MOOD, extractTerms, titleTerms, dailyCounts, categorySplit, labelFor, backtest, backtestSpread, makeForecastsV2, describeOutcome, MODEL2, pickTerms, moodScore, computeEmerging, mostDiscussed, baselineStats, computeMomentum, computeMood, dataCoverage, clusterStories, makeForecasts, resolveForecasts, scoreboard, poissonTailGE, MODEL, dayStr };
