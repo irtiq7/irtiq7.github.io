@@ -1166,6 +1166,2176 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-unemployment",
+   "made": "2026-10-19",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-unemployment",
+   "domain": "jobs",
+   "label": "US unemployment rate",
+   "term": "us-unemployment",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 4.2,
+   "direction": "higher",
+   "p": 0.34,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US unemployment rate for October 2026 be higher than 4.2%?",
+   "context": {
+    "measure": {
+     "why": "The share of people in the US labour force who are out of work and looking for a job, from the monthly household survey of the Bureau of Labor Statistics. It is one of the most watched summaries of the job market.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "UNRATE",
+      "name": "US Bureau of Labor Statistics, via FRED",
+      "url": "https://fred.stlouisfed.org/series/UNRATE"
+     },
+     "lag": "usually published in the first week of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 4.2
+    },
+    "history": [
+     {
+      "d": "2023-09-01",
+      "v": 3.7
+     },
+     {
+      "d": "2023-10-01",
+      "v": 3.9
+     },
+     {
+      "d": "2023-11-01",
+      "v": 3.7
+     },
+     {
+      "d": "2023-12-01",
+      "v": 3.8
+     },
+     {
+      "d": "2024-01-01",
+      "v": 3.7
+     },
+     {
+      "d": "2024-02-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-03-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-04-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-05-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-06-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-07-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-08-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-09-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-10-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-11-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-12-01",
+      "v": 4.1
+     },
+     {
+      "d": "2025-01-01",
+      "v": 4
+     },
+     {
+      "d": "2025-02-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-03-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-04-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-05-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-06-01",
+      "v": 4.1
+     },
+     {
+      "d": "2025-07-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-08-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-09-01",
+      "v": 4.4
+     },
+     {
+      "d": "2025-11-01",
+      "v": 4.5
+     },
+     {
+      "d": "2025-12-01",
+      "v": 4.4
+     },
+     {
+      "d": "2026-01-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-02-01",
+      "v": 4.4
+     },
+     {
+      "d": "2026-03-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-04-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-05-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-06-01",
+      "v": 4.2
+     },
+     {
+      "d": "2026-07-01",
+      "v": 4.1
+     },
+     {
+      "d": "2026-08-01",
+      "v": 4.1
+     },
+     {
+      "d": "2026-09-01",
+      "v": 4.2
+     }
+    ],
+    "trend": {
+     "change": -0.1,
+     "over": "6 months",
+     "high_52": 4.5,
+     "low_52": 3.4
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.34,
+     "expected": 4.19,
+     "sd": 0.14,
+     "threshold": 4.2,
+     "backtest": {
+      "n": 916,
+      "ok": true,
+      "base": 0.339,
+      "brier_model": 0.217,
+      "brier_base": 0.224,
+      "skill": 0.029,
+      "hit_rate": 0.701
+     },
+     "weight": 0.19,
+     "base_rate": 0.339,
+     "final_p": 0.34
+    },
+    "resolution": "Uses the value for October 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-jobless-claims",
+   "made": "2026-10-19",
+   "resolves": "2026-10-30",
+   "kind": "indicator",
+   "indicator": "us-jobless-claims",
+   "domain": "jobs",
+   "label": "US weekly jobless claims",
+   "term": "us-jobless-claims",
+   "h_steps": 2,
+   "target_date": "2026-10-24",
+   "threshold": 199000,
+   "direction": "above_avg",
+   "p": 0.45,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will US initial jobless claims for the week ending 24 October 2026 be above 199,000, the average of the last 4 weeks?",
+   "context": {
+    "measure": {
+     "why": "The number of people who filed a first claim for unemployment benefits in a week. It is published every Thursday and moves quickly, so it is an early sign of layoffs.",
+     "unit": "",
+     "source": {
+      "kind": "fred",
+      "series": "ICSA",
+      "name": "US Department of Labor, via FRED",
+      "url": "https://fred.stlouisfed.org/series/ICSA"
+     },
+     "lag": "published on the Thursday after the week ends",
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-10",
+     "value": 199000
+    },
+    "history": [
+     {
+      "d": "2026-02-07",
+      "v": 230000
+     },
+     {
+      "d": "2026-02-14",
+      "v": 208000
+     },
+     {
+      "d": "2026-02-21",
+      "v": 211000
+     },
+     {
+      "d": "2026-02-28",
+      "v": 214000
+     },
+     {
+      "d": "2026-03-07",
+      "v": 213000
+     },
+     {
+      "d": "2026-03-14",
+      "v": 205000
+     },
+     {
+      "d": "2026-03-21",
+      "v": 211000
+     },
+     {
+      "d": "2026-03-28",
+      "v": 203000
+     },
+     {
+      "d": "2026-04-04",
+      "v": 218000
+     },
+     {
+      "d": "2026-04-11",
+      "v": 208000
+     },
+     {
+      "d": "2026-04-18",
+      "v": 215000
+     },
+     {
+      "d": "2026-04-25",
+      "v": 190000
+     },
+     {
+      "d": "2026-05-02",
+      "v": 199000
+     },
+     {
+      "d": "2026-05-09",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-16",
+      "v": 210000
+     },
+     {
+      "d": "2026-05-23",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-30",
+      "v": 225000
+     },
+     {
+      "d": "2026-06-06",
+      "v": 230000
+     },
+     {
+      "d": "2026-06-13",
+      "v": 227000
+     },
+     {
+      "d": "2026-06-20",
+      "v": 216000
+     },
+     {
+      "d": "2026-06-27",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-04",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-11",
+      "v": 209000
+     },
+     {
+      "d": "2026-07-18",
+      "v": 189000
+     },
+     {
+      "d": "2026-07-25",
+      "v": 198000
+     },
+     {
+      "d": "2026-08-01",
+      "v": 200000
+     },
+     {
+      "d": "2026-08-08",
+      "v": 212000
+     },
+     {
+      "d": "2026-08-15",
+      "v": 207000
+     },
+     {
+      "d": "2026-08-22",
+      "v": 204000
+     },
+     {
+      "d": "2026-08-29",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-05",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-12",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-19",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-26",
+      "v": 199000
+     },
+     {
+      "d": "2026-10-03",
+      "v": 198000
+     },
+     {
+      "d": "2026-10-10",
+      "v": 199000
+     }
+    ],
+    "trend": {
+     "change": -8000,
+     "over": "8 weeks",
+     "high_52": 235000,
+     "low_52": 189000
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 4,
+     "h": 2,
+     "model_p": 0.51,
+     "expected": 199210.2,
+     "sd": 10601.9,
+     "threshold": 199000,
+     "backtest": {
+      "n": 3087,
+      "ok": true,
+      "base": 0.447,
+      "brier_model": 0.248,
+      "brier_base": 0.247,
+      "skill": -0.003,
+      "hit_rate": 0.544
+     },
+     "weight": 0,
+     "base_rate": 0.447,
+     "final_p": 0.45
+    },
+    "resolution": "Uses the value for the week ending 24 October 2026 as first shown by US Department of Labor, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-payrolls",
+   "made": "2026-10-19",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-payrolls",
+   "domain": "jobs",
+   "label": "US monthly job gains",
+   "term": "us-payrolls",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 65,
+   "direction": "above_avg",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will US employers add more than 65 thousand jobs in October 2026, the average of the last 6 months?",
+   "context": {
+    "measure": {
+     "why": "The change in the number of non-farm jobs in the US from one month to the next, the “jobs added” figure in the headlines. Early figures are revised later, and this question uses the first value that appears.",
+     "unit": "thousand jobs",
+     "source": {
+      "kind": "fred",
+      "series": "PAYEMS",
+      "name": "US Bureau of Labor Statistics, via FRED",
+      "url": "https://fred.stlouisfed.org/series/PAYEMS"
+     },
+     "lag": "usually published on the first Friday of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 29
+    },
+    "history": [
+     {
+      "d": "2023-10-01",
+      "v": 159
+     },
+     {
+      "d": "2023-11-01",
+      "v": 127
+     },
+     {
+      "d": "2023-12-01",
+      "v": 154
+     },
+     {
+      "d": "2024-01-01",
+      "v": 175
+     },
+     {
+      "d": "2024-02-01",
+      "v": 206
+     },
+     {
+      "d": "2024-03-01",
+      "v": 228
+     },
+     {
+      "d": "2024-04-01",
+      "v": 64
+     },
+     {
+      "d": "2024-05-01",
+      "v": 78
+     },
+     {
+      "d": "2024-06-01",
+      "v": 87
+     },
+     {
+      "d": "2024-07-01",
+      "v": 53
+     },
+     {
+      "d": "2024-08-01",
+      "v": 9
+     },
+     {
+      "d": "2024-09-01",
+      "v": 155
+     },
+     {
+      "d": "2024-10-01",
+      "v": 33
+     },
+     {
+      "d": "2024-11-01",
+      "v": 134
+     },
+     {
+      "d": "2024-12-01",
+      "v": 237
+     },
+     {
+      "d": "2025-01-01",
+      "v": -48
+     },
+     {
+      "d": "2025-02-01",
+      "v": 42
+     },
+     {
+      "d": "2025-03-01",
+      "v": 67
+     },
+     {
+      "d": "2025-04-01",
+      "v": 108
+     },
+     {
+      "d": "2025-05-01",
+      "v": 13
+     },
+     {
+      "d": "2025-06-01",
+      "v": -20
+     },
+     {
+      "d": "2025-07-01",
+      "v": 64
+     },
+     {
+      "d": "2025-08-01",
+      "v": -70
+     },
+     {
+      "d": "2025-09-01",
+      "v": 76
+     },
+     {
+      "d": "2025-10-01",
+      "v": -140
+     },
+     {
+      "d": "2025-11-01",
+      "v": 41
+     },
+     {
+      "d": "2025-12-01",
+      "v": -17
+     },
+     {
+      "d": "2026-01-01",
+      "v": 160
+     },
+     {
+      "d": "2026-02-01",
+      "v": -156
+     },
+     {
+      "d": "2026-03-01",
+      "v": 214
+     },
+     {
+      "d": "2026-04-01",
+      "v": 148
+     },
+     {
+      "d": "2026-05-01",
+      "v": 63
+     },
+     {
+      "d": "2026-06-01",
+      "v": 31
+     },
+     {
+      "d": "2026-07-01",
+      "v": -10
+     },
+     {
+      "d": "2026-08-01",
+      "v": 133
+     },
+     {
+      "d": "2026-09-01",
+      "v": 29
+     }
+    ],
+    "trend": {
+     "change": -185,
+     "over": "6 months",
+     "high_52": 714,
+     "low_52": -156
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 6,
+     "win": 6,
+     "h": 1,
+     "model_p": 0.47,
+     "expected": 55.9,
+     "sd": 116.5,
+     "threshold": 65,
+     "backtest": {
+      "n": 1018,
+      "ok": true,
+      "base": 0.478,
+      "brier_model": 0.239,
+      "brier_base": 0.25,
+      "skill": 0.041,
+      "hit_rate": 0.583
+     },
+     "weight": 0.27,
+     "base_rate": 0.478,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the value for October 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is above the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-indeed-software",
+   "made": "2026-10-19",
+   "resolves": "2026-10-29",
+   "kind": "indicator",
+   "indicator": "indeed-software",
+   "domain": "jobs",
+   "label": "Indeed software development job postings",
+   "term": "indeed-software",
+   "h_steps": 2,
+   "target_date": "2026-10-23",
+   "threshold": 78.099876168,
+   "direction": "higher",
+   "p": 0.7,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Indeed software development job postings be higher on 23 October 2026 than on 9 October 2026 (78.1)?",
+   "context": {
+    "measure": {
+     "why": "Postings for software development jobs on Indeed in the US, relative to 1 February 2020 (set to 100). A measure of how much employers are hiring in the field.",
+     "unit": "index, 1 Feb 2020 = 100",
+     "source": {
+      "kind": "fred",
+      "series": "IHLIDXUSTPSOFTDEVE",
+      "name": "Indeed Hiring Lab, via FRED",
+      "url": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE"
+     },
+     "lag": "updated daily with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-09",
+     "value": 78.1
+    },
+    "history": [
+     {
+      "d": "2026-02-06",
+      "v": 69.9
+     },
+     {
+      "d": "2026-02-13",
+      "v": 70.27
+     },
+     {
+      "d": "2026-02-20",
+      "v": 70.51
+     },
+     {
+      "d": "2026-02-27",
+      "v": 70.97
+     },
+     {
+      "d": "2026-03-06",
+      "v": 70.57
+     },
+     {
+      "d": "2026-03-13",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-20",
+      "v": 71.44
+     },
+     {
+      "d": "2026-03-27",
+      "v": 72.75
+     },
+     {
+      "d": "2026-04-03",
+      "v": 72.49
+     },
+     {
+      "d": "2026-04-10",
+      "v": 72.19
+     },
+     {
+      "d": "2026-04-17",
+      "v": 73.12
+     },
+     {
+      "d": "2026-04-24",
+      "v": 73.71
+     },
+     {
+      "d": "2026-05-01",
+      "v": 72.94
+     },
+     {
+      "d": "2026-05-08",
+      "v": 74.64
+     },
+     {
+      "d": "2026-05-15",
+      "v": 74.04
+     },
+     {
+      "d": "2026-05-22",
+      "v": 74.42
+     },
+     {
+      "d": "2026-05-29",
+      "v": 73.64
+     },
+     {
+      "d": "2026-06-05",
+      "v": 73.5
+     },
+     {
+      "d": "2026-06-12",
+      "v": 72.88
+     },
+     {
+      "d": "2026-06-19",
+      "v": 72.67
+     },
+     {
+      "d": "2026-06-26",
+      "v": 73.5
+     },
+     {
+      "d": "2026-07-03",
+      "v": 73.78
+     },
+     {
+      "d": "2026-07-10",
+      "v": 74.53
+     },
+     {
+      "d": "2026-07-17",
+      "v": 75.59
+     },
+     {
+      "d": "2026-07-24",
+      "v": 75.48
+     },
+     {
+      "d": "2026-07-31",
+      "v": 75.44
+     },
+     {
+      "d": "2026-08-07",
+      "v": 73.63
+     },
+     {
+      "d": "2026-08-14",
+      "v": 74.35
+     },
+     {
+      "d": "2026-08-21",
+      "v": 74.56
+     },
+     {
+      "d": "2026-08-28",
+      "v": 74.61
+     },
+     {
+      "d": "2026-09-04",
+      "v": 76.12
+     },
+     {
+      "d": "2026-09-11",
+      "v": 76.62
+     },
+     {
+      "d": "2026-09-18",
+      "v": 77.32
+     },
+     {
+      "d": "2026-09-25",
+      "v": 78.08
+     },
+     {
+      "d": "2026-10-02",
+      "v": 78.34
+     },
+     {
+      "d": "2026-10-09",
+      "v": 78.1
+     }
+    ],
+    "trend": {
+     "change": 3.75,
+     "over": "8 weeks",
+     "high_52": 78.34,
+     "low_52": 65.13
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 2,
+     "model_p": 0.7,
+     "expected": 78.68,
+     "sd": 0.99,
+     "threshold": 78.099876168,
+     "backtest": {
+      "n": 319,
+      "ok": true,
+      "base": 0.517,
+      "brier_model": 0.183,
+      "brier_base": 0.25,
+      "skill": 0.269,
+      "hit_rate": 0.727
+     },
+     "weight": 1,
+     "base_rate": 0.517,
+     "final_p": 0.7
+    },
+    "resolution": "Uses the last value on or before 23 October 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-dk-unemployment",
+   "made": "2026-10-19",
+   "resolves": "2026-10-11",
+   "kind": "indicator",
+   "indicator": "dk-unemployment",
+   "domain": "jobs",
+   "label": "Denmark unemployment rate",
+   "term": "dk-unemployment",
+   "h_steps": 1,
+   "target_date": "2026-09-01",
+   "threshold": 5.9,
+   "direction": "higher",
+   "p": 0.41,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Denmark unemployment rate for September 2026 be higher than 5.9%?",
+   "context": {
+    "measure": {
+     "why": "The share of Denmark's labour force without work, seasonally adjusted and harmonised across countries by Eurostat.",
+     "unit": "%",
+     "source": {
+      "kind": "eurostat",
+      "geo": "DK",
+      "name": "Eurostat (seasonally adjusted)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en"
+     },
+     "lag": "published about six weeks after the month ends",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-08-01",
+     "value": 5.9
+    },
+    "history": [
+     {
+      "d": "2023-09-01",
+      "v": 4.8
+     },
+     {
+      "d": "2023-10-01",
+      "v": 6.2
+     },
+     {
+      "d": "2023-11-01",
+      "v": 5.9
+     },
+     {
+      "d": "2023-12-01",
+      "v": 6
+     },
+     {
+      "d": "2024-01-01",
+      "v": 5.9
+     },
+     {
+      "d": "2024-02-01",
+      "v": 5.7
+     },
+     {
+      "d": "2024-03-01",
+      "v": 5.8
+     },
+     {
+      "d": "2024-04-01",
+      "v": 5.8
+     },
+     {
+      "d": "2024-05-01",
+      "v": 6.1
+     },
+     {
+      "d": "2024-06-01",
+      "v": 6.2
+     },
+     {
+      "d": "2024-07-01",
+      "v": 5.9
+     },
+     {
+      "d": "2024-08-01",
+      "v": 6.4
+     },
+     {
+      "d": "2024-09-01",
+      "v": 6.7
+     },
+     {
+      "d": "2024-10-01",
+      "v": 5.8
+     },
+     {
+      "d": "2024-11-01",
+      "v": 6.8
+     },
+     {
+      "d": "2024-12-01",
+      "v": 7.2
+     },
+     {
+      "d": "2025-01-01",
+      "v": 6.6
+     },
+     {
+      "d": "2025-02-01",
+      "v": 5.4
+     },
+     {
+      "d": "2025-03-01",
+      "v": 7.1
+     },
+     {
+      "d": "2025-04-01",
+      "v": 6.8
+     },
+     {
+      "d": "2025-05-01",
+      "v": 5.2
+     },
+     {
+      "d": "2025-06-01",
+      "v": 6.7
+     },
+     {
+      "d": "2025-07-01",
+      "v": 6.5
+     },
+     {
+      "d": "2025-08-01",
+      "v": 6.5
+     },
+     {
+      "d": "2025-09-01",
+      "v": 6.3
+     },
+     {
+      "d": "2025-10-01",
+      "v": 6.8
+     },
+     {
+      "d": "2025-11-01",
+      "v": 6.6
+     },
+     {
+      "d": "2025-12-01",
+      "v": 6
+     },
+     {
+      "d": "2026-01-01",
+      "v": 7.1
+     },
+     {
+      "d": "2026-02-01",
+      "v": 7.2
+     },
+     {
+      "d": "2026-03-01",
+      "v": 6.7
+     },
+     {
+      "d": "2026-04-01",
+      "v": 7
+     },
+     {
+      "d": "2026-05-01",
+      "v": 6.9
+     },
+     {
+      "d": "2026-06-01",
+      "v": 6.6
+     },
+     {
+      "d": "2026-07-01",
+      "v": 6.7
+     },
+     {
+      "d": "2026-08-01",
+      "v": 5.9
+     }
+    ],
+    "trend": {
+     "change": -1.3,
+     "over": "6 months",
+     "high_52": 7.2,
+     "low_52": 4.1
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.35,
+     "expected": 5.79,
+     "sd": 0.42,
+     "threshold": 5.9,
+     "backtest": {
+      "n": 316,
+      "ok": true,
+      "base": 0.409,
+      "brier_model": 0.261,
+      "brier_base": 0.242,
+      "skill": -0.081,
+      "hit_rate": 0.516
+     },
+     "weight": 0,
+     "base_rate": 0.409,
+     "final_p": 0.41
+    },
+    "resolution": "Uses the value for September 2026 as first shown by Eurostat (seasonally adjusted). Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-inflation",
+   "made": "2026-10-19",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-inflation",
+   "domain": "economy",
+   "label": "US inflation (year on year)",
+   "term": "us-inflation",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 3.7172508442689933,
+   "direction": "higher",
+   "p": 0.43,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US inflation (year on year) for October 2026 be higher than 3.7%?",
+   "context": {
+    "measure": {
+     "why": "The change in US consumer prices compared with the same month a year earlier, the standard measure of inflation.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "CPIAUCSL",
+      "name": "US Bureau of Labor Statistics, via FRED",
+      "url": "https://fred.stlouisfed.org/series/CPIAUCSL"
+     },
+     "lag": "usually published in the middle of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 3.72
+    },
+    "history": [
+     {
+      "d": "2023-09-01",
+      "v": 3.69
+     },
+     {
+      "d": "2023-10-01",
+      "v": 3.25
+     },
+     {
+      "d": "2023-11-01",
+      "v": 3.13
+     },
+     {
+      "d": "2023-12-01",
+      "v": 3.32
+     },
+     {
+      "d": "2024-01-01",
+      "v": 3.09
+     },
+     {
+      "d": "2024-02-01",
+      "v": 3.16
+     },
+     {
+      "d": "2024-03-01",
+      "v": 3.49
+     },
+     {
+      "d": "2024-04-01",
+      "v": 3.36
+     },
+     {
+      "d": "2024-05-01",
+      "v": 3.24
+     },
+     {
+      "d": "2024-06-01",
+      "v": 2.97
+     },
+     {
+      "d": "2024-07-01",
+      "v": 2.94
+     },
+     {
+      "d": "2024-08-01",
+      "v": 2.61
+     },
+     {
+      "d": "2024-09-01",
+      "v": 2.43
+     },
+     {
+      "d": "2024-10-01",
+      "v": 2.58
+     },
+     {
+      "d": "2024-11-01",
+      "v": 2.72
+     },
+     {
+      "d": "2024-12-01",
+      "v": 2.87
+     },
+     {
+      "d": "2025-01-01",
+      "v": 2.99
+     },
+     {
+      "d": "2025-02-01",
+      "v": 2.8
+     },
+     {
+      "d": "2025-03-01",
+      "v": 2.38
+     },
+     {
+      "d": "2025-04-01",
+      "v": 2.33
+     },
+     {
+      "d": "2025-05-01",
+      "v": 2.38
+     },
+     {
+      "d": "2025-06-01",
+      "v": 2.68
+     },
+     {
+      "d": "2025-07-01",
+      "v": 2.74
+     },
+     {
+      "d": "2025-08-01",
+      "v": 2.94
+     },
+     {
+      "d": "2025-09-01",
+      "v": 3.02
+     },
+     {
+      "d": "2025-11-01",
+      "v": 2.7
+     },
+     {
+      "d": "2025-12-01",
+      "v": 2.65
+     },
+     {
+      "d": "2026-01-01",
+      "v": 2.39
+     },
+     {
+      "d": "2026-02-01",
+      "v": 2.43
+     },
+     {
+      "d": "2026-03-01",
+      "v": 3.29
+     },
+     {
+      "d": "2026-04-01",
+      "v": 3.78
+     },
+     {
+      "d": "2026-05-01",
+      "v": 4.17
+     },
+     {
+      "d": "2026-06-01",
+      "v": 3.46
+     },
+     {
+      "d": "2026-07-01",
+      "v": 3.3
+     },
+     {
+      "d": "2026-08-01",
+      "v": 3.35
+     },
+     {
+      "d": "2026-09-01",
+      "v": 3.72
+     }
+    ],
+    "trend": {
+     "change": 0.43,
+     "over": "6 months",
+     "high_52": 8.98,
+     "low_52": 2.33
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.48,
+     "expected": 3.75,
+     "sd": 0.32,
+     "threshold": 3.7172508442689933,
+     "backtest": {
+      "n": 916,
+      "ok": true,
+      "base": 0.43,
+      "brier_model": 0.242,
+      "brier_base": 0.245,
+      "skill": 0.014,
+      "hit_rate": 0.591
+     },
+     "weight": 0.09,
+     "base_rate": 0.43,
+     "final_p": 0.43
+    },
+    "resolution": "Uses the value for October 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-fed-funds",
+   "made": "2026-10-19",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-fed-funds",
+   "domain": "economy",
+   "label": "US effective federal funds rate",
+   "term": "us-fed-funds",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 3.75,
+   "direction": "lower",
+   "p": 0.39,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US effective federal funds rate for October 2026 be lower than 3.75%?",
+   "context": {
+    "measure": {
+     "why": "The interest rate banks charge each other overnight, the rate the Federal Reserve steers. It sets the base for borrowing costs across the economy. It moves in steps at policy meetings, so most months it hardly changes.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "FEDFUNDS",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS"
+     },
+     "lag": "the monthly average is published at the start of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 3.75
+    },
+    "history": [
+     {
+      "d": "2023-10-01",
+      "v": 5.33
+     },
+     {
+      "d": "2023-11-01",
+      "v": 5.33
+     },
+     {
+      "d": "2023-12-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-01-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-02-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-03-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-04-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-05-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-06-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-07-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-08-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-09-01",
+      "v": 5.13
+     },
+     {
+      "d": "2024-10-01",
+      "v": 4.83
+     },
+     {
+      "d": "2024-11-01",
+      "v": 4.64
+     },
+     {
+      "d": "2024-12-01",
+      "v": 4.48
+     },
+     {
+      "d": "2025-01-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-02-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-03-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-04-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-05-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-06-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-07-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-08-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-09-01",
+      "v": 4.22
+     },
+     {
+      "d": "2025-10-01",
+      "v": 4.09
+     },
+     {
+      "d": "2025-11-01",
+      "v": 3.88
+     },
+     {
+      "d": "2025-12-01",
+      "v": 3.72
+     },
+     {
+      "d": "2026-01-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-02-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-03-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-04-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-05-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-06-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-07-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-08-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-09-01",
+      "v": 3.75
+     }
+    ],
+    "trend": {
+     "change": 0.11,
+     "over": "6 months",
+     "high_52": 5.33,
+     "low_52": 1.21
+    },
+    "reasoning": {
+     "method": "frequency",
+     "q": "lower",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.4,
+     "expected": 3.75,
+     "sd": null,
+     "threshold": 3.75,
+     "backtest": {
+      "n": 854,
+      "ok": true,
+      "base": 0.39,
+      "brier_model": 0.23,
+      "brier_base": 0.238,
+      "skill": 0.035,
+      "hit_rate": 0.638
+     },
+     "weight": 0.23,
+     "base_rate": 0.39,
+     "final_p": 0.39
+    },
+    "resolution": "Uses the value for October 2026 as first shown by Board of Governors of the Federal Reserve, via FRED. Yes if it is lower than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-10y-yield",
+   "made": "2026-10-19",
+   "resolves": "2026-10-28",
+   "kind": "indicator",
+   "indicator": "us-10y-yield",
+   "domain": "economy",
+   "label": "US 10-year Treasury yield",
+   "term": "us-10y-yield",
+   "h_steps": 1,
+   "target_date": "2026-10-22",
+   "threshold": 5.1,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 10-year Treasury yield close higher on 22 October 2026 than on 15 October 2026 (5.1%)?",
+   "context": {
+    "measure": {
+     "why": "The yield on 10-year US government bonds, a benchmark for mortgage and company borrowing rates. Short-term moves are close to a coin flip, so these questions mostly teach how little can be predicted.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "DGS10",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-15",
+     "value": 5.1
+    },
+    "history": [
+     {
+      "d": "2026-02-12",
+      "v": 4.09
+     },
+     {
+      "d": "2026-02-19",
+      "v": 4.08
+     },
+     {
+      "d": "2026-02-26",
+      "v": 4.02
+     },
+     {
+      "d": "2026-03-05",
+      "v": 4.13
+     },
+     {
+      "d": "2026-03-12",
+      "v": 4.27
+     },
+     {
+      "d": "2026-03-19",
+      "v": 4.25
+     },
+     {
+      "d": "2026-03-26",
+      "v": 4.42
+     },
+     {
+      "d": "2026-04-02",
+      "v": 4.31
+     },
+     {
+      "d": "2026-04-09",
+      "v": 4.29
+     },
+     {
+      "d": "2026-04-16",
+      "v": 4.32
+     },
+     {
+      "d": "2026-04-23",
+      "v": 4.34
+     },
+     {
+      "d": "2026-04-30",
+      "v": 4.4
+     },
+     {
+      "d": "2026-05-07",
+      "v": 4.41
+     },
+     {
+      "d": "2026-05-14",
+      "v": 4.47
+     },
+     {
+      "d": "2026-05-21",
+      "v": 4.57
+     },
+     {
+      "d": "2026-05-28",
+      "v": 4.45
+     },
+     {
+      "d": "2026-06-04",
+      "v": 4.47
+     },
+     {
+      "d": "2026-06-11",
+      "v": 4.45
+     },
+     {
+      "d": "2026-06-18",
+      "v": 4.46
+     },
+     {
+      "d": "2026-06-25",
+      "v": 4.4
+     },
+     {
+      "d": "2026-07-02",
+      "v": 4.49
+     },
+     {
+      "d": "2026-07-09",
+      "v": 4.54
+     },
+     {
+      "d": "2026-07-16",
+      "v": 4.57
+     },
+     {
+      "d": "2026-07-23",
+      "v": 4.71
+     },
+     {
+      "d": "2026-07-30",
+      "v": 4.68
+     },
+     {
+      "d": "2026-08-06",
+      "v": 4.69
+     },
+     {
+      "d": "2026-08-13",
+      "v": 4.63
+     },
+     {
+      "d": "2026-08-20",
+      "v": 4.69
+     },
+     {
+      "d": "2026-08-27",
+      "v": 4.67
+     },
+     {
+      "d": "2026-09-03",
+      "v": 4.77
+     },
+     {
+      "d": "2026-09-10",
+      "v": 4.95
+     },
+     {
+      "d": "2026-09-17",
+      "v": 4.94
+     },
+     {
+      "d": "2026-09-24",
+      "v": 5.18
+     },
+     {
+      "d": "2026-10-01",
+      "v": 5.24
+     },
+     {
+      "d": "2026-10-08",
+      "v": 5.22
+     },
+     {
+      "d": "2026-10-15",
+      "v": 5.1
+     }
+    ],
+    "trend": {
+     "change": 0.41,
+     "over": "8 weeks",
+     "high_52": 5.24,
+     "low_52": 4
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.59,
+     "expected": 5.127,
+     "sd": 0.094,
+     "threshold": 5.1,
+     "backtest": {
+      "n": 3353,
+      "ok": true,
+      "base": 0.477,
+      "brier_model": 0.256,
+      "brier_base": 0.249,
+      "skill": -0.027,
+      "hit_rate": 0.523
+     },
+     "weight": 0,
+     "base_rate": 0.477,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 22 October 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-us-stocks",
+   "made": "2026-10-19",
+   "resolves": "2026-10-29",
+   "kind": "indicator",
+   "indicator": "us-stocks",
+   "domain": "economy",
+   "label": "S&P 500 stock index",
+   "term": "us-stocks",
+   "h_steps": 1,
+   "target_date": "2026-10-23",
+   "threshold": 7659.44,
+   "direction": "higher",
+   "p": 0.58,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the S&P 500 stock index close higher on 23 October 2026 than on 16 October 2026 (7,659.44)?",
+   "context": {
+    "measure": {
+     "why": "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "SP500",
+      "name": "S&P Dow Jones Indices, via FRED",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-16",
+     "value": 7659.44
+    },
+    "history": [
+     {
+      "d": "2026-02-13",
+      "v": 6836.17
+     },
+     {
+      "d": "2026-02-20",
+      "v": 6909.51
+     },
+     {
+      "d": "2026-02-27",
+      "v": 6878.88
+     },
+     {
+      "d": "2026-03-06",
+      "v": 6740.02
+     },
+     {
+      "d": "2026-03-13",
+      "v": 6632.19
+     },
+     {
+      "d": "2026-03-20",
+      "v": 6506.48
+     },
+     {
+      "d": "2026-03-27",
+      "v": 6368.85
+     },
+     {
+      "d": "2026-04-03",
+      "v": 6582.69
+     },
+     {
+      "d": "2026-04-10",
+      "v": 6816.89
+     },
+     {
+      "d": "2026-04-17",
+      "v": 7126.06
+     },
+     {
+      "d": "2026-04-24",
+      "v": 7165.08
+     },
+     {
+      "d": "2026-05-01",
+      "v": 7230.12
+     },
+     {
+      "d": "2026-05-08",
+      "v": 7398.93
+     },
+     {
+      "d": "2026-05-15",
+      "v": 7408.5
+     },
+     {
+      "d": "2026-05-22",
+      "v": 7473.47
+     },
+     {
+      "d": "2026-05-29",
+      "v": 7580.06
+     },
+     {
+      "d": "2026-06-05",
+      "v": 7383.74
+     },
+     {
+      "d": "2026-06-12",
+      "v": 7431.46
+     },
+     {
+      "d": "2026-06-19",
+      "v": 7500.58
+     },
+     {
+      "d": "2026-06-26",
+      "v": 7354.02
+     },
+     {
+      "d": "2026-07-03",
+      "v": 7483.24
+     },
+     {
+      "d": "2026-07-10",
+      "v": 7575.39
+     },
+     {
+      "d": "2026-07-17",
+      "v": 7457.69
+     },
+     {
+      "d": "2026-07-24",
+      "v": 7411.98
+     },
+     {
+      "d": "2026-07-31",
+      "v": 7489.72
+     },
+     {
+      "d": "2026-08-07",
+      "v": 7757.64
+     },
+     {
+      "d": "2026-08-14",
+      "v": 7785.76
+     },
+     {
+      "d": "2026-08-21",
+      "v": 7674.37
+     },
+     {
+      "d": "2026-08-28",
+      "v": 7711.76
+     },
+     {
+      "d": "2026-09-04",
+      "v": 7718.6
+     },
+     {
+      "d": "2026-09-11",
+      "v": 7656.98
+     },
+     {
+      "d": "2026-09-18",
+      "v": 7650.5
+     },
+     {
+      "d": "2026-09-25",
+      "v": 7743.41
+     },
+     {
+      "d": "2026-10-02",
+      "v": 7722.72
+     },
+     {
+      "d": "2026-10-09",
+      "v": 7811.54
+     },
+     {
+      "d": "2026-10-16",
+      "v": 7659.44
+     }
+    ],
+    "trend": {
+     "change": -14.93,
+     "over": "8 weeks",
+     "high_52": 7811.54,
+     "low_52": 6368.85
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "model_p": 0.48,
+     "expected": 7654.51,
+     "sd": 115.716,
+     "threshold": 7659.44,
+     "backtest": {
+      "n": 494,
+      "ok": true,
+      "base": 0.583,
+      "brier_model": 0.255,
+      "brier_base": 0.243,
+      "skill": -0.048,
+      "hit_rate": 0.538
+     },
+     "weight": 0,
+     "base_rate": 0.583,
+     "final_p": 0.58
+    },
+    "resolution": "Uses the last value on or before 23 October 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-19-arxiv-underwater",
+   "made": "2026-10-19",
+   "resolves": "2026-11-03",
+   "kind": "indicator",
+   "indicator": "arxiv-underwater",
+   "domain": "research",
+   "label": "arXiv papers on underwater acoustics and sonar",
+   "term": "arxiv-underwater",
+   "h_steps": 2,
+   "target_date": "2026-10-26",
+   "threshold": 7,
+   "direction": "above_avg",
+   "p": 0.4,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 7 papers on underwater acoustics and sonar in the week starting 26 October 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention underwater acoustics, sonar or hydrophones. It shows how much researchers are publishing on the topic, not how good the work is.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"underwater acoustic\" OR abs:sonar OR abs:hydrophone OR abs:\"underwater localization\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-12",
+     "value": 9
+    },
+    "history": [
+     {
+      "d": "2026-02-09",
+      "v": 1
+     },
+     {
+      "d": "2026-02-16",
+      "v": 3
+     },
+     {
+      "d": "2026-02-23",
+      "v": 4
+     },
+     {
+      "d": "2026-03-02",
+      "v": 3
+     },
+     {
+      "d": "2026-03-09",
+      "v": 6
+     },
+     {
+      "d": "2026-03-16",
+      "v": 5
+     },
+     {
+      "d": "2026-03-23",
+      "v": 3
+     },
+     {
+      "d": "2026-03-30",
+      "v": 3
+     },
+     {
+      "d": "2026-04-06",
+      "v": 1
+     },
+     {
+      "d": "2026-04-13",
+      "v": 3
+     },
+     {
+      "d": "2026-04-20",
+      "v": 6
+     },
+     {
+      "d": "2026-04-27",
+      "v": 3
+     },
+     {
+      "d": "2026-05-04",
+      "v": 5
+     },
+     {
+      "d": "2026-05-11",
+      "v": 2
+     },
+     {
+      "d": "2026-05-18",
+      "v": 6
+     },
+     {
+      "d": "2026-05-25",
+      "v": 4
+     },
+     {
+      "d": "2026-06-01",
+      "v": 5
+     },
+     {
+      "d": "2026-06-08",
+      "v": 5
+     },
+     {
+      "d": "2026-06-15",
+      "v": 2
+     },
+     {
+      "d": "2026-06-22",
+      "v": 5
+     },
+     {
+      "d": "2026-06-29",
+      "v": 4
+     },
+     {
+      "d": "2026-07-06",
+      "v": 1
+     },
+     {
+      "d": "2026-07-13",
+      "v": 3
+     },
+     {
+      "d": "2026-07-20",
+      "v": 4
+     },
+     {
+      "d": "2026-07-27",
+      "v": 4
+     },
+     {
+      "d": "2026-08-03",
+      "v": 6
+     },
+     {
+      "d": "2026-08-10",
+      "v": 3
+     },
+     {
+      "d": "2026-08-17",
+      "v": 4
+     },
+     {
+      "d": "2026-08-24",
+      "v": 8
+     },
+     {
+      "d": "2026-08-31",
+      "v": 7
+     },
+     {
+      "d": "2026-09-07",
+      "v": 8
+     },
+     {
+      "d": "2026-09-14",
+      "v": 7
+     },
+     {
+      "d": "2026-09-21",
+      "v": 6
+     },
+     {
+      "d": "2026-09-28",
+      "v": 4
+     },
+     {
+      "d": "2026-10-05",
+      "v": 5
+     },
+     {
+      "d": "2026-10-12",
+      "v": 9
+     }
+    ],
+    "trend": {
+     "change": 5,
+     "over": "8 weeks",
+     "high_52": 9,
+     "low_52": 0
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "model_p": 0.46,
+     "expected": 6.8,
+     "sd": 2.1,
+     "threshold": 7,
+     "backtest": {
+      "n": 48,
+      "ok": true,
+      "base": 0.4,
+      "brier_model": 0.27,
+      "brier_base": 0.239,
+      "skill": -0.127,
+      "hit_rate": 0.583
+     },
+     "weight": 0,
+     "base_rate": 0.4,
+     "final_p": 0.4
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -1180,9 +3350,14 @@
     "resolved": 0,
     "open": 6,
     "mean_brier": null
+   },
+   "indicator-v1": {
+    "resolved": 0,
+    "open": 10,
+    "mean_brier": null
    }
   },
-  "open": 18,
+  "open": 28,
   "resolved": 3,
   "voided": 0,
   "mean_brier": 0.145,
@@ -1213,6 +3388,7 @@
  "note": "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.",
  "methods": {
   "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
+  "indicator-v1": "From 20 October 2026. Questions about real outcomes in the economy, jobs and research, settled from public data (FRED, Eurostat, arXiv). Each is first tested on the full history of its series. Where the method shows no skill over the long-run rate of the event, the probability is pulled back to that rate.",
   "burst-persistence-v2": "From 19 October 2026. Terms come from headlines only. A phrase counts as emerging only when it is used at least 2.2 times as often as in the previous three weeks, in at least 5 stories from at least 3 outlets (4 for research-only phrases). Probabilities are corrected using how often comparable phrases held their level in the weeks already collected. Phrases still confined to research sources get a different question: will they reach tech or business coverage?"
  }
 }

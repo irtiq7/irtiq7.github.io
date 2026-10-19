@@ -378,7 +378,7 @@ function describeOutcome(f, daily) {
 // Fill in outcomes for forecasts whose window is over. Only the result fields are ever written.
 function resolveForecasts(forecasts, items, now) {
   for (const f of forecasts) {
-    if (f.outcome !== null || f.void) continue;
+    if (f.outcome !== null || f.void || f.kind === "indicator") continue;
     const start = Date.parse(f.made) + DAY, end = Date.parse(f.resolves) + DAY; // days made+1 .. resolves
     if (now < end + DAY) continue;
     const inWindow = items.filter((i) => { const t = Date.parse(i.p); return t >= start && t < end; });
@@ -406,7 +406,7 @@ function scoreboard(forecasts) {
     return { range: `${Math.round(lo * 100)}-${Math.min(100, Math.round(hi * 100))}%`, n: g.length, mean_p: g.length ? Math.round((g.reduce((a, f) => a + f.p, 0) / g.length) * 100) / 100 : null, observed: g.length ? Math.round((g.reduce((a, f) => a + f.outcome, 0) / g.length) * 100) / 100 : null };
   });
   const byModel = {};
-  for (const m of [MODEL, MODEL2]) {
+  for (const m of [...new Set([MODEL, MODEL2, ...forecasts.map((f) => f.model || MODEL)])]) {
     const g = done.filter((f) => (f.model || MODEL) === m);
     byModel[m] = { resolved: g.length, open: forecasts.filter((f) => (f.model || MODEL) === m && f.outcome === null && !f.void).length, mean_brier: g.length ? Math.round((g.reduce((a, f) => a + f.brier, 0) / g.length) * 1000) / 1000 : null };
   }

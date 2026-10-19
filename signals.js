@@ -6,7 +6,7 @@
   var STAGE = { early: ["Research only", "Appears in research sources, not yet in industry press"], spreading: ["Research + industry press", "Appears in research sources and in tech or business coverage"], mainstream: ["Industry press only", "Appears in tech or business coverage, with no research mentions this fortnight"] };
   var LEAN_CLASS = { "Left": "l2", "Lean Left": "l1", "Center": "c0", "Lean Right": "r1", "Right": "r2", "Not rated": "nr" };
   var LEAN_ORDER = ["Left", "Lean Left", "Center", "Lean Right", "Right", "Not rated"];
-  var sig = null, fc = null, stageFilter = "all";
+  var sig = null, fc = null, stageFilter = "all", qDomain = "all";
 
   function h(tag, props, kids) {
     var n = document.createElement(tag);
@@ -133,7 +133,55 @@
   function sect(title, kids) { return h("section", { class: "q-sec" }, [h("h5", { text: title })].concat(kids.filter(Boolean))); }
   function bulletless(lines) { return lines.filter(Boolean).map(function (t) { return typeof t === "string" ? h("p", { text: t }) : t; }); }
 
+  // ----- questions about real outcomes: economy, jobs and research
+  var DOMAIN = { jobs: "Jobs", economy: "Economy", research: "New research" };
+  function fmtVal(v, unit, dec) {
+    if (v == null) return "";
+    var n = Math.abs(v) >= 1000 ? Math.round(v).toLocaleString("en-US") : String(Math.round(v * 100) / 100);
+    return unit === "%" ? n + "%" : unit && unit !== "points" ? n + " " + unit : n;
+  }
+  // A difference or a typical miss: percentage points for a rate, plain units otherwise
+  function fmtDelta(v, unit) { if (v == null) return ""; var n = Math.abs(v) >= 1000 ? Math.round(v).toLocaleString("en-US") : String(Math.round(v * 100) / 100); return unit === "%" ? n + " points" : unit && unit !== "points" ? n + " " + unit : n; }
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function fmtPeriod(d, freq) { return freq === "monthly" ? MONTHS[Number(d.slice(5, 7)) - 1] + " " + d.slice(0, 4) : fmtDay(d) + " " + d.slice(0, 4); }
+  function line(hist, threshold, unit) {
+    var W = 420, H = 90, L = 4, R = 4, T = 6, B = 16, vals = hist.map(function (x) { return x.v; }).concat(threshold != null ? [threshold] : []);
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals), span = hi - lo || 1, n = hist.length;
+    var X = function (i) { return L + i / Math.max(1, n - 1) * (W - L - R); }, Y = function (v) { return T + (1 - (v - lo) / span) * (H - T - B); };
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "spark", role: "img", "aria-label": "Recent values, from " + fmtVal(hist[0].v, unit) + " to " + fmtVal(hist[n - 1].v, unit) });
+    if (threshold != null) { s.appendChild(svg("line", { x1: L, x2: W - R, y1: Y(threshold), y2: Y(threshold), class: "sp-div" })); }
+    s.appendChild(svg("polyline", { points: hist.map(function (x, i) { return X(i).toFixed(1) + "," + Y(x.v).toFixed(1); }).join(" "), fill: "none", stroke: "#00f0ff", "stroke-width": 2, "stroke-linejoin": "round" }));
+    var last = hist[n - 1], c = svg("circle", { cx: X(n - 1), cy: Y(last.v), r: 3.5, fill: "#00f0ff" }); c.appendChild(svg("title", {}, [document.createTextNode(last.d + ": " + fmtVal(last.v, unit))])); s.appendChild(c);
+    var a = svg("text", { x: L, y: H - 3, class: "axis" }); a.textContent = hist[0].d.slice(0, 7); s.appendChild(a);
+    var b = svg("text", { x: W - R, y: H - 3, "text-anchor": "end", class: "axis" }); b.textContent = last.d.slice(0, 7); s.appendChild(b);
+    return s;
+  }
+  function indicatorCard(f) {
+    var c = f.context, m = c.measure, r = c.reasoning, bt = r.backtest || {}, done = f.outcome !== null && !f.void, unit = m.unit;
+    var per = m.freq === "monthly" ? "months" : "weeks", dirWord = r.q === "lower" ? "lower" : r.q === "above_avg" ? "above the bar" : "higher";
+    var step1;
+    if (r.method === "frequency") step1 = "Step 1, how often it happens. In the last " + (r.window_n || 12) + " comparable " + per + ", this fell in " + (r.window_hits == null ? "some" : r.window_hits) + " of them, which puts the chance at " + pct(r.model_p) + ". This series moves in steps, so it is mostly unchanged from one " + per.slice(0, -1) + " to the next.";
+    else if (r.q === "above_avg") step1 = "Step 1, the pace. The bar is " + fmtVal(r.threshold, unit) + ", the average of the last " + r.win + " " + per + ". Recent values suggest about " + fmtVal(r.expected, unit) + " (the usual miss is about " + fmtDelta(r.sd, unit) + "), which gives a " + pct(r.model_p) + " chance of being above it.";
+    else step1 = "Step 1, the trend. Over the last " + r.k + " " + per + " it has moved by " + fmtDelta(c.trend.change, unit) + ". Allowing for a little of that trend, the model expects about " + fmtVal(r.expected, unit) + " (the usual miss is about " + fmtDelta(r.sd, unit) + "), which gives a " + pct(r.model_p) + " chance that it ends " + dirWord + ".";
+    var verdict = bt.skill > 0.1 ? "so it adds real information" : bt.skill >= 0 ? "so it adds only a little" : "so it did worse than the plain rate";
+    var step2 = "Step 2, a test on history. The same method was run on " + (bt.n || 0).toLocaleString("en-US") + " earlier cases. It scored " + bt.brier_model + " (Brier score; lower is better) against " + bt.brier_base + " for simply saying the long-run rate of " + pct(bt.base) + ", " + verdict + ".";
+    var step3 = r.weight <= 0.01 ? "Result: because the method showed no skill, this question uses the long-run rate, " + pct(r.final_p) + "." : "Result: the model's number is blended with the long-run rate (weight on the model " + r.weight + "), giving " + pct(r.final_p) + ".";
+    var t = c.trend, stands = "Latest: " + fmtVal(c.latest.value, unit) + " (" + fmtPeriod(c.latest.date, m.freq) + "). Over the last " + t.over + " it changed by " + fmtDelta(t.change, unit) + ". Over the last year it ranged from " + fmtVal(t.low_52, unit) + " to " + fmtVal(t.high_52, unit) + ".";
+    var body = [
+      sect("What this measures", [h("p", { text: m.why }), h("p", { class: "muted small" }, ["Source: ", h("a", { href: m.source.url, rel: "noopener", target: "_blank", text: m.source.name }), m.lag ? ". New figures are " + m.lag + "." : "."])]),
+      sect("Where it stands", [h("p", { text: stands }), line(c.history, r.q === "above_avg" ? f.threshold : null, unit)]),
+      sect(done ? "How the probability was reached (written before the result)" : "How the probability was reached", bulletless([step1, step2, step3])),
+      sect("What counts as yes", [h("p", { text: c.resolution })])
+    ];
+    if (done && f.result_note) body.unshift(sect("What happened", [h("p", { class: "q-result", text: (f.outcome ? "Yes. " : "No. ") + f.result_note }), h("p", { class: "muted small", text: "Probability said " + pct(f.p) + "; Brier score " + f.brier + " (0 is perfect, 0.25 is what always saying 50% would score)." })]));
+    var head = h("div", { class: "q-head" }, [h("div", {}, [h("span", { class: "tag q-kind", text: DOMAIN[f.domain] || "Indicator" }), h("h4", { class: "q-title", text: f.question })]),
+      h("div", { class: "q-prob" + (done ? (f.outcome ? " yes" : " no") : "") }, [h("strong", { text: done ? (f.outcome ? "Yes" : "No") : pct(f.p) }), h("span", { text: done ? "said " + pct(f.p) : "chance of yes" })])]);
+    var meta = "Asked " + fmtDay(f.made) + (done ? ", resolved " + fmtDay(f.resolves) : ", expected to resolve around " + fmtDay(f.resolves)) + ". Latest: " + fmtVal(c.latest.value, unit);
+    return h("article", { class: "q-card", id: f.id }, [head, h("p", { class: "q-meta", text: meta }), h("details", { class: "q-more" }, [h("summary", { text: "Show the data and reasoning" })].concat(body))]);
+  }
+
   function questionCard(f) {
+    if (f.kind === "indicator") return indicatorCard(f);
     var c = f.context, m = c.mentions, r = c.reasoning, done = f.outcome !== null && !f.void, spread = f.kind === "term-spread";
     var kind = spread ? "Will it reach industry press?" : "Will it keep making news?";
     var usual = m.base_per_week, rate = m.ratio;
@@ -174,9 +222,10 @@
 
   function renderForecasts() {
     var s = fc.summary, list = fc.forecasts, box = clear($("forecasts"));
-    var isNew = function (f) { return f.model === "burst-persistence-v2" && f.context; };
+    var isNew = function (f) { return (f.model === "burst-persistence-v2" || f.model === "indicator-v1") && f.context; };
+    var inDomain = function (f) { return qDomain === "all" || (qDomain === "news" ? f.kind !== "indicator" : f.domain === qDomain); };
     var openF = list.filter(function (f) { return f.outcome === null && !f.void; }), done = list.filter(function (f) { return f.outcome !== null; }).reverse();
-    var openNew = openF.filter(isNew), openOld = openF.filter(function (f) { return !isNew(f); }), doneNew = done.filter(isNew), doneOld = done.filter(function (f) { return !isNew(f); });
+    var openNew = openF.filter(isNew).filter(inDomain), openOld = openF.filter(function (f) { return !isNew(f); }), doneNew = done.filter(isNew).filter(inDomain), doneOld = done.filter(function (f) { return !isNew(f); });
     var firstResult = openF.map(function (f) { return f.resolves; }).sort()[0];
     function tile(label, value, sub) { return h("div", { class: "stat-tile" }, [h("p", { class: "stat-label", text: label }), h("p", { class: "stat-value", text: value }), sub ? h("p", { class: "stat-sub", text: sub }) : null]); }
     box.appendChild(h("div", { class: "stat-tiles" }, [
@@ -186,13 +235,18 @@
       tile("Skill vs 50%", s.skill == null ? "—" : (s.skill > 0 ? "+" : "") + s.skill, "above 0 beats the benchmark")
     ]));
     if (s.by_model) {
-      var names = { "poisson-persistence-v1": "Method 1 (until 19 Oct 2026)", "burst-persistence-v2": "Method 2 (from 19 Oct 2026)" };
+      var names = { "poisson-persistence-v1": "News attention, method 1 (until 19 Oct 2026)", "burst-persistence-v2": "News attention, method 2 (from 19 Oct 2026)", "indicator-v1": "Economy, jobs and research (from 20 Oct 2026)" };
       box.appendChild(table(["Method", "Open", "Resolved", "Brier score"], Object.keys(s.by_model).map(function (k) { var m = s.by_model[k]; return [names[k] || k, m.open, m.resolved, m.mean_brier == null ? "—" : m.mean_brier]; }), ""));
     }
     if (fc.methods) {
       box.appendChild(h("details", { class: "agent-box" }, [h("summary", { text: "How the questions changed" })].concat(Object.keys(fc.methods).map(function (k) { return h("p", { class: "small" }, [h("strong", { text: (names2(k)) + ". " }), fc.methods[k]]); }))));
     }
     box.appendChild(h("h3", { text: "Open questions" }));
+    var chips = h("div", { class: "chips", role: "group", "aria-label": "Filter questions" });
+    [["all", "All"], ["economy", "Economy"], ["jobs", "Jobs"], ["research", "New research"], ["news", "News attention"]].forEach(function (d) {
+      chips.appendChild(h("button", { type: "button", class: "chip" + (qDomain === d[0] ? " on" : ""), "aria-pressed": qDomain === d[0] ? "true" : "false", onclick: function () { qDomain = d[0]; renderForecasts(); }, text: d[1] }));
+    });
+    box.appendChild(chips);
     box.appendChild(h("p", { class: "muted small", text: "Open each question for what the phrase is, the stories behind it, how the probability was worked out, and exactly what counts as yes." }));
     box.appendChild(openNew.length ? h("div", { class: "q-list" }, openNew.map(questionCard)) : h("p", { class: "muted", text: "No open questions from the current method yet. A new set is written each week." }));
     if (openOld.length) box.appendChild(h("details", { class: "agent-box" }, [h("summary", { text: "Earlier questions from method 1 (" + openOld.length + " open)" }),
@@ -207,7 +261,7 @@
       box.appendChild(table(["Said", "Questions", "Average stated", "Happened"], s.calibration.map(function (c) { return [c.range, c.n, c.mean_p == null ? "—" : pct(c.mean_p), c.observed == null ? "—" : pct(c.observed)]; }), ""));
     } else box.appendChild(h("p", { class: "muted small", text: "A calibration table (did “70%” questions happen about 70% of the time?) appears after 12 questions have resolved." }));
   }
-  function names2(k) { return k === "poisson-persistence-v1" ? "Method 1" : k === "burst-persistence-v2" ? "Method 2" : k; }
+  function names2(k) { return k === "poisson-persistence-v1" ? "News attention, method 1" : k === "burst-persistence-v2" ? "News attention, method 2" : k === "indicator-v1" ? "Economy, jobs and research" : k; }
 
   function init() {
     $("asof").textContent = "Data as of " + fmtDay(sig.as_of) + (sig.provisional ? " · history still building" : "");

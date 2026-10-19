@@ -16,6 +16,7 @@ const ROOT = path.join(__dirname, "..");
 const NEWS = process.env.NEWS_DIR || path.join(ROOT, "news");
 const NOW = process.env.NEWS_NOW ? Date.parse(process.env.NEWS_NOW) : Date.now(); // overridable for tests
 const signals = require("./signals");
+const indicators = require("./indicators");
 const UA = "Mozilla/5.0 (compatible; irtiq7-news-builder; +https://irtiq7.github.io/ai_news.html)";
 const DEFAULT_LIMIT = 20;          // items kept per source
 const ARTICLE_FETCHES_PER_SOURCE = 20;
@@ -240,6 +241,52 @@ function tidySnippet(t) {
   return String(t || "").replace(/\b(?:In Brief\s*)?Posted:[^.]*?\b20\d\d\b\s*(?:Image Credits?:\s*\S+(?:\s+\S+)?\s*)?/gi, "").replace(/\bImage Credits?:\s*\S+(?:\s+\S+)?\s*/gi, "").replace(/\s+/g, " ").trim();
 }
 
+// ---------- economy, jobs and research indicators (public data, no keys)
+const arxivUrl = (query, monday) => {
+  const d = (x) => x.replace(/-/g, ""), sunday = indicators.addDays(monday, 6);
+  return "https://export.arxiv.org/api/query?max_results=1&search_query=" + encodeURIComponent(`${query} AND submittedDate:[${d(monday)}0000 TO ${d(sunday)}2359]`);
+};
+async function loadIndicatorData(cacheFile) {
+  const raw = new Map(), note = [];
+  const cache = fs.existsSync(cacheFile) ? JSON.parse(fs.readFileSync(cacheFile, "utf8")) : {};
+  cache.arxiv = cache.arxiv || {};
+  const fredCache = new Map();
+  for (const spec of indicators.SPECS) {
+    try {
+      if (spec.source.kind === "fred") {
+        if (!fredCache.has(spec.source.series)) fredCache.set(spec.source.series, indicators.parseFredCsv(await fetchText("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + spec.source.series, 30000)));
+        raw.set(spec.id, fredCache.get(spec.source.series));
+      } else if (spec.source.kind === "eurostat") {
+        const j = JSON.parse(await fetchText(`https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=${spec.source.geo}&s_adj=SA&age=TOTAL&sex=T&unit=PC_ACT&sinceTimePeriod=1998-01&format=JSON&lang=EN`, 30000));
+        raw.set(spec.id, indicators.parseEurostat(j));
+      }
+    } catch (e) { note.push(`${spec.id}: ${e.message}`); }
+  }
+  // arXiv: one count per complete week, newest first, politely spaced; cached so each run only adds what is missing
+  const lastMonday = indicators.addDays(indicators.mondayOf(day(NOW)), -7), WEEKS = Number(process.env.ARXIV_WEEKS || 80), MAXREQ = Number(process.env.ARXIV_MAX || 30);
+  let requests = 0, stop = false;
+  for (const spec of indicators.SPECS.filter((x) => x.source.kind === "arxiv")) {
+    const weeks = (cache.arxiv[spec.id] = cache.arxiv[spec.id] || {});
+    for (let k = 0; k < WEEKS && !stop; k++) {
+      const monday = indicators.addDays(lastMonday, -7 * k);
+      if (weeks[monday] != null) continue;
+      if (requests >= MAXREQ) { stop = true; break; }
+      try {
+        const xml = await fetchText(arxivUrl(spec.source.query, monday), 30000), m = /<opensearch:totalResults[^>]*>(\d+)</.exec(xml);
+        if (!m) throw new Error("no count in reply"); weeks[monday] = Number(m[1]); requests++; await sleep(3300);
+      } catch (e) { note.push(`${spec.id} ${monday}: ${e.message}`); stop = true; }
+    }
+    // the unbroken run of weeks ending at the newest complete week
+    const series = []; for (let m = lastMonday; weeks[m] != null; m = indicators.addDays(m, -7)) series.unshift({ d: m, v: weeks[m] });
+    raw.set(spec.id, series);
+  }
+  cache.updated = day(NOW);
+  const ordered = { updated: cache.updated, arxiv: Object.fromEntries(Object.keys(cache.arxiv).sort().map((id) => [id, Object.fromEntries(Object.keys(cache.arxiv[id]).sort().map((w) => [w, cache.arxiv[id][w]]))])) };
+  fs.writeFileSync(cacheFile, JSON.stringify(ordered) + "\n");
+  if (note.length) console.log("indicators: " + note.slice(0, 6).join(" | "));
+  return raw;
+}
+
 async function main() {
   const prevFile = path.join(NEWS, "latest.json");
   const prev = fs.existsSync(prevFile) ? JSON.parse(fs.readFileSync(prevFile, "utf8")) : null;
@@ -414,10 +461,14 @@ async function main() {
   const ctx = { items: arch, sourceCount: sourcesFile.sources.length, story: (id) => { const r = refs[id] || byId.get(id); return r ? { title: r.title, url: r.url, source: r.source, category: r.category, published: r.published, summary: r.summary || "" } : null; }, define: (label) => defs.get(label.toLowerCase()) || null };
   // story() needs every story that may be quoted, not only those already in refs
   ledger.forecasts.push(...signals.makeForecastsV2(candidates, ledger.forecasts, NOW, ctx, baseline.ready ? "emerging" : "most-discussed"));
+  const indRaw = await loadIndicatorData(path.join(NEWS, "indicators.json")), getRaw = (spec) => indRaw.get(spec.id) || null;
+  indicators.resolveIndicators(ledger.forecasts, getRaw, NOW);
+  ledger.forecasts.push(...indicators.makeIndicatorForecasts(ledger.forecasts, getRaw, NOW));
   ledger.summary = signals.scoreboard(ledger.forecasts);
   ledger.note = "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
   ledger.methods = {
     "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
+    "indicator-v1": "From 20 October 2026. Questions about real outcomes in the economy, jobs and research, settled from public data (FRED, Eurostat, arXiv). Each is first tested on the full history of its series. Where the method shows no skill over the long-run rate of the event, the probability is pulled back to that rate.",
     "burst-persistence-v2": "From 19 October 2026. Terms come from headlines only. A phrase counts as emerging only when it is used at least 2.2 times as often as in the previous three weeks, in at least 5 stories from at least 3 outlets (4 for research-only phrases). Probabilities are corrected using how often comparable phrases held their level in the weeks already collected. Phrases still confined to research sources get a different question: will they reach tech or business coverage?",
   };
   written(fFile, JSON.stringify(ledger, null, 1) + "\n", "news/forecasts.json");

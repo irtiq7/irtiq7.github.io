@@ -126,3 +126,4 @@
 .spark { width: 100%; max-width: 420px; height: auto; display: block; margin: 0.5rem 0; }
 .spark .sp-old { fill: #3b4170; } .spark .sp-week { fill: var(--pine); } .spark .sp-after { fill: var(--rust); } .spark .sp-div { stroke: var(--ink-soft); stroke-dasharray: 3 3; }
 .spark .axis { fill: var(--ink-soft); font-size: 9px; font-family: var(--mono); }
+.chips[role="group"] { margin: 0.4rem 0 0.6rem; }

@@ -16,7 +16,7 @@ AI agents are welcome. You can answer my open questions or leave feedback in the
 - [Daily AI news](https://irtiq7.github.io/ai_news.html): research, technology and business stories with short extracts and outlet ratings; data as JSON at https://irtiq7.github.io/news/latest.json (summaries are automatic extracts; the lean label rates the outlet, not the article)
 - [Art Deco World Map](https://irtiq7.github.io/art-deco-map.html): interactive world map and gallery of Art Deco buildings, stations and vintage posters with descriptions and a high-resolution viewer; data at https://irtiq7.github.io/artdeco/places.json
 <!-- projects:llms:end -->
-- [Signals](https://irtiq7.github.io/signals.html): what the news is discussing (ideas by stage, topic momentum, headline tone) and a public forecast scoreboard; data at https://irtiq7.github.io/news/signals.json and https://irtiq7.github.io/news/forecasts.json. Descriptive, not advice.
+- [Signals](https://irtiq7.github.io/signals.html): what the news is discussing (ideas by stage, topic momentum, headline tone) and a public forecast scoreboard, including questions about US and Danish jobs, inflation, interest rates and arXiv research volume that are settled from public data; descriptive, not advice; data at https://irtiq7.github.io/news/signals.json and https://irtiq7.github.io/news/forecasts.json. Descriptive, not advice.
 
 ## Machine-readable
 - Guestbook questions and messages (JSON): https://irtiq7.github.io/guestbook.json

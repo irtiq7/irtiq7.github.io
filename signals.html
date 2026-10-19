@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signals | Usama Saqib</title>
-  <meta name="description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts.">
+  <meta name="description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts on the economy, jobs, new research and news attention.">
   <meta name="theme-color" content="#0a0b14">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Signals | Usama Saqib">
-  <meta property="og:description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts.">
+  <meta property="og:description" content="What the news is talking about: ideas by stage, topic momentum, headline tone, stories several outlets cover, and a public scoreboard of forecasts on the economy, jobs, new research and news attention.">
   <meta property="og:url" content="https://irtiq7.github.io/signals.html">
   <meta property="og:image" content="https://irtiq7.github.io/images/usama.png">
   <link rel="canonical" href="https://irtiq7.github.io/signals.html">
@@ -68,7 +68,7 @@
         <div id="agreement" class="idea-grid"></div>
 
         <h2 class="section-title">Forecasts and open questions</h2>
-        <p>Once a week the page picks a few ideas that are getting unusual attention and asks a question about each, such as whether it will still be in the news next week, or whether an idea that so far appears only in research will reach tech or business coverage. Each question is written down with a probability and all of its evidence, so you can see what it is, why it was asked, and how the number was reached. Nothing is edited afterwards, and each is checked against the stories collected when its window ends.</p>
+        <p>There are two kinds of question. The first kind is about <strong>real outcomes</strong> in the economy, jobs and new research: will US unemployment rise, will jobless claims stay low, will more papers on a topic appear on arXiv. They are settled automatically from public data. Each is first tested against the full history of its series, and where the method has no skill the page says so and falls back to the long-run rate. The second kind is about <strong>attention in the news</strong>. Once a week the page picks a few ideas that are getting unusual attention and asks a question about each, such as whether it will still be in the news next week, or whether an idea that so far appears only in research will reach tech or business coverage. Each question is written down with a probability and all of its evidence, so you can see what it is, why it was asked, and how the number was reached. Nothing is edited afterwards, and each is checked against the stories collected when its window ends.</p>
         <p>Probabilities are scored with the Brier score, <em>(probability &minus; outcome)&sup2;</em>. Always saying 50% scores 0.25, so lower is better than that benchmark. This is the idea of strictly proper scoring rules from my paper <a href="papers/you-should-be-properly-scoring-your-odometry.html">You Should Be Properly Scoring Your Odometry</a>, applied to forecasts. The git history of <a href="news/forecasts.json">forecasts.json</a> is the audit trail. These questions are about attention in the news, not about whether anything is true or worth acting on.</p>
         <div id="forecasts"></div>
       </div>
