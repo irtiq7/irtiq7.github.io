@@ -80,10 +80,10 @@
     "base_per_week": 0,
     "lambda": 39.9
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 67,
+   "brier": 0.04,
+   "log_score": 0.223
   },
   {
    "id": "f-2026-10-12-stock",
@@ -101,10 +101,10 @@
     "base_per_week": 0,
     "lambda": 32.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 60,
+   "brier": 0.068,
+   "log_score": 0.301
   },
   {
    "id": "f-2026-10-12-beyond",
@@ -122,10 +122,10 @@
     "base_per_week": 0,
     "lambda": 17
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 9,
+   "brier": 0.518,
+   "log_score": 1.273
   },
   {
    "id": "f-2026-10-12-less",
@@ -143,10 +143,10 @@
     "base_per_week": 0,
     "lambda": 17
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 18,
+   "brier": 0.078,
+   "log_score": 0.329
   },
   {
    "id": "f-2026-10-12-firm",
@@ -164,10 +164,10 @@
     "base_per_week": 0,
     "lambda": 17
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 13,
+   "brier": 0.518,
+   "log_score": 1.273
   },
   {
    "id": "f-2026-10-12-service",
@@ -185,10 +185,10 @@
     "base_per_week": 0,
     "lambda": 17
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 6,
+   "brier": 0.518,
+   "log_score": 1.273
   },
   {
    "id": "f-2026-10-19-roadster",
@@ -3336,15 +3336,234 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-21-arxiv-llm",
+   "made": "2026-10-21",
+   "resolves": "2026-11-03",
+   "kind": "indicator",
+   "indicator": "arxiv-llm",
+   "domain": "research",
+   "label": "arXiv papers on language models",
+   "term": "arxiv-llm",
+   "h_steps": 2,
+   "target_date": "2026-10-26",
+   "threshold": 980,
+   "direction": "above_avg",
+   "p": 0.57,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 980 papers on language models in the week starting 26 October 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention language models. A measure of research activity in the area that dominates AI news, not of quality.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "abs:\"language model\"",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-12",
+     "value": 956
+    },
+    "history": [
+     {
+      "d": "2026-02-09",
+      "v": 881
+     },
+     {
+      "d": "2026-02-16",
+      "v": 594
+     },
+     {
+      "d": "2026-02-23",
+      "v": 813
+     },
+     {
+      "d": "2026-03-02",
+      "v": 817
+     },
+     {
+      "d": "2026-03-09",
+      "v": 872
+     },
+     {
+      "d": "2026-03-16",
+      "v": 847
+     },
+     {
+      "d": "2026-03-23",
+      "v": 790
+     },
+     {
+      "d": "2026-03-30",
+      "v": 825
+     },
+     {
+      "d": "2026-04-06",
+      "v": 998
+     },
+     {
+      "d": "2026-04-13",
+      "v": 965
+     },
+     {
+      "d": "2026-04-20",
+      "v": 820
+     },
+     {
+      "d": "2026-04-27",
+      "v": 750
+     },
+     {
+      "d": "2026-05-04",
+      "v": 1057
+     },
+     {
+      "d": "2026-05-11",
+      "v": 1120
+     },
+     {
+      "d": "2026-05-18",
+      "v": 971
+     },
+     {
+      "d": "2026-05-25",
+      "v": 1208
+     },
+     {
+      "d": "2026-06-01",
+      "v": 1044
+     },
+     {
+      "d": "2026-06-08",
+      "v": 841
+     },
+     {
+      "d": "2026-06-15",
+      "v": 771
+     },
+     {
+      "d": "2026-06-22",
+      "v": 762
+     },
+     {
+      "d": "2026-06-29",
+      "v": 784
+     },
+     {
+      "d": "2026-07-06",
+      "v": 644
+     },
+     {
+      "d": "2026-07-13",
+      "v": 618
+     },
+     {
+      "d": "2026-07-20",
+      "v": 621
+     },
+     {
+      "d": "2026-07-27",
+      "v": 848
+     },
+     {
+      "d": "2026-08-03",
+      "v": 937
+     },
+     {
+      "d": "2026-08-10",
+      "v": 701
+     },
+     {
+      "d": "2026-08-17",
+      "v": 660
+     },
+     {
+      "d": "2026-08-24",
+      "v": 882
+     },
+     {
+      "d": "2026-08-31",
+      "v": 882
+     },
+     {
+      "d": "2026-09-07",
+      "v": 707
+     },
+     {
+      "d": "2026-09-14",
+      "v": 780
+     },
+     {
+      "d": "2026-09-21",
+      "v": 1004
+     },
+     {
+      "d": "2026-09-28",
+      "v": 1556
+     },
+     {
+      "d": "2026-10-05",
+      "v": 1082
+     },
+     {
+      "d": "2026-10-12",
+      "v": 956
+     }
+    ],
+    "trend": {
+     "change": 296,
+     "over": "8 weeks",
+     "high_52": 1556,
+     "low_52": 414
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 46,
+     "window_hits": null,
+     "model_p": 0.62,
+     "expected": 1053.8,
+     "sd": 232.3,
+     "threshold": 980,
+     "backtest": {
+      "n": 33,
+      "ok": true,
+      "base": 0.571,
+      "brier_model": 0.251,
+      "brier_base": 0.244,
+      "skill": -0.027,
+      "hit_rate": 0.545
+     },
+     "weight": 0,
+     "base_rate": 0.571,
+     "final_p": 0.57
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
   "model": "poisson-persistence-v1",
   "by_model": {
    "poisson-persistence-v1": {
-    "resolved": 3,
-    "open": 12,
-    "mean_brier": 0.145
+    "resolved": 9,
+    "open": 6,
+    "mean_brier": 0.242
    },
    "burst-persistence-v2": {
     "resolved": 0,
@@ -3353,17 +3572,17 @@
    },
    "indicator-v1": {
     "resolved": 0,
-    "open": 10,
+    "open": 11,
     "mean_brier": null
    }
   },
-  "open": 28,
-  "resolved": 3,
+  "open": 23,
+  "resolved": 9,
   "voided": 0,
-  "mean_brier": 0.145,
+  "mean_brier": 0.242,
   "benchmark_brier": 0.25,
-  "skill": 0.42,
-  "mean_log_score": 0.479,
+  "skill": 0.03,
+  "mean_log_score": 0.679,
   "calibration": [
    {
     "range": "0-34%",
@@ -3379,9 +3598,9 @@
    },
    {
     "range": "67-100%",
-    "n": 0,
-    "mean_p": null,
-    "observed": null
+    "n": 6,
+    "mean_p": 0.74,
+    "observed": 0.5
    }
   ]
  },
