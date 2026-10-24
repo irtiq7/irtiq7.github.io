@@ -3116,10 +3116,11 @@
     "resolution": "Uses the last value on or before 23 October 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 7757.17,
+   "brier": 0.176,
+   "log_score": 0.545,
+   "result_note": "The value was 7,757.17, against 7,659.44 at the start (+97.73)."
   },
   {
    "id": "f-2026-10-19-arxiv-underwater",
@@ -3775,6 +3776,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-24-us-stocks",
+   "made": "2026-10-24",
+   "resolves": "2026-11-03",
+   "kind": "indicator",
+   "indicator": "us-stocks",
+   "domain": "economy",
+   "label": "S&P 500 stock index",
+   "term": "us-stocks",
+   "h_steps": 1,
+   "target_date": "2026-10-28",
+   "threshold": 7757.17,
+   "direction": "higher",
+   "p": 0.62,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the S&P 500 stock index close higher on 28 October 2026 than on 21 October 2026 (7,757.17)?",
+   "context": {
+    "measure": {
+     "why": "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "SP500",
+      "name": "S&P Dow Jones Indices, via FRED",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-21",
+     "value": 7757.17
+    },
+    "history": [
+     {
+      "d": "2026-02-18",
+      "v": 6881.31
+     },
+     {
+      "d": "2026-02-25",
+      "v": 6946.13
+     },
+     {
+      "d": "2026-03-04",
+      "v": 6869.5
+     },
+     {
+      "d": "2026-03-11",
+      "v": 6775.8
+     },
+     {
+      "d": "2026-03-18",
+      "v": 6624.7
+     },
+     {
+      "d": "2026-03-25",
+      "v": 6591.9
+     },
+     {
+      "d": "2026-04-01",
+      "v": 6575.32
+     },
+     {
+      "d": "2026-04-08",
+      "v": 6782.81
+     },
+     {
+      "d": "2026-04-15",
+      "v": 7022.95
+     },
+     {
+      "d": "2026-04-22",
+      "v": 7137.9
+     },
+     {
+      "d": "2026-04-29",
+      "v": 7135.95
+     },
+     {
+      "d": "2026-05-06",
+      "v": 7365.12
+     },
+     {
+      "d": "2026-05-13",
+      "v": 7444.25
+     },
+     {
+      "d": "2026-05-20",
+      "v": 7432.97
+     },
+     {
+      "d": "2026-05-27",
+      "v": 7520.36
+     },
+     {
+      "d": "2026-06-03",
+      "v": 7553.68
+     },
+     {
+      "d": "2026-06-10",
+      "v": 7266.99
+     },
+     {
+      "d": "2026-06-17",
+      "v": 7420.1
+     },
+     {
+      "d": "2026-06-24",
+      "v": 7358.22
+     },
+     {
+      "d": "2026-07-01",
+      "v": 7483.23
+     },
+     {
+      "d": "2026-07-08",
+      "v": 7482.71
+     },
+     {
+      "d": "2026-07-15",
+      "v": 7572.4
+     },
+     {
+      "d": "2026-07-22",
+      "v": 7498.96
+     },
+     {
+      "d": "2026-07-29",
+      "v": 7316.15
+     },
+     {
+      "d": "2026-08-05",
+      "v": 7723.55
+     },
+     {
+      "d": "2026-08-12",
+      "v": 7748.5
+     },
+     {
+      "d": "2026-08-19",
+      "v": 7707.98
+     },
+     {
+      "d": "2026-08-26",
+      "v": 7675.7
+     },
+     {
+      "d": "2026-09-02",
+      "v": 7666.6
+     },
+     {
+      "d": "2026-09-09",
+      "v": 7636.36
+     },
+     {
+      "d": "2026-09-16",
+      "v": 7551.81
+     },
+     {
+      "d": "2026-09-23",
+      "v": 7706.03
+     },
+     {
+      "d": "2026-09-30",
+      "v": 7651.54
+     },
+     {
+      "d": "2026-10-07",
+      "v": 7801.77
+     },
+     {
+      "d": "2026-10-14",
+      "v": 7718.94
+     },
+     {
+      "d": "2026-10-21",
+      "v": 7757.17
+     }
+    ],
+    "trend": {
+     "change": 81.47,
+     "over": "8 weeks",
+     "high_52": 7801.77,
+     "low_52": 6575.32
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 514,
+     "window_hits": null,
+     "model_p": 0.54,
+     "expected": 7767.238,
+     "sd": 107.328,
+     "threshold": 7757.17,
+     "backtest": {
+      "n": 494,
+      "ok": true,
+      "base": 0.617,
+      "brier_model": 0.26,
+      "brier_base": 0.236,
+      "skill": -0.099,
+      "hit_rate": 0.522
+     },
+     "weight": 0,
+     "base_rate": 0.617,
+     "final_p": 0.62
+    },
+    "resolution": "Uses the last value on or before 28 October 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-24-arxiv-world-models",
+   "made": "2026-10-24",
+   "resolves": "2026-11-03",
+   "kind": "indicator",
+   "indicator": "arxiv-world-models",
+   "domain": "research",
+   "label": "arXiv papers on world models",
+   "term": "arxiv-world-models",
+   "h_steps": 2,
+   "target_date": "2026-10-26",
+   "threshold": 92,
+   "direction": "above_avg",
+   "p": 0.69,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 92 papers on world models in the week starting 26 October 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention world models, models that learn how an environment changes in response to actions. A gauge of how fast the idea is spreading in research.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"world model\" OR abs:\"world models\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-12",
+     "value": 119
+    },
+    "history": [
+     {
+      "d": "2026-02-09",
+      "v": 41
+     },
+     {
+      "d": "2026-02-16",
+      "v": 21
+     },
+     {
+      "d": "2026-02-23",
+      "v": 30
+     },
+     {
+      "d": "2026-03-02",
+      "v": 34
+     },
+     {
+      "d": "2026-03-09",
+      "v": 40
+     },
+     {
+      "d": "2026-03-16",
+      "v": 36
+     },
+     {
+      "d": "2026-03-23",
+      "v": 36
+     },
+     {
+      "d": "2026-03-30",
+      "v": 24
+     },
+     {
+      "d": "2026-04-06",
+      "v": 35
+     },
+     {
+      "d": "2026-04-13",
+      "v": 23
+     },
+     {
+      "d": "2026-04-20",
+      "v": 32
+     },
+     {
+      "d": "2026-04-27",
+      "v": 33
+     },
+     {
+      "d": "2026-05-04",
+      "v": 53
+     },
+     {
+      "d": "2026-05-11",
+      "v": 78
+     },
+     {
+      "d": "2026-05-18",
+      "v": 52
+     },
+     {
+      "d": "2026-05-25",
+      "v": 52
+     },
+     {
+      "d": "2026-06-01",
+      "v": 63
+     },
+     {
+      "d": "2026-06-08",
+      "v": 67
+     },
+     {
+      "d": "2026-06-15",
+      "v": 62
+     },
+     {
+      "d": "2026-06-22",
+      "v": 66
+     },
+     {
+      "d": "2026-06-29",
+      "v": 64
+     },
+     {
+      "d": "2026-07-06",
+      "v": 40
+     },
+     {
+      "d": "2026-07-13",
+      "v": 44
+     },
+     {
+      "d": "2026-07-20",
+      "v": 46
+     },
+     {
+      "d": "2026-07-27",
+      "v": 51
+     },
+     {
+      "d": "2026-08-03",
+      "v": 59
+     },
+     {
+      "d": "2026-08-10",
+      "v": 59
+     },
+     {
+      "d": "2026-08-17",
+      "v": 46
+     },
+     {
+      "d": "2026-08-24",
+      "v": 55
+     },
+     {
+      "d": "2026-08-31",
+      "v": 51
+     },
+     {
+      "d": "2026-09-07",
+      "v": 51
+     },
+     {
+      "d": "2026-09-14",
+      "v": 65
+     },
+     {
+      "d": "2026-09-21",
+      "v": 98
+     },
+     {
+      "d": "2026-09-28",
+      "v": 164
+     },
+     {
+      "d": "2026-10-05",
+      "v": 130
+     },
+     {
+      "d": "2026-10-12",
+      "v": 119
+     }
+    ],
+    "trend": {
+     "change": 73,
+     "over": "8 weeks",
+     "high_52": 164,
+     "low_52": 13
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 56,
+     "window_hits": null,
+     "model_p": 0.99,
+     "expected": 118.3,
+     "sd": 11.5,
+     "threshold": 92,
+     "backtest": {
+      "n": 43,
+      "ok": true,
+      "base": 0.622,
+      "brier_model": 0.227,
+      "brier_base": 0.234,
+      "skill": 0.029,
+      "hit_rate": 0.628
+     },
+     "weight": 0.19,
+     "base_rate": 0.622,
+     "final_p": 0.69
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -3791,18 +4230,18 @@
     "mean_brier": null
    },
    "indicator-v1": {
-    "resolved": 1,
-    "open": 11,
-    "mean_brier": 0.27
+    "resolved": 2,
+    "open": 12,
+    "mean_brier": 0.223
    }
   },
-  "open": 23,
-  "resolved": 10,
+  "open": 24,
+  "resolved": 11,
   "voided": 0,
-  "mean_brier": 0.245,
+  "mean_brier": 0.238,
   "benchmark_brier": 0.25,
-  "skill": 0.02,
-  "mean_log_score": 0.684,
+  "skill": 0.05,
+  "mean_log_score": 0.672,
   "calibration": [
    {
     "range": "0-34%",
@@ -3812,8 +4251,8 @@
    },
    {
     "range": "34-67%",
-    "n": 4,
-    "mean_p": 0.59,
+    "n": 5,
+    "mean_p": 0.58,
     "observed": 1
    },
    {
