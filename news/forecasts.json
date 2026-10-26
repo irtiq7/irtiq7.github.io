@@ -4214,6 +4214,437 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-26-php",
+   "made": "2026-10-26",
+   "resolves": "2026-11-02",
+   "kind": "term-persistence",
+   "term": "php",
+   "label": "PHP",
+   "threshold": 5,
+   "p": 0.4,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"PHP\" be in at least 5 stories between 2026-10-27 and 2026-11-02?",
+   "context": {
+    "definition": {
+     "text": "PHP is a general-purpose scripting language geared toward web development. It was created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995.",
+     "title": "PHP",
+     "url": "https://en.wikipedia.org/wiki/PHP",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 0,
+     "ratio": 13,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 6,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      1,
+      0,
+      1,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26"
+     ],
+     "peak": {
+      "day": "2026-10-21",
+      "count": 4,
+      "share": 0.67
+     },
+     "first_seen": {
+      "tech": "2026-10-21"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "9865b391ed",
+      "title": "The PHP Meltdown Shows How AI Makes Bugs More Exploitable",
+      "url": "https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-24T12:00:00.000Z",
+      "summary": "To receive this newsletter in your inbox each week, sign up here.As security teams and web admins scrambled this week to patch newly public PHP bugs, criminal hackers quickly attempted to exploit the flaws in the wild."
+     },
+     {
+      "id": "0efdcaa8b1",
+      "title": "PHP: The three letters that shut down sites all over the internet today",
+      "url": "https://www.theverge.com/tech/1015906/php2shell-vulnerability-october-2026",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-10-21T20:36:56.000Z",
+      "summary": ""
+     },
+     {
+      "id": "66d6885dea",
+      "title": "PHP Armageddon: OpenAI, Google’s Wiz find ancient holes, panicking the internet",
+      "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-21T17:59:12.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.1,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.58,
+     "backtest": {
+      "cases": 2396,
+      "hits": 1218,
+      "origins": 10,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.68,
+      "shift": -0.73
+     },
+     "final_p": 0.4
+    },
+    "resolution": "Counts distinct stories published 2026-10-27 to 2026-11-02 (UTC) whose headline contains \"php\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 0,
+    "lambda": 5.1
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-26-hugging-face",
+   "made": "2026-10-26",
+   "resolves": "2026-11-02",
+   "kind": "term-persistence",
+   "term": "hugging face",
+   "label": "Hugging Face",
+   "threshold": 4,
+   "p": 0.43,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Hugging Face\" be in at least 4 stories between 2026-10-27 and 2026-11-02?",
+   "context": {
+    "definition": {
+     "text": "Hugging Face, Inc., is an American company based in New York City. Its online platform allows users to share datasets and machine learning models.",
+     "title": "Hugging Face",
+     "url": "https://en.wikipedia.org/wiki/Hugging_Face",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0,
+     "ratio": 11,
+     "outlets": 4,
+     "by_category": {
+      "research": 1,
+      "tech": 4,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+     ],
+     "days": [
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26"
+     ],
+     "peak": {
+      "day": "2026-10-20",
+      "count": 2,
+      "share": 0.5
+     },
+     "first_seen": {
+      "research": "2026-09-22",
+      "tech": "2026-10-19"
+     },
+     "lag_days": 28
+    },
+    "examples": [
+     {
+      "id": "4cd8b15dd6",
+      "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time",
+      "url": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/",
+      "source": "marktechpost",
+      "category": "tech",
+      "published": "2026-10-25T16:53:40.000Z",
+      "summary": "Hugging Face has released Carbon-X, an open DNA language model with 14.8B parameters. Carbon-X is a decoder-only model from Hugging Face Bio. Describe this sequence: ACGTACGATTCATATAAA Hybrid tokenizer output Tokenize Reset 5,515 DNA tokens"
+     },
+     {
+      "id": "ddf7f86b51",
+      "title": "Hugging Face’s New AI Biology Model Lets You Chat With DNA",
+      "url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-22T10:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "fda7124672",
+      "title": "Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate",
+      "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-20T22:24:02.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.3,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.61,
+     "backtest": {
+      "cases": 2396,
+      "hits": 1218,
+      "origins": 10,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.68,
+      "shift": -0.73
+     },
+     "final_p": 0.43
+    },
+    "resolution": "Counts distinct stories published 2026-10-27 to 2026-11-02 (UTC) whose headline contains \"hugging face\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0,
+    "lambda": 4.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-26-iphone",
+   "made": "2026-10-26",
+   "resolves": "2026-11-02",
+   "kind": "term-persistence",
+   "term": "iphone",
+   "label": "iphone",
+   "threshold": 8,
+   "p": 0.62,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"iphone\" be in at least 8 stories between 2026-10-27 and 2026-11-02?",
+   "context": {
+    "definition": {
+     "text": "The iPhone is a line of smartphones developed and marketed by Apple since 2007. The first-generation iPhone was announced by then–Apple CEO and co-founder Steve Jobs on January 9, 2007, at Macworld 2007, and first launched in June 2007.",
+     "title": "IPhone",
+     "url": "https://en.wikipedia.org/wiki/IPhone",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 11,
+     "base_per_week": 3.9,
+     "ratio": 2.6,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 11,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      5,
+      2,
+      2,
+      0
+     ],
+     "days": [
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-12",
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26"
+     ],
+     "peak": {
+      "day": "2026-10-23",
+      "count": 5,
+      "share": 0.45
+     },
+     "first_seen": {
+      "business": "2026-10-09",
+      "tech": "2026-10-12"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "da114e8ce7",
+      "title": "iFixit’s look inside the iPhone Duo may explain those broken screens and hinges",
+      "url": "https://www.theverge.com/tech/1018233/ifixit-iphone-duo-teardown-repairability-hinge",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-10-25T21:40:27.000Z",
+      "summary": "As is tradition, iFixit has torn open the latest iPhone and laid its parts bare on a table. It found some interesting details about how Apple might be hiding the crease on the Duo's folding screen and gave it a 5/10 repairability score."
+     },
+     {
+      "id": "1ccc88e487",
+      "title": "These clever apps show off the iPhone Duo’s potential",
+      "url": "https://techcrunch.com/2026/10/24/these-clever-apps-show-off-the-iphone-duos-potential/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-24T15:00:00.000Z",
+      "summary": "Netflix is one of Apple’s hand-picked partners for the Duo launch, and had its streaming app Duo-optimized by the time the device shipped, alongside others like the MLB app, NYT Cooking, Slack, my preferred calendar app Fantastical, and oth"
+     },
+     {
+      "id": "01416877de",
+      "title": "9 Unique Apps to Try on the iPhone Duo",
+      "url": "https://www.wired.com/story/unique-apps-to-try-on-the-iphone-duo/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-24T10:45:00.000Z",
+      "summary": "You'll also find a “Made for iPhone Duo” badge on apps that make best use of the larger screens on the App Store. From a game that has you closing the phone to grill a piece of toast to a clever way to memorize flash cards, here are nine un"
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 9.9,
+     "expected": 10,
+     "threshold": 8,
+     "model_p": 0.77,
+     "backtest": {
+      "cases": 2396,
+      "hits": 1218,
+      "origins": 10,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.68,
+      "shift": -0.73
+     },
+     "final_p": 0.62
+    },
+    "resolution": "Counts distinct stories published 2026-10-27 to 2026-11-02 (UTC) whose headline contains \"iphone\", across the 32 sources this site reads. 8 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 11,
+    "base_per_week": 3.9,
+    "lambda": 9.9
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -4226,7 +4657,7 @@
    },
    "burst-persistence-v2": {
     "resolved": 0,
-    "open": 6,
+    "open": 9,
     "mean_brier": null
    },
    "indicator-v1": {
@@ -4235,7 +4666,7 @@
     "mean_brier": 0.223
    }
   },
-  "open": 24,
+  "open": 27,
   "resolved": 11,
   "voided": 0,
   "mean_brier": 0.238,

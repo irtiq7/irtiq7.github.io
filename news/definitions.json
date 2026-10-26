@@ -47,8 +47,35 @@
    "source": "Wikipedia"
   }
  },
+ "hugging face": {
+  "checked": "2026-10-26",
+  "def": {
+   "text": "Hugging Face, Inc., is an American company based in New York City. Its online platform allows users to share datasets and machine learning models.",
+   "title": "Hugging Face",
+   "url": "https://en.wikipedia.org/wiki/Hugging_Face",
+   "source": "Wikipedia"
+  }
+ },
  "imf": {
   "checked": "2026-10-19",
   "def": null
+ },
+ "iphone": {
+  "checked": "2026-10-26",
+  "def": {
+   "text": "The iPhone is a line of smartphones developed and marketed by Apple since 2007. The first-generation iPhone was announced by then–Apple CEO and co-founder Steve Jobs on January 9, 2007, at Macworld 2007, and first launched in June 2007.",
+   "title": "IPhone",
+   "url": "https://en.wikipedia.org/wiki/IPhone",
+   "source": "Wikipedia"
+  }
+ },
+ "php": {
+  "checked": "2026-10-26",
+  "def": {
+   "text": "PHP is a general-purpose scripting language geared toward web development. It was created by Danish-Canadian programmer Rasmus Lerdorf in 1993 and released in 1995.",
+   "title": "PHP",
+   "url": "https://en.wikipedia.org/wiki/PHP",
+   "source": "Wikipedia"
+  }
  }
 }
