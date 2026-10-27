@@ -4645,6 +4645,225 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-27-arxiv-sound-localization",
+   "made": "2026-10-27",
+   "resolves": "2026-11-10",
+   "kind": "indicator",
+   "indicator": "arxiv-sound-localization",
+   "domain": "research",
+   "label": "arXiv papers on sound source localization",
+   "term": "arxiv-sound-localization",
+   "h_steps": 2,
+   "target_date": "2026-11-02",
+   "threshold": 4,
+   "direction": "above_avg",
+   "p": 0.47,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 4 papers on sound source localization in the week starting 2 November 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week about locating sound sources or estimating direction of arrival, the field behind robot hearing and passive sonar.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"sound source localization\" OR abs:\"acoustic localization\" OR abs:\"direction of arrival\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-19",
+     "value": 5
+    },
+    "history": [
+     {
+      "d": "2026-02-16",
+      "v": 4
+     },
+     {
+      "d": "2026-02-23",
+      "v": 4
+     },
+     {
+      "d": "2026-03-02",
+      "v": 0
+     },
+     {
+      "d": "2026-03-09",
+      "v": 3
+     },
+     {
+      "d": "2026-03-16",
+      "v": 4
+     },
+     {
+      "d": "2026-03-23",
+      "v": 2
+     },
+     {
+      "d": "2026-03-30",
+      "v": 4
+     },
+     {
+      "d": "2026-04-06",
+      "v": 1
+     },
+     {
+      "d": "2026-04-13",
+      "v": 2
+     },
+     {
+      "d": "2026-04-20",
+      "v": 3
+     },
+     {
+      "d": "2026-04-27",
+      "v": 7
+     },
+     {
+      "d": "2026-05-04",
+      "v": 2
+     },
+     {
+      "d": "2026-05-11",
+      "v": 4
+     },
+     {
+      "d": "2026-05-18",
+      "v": 6
+     },
+     {
+      "d": "2026-05-25",
+      "v": 5
+     },
+     {
+      "d": "2026-06-01",
+      "v": 2
+     },
+     {
+      "d": "2026-06-08",
+      "v": 2
+     },
+     {
+      "d": "2026-06-15",
+      "v": 5
+     },
+     {
+      "d": "2026-06-22",
+      "v": 3
+     },
+     {
+      "d": "2026-06-29",
+      "v": 4
+     },
+     {
+      "d": "2026-07-06",
+      "v": 3
+     },
+     {
+      "d": "2026-07-13",
+      "v": 3
+     },
+     {
+      "d": "2026-07-20",
+      "v": 3
+     },
+     {
+      "d": "2026-07-27",
+      "v": 4
+     },
+     {
+      "d": "2026-08-03",
+      "v": 0
+     },
+     {
+      "d": "2026-08-10",
+      "v": 6
+     },
+     {
+      "d": "2026-08-17",
+      "v": 2
+     },
+     {
+      "d": "2026-08-24",
+      "v": 0
+     },
+     {
+      "d": "2026-08-31",
+      "v": 0
+     },
+     {
+      "d": "2026-09-07",
+      "v": 4
+     },
+     {
+      "d": "2026-09-14",
+      "v": 5
+     },
+     {
+      "d": "2026-09-21",
+      "v": 6
+     },
+     {
+      "d": "2026-09-28",
+      "v": 5
+     },
+     {
+      "d": "2026-10-05",
+      "v": 7
+     },
+     {
+      "d": "2026-10-12",
+      "v": 3
+     },
+     {
+      "d": "2026-10-19",
+      "v": 5
+     }
+    ],
+    "trend": {
+     "change": 5,
+     "over": "8 weeks",
+     "high_52": 7,
+     "low_52": 0
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 61,
+     "window_hits": null,
+     "model_p": 0.62,
+     "expected": 4.7,
+     "sd": 2.3,
+     "threshold": 4,
+     "backtest": {
+      "n": 48,
+      "ok": true,
+      "base": 0.46,
+      "brier_model": 0.247,
+      "brier_base": 0.248,
+      "skill": 0.005,
+      "hit_rate": 0.625
+     },
+     "weight": 0.03,
+     "base_rate": 0.46,
+     "final_p": 0.47
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-11-02 to 2026-11-08 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -4662,11 +4881,11 @@
    },
    "indicator-v1": {
     "resolved": 2,
-    "open": 12,
+    "open": 13,
     "mean_brier": 0.223
    }
   },
-  "open": 27,
+  "open": 28,
   "resolved": 11,
   "voided": 0,
   "mean_brier": 0.238,
