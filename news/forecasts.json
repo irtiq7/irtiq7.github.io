@@ -206,10 +206,10 @@
     "base_per_week": 0,
     "lambda": 8.5
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.372,
+   "log_score": 0.942
   },
   {
    "id": "f-2026-10-19-uncertainty",
@@ -227,10 +227,10 @@
     "base_per_week": 0.3,
     "lambda": 12.8
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 9,
+   "brier": 0.533,
+   "log_score": 1.309
   },
   {
    "id": "f-2026-10-19-quarter",
@@ -248,10 +248,10 @@
     "base_per_week": 0.7,
     "lambda": 15.4
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.449,
+   "log_score": 1.109
   },
   {
    "id": "f-2026-10-19-stake",
@@ -269,10 +269,10 @@
     "base_per_week": 0,
     "lambda": 7.7
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.41,
+   "log_score": 1.022
   },
   {
    "id": "f-2026-10-19-coreweave",
@@ -290,10 +290,10 @@
     "base_per_week": 0,
     "lambda": 7.7
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 4,
+   "brier": 0.41,
+   "log_score": 1.022
   },
   {
    "id": "f-2026-10-19-property",
@@ -311,10 +311,10 @@
     "base_per_week": 0,
     "lambda": 6.8
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.449,
+   "log_score": 1.109
   },
   {
    "id": "f-2026-10-19-character-ai",
@@ -455,10 +455,20 @@
     "base_per_week": 0,
     "lambda": 5.1
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.152,
+   "log_score": 0.494,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "0 stories over 7 days, at most 0 on any one day; no mentions at all."
   },
   {
    "id": "f-2026-10-19-coreweave",
@@ -598,10 +608,20 @@
     "base_per_week": 0,
     "lambda": 4.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 3,
+   "brier": 0.185,
+   "log_score": 0.562,
+   "daily_after": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "result_note": "3 stories over 7 days, at most 2 on any one day; mentions faded as the window went on."
   },
   {
    "id": "f-2026-10-19-homeview",
@@ -741,10 +761,20 @@
     "base_per_week": 0.7,
     "lambda": 5.2
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.168,
+   "log_score": 0.528,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "0 stories over 7 days, at most 0 on any one day; no mentions at all."
   },
   {
    "id": "f-2026-10-19-elizabeth-holmes",
@@ -885,10 +915,20 @@
     "base_per_week": 0.7,
     "lambda": 4.4
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.203,
+   "log_score": 0.598,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "0 stories over 7 days, at most 0 on any one day; no mentions at all."
   },
   {
    "id": "f-2026-10-19-ai-trade",
@@ -1023,10 +1063,20 @@
     "base_per_week": 1.5,
     "lambda": 6.2
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 5,
+   "brier": 0.185,
+   "log_score": 0.562,
+   "daily_after": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1
+   ],
+   "result_note": "5 stories over 7 days, at most 2 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-10-19-gemini-argon",
@@ -1162,10 +1212,20 @@
     "base_per_week": 1.5,
     "lambda": 4.5
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.221,
+   "log_score": 0.635,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "0 stories over 7 days, at most 0 on any one day; no mentions at all."
   },
   {
    "id": "f-2026-10-19-us-unemployment",
@@ -4870,14 +4930,14 @@
   "model": "poisson-persistence-v1",
   "by_model": {
    "poisson-persistence-v1": {
-    "resolved": 9,
-    "open": 6,
-    "mean_brier": 0.242
+    "resolved": 15,
+    "open": 0,
+    "mean_brier": 0.32
    },
    "burst-persistence-v2": {
-    "resolved": 0,
-    "open": 9,
-    "mean_brier": null
+    "resolved": 6,
+    "open": 3,
+    "mean_brier": 0.186
    },
    "indicator-v1": {
     "resolved": 2,
@@ -4885,13 +4945,13 @@
     "mean_brier": 0.223
    }
   },
-  "open": 28,
-  "resolved": 11,
+  "open": 16,
+  "resolved": 23,
   "voided": 0,
-  "mean_brier": 0.238,
+  "mean_brier": 0.276,
   "benchmark_brier": 0.25,
-  "skill": 0.05,
-  "mean_log_score": 0.672,
+  "skill": -0.1,
+  "mean_log_score": 0.751,
   "calibration": [
    {
     "range": "0-34%",
@@ -4901,15 +4961,15 @@
    },
    {
     "range": "34-67%",
-    "n": 5,
-    "mean_p": 0.58,
-    "observed": 1
+    "n": 14,
+    "mean_p": 0.54,
+    "observed": 0.43
    },
    {
     "range": "67-100%",
-    "n": 6,
-    "mean_p": 0.74,
-    "observed": 0.5
+    "n": 9,
+    "mean_p": 0.72,
+    "observed": 0.33
    }
   ]
  },
