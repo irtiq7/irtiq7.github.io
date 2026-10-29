@@ -2090,10 +2090,11 @@
     "resolution": "Uses the last value on or before 23 October 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 80.79,
+   "brier": 0.09,
+   "log_score": 0.357,
+   "result_note": "The value was 80.79, against 78.1 at the start (+2.69)."
   },
   {
    "id": "f-2026-10-19-dk-unemployment",
@@ -3832,10 +3833,11 @@
     "resolution": "Uses the last value on or before 28 October 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 4.99,
+   "brier": 0.24,
+   "log_score": 0.673,
+   "result_note": "The value was 4.99, against 5.13 at the start (-0.14)."
   },
   {
    "id": "f-2026-10-24-us-stocks",
@@ -4051,10 +4053,11 @@
     "resolution": "Uses the last value on or before 28 October 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 7743.98,
+   "brier": 0.384,
+   "log_score": 0.968,
+   "result_note": "The value was 7,743.98, against 7,757.17 at the start (-13.19)."
   },
   {
    "id": "f-2026-10-24-arxiv-world-models",
@@ -4924,6 +4927,663 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-29-indeed-software",
+   "made": "2026-10-29",
+   "resolves": "2026-11-05",
+   "kind": "indicator",
+   "indicator": "indeed-software",
+   "domain": "jobs",
+   "label": "Indeed software development job postings",
+   "term": "indeed-software",
+   "h_steps": 1,
+   "target_date": "2026-10-30",
+   "threshold": 80.7879518681,
+   "direction": "higher",
+   "p": 0.67,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Indeed software development job postings be higher on 30 October 2026 than on 23 October 2026 (80.8)?",
+   "context": {
+    "measure": {
+     "why": "Postings for software development jobs on Indeed in the US, relative to 1 February 2020 (set to 100). A measure of how much employers are hiring in the field.",
+     "unit": "index, 1 Feb 2020 = 100",
+     "source": {
+      "kind": "fred",
+      "series": "IHLIDXUSTPSOFTDEVE",
+      "name": "Indeed Hiring Lab, via FRED",
+      "url": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE"
+     },
+     "lag": "updated daily with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-23",
+     "value": 80.79
+    },
+    "history": [
+     {
+      "d": "2026-02-20",
+      "v": 70.5
+     },
+     {
+      "d": "2026-02-27",
+      "v": 70.96
+     },
+     {
+      "d": "2026-03-06",
+      "v": 70.57
+     },
+     {
+      "d": "2026-03-13",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-20",
+      "v": 71.44
+     },
+     {
+      "d": "2026-03-27",
+      "v": 72.76
+     },
+     {
+      "d": "2026-04-03",
+      "v": 72.49
+     },
+     {
+      "d": "2026-04-10",
+      "v": 72.19
+     },
+     {
+      "d": "2026-04-17",
+      "v": 73.13
+     },
+     {
+      "d": "2026-04-24",
+      "v": 73.71
+     },
+     {
+      "d": "2026-05-01",
+      "v": 72.94
+     },
+     {
+      "d": "2026-05-08",
+      "v": 74.64
+     },
+     {
+      "d": "2026-05-15",
+      "v": 74.04
+     },
+     {
+      "d": "2026-05-22",
+      "v": 74.42
+     },
+     {
+      "d": "2026-05-29",
+      "v": 73.64
+     },
+     {
+      "d": "2026-06-05",
+      "v": 73.5
+     },
+     {
+      "d": "2026-06-12",
+      "v": 72.88
+     },
+     {
+      "d": "2026-06-19",
+      "v": 72.67
+     },
+     {
+      "d": "2026-06-26",
+      "v": 73.49
+     },
+     {
+      "d": "2026-07-03",
+      "v": 73.78
+     },
+     {
+      "d": "2026-07-10",
+      "v": 74.53
+     },
+     {
+      "d": "2026-07-17",
+      "v": 75.59
+     },
+     {
+      "d": "2026-07-24",
+      "v": 75.48
+     },
+     {
+      "d": "2026-07-31",
+      "v": 75.44
+     },
+     {
+      "d": "2026-08-07",
+      "v": 73.63
+     },
+     {
+      "d": "2026-08-14",
+      "v": 74.35
+     },
+     {
+      "d": "2026-08-21",
+      "v": 74.56
+     },
+     {
+      "d": "2026-08-28",
+      "v": 74.61
+     },
+     {
+      "d": "2026-09-04",
+      "v": 76.12
+     },
+     {
+      "d": "2026-09-11",
+      "v": 76.63
+     },
+     {
+      "d": "2026-09-18",
+      "v": 77.32
+     },
+     {
+      "d": "2026-09-25",
+      "v": 78.08
+     },
+     {
+      "d": "2026-10-02",
+      "v": 78.34
+     },
+     {
+      "d": "2026-10-09",
+      "v": 78.1
+     },
+     {
+      "d": "2026-10-16",
+      "v": 78.86
+     },
+     {
+      "d": "2026-10-23",
+      "v": 80.79
+     }
+    ],
+    "trend": {
+     "change": 6.18,
+     "over": "8 weeks",
+     "high_52": 80.79,
+     "low_52": 65.88
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 343,
+     "window_hits": null,
+     "model_p": 0.67,
+     "expected": 81.13,
+     "sd": 0.66,
+     "threshold": 80.7879518681,
+     "backtest": {
+      "n": 323,
+      "ok": true,
+      "base": 0.495,
+      "brier_model": 0.181,
+      "brier_base": 0.25,
+      "skill": 0.274,
+      "hit_rate": 0.734
+     },
+     "weight": 1,
+     "base_rate": 0.495,
+     "final_p": 0.67
+    },
+    "resolution": "Uses the last value on or before 30 October 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-29-us-10y-yield",
+   "made": "2026-10-29",
+   "resolves": "2026-11-09",
+   "kind": "indicator",
+   "indicator": "us-10y-yield",
+   "domain": "economy",
+   "label": "US 10-year Treasury yield",
+   "term": "us-10y-yield",
+   "h_steps": 1,
+   "target_date": "2026-11-03",
+   "threshold": 4.99,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 10-year Treasury yield close higher on 3 November 2026 than on 27 October 2026 (4.99%)?",
+   "context": {
+    "measure": {
+     "why": "The yield on 10-year US government bonds, a benchmark for mortgage and company borrowing rates. Short-term moves are close to a coin flip, so these questions mostly teach how little can be predicted.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "DGS10",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-27",
+     "value": 4.99
+    },
+    "history": [
+     {
+      "d": "2026-02-24",
+      "v": 4.04
+     },
+     {
+      "d": "2026-03-03",
+      "v": 4.06
+     },
+     {
+      "d": "2026-03-10",
+      "v": 4.15
+     },
+     {
+      "d": "2026-03-17",
+      "v": 4.2
+     },
+     {
+      "d": "2026-03-24",
+      "v": 4.39
+     },
+     {
+      "d": "2026-03-31",
+      "v": 4.3
+     },
+     {
+      "d": "2026-04-07",
+      "v": 4.33
+     },
+     {
+      "d": "2026-04-14",
+      "v": 4.26
+     },
+     {
+      "d": "2026-04-21",
+      "v": 4.3
+     },
+     {
+      "d": "2026-04-28",
+      "v": 4.36
+     },
+     {
+      "d": "2026-05-05",
+      "v": 4.43
+     },
+     {
+      "d": "2026-05-12",
+      "v": 4.46
+     },
+     {
+      "d": "2026-05-19",
+      "v": 4.67
+     },
+     {
+      "d": "2026-05-26",
+      "v": 4.5
+     },
+     {
+      "d": "2026-06-02",
+      "v": 4.46
+     },
+     {
+      "d": "2026-06-09",
+      "v": 4.53
+     },
+     {
+      "d": "2026-06-16",
+      "v": 4.43
+     },
+     {
+      "d": "2026-06-23",
+      "v": 4.5
+     },
+     {
+      "d": "2026-06-30",
+      "v": 4.44
+     },
+     {
+      "d": "2026-07-07",
+      "v": 4.55
+     },
+     {
+      "d": "2026-07-14",
+      "v": 4.58
+     },
+     {
+      "d": "2026-07-21",
+      "v": 4.63
+     },
+     {
+      "d": "2026-07-28",
+      "v": 4.61
+     },
+     {
+      "d": "2026-08-04",
+      "v": 4.63
+     },
+     {
+      "d": "2026-08-11",
+      "v": 4.7
+     },
+     {
+      "d": "2026-08-18",
+      "v": 4.71
+     },
+     {
+      "d": "2026-08-25",
+      "v": 4.64
+     },
+     {
+      "d": "2026-09-01",
+      "v": 4.79
+     },
+     {
+      "d": "2026-09-08",
+      "v": 4.8
+     },
+     {
+      "d": "2026-09-15",
+      "v": 5
+     },
+     {
+      "d": "2026-09-22",
+      "v": 4.96
+     },
+     {
+      "d": "2026-09-29",
+      "v": 5.26
+     },
+     {
+      "d": "2026-10-06",
+      "v": 5.27
+     },
+     {
+      "d": "2026-10-13",
+      "v": 5.21
+     },
+     {
+      "d": "2026-10-20",
+      "v": 5.12
+     },
+     {
+      "d": "2026-10-27",
+      "v": 4.99
+     }
+    ],
+    "trend": {
+     "change": 0.2,
+     "over": "8 weeks",
+     "high_52": 5.27,
+     "low_52": 4.01
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 3375,
+     "window_hits": null,
+     "model_p": 0.48,
+     "expected": 4.989,
+     "sd": 0.103,
+     "threshold": 4.99,
+     "backtest": {
+      "n": 3355,
+      "ok": true,
+      "base": 0.483,
+      "brier_model": 0.257,
+      "brier_base": 0.25,
+      "skill": -0.03,
+      "hit_rate": 0.525
+     },
+     "weight": 0,
+     "base_rate": 0.483,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 3 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-29-us-stocks",
+   "made": "2026-10-29",
+   "resolves": "2026-11-10",
+   "kind": "indicator",
+   "indicator": "us-stocks",
+   "domain": "economy",
+   "label": "S&P 500 stock index",
+   "term": "us-stocks",
+   "h_steps": 1,
+   "target_date": "2026-11-04",
+   "threshold": 7743.98,
+   "direction": "higher",
+   "p": 0.62,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the S&P 500 stock index close higher on 4 November 2026 than on 28 October 2026 (7,743.98)?",
+   "context": {
+    "measure": {
+     "why": "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "SP500",
+      "name": "S&P Dow Jones Indices, via FRED",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-28",
+     "value": 7743.98
+    },
+    "history": [
+     {
+      "d": "2026-02-25",
+      "v": 6946.13
+     },
+     {
+      "d": "2026-03-04",
+      "v": 6869.5
+     },
+     {
+      "d": "2026-03-11",
+      "v": 6775.8
+     },
+     {
+      "d": "2026-03-18",
+      "v": 6624.7
+     },
+     {
+      "d": "2026-03-25",
+      "v": 6591.9
+     },
+     {
+      "d": "2026-04-01",
+      "v": 6575.32
+     },
+     {
+      "d": "2026-04-08",
+      "v": 6782.81
+     },
+     {
+      "d": "2026-04-15",
+      "v": 7022.95
+     },
+     {
+      "d": "2026-04-22",
+      "v": 7137.9
+     },
+     {
+      "d": "2026-04-29",
+      "v": 7135.95
+     },
+     {
+      "d": "2026-05-06",
+      "v": 7365.12
+     },
+     {
+      "d": "2026-05-13",
+      "v": 7444.25
+     },
+     {
+      "d": "2026-05-20",
+      "v": 7432.97
+     },
+     {
+      "d": "2026-05-27",
+      "v": 7520.36
+     },
+     {
+      "d": "2026-06-03",
+      "v": 7553.68
+     },
+     {
+      "d": "2026-06-10",
+      "v": 7266.99
+     },
+     {
+      "d": "2026-06-17",
+      "v": 7420.1
+     },
+     {
+      "d": "2026-06-24",
+      "v": 7358.22
+     },
+     {
+      "d": "2026-07-01",
+      "v": 7483.23
+     },
+     {
+      "d": "2026-07-08",
+      "v": 7482.71
+     },
+     {
+      "d": "2026-07-15",
+      "v": 7572.4
+     },
+     {
+      "d": "2026-07-22",
+      "v": 7498.96
+     },
+     {
+      "d": "2026-07-29",
+      "v": 7316.15
+     },
+     {
+      "d": "2026-08-05",
+      "v": 7723.55
+     },
+     {
+      "d": "2026-08-12",
+      "v": 7748.5
+     },
+     {
+      "d": "2026-08-19",
+      "v": 7707.98
+     },
+     {
+      "d": "2026-08-26",
+      "v": 7675.7
+     },
+     {
+      "d": "2026-09-02",
+      "v": 7666.6
+     },
+     {
+      "d": "2026-09-09",
+      "v": 7636.36
+     },
+     {
+      "d": "2026-09-16",
+      "v": 7551.81
+     },
+     {
+      "d": "2026-09-23",
+      "v": 7706.03
+     },
+     {
+      "d": "2026-09-30",
+      "v": 7651.54
+     },
+     {
+      "d": "2026-10-07",
+      "v": 7801.77
+     },
+     {
+      "d": "2026-10-14",
+      "v": 7718.94
+     },
+     {
+      "d": "2026-10-21",
+      "v": 7757.17
+     },
+     {
+      "d": "2026-10-28",
+      "v": 7743.98
+     }
+    ],
+    "trend": {
+     "change": 77.38,
+     "over": "8 weeks",
+     "high_52": 7801.77,
+     "low_52": 6575.32
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 514,
+     "window_hits": null,
+     "model_p": 0.56,
+     "expected": 7759.994,
+     "sd": 107.328,
+     "threshold": 7743.98,
+     "backtest": {
+      "n": 494,
+      "ok": true,
+      "base": 0.615,
+      "brier_model": 0.26,
+      "brier_base": 0.237,
+      "skill": -0.098,
+      "hit_rate": 0.52
+     },
+     "weight": 0,
+     "base_rate": 0.615,
+     "final_p": 0.62
+    },
+    "resolution": "Uses the last value on or before 4 November 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -4940,18 +5600,18 @@
     "mean_brier": 0.186
    },
    "indicator-v1": {
-    "resolved": 2,
+    "resolved": 5,
     "open": 13,
-    "mean_brier": 0.223
+    "mean_brier": 0.232
    }
   },
   "open": 16,
-  "resolved": 23,
+  "resolved": 26,
   "voided": 0,
-  "mean_brier": 0.276,
+  "mean_brier": 0.272,
   "benchmark_brier": 0.25,
-  "skill": -0.1,
-  "mean_log_score": 0.751,
+  "skill": -0.09,
+  "mean_log_score": 0.742,
   "calibration": [
    {
     "range": "0-34%",
@@ -4961,15 +5621,15 @@
    },
    {
     "range": "34-67%",
-    "n": 14,
+    "n": 16,
     "mean_p": 0.54,
-    "observed": 0.43
+    "observed": 0.38
    },
    {
     "range": "67-100%",
-    "n": 9,
+    "n": 10,
     "mean_p": 0.72,
-    "observed": 0.33
+    "observed": 0.4
    }
   ]
  },
