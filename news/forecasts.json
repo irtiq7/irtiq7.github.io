@@ -1656,10 +1656,11 @@
     "resolution": "Uses the value for the week ending 24 October 2026 as first shown by US Department of Labor, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 194000,
+   "brier": 0.203,
+   "log_score": 0.598,
+   "result_note": "The value was 194,000 against a bar of 199,000 (-5,000)."
   },
   {
    "id": "f-2026-10-19-us-payrolls",
@@ -2308,10 +2309,11 @@
     "resolution": "Uses the value for September 2026 as first shown by Eurostat (seasonally adjusted). Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 6.8,
+   "brier": 0.348,
+   "log_score": 0.892,
+   "result_note": "The value was 6.8, against 5.9 at the start (+0.9)."
   },
   {
    "id": "f-2026-10-19-us-inflation",
@@ -5584,6 +5586,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-us-jobless-claims",
+   "made": "2026-10-30",
+   "resolves": "2026-11-13",
+   "kind": "indicator",
+   "indicator": "us-jobless-claims",
+   "domain": "jobs",
+   "label": "US weekly jobless claims",
+   "term": "us-jobless-claims",
+   "h_steps": 2,
+   "target_date": "2026-11-07",
+   "threshold": 197000,
+   "direction": "above_avg",
+   "p": 0.45,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will US initial jobless claims for the week ending 7 November 2026 be above 197,000, the average of the last 4 weeks?",
+   "context": {
+    "measure": {
+     "why": "The number of people who filed a first claim for unemployment benefits in a week. It is published every Thursday and moves quickly, so it is an early sign of layoffs.",
+     "unit": "",
+     "source": {
+      "kind": "fred",
+      "series": "ICSA",
+      "name": "US Department of Labor, via FRED",
+      "url": "https://fred.stlouisfed.org/series/ICSA"
+     },
+     "lag": "published on the Thursday after the week ends",
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-24",
+     "value": 194000
+    },
+    "history": [
+     {
+      "d": "2026-02-21",
+      "v": 211000
+     },
+     {
+      "d": "2026-02-28",
+      "v": 214000
+     },
+     {
+      "d": "2026-03-07",
+      "v": 213000
+     },
+     {
+      "d": "2026-03-14",
+      "v": 205000
+     },
+     {
+      "d": "2026-03-21",
+      "v": 211000
+     },
+     {
+      "d": "2026-03-28",
+      "v": 203000
+     },
+     {
+      "d": "2026-04-04",
+      "v": 218000
+     },
+     {
+      "d": "2026-04-11",
+      "v": 208000
+     },
+     {
+      "d": "2026-04-18",
+      "v": 215000
+     },
+     {
+      "d": "2026-04-25",
+      "v": 190000
+     },
+     {
+      "d": "2026-05-02",
+      "v": 199000
+     },
+     {
+      "d": "2026-05-09",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-16",
+      "v": 210000
+     },
+     {
+      "d": "2026-05-23",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-30",
+      "v": 225000
+     },
+     {
+      "d": "2026-06-06",
+      "v": 230000
+     },
+     {
+      "d": "2026-06-13",
+      "v": 227000
+     },
+     {
+      "d": "2026-06-20",
+      "v": 216000
+     },
+     {
+      "d": "2026-06-27",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-04",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-11",
+      "v": 209000
+     },
+     {
+      "d": "2026-07-18",
+      "v": 189000
+     },
+     {
+      "d": "2026-07-25",
+      "v": 198000
+     },
+     {
+      "d": "2026-08-01",
+      "v": 200000
+     },
+     {
+      "d": "2026-08-08",
+      "v": 212000
+     },
+     {
+      "d": "2026-08-15",
+      "v": 207000
+     },
+     {
+      "d": "2026-08-22",
+      "v": 204000
+     },
+     {
+      "d": "2026-08-29",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-05",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-12",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-19",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-26",
+      "v": 199000
+     },
+     {
+      "d": "2026-10-03",
+      "v": 198000
+     },
+     {
+      "d": "2026-10-10",
+      "v": 200000
+     },
+     {
+      "d": "2026-10-17",
+      "v": 195000
+     },
+     {
+      "d": "2026-10-24",
+      "v": 194000
+     }
+    ],
+    "trend": {
+     "change": -13000,
+     "over": "8 weeks",
+     "high_52": 235000,
+     "low_52": 189000
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 4,
+     "h": 2,
+     "window_n": 3110,
+     "window_hits": null,
+     "model_p": 0.47,
+     "expected": 196271.8,
+     "sd": 10182.2,
+     "threshold": 197000,
+     "backtest": {
+      "n": 3089,
+      "ok": true,
+      "base": 0.446,
+      "brier_model": 0.248,
+      "brier_base": 0.247,
+      "skill": -0.004,
+      "hit_rate": 0.543
+     },
+     "weight": 0,
+     "base_rate": 0.446,
+     "final_p": 0.45
+    },
+    "resolution": "Uses the value for the week ending 7 November 2026 as first shown by US Department of Labor, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-dk-unemployment",
+   "made": "2026-10-30",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "dk-unemployment",
+   "domain": "jobs",
+   "label": "Denmark unemployment rate",
+   "term": "dk-unemployment",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 6.8,
+   "direction": "higher",
+   "p": 0.41,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Denmark unemployment rate for October 2026 be higher than 6.8%?",
+   "context": {
+    "measure": {
+     "why": "The share of Denmark's labour force without work, seasonally adjusted and harmonised across countries by Eurostat.",
+     "unit": "%",
+     "source": {
+      "kind": "eurostat",
+      "geo": "DK",
+      "name": "Eurostat (seasonally adjusted)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en"
+     },
+     "lag": "published about six weeks after the month ends",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 6.8
+    },
+    "history": [
+     {
+      "d": "2023-10-01",
+      "v": 6.2
+     },
+     {
+      "d": "2023-11-01",
+      "v": 5.9
+     },
+     {
+      "d": "2023-12-01",
+      "v": 6
+     },
+     {
+      "d": "2024-01-01",
+      "v": 5.9
+     },
+     {
+      "d": "2024-02-01",
+      "v": 5.7
+     },
+     {
+      "d": "2024-03-01",
+      "v": 5.8
+     },
+     {
+      "d": "2024-04-01",
+      "v": 5.8
+     },
+     {
+      "d": "2024-05-01",
+      "v": 6.1
+     },
+     {
+      "d": "2024-06-01",
+      "v": 6.2
+     },
+     {
+      "d": "2024-07-01",
+      "v": 6
+     },
+     {
+      "d": "2024-08-01",
+      "v": 6.3
+     },
+     {
+      "d": "2024-09-01",
+      "v": 6.7
+     },
+     {
+      "d": "2024-10-01",
+      "v": 5.9
+     },
+     {
+      "d": "2024-11-01",
+      "v": 6.8
+     },
+     {
+      "d": "2024-12-01",
+      "v": 7.2
+     },
+     {
+      "d": "2025-01-01",
+      "v": 6.6
+     },
+     {
+      "d": "2025-02-01",
+      "v": 5.4
+     },
+     {
+      "d": "2025-03-01",
+      "v": 7.1
+     },
+     {
+      "d": "2025-04-01",
+      "v": 6.8
+     },
+     {
+      "d": "2025-05-01",
+      "v": 5.3
+     },
+     {
+      "d": "2025-06-01",
+      "v": 6.7
+     },
+     {
+      "d": "2025-07-01",
+      "v": 6.5
+     },
+     {
+      "d": "2025-08-01",
+      "v": 6.5
+     },
+     {
+      "d": "2025-09-01",
+      "v": 6.3
+     },
+     {
+      "d": "2025-10-01",
+      "v": 6.8
+     },
+     {
+      "d": "2025-11-01",
+      "v": 6.6
+     },
+     {
+      "d": "2025-12-01",
+      "v": 6
+     },
+     {
+      "d": "2026-01-01",
+      "v": 7.1
+     },
+     {
+      "d": "2026-02-01",
+      "v": 7.2
+     },
+     {
+      "d": "2026-03-01",
+      "v": 6.6
+     },
+     {
+      "d": "2026-04-01",
+      "v": 7
+     },
+     {
+      "d": "2026-05-01",
+      "v": 6.9
+     },
+     {
+      "d": "2026-06-01",
+      "v": 6.6
+     },
+     {
+      "d": "2026-07-01",
+      "v": 6.7
+     },
+     {
+      "d": "2026-08-01",
+      "v": 5.8
+     },
+     {
+      "d": "2026-09-01",
+      "v": 6.8
+     }
+    ],
+    "trend": {
+     "change": 0.2,
+     "over": "6 months",
+     "high_52": 7.2,
+     "low_52": 4.3
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 337,
+     "window_hits": null,
+     "model_p": 0.47,
+     "expected": 6.82,
+     "sd": 0.46,
+     "threshold": 6.8,
+     "backtest": {
+      "n": 317,
+      "ok": true,
+      "base": 0.411,
+      "brier_model": 0.262,
+      "brier_base": 0.242,
+      "skill": -0.081,
+      "hit_rate": 0.517
+     },
+     "weight": 0,
+     "base_rate": 0.411,
+     "final_p": 0.41
+    },
+    "resolution": "Uses the value for October 2026 as first shown by Eurostat (seasonally adjusted). Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -5600,13 +6040,13 @@
     "mean_brier": 0.186
    },
    "indicator-v1": {
-    "resolved": 5,
+    "resolved": 7,
     "open": 13,
-    "mean_brier": 0.232
+    "mean_brier": 0.244
    }
   },
   "open": 16,
-  "resolved": 26,
+  "resolved": 28,
   "voided": 0,
   "mean_brier": 0.272,
   "benchmark_brier": 0.25,
@@ -5621,9 +6061,9 @@
    },
    {
     "range": "34-67%",
-    "n": 16,
-    "mean_p": 0.54,
-    "observed": 0.38
+    "n": 18,
+    "mean_p": 0.53,
+    "observed": 0.39
    },
    {
     "range": "67-100%",
