@@ -472,6 +472,8 @@ async function main() {
     "burst-persistence-v2": "From 19 October 2026. Terms come from headlines only. A phrase counts as emerging only when it is used at least 2.2 times as often as in the previous three weeks, in at least 5 stories from at least 3 outlets (4 for research-only phrases). Probabilities are corrected using how often comparable phrases held their level in the weeks already collected. Phrases still confined to research sources get a different question: will they reach tech or business coverage?",
   };
   written(fFile, JSON.stringify(ledger, null, 1) + "\n", "news/forecasts.json");
+  const outlook = indicators.buildOutlook(getRaw, ledger.forecasts);
+  written(path.join(NEWS, "outlook.json"), JSON.stringify({ updated: day(NOW), items: outlook }) + "\n", "news/outlook.json");
 }
 
 main().catch((e) => { console.error(e.message); process.exit(1); });

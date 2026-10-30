@@ -6024,6 +6024,882 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-us-mortgage",
+   "made": "2026-10-30",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-mortgage",
+   "domain": "economy",
+   "label": "US 30-year mortgage rate",
+   "term": "us-mortgage",
+   "h_steps": 1,
+   "target_date": "2026-11-05",
+   "threshold": 7.24,
+   "direction": "higher",
+   "p": 0.45,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 30-year mortgage rate for November 2026 be higher than 7.24%?",
+   "context": {
+    "measure": {
+     "why": "The average rate on a 30-year fixed US home loan, from Freddie Mac's weekly survey. It follows long-term bond yields and shows what borrowing to buy a home costs.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "MORTGAGE30US",
+      "name": "Freddie Mac, via FRED",
+      "url": "https://fred.stlouisfed.org/series/MORTGAGE30US"
+     },
+     "lag": "published on Thursdays",
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-29",
+     "value": 7.24
+    },
+    "history": [
+     {
+      "d": "2026-02-26",
+      "v": 5.98
+     },
+     {
+      "d": "2026-03-05",
+      "v": 6
+     },
+     {
+      "d": "2026-03-12",
+      "v": 6.11
+     },
+     {
+      "d": "2026-03-19",
+      "v": 6.22
+     },
+     {
+      "d": "2026-03-26",
+      "v": 6.38
+     },
+     {
+      "d": "2026-04-02",
+      "v": 6.46
+     },
+     {
+      "d": "2026-04-09",
+      "v": 6.37
+     },
+     {
+      "d": "2026-04-16",
+      "v": 6.3
+     },
+     {
+      "d": "2026-04-23",
+      "v": 6.23
+     },
+     {
+      "d": "2026-04-30",
+      "v": 6.3
+     },
+     {
+      "d": "2026-05-07",
+      "v": 6.37
+     },
+     {
+      "d": "2026-05-14",
+      "v": 6.36
+     },
+     {
+      "d": "2026-05-21",
+      "v": 6.51
+     },
+     {
+      "d": "2026-05-28",
+      "v": 6.53
+     },
+     {
+      "d": "2026-06-04",
+      "v": 6.48
+     },
+     {
+      "d": "2026-06-11",
+      "v": 6.52
+     },
+     {
+      "d": "2026-06-18",
+      "v": 6.47
+     },
+     {
+      "d": "2026-06-25",
+      "v": 6.49
+     },
+     {
+      "d": "2026-07-02",
+      "v": 6.43
+     },
+     {
+      "d": "2026-07-09",
+      "v": 6.49
+     },
+     {
+      "d": "2026-07-16",
+      "v": 6.55
+     },
+     {
+      "d": "2026-07-23",
+      "v": 6.58
+     },
+     {
+      "d": "2026-07-30",
+      "v": 6.66
+     },
+     {
+      "d": "2026-08-06",
+      "v": 6.69
+     },
+     {
+      "d": "2026-08-13",
+      "v": 6.67
+     },
+     {
+      "d": "2026-08-20",
+      "v": 6.65
+     },
+     {
+      "d": "2026-08-27",
+      "v": 6.66
+     },
+     {
+      "d": "2026-09-03",
+      "v": 6.71
+     },
+     {
+      "d": "2026-09-10",
+      "v": 6.76
+     },
+     {
+      "d": "2026-09-17",
+      "v": 6.95
+     },
+     {
+      "d": "2026-09-24",
+      "v": 7.03
+     },
+     {
+      "d": "2026-10-01",
+      "v": 7.28
+     },
+     {
+      "d": "2026-10-08",
+      "v": 7.4
+     },
+     {
+      "d": "2026-10-15",
+      "v": 7.4
+     },
+     {
+      "d": "2026-10-22",
+      "v": 7.32
+     },
+     {
+      "d": "2026-10-29",
+      "v": 7.24
+     }
+    ],
+    "trend": {
+     "change": 0.53,
+     "over": "8 weeks",
+     "high_52": 7.4,
+     "low_52": 5.98
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2893,
+     "window_hits": null,
+     "model_p": 0.61,
+     "expected": 7.264,
+     "sd": 0.071,
+     "threshold": 7.24,
+     "backtest": {
+      "n": 2873,
+      "ok": true,
+      "base": 0.424,
+      "brier_model": 0.24,
+      "brier_base": 0.244,
+      "skill": 0.019,
+      "hit_rate": 0.6
+     },
+     "weight": 0.13,
+     "base_rate": 0.424,
+     "final_p": 0.45
+    },
+    "resolution": "Uses the value for the week ending 5 November 2026 as first shown by Freddie Mac, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-usd-dkk",
+   "made": "2026-10-30",
+   "resolves": "2026-11-12",
+   "kind": "indicator",
+   "indicator": "usd-dkk",
+   "domain": "economy",
+   "label": "US dollar in Danish kroner",
+   "term": "usd-dkk",
+   "h_steps": 2,
+   "target_date": "2026-11-06",
+   "threshold": 6.6729,
+   "direction": "higher",
+   "p": 0.49,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US dollar in Danish kroner close higher on 6 November 2026 than on 23 October 2026 (6.673)?",
+   "context": {
+    "measure": {
+     "why": "How many Danish kroner one US dollar buys. The krone is tied to the euro, so this moves with the euro–dollar rate. It matters for anyone paid in dollars and living in Denmark, or the other way round.",
+     "unit": "DKK per USD",
+     "source": {
+      "kind": "fred",
+      "series": "DEXDNUS",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DEXDNUS"
+     },
+     "lag": "daily, noon buying rate in New York",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-23",
+     "value": 6.6729
+    },
+    "history": [
+     {
+      "d": "2026-02-20",
+      "v": 6.3412
+     },
+     {
+      "d": "2026-02-27",
+      "v": 6.3193
+     },
+     {
+      "d": "2026-03-06",
+      "v": 6.4371
+     },
+     {
+      "d": "2026-03-13",
+      "v": 6.5294
+     },
+     {
+      "d": "2026-03-20",
+      "v": 6.4728
+     },
+     {
+      "d": "2026-03-27",
+      "v": 6.4867
+     },
+     {
+      "d": "2026-04-03",
+      "v": 6.4853
+     },
+     {
+      "d": "2026-04-10",
+      "v": 6.3741
+     },
+     {
+      "d": "2026-04-17",
+      "v": 6.332
+     },
+     {
+      "d": "2026-04-24",
+      "v": 6.3769
+     },
+     {
+      "d": "2026-05-01",
+      "v": 6.3568
+     },
+     {
+      "d": "2026-05-08",
+      "v": 6.3467
+     },
+     {
+      "d": "2026-05-15",
+      "v": 6.4279
+     },
+     {
+      "d": "2026-05-22",
+      "v": 6.4394
+     },
+     {
+      "d": "2026-05-29",
+      "v": 6.3992
+     },
+     {
+      "d": "2026-06-05",
+      "v": 6.4803
+     },
+     {
+      "d": "2026-06-12",
+      "v": 6.458
+     },
+     {
+      "d": "2026-06-19",
+      "v": 6.5163
+     },
+     {
+      "d": "2026-06-26",
+      "v": 6.554
+     },
+     {
+      "d": "2026-07-03",
+      "v": 6.5288
+     },
+     {
+      "d": "2026-07-10",
+      "v": 6.5348
+     },
+     {
+      "d": "2026-07-17",
+      "v": 6.534
+     },
+     {
+      "d": "2026-07-24",
+      "v": 6.5665
+     },
+     {
+      "d": "2026-07-31",
+      "v": 6.4886
+     },
+     {
+      "d": "2026-08-07",
+      "v": 6.4675
+     },
+     {
+      "d": "2026-08-14",
+      "v": 6.4549
+     },
+     {
+      "d": "2026-08-21",
+      "v": 6.3981
+     },
+     {
+      "d": "2026-08-28",
+      "v": 6.4445
+     },
+     {
+      "d": "2026-09-04",
+      "v": 6.4327
+     },
+     {
+      "d": "2026-09-11",
+      "v": 6.4417
+     },
+     {
+      "d": "2026-09-18",
+      "v": 6.5197
+     },
+     {
+      "d": "2026-09-25",
+      "v": 6.5575
+     },
+     {
+      "d": "2026-10-02",
+      "v": 6.6574
+     },
+     {
+      "d": "2026-10-09",
+      "v": 6.678
+     },
+     {
+      "d": "2026-10-16",
+      "v": 6.6554
+     },
+     {
+      "d": "2026-10-23",
+      "v": 6.6729
+     }
+    ],
+    "trend": {
+     "change": 0.2284,
+     "over": "8 weeks",
+     "high_52": 6.678,
+     "low_52": 6.2832
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 2,
+     "window_n": 2902,
+     "window_hits": null,
+     "model_p": 0.68,
+     "expected": 6.7114,
+     "sd": 0.0833,
+     "threshold": 6.6729,
+     "backtest": {
+      "n": 2881,
+      "ok": true,
+      "base": 0.486,
+      "brier_model": 0.262,
+      "brier_base": 0.25,
+      "skill": -0.051,
+      "hit_rate": 0.527
+     },
+     "weight": 0,
+     "base_rate": 0.486,
+     "final_p": 0.49
+    },
+    "resolution": "Uses the last value on or before 6 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-us-oil",
+   "made": "2026-10-30",
+   "resolves": "2026-11-09",
+   "kind": "indicator",
+   "indicator": "us-oil",
+   "domain": "economy",
+   "label": "WTI crude oil price",
+   "term": "us-oil",
+   "h_steps": 1,
+   "target_date": "2026-11-03",
+   "threshold": 103.37,
+   "direction": "higher",
+   "p": 0.53,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the WTI crude oil price close higher on 3 November 2026 than on 27 October 2026 (103.37)?",
+   "context": {
+    "measure": {
+     "why": "The spot price of West Texas Intermediate crude oil, a benchmark for energy costs that feed into inflation and transport prices. Day-to-day moves are close to a coin flip.",
+     "unit": "USD per barrel",
+     "source": {
+      "kind": "fred",
+      "series": "DCOILWTICO",
+      "name": "US Energy Information Administration, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DCOILWTICO"
+     },
+     "lag": "daily, with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-27",
+     "value": 103.37
+    },
+    "history": [
+     {
+      "d": "2026-02-24",
+      "v": 65.62
+     },
+     {
+      "d": "2026-03-03",
+      "v": 74.48
+     },
+     {
+      "d": "2026-03-10",
+      "v": 83.71
+     },
+     {
+      "d": "2026-03-17",
+      "v": 96.01
+     },
+     {
+      "d": "2026-03-24",
+      "v": 93.18
+     },
+     {
+      "d": "2026-03-31",
+      "v": 102.86
+     },
+     {
+      "d": "2026-04-07",
+      "v": 114.58
+     },
+     {
+      "d": "2026-04-14",
+      "v": 93.07
+     },
+     {
+      "d": "2026-04-21",
+      "v": 93.64
+     },
+     {
+      "d": "2026-04-28",
+      "v": 103.45
+     },
+     {
+      "d": "2026-05-05",
+      "v": 105.66
+     },
+     {
+      "d": "2026-05-12",
+      "v": 105.78
+     },
+     {
+      "d": "2026-05-19",
+      "v": 112.09
+     },
+     {
+      "d": "2026-05-26",
+      "v": 97.63
+     },
+     {
+      "d": "2026-06-02",
+      "v": 97.47
+     },
+     {
+      "d": "2026-06-09",
+      "v": 91.9
+     },
+     {
+      "d": "2026-06-16",
+      "v": 79.8
+     },
+     {
+      "d": "2026-06-23",
+      "v": 74.62
+     },
+     {
+      "d": "2026-06-30",
+      "v": 70.56
+     },
+     {
+      "d": "2026-07-07",
+      "v": 71.53
+     },
+     {
+      "d": "2026-07-14",
+      "v": 80.44
+     },
+     {
+      "d": "2026-07-21",
+      "v": 86.04
+     },
+     {
+      "d": "2026-07-28",
+      "v": 80.91
+     },
+     {
+      "d": "2026-08-04",
+      "v": 77.33
+     },
+     {
+      "d": "2026-08-11",
+      "v": 84.77
+     },
+     {
+      "d": "2026-08-18",
+      "v": 86.48
+     },
+     {
+      "d": "2026-08-25",
+      "v": 83.9
+     },
+     {
+      "d": "2026-09-01",
+      "v": 91.48
+     },
+     {
+      "d": "2026-09-08",
+      "v": 94.21
+     },
+     {
+      "d": "2026-09-15",
+      "v": 107.02
+     },
+     {
+      "d": "2026-09-22",
+      "v": 96.41
+     },
+     {
+      "d": "2026-09-29",
+      "v": 96.16
+     },
+     {
+      "d": "2026-10-06",
+      "v": 96.24
+     },
+     {
+      "d": "2026-10-13",
+      "v": 95.39
+     },
+     {
+      "d": "2026-10-20",
+      "v": 107.89
+     },
+     {
+      "d": "2026-10-27",
+      "v": 103.37
+     }
+    ],
+    "trend": {
+     "change": 11.89,
+     "over": "8 weeks",
+     "high_52": 114.58,
+     "low_52": 55.44
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2112,
+     "window_hits": null,
+     "model_p": 0.47,
+     "expected": 103.066,
+     "sd": 3.744,
+     "threshold": 103.37,
+     "backtest": {
+      "n": 2092,
+      "ok": true,
+      "base": 0.532,
+      "brier_model": 0.26,
+      "brier_base": 0.249,
+      "skill": -0.046,
+      "hit_rate": 0.501
+     },
+     "weight": 0,
+     "base_rate": 0.532,
+     "final_p": 0.53
+    },
+    "resolution": "Uses the last value on or before 3 November 2026 (not older than four days) from US Energy Information Administration, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-10-30-us-vix",
+   "made": "2026-10-30",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "us-vix",
+   "domain": "economy",
+   "label": "VIX volatility index",
+   "term": "us-vix",
+   "h_steps": 1,
+   "target_date": "2026-11-05",
+   "threshold": 17.2,
+   "direction": "higher",
+   "p": 0.47,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the VIX volatility index close higher on 5 November 2026 than on 29 October 2026 (17.2)?",
+   "context": {
+    "measure": {
+     "why": "The market's expected swing in US stocks over the next 30 days, drawn from option prices and often called the fear gauge. Low readings mean calm, spikes mean investors are paying for protection.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "VIXCLS",
+      "name": "Chicago Board Options Exchange, via FRED",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-10-29",
+     "value": 17.2
+    },
+    "history": [
+     {
+      "d": "2026-02-26",
+      "v": 18.63
+     },
+     {
+      "d": "2026-03-05",
+      "v": 23.75
+     },
+     {
+      "d": "2026-03-12",
+      "v": 27.29
+     },
+     {
+      "d": "2026-03-19",
+      "v": 24.06
+     },
+     {
+      "d": "2026-03-26",
+      "v": 27.44
+     },
+     {
+      "d": "2026-04-02",
+      "v": 23.87
+     },
+     {
+      "d": "2026-04-09",
+      "v": 19.49
+     },
+     {
+      "d": "2026-04-16",
+      "v": 17.94
+     },
+     {
+      "d": "2026-04-23",
+      "v": 19.31
+     },
+     {
+      "d": "2026-04-30",
+      "v": 16.89
+     },
+     {
+      "d": "2026-05-07",
+      "v": 17.08
+     },
+     {
+      "d": "2026-05-14",
+      "v": 17.26
+     },
+     {
+      "d": "2026-05-21",
+      "v": 16.76
+     },
+     {
+      "d": "2026-05-28",
+      "v": 15.74
+     },
+     {
+      "d": "2026-06-04",
+      "v": 15.4
+     },
+     {
+      "d": "2026-06-11",
+      "v": 19.44
+     },
+     {
+      "d": "2026-06-18",
+      "v": 16.4
+     },
+     {
+      "d": "2026-06-25",
+      "v": 18.89
+     },
+     {
+      "d": "2026-07-02",
+      "v": 16.15
+     },
+     {
+      "d": "2026-07-09",
+      "v": 15.84
+     },
+     {
+      "d": "2026-07-16",
+      "v": 16.73
+     },
+     {
+      "d": "2026-07-23",
+      "v": 18.7
+     },
+     {
+      "d": "2026-07-30",
+      "v": 17.09
+     },
+     {
+      "d": "2026-08-06",
+      "v": 15.15
+     },
+     {
+      "d": "2026-08-13",
+      "v": 14.63
+     },
+     {
+      "d": "2026-08-20",
+      "v": 16.01
+     },
+     {
+      "d": "2026-08-27",
+      "v": 14.51
+     },
+     {
+      "d": "2026-09-03",
+      "v": 14.32
+     },
+     {
+      "d": "2026-09-10",
+      "v": 17.84
+     },
+     {
+      "d": "2026-09-17",
+      "v": 15.44
+     },
+     {
+      "d": "2026-09-24",
+      "v": 15.67
+     },
+     {
+      "d": "2026-10-01",
+      "v": 16.39
+     },
+     {
+      "d": "2026-10-08",
+      "v": 15.41
+     },
+     {
+      "d": "2026-10-15",
+      "v": 16.46
+     },
+     {
+      "d": "2026-10-22",
+      "v": 19.03
+     },
+     {
+      "d": "2026-10-29",
+      "v": 17.2
+     }
+    ],
+    "trend": {
+     "change": 2.88,
+     "over": "8 weeks",
+     "high_52": 27.44,
+     "low_52": 13.47
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 1914,
+     "window_hits": null,
+     "model_p": 0.52,
+     "expected": 17.347,
+     "sd": 2.688,
+     "threshold": 17.2,
+     "backtest": {
+      "n": 1894,
+      "ok": true,
+      "base": 0.465,
+      "brier_model": 0.266,
+      "brier_base": 0.249,
+      "skill": -0.07,
+      "hit_rate": 0.429
+     },
+     "weight": 0,
+     "base_rate": 0.465,
+     "final_p": 0.47
+    },
+    "resolution": "Uses the last value on or before 5 November 2026 (not older than four days) from Chicago Board Options Exchange, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -6041,11 +6917,11 @@
    },
    "indicator-v1": {
     "resolved": 7,
-    "open": 13,
+    "open": 17,
     "mean_brier": 0.244
    }
   },
-  "open": 16,
+  "open": 20,
   "resolved": 28,
   "voided": 0,
   "mean_brier": 0.272,

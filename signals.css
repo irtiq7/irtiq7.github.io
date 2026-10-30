@@ -1,0 +1,77 @@
+/* Signals outlook board (loaded after site.css and ai_news.css) */
+.sig-tabs { position: sticky; top: 0; z-index: 20; display: flex; gap: 0.3rem; margin: 0 0 1.4rem; padding: 0.5rem 0; overflow-x: auto; background: rgba(10, 11, 20, 0.94); border-bottom: 1px solid var(--line); scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+.sig-tab { flex: 0 0 auto; font: inherit; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); background: none; border: 1px solid transparent; padding: 0.4rem 0.85rem; cursor: pointer; white-space: nowrap; }
+.sig-tab:hover { color: var(--ink); border-color: var(--line); }
+.sig-tab[aria-selected="true"] { color: #05060d; background: var(--pine); border-color: var(--pine); }
+.sig-tab:focus-visible, .ol-tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.sig-panel[hidden] { display: none; }
+.sig-panel h3 { margin: 1.6rem 0 0.4rem; font-size: 0.95rem; color: var(--pine); }
+.sig-panel .ol-group { margin: 1.4rem 0 0.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); }
+.sig-panel .stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.sig-panel .stat-tile { padding: 0.8rem 1rem; background: var(--surface); border: 1px solid var(--line); }
+.sig-panel .stat-label { margin: 0; font-size: 0.74rem; color: var(--ink-soft); }
+.sig-panel .stat-value { margin: 0.2rem 0; font-size: 1.7rem; font-weight: 700; color: var(--ink); }
+.sig-panel .stat-sub { margin: 0; font-size: 0.72rem; color: var(--ink-soft); }
+.sig-panel .data-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.sig-panel .data-table th, .sig-panel .data-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.sig-panel .data-table th { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; }
+.sig-panel .table-wrap { overflow-x: auto; margin: 0.6rem 0; }
+.sig-panel ul.plain { list-style: none; margin: 0; padding: 0; }
+
+/* overview tiles */
+.ol-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 0.75rem; }
+.ol-tile { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.8rem 0.9rem; color: var(--ink); text-decoration: none; background: var(--surface); border: 1px solid var(--line); }
+.ol-tile:hover { border-color: var(--pine); box-shadow: var(--glow-c); }
+.t-title { font-size: 0.78rem; color: var(--ink-soft); }
+.t-val { font-size: 1.55rem; font-weight: 700; line-height: 1.15; overflow-wrap: anywhere; }
+.t-next { font-size: 0.74rem; color: var(--ink-soft); border-top: 1px dashed var(--line); padding-top: 0.35rem; margin-top: 0.2rem; }
+.dir { font-size: 0.76rem; color: var(--ink-soft); }
+.dir-up { color: var(--pine); } .dir-down { color: var(--rust); }
+.tiny { width: 100%; height: 34px; display: block; }
+.tiny polyline { stroke: var(--ink-soft); } .tiny circle { fill: var(--ink-soft); }
+.tiny.d-up polyline { stroke: var(--pine); } .tiny.d-up circle { fill: var(--pine); }
+.tiny.d-down polyline { stroke: var(--rust); } .tiny.d-down circle { fill: var(--rust); }
+.ol-newsgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.ol-news { padding: 0.9rem 1rem; background: var(--surface); border: 1px solid var(--line); }
+.ol-news h4 { margin: 0 0 0.5rem; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.ol-news p { margin: 0 0 0.3rem; }
+.ol-news li { margin: 0.2rem 0; }
+
+/* indicator cards */
+.ol-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 430px), 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.ol-card { padding: 1rem 1.1rem; background: var(--surface); border: 1px solid var(--line); }
+.ol-card h3 { margin: 0; font-size: 1.05rem; color: var(--ink); }
+.ol-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.ol-head p { margin: 0.1rem 0 0; }
+.ol-big { text-align: right; }
+.ol-big strong { display: block; font-size: 1.7rem; line-height: 1.1; color: var(--pine); text-shadow: var(--glow-c); overflow-wrap: anywhere; }
+.ol-card .spark { max-width: none; margin: 0.6rem 0; }
+.ol-card .spark polyline { stroke-width: 2; }
+.ol-card > p { margin: 0 0 0.6rem; font-size: 0.9rem; }
+.ol-next { margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed var(--line); }
+.ol-next h4 { margin: 0 0 0.3rem; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.ol-next p { margin: 0 0 0.4rem; font-size: 0.9rem; }
+.ol-prob { display: flex; align-items: center; gap: 0.7rem; margin: 0.4rem 0; }
+.ol-prob strong { font-size: 1.5rem; color: var(--pine); min-width: 3.2rem; }
+.pbar { position: relative; flex: 1; height: 0.7rem; background: #0a0b14; border: 1px solid var(--line); }
+.pbar .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--pine); box-shadow: var(--glow-c); }
+.pbar .mid { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--ink-soft); }
+.ol-card .q-more { margin-top: 0.6rem; }
+
+/* topic bars */
+.ol-mom { margin: 1.6rem 0; }
+.mbar { display: grid; grid-template-columns: minmax(7rem, 11rem) 1fr 3.8rem; grid-template-areas: "topic track val" ". note note"; gap: 0.1rem 0.7rem; align-items: center; margin: 0.45rem 0; font-size: 0.86rem; }
+.m-topic { grid-area: topic; font-weight: 700; overflow-wrap: anywhere; }
+.m-track { grid-area: track; display: block; height: 0.6rem; background: #0a0b14; border: 1px solid var(--line); }
+.m-fill { display: block; height: 100%; }
+.mbar.up .m-fill { background: var(--pine); } .mbar.down .m-fill { background: var(--rust); }
+.m-val { grid-area: val; text-align: right; font-variant-numeric: tabular-nums; }
+.m-note { grid-area: note; }
+.ol-mom .trend { max-width: 640px; }
+
+@media (max-width: 720px) {
+  .ol-cards { grid-template-columns: 1fr; }
+  .mbar { grid-template-columns: 1fr 3.6rem; grid-template-areas: "topic val" "track track" "note note"; }
+  .ol-big { text-align: left; }
+  .sig-panel .stat-value { font-size: 1.4rem; }
+}

@@ -37,6 +37,18 @@ const SPECS = [
   { id: "us-stocks", domain: "economy", title: "S&P 500 stock index", verb: "close", unit: "points", dec: 2, res: 0.01, freq: "daily", q: "higher", h: 1, k: 6, method: "normal",
     source: { kind: "fred", series: "SP500", name: "S&P Dow Jones Indices, via FRED", url: "https://fred.stlouisfed.org/series/SP500" },
     why: "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.", lag: "daily close" },
+  { id: "us-mortgage", domain: "economy", title: "US 30-year mortgage rate", unit: "%", dec: 2, res: 0.01, freq: "weekly", q: "higher", h: 1, k: 6, method: "normal",
+    source: { kind: "fred", series: "MORTGAGE30US", name: "Freddie Mac, via FRED", url: "https://fred.stlouisfed.org/series/MORTGAGE30US" },
+    why: "The average rate on a 30-year fixed US home loan, from Freddie Mac's weekly survey. It follows long-term bond yields and shows what borrowing to buy a home costs.", lag: "published on Thursdays" },
+  { id: "usd-dkk", domain: "economy", title: "US dollar in Danish kroner", verb: "close", unit: "DKK per USD", dec: 3, res: 0.001, freq: "daily", q: "higher", h: 1, k: 6, method: "normal",
+    source: { kind: "fred", series: "DEXDNUS", name: "Board of Governors of the Federal Reserve, via FRED", url: "https://fred.stlouisfed.org/series/DEXDNUS" },
+    why: "How many Danish kroner one US dollar buys. The krone is tied to the euro, so this moves with the euro–dollar rate. It matters for anyone paid in dollars and living in Denmark, or the other way round.", lag: "daily, noon buying rate in New York" },
+  { id: "us-oil", domain: "economy", title: "WTI crude oil price", verb: "close", unit: "USD per barrel", dec: 2, res: 0.01, freq: "daily", q: "higher", h: 1, k: 6, method: "normal",
+    source: { kind: "fred", series: "DCOILWTICO", name: "US Energy Information Administration, via FRED", url: "https://fred.stlouisfed.org/series/DCOILWTICO" },
+    why: "The spot price of West Texas Intermediate crude oil, a benchmark for energy costs that feed into inflation and transport prices. Day-to-day moves are close to a coin flip.", lag: "daily, with a short delay" },
+  { id: "us-vix", domain: "economy", title: "VIX volatility index", verb: "close", unit: "points", dec: 2, res: 0.01, freq: "daily", q: "higher", h: 1, k: 6, method: "normal",
+    source: { kind: "fred", series: "VIXCLS", name: "Chicago Board Options Exchange, via FRED", url: "https://fred.stlouisfed.org/series/VIXCLS" },
+    why: "The market's expected swing in US stocks over the next 30 days, drawn from option prices and often called the fear gauge. Low readings mean calm, spikes mean investors are paying for protection.", lag: "daily close" },
   { id: "arxiv-underwater", domain: "research", title: "arXiv papers on underwater acoustics and sonar", unit: "papers", dec: 0, rnd: 1, res: 0, freq: "weekly", q: "above_avg", win: 8, h: 2, min: 52, minErr: 12, k: 4, method: "normal",
     source: { kind: "arxiv", query: '(abs:"underwater acoustic" OR abs:sonar OR abs:hydrophone OR abs:"underwater localization")', name: "arXiv, by submission date", url: "https://arxiv.org/" },
     why: "Papers submitted to arXiv in a week whose abstracts mention underwater acoustics, sonar or hydrophones. It shows how much researchers are publishing on the topic, not how good the work is." },
@@ -236,6 +248,37 @@ function resolutionText(spec, target, when) {
   return `Uses the value for ${when} as first shown by ${src}. Yes if it ${spec.q === "lower" ? "is lower than" : spec.q === "above_avg" ? "is above" : "is higher than"} the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used.`;
 }
 
+// ---------- outlook: one record per indicator for the dashboard page
+const SECTION = { "us-10y-yield": "investment", "us-stocks": "investment", "us-vix": "investment", "indeed-software": "technology" };
+const sectionOf = (spec) => SECTION[spec.id] || spec.domain;
+function outlookItem(spec, raw, forecasts) {
+  const x = shape(spec, raw || []); if (x.length < 12) return null;
+  const last = x[x.length - 1], tr = trendNote(spec, x), hist = x.slice(-(spec.freq === "monthly" ? 60 : 104)).map((y) => ({ d: y.d, v: round(y.v, spec.dec + 1) }));
+  // the range shown is the last twelve months (trendNote's 52 points are 52 months for monthly series)
+  const yr = x.slice(-(spec.freq === "monthly" ? 12 : 52)).map((y) => y.v), hi = Math.max(...yr), lo = Math.min(...yr);
+  tr.high_52 = round(hi, spec.dec + 1); tr.low_52 = round(lo, spec.dec + 1);
+  const span = hi - lo, pos = span > 0 ? round((last.v - lo) / span, 2) : 0.5;
+  const rel = Math.abs(tr.change) / Math.max(1e-9, span || 1), dir = rel < 0.08 ? "flat" : tr.change > 0 ? "up" : "down";
+  const mine = (forecasts || []).filter((f) => f.kind === "indicator" && f.indicator === spec.id);
+  const open = mine.filter((f) => f.outcome === null && !f.void).sort((a, b) => (a.made < b.made ? 1 : -1))[0] || null;
+  const done = mine.filter((f) => f.outcome !== null && f.outcome !== undefined);
+  const hits = done.filter((f) => (f.p >= 0.5 ? f.outcome === 1 : f.outcome === 0)).length;
+  const fmt = (v) => (spec.unit === "%" ? round(v, spec.dec) + "%" : round(v, spec.dec).toLocaleString("en-US"));
+  const u = spec.unit && spec.unit !== "%" && !/,/.test(spec.unit) ? " " + spec.unit : "";
+  const delta = Math.abs(tr.change), dtxt = spec.unit === "%" ? round(delta, spec.dec) + " percentage points" : round(delta, spec.dec).toLocaleString("en-US") + u;
+  const reading = `${fmt(last.v)}${u} now, ${dir === "flat" ? "little changed" : dir + " " + dtxt} over ${tr.over}. Over the last 12 months it has ranged from ${fmt(lo)} to ${fmt(hi)} and sits ${pos >= 0.8 ? "near the top" : pos <= 0.2 ? "near the bottom" : "in the middle"} of that range.`;
+  return {
+    id: spec.id, section: sectionOf(spec), title: spec.title, unit: spec.unit, dec: spec.dec, freq: spec.freq, why: spec.why, lag: spec.lag || null,
+    source: { name: spec.source.name, url: spec.source.url },
+    latest: { date: last.d, value: round(last.v, spec.dec + 1) }, history: hist, trend: tr, position: pos, direction: dir, reading,
+    next: open ? { id: open.id, question: open.question, p: open.p, direction: open.direction, threshold: open.threshold, expected: open.context.reasoning.expected, resolves: open.resolves, made: open.made, has_skill: !!(open.context.reasoning.backtest && open.context.reasoning.weight > 0.05) } : null,
+    record: { n: done.length, hits },
+  };
+}
+function buildOutlook(getRaw, forecasts) {
+  return SPECS.map((spec) => outlookItem(spec, getRaw(spec), forecasts)).filter(Boolean);
+}
+
 // ---------- settle questions whose data has arrived
 // getRaw(spec) -> raw observations (or null if the data could not be fetched this time)
 function resolveIndicators(forecasts, getRaw, now) {
@@ -272,4 +315,4 @@ function makeIndicatorForecasts(forecasts, getRaw, now) {
   return out;
 }
 
-module.exports = { SPECS, MODEL, parseFredCsv, parseEurostat, shape, toWeekly, yoy, diffs, targetDate, valueAt, ask, backtest, scoreBacktest, planQuestion, resolveIndicators, makeIndicatorForecasts, dueSpecs, normCdf, addMonths, addDays, mondayOf, monthName, longDate, eventHappened };
+module.exports = { buildOutlook, outlookItem, sectionOf, SPECS, MODEL, parseFredCsv, parseEurostat, shape, toWeekly, yoy, diffs, targetDate, valueAt, ask, backtest, scoreBacktest, planQuestion, resolveIndicators, makeIndicatorForecasts, dueSpecs, normCdf, addMonths, addDays, mondayOf, monthName, longDate, eventHappened };
