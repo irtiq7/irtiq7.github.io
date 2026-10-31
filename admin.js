@@ -38,6 +38,7 @@
   function showApp(user) {
     $("login").hidden = true; $("app").hidden = false;
     $("who").textContent = "Signed in as " + user;
+    if (user.toLowerCase() === OWNER.toLowerCase()) document.querySelector('[data-tab="me"]').hidden = false; // private tab: the owner's account only
     var q = new URLSearchParams(location.search), art = q.get("article"), file = q.get("edit");
     loadPosts().then(function () {
       if (art && /^[a-z0-9-]+$/.test(art)) {
@@ -75,12 +76,13 @@
   var tabs = document.querySelectorAll("[data-tab]");
   function showTab(name) {
     Array.prototype.forEach.call(tabs, function (x) { x.classList.toggle("on", x.dataset.tab === name); });
-    ["articles", "guestbook", "files", "projects", "analytics"].forEach(function (t) { $("tab-" + t).hidden = t !== name; });
+    ["articles", "guestbook", "files", "projects", "analytics", "me"].forEach(function (t) { $("tab-" + t).hidden = t !== name; });
     status("");
     if (name === "guestbook") loadIssues();
     if (name === "files") loadTree();
     if (name === "projects") loadProjects();
     if (name === "analytics") loadAnalytics();
+    if (name === "me" && window.MyOutlook) window.MyOutlook.open();
   }
   Array.prototype.forEach.call(tabs, function (b) { b.addEventListener("click", function () { showTab(b.dataset.tab); }); });
 

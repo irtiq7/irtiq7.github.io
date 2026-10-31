@@ -34,6 +34,7 @@
         <button class="tab" data-tab="files" type="button">Files</button>
         <button class="tab" data-tab="projects" type="button">Projects</button>
         <button class="tab" data-tab="analytics" type="button">Analytics</button>
+        <button class="tab" data-tab="me" type="button" hidden>My outlook</button>
       </div>
       <p id="status" role="status" hidden></p>
 
@@ -92,6 +93,31 @@
         <section class="an-panel" aria-labelledby="an-traffic-h"><h3 id="an-traffic-h">Repository traffic (last 14 days)</h3><div id="an-traffic"></div></section>
       </div>
 
+      <div id="tab-me" hidden>
+        <h2 class="section-title">My outlook</h2>
+        <p>Private to your account. Your numbers stay in this browser: they are not sent anywhere or saved to the repository, and they stay here after you sign out until you erase them. Anyone using this browser profile could read them. These are general rules of thumb applied to your numbers, not checked by a licensed adviser and without tax modelled, so confirm big decisions with one.</p>
+        <div class="admin-form">
+          <label for="me-expenses">Monthly expenses (kr)</label><input id="me-expenses" type="number" min="0" inputmode="decimal">
+          <label for="me-cash">Cash savings (kr)</label><input id="me-cash" type="number" min="0" inputmode="decimal">
+          <label for="me-save">Can save each month (kr)</label><input id="me-save" type="number" min="0" inputmode="decimal">
+          <label for="me-debt">Expensive or other debt, excluding mortgage (kr)</label><input id="me-debt" type="number" min="0" inputmode="decimal">
+          <label for="me-debtRate">Interest on that debt (%)</label><input id="me-debtRate" type="number" min="0" inputmode="decimal" step="0.1">
+          <label for="me-invested">Already invested (kr)</label><input id="me-invested" type="number" min="0" inputmode="decimal">
+          <label for="me-years">Years until you need the invested money</label><input id="me-years" type="number" min="0" inputmode="decimal">
+          <label for="me-goal">Savings goal, such as a home deposit (kr)</label><input id="me-goal" type="number" min="0" inputmode="decimal">
+          <label for="me-goalYears">Years until that goal</label><input id="me-goalYears" type="number" min="0" inputmode="decimal">
+          <label for="me-comfort">Biggest stock fall you could sit through without selling</label><select id="me-comfort" data-def="1"><option value="20">20%</option><option value="35" selected>35%</option><option value="50">50%</option></select>
+          <label for="me-contract">Job contract</label><select id="me-contract"><option value="permanent">Permanent</option><option value="temporary">Temporary (such as a postdoc)</option></select>
+          <label for="me-contractEnd">Contract end date, if temporary</label><input id="me-contractEnd" type="date">
+        </div>
+        <p><button id="me-erase" class="mini danger" type="button">Erase my numbers</button></p>
+        <h3>What I would do, in order</h3>
+        <ol id="me-advice" class="gb-list me-list"></ol>
+        <h3>Forecasts</h3>
+        <p id="me-verdict"></p>
+        <ul id="me-forecasts" class="gb-list"></ul>
+      </div>
+
       <div id="tab-files" hidden>
         <h2 class="section-title">Edit a file</h2>
         <p>Edits are committed straight to <code>main</code>. Be careful with <code>.html</code> and <code>.css</code> files; a mistake goes live. You can always revert in the repository's history.</p>
@@ -106,6 +132,7 @@
     </section>
   </main>
   <script src="projects-lib.js"></script>
+  <script src="my-outlook.js"></script>
   <script src="admin.js"></script>
 </body>
 </html>

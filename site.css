@@ -351,3 +351,5 @@ h1, h2, h3, h4 { letter-spacing: -0.01em; }
 .project-list .rs-learned { list-style: disc; list-style-type: disc; margin: 0 0 0.9rem; padding: 0 0 0 1.2rem; border: 0; color: var(--ink-soft); }
 .project-list .rs-learned li { display: list-item; margin: 0 0 0.5rem; padding: 0; border: 0; box-shadow: none; background: none; }
 .project-list .rs-papers { margin: 0; font-size: 0.82rem; }
+.me-list { list-style-position: inside; }
+.me-list p { white-space: normal; }
