@@ -1,4 +1,12 @@
 {
+ "ai assistant": {
+  "checked": "2026-11-02",
+  "def": null
+ },
+ "ai spending concerns": {
+  "checked": "2026-11-02",
+  "def": null
+ },
  "ai trade": {
   "checked": "2026-10-19",
   "def": null
@@ -24,6 +32,19 @@
    "url": "https://en.wikipedia.org/wiki/CoreWeave",
    "source": "Wikipedia"
   }
+ },
+ "data center": {
+  "checked": "2026-11-02",
+  "def": {
+   "text": "A data center is a physical room, building, or facility for storing, managing, and disseminating data and information, including computer systems and associated components, housing IT infrastructure, and training artificial intelligence.",
+   "title": "Data center",
+   "url": "https://en.wikipedia.org/wiki/Data_center",
+   "source": "Wikipedia"
+  }
+ },
+ "ecb": {
+  "checked": "2026-11-02",
+  "def": null
  },
  "elizabeth holmes": {
   "checked": "2026-10-19",
@@ -56,6 +77,10 @@
    "source": "Wikipedia"
   }
  },
+ "ice": {
+  "checked": "2026-11-02",
+  "def": null
+ },
  "imf": {
   "checked": "2026-10-19",
   "def": null
@@ -69,6 +94,19 @@
    "source": "Wikipedia"
   }
  },
+ "midterm elections": {
+  "checked": "2026-11-02",
+  "def": null
+ },
+ "oled": {
+  "checked": "2026-11-02",
+  "def": {
+   "text": "An organic light-emitting diode (OLED), also known as organic electroluminescent diode, is a type of light-emitting diode (LED) in which the emissive electroluminescent layer is an organic compound film that emits light in response to an electric current.",
+   "title": "OLED",
+   "url": "https://en.wikipedia.org/wiki/OLED",
+   "source": "Wikipedia"
+  }
+ },
  "php": {
   "checked": "2026-10-26",
   "def": {
@@ -77,5 +115,9 @@
    "url": "https://en.wikipedia.org/wiki/PHP",
    "source": "Wikipedia"
   }
+ },
+ "touchscreen macbook": {
+  "checked": "2026-11-02",
+  "def": null
  }
 }

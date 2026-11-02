@@ -6900,6 +6900,842 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-ecb",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "ecb",
+   "label": "ECB",
+   "threshold": 5,
+   "p": 0.38,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"ECB\" be in at least 5 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 0.6,
+     "ratio": 5.8,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 6
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-29",
+      "count": 6,
+      "share": 1
+     },
+     "first_seen": {
+      "business": "2026-10-05"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "df1ef94682",
+      "title": "Gradualist Fed, AI Questions, And Slightly Firmer Greenback Ahead Of ECB's Most Likely Stand Pat Decision",
+      "url": "https://seekingalpha.com/article/4959208-gradualist-fed-ai-questions-and-slightly-firmer-greenback-ahead-of-ecbs-most-likely-stand-pat-decision?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-10-29T11:30:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "ea279e6363",
+      "title": "Lagarde to Step Down as ECB President on Feb. 7",
+      "url": "https://www.bloomberg.com/news/videos/2026-10-29/lagarde-to-step-down-as-ecb-president-on-feb-7-video",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-10-29T10:18:30.000Z",
+      "summary": ""
+     },
+     {
+      "id": "fb933d2a0c",
+      "title": "U.S. Treasury, European Bond Yields Fall After Fed Decision, Ahead of ECB Meeting",
+      "url": "https://www.wsj.com/finance/commodities-futures/u-s-treasury-yields-fall-as-investors-digest-fed-meet-focus-shifts-to-ecb-d29ffbec?mod=rss_markets_main",
+      "source": "wsj",
+      "category": "business",
+      "published": "2026-10-29T09:57:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.2,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.59,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.38
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"ecb\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 0.6,
+    "lambda": 5.2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-oled",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "oled",
+   "label": "OLED",
+   "threshold": 4,
+   "p": 0.44,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"OLED\" be in at least 4 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": {
+     "text": "An organic light-emitting diode (OLED), also known as organic electroluminescent diode, is a type of light-emitting diode (LED) in which the emissive electroluminescent layer is an organic compound film that emits light in response to an electric current.",
+     "title": "OLED",
+     "url": "https://en.wikipedia.org/wiki/OLED",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 1.2,
+     "ratio": 3.2,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 5,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      0,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-28",
+      "count": 2,
+      "share": 0.67
+     },
+     "first_seen": {
+      "tech": "2026-10-07"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "813f9edfbe",
+      "title": "Samsung S95H OLED TV Review (2026)",
+      "url": "https://www.wired.com/review/samsung-s95h/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-10-30T10:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "88f09ecccd",
+      "title": "Touchscreen MacBook Pro hands-on: OLED looks great on a Mac",
+      "url": "https://arstechnica.com/apple/2026/10/touchscreen-macbook-pro-hands-on-oled-looks-great-on-a-mac/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-10-28T19:10:29.000Z",
+      "summary": ""
+     },
+     {
+      "id": "7e796e06ff",
+      "title": "Apple unveils new iPad mini with OLED display and faster A20 Pro chip",
+      "url": "https://techcrunch.com/2026/10/26/apple-unveils-new-ipad-mini-with-oled-display-and-faster-a20-pro-chip/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-26T14:25:43.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.4,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.65,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.44
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"oled\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 1.2,
+    "lambda": 4.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-ice",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "ice",
+   "label": "ICE",
+   "threshold": 5,
+   "p": 0.42,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"ICE\" be in at least 5 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 2.2,
+     "ratio": 2.4,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 5,
+      "business": 1
+     },
+     "daily": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      1
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-28",
+      "count": 2,
+      "share": 0.4
+     },
+     "first_seen": {
+      "business": "2026-10-05",
+      "tech": "2026-10-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "a33474afd4",
+      "title": "GEO Group stock jumps on $200M ICE contract win in Texas",
+      "url": "https://www.investing.com/news/stock-market-news/geo-group-stock-jumps-on-200m-ice-contract-win-in-texas-4991694",
+      "source": "investing",
+      "category": "business",
+      "published": "2026-11-02T13:27:44.000Z",
+      "summary": ""
+     },
+     {
+      "id": "ec59d10256",
+      "title": "Massive leak exposes 41,000 DHS workers and undercover ICE agents",
+      "url": "https://arstechnica.com/security/2026/10/massive-leak-exposes-41000-dhs-workers-and-undercover-ice-agents/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-10-29T12:58:34.000Z",
+      "summary": ""
+     },
+     {
+      "id": "bdc7e8efb0",
+      "title": "Hacker stole personnel data about thousands of Homeland Security employees, including CBP and ICE agents",
+      "url": "https://techcrunch.com/2026/10/28/hacker-stole-personnel-data-about-thousands-of-homeland-security-employees-including-cbp-and-ice-agents/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-28T20:01:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.4,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.63,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.42
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"ice\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 2.2,
+    "lambda": 5.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-ai-spending",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "ai spending",
+   "label": "AI Spending Concerns",
+   "threshold": 6,
+   "p": 0.49,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"AI Spending Concerns\" be in at least 6 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 8,
+     "base_per_week": 0.9,
+     "ratio": 6,
+     "outlets": 5,
+     "by_category": {
+      "research": 0,
+      "tech": 2,
+      "business": 6
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      4,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-30",
+      "count": 4,
+      "share": 0.5
+     },
+     "first_seen": {
+      "business": "2026-10-07",
+      "tech": "2026-10-28"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "f1f6194d20",
+      "title": "Cracks are emerging in the AI spending boom",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-30T21:17:40.000Z",
+      "summary": ""
+     },
+     {
+      "id": "177e0fd972",
+      "title": "Intel Sinks 29% On Earnings—As AI Spending Fears Worsen Tech Selloff",
+      "url": "https://www.forbes.com/sites/fionariley/2026/10/30/intel-sinks-29-on-earnings-as-ai-spending-fears-worsen-tech-selloff/",
+      "source": "forbes",
+      "category": "business",
+      "published": "2026-10-30T14:09:27.000Z",
+      "summary": ""
+     },
+     {
+      "id": "df1e2487e9",
+      "title": "Big Tech sheds nearly $900bn in rout over soaring AI spending",
+      "url": "https://www.ft.com/content/c695558e-11e6-494c-aeee-0f9fb5c75afc?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-10-30T10:00:02.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6.9,
+     "expected": 7,
+     "threshold": 6,
+     "model_p": 0.69,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.49
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"ai spending\", across the 32 sources this site reads. 6 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 8,
+    "base_per_week": 0.9,
+    "lambda": 6.9
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-midterm-elections",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "midterm elections",
+   "label": "midterm elections",
+   "threshold": 4,
+   "p": 0.41,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"midterm elections\" be in at least 4 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0.3,
+     "ratio": 6.8,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 1,
+      "business": 4
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      2,
+      0
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-28",
+      "count": 2,
+      "share": 0.4
+     },
+     "first_seen": {
+      "business": "2026-10-08",
+      "tech": "2026-10-28"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "eb2e347328",
+      "title": "Bond investors sit out ‘most consequential’ US midterm elections in years",
+      "url": "https://www.ft.com/content/937308d7-aa2e-4dac-b19b-423d83bc1253?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-11-01T05:00:17.000Z",
+      "summary": "Big fund managers are pressing ‘pause’ as vote and economic data releases loom"
+     },
+     {
+      "id": "e8d7936bd2",
+      "title": "An Asian Stock Trader’s Guide Ahead of the US Midterm Elections",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-01/an-asian-stock-trader-s-guide-ahead-of-the-us-midterm-elections",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-01T00:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "92365b86fa",
+      "title": "2026 Midterm Elections: Closely Contested Races, Notable Implications",
+      "url": "https://seekingalpha.com/article/4958453-2026-midterm-elections-closely-contested-races-notable-implications?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-10-28T11:15:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.3,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.62,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.41
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"midterm elections\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0.3,
+    "lambda": 4.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-02-touchscreen-macbook",
+   "made": "2026-11-02",
+   "resolves": "2026-11-09",
+   "kind": "term-persistence",
+   "term": "touchscreen macbook",
+   "label": "touchscreen macbook",
+   "threshold": 5,
+   "p": 0.52,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"touchscreen macbook\" be in at least 5 stories between 2026-11-03 and 2026-11-09?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 7,
+     "base_per_week": 0.6,
+     "ratio": 6.7,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 7,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      5,
+      0,
+      1,
+      1,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-13",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02"
+     ],
+     "peak": {
+      "day": "2026-10-28",
+      "count": 5,
+      "share": 0.71
+     },
+     "first_seen": {
+      "tech": "2026-10-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "e40050fcf4",
+      "title": "Best Buy is bundling a $100 gift card with touchscreen MacBook Pro preorders",
+      "url": "https://www.theverge.com/gadgets/1023302/best-buy-gift-card-macbook-pro-proled-xdr-preorder-deal-sale",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-10-31T15:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "2bce6ea0ab",
+      "title": "Apple’s touchscreen MacBook Pro pushes laptop pricing to a new extreme",
+      "url": "https://techcrunch.com/2026/10/28/apples-touchscreen-macbook-pro-pushes-laptop-pricing-to-a-new-extreme/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-10-28T22:47:50.000Z",
+      "summary": ""
+     },
+     {
+      "id": "88f09ecccd",
+      "title": "Touchscreen MacBook Pro hands-on: OLED looks great on a Mac",
+      "url": "https://arstechnica.com/apple/2026/10/touchscreen-macbook-pro-hands-on-oled-looks-great-on-a-mac/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-10-28T19:10:29.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6,
+     "expected": 6,
+     "threshold": 5,
+     "model_p": 0.72,
+     "backtest": {
+      "cases": 4094,
+      "hits": 2046,
+      "origins": 17,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.7,
+      "shift": -0.85
+     },
+     "final_p": 0.52
+    },
+    "resolution": "Counts distinct stories published 2026-11-03 to 2026-11-09 (UTC) whose headline contains \"touchscreen macbook\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 7,
+    "base_per_week": 0.6,
+    "lambda": 6
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -6912,7 +7748,7 @@
    },
    "burst-persistence-v2": {
     "resolved": 6,
-    "open": 3,
+    "open": 9,
     "mean_brier": 0.186
    },
    "indicator-v1": {
@@ -6921,7 +7757,7 @@
     "mean_brier": 0.244
    }
   },
-  "open": 20,
+  "open": 26,
   "resolved": 28,
   "voided": 0,
   "mean_brier": 0.272,
