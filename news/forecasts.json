@@ -5817,7 +5817,7 @@
    "kind": "indicator",
    "indicator": "dk-unemployment",
    "domain": "jobs",
-   "label": "Denmark unemployment rate",
+   "label": "Denmark unemployment rate (labour-force survey)",
    "term": "dk-unemployment",
    "h_steps": 1,
    "target_date": "2026-10-01",
@@ -5826,7 +5826,7 @@
    "p": 0.41,
    "model": "indicator-v1",
    "basis": "indicator",
-   "question": "Will the Denmark unemployment rate for October 2026 be higher than 6.8%?",
+   "question": "Will the Denmark unemployment rate (labour-force survey, Eurostat) for October 2026 be higher than 6.8%?",
    "context": {
     "measure": {
      "why": "The share of Denmark's labour force without work, seasonally adjusted and harmonised across countries by Eurostat.",
@@ -6027,7 +6027,12 @@
    "outcome": null,
    "observed": null,
    "brier": null,
-   "log_score": null
+   "log_score": null,
+   "correction": {
+    "date": "2026-11-03",
+    "was": "Will the Denmark unemployment rate for October 2026 be higher than 6.8%?",
+    "note": "The wording did not say which measure it refers to. It is the survey-based rate from Eurostat (6.8% in September 2026), not the registered rate that Danish media quote (3.1%). The probability, threshold, data source and resolution are unchanged."
+   }
   },
   {
    "id": "f-2026-10-30-us-mortgage",
@@ -8884,7 +8889,7 @@
    }
   ]
  },
- "note": "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.",
+ "note": "Questions are written once, with their evidence; only the result is added after the window closes. If a question is found to be worded misleadingly, only the wording is corrected, with the old text and the reason in a \"correction\" field; the probability and threshold are never changed. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.",
  "methods": {
   "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
   "indicator-v1": "From 20 October 2026. Questions about real outcomes in the economy, jobs and research, settled from public data (FRED, Eurostat, arXiv). Each is first tested on the full history of its series. Where the method shows no skill over the long-run rate of the event, the probability is pulled back to that rate.",

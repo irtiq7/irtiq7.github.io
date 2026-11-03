@@ -469,7 +469,7 @@ async function main() {
   indicators.resolveIndicators(ledger.forecasts, getRaw, NOW);
   ledger.forecasts.push(...indicators.makeIndicatorForecasts(ledger.forecasts, getRaw, NOW));
   ledger.summary = signals.scoreboard(ledger.forecasts);
-  ledger.note = "Questions are written once, with their evidence, and never edited; only the result is added after the window closes. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
+  ledger.note = "Questions are written once, with their evidence; only the result is added after the window closes. If a question is found to be worded misleadingly, only the wording is corrected, with the old text and the reason in a \"correction\" field; the probability and threshold are never changed. Scored with the Brier score against a 50% benchmark (0.25). The git history of this file is the audit trail.";
   ledger.methods = {
     "poisson-persistence-v1": "Used until 19 October 2026. Counted any word in the headline or summary and assumed this week's rate would fade slightly. It picked up ordinary words such as 'firm' and 'service', which are steady every week. Its questions are kept and scored.",
     "indicator-v1": "From 20 October 2026. Questions about real outcomes in the economy, jobs and research, settled from public data (FRED, Eurostat, arXiv). Each is first tested on the full history of its series. Where the method shows no skill over the long-run rate of the event, the probability is pulled back to that rate.",

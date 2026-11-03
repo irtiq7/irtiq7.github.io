@@ -145,6 +145,7 @@
       sect("What counts as yes", [h("p", { text: c.resolution })])
     ];
     if (done && f.result_note) body.unshift(sect("What happened", [h("p", { class: "q-result", text: (f.outcome ? "Yes. " : "No. ") + f.result_note }), h("p", { class: "muted small", text: "Probability said " + pct(f.p) + "; error score " + f.brier + " (0 is perfect, 0.25 is what always saying 50% would score)." })]));
+    if (f.correction) body.unshift(sect("Wording corrected on " + fmtDay(f.correction.date), [h("p", { text: f.correction.note }), h("p", { class: "muted small", text: "Original wording: " + f.correction.was })]));
     return { body: body, done: done, unit: unit };
   }
   function indicatorCard(f) {
