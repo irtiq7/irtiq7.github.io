@@ -198,7 +198,7 @@
 
   // ================= outlook layout =================
   var SECTIONS = [
-    { id: "jobs", title: "Jobs", blurb: "Is hiring strong or weakening? Unemployment, layoffs and monthly job gains in the US, and unemployment in Denmark." },
+    { id: "jobs", title: "Jobs", blurb: "Is hiring strong or weakening? Unemployment, layoffs and monthly job gains in the US, and registered unemployment in Denmark, next to the survey-based rate that Eurostat reports." },
     { id: "economy", title: "Economy", blurb: "Prices, interest rates, borrowing costs, the dollar against the krone, and oil." },
     { id: "investment", title: "Investment", blurb: "Stock market level, government bond yields and market fear. Short-term moves in these are close to a coin flip, so treat them as context." },
     { id: "technology", title: "Technology", blurb: "How much software hiring there is, and which ideas the tech press is suddenly writing about." },

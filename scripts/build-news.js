@@ -256,6 +256,10 @@ async function loadIndicatorData(cacheFile) {
       if (spec.source.kind === "fred") {
         if (!fredCache.has(spec.source.series)) fredCache.set(spec.source.series, indicators.parseFredCsv(await fetchText("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + spec.source.series, 30000)));
         raw.set(spec.id, fredCache.get(spec.source.series));
+      } else if (spec.source.kind === "statbank") {
+        const r = await fetch("https://api.statbank.dk/v1/data", { method: "POST", headers: { "Content-Type": "application/json", "User-Agent": UA }, body: JSON.stringify({ table: spec.source.table, format: "CSV", lang: "en", variables: [{ code: "OMRÅDE", values: ["000"] }, { code: "SAESONFAK", values: ["9"] }, { code: "Tid", values: ["*"] }] }), signal: AbortSignal.timeout(30000) });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        raw.set(spec.id, indicators.parseStatbank(await r.text()));
       } else if (spec.source.kind === "eurostat") {
         const j = JSON.parse(await fetchText(`https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/une_rt_m?geo=${spec.source.geo}&s_adj=SA&age=TOTAL&sex=T&unit=PC_ACT&sinceTimePeriod=1998-01&format=JSON&lang=EN`, 30000));
         raw.set(spec.id, indicators.parseEurostat(j));

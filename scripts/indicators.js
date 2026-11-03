@@ -22,9 +22,12 @@ const SPECS = [
   { id: "indeed-software", domain: "jobs", title: "Indeed software development job postings", unit: "index, 1 Feb 2020 = 100", dec: 1, res: 0.1, freq: "daily", q: "higher", h: 1, k: 6, method: "normal",
     source: { kind: "fred", series: "IHLIDXUSTPSOFTDEVE", name: "Indeed Hiring Lab, via FRED", url: "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE" },
     why: "Postings for software development jobs on Indeed in the US, relative to 1 February 2020 (set to 100). A measure of how much employers are hiring in the field.", lag: "updated daily with a short delay" },
-  { id: "dk-unemployment", domain: "jobs", title: "Denmark unemployment rate", unit: "%", dec: 1, res: 0.1, freq: "monthly", q: "higher", h: 1, k: 6, method: "normal",
+  { id: "dk-registered", domain: "jobs", title: "Denmark unemployment rate (registered)", unit: "%", dec: 1, res: 0.1, freq: "monthly", q: "higher", h: 1, k: 6, method: "normal",
+    source: { kind: "statbank", table: "AUS08", name: "Statistics Denmark, table AUS08 (seasonally adjusted)", url: "https://www.statbank.dk/AUS08" },
+    why: "Registered unemployed people as a share of the Danish labour force (gross unemployment), the figure Danish media and the government quote. It was about 3% in 2026. It is lower than the survey-based rate below because it counts only people registered as unemployed.", lag: "published about a month after the month ends" },
+  { id: "dk-unemployment", domain: "jobs", title: "Denmark unemployment rate (labour-force survey)", unit: "%", dec: 1, res: 0.1, freq: "monthly", q: "higher", h: 1, k: 6, method: "normal",
     source: { kind: "eurostat", geo: "DK", name: "Eurostat (seasonally adjusted)", url: "https://ec.europa.eu/eurostat/databrowser/view/une_rt_m/default/table?lang=en" },
-    why: "The share of Denmark's labour force without work, seasonally adjusted and harmonised across countries by Eurostat.", lag: "published about six weeks after the month ends" },
+    why: "The international (ILO) definition: people without work who are looking for it and available to start, measured from a survey and harmonised across countries by Eurostat. It is roughly twice the registered rate because it counts people who are not registered, such as many students, and it jumps around from month to month because it comes from a sample.", lag: "published about six weeks after the month ends" },
   { id: "us-inflation", domain: "economy", title: "US inflation (year on year)", unit: "%", dec: 1, res: 0.1, freq: "monthly", transform: "yoy", q: "higher", h: 1, k: 6, method: "normal",
     source: { kind: "fred", series: "CPIAUCSL", name: "US Bureau of Labor Statistics, via FRED", url: "https://fred.stlouisfed.org/series/CPIAUCSL" },
     why: "The change in US consumer prices compared with the same month a year earlier, the standard measure of inflation.", lag: "usually published in the middle of the following month" },
@@ -70,6 +73,15 @@ function parseFredCsv(text) {
     const [d, v] = line.split(","); if (!/^\d{4}-\d{2}-\d{2}$/.test(d || "")) continue;
     const x = Number(v); if (v === "" || v === "." || !Number.isFinite(x)) continue;
     out.push({ d, v: x });
+  }
+  return out.sort((a, b) => (a.d < b.d ? -1 : 1));
+}
+function parseStatbank(csv) { // rows like: All Denmark;Seasonally adjusted figures in percent of the labour force;2026M09;3.1
+  const out = [];
+  for (const line of String(csv).replace(/^\uFEFF/, "").split(/\r?\n/).slice(1)) {
+    const c = line.split(";"), m = /^(\d{4})M(\d{2})$/.exec((c[2] || "").trim()); if (!m) continue;
+    const v = Number(String(c[3]).replace(",", ".")); if (!Number.isFinite(v)) continue;
+    out.push({ d: `${m[1]}-${m[2]}-01`, v });
   }
   return out.sort((a, b) => (a.d < b.d ? -1 : 1));
 }
@@ -315,4 +327,4 @@ function makeIndicatorForecasts(forecasts, getRaw, now) {
   return out;
 }
 
-module.exports = { buildOutlook, outlookItem, sectionOf, SPECS, MODEL, parseFredCsv, parseEurostat, shape, toWeekly, yoy, diffs, targetDate, valueAt, ask, backtest, scoreBacktest, planQuestion, resolveIndicators, makeIndicatorForecasts, dueSpecs, normCdf, addMonths, addDays, mondayOf, monthName, longDate, eventHappened };
+module.exports = { parseStatbank, buildOutlook, outlookItem, sectionOf, SPECS, MODEL, parseFredCsv, parseEurostat, shape, toWeekly, yoy, diffs, targetDate, valueAt, ask, backtest, scoreBacktest, planQuestion, resolveIndicators, makeIndicatorForecasts, dueSpecs, normCdf, addMonths, addDays, mondayOf, monthName, longDate, eventHappened };
