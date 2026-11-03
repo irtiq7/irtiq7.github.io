@@ -8616,6 +8616,225 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-03-dk-registered",
+   "made": "2026-11-03",
+   "resolves": "2026-11-11",
+   "kind": "indicator",
+   "indicator": "dk-registered",
+   "domain": "jobs",
+   "label": "Denmark unemployment rate (registered)",
+   "term": "dk-registered",
+   "h_steps": 1,
+   "target_date": "2026-10-01",
+   "threshold": 3.1,
+   "direction": "higher",
+   "p": 0.18,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Denmark unemployment rate (registered) for October 2026 be higher than 3.1%?",
+   "context": {
+    "measure": {
+     "why": "Registered unemployed people as a share of the Danish labour force (gross unemployment), the figure Danish media and the government quote. It was about 3% in 2026. It is lower than the survey-based rate below because it counts only people registered as unemployed.",
+     "unit": "%",
+     "source": {
+      "kind": "statbank",
+      "table": "AUS08",
+      "name": "Statistics Denmark, table AUS08 (seasonally adjusted)",
+      "url": "https://www.statbank.dk/AUS08"
+     },
+     "lag": "published about a month after the month ends",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-09-01",
+     "value": 3.1
+    },
+    "history": [
+     {
+      "d": "2023-10-01",
+      "v": 2.8
+     },
+     {
+      "d": "2023-11-01",
+      "v": 2.8
+     },
+     {
+      "d": "2023-12-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-01-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-02-01",
+      "v": 2.8
+     },
+     {
+      "d": "2024-03-01",
+      "v": 2.8
+     },
+     {
+      "d": "2024-04-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-05-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-06-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-07-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-08-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-09-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-10-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-11-01",
+      "v": 2.9
+     },
+     {
+      "d": "2024-12-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-01-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-02-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-03-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-04-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-05-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-06-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-07-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-08-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-09-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-10-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-11-01",
+      "v": 2.9
+     },
+     {
+      "d": "2025-12-01",
+      "v": 2.9
+     },
+     {
+      "d": "2026-01-01",
+      "v": 3
+     },
+     {
+      "d": "2026-02-01",
+      "v": 3.1
+     },
+     {
+      "d": "2026-03-01",
+      "v": 3
+     },
+     {
+      "d": "2026-04-01",
+      "v": 3
+     },
+     {
+      "d": "2026-05-01",
+      "v": 3.1
+     },
+     {
+      "d": "2026-06-01",
+      "v": 3.1
+     },
+     {
+      "d": "2026-07-01",
+      "v": 3.1
+     },
+     {
+      "d": "2026-08-01",
+      "v": 3.1
+     },
+     {
+      "d": "2026-09-01",
+      "v": 3.1
+     }
+    ],
+    "trend": {
+     "change": 0.1,
+     "over": "6 months",
+     "high_52": 3.1,
+     "low_52": 2.5
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 229,
+     "window_hits": null,
+     "model_p": 0.05,
+     "expected": 3.11,
+     "sd": 0.03,
+     "threshold": 3.1,
+     "backtest": {
+      "n": 209,
+      "ok": true,
+      "base": 0.19,
+      "brier_model": 0.151,
+      "brier_base": 0.152,
+      "skill": 0.008,
+      "hit_rate": 0.833
+     },
+     "weight": 0.05,
+     "base_rate": 0.19,
+     "final_p": 0.18
+    },
+    "resolution": "Uses the value for October 2026 as first shown by Statistics Denmark, table AUS08 (seasonally adjusted). Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -8633,11 +8852,11 @@
    },
    "indicator-v1": {
     "resolved": 11,
-    "open": 17,
+    "open": 18,
     "mean_brier": 0.257
    }
   },
-  "open": 26,
+  "open": 27,
   "resolved": 32,
   "voided": 0,
   "mean_brier": 0.273,
