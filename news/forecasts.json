@@ -2744,10 +2744,11 @@
     "resolution": "Uses the value for October 2026 as first shown by Board of Governors of the Federal Reserve, via FRED. Yes if it is lower than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 3.88,
+   "brier": 0.152,
+   "log_score": 0.494,
+   "result_note": "The value was 3.88, against 3.75 at the start (+0.13)."
   },
   {
    "id": "f-2026-10-19-us-10y-yield",
@@ -3397,10 +3398,11 @@
     "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 3,
+   "brier": 0.16,
+   "log_score": 0.511,
+   "result_note": "The value was 3 against a bar of 7 (-4)."
   },
   {
    "id": "f-2026-10-21-arxiv-llm",
@@ -3616,10 +3618,11 @@
     "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 732,
+   "brier": 0.325,
+   "log_score": 0.844,
+   "result_note": "The value was 732 against a bar of 980 (-248)."
   },
   {
    "id": "f-2026-10-23-us-10y-yield",
@@ -4275,10 +4278,11 @@
     "resolution": "Counts papers submitted to arXiv from 2026-10-26 to 2026-11-01 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 64,
+   "brier": 0.476,
+   "log_score": 1.171,
+   "result_note": "The value was 64 against a bar of 92 (-28)."
   },
   {
    "id": "f-2026-10-26-php",
@@ -7736,6 +7740,882 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-03-us-fed-funds",
+   "made": "2026-11-03",
+   "resolves": "2026-12-11",
+   "kind": "indicator",
+   "indicator": "us-fed-funds",
+   "domain": "economy",
+   "label": "US effective federal funds rate",
+   "term": "us-fed-funds",
+   "h_steps": 1,
+   "target_date": "2026-11-01",
+   "threshold": 3.88,
+   "direction": "lower",
+   "p": 0.38,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US effective federal funds rate for November 2026 be lower than 3.88%?",
+   "context": {
+    "measure": {
+     "why": "The interest rate banks charge each other overnight, the rate the Federal Reserve steers. It sets the base for borrowing costs across the economy. It moves in steps at policy meetings, so most months it hardly changes.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "FEDFUNDS",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/FEDFUNDS"
+     },
+     "lag": "the monthly average is published at the start of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-10-01",
+     "value": 3.88
+    },
+    "history": [
+     {
+      "d": "2023-11-01",
+      "v": 5.33
+     },
+     {
+      "d": "2023-12-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-01-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-02-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-03-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-04-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-05-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-06-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-07-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-08-01",
+      "v": 5.33
+     },
+     {
+      "d": "2024-09-01",
+      "v": 5.13
+     },
+     {
+      "d": "2024-10-01",
+      "v": 4.83
+     },
+     {
+      "d": "2024-11-01",
+      "v": 4.64
+     },
+     {
+      "d": "2024-12-01",
+      "v": 4.48
+     },
+     {
+      "d": "2025-01-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-02-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-03-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-04-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-05-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-06-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-07-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-08-01",
+      "v": 4.33
+     },
+     {
+      "d": "2025-09-01",
+      "v": 4.22
+     },
+     {
+      "d": "2025-10-01",
+      "v": 4.09
+     },
+     {
+      "d": "2025-11-01",
+      "v": 3.88
+     },
+     {
+      "d": "2025-12-01",
+      "v": 3.72
+     },
+     {
+      "d": "2026-01-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-02-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-03-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-04-01",
+      "v": 3.64
+     },
+     {
+      "d": "2026-05-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-06-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-07-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-08-01",
+      "v": 3.63
+     },
+     {
+      "d": "2026-09-01",
+      "v": 3.75
+     },
+     {
+      "d": "2026-10-01",
+      "v": 3.88
+     }
+    ],
+    "trend": {
+     "change": 0.24,
+     "over": "6 months",
+     "high_52": 5.33,
+     "low_52": 1.68
+    },
+    "reasoning": {
+     "method": "frequency",
+     "q": "lower",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 13,
+     "window_hits": 4,
+     "model_p": 0.33,
+     "expected": 3.88,
+     "sd": null,
+     "threshold": 3.88,
+     "backtest": {
+      "n": 855,
+      "ok": true,
+      "base": 0.39,
+      "brier_model": 0.23,
+      "brier_base": 0.238,
+      "skill": 0.035,
+      "hit_rate": 0.639
+     },
+     "weight": 0.23,
+     "base_rate": 0.39,
+     "final_p": 0.38
+    },
+    "resolution": "Uses the value for November 2026 as first shown by Board of Governors of the Federal Reserve, via FRED. Yes if it is lower than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-03-arxiv-underwater",
+   "made": "2026-11-03",
+   "resolves": "2026-11-17",
+   "kind": "indicator",
+   "indicator": "arxiv-underwater",
+   "domain": "research",
+   "label": "arXiv papers on underwater acoustics and sonar",
+   "term": "arxiv-underwater",
+   "h_steps": 2,
+   "target_date": "2026-11-09",
+   "threshold": 6,
+   "direction": "above_avg",
+   "p": 0.39,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 6 papers on underwater acoustics and sonar in the week starting 9 November 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention underwater acoustics, sonar or hydrophones. It shows how much researchers are publishing on the topic, not how good the work is.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"underwater acoustic\" OR abs:sonar OR abs:hydrophone OR abs:\"underwater localization\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-26",
+     "value": 3
+    },
+    "history": [
+     {
+      "d": "2026-02-23",
+      "v": 4
+     },
+     {
+      "d": "2026-03-02",
+      "v": 3
+     },
+     {
+      "d": "2026-03-09",
+      "v": 6
+     },
+     {
+      "d": "2026-03-16",
+      "v": 5
+     },
+     {
+      "d": "2026-03-23",
+      "v": 3
+     },
+     {
+      "d": "2026-03-30",
+      "v": 3
+     },
+     {
+      "d": "2026-04-06",
+      "v": 1
+     },
+     {
+      "d": "2026-04-13",
+      "v": 3
+     },
+     {
+      "d": "2026-04-20",
+      "v": 6
+     },
+     {
+      "d": "2026-04-27",
+      "v": 3
+     },
+     {
+      "d": "2026-05-04",
+      "v": 5
+     },
+     {
+      "d": "2026-05-11",
+      "v": 2
+     },
+     {
+      "d": "2026-05-18",
+      "v": 6
+     },
+     {
+      "d": "2026-05-25",
+      "v": 4
+     },
+     {
+      "d": "2026-06-01",
+      "v": 5
+     },
+     {
+      "d": "2026-06-08",
+      "v": 5
+     },
+     {
+      "d": "2026-06-15",
+      "v": 2
+     },
+     {
+      "d": "2026-06-22",
+      "v": 5
+     },
+     {
+      "d": "2026-06-29",
+      "v": 4
+     },
+     {
+      "d": "2026-07-06",
+      "v": 1
+     },
+     {
+      "d": "2026-07-13",
+      "v": 3
+     },
+     {
+      "d": "2026-07-20",
+      "v": 4
+     },
+     {
+      "d": "2026-07-27",
+      "v": 4
+     },
+     {
+      "d": "2026-08-03",
+      "v": 6
+     },
+     {
+      "d": "2026-08-10",
+      "v": 3
+     },
+     {
+      "d": "2026-08-17",
+      "v": 4
+     },
+     {
+      "d": "2026-08-24",
+      "v": 8
+     },
+     {
+      "d": "2026-08-31",
+      "v": 7
+     },
+     {
+      "d": "2026-09-07",
+      "v": 8
+     },
+     {
+      "d": "2026-09-14",
+      "v": 7
+     },
+     {
+      "d": "2026-09-21",
+      "v": 6
+     },
+     {
+      "d": "2026-09-28",
+      "v": 4
+     },
+     {
+      "d": "2026-10-05",
+      "v": 5
+     },
+     {
+      "d": "2026-10-12",
+      "v": 9
+     },
+     {
+      "d": "2026-10-19",
+      "v": 3
+     },
+     {
+      "d": "2026-10-26",
+      "v": 3
+     }
+    ],
+    "trend": {
+     "change": -4,
+     "over": "8 weeks",
+     "high_52": 9,
+     "low_52": 0
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 63,
+     "window_hits": null,
+     "model_p": 0.21,
+     "expected": 4.4,
+     "sd": 2.1,
+     "threshold": 6,
+     "backtest": {
+      "n": 50,
+      "ok": true,
+      "base": 0.385,
+      "brier_model": 0.266,
+      "brier_base": 0.236,
+      "skill": -0.127,
+      "hit_rate": 0.6
+     },
+     "weight": 0,
+     "base_rate": 0.385,
+     "final_p": 0.39
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-11-09 to 2026-11-15 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-03-arxiv-llm",
+   "made": "2026-11-03",
+   "resolves": "2026-11-17",
+   "kind": "indicator",
+   "indicator": "arxiv-llm",
+   "domain": "research",
+   "label": "arXiv papers on language models",
+   "term": "arxiv-llm",
+   "h_steps": 2,
+   "target_date": "2026-11-09",
+   "threshold": 950,
+   "direction": "above_avg",
+   "p": 0.52,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 950 papers on language models in the week starting 9 November 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention language models. A measure of research activity in the area that dominates AI news, not of quality.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "abs:\"language model\"",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-26",
+     "value": 732
+    },
+    "history": [
+     {
+      "d": "2026-02-23",
+      "v": 813
+     },
+     {
+      "d": "2026-03-02",
+      "v": 817
+     },
+     {
+      "d": "2026-03-09",
+      "v": 872
+     },
+     {
+      "d": "2026-03-16",
+      "v": 847
+     },
+     {
+      "d": "2026-03-23",
+      "v": 790
+     },
+     {
+      "d": "2026-03-30",
+      "v": 825
+     },
+     {
+      "d": "2026-04-06",
+      "v": 998
+     },
+     {
+      "d": "2026-04-13",
+      "v": 965
+     },
+     {
+      "d": "2026-04-20",
+      "v": 820
+     },
+     {
+      "d": "2026-04-27",
+      "v": 750
+     },
+     {
+      "d": "2026-05-04",
+      "v": 1057
+     },
+     {
+      "d": "2026-05-11",
+      "v": 1120
+     },
+     {
+      "d": "2026-05-18",
+      "v": 971
+     },
+     {
+      "d": "2026-05-25",
+      "v": 1208
+     },
+     {
+      "d": "2026-06-01",
+      "v": 1044
+     },
+     {
+      "d": "2026-06-08",
+      "v": 841
+     },
+     {
+      "d": "2026-06-15",
+      "v": 771
+     },
+     {
+      "d": "2026-06-22",
+      "v": 762
+     },
+     {
+      "d": "2026-06-29",
+      "v": 784
+     },
+     {
+      "d": "2026-07-06",
+      "v": 644
+     },
+     {
+      "d": "2026-07-13",
+      "v": 618
+     },
+     {
+      "d": "2026-07-20",
+      "v": 621
+     },
+     {
+      "d": "2026-07-27",
+      "v": 848
+     },
+     {
+      "d": "2026-08-03",
+      "v": 937
+     },
+     {
+      "d": "2026-08-10",
+      "v": 701
+     },
+     {
+      "d": "2026-08-17",
+      "v": 660
+     },
+     {
+      "d": "2026-08-24",
+      "v": 882
+     },
+     {
+      "d": "2026-08-31",
+      "v": 882
+     },
+     {
+      "d": "2026-09-07",
+      "v": 707
+     },
+     {
+      "d": "2026-09-14",
+      "v": 780
+     },
+     {
+      "d": "2026-09-21",
+      "v": 1004
+     },
+     {
+      "d": "2026-09-28",
+      "v": 1556
+     },
+     {
+      "d": "2026-10-05",
+      "v": 1082
+     },
+     {
+      "d": "2026-10-12",
+      "v": 956
+     },
+     {
+      "d": "2026-10-19",
+      "v": 816
+     },
+     {
+      "d": "2026-10-26",
+      "v": 732
+     }
+    ],
+    "trend": {
+     "change": -150,
+     "over": "8 weeks",
+     "high_52": 1556,
+     "low_52": 414
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 63,
+     "window_hits": null,
+     "model_p": 0.35,
+     "expected": 868,
+     "sd": 214.7,
+     "threshold": 950,
+     "backtest": {
+      "n": 50,
+      "ok": true,
+      "base": 0.519,
+      "brier_model": 0.256,
+      "brier_base": 0.25,
+      "skill": -0.026,
+      "hit_rate": 0.6
+     },
+     "weight": 0,
+     "base_rate": 0.519,
+     "final_p": 0.52
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-11-09 to 2026-11-15 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-03-arxiv-world-models",
+   "made": "2026-11-03",
+   "resolves": "2026-11-17",
+   "kind": "indicator",
+   "indicator": "arxiv-world-models",
+   "domain": "research",
+   "label": "arXiv papers on world models",
+   "term": "arxiv-world-models",
+   "h_steps": 2,
+   "target_date": "2026-11-09",
+   "threshold": 96,
+   "direction": "above_avg",
+   "p": 0.64,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 96 papers on world models in the week starting 9 November 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week whose abstracts mention world models, models that learn how an environment changes in response to actions. A gauge of how fast the idea is spreading in research.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"world model\" OR abs:\"world models\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-10-26",
+     "value": 64
+    },
+    "history": [
+     {
+      "d": "2026-02-23",
+      "v": 30
+     },
+     {
+      "d": "2026-03-02",
+      "v": 34
+     },
+     {
+      "d": "2026-03-09",
+      "v": 40
+     },
+     {
+      "d": "2026-03-16",
+      "v": 36
+     },
+     {
+      "d": "2026-03-23",
+      "v": 36
+     },
+     {
+      "d": "2026-03-30",
+      "v": 24
+     },
+     {
+      "d": "2026-04-06",
+      "v": 35
+     },
+     {
+      "d": "2026-04-13",
+      "v": 23
+     },
+     {
+      "d": "2026-04-20",
+      "v": 32
+     },
+     {
+      "d": "2026-04-27",
+      "v": 33
+     },
+     {
+      "d": "2026-05-04",
+      "v": 53
+     },
+     {
+      "d": "2026-05-11",
+      "v": 78
+     },
+     {
+      "d": "2026-05-18",
+      "v": 52
+     },
+     {
+      "d": "2026-05-25",
+      "v": 52
+     },
+     {
+      "d": "2026-06-01",
+      "v": 63
+     },
+     {
+      "d": "2026-06-08",
+      "v": 67
+     },
+     {
+      "d": "2026-06-15",
+      "v": 62
+     },
+     {
+      "d": "2026-06-22",
+      "v": 66
+     },
+     {
+      "d": "2026-06-29",
+      "v": 64
+     },
+     {
+      "d": "2026-07-06",
+      "v": 40
+     },
+     {
+      "d": "2026-07-13",
+      "v": 44
+     },
+     {
+      "d": "2026-07-20",
+      "v": 46
+     },
+     {
+      "d": "2026-07-27",
+      "v": 51
+     },
+     {
+      "d": "2026-08-03",
+      "v": 59
+     },
+     {
+      "d": "2026-08-10",
+      "v": 59
+     },
+     {
+      "d": "2026-08-17",
+      "v": 46
+     },
+     {
+      "d": "2026-08-24",
+      "v": 55
+     },
+     {
+      "d": "2026-08-31",
+      "v": 51
+     },
+     {
+      "d": "2026-09-07",
+      "v": 51
+     },
+     {
+      "d": "2026-09-14",
+      "v": 65
+     },
+     {
+      "d": "2026-09-21",
+      "v": 98
+     },
+     {
+      "d": "2026-09-28",
+      "v": 164
+     },
+     {
+      "d": "2026-10-05",
+      "v": 130
+     },
+     {
+      "d": "2026-10-12",
+      "v": 119
+     },
+     {
+      "d": "2026-10-19",
+      "v": 76
+     },
+     {
+      "d": "2026-10-26",
+      "v": 64
+     }
+    ],
+    "trend": {
+     "change": 13,
+     "over": "8 weeks",
+     "high_52": 164,
+     "low_52": 13
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 63,
+     "window_hits": null,
+     "model_p": 0.19,
+     "expected": 86.4,
+     "sd": 11.1,
+     "threshold": 96,
+     "backtest": {
+      "n": 50,
+      "ok": true,
+      "base": 0.635,
+      "brier_model": 0.266,
+      "brier_base": 0.23,
+      "skill": -0.154,
+      "hit_rate": 0.58
+     },
+     "weight": 0,
+     "base_rate": 0.635,
+     "final_p": 0.64
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-11-09 to 2026-11-15 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -7752,18 +8632,18 @@
     "mean_brier": 0.186
    },
    "indicator-v1": {
-    "resolved": 7,
+    "resolved": 11,
     "open": 17,
-    "mean_brier": 0.244
+    "mean_brier": 0.257
    }
   },
   "open": 26,
-  "resolved": 28,
+  "resolved": 32,
   "voided": 0,
-  "mean_brier": 0.272,
+  "mean_brier": 0.273,
   "benchmark_brier": 0.25,
   "skill": -0.09,
-  "mean_log_score": 0.742,
+  "mean_log_score": 0.743,
   "calibration": [
    {
     "range": "0-34%",
@@ -7773,15 +8653,15 @@
    },
    {
     "range": "34-67%",
-    "n": 18,
-    "mean_p": 0.53,
-    "observed": 0.39
+    "n": 21,
+    "mean_p": 0.52,
+    "observed": 0.33
    },
    {
     "range": "67-100%",
-    "n": 10,
+    "n": 11,
     "mean_p": 0.72,
-    "observed": 0.4
+    "observed": 0.36
    }
   ]
  },
