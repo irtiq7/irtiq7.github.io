@@ -4422,10 +4422,20 @@
     "base_per_week": 0,
     "lambda": 5.1
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 2,
+   "brier": 0.16,
+   "log_score": 0.511,
+   "daily_after": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "2 stories over 7 days, at most 1 on any one day; mentions faded as the window went on."
   },
   {
    "id": "f-2026-10-26-hugging-face",
@@ -4566,10 +4576,20 @@
     "base_per_week": 0,
     "lambda": 4.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.185,
+   "log_score": 0.562,
+   "daily_after": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-10-26-iphone",
@@ -4710,10 +4730,20 @@
     "base_per_week": 3.9,
     "lambda": 9.9
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 5,
+   "brier": 0.384,
+   "log_score": 0.968,
+   "daily_after": [
+    2,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "result_note": "5 stories over 7 days, at most 2 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-10-27-arxiv-sound-localization",
@@ -5367,10 +5397,11 @@
     "resolution": "Uses the last value on or before 3 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 4.91,
+   "brier": 0.23,
+   "log_score": 0.654,
+   "result_note": "The value was 4.91, against 4.99 at the start (-0.08)."
   },
   {
    "id": "f-2026-10-29-us-stocks",
@@ -8840,6 +8871,225 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-04-us-10y-yield",
+   "made": "2026-11-04",
+   "resolves": "2026-11-15",
+   "kind": "indicator",
+   "indicator": "us-10y-yield",
+   "domain": "economy",
+   "label": "US 10-year Treasury yield",
+   "term": "us-10y-yield",
+   "h_steps": 1,
+   "target_date": "2026-11-09",
+   "threshold": 4.91,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 10-year Treasury yield close higher on 9 November 2026 than on 2 November 2026 (4.91%)?",
+   "context": {
+    "measure": {
+     "why": "The yield on 10-year US government bonds, a benchmark for mortgage and company borrowing rates. Short-term moves are close to a coin flip, so these questions mostly teach how little can be predicted.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "DGS10",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-02",
+     "value": 4.91
+    },
+    "history": [
+     {
+      "d": "2026-03-02",
+      "v": 4.05
+     },
+     {
+      "d": "2026-03-09",
+      "v": 4.12
+     },
+     {
+      "d": "2026-03-16",
+      "v": 4.23
+     },
+     {
+      "d": "2026-03-23",
+      "v": 4.34
+     },
+     {
+      "d": "2026-03-30",
+      "v": 4.35
+     },
+     {
+      "d": "2026-04-06",
+      "v": 4.34
+     },
+     {
+      "d": "2026-04-13",
+      "v": 4.3
+     },
+     {
+      "d": "2026-04-20",
+      "v": 4.26
+     },
+     {
+      "d": "2026-04-27",
+      "v": 4.35
+     },
+     {
+      "d": "2026-05-04",
+      "v": 4.45
+     },
+     {
+      "d": "2026-05-11",
+      "v": 4.42
+     },
+     {
+      "d": "2026-05-18",
+      "v": 4.61
+     },
+     {
+      "d": "2026-05-25",
+      "v": 4.56
+     },
+     {
+      "d": "2026-06-01",
+      "v": 4.47
+     },
+     {
+      "d": "2026-06-08",
+      "v": 4.56
+     },
+     {
+      "d": "2026-06-15",
+      "v": 4.47
+     },
+     {
+      "d": "2026-06-22",
+      "v": 4.51
+     },
+     {
+      "d": "2026-06-29",
+      "v": 4.38
+     },
+     {
+      "d": "2026-07-06",
+      "v": 4.48
+     },
+     {
+      "d": "2026-07-13",
+      "v": 4.62
+     },
+     {
+      "d": "2026-07-20",
+      "v": 4.6
+     },
+     {
+      "d": "2026-07-27",
+      "v": 4.65
+     },
+     {
+      "d": "2026-08-03",
+      "v": 4.7
+     },
+     {
+      "d": "2026-08-10",
+      "v": 4.72
+     },
+     {
+      "d": "2026-08-17",
+      "v": 4.72
+     },
+     {
+      "d": "2026-08-24",
+      "v": 4.7
+     },
+     {
+      "d": "2026-08-31",
+      "v": 4.75
+     },
+     {
+      "d": "2026-09-07",
+      "v": 4.78
+     },
+     {
+      "d": "2026-09-14",
+      "v": 4.97
+     },
+     {
+      "d": "2026-09-21",
+      "v": 4.96
+     },
+     {
+      "d": "2026-09-28",
+      "v": 5.24
+     },
+     {
+      "d": "2026-10-05",
+      "v": 5.31
+     },
+     {
+      "d": "2026-10-12",
+      "v": 5.24
+     },
+     {
+      "d": "2026-10-19",
+      "v": 5.15
+     },
+     {
+      "d": "2026-10-26",
+      "v": 5
+     },
+     {
+      "d": "2026-11-02",
+      "v": 4.91
+     }
+    ],
+    "trend": {
+     "change": 0.13,
+     "over": "8 weeks",
+     "high_52": 5.31,
+     "low_52": 4.03
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 3375,
+     "window_hits": null,
+     "model_p": 0.46,
+     "expected": 4.906,
+     "sd": 0.098,
+     "threshold": 4.91,
+     "backtest": {
+      "n": 3355,
+      "ok": true,
+      "base": 0.477,
+      "brier_model": 0.258,
+      "brier_base": 0.249,
+      "skill": -0.034,
+      "hit_rate": 0.52
+     },
+     "weight": 0,
+     "base_rate": 0.477,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 9 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -8851,23 +9101,23 @@
     "mean_brier": 0.32
    },
    "burst-persistence-v2": {
-    "resolved": 6,
-    "open": 9,
-    "mean_brier": 0.186
+    "resolved": 9,
+    "open": 6,
+    "mean_brier": 0.205
    },
    "indicator-v1": {
-    "resolved": 11,
+    "resolved": 12,
     "open": 18,
-    "mean_brier": 0.257
+    "mean_brier": 0.255
    }
   },
-  "open": 27,
-  "resolved": 32,
+  "open": 24,
+  "resolved": 36,
   "voided": 0,
-  "mean_brier": 0.273,
+  "mean_brier": 0.269,
   "benchmark_brier": 0.25,
-  "skill": -0.09,
-  "mean_log_score": 0.743,
+  "skill": -0.08,
+  "mean_log_score": 0.736,
   "calibration": [
    {
     "range": "0-34%",
@@ -8877,9 +9127,9 @@
    },
    {
     "range": "34-67%",
-    "n": 21,
-    "mean_p": 0.52,
-    "observed": 0.33
+    "n": 25,
+    "mean_p": 0.51,
+    "observed": 0.28
    },
    {
     "range": "67-100%",
