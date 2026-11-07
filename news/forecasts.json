@@ -1439,10 +1439,11 @@
     "resolution": "Uses the value for October 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 4.1,
+   "brier": 0.116,
+   "log_score": 0.416,
+   "result_note": "The value was 4.1, against 4.2 at the start (-0.1)."
   },
   {
    "id": "f-2026-10-19-us-jobless-claims",
@@ -1874,10 +1875,11 @@
     "resolution": "Uses the value for October 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is above the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 165,
+   "brier": 0.27,
+   "log_score": 0.734,
+   "result_note": "The value was 165 against a bar of 65 (+100)."
   },
   {
    "id": "f-2026-10-19-indeed-software",
@@ -10190,6 +10192,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-07-us-unemployment",
+   "made": "2026-11-07",
+   "resolves": "2026-12-11",
+   "kind": "indicator",
+   "indicator": "us-unemployment",
+   "domain": "jobs",
+   "label": "US unemployment rate",
+   "term": "us-unemployment",
+   "h_steps": 1,
+   "target_date": "2026-11-01",
+   "threshold": 4.1,
+   "direction": "higher",
+   "p": 0.33,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US unemployment rate for November 2026 be higher than 4.1%?",
+   "context": {
+    "measure": {
+     "why": "The share of people in the US labour force who are out of work and looking for a job, from the monthly household survey of the Bureau of Labor Statistics. It is one of the most watched summaries of the job market.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "UNRATE",
+      "name": "US Bureau of Labor Statistics, via FRED",
+      "url": "https://fred.stlouisfed.org/series/UNRATE"
+     },
+     "lag": "usually published in the first week of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-10-01",
+     "value": 4.1
+    },
+    "history": [
+     {
+      "d": "2023-10-01",
+      "v": 3.9
+     },
+     {
+      "d": "2023-11-01",
+      "v": 3.7
+     },
+     {
+      "d": "2023-12-01",
+      "v": 3.8
+     },
+     {
+      "d": "2024-01-01",
+      "v": 3.7
+     },
+     {
+      "d": "2024-02-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-03-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-04-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-05-01",
+      "v": 3.9
+     },
+     {
+      "d": "2024-06-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-07-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-08-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-09-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-10-01",
+      "v": 4.1
+     },
+     {
+      "d": "2024-11-01",
+      "v": 4.2
+     },
+     {
+      "d": "2024-12-01",
+      "v": 4.1
+     },
+     {
+      "d": "2025-01-01",
+      "v": 4
+     },
+     {
+      "d": "2025-02-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-03-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-04-01",
+      "v": 4.2
+     },
+     {
+      "d": "2025-05-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-06-01",
+      "v": 4.1
+     },
+     {
+      "d": "2025-07-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-08-01",
+      "v": 4.3
+     },
+     {
+      "d": "2025-09-01",
+      "v": 4.4
+     },
+     {
+      "d": "2025-11-01",
+      "v": 4.5
+     },
+     {
+      "d": "2025-12-01",
+      "v": 4.4
+     },
+     {
+      "d": "2026-01-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-02-01",
+      "v": 4.4
+     },
+     {
+      "d": "2026-03-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-04-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-05-01",
+      "v": 4.3
+     },
+     {
+      "d": "2026-06-01",
+      "v": 4.2
+     },
+     {
+      "d": "2026-07-01",
+      "v": 4.1
+     },
+     {
+      "d": "2026-08-01",
+      "v": 4.1
+     },
+     {
+      "d": "2026-09-01",
+      "v": 4.2
+     },
+     {
+      "d": "2026-10-01",
+      "v": 4.1
+     }
+    ],
+    "trend": {
+     "change": -0.2,
+     "over": "6 months",
+     "high_52": 4.5,
+     "low_52": 3.4
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 937,
+     "window_hits": null,
+     "model_p": 0.31,
+     "expected": 4.08,
+     "sd": 0.14,
+     "threshold": 4.1,
+     "backtest": {
+      "n": 917,
+      "ok": true,
+      "base": 0.338,
+      "brier_model": 0.217,
+      "brier_base": 0.224,
+      "skill": 0.029,
+      "hit_rate": 0.701
+     },
+     "weight": 0.19,
+     "base_rate": 0.338,
+     "final_p": 0.33
+    },
+    "resolution": "Uses the value for November 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is higher than the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-07-us-payrolls",
+   "made": "2026-11-07",
+   "resolves": "2026-12-11",
+   "kind": "indicator",
+   "indicator": "us-payrolls",
+   "domain": "jobs",
+   "label": "US monthly job gains",
+   "term": "us-payrolls",
+   "h_steps": 1,
+   "target_date": "2026-11-01",
+   "threshold": 85,
+   "direction": "above_avg",
+   "p": 0.51,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will US employers add more than 85 thousand jobs in November 2026, the average of the last 6 months?",
+   "context": {
+    "measure": {
+     "why": "The change in the number of non-farm jobs in the US from one month to the next, the “jobs added” figure in the headlines. Early figures are revised later, and this question uses the first value that appears.",
+     "unit": "thousand jobs",
+     "source": {
+      "kind": "fred",
+      "series": "PAYEMS",
+      "name": "US Bureau of Labor Statistics, via FRED",
+      "url": "https://fred.stlouisfed.org/series/PAYEMS"
+     },
+     "lag": "usually published on the first Friday of the following month",
+     "freq": "monthly"
+    },
+    "latest": {
+     "date": "2026-10-01",
+     "value": 165
+    },
+    "history": [
+     {
+      "d": "2023-11-01",
+      "v": 127
+     },
+     {
+      "d": "2023-12-01",
+      "v": 154
+     },
+     {
+      "d": "2024-01-01",
+      "v": 175
+     },
+     {
+      "d": "2024-02-01",
+      "v": 206
+     },
+     {
+      "d": "2024-03-01",
+      "v": 228
+     },
+     {
+      "d": "2024-04-01",
+      "v": 64
+     },
+     {
+      "d": "2024-05-01",
+      "v": 78
+     },
+     {
+      "d": "2024-06-01",
+      "v": 87
+     },
+     {
+      "d": "2024-07-01",
+      "v": 53
+     },
+     {
+      "d": "2024-08-01",
+      "v": 9
+     },
+     {
+      "d": "2024-09-01",
+      "v": 155
+     },
+     {
+      "d": "2024-10-01",
+      "v": 33
+     },
+     {
+      "d": "2024-11-01",
+      "v": 134
+     },
+     {
+      "d": "2024-12-01",
+      "v": 237
+     },
+     {
+      "d": "2025-01-01",
+      "v": -48
+     },
+     {
+      "d": "2025-02-01",
+      "v": 42
+     },
+     {
+      "d": "2025-03-01",
+      "v": 67
+     },
+     {
+      "d": "2025-04-01",
+      "v": 108
+     },
+     {
+      "d": "2025-05-01",
+      "v": 13
+     },
+     {
+      "d": "2025-06-01",
+      "v": -20
+     },
+     {
+      "d": "2025-07-01",
+      "v": 64
+     },
+     {
+      "d": "2025-08-01",
+      "v": -70
+     },
+     {
+      "d": "2025-09-01",
+      "v": 76
+     },
+     {
+      "d": "2025-10-01",
+      "v": -140
+     },
+     {
+      "d": "2025-11-01",
+      "v": 41
+     },
+     {
+      "d": "2025-12-01",
+      "v": -17
+     },
+     {
+      "d": "2026-01-01",
+      "v": 160
+     },
+     {
+      "d": "2026-02-01",
+      "v": -156
+     },
+     {
+      "d": "2026-03-01",
+      "v": 214
+     },
+     {
+      "d": "2026-04-01",
+      "v": 148
+     },
+     {
+      "d": "2026-05-01",
+      "v": 63
+     },
+     {
+      "d": "2026-06-01",
+      "v": 31
+     },
+     {
+      "d": "2026-07-01",
+      "v": -10
+     },
+     {
+      "d": "2026-08-01",
+      "v": 186
+     },
+     {
+      "d": "2026-09-01",
+      "v": 60
+     },
+     {
+      "d": "2026-10-01",
+      "v": 165
+     }
+    ],
+    "trend": {
+     "change": 17,
+     "over": "6 months",
+     "high_52": 714,
+     "low_52": -156
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 6,
+     "win": 6,
+     "h": 1,
+     "window_n": 1039,
+     "window_hits": null,
+     "model_p": 0.6,
+     "expected": 114.4,
+     "sd": 117.5,
+     "threshold": 85,
+     "backtest": {
+      "n": 1019,
+      "ok": true,
+      "base": 0.479,
+      "brier_model": 0.239,
+      "brier_base": 0.25,
+      "skill": 0.041,
+      "hit_rate": 0.583
+     },
+     "weight": 0.27,
+     "base_rate": 0.479,
+     "final_p": 0.51
+    },
+    "resolution": "Uses the value for November 2026 as first shown by US Bureau of Labor Statistics, via FRED. Yes if it is above the starting figure after rounding to the reported precision. A tie is a no. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -10206,18 +10646,18 @@
     "mean_brier": 0.205
    },
    "indicator-v1": {
-    "resolved": 17,
+    "resolved": 19,
     "open": 18,
-    "mean_brier": 0.25
+    "mean_brier": 0.244
    }
   },
   "open": 24,
-  "resolved": 41,
+  "resolved": 43,
   "voided": 0,
-  "mean_brier": 0.266,
+  "mean_brier": 0.262,
   "benchmark_brier": 0.25,
-  "skill": -0.06,
-  "mean_log_score": 0.728,
+  "skill": -0.05,
+  "mean_log_score": 0.721,
   "calibration": [
    {
     "range": "0-34%",
@@ -10227,9 +10667,9 @@
    },
    {
     "range": "34-67%",
-    "n": 29,
+    "n": 31,
     "mean_p": 0.51,
-    "observed": 0.24
+    "observed": 0.26
    },
    {
     "range": "67-100%",
