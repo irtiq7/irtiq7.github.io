@@ -11,8 +11,30 @@
   "checked": "2026-10-19",
   "def": null
  },
+ "amd": {
+  "checked": "2026-11-09",
+  "def": {
+   "text": "Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company headquartered in Santa Clara, California.",
+   "title": "AMD",
+   "url": "https://en.wikipedia.org/wiki/AMD",
+   "source": "Wikipedia"
+  }
+ },
  "bank earnings": {
   "checked": "2026-10-19",
+  "def": null
+ },
+ "berkshire hathaway": {
+  "checked": "2026-11-09",
+  "def": {
+   "text": "Berkshire Hathaway Inc. is an American multinational conglomerate holding company headquartered in Omaha, Nebraska. Originally a textile manufacturer, the company transitioned into a conglomerate starting in 1965 under the management of chairman and CEO Warren Buffett and vice chairman Charlie Munger.",
+   "title": "Berkshire Hathaway",
+   "url": "https://en.wikipedia.org/wiki/Berkshire_Hathaway",
+   "source": "Wikipedia"
+  }
+ },
+ "blue wave": {
+  "checked": "2026-11-09",
   "def": null
  },
  "character.ai": {
@@ -42,6 +64,18 @@
    "source": "Wikipedia"
   }
  },
+ "data centers": {
+  "checked": "2026-11-09",
+  "def": null
+ },
+ "democratic sweep": {
+  "checked": "2026-11-09",
+  "def": null
+ },
+ "democrats sweep": {
+  "checked": "2026-11-09",
+  "def": null
+ },
  "ecb": {
   "checked": "2026-11-02",
   "def": null
@@ -57,6 +91,10 @@
  },
  "gemini argon": {
   "checked": "2026-10-19",
+  "def": null
+ },
+ "hedge funds": {
+  "checked": "2026-11-09",
   "def": null
  },
  "homeview": {
@@ -94,9 +132,44 @@
    "source": "Wikipedia"
   }
  },
+ "jensen huang": {
+  "checked": "2026-11-09",
+  "def": {
+   "text": "Jen-Hsun \"Jensen\" Huang is a Taiwanese and American electrical engineer and business executive who is the co-founder, president, and CEO of Nvidia, one of the world's most valuable companies. As of October 2026, Forbes estimates his net worth at over US$200 billion, making him the seventh-wealthiest individual in the world.",
+   "title": "Jensen Huang",
+   "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+   "source": "Wikipedia"
+  }
+ },
+ "long-horizon": {
+  "checked": "2026-11-09",
+  "def": null
+ },
+ "memory-efficient mixture-of-experts training": {
+  "checked": "2026-11-09",
+  "def": null
+ },
  "midterm elections": {
   "checked": "2026-11-02",
   "def": null
+ },
+ "multi-agent reinforcement learning": {
+  "checked": "2026-11-09",
+  "def": {
+   "text": "Multi-agent reinforcement learning (MARL) is a sub-field of reinforcement learning. It focuses on studying the behavior of multiple learning agents that coexist in a shared environment.",
+   "title": "Multi-agent reinforcement learning",
+   "url": "https://en.wikipedia.org/wiki/Multi-agent_reinforcement_learning",
+   "source": "Wikipedia"
+  }
+ },
+ "nasa": {
+  "checked": "2026-11-09",
+  "def": {
+   "text": "The National Aeronautics and Space Administration is an independent agency of the U.S. federal government responsible for the United States' civil space program, as well as research in aeronautics and space.",
+   "title": "NASA",
+   "url": "https://en.wikipedia.org/wiki/NASA",
+   "source": "Wikipedia"
+  }
  },
  "oled": {
   "checked": "2026-11-02",

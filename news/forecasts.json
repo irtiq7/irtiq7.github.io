@@ -10630,6 +10630,846 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-multi-agent",
+   "made": "2026-11-09",
+   "resolves": "2026-11-23",
+   "kind": "term-spread",
+   "term": "multi-agent",
+   "label": "Multi-Agent Reinforcement Learning",
+   "threshold": 1,
+   "p": 0.32,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Multi-Agent Reinforcement Learning\", so far only in research coverage, reach a tech or business story by 2026-11-23?",
+   "context": {
+    "definition": {
+     "text": "Multi-agent reinforcement learning (MARL) is a sub-field of reinforcement learning. It focuses on studying the behavior of multiple learning agents that coexist in a shared environment.",
+     "title": "Multi-agent reinforcement learning",
+     "url": "https://en.wikipedia.org/wiki/Multi-agent_reinforcement_learning",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 10,
+     "base_per_week": 2,
+     "ratio": 4.1,
+     "outlets": 3,
+     "by_category": {
+      "research": 10,
+      "tech": 0,
+      "business": 0
+     },
+     "daily": [
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      4,
+      0,
+      0,
+      3
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-06",
+      "count": 4,
+      "share": 0.4
+     },
+     "first_seen": {
+      "research": "2026-10-05",
+      "tech": "2026-10-25"
+     },
+     "lag_days": 20
+    },
+    "examples": [
+     {
+      "id": "8b731ed019",
+      "title": "Memory-Aware Multi-Agent Architecture with LLM-based Orchestration for Conversational Recommendation",
+      "url": "https://arxiv.org/abs/2611.08718",
+      "source": "arxiv-cs-ai",
+      "category": "research",
+      "published": "2026-11-09T05:00:00.000Z",
+      "summary": "Conversational recommender systems often treat user sessions in isolation, limiting their ability to capture how user intent evolves over time. In this work, we propose a memory-aware multi-agent architecture for conversational recommendati"
+     },
+     {
+      "id": "69e82d1598",
+      "title": "It Takes Two to Tangram: Multi-Agent Object Centric Reinforcement Learning for Assembly",
+      "url": "https://arxiv.org/abs/2611.08814",
+      "source": "arxiv-cs-ro",
+      "category": "research",
+      "published": "2026-11-09T05:00:00.000Z",
+      "summary": "Geometric assembly requires fine spatiotemporal coordination to place parts without causing collisions or deadlocks under tight clearances. To address this, we present an object-centric reinforcement learning framework that treats each part"
+     },
+     {
+      "id": "e72abcb505",
+      "title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2611.06956",
+      "source": "arxiv-cs-lg",
+      "category": "research",
+      "published": "2026-11-06T05:00:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "spread",
+     "backtest": {
+      "cases": 430,
+      "hits": 139,
+      "horizon_days": 14,
+      "rate": 0.32,
+      "prior": 0.25,
+      "p": 0.32
+     },
+     "final_p": 0.32
+    },
+    "resolution": "Counts distinct tech or business stories published 2026-11-10 to 2026-11-23 (UTC) whose headline contains \"multi-agent\". One is enough for yes."
+   },
+   "inputs": {
+    "recent_7d": 10,
+    "base_per_week": 2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-mixture-of-experts",
+   "made": "2026-11-09",
+   "resolves": "2026-11-23",
+   "kind": "term-spread",
+   "term": "mixture-of-experts",
+   "label": "Memory-Efficient Mixture-of-Experts Training",
+   "threshold": 1,
+   "p": 0.32,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Memory-Efficient Mixture-of-Experts Training\", so far only in research coverage, reach a tech or business story by 2026-11-23?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0.7,
+     "ratio": 4.7,
+     "outlets": 3,
+     "by_category": {
+      "research": 5,
+      "tech": 0,
+      "business": 0
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-03",
+      "count": 1,
+      "share": 0.33
+     },
+     "first_seen": {
+      "research": "2026-10-15"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "f8de557694",
+      "title": "AlterNet: Adaptive-Depth Mixture-of-Experts with Learned Halting for Elastic Inference",
+      "url": "https://arxiv.org/abs/2611.08741",
+      "source": "arxiv-cs-ai",
+      "category": "research",
+      "published": "2026-11-09T05:00:00.000Z",
+      "summary": "We propose a novel architecture that combines the Mixture-of-Experts architecture with shallow experts and a novel dynamic-depth system to make the extent of a forward pass dynamically adjustable."
+     },
+     {
+      "id": "6736b19b4f",
+      "title": "Server-Side Sparse Assignment for Federated Mixture-of-Experts",
+      "url": "https://arxiv.org/abs/2611.07093",
+      "source": "arxiv-cs-lg",
+      "category": "research",
+      "published": "2026-11-06T05:00:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "d3dce337f6",
+      "title": "Sonar-MoE: In-Backward Expert Updates for Memory-Efficient Mixture-of-Experts Training",
+      "url": "https://arxiv.org/abs/2611.03577v2",
+      "source": "arxiv-underwater",
+      "category": "research",
+      "published": "2026-11-02T18:30:00.000Z",
+      "summary": "Most parameters of a Mixture-of-Experts (MoE) model belong to its experts, and standard training keeps every expert gradient in GPU memory until the optimizer step. We introduce Sonar-MoE, which updates each expert tensor during the backwar"
+     }
+    ],
+    "reasoning": {
+     "kind": "spread",
+     "backtest": {
+      "cases": 430,
+      "hits": 139,
+      "horizon_days": 14,
+      "rate": 0.32,
+      "prior": 0.25,
+      "p": 0.32
+     },
+     "final_p": 0.32
+    },
+    "resolution": "Counts distinct tech or business stories published 2026-11-10 to 2026-11-23 (UTC) whose headline contains \"mixture-of-experts\". One is enough for yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0.7
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-berkshire-hathaway",
+   "made": "2026-11-09",
+   "resolves": "2026-11-16",
+   "kind": "term-persistence",
+   "term": "berkshire hathaway",
+   "label": "Berkshire Hathaway",
+   "threshold": 7,
+   "p": 0.43,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Berkshire Hathaway\" be in at least 7 stories between 2026-11-10 and 2026-11-16?",
+   "context": {
+    "definition": {
+     "text": "Berkshire Hathaway Inc. is an American multinational conglomerate holding company headquartered in Omaha, Nebraska. Originally a textile manufacturer, the company transitioned into a conglomerate starting in 1965 under the management of chairman and CEO Warren Buffett and vice chairman Charlie Munger.",
+     "title": "Berkshire Hathaway",
+     "url": "https://en.wikipedia.org/wiki/Berkshire_Hathaway",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 9,
+     "base_per_week": 0.3,
+     "ratio": 11.3,
+     "outlets": 6,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 9
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      4,
+      1,
+      2
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-07",
+      "count": 4,
+      "share": 0.44
+     },
+     "first_seen": {
+      "business": "2026-10-06"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "cc73514870",
+      "title": "Berkshire Hathaway Q3: Buybacks Ramp To $9.6 Billion While The Market Misreads The Operating Decline",
+      "url": "https://seekingalpha.com/article/4964881-berkshire-hathaway-q3-buybacks-ramp-to-9-6-billion-while-the-market-misreads-the-operating-decline?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-11-09T14:00:00.000Z",
+      "summary": "I wrote this article myself, and it expresses my own opinions. Just because something may be an enticing investment for myself or someone else, it may not be the correct investment for you.Seeking Alpha's Disclosure: Past performance is no "
+     },
+     {
+      "id": "f2b5c0ccf4",
+      "title": "The biggest takeaway from Berkshire Hathaway’s latest quarter isn’t the $357 billion cash or its stock buybacks",
+      "url": "https://www.marketwatch.com/story/the-biggest-takeaway-from-berkshire-hathaways-latest-quarter-isnt-the-357-billion-cash-or-its-stock-buybacks-3069f6a9?mod=mw_rss_topstories",
+      "source": "marketwatch",
+      "category": "business",
+      "published": "2026-11-09T12:27:00.000Z",
+      "summary": "The dismal performance of Geico is the biggest takeaway from Berkshire Hathaway’s third-quarter results."
+     },
+     {
+      "id": "63307c236c",
+      "title": "Berkshire Hathaway steps up share buybacks with $9.6bn of purchases",
+      "url": "https://www.ft.com/content/1f153350-2377-4e48-a073-0539376eab4c?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-11-07T16:43:06.000Z",
+      "summary": "Insurance slowdown drags on performance, with quarterly operating income falling by 5.8 per cent year-on-year"
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 7.7,
+     "expected": 8,
+     "threshold": 7,
+     "model_p": 0.65,
+     "backtest": {
+      "cases": 5622,
+      "hits": 2879,
+      "origins": 24,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.72,
+      "shift": -0.89
+     },
+     "final_p": 0.43
+    },
+    "resolution": "Counts distinct stories published 2026-11-10 to 2026-11-16 (UTC) whose headline contains \"berkshire hathaway\", across the 32 sources this site reads. 7 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 9,
+    "base_per_week": 0.3,
+    "lambda": 7.7
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-blue-wave",
+   "made": "2026-11-09",
+   "resolves": "2026-11-16",
+   "kind": "term-persistence",
+   "term": "blue wave",
+   "label": "Blue Wave",
+   "threshold": 6,
+   "p": 0.46,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Blue Wave\" be in at least 6 stories between 2026-11-10 and 2026-11-16?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 8,
+     "base_per_week": 0.3,
+     "ratio": 10.1,
+     "outlets": 6,
+     "by_category": {
+      "research": 0,
+      "tech": 2,
+      "business": 6
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      5,
+      2,
+      0,
+      1,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-04",
+      "count": 5,
+      "share": 0.63
+     },
+     "first_seen": {
+      "business": "2026-11-01",
+      "tech": "2026-11-04"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "21b74cc25e",
+      "title": "Economy and Democracy Drove the Blue Wave",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-07/economy-and-democracy-drove-the-blue-wave-video",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-07T14:19:05.000Z",
+      "summary": ""
+     },
+     {
+      "id": "c0ffa991e3",
+      "title": "AI Selloff Extends, Treasurys Gain as Blue Wave Reverberates",
+      "url": "https://www.wsj.com/finance/stocks/ai-selloff-extends-treasurys-gain-as-blue-wave-reverberates-2d60fa21?mod=rss_markets_main",
+      "source": "wsj",
+      "category": "business",
+      "published": "2026-11-05T09:46:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "ccdcbc1a8a",
+      "title": "Markets surf the blue wave",
+      "url": "https://www.ft.com/content/04094401-1966-4bc1-8aa7-b91ea8bf680c?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-11-05T06:30:06.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6.8,
+     "expected": 7,
+     "threshold": 6,
+     "model_p": 0.68,
+     "backtest": {
+      "cases": 5622,
+      "hits": 2879,
+      "origins": 24,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.72,
+      "shift": -0.89
+     },
+     "final_p": 0.46
+    },
+    "resolution": "Counts distinct stories published 2026-11-10 to 2026-11-16 (UTC) whose headline contains \"blue wave\", across the 32 sources this site reads. 6 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 8,
+    "base_per_week": 0.3,
+    "lambda": 6.8
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-jensen-huang",
+   "made": "2026-11-09",
+   "resolves": "2026-11-16",
+   "kind": "term-persistence",
+   "term": "jensen huang",
+   "label": "Jensen Huang",
+   "threshold": 6,
+   "p": 0.46,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Jensen Huang\" be in at least 6 stories between 2026-11-10 and 2026-11-16?",
+   "context": {
+    "definition": {
+     "text": "Jen-Hsun \"Jensen\" Huang is a Taiwanese and American electrical engineer and business executive who is the co-founder, president, and CEO of Nvidia, one of the world's most valuable companies. As of October 2026, Forbes estimates his net worth at over US$200 billion, making him the seventh-wealthiest individual in the world.",
+     "title": "Jensen Huang",
+     "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 8,
+     "base_per_week": 0.3,
+     "ratio": 10.1,
+     "outlets": 5,
+     "by_category": {
+      "research": 0,
+      "tech": 6,
+      "business": 2
+     },
+     "daily": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      4,
+      2
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-08",
+      "count": 4,
+      "share": 0.5
+     },
+     "first_seen": {
+      "tech": "2026-10-21",
+      "business": "2026-11-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "5cf6a17605",
+      "title": "As Nvidia’s stock falls, here’s what Wall Street has to say about the Jensen Huang scandal",
+      "url": "https://www.marketwatch.com/story/how-wall-street-is-reacting-to-the-news-of-nvidias-jensen-huang-investigation-into-spy-claims-d8c839ab?mod=mw_rss_topstories",
+      "source": "marketwatch",
+      "category": "business",
+      "published": "2026-11-09T14:01:00.000Z",
+      "summary": "The fallout from the board’s new investigation could become “a longer-lasting problem for the company,” analysts say"
+     },
+     {
+      "id": "fdfdfd6087",
+      "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50”",
+      "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-11-09T05:26:29.000Z",
+      "summary": "Nvidia’s board announced Sunday that it’s launching an independent investigation after CEO Jensen Huang told staff he was unfaithful to his wife. Sonnenfeld likes Huang, he said, and he called Huang’s career salvageable but put the odds at "
+     },
+     {
+      "id": "67abd93f19",
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-11-08T22:54:50.000Z",
+      "summary": "Jensen Huang, chief executive officer of Nvidia Corp., attends a media briefing following the company's \"Japan AI Ecosystem\" reception in Tokyo, Japan, on Thursday, July 16, 2026. Japan is planning to buy 27,500 next-generation Rubin chips "
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6.8,
+     "expected": 7,
+     "threshold": 6,
+     "model_p": 0.68,
+     "backtest": {
+      "cases": 5622,
+      "hits": 2879,
+      "origins": 24,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.72,
+      "shift": -0.89
+     },
+     "final_p": 0.46
+    },
+    "resolution": "Counts distinct stories published 2026-11-10 to 2026-11-16 (UTC) whose headline contains \"jensen huang\", across the 32 sources this site reads. 6 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 8,
+    "base_per_week": 0.3,
+    "lambda": 6.8
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-09-amd",
+   "made": "2026-11-09",
+   "resolves": "2026-11-16",
+   "kind": "term-persistence",
+   "term": "amd",
+   "label": "AMD",
+   "threshold": 4,
+   "p": 0.4,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"AMD\" be in at least 4 stories between 2026-11-10 and 2026-11-16?",
+   "context": {
+    "definition": {
+     "text": "Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company headquartered in Santa Clara, California.",
+     "title": "AMD",
+     "url": "https://en.wikipedia.org/wiki/AMD",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 0.3,
+     "ratio": 6.5,
+     "outlets": 5,
+     "by_category": {
+      "research": 0,
+      "tech": 3,
+      "business": 2
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-20",
+      "2026-10-21",
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+     ],
+     "peak": {
+      "day": "2026-11-04",
+      "count": 2,
+      "share": 0.4
+     },
+     "first_seen": {
+      "business": "2026-09-23",
+      "tech": "2026-10-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "4c1fc41d39",
+      "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
+      "url": "https://www.marketwatch.com/story/nvidia-amd-and-other-chip-stocks-rebound-is-the-violent-ai-selloff-over-8f7df533?mod=mw_rss_topstories",
+      "source": "marketwatch",
+      "category": "business",
+      "published": "2026-11-06T21:24:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "18d4bcaa5e",
+      "title": "Zyphra ZYFA: FP8 FlashAttention for AMD MI355X, Up to 1.76x Faster",
+      "url": "https://www.marktechpost.com/2026/11/06/zyphra-zyfa-fp8-flashattention-amd-mi355x/",
+      "source": "marktechpost",
+      "category": "tech",
+      "published": "2026-11-06T17:28:04.000Z",
+      "summary": "Zyphra has released ZYFA (Zyphra FlashAttention on AMD), a set of FP8 and BF16 prefill attention kernels for AMD Instinct MI355X GPUs. At head dimension 128, ZYFA’s FP8 error is 62-78% lower than AITER’s. ZYFA explainer Zyphra · AMD Instinc"
+     },
+     {
+      "id": "b58632e425",
+      "title": "AMD's record quarter: Data center business doubles, while gaming craters",
+      "url": "https://arstechnica.com/gadgets/2026/11/amds-record-quarter-data-center-business-doubles-while-gaming-craters/",
+      "source": "ars-technica",
+      "category": "tech",
+      "published": "2026-11-04T21:29:46.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.3,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.62,
+     "backtest": {
+      "cases": 5622,
+      "hits": 2879,
+      "origins": 24,
+      "horizon_days": 7,
+      "rate": 0.51,
+      "mean_model": 0.72,
+      "shift": -0.89
+     },
+     "final_p": 0.4
+    },
+    "resolution": "Counts distinct stories published 2026-11-10 to 2026-11-16 (UTC) whose headline contains \"amd\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 0.3,
+    "lambda": 4.3
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -10642,7 +11482,7 @@
    },
    "burst-persistence-v2": {
     "resolved": 9,
-    "open": 6,
+    "open": 12,
     "mean_brier": 0.205
    },
    "indicator-v1": {
@@ -10651,7 +11491,7 @@
     "mean_brier": 0.244
    }
   },
-  "open": 24,
+  "open": 30,
   "resolved": 43,
   "voided": 0,
   "mean_brier": 0.262,
