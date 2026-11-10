@@ -6503,10 +6503,11 @@
     "resolution": "Uses the last value on or before 6 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 6.7016,
+   "brier": 0.26,
+   "log_score": 0.713,
+   "result_note": "The value was 6.702, against 6.673 at the start (+0.029)."
   },
   {
    "id": "f-2026-10-30-us-oil",
@@ -9093,10 +9094,11 @@
     "resolution": "Uses the last value on or before 9 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 4.86,
+   "brier": 0.23,
+   "log_score": 0.654,
+   "result_note": "The value was 4.86, against 4.91 at the start (-0.05)."
   },
   {
    "id": "f-2026-11-05-indeed-software",
@@ -11470,6 +11472,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-10-us-10y-yield",
+   "made": "2026-11-10",
+   "resolves": "2026-11-19",
+   "kind": "indicator",
+   "indicator": "us-10y-yield",
+   "domain": "economy",
+   "label": "US 10-year Treasury yield",
+   "term": "us-10y-yield",
+   "h_steps": 1,
+   "target_date": "2026-11-13",
+   "threshold": 4.86,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 10-year Treasury yield close higher on 13 November 2026 than on 6 November 2026 (4.86%)?",
+   "context": {
+    "measure": {
+     "why": "The yield on 10-year US government bonds, a benchmark for mortgage and company borrowing rates. Short-term moves are close to a coin flip, so these questions mostly teach how little can be predicted.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "DGS10",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-06",
+     "value": 4.86
+    },
+    "history": [
+     {
+      "d": "2026-03-06",
+      "v": 4.15
+     },
+     {
+      "d": "2026-03-13",
+      "v": 4.28
+     },
+     {
+      "d": "2026-03-20",
+      "v": 4.39
+     },
+     {
+      "d": "2026-03-27",
+      "v": 4.44
+     },
+     {
+      "d": "2026-04-03",
+      "v": 4.35
+     },
+     {
+      "d": "2026-04-10",
+      "v": 4.31
+     },
+     {
+      "d": "2026-04-17",
+      "v": 4.26
+     },
+     {
+      "d": "2026-04-24",
+      "v": 4.31
+     },
+     {
+      "d": "2026-05-01",
+      "v": 4.39
+     },
+     {
+      "d": "2026-05-08",
+      "v": 4.38
+     },
+     {
+      "d": "2026-05-15",
+      "v": 4.59
+     },
+     {
+      "d": "2026-05-22",
+      "v": 4.56
+     },
+     {
+      "d": "2026-05-29",
+      "v": 4.45
+     },
+     {
+      "d": "2026-06-05",
+      "v": 4.55
+     },
+     {
+      "d": "2026-06-12",
+      "v": 4.48
+     },
+     {
+      "d": "2026-06-19",
+      "v": 4.46
+     },
+     {
+      "d": "2026-06-26",
+      "v": 4.38
+     },
+     {
+      "d": "2026-07-03",
+      "v": 4.49
+     },
+     {
+      "d": "2026-07-10",
+      "v": 4.56
+     },
+     {
+      "d": "2026-07-17",
+      "v": 4.55
+     },
+     {
+      "d": "2026-07-24",
+      "v": 4.69
+     },
+     {
+      "d": "2026-07-31",
+      "v": 4.75
+     },
+     {
+      "d": "2026-08-07",
+      "v": 4.65
+     },
+     {
+      "d": "2026-08-14",
+      "v": 4.68
+     },
+     {
+      "d": "2026-08-21",
+      "v": 4.74
+     },
+     {
+      "d": "2026-08-28",
+      "v": 4.73
+     },
+     {
+      "d": "2026-09-04",
+      "v": 4.78
+     },
+     {
+      "d": "2026-09-11",
+      "v": 4.96
+     },
+     {
+      "d": "2026-09-18",
+      "v": 5.01
+     },
+     {
+      "d": "2026-09-25",
+      "v": 5.17
+     },
+     {
+      "d": "2026-10-02",
+      "v": 5.28
+     },
+     {
+      "d": "2026-10-09",
+      "v": 5.24
+     },
+     {
+      "d": "2026-10-16",
+      "v": 5.09
+     },
+     {
+      "d": "2026-10-23",
+      "v": 5
+     },
+     {
+      "d": "2026-10-30",
+      "v": 4.94
+     },
+     {
+      "d": "2026-11-06",
+      "v": 4.86
+     }
+    ],
+    "trend": {
+     "change": -0.1,
+     "over": "8 weeks",
+     "high_52": 5.28,
+     "low_52": 3.97
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 3376,
+     "window_hits": null,
+     "model_p": 0.38,
+     "expected": 4.834,
+     "sd": 0.099,
+     "threshold": 4.86,
+     "backtest": {
+      "n": 3356,
+      "ok": true,
+      "base": 0.477,
+      "brier_model": 0.256,
+      "brier_base": 0.249,
+      "skill": -0.027,
+      "hit_rate": 0.53
+     },
+     "weight": 0,
+     "base_rate": 0.477,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 13 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-10-usd-dkk",
+   "made": "2026-11-10",
+   "resolves": "2026-11-19",
+   "kind": "indicator",
+   "indicator": "usd-dkk",
+   "domain": "economy",
+   "label": "US dollar in Danish kroner",
+   "term": "usd-dkk",
+   "h_steps": 1,
+   "target_date": "2026-11-13",
+   "threshold": 6.7016,
+   "direction": "higher",
+   "p": 0.49,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US dollar in Danish kroner close higher on 13 November 2026 than on 6 November 2026 (6.702)?",
+   "context": {
+    "measure": {
+     "why": "How many Danish kroner one US dollar buys. The krone is tied to the euro, so this moves with the euro–dollar rate. It matters for anyone paid in dollars and living in Denmark, or the other way round.",
+     "unit": "DKK per USD",
+     "source": {
+      "kind": "fred",
+      "series": "DEXDNUS",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DEXDNUS"
+     },
+     "lag": "daily, noon buying rate in New York",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-06",
+     "value": 6.7016
+    },
+    "history": [
+     {
+      "d": "2026-03-06",
+      "v": 6.4371
+     },
+     {
+      "d": "2026-03-13",
+      "v": 6.5294
+     },
+     {
+      "d": "2026-03-20",
+      "v": 6.4728
+     },
+     {
+      "d": "2026-03-27",
+      "v": 6.4867
+     },
+     {
+      "d": "2026-04-03",
+      "v": 6.4853
+     },
+     {
+      "d": "2026-04-10",
+      "v": 6.3741
+     },
+     {
+      "d": "2026-04-17",
+      "v": 6.332
+     },
+     {
+      "d": "2026-04-24",
+      "v": 6.3769
+     },
+     {
+      "d": "2026-05-01",
+      "v": 6.3568
+     },
+     {
+      "d": "2026-05-08",
+      "v": 6.3467
+     },
+     {
+      "d": "2026-05-15",
+      "v": 6.4279
+     },
+     {
+      "d": "2026-05-22",
+      "v": 6.4394
+     },
+     {
+      "d": "2026-05-29",
+      "v": 6.3992
+     },
+     {
+      "d": "2026-06-05",
+      "v": 6.4803
+     },
+     {
+      "d": "2026-06-12",
+      "v": 6.458
+     },
+     {
+      "d": "2026-06-19",
+      "v": 6.5163
+     },
+     {
+      "d": "2026-06-26",
+      "v": 6.554
+     },
+     {
+      "d": "2026-07-03",
+      "v": 6.5288
+     },
+     {
+      "d": "2026-07-10",
+      "v": 6.5348
+     },
+     {
+      "d": "2026-07-17",
+      "v": 6.534
+     },
+     {
+      "d": "2026-07-24",
+      "v": 6.5665
+     },
+     {
+      "d": "2026-07-31",
+      "v": 6.4886
+     },
+     {
+      "d": "2026-08-07",
+      "v": 6.4675
+     },
+     {
+      "d": "2026-08-14",
+      "v": 6.4549
+     },
+     {
+      "d": "2026-08-21",
+      "v": 6.3981
+     },
+     {
+      "d": "2026-08-28",
+      "v": 6.4445
+     },
+     {
+      "d": "2026-09-04",
+      "v": 6.4327
+     },
+     {
+      "d": "2026-09-11",
+      "v": 6.4417
+     },
+     {
+      "d": "2026-09-18",
+      "v": 6.5197
+     },
+     {
+      "d": "2026-09-25",
+      "v": 6.5575
+     },
+     {
+      "d": "2026-10-02",
+      "v": 6.6574
+     },
+     {
+      "d": "2026-10-09",
+      "v": 6.678
+     },
+     {
+      "d": "2026-10-16",
+      "v": 6.6554
+     },
+     {
+      "d": "2026-10-23",
+      "v": 6.6729
+     },
+     {
+      "d": "2026-10-30",
+      "v": 6.6946
+     },
+     {
+      "d": "2026-11-06",
+      "v": 6.7016
+     }
+    ],
+    "trend": {
+     "change": 0.2599,
+     "over": "8 weeks",
+     "high_52": 6.7016,
+     "low_52": 6.2832
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2905,
+     "window_hits": null,
+     "model_p": 0.58,
+     "expected": 6.7136,
+     "sd": 0.0565,
+     "threshold": 6.7016,
+     "backtest": {
+      "n": 2885,
+      "ok": true,
+      "base": 0.49,
+      "brier_model": 0.256,
+      "brier_base": 0.25,
+      "skill": -0.026,
+      "hit_rate": 0.525
+     },
+     "weight": 0,
+     "base_rate": 0.49,
+     "final_p": 0.49
+    },
+    "resolution": "Uses the last value on or before 13 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -11486,18 +11926,18 @@
     "mean_brier": 0.205
    },
    "indicator-v1": {
-    "resolved": 19,
+    "resolved": 21,
     "open": 18,
     "mean_brier": 0.244
    }
   },
   "open": 30,
-  "resolved": 43,
+  "resolved": 45,
   "voided": 0,
   "mean_brier": 0.262,
   "benchmark_brier": 0.25,
   "skill": -0.05,
-  "mean_log_score": 0.721,
+  "mean_log_score": 0.719,
   "calibration": [
    {
     "range": "0-34%",
@@ -11507,9 +11947,9 @@
    },
    {
     "range": "34-67%",
-    "n": 31,
-    "mean_p": 0.51,
-    "observed": 0.26
+    "n": 33,
+    "mean_p": 0.5,
+    "observed": 0.27
    },
    {
     "range": "67-100%",
