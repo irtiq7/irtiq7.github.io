@@ -4961,10 +4961,11 @@
     "resolution": "Counts papers submitted to arXiv from 2026-11-02 to 2026-11-08 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 7,
+   "brier": 0.281,
+   "log_score": 0.755,
+   "result_note": "The value was 7 against a bar of 4 (+3)."
   },
   {
    "id": "f-2026-10-29-indeed-software",
@@ -7082,10 +7083,20 @@
     "base_per_week": 0.6,
     "lambda": 5.2
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 3,
+   "brier": 0.144,
+   "log_score": 0.478,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    2
+   ],
+   "result_note": "3 stories over 7 days, at most 2 on any one day; mentions kept building."
   },
   {
    "id": "f-2026-11-02-oled",
@@ -7225,10 +7236,20 @@
     "base_per_week": 1.2,
     "lambda": 4.4
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.194,
+   "log_score": 0.58,
+   "daily_after": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-02-ice",
@@ -7364,10 +7385,20 @@
     "base_per_week": 2.2,
     "lambda": 5.4
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.176,
+   "log_score": 0.545,
+   "daily_after": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-02-ai-spending",
@@ -7503,10 +7534,20 @@
     "base_per_week": 0.9,
     "lambda": 6.9
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.24,
+   "log_score": 0.673,
+   "daily_after": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-02-midterm-elections",
@@ -7642,10 +7683,20 @@
     "base_per_week": 0.3,
     "lambda": 4.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 2,
+   "brier": 0.168,
+   "log_score": 0.528,
+   "daily_after": [
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "2 stories over 7 days, at most 2 on any one day; mentions faded as the window went on."
   },
   {
    "id": "f-2026-11-02-touchscreen-macbook",
@@ -7780,10 +7831,20 @@
     "base_per_week": 0.6,
     "lambda": 6
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 0,
+   "brier": 0.27,
+   "log_score": 0.734,
+   "daily_after": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "0 stories over 7 days, at most 0 on any one day; no mentions at all."
   },
   {
    "id": "f-2026-11-03-us-fed-funds",
@@ -9314,10 +9375,11 @@
     "resolution": "Uses the last value on or before 6 November 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 81.4,
+   "brier": 0.462,
+   "log_score": 1.139,
+   "result_note": "The value was 81.4, against 81.58 at the start (-0.18)."
   },
   {
    "id": "f-2026-11-05-us-stocks",
@@ -9533,10 +9595,11 @@
     "resolution": "Uses the last value on or before 10 November 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 7520.93,
+   "brier": 0.372,
+   "log_score": 0.942,
+   "result_note": "The value was 7,520.93, against 7,568.92 at the start (-47.99)."
   },
   {
    "id": "f-2026-11-05-us-oil",
@@ -11910,6 +11973,663 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-11-indeed-software",
+   "made": "2026-11-11",
+   "resolves": "2026-11-19",
+   "kind": "indicator",
+   "indicator": "indeed-software",
+   "domain": "jobs",
+   "label": "Indeed software development job postings",
+   "term": "indeed-software",
+   "h_steps": 1,
+   "target_date": "2026-11-13",
+   "threshold": 81.3987881669,
+   "direction": "higher",
+   "p": 0.63,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Indeed software development job postings be higher on 13 November 2026 than on 6 November 2026 (81.4)?",
+   "context": {
+    "measure": {
+     "why": "Postings for software development jobs on Indeed in the US, relative to 1 February 2020 (set to 100). A measure of how much employers are hiring in the field.",
+     "unit": "index, 1 Feb 2020 = 100",
+     "source": {
+      "kind": "fred",
+      "series": "IHLIDXUSTPSOFTDEVE",
+      "name": "Indeed Hiring Lab, via FRED",
+      "url": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE"
+     },
+     "lag": "updated daily with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-06",
+     "value": 81.4
+    },
+    "history": [
+     {
+      "d": "2026-03-06",
+      "v": 70.57
+     },
+     {
+      "d": "2026-03-13",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-20",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-27",
+      "v": 72.75
+     },
+     {
+      "d": "2026-04-03",
+      "v": 72.48
+     },
+     {
+      "d": "2026-04-10",
+      "v": 72.18
+     },
+     {
+      "d": "2026-04-17",
+      "v": 73.12
+     },
+     {
+      "d": "2026-04-24",
+      "v": 73.7
+     },
+     {
+      "d": "2026-05-01",
+      "v": 72.94
+     },
+     {
+      "d": "2026-05-08",
+      "v": 74.64
+     },
+     {
+      "d": "2026-05-15",
+      "v": 74.04
+     },
+     {
+      "d": "2026-05-22",
+      "v": 74.42
+     },
+     {
+      "d": "2026-05-29",
+      "v": 73.63
+     },
+     {
+      "d": "2026-06-05",
+      "v": 73.49
+     },
+     {
+      "d": "2026-06-12",
+      "v": 72.88
+     },
+     {
+      "d": "2026-06-19",
+      "v": 72.66
+     },
+     {
+      "d": "2026-06-26",
+      "v": 73.49
+     },
+     {
+      "d": "2026-07-03",
+      "v": 73.78
+     },
+     {
+      "d": "2026-07-10",
+      "v": 74.53
+     },
+     {
+      "d": "2026-07-17",
+      "v": 75.59
+     },
+     {
+      "d": "2026-07-24",
+      "v": 75.48
+     },
+     {
+      "d": "2026-07-31",
+      "v": 75.44
+     },
+     {
+      "d": "2026-08-07",
+      "v": 73.63
+     },
+     {
+      "d": "2026-08-14",
+      "v": 74.34
+     },
+     {
+      "d": "2026-08-21",
+      "v": 74.55
+     },
+     {
+      "d": "2026-08-28",
+      "v": 74.59
+     },
+     {
+      "d": "2026-09-04",
+      "v": 76.11
+     },
+     {
+      "d": "2026-09-11",
+      "v": 76.61
+     },
+     {
+      "d": "2026-09-18",
+      "v": 77.31
+     },
+     {
+      "d": "2026-09-25",
+      "v": 78.08
+     },
+     {
+      "d": "2026-10-02",
+      "v": 78.34
+     },
+     {
+      "d": "2026-10-09",
+      "v": 78.09
+     },
+     {
+      "d": "2026-10-16",
+      "v": 78.86
+     },
+     {
+      "d": "2026-10-23",
+      "v": 80.79
+     },
+     {
+      "d": "2026-10-30",
+      "v": 81.58
+     },
+     {
+      "d": "2026-11-06",
+      "v": 81.4
+     }
+    ],
+    "trend": {
+     "change": 4.79,
+     "over": "8 weeks",
+     "high_52": 81.58,
+     "low_52": 66.1
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 345,
+     "window_hits": null,
+     "model_p": 0.63,
+     "expected": 81.68,
+     "sd": 0.71,
+     "threshold": 81.3987881669,
+     "backtest": {
+      "n": 325,
+      "ok": true,
+      "base": 0.498,
+      "brier_model": 0.183,
+      "brier_base": 0.25,
+      "skill": 0.268,
+      "hit_rate": 0.732
+     },
+     "weight": 1,
+     "base_rate": 0.498,
+     "final_p": 0.63
+    },
+    "resolution": "Uses the last value on or before 13 November 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-11-us-stocks",
+   "made": "2026-11-11",
+   "resolves": "2026-11-23",
+   "kind": "indicator",
+   "indicator": "us-stocks",
+   "domain": "economy",
+   "label": "S&P 500 stock index",
+   "term": "us-stocks",
+   "h_steps": 1,
+   "target_date": "2026-11-17",
+   "threshold": 7520.93,
+   "direction": "higher",
+   "p": 0.61,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the S&P 500 stock index close higher on 17 November 2026 than on 10 November 2026 (7,520.93)?",
+   "context": {
+    "measure": {
+     "why": "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "SP500",
+      "name": "S&P Dow Jones Indices, via FRED",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-10",
+     "value": 7520.93
+    },
+    "history": [
+     {
+      "d": "2026-03-10",
+      "v": 6781.48
+     },
+     {
+      "d": "2026-03-17",
+      "v": 6716.09
+     },
+     {
+      "d": "2026-03-24",
+      "v": 6556.37
+     },
+     {
+      "d": "2026-03-31",
+      "v": 6528.52
+     },
+     {
+      "d": "2026-04-07",
+      "v": 6616.85
+     },
+     {
+      "d": "2026-04-14",
+      "v": 6967.38
+     },
+     {
+      "d": "2026-04-21",
+      "v": 7064.01
+     },
+     {
+      "d": "2026-04-28",
+      "v": 7138.8
+     },
+     {
+      "d": "2026-05-05",
+      "v": 7259.22
+     },
+     {
+      "d": "2026-05-12",
+      "v": 7400.96
+     },
+     {
+      "d": "2026-05-19",
+      "v": 7353.61
+     },
+     {
+      "d": "2026-05-26",
+      "v": 7519.12
+     },
+     {
+      "d": "2026-06-02",
+      "v": 7609.78
+     },
+     {
+      "d": "2026-06-09",
+      "v": 7386.65
+     },
+     {
+      "d": "2026-06-16",
+      "v": 7511.35
+     },
+     {
+      "d": "2026-06-23",
+      "v": 7365.46
+     },
+     {
+      "d": "2026-06-30",
+      "v": 7499.36
+     },
+     {
+      "d": "2026-07-07",
+      "v": 7503.85
+     },
+     {
+      "d": "2026-07-14",
+      "v": 7543.59
+     },
+     {
+      "d": "2026-07-21",
+      "v": 7509.2
+     },
+     {
+      "d": "2026-07-28",
+      "v": 7428.78
+     },
+     {
+      "d": "2026-08-04",
+      "v": 7736.52
+     },
+     {
+      "d": "2026-08-11",
+      "v": 7728.2
+     },
+     {
+      "d": "2026-08-18",
+      "v": 7691.76
+     },
+     {
+      "d": "2026-08-25",
+      "v": 7677.28
+     },
+     {
+      "d": "2026-09-01",
+      "v": 7631.47
+     },
+     {
+      "d": "2026-09-08",
+      "v": 7673.52
+     },
+     {
+      "d": "2026-09-15",
+      "v": 7585.73
+     },
+     {
+      "d": "2026-09-22",
+      "v": 7764.64
+     },
+     {
+      "d": "2026-09-29",
+      "v": 7670.84
+     },
+     {
+      "d": "2026-10-06",
+      "v": 7818.93
+     },
+     {
+      "d": "2026-10-13",
+      "v": 7805.45
+     },
+     {
+      "d": "2026-10-20",
+      "v": 7712.57
+     },
+     {
+      "d": "2026-10-27",
+      "v": 7722.6
+     },
+     {
+      "d": "2026-11-03",
+      "v": 7568.92
+     },
+     {
+      "d": "2026-11-10",
+      "v": 7520.93
+     }
+    ],
+    "trend": {
+     "change": -64.8,
+     "over": "8 weeks",
+     "high_52": 7818.93,
+     "low_52": 6528.52
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 514,
+     "window_hits": null,
+     "model_p": 0.45,
+     "expected": 7508.438,
+     "sd": 110.483,
+     "threshold": 7520.93,
+     "backtest": {
+      "n": 494,
+      "ok": true,
+      "base": 0.611,
+      "brier_model": 0.258,
+      "brier_base": 0.238,
+      "skill": -0.084,
+      "hit_rate": 0.555
+     },
+     "weight": 0,
+     "base_rate": 0.611,
+     "final_p": 0.61
+    },
+    "resolution": "Uses the last value on or before 17 November 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-11-arxiv-sound-localization",
+   "made": "2026-11-11",
+   "resolves": "2026-11-24",
+   "kind": "indicator",
+   "indicator": "arxiv-sound-localization",
+   "domain": "research",
+   "label": "arXiv papers on sound source localization",
+   "term": "arxiv-sound-localization",
+   "h_steps": 2,
+   "target_date": "2026-11-16",
+   "threshold": 5,
+   "direction": "above_avg",
+   "p": 0.46,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will arXiv receive more than 5 papers on sound source localization in the week starting 16 November 2026, the average of the last 8 weeks?",
+   "context": {
+    "measure": {
+     "why": "Papers submitted to arXiv in a week about locating sound sources or estimating direction of arrival, the field behind robot hearing and passive sonar.",
+     "unit": "papers",
+     "source": {
+      "kind": "arxiv",
+      "query": "(abs:\"sound source localization\" OR abs:\"acoustic localization\" OR abs:\"direction of arrival\")",
+      "name": "arXiv, by submission date",
+      "url": "https://arxiv.org/"
+     },
+     "lag": null,
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-11-02",
+     "value": 7
+    },
+    "history": [
+     {
+      "d": "2026-03-02",
+      "v": 0
+     },
+     {
+      "d": "2026-03-09",
+      "v": 3
+     },
+     {
+      "d": "2026-03-16",
+      "v": 4
+     },
+     {
+      "d": "2026-03-23",
+      "v": 2
+     },
+     {
+      "d": "2026-03-30",
+      "v": 4
+     },
+     {
+      "d": "2026-04-06",
+      "v": 1
+     },
+     {
+      "d": "2026-04-13",
+      "v": 2
+     },
+     {
+      "d": "2026-04-20",
+      "v": 3
+     },
+     {
+      "d": "2026-04-27",
+      "v": 7
+     },
+     {
+      "d": "2026-05-04",
+      "v": 2
+     },
+     {
+      "d": "2026-05-11",
+      "v": 4
+     },
+     {
+      "d": "2026-05-18",
+      "v": 6
+     },
+     {
+      "d": "2026-05-25",
+      "v": 5
+     },
+     {
+      "d": "2026-06-01",
+      "v": 2
+     },
+     {
+      "d": "2026-06-08",
+      "v": 2
+     },
+     {
+      "d": "2026-06-15",
+      "v": 5
+     },
+     {
+      "d": "2026-06-22",
+      "v": 3
+     },
+     {
+      "d": "2026-06-29",
+      "v": 4
+     },
+     {
+      "d": "2026-07-06",
+      "v": 3
+     },
+     {
+      "d": "2026-07-13",
+      "v": 3
+     },
+     {
+      "d": "2026-07-20",
+      "v": 3
+     },
+     {
+      "d": "2026-07-27",
+      "v": 4
+     },
+     {
+      "d": "2026-08-03",
+      "v": 0
+     },
+     {
+      "d": "2026-08-10",
+      "v": 6
+     },
+     {
+      "d": "2026-08-17",
+      "v": 2
+     },
+     {
+      "d": "2026-08-24",
+      "v": 0
+     },
+     {
+      "d": "2026-08-31",
+      "v": 0
+     },
+     {
+      "d": "2026-09-07",
+      "v": 4
+     },
+     {
+      "d": "2026-09-14",
+      "v": 5
+     },
+     {
+      "d": "2026-09-21",
+      "v": 6
+     },
+     {
+      "d": "2026-09-28",
+      "v": 5
+     },
+     {
+      "d": "2026-10-05",
+      "v": 7
+     },
+     {
+      "d": "2026-10-12",
+      "v": 3
+     },
+     {
+      "d": "2026-10-19",
+      "v": 5
+     },
+     {
+      "d": "2026-10-26",
+      "v": 3
+     },
+     {
+      "d": "2026-11-02",
+      "v": 7
+     }
+    ],
+    "trend": {
+     "change": 3,
+     "over": "8 weeks",
+     "high_52": 7,
+     "low_52": 0
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 8,
+     "h": 2,
+     "window_n": 63,
+     "window_hits": null,
+     "model_p": 0.54,
+     "expected": 5.2,
+     "sd": 2.3,
+     "threshold": 5,
+     "backtest": {
+      "n": 50,
+      "ok": true,
+      "base": 0.462,
+      "brier_model": 0.247,
+      "brier_base": 0.248,
+      "skill": 0.005,
+      "hit_rate": 0.62
+     },
+     "weight": 0.03,
+     "base_rate": 0.462,
+     "final_p": 0.46
+    },
+    "resolution": "Counts papers submitted to arXiv from 2026-11-16 to 2026-11-22 (UTC) whose abstract matches the search. Yes if the count is above the average of the last 8 weeks. Papers cross-listed or withdrawn later are not recounted."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -11921,23 +12641,23 @@
     "mean_brier": 0.32
    },
    "burst-persistence-v2": {
-    "resolved": 9,
-    "open": 12,
-    "mean_brier": 0.205
+    "resolved": 15,
+    "open": 6,
+    "mean_brier": 0.202
    },
    "indicator-v1": {
-    "resolved": 21,
+    "resolved": 24,
     "open": 18,
-    "mean_brier": 0.244
+    "mean_brier": 0.26
    }
   },
-  "open": 30,
-  "resolved": 45,
+  "open": 24,
+  "resolved": 54,
   "voided": 0,
-  "mean_brier": 0.262,
+  "mean_brier": 0.261,
   "benchmark_brier": 0.25,
-  "skill": -0.05,
-  "mean_log_score": 0.719,
+  "skill": -0.04,
+  "mean_log_score": 0.717,
   "calibration": [
    {
     "range": "0-34%",
@@ -11947,15 +12667,15 @@
    },
    {
     "range": "34-67%",
-    "n": 33,
+    "n": 41,
     "mean_p": 0.5,
-    "observed": 0.27
+    "observed": 0.24
    },
    {
     "range": "67-100%",
-    "n": 12,
+    "n": 13,
     "mean_p": 0.71,
-    "observed": 0.42
+    "observed": 0.38
    }
   ]
  },
