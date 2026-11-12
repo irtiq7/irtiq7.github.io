@@ -5841,10 +5841,11 @@
     "resolution": "Uses the value for the week ending 7 November 2026 as first shown by US Department of Labor, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 200000,
+   "brier": 0.303,
+   "log_score": 0.799,
+   "result_note": "The value was 200,000 against a bar of 197,000 (+3,000)."
   },
   {
    "id": "f-2026-10-30-dk-unemployment",
@@ -10253,10 +10254,11 @@
     "resolution": "Uses the last value on or before 11 November 2026 (not older than four days) from Chicago Board Options Exchange, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 19.46,
+   "brier": 0.27,
+   "log_score": 0.734,
+   "result_note": "The value was 19.46, against 16.61 at the start (+2.85)."
   },
   {
    "id": "f-2026-11-07-us-unemployment",
@@ -12630,6 +12632,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-12-us-jobless-claims",
+   "made": "2026-11-12",
+   "resolves": "2026-11-27",
+   "kind": "indicator",
+   "indicator": "us-jobless-claims",
+   "domain": "jobs",
+   "label": "US weekly jobless claims",
+   "term": "us-jobless-claims",
+   "h_steps": 2,
+   "target_date": "2026-11-21",
+   "threshold": 195000,
+   "direction": "above_avg",
+   "p": 0.45,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will US initial jobless claims for the week ending 21 November 2026 be above 195,000, the average of the last 4 weeks?",
+   "context": {
+    "measure": {
+     "why": "The number of people who filed a first claim for unemployment benefits in a week. It is published every Thursday and moves quickly, so it is an early sign of layoffs.",
+     "unit": "",
+     "source": {
+      "kind": "fred",
+      "series": "ICSA",
+      "name": "US Department of Labor, via FRED",
+      "url": "https://fred.stlouisfed.org/series/ICSA"
+     },
+     "lag": "published on the Thursday after the week ends",
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-11-07",
+     "value": 200000
+    },
+    "history": [
+     {
+      "d": "2026-03-07",
+      "v": 213000
+     },
+     {
+      "d": "2026-03-14",
+      "v": 205000
+     },
+     {
+      "d": "2026-03-21",
+      "v": 211000
+     },
+     {
+      "d": "2026-03-28",
+      "v": 203000
+     },
+     {
+      "d": "2026-04-04",
+      "v": 218000
+     },
+     {
+      "d": "2026-04-11",
+      "v": 208000
+     },
+     {
+      "d": "2026-04-18",
+      "v": 215000
+     },
+     {
+      "d": "2026-04-25",
+      "v": 190000
+     },
+     {
+      "d": "2026-05-02",
+      "v": 199000
+     },
+     {
+      "d": "2026-05-09",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-16",
+      "v": 210000
+     },
+     {
+      "d": "2026-05-23",
+      "v": 212000
+     },
+     {
+      "d": "2026-05-30",
+      "v": 225000
+     },
+     {
+      "d": "2026-06-06",
+      "v": 230000
+     },
+     {
+      "d": "2026-06-13",
+      "v": 227000
+     },
+     {
+      "d": "2026-06-20",
+      "v": 216000
+     },
+     {
+      "d": "2026-06-27",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-04",
+      "v": 217000
+     },
+     {
+      "d": "2026-07-11",
+      "v": 209000
+     },
+     {
+      "d": "2026-07-18",
+      "v": 189000
+     },
+     {
+      "d": "2026-07-25",
+      "v": 198000
+     },
+     {
+      "d": "2026-08-01",
+      "v": 200000
+     },
+     {
+      "d": "2026-08-08",
+      "v": 212000
+     },
+     {
+      "d": "2026-08-15",
+      "v": 207000
+     },
+     {
+      "d": "2026-08-22",
+      "v": 204000
+     },
+     {
+      "d": "2026-08-29",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-05",
+      "v": 207000
+     },
+     {
+      "d": "2026-09-12",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-19",
+      "v": 198000
+     },
+     {
+      "d": "2026-09-26",
+      "v": 199000
+     },
+     {
+      "d": "2026-10-03",
+      "v": 198000
+     },
+     {
+      "d": "2026-10-10",
+      "v": 200000
+     },
+     {
+      "d": "2026-10-17",
+      "v": 195000
+     },
+     {
+      "d": "2026-10-24",
+      "v": 195000
+     },
+     {
+      "d": "2026-10-31",
+      "v": 191000
+     },
+     {
+      "d": "2026-11-07",
+      "v": 200000
+     }
+    ],
+    "trend": {
+     "change": 2000,
+     "over": "8 weeks",
+     "high_52": 235000,
+     "low_52": 189000
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "above_avg",
+     "k": 4,
+     "win": 4,
+     "h": 2,
+     "window_n": 3112,
+     "window_hits": null,
+     "model_p": 0.56,
+     "expected": 196551.1,
+     "sd": 9509.1,
+     "threshold": 195000,
+     "backtest": {
+      "n": 3091,
+      "ok": true,
+      "base": 0.446,
+      "brier_model": 0.248,
+      "brier_base": 0.247,
+      "skill": -0.004,
+      "hit_rate": 0.543
+     },
+     "weight": 0,
+     "base_rate": 0.446,
+     "final_p": 0.45
+    },
+    "resolution": "Uses the value for the week ending 21 November 2026 as first shown by US Department of Labor, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-12-us-vix",
+   "made": "2026-11-12",
+   "resolves": "2026-11-23",
+   "kind": "indicator",
+   "indicator": "us-vix",
+   "domain": "economy",
+   "label": "VIX volatility index",
+   "term": "us-vix",
+   "h_steps": 1,
+   "target_date": "2026-11-17",
+   "threshold": 19.46,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the VIX volatility index close higher on 17 November 2026 than on 10 November 2026 (19.46)?",
+   "context": {
+    "measure": {
+     "why": "The market's expected swing in US stocks over the next 30 days, drawn from option prices and often called the fear gauge. Low readings mean calm, spikes mean investors are paying for protection.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "VIXCLS",
+      "name": "Chicago Board Options Exchange, via FRED",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-10",
+     "value": 19.46
+    },
+    "history": [
+     {
+      "d": "2026-03-10",
+      "v": 24.93
+     },
+     {
+      "d": "2026-03-17",
+      "v": 22.37
+     },
+     {
+      "d": "2026-03-24",
+      "v": 26.95
+     },
+     {
+      "d": "2026-03-31",
+      "v": 25.25
+     },
+     {
+      "d": "2026-04-07",
+      "v": 25.78
+     },
+     {
+      "d": "2026-04-14",
+      "v": 18.36
+     },
+     {
+      "d": "2026-04-21",
+      "v": 19.5
+     },
+     {
+      "d": "2026-04-28",
+      "v": 17.83
+     },
+     {
+      "d": "2026-05-05",
+      "v": 17.38
+     },
+     {
+      "d": "2026-05-12",
+      "v": 17.99
+     },
+     {
+      "d": "2026-05-19",
+      "v": 18.06
+     },
+     {
+      "d": "2026-05-26",
+      "v": 17.01
+     },
+     {
+      "d": "2026-06-02",
+      "v": 15.77
+     },
+     {
+      "d": "2026-06-09",
+      "v": 19.87
+     },
+     {
+      "d": "2026-06-16",
+      "v": 16.41
+     },
+     {
+      "d": "2026-06-23",
+      "v": 19.49
+     },
+     {
+      "d": "2026-06-30",
+      "v": 16.45
+     },
+     {
+      "d": "2026-07-07",
+      "v": 16.13
+     },
+     {
+      "d": "2026-07-14",
+      "v": 16.5
+     },
+     {
+      "d": "2026-07-21",
+      "v": 17.05
+     },
+     {
+      "d": "2026-07-28",
+      "v": 18.21
+     },
+     {
+      "d": "2026-08-04",
+      "v": 16.5
+     },
+     {
+      "d": "2026-08-11",
+      "v": 15.28
+     },
+     {
+      "d": "2026-08-18",
+      "v": 15.84
+     },
+     {
+      "d": "2026-08-25",
+      "v": 15.45
+     },
+     {
+      "d": "2026-09-01",
+      "v": 16.34
+     },
+     {
+      "d": "2026-09-08",
+      "v": 15.72
+     },
+     {
+      "d": "2026-09-15",
+      "v": 17.2
+     },
+     {
+      "d": "2026-09-22",
+      "v": 14.21
+     },
+     {
+      "d": "2026-09-29",
+      "v": 16.04
+     },
+     {
+      "d": "2026-10-06",
+      "v": 15.01
+     },
+     {
+      "d": "2026-10-13",
+      "v": 15.27
+     },
+     {
+      "d": "2026-10-20",
+      "v": 17.31
+     },
+     {
+      "d": "2026-10-27",
+      "v": 17.52
+     },
+     {
+      "d": "2026-11-03",
+      "v": 20.83
+     },
+     {
+      "d": "2026-11-10",
+      "v": 19.46
+     }
+    ],
+    "trend": {
+     "change": 2.26,
+     "over": "8 weeks",
+     "high_52": 26.95,
+     "low_52": 14
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 1916,
+     "window_hits": null,
+     "model_p": 0.55,
+     "expected": 19.745,
+     "sd": 2.449,
+     "threshold": 19.46,
+     "backtest": {
+      "n": 1896,
+      "ok": true,
+      "base": 0.479,
+      "brier_model": 0.27,
+      "brier_base": 0.25,
+      "skill": -0.082,
+      "hit_rate": 0.426
+     },
+     "weight": 0,
+     "base_rate": 0.479,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 17 November 2026 (not older than four days) from Chicago Board Options Exchange, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -12646,18 +13086,18 @@
     "mean_brier": 0.202
    },
    "indicator-v1": {
-    "resolved": 24,
+    "resolved": 26,
     "open": 18,
-    "mean_brier": 0.26
+    "mean_brier": 0.262
    }
   },
   "open": 24,
-  "resolved": 54,
+  "resolved": 56,
   "voided": 0,
-  "mean_brier": 0.261,
+  "mean_brier": 0.262,
   "benchmark_brier": 0.25,
-  "skill": -0.04,
-  "mean_log_score": 0.717,
+  "skill": -0.05,
+  "mean_log_score": 0.719,
   "calibration": [
    {
     "range": "0-34%",
@@ -12667,9 +13107,9 @@
    },
    {
     "range": "34-67%",
-    "n": 41,
+    "n": 43,
     "mean_p": 0.5,
-    "observed": 0.24
+    "observed": 0.28
    },
    {
     "range": "67-100%",
