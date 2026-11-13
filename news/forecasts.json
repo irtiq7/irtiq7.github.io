@@ -9816,10 +9816,11 @@
     "resolution": "Uses the last value on or before 10 November 2026 (not older than four days) from US Energy Information Administration, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 89.62,
+   "brier": 0.281,
+   "log_score": 0.755,
+   "result_note": "The value was 89.62, against 99.64 at the start (-10.02)."
   },
   {
    "id": "f-2026-11-06-us-mortgage",
@@ -10035,10 +10036,11 @@
     "resolution": "Uses the value for the week ending 12 November 2026 as first shown by Freddie Mac, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 7.11,
+   "brier": 0.194,
+   "log_score": 0.58,
+   "result_note": "The value was 7.11, against 7.18 at the start (-0.07)."
   },
   {
    "id": "f-2026-11-06-us-vix",
@@ -13070,6 +13072,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-13-us-mortgage",
+   "made": "2026-11-13",
+   "resolves": "2026-11-25",
+   "kind": "indicator",
+   "indicator": "us-mortgage",
+   "domain": "economy",
+   "label": "US 30-year mortgage rate",
+   "term": "us-mortgage",
+   "h_steps": 1,
+   "target_date": "2026-11-19",
+   "threshold": 7.11,
+   "direction": "higher",
+   "p": 0.42,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 30-year mortgage rate for November 2026 be higher than 7.11%?",
+   "context": {
+    "measure": {
+     "why": "The average rate on a 30-year fixed US home loan, from Freddie Mac's weekly survey. It follows long-term bond yields and shows what borrowing to buy a home costs.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "MORTGAGE30US",
+      "name": "Freddie Mac, via FRED",
+      "url": "https://fred.stlouisfed.org/series/MORTGAGE30US"
+     },
+     "lag": "published on Thursdays",
+     "freq": "weekly"
+    },
+    "latest": {
+     "date": "2026-11-12",
+     "value": 7.11
+    },
+    "history": [
+     {
+      "d": "2026-03-12",
+      "v": 6.11
+     },
+     {
+      "d": "2026-03-19",
+      "v": 6.22
+     },
+     {
+      "d": "2026-03-26",
+      "v": 6.38
+     },
+     {
+      "d": "2026-04-02",
+      "v": 6.46
+     },
+     {
+      "d": "2026-04-09",
+      "v": 6.37
+     },
+     {
+      "d": "2026-04-16",
+      "v": 6.3
+     },
+     {
+      "d": "2026-04-23",
+      "v": 6.23
+     },
+     {
+      "d": "2026-04-30",
+      "v": 6.3
+     },
+     {
+      "d": "2026-05-07",
+      "v": 6.37
+     },
+     {
+      "d": "2026-05-14",
+      "v": 6.36
+     },
+     {
+      "d": "2026-05-21",
+      "v": 6.51
+     },
+     {
+      "d": "2026-05-28",
+      "v": 6.53
+     },
+     {
+      "d": "2026-06-04",
+      "v": 6.48
+     },
+     {
+      "d": "2026-06-11",
+      "v": 6.52
+     },
+     {
+      "d": "2026-06-18",
+      "v": 6.47
+     },
+     {
+      "d": "2026-06-25",
+      "v": 6.49
+     },
+     {
+      "d": "2026-07-02",
+      "v": 6.43
+     },
+     {
+      "d": "2026-07-09",
+      "v": 6.49
+     },
+     {
+      "d": "2026-07-16",
+      "v": 6.55
+     },
+     {
+      "d": "2026-07-23",
+      "v": 6.58
+     },
+     {
+      "d": "2026-07-30",
+      "v": 6.66
+     },
+     {
+      "d": "2026-08-06",
+      "v": 6.69
+     },
+     {
+      "d": "2026-08-13",
+      "v": 6.67
+     },
+     {
+      "d": "2026-08-20",
+      "v": 6.65
+     },
+     {
+      "d": "2026-08-27",
+      "v": 6.66
+     },
+     {
+      "d": "2026-09-03",
+      "v": 6.71
+     },
+     {
+      "d": "2026-09-10",
+      "v": 6.76
+     },
+     {
+      "d": "2026-09-17",
+      "v": 6.95
+     },
+     {
+      "d": "2026-09-24",
+      "v": 7.03
+     },
+     {
+      "d": "2026-10-01",
+      "v": 7.28
+     },
+     {
+      "d": "2026-10-08",
+      "v": 7.4
+     },
+     {
+      "d": "2026-10-15",
+      "v": 7.4
+     },
+     {
+      "d": "2026-10-22",
+      "v": 7.32
+     },
+     {
+      "d": "2026-10-29",
+      "v": 7.24
+     },
+     {
+      "d": "2026-11-05",
+      "v": 7.18
+     },
+     {
+      "d": "2026-11-12",
+      "v": 7.11
+     }
+    ],
+    "trend": {
+     "change": 0.16,
+     "over": "8 weeks",
+     "high_52": 7.4,
+     "low_52": 5.98
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2895,
+     "window_hits": null,
+     "model_p": 0.4,
+     "expected": 7.096,
+     "sd": 0.077,
+     "threshold": 7.11,
+     "backtest": {
+      "n": 2875,
+      "ok": true,
+      "base": 0.424,
+      "brier_model": 0.24,
+      "brier_base": 0.244,
+      "skill": 0.019,
+      "hit_rate": 0.599
+     },
+     "weight": 0.13,
+     "base_rate": 0.424,
+     "final_p": 0.42
+    },
+    "resolution": "Uses the value for the week ending 19 November 2026 as first shown by Freddie Mac, via FRED. Yes if it is above the 4-week average. Figures can be revised afterwards, and the first value shown is the one used."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-13-us-oil",
+   "made": "2026-11-13",
+   "resolves": "2026-11-24",
+   "kind": "indicator",
+   "indicator": "us-oil",
+   "domain": "economy",
+   "label": "WTI crude oil price",
+   "term": "us-oil",
+   "h_steps": 1,
+   "target_date": "2026-11-18",
+   "threshold": 89.62,
+   "direction": "higher",
+   "p": 0.53,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the WTI crude oil price close higher on 18 November 2026 than on 11 November 2026 (89.62)?",
+   "context": {
+    "measure": {
+     "why": "The spot price of West Texas Intermediate crude oil, a benchmark for energy costs that feed into inflation and transport prices. Day-to-day moves are close to a coin flip.",
+     "unit": "USD per barrel",
+     "source": {
+      "kind": "fred",
+      "series": "DCOILWTICO",
+      "name": "US Energy Information Administration, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DCOILWTICO"
+     },
+     "lag": "daily, with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-11",
+     "value": 89.62
+    },
+    "history": [
+     {
+      "d": "2026-03-11",
+      "v": 86.8
+     },
+     {
+      "d": "2026-03-18",
+      "v": 96.12
+     },
+     {
+      "d": "2026-03-25",
+      "v": 91.51
+     },
+     {
+      "d": "2026-04-01",
+      "v": 101.9
+     },
+     {
+      "d": "2026-04-08",
+      "v": 96.17
+     },
+     {
+      "d": "2026-04-15",
+      "v": 93.04
+     },
+     {
+      "d": "2026-04-22",
+      "v": 94.76
+     },
+     {
+      "d": "2026-04-29",
+      "v": 110.47
+     },
+     {
+      "d": "2026-05-06",
+      "v": 98.75
+     },
+     {
+      "d": "2026-05-13",
+      "v": 104.52
+     },
+     {
+      "d": "2026-05-20",
+      "v": 101.69
+     },
+     {
+      "d": "2026-05-27",
+      "v": 92.35
+     },
+     {
+      "d": "2026-06-03",
+      "v": 99.76
+     },
+     {
+      "d": "2026-06-10",
+      "v": 93.68
+     },
+     {
+      "d": "2026-06-17",
+      "v": 80.65
+     },
+     {
+      "d": "2026-06-24",
+      "v": 71.42
+     },
+     {
+      "d": "2026-07-01",
+      "v": 69.74
+     },
+     {
+      "d": "2026-07-08",
+      "v": 74.56
+     },
+     {
+      "d": "2026-07-15",
+      "v": 80.73
+     },
+     {
+      "d": "2026-07-22",
+      "v": 87.66
+     },
+     {
+      "d": "2026-07-29",
+      "v": 86.08
+     },
+     {
+      "d": "2026-08-05",
+      "v": 76.78
+     },
+     {
+      "d": "2026-08-12",
+      "v": 84.97
+     },
+     {
+      "d": "2026-08-19",
+      "v": 87.28
+     },
+     {
+      "d": "2026-08-26",
+      "v": 83.46
+     },
+     {
+      "d": "2026-09-02",
+      "v": 92.15
+     },
+     {
+      "d": "2026-09-09",
+      "v": 97.26
+     },
+     {
+      "d": "2026-09-16",
+      "v": 103.62
+     },
+     {
+      "d": "2026-09-23",
+      "v": 93.38
+     },
+     {
+      "d": "2026-09-30",
+      "v": 97.18
+     },
+     {
+      "d": "2026-10-07",
+      "v": 95.02
+     },
+     {
+      "d": "2026-10-14",
+      "v": 96.34
+     },
+     {
+      "d": "2026-10-21",
+      "v": 103.95
+     },
+     {
+      "d": "2026-10-28",
+      "v": 106.25
+     },
+     {
+      "d": "2026-11-04",
+      "v": 91.73
+     },
+     {
+      "d": "2026-11-11",
+      "v": 89.62
+     }
+    ],
+    "trend": {
+     "change": -14,
+     "over": "8 weeks",
+     "high_52": 110.47,
+     "low_52": 56.01
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2116,
+     "window_hits": null,
+     "model_p": 0.42,
+     "expected": 88.99,
+     "sd": 3.356,
+     "threshold": 89.62,
+     "backtest": {
+      "n": 2096,
+      "ok": true,
+      "base": 0.528,
+      "brier_model": 0.259,
+      "brier_base": 0.249,
+      "skill": -0.038,
+      "hit_rate": 0.498
+     },
+     "weight": 0,
+     "base_rate": 0.528,
+     "final_p": 0.53
+    },
+    "resolution": "Uses the last value on or before 18 November 2026 (not older than four days) from US Energy Information Administration, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -13086,18 +13526,18 @@
     "mean_brier": 0.202
    },
    "indicator-v1": {
-    "resolved": 26,
+    "resolved": 28,
     "open": 18,
-    "mean_brier": 0.262
+    "mean_brier": 0.26
    }
   },
   "open": 24,
-  "resolved": 56,
+  "resolved": 58,
   "voided": 0,
-  "mean_brier": 0.262,
+  "mean_brier": 0.261,
   "benchmark_brier": 0.25,
-  "skill": -0.05,
-  "mean_log_score": 0.719,
+  "skill": -0.04,
+  "mean_log_score": 0.717,
   "calibration": [
    {
     "range": "0-34%",
@@ -13107,9 +13547,9 @@
    },
    {
     "range": "34-67%",
-    "n": 43,
+    "n": 45,
     "mean_p": 0.5,
-    "observed": 0.28
+    "observed": 0.27
    },
    {
     "range": "67-100%",
