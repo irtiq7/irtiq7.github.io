@@ -11754,10 +11754,11 @@
     "resolution": "Uses the last value on or before 13 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 5.1,
+   "brier": 0.27,
+   "log_score": 0.734,
+   "result_note": "The value was 5.1, against 4.86 at the start (+0.24)."
   },
   {
    "id": "f-2026-11-10-usd-dkk",
@@ -13510,6 +13511,225 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-14-us-10y-yield",
+   "made": "2026-11-14",
+   "resolves": "2026-11-25",
+   "kind": "indicator",
+   "indicator": "us-10y-yield",
+   "domain": "economy",
+   "label": "US 10-year Treasury yield",
+   "term": "us-10y-yield",
+   "h_steps": 1,
+   "target_date": "2026-11-19",
+   "threshold": 5.1,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the US 10-year Treasury yield close higher on 19 November 2026 than on 12 November 2026 (5.1%)?",
+   "context": {
+    "measure": {
+     "why": "The yield on 10-year US government bonds, a benchmark for mortgage and company borrowing rates. Short-term moves are close to a coin flip, so these questions mostly teach how little can be predicted.",
+     "unit": "%",
+     "source": {
+      "kind": "fred",
+      "series": "DGS10",
+      "name": "Board of Governors of the Federal Reserve, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-12",
+     "value": 5.1
+    },
+    "history": [
+     {
+      "d": "2026-03-12",
+      "v": 4.27
+     },
+     {
+      "d": "2026-03-19",
+      "v": 4.25
+     },
+     {
+      "d": "2026-03-26",
+      "v": 4.42
+     },
+     {
+      "d": "2026-04-02",
+      "v": 4.31
+     },
+     {
+      "d": "2026-04-09",
+      "v": 4.29
+     },
+     {
+      "d": "2026-04-16",
+      "v": 4.32
+     },
+     {
+      "d": "2026-04-23",
+      "v": 4.34
+     },
+     {
+      "d": "2026-04-30",
+      "v": 4.4
+     },
+     {
+      "d": "2026-05-07",
+      "v": 4.41
+     },
+     {
+      "d": "2026-05-14",
+      "v": 4.47
+     },
+     {
+      "d": "2026-05-21",
+      "v": 4.57
+     },
+     {
+      "d": "2026-05-28",
+      "v": 4.45
+     },
+     {
+      "d": "2026-06-04",
+      "v": 4.47
+     },
+     {
+      "d": "2026-06-11",
+      "v": 4.45
+     },
+     {
+      "d": "2026-06-18",
+      "v": 4.46
+     },
+     {
+      "d": "2026-06-25",
+      "v": 4.4
+     },
+     {
+      "d": "2026-07-02",
+      "v": 4.49
+     },
+     {
+      "d": "2026-07-09",
+      "v": 4.54
+     },
+     {
+      "d": "2026-07-16",
+      "v": 4.57
+     },
+     {
+      "d": "2026-07-23",
+      "v": 4.71
+     },
+     {
+      "d": "2026-07-30",
+      "v": 4.68
+     },
+     {
+      "d": "2026-08-06",
+      "v": 4.69
+     },
+     {
+      "d": "2026-08-13",
+      "v": 4.63
+     },
+     {
+      "d": "2026-08-20",
+      "v": 4.69
+     },
+     {
+      "d": "2026-08-27",
+      "v": 4.67
+     },
+     {
+      "d": "2026-09-03",
+      "v": 4.77
+     },
+     {
+      "d": "2026-09-10",
+      "v": 4.95
+     },
+     {
+      "d": "2026-09-17",
+      "v": 4.94
+     },
+     {
+      "d": "2026-09-24",
+      "v": 5.18
+     },
+     {
+      "d": "2026-10-01",
+      "v": 5.24
+     },
+     {
+      "d": "2026-10-08",
+      "v": 5.22
+     },
+     {
+      "d": "2026-10-15",
+      "v": 5.1
+     },
+     {
+      "d": "2026-10-22",
+      "v": 4.96
+     },
+     {
+      "d": "2026-10-29",
+      "v": 4.98
+     },
+     {
+      "d": "2026-11-05",
+      "v": 4.84
+     },
+     {
+      "d": "2026-11-12",
+      "v": 5.1
+     }
+    ],
+    "trend": {
+     "change": 0.16,
+     "over": "8 weeks",
+     "high_52": 5.24,
+     "low_52": 4
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 3377,
+     "window_hits": null,
+     "model_p": 0.43,
+     "expected": 5.088,
+     "sd": 0.094,
+     "threshold": 5.1,
+     "backtest": {
+      "n": 3357,
+      "ok": true,
+      "base": 0.477,
+      "brier_model": 0.256,
+      "brier_base": 0.249,
+      "skill": -0.027,
+      "hit_rate": 0.523
+     },
+     "weight": 0,
+     "base_rate": 0.477,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 19 November 2026 (not older than four days) from Board of Governors of the Federal Reserve, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -13526,18 +13746,18 @@
     "mean_brier": 0.202
    },
    "indicator-v1": {
-    "resolved": 28,
+    "resolved": 29,
     "open": 18,
-    "mean_brier": 0.26
+    "mean_brier": 0.261
    }
   },
   "open": 24,
-  "resolved": 58,
+  "resolved": 59,
   "voided": 0,
   "mean_brier": 0.261,
   "benchmark_brier": 0.25,
   "skill": -0.04,
-  "mean_log_score": 0.717,
+  "mean_log_score": 0.718,
   "calibration": [
    {
     "range": "0-34%",
@@ -13547,9 +13767,9 @@
    },
    {
     "range": "34-67%",
-    "n": 45,
+    "n": 46,
     "mean_p": 0.5,
-    "observed": 0.27
+    "observed": 0.28
    },
    {
     "range": "67-100%",
