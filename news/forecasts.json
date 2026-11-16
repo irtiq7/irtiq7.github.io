@@ -13730,6 +13730,853 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-jensen-huang",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "jensen huang",
+   "label": "Jensen Huang",
+   "threshold": 46,
+   "p": 0.63,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Jensen Huang\" be in at least 46 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": {
+     "text": "Jen-Hsun \"Jensen\" Huang is a Taiwanese and American electrical engineer and business executive who is the co-founder, president, and CEO of Nvidia, one of the world's most valuable companies. As of October 2026, Forbes estimates his net worth at over US$200 billion, making him the seventh-wealthiest individual in the world.",
+     "title": "Jensen Huang",
+     "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 61,
+     "base_per_week": 2.6,
+     "ratio": 19.9,
+     "outlets": 11,
+     "by_category": {
+      "research": 0,
+      "tech": 41,
+      "business": 20
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      4,
+      9,
+      6,
+      8,
+      20,
+      11,
+      4,
+      2,
+      2
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-12",
+      "count": 20,
+      "share": 0.38
+     },
+     "first_seen": {
+      "tech": "2026-10-21",
+      "business": "2026-11-08"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "c8e685d468",
+      "title": "Nvidia Shares Slump In Premarket As Jensen Huang Reportedly Weighs CEO Comeback",
+      "url": "https://www.forbes.com/sites/zacharyfolk/2026/11/16/nvidia-shares-slip-in-premarket-as-jensen-huang-reportedly-weighs-ceo-comeback/",
+      "source": "forbes",
+      "category": "business",
+      "published": "2026-11-16T11:45:20.000Z",
+      "summary": "Huang stepped down as CEO on Thursday amid a scandal over his relationship with an alleged Chinese spy."
+     },
+     {
+      "id": "242d49a88f",
+      "title": "Nvidia Was Already in Trouble Before the Jensen Huang Mess",
+      "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
+      "source": "wired",
+      "category": "tech",
+      "published": "2026-11-16T11:00:00.000Z",
+      "summary": "Nvidia played a key role enabling the AI gold rush thanks in large part to its recently ousted CEO Jensen Huang. These companies are designing their own silicon to reduce costs and to gain some independence from Nvidia.Several startups now "
+     },
+     {
+      "id": "9e3d554c6c",
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-11-15T21:56:35.000Z",
+      "summary": "Or at least, I didn’t — a week ago, when I wrote about Nvidia’s board opening an investigation into then-CEO Jensen Huang, I assumed his job was safe. I mean, Jensen is Nvidia, right? And for most people, Jensen Huang is Nvidia."
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 52.2,
+     "expected": 52,
+     "threshold": 46,
+     "model_p": 0.82,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.63
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"jensen huang\", across the 32 sources this site reads. 46 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 61,
+    "base_per_week": 2.6,
+    "lambda": 52.2
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-faa",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "faa",
+   "label": "FAA",
+   "threshold": 7,
+   "p": 0.41,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"FAA\" be in at least 7 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 9,
+     "base_per_week": 0.3,
+     "ratio": 11.5,
+     "outlets": 6,
+     "by_category": {
+      "research": 0,
+      "tech": 6,
+      "business": 3
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      6,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-14",
+      "count": 6,
+      "share": 0.67
+     },
+     "first_seen": {
+      "tech": "2026-10-16",
+      "business": "2026-11-14"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "43a64e6ec9",
+      "title": "Work to replace old copper wire led to the FAA’s ground stop",
+      "url": "https://www.theverge.com/transportation/1033898/faa-ground-stop-sean-duffy-faa-copper-wire",
+      "source": "the-verge",
+      "category": "tech",
+      "published": "2026-11-14T17:44:28.000Z",
+      "summary": ""
+     },
+     {
+      "id": "62fa4528b2",
+      "title": "Air Travel Chaos Puts FAA Systems in Focus",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-14/air-travel-chaos-puts-faa-systems-in-focus-video",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-14T13:21:26.000Z",
+      "summary": ""
+     },
+     {
+      "id": "91c8b47536",
+      "title": "Nationwide Ground Stop At Airports Lifted, FAA Says",
+      "url": "https://www.forbes.com/sites/antoniopequenoiv/2026/11/13/nationwide-ground-stop-at-airports-lifted-faa-says/",
+      "source": "forbes",
+      "category": "business",
+      "published": "2026-11-14T02:42:01.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 7.7,
+     "expected": 8,
+     "threshold": 7,
+     "model_p": 0.65,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.41
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"faa\", across the 32 sources this site reads. 7 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 9,
+    "base_per_week": 0.3,
+    "lambda": 7.7
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-cpi",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "cpi",
+   "label": "CPI",
+   "threshold": 5,
+   "p": 0.47,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"CPI\" be in at least 5 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 7,
+     "base_per_week": 0,
+     "ratio": 15,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 7
+     },
+     "daily": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-10",
+      "count": 5,
+      "share": 0.71
+     },
+     "first_seen": {
+      "business": "2026-10-11"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "ae790d5986",
+      "title": "CPI, A Lagging Indicator, Came In Hot: The Fed Is About To Overreact",
+      "url": "https://seekingalpha.com/article/4966381-cpi-a-lagging-indicator-came-in-hot-the-fed-is-about-to-overreact?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-11-11T12:16:21.000Z",
+      "summary": ""
+     },
+     {
+      "id": "bc299c1024",
+      "title": "CoreWeave Quiets Doubts, US CPI Fuels Fed-Hike Bets",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-11/the-opening-trade-11-11-2026-video",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-11T11:45:20.000Z",
+      "summary": ""
+     },
+     {
+      "id": "0f154ce744",
+      "title": "U.S stock futures move sharply lower after hotter-than-expected CPI data",
+      "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-steady-after-techled-rebound-cpi-in-focus-5013763",
+      "source": "investing",
+      "category": "business",
+      "published": "2026-11-10T13:34:10.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 6,
+     "expected": 6,
+     "threshold": 5,
+     "model_p": 0.71,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.47
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"cpi\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 7,
+    "base_per_week": 0,
+    "lambda": 6
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-coreweave",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "coreweave",
+   "label": "CoreWeave",
+   "threshold": 11,
+   "p": 0.54,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"CoreWeave\" be in at least 11 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": {
+     "text": "CoreWeave, Inc. is an American cloud-computing company based in Livingston, New Jersey. As of 2026, the company operates 51 AI data centers, specialized data centers designed for higher parallel computing performance via heavy use of graphics processing units (GPUs).",
+     "title": "CoreWeave",
+     "url": "https://en.wikipedia.org/wiki/CoreWeave",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 15,
+     "base_per_week": 2.3,
+     "ratio": 5.6,
+     "outlets": 6,
+     "by_category": {
+      "research": 0,
+      "tech": 1,
+      "business": 14
+     },
+     "daily": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      2,
+      10,
+      3,
+      0,
+      0,
+      0,
+      0
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-11",
+      "count": 10,
+      "share": 0.67
+     },
+     "first_seen": {
+      "business": "2026-10-13",
+      "tech": "2026-10-19"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "3c89015a3c",
+      "title": "CoreWeave After The Midterms: Texas Moratorium Meets Debt",
+      "url": "https://seekingalpha.com/article/4966973-coreweave-after-the-midterms-texas-moratorium-meets-debt?source=feed_all_articles",
+      "source": "seeking-alpha",
+      "category": "business",
+      "published": "2026-11-12T13:45:33.000Z",
+      "summary": ""
+     },
+     {
+      "id": "109724450b",
+      "title": "CoreWeave Balances Capital Needs Against Expanding Data Center Footprint",
+      "url": "https://www.wsj.com/finance/investing/coreweave-balances-capital-needs-against-expanding-data-center-footprint-1933f5b5?mod=rss_markets_main",
+      "source": "wsj",
+      "category": "business",
+      "published": "2026-11-12T11:38:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "c063829a61",
+      "title": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
+      "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
+      "source": "techcrunch",
+      "category": "tech",
+      "published": "2026-11-11T19:54:00.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 13.1,
+     "expected": 13,
+     "threshold": 11,
+     "model_p": 0.76,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.54
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"coreweave\", across the 32 sources this site reads. 11 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 15,
+    "base_per_week": 2.3,
+    "lambda": 13.1
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-hong-kong",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "hong kong",
+   "label": "Hong Kong",
+   "threshold": 4,
+   "p": 0.4,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Hong Kong\" be in at least 4 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": {
+     "text": "Hong Kong is a special administrative region of China. Situated on China's southern coast just south of Shenzhen, it consists of Hong Kong Island, Kowloon, and the New Territories.",
+     "title": "Hong Kong",
+     "url": "https://en.wikipedia.org/wiki/Hong_Kong",
+     "source": "Wikipedia"
+    },
+    "mentions": {
+     "recent": 5,
+     "base_per_week": 1,
+     "ratio": 3.7,
+     "outlets": 3,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 5
+     },
+     "daily": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      3
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-16",
+      "count": 3,
+      "share": 0.6
+     },
+     "first_seen": {
+      "business": "2026-10-07"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "49409a639b",
+      "title": "Why Hong Kong Developer New World Is Struggling With Debt",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/why-hong-kong-developer-new-world-is-struggling-with-debt",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-16T11:38:53.000Z",
+      "summary": "Once a symbol of Hong Kong’s property-fueled prosperity, New World Development Co. has become one of its most visible casualties. After years of easy credit and aggressive expansion, the property giant – once among the most deep-pocketed in"
+     },
+     {
+      "id": "0dfd7c5eff",
+      "title": "Hong Kong developer New World’s shares tumble 40% on $3.2bn rights issue plan",
+      "url": "https://www.ft.com/content/9daa3a26-c49c-4c94-91af-0d4c2116d2e4?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-11-16T08:59:48.000Z",
+      "summary": "Ailing property group to offer new stock at 80% discount as it moves to slash debts"
+     },
+     {
+      "id": "60e68db014",
+      "title": "Hong Kong Property Developer New World’s Stock Plummets To Record Low On $3.2 Billion Rights Issue Plan",
+      "url": "https://www.forbes.com/sites/zinnialee/2026/11/16/hong-kong-property-developer-new-worlds-stock-plummets-to-record-low-on-32-billion-rights-issue-plan/",
+      "source": "forbes",
+      "category": "business",
+      "published": "2026-11-16T08:00:38.000Z",
+      "summary": "The rights issue marks the indebted property developer’s latest effort to tackle its liquidity crisis."
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 4.4,
+     "expected": 4,
+     "threshold": 4,
+     "model_p": 0.64,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.4
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"hong kong\", across the 32 sources this site reads. 4 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 5,
+    "base_per_week": 1,
+    "lambda": 4.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-16-anthropic-ipo",
+   "made": "2026-11-16",
+   "resolves": "2026-11-23",
+   "kind": "term-persistence",
+   "term": "anthropic ipo",
+   "label": "Anthropic IPO",
+   "threshold": 5,
+   "p": 0.38,
+   "model": "burst-persistence-v2",
+   "basis": "emerging",
+   "question": "Will \"Anthropic IPO\" be in at least 5 stories between 2026-11-17 and 2026-11-23?",
+   "context": {
+    "definition": null,
+    "mentions": {
+     "recent": 6,
+     "base_per_week": 1.9,
+     "ratio": 2.7,
+     "outlets": 4,
+     "by_category": {
+      "research": 0,
+      "tech": 0,
+      "business": 6
+     },
+     "daily": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2,
+      0,
+      0,
+      2
+     ],
+     "days": [
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-16"
+     ],
+     "peak": {
+      "day": "2026-11-10",
+      "count": 2,
+      "share": 0.33
+     },
+     "first_seen": {
+      "business": "2026-10-08",
+      "tech": "2026-10-27"
+     },
+     "lag_days": null
+    },
+    "examples": [
+     {
+      "id": "3e5905b3ce",
+      "title": "US Futures Drop as Market Looks to Nvidia Results, Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/us-futures-drop-as-market-looks-to-nvidia-results-anthropic-ipo",
+      "source": "bloomberg",
+      "category": "business",
+      "published": "2026-11-16T13:17:25.000Z",
+      "summary": "US equity futures were trading lower ahead of the opening bell on Monday as the selloff in technology stocks deepened, with investors looking to Nvidia Corp. earnings and the expected initial public offering of Anthropic PBC this week"
+     },
+     {
+      "id": "bad0e371e9",
+      "title": "Nvidia earnings, Anthropic IPO Ahead in New Test for AI Economy",
+      "url": "https://www.wsj.com/cfo-journal/nvidia-earnings-anthropic-ipo-ahead-in-new-test-for-ai-economy-7dced222?mod=rss_markets_main",
+      "source": "wsj",
+      "category": "business",
+      "published": "2026-11-16T12:33:00.000Z",
+      "summary": ""
+     },
+     {
+      "id": "9896210f0d",
+      "title": "Sam Bankman-Fried would have made nearly $40bn in Anthropic IPO",
+      "url": "https://www.ft.com/content/0ef40ac9-6d01-428f-98c8-a52bf5b9a787?syn-25a6b1a6=1",
+      "source": "ft",
+      "category": "business",
+      "published": "2026-11-13T23:39:26.000Z",
+      "summary": ""
+     }
+    ],
+    "reasoning": {
+     "kind": "persistence",
+     "lambda": 5.4,
+     "expected": 5,
+     "threshold": 5,
+     "model_p": 0.62,
+     "backtest": {
+      "cases": 7262,
+      "hits": 3652,
+      "origins": 31,
+      "horizon_days": 7,
+      "rate": 0.5,
+      "mean_model": 0.73,
+      "shift": -0.99
+     },
+     "final_p": 0.38
+    },
+    "resolution": "Counts distinct stories published 2026-11-17 to 2026-11-23 (UTC) whose headline contains \"anthropic ipo\", across the 32 sources this site reads. 5 or more is yes."
+   },
+   "inputs": {
+    "recent_7d": 6,
+    "base_per_week": 1.9,
+    "lambda": 5.4
+   },
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -13742,7 +14589,7 @@
    },
    "burst-persistence-v2": {
     "resolved": 15,
-    "open": 6,
+    "open": 12,
     "mean_brier": 0.202
    },
    "indicator-v1": {
@@ -13751,7 +14598,7 @@
     "mean_brier": 0.261
    }
   },
-  "open": 24,
+  "open": 30,
   "resolved": 59,
   "voided": 0,
   "mean_brier": 0.261,
