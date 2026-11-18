@@ -11111,10 +11111,20 @@
     "base_per_week": 0.3,
     "lambda": 7.7
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 2,
+   "brier": 0.185,
+   "log_score": 0.562,
+   "daily_after": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "result_note": "2 stories over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-09-blue-wave",
@@ -11250,10 +11260,20 @@
     "base_per_week": 0.3,
     "lambda": 6.8
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.212,
+   "log_score": 0.616,
+   "daily_after": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-09-jensen-huang",
@@ -11394,10 +11414,20 @@
     "base_per_week": 0.3,
     "lambda": 6.8
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 58,
+   "brier": 0.292,
+   "log_score": 0.777,
+   "daily_after": [
+    6,
+    8,
+    20,
+    11,
+    4,
+    2,
+    7
+   ],
+   "result_note": "58 stories over 7 days, at most 20 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-09-amd",
@@ -11538,10 +11568,20 @@
     "base_per_week": 0.3,
     "lambda": 4.3
    },
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 1,
+   "brier": 0.16,
+   "log_score": 0.511,
+   "daily_after": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "result_note": "1 story over 7 days, at most 1 on any one day; mentions stayed fairly even."
   },
   {
    "id": "f-2026-11-10-us-10y-yield",
@@ -12197,10 +12237,11 @@
     "resolution": "Uses the last value on or before 13 November 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 81.71,
+   "brier": 0.137,
+   "log_score": 0.462,
+   "result_note": "The value was 81.71, against 81.4 at the start (+0.31)."
   },
   {
    "id": "f-2026-11-11-us-stocks",
@@ -12416,10 +12457,11 @@
     "resolution": "Uses the last value on or before 17 November 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 7416.59,
+   "brier": 0.372,
+   "log_score": 0.942,
+   "result_note": "The value was 7,416.59, against 7,520.93 at the start (-104.34)."
   },
   {
    "id": "f-2026-11-11-arxiv-sound-localization",
@@ -13073,10 +13115,11 @@
     "resolution": "Uses the last value on or before 17 November 2026 (not older than four days) from Chicago Board Options Exchange, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 1,
+   "observed": 22.91,
+   "brier": 0.27,
+   "log_score": 0.734,
+   "result_note": "The value was 22.91, against 19.46 at the start (+3.45)."
   },
   {
    "id": "f-2026-11-13-us-mortgage",
@@ -15457,6 +15500,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-18-indeed-software",
+   "made": "2026-11-18",
+   "resolves": "2026-11-26",
+   "kind": "indicator",
+   "indicator": "indeed-software",
+   "domain": "jobs",
+   "label": "Indeed software development job postings",
+   "term": "indeed-software",
+   "h_steps": 1,
+   "target_date": "2026-11-20",
+   "threshold": 81.7053003084,
+   "direction": "higher",
+   "p": 0.64,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the Indeed software development job postings be higher on 20 November 2026 than on 13 November 2026 (81.7)?",
+   "context": {
+    "measure": {
+     "why": "Postings for software development jobs on Indeed in the US, relative to 1 February 2020 (set to 100). A measure of how much employers are hiring in the field.",
+     "unit": "index, 1 Feb 2020 = 100",
+     "source": {
+      "kind": "fred",
+      "series": "IHLIDXUSTPSOFTDEVE",
+      "name": "Indeed Hiring Lab, via FRED",
+      "url": "https://fred.stlouisfed.org/series/IHLIDXUSTPSOFTDEVE"
+     },
+     "lag": "updated daily with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-13",
+     "value": 81.71
+    },
+    "history": [
+     {
+      "d": "2026-03-13",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-20",
+      "v": 71.43
+     },
+     {
+      "d": "2026-03-27",
+      "v": 72.75
+     },
+     {
+      "d": "2026-04-03",
+      "v": 72.48
+     },
+     {
+      "d": "2026-04-10",
+      "v": 72.18
+     },
+     {
+      "d": "2026-04-17",
+      "v": 73.12
+     },
+     {
+      "d": "2026-04-24",
+      "v": 73.7
+     },
+     {
+      "d": "2026-05-01",
+      "v": 72.94
+     },
+     {
+      "d": "2026-05-08",
+      "v": 74.64
+     },
+     {
+      "d": "2026-05-15",
+      "v": 74.04
+     },
+     {
+      "d": "2026-05-22",
+      "v": 74.42
+     },
+     {
+      "d": "2026-05-29",
+      "v": 73.63
+     },
+     {
+      "d": "2026-06-05",
+      "v": 73.49
+     },
+     {
+      "d": "2026-06-12",
+      "v": 72.88
+     },
+     {
+      "d": "2026-06-19",
+      "v": 72.66
+     },
+     {
+      "d": "2026-06-26",
+      "v": 73.49
+     },
+     {
+      "d": "2026-07-03",
+      "v": 73.78
+     },
+     {
+      "d": "2026-07-10",
+      "v": 74.53
+     },
+     {
+      "d": "2026-07-17",
+      "v": 75.59
+     },
+     {
+      "d": "2026-07-24",
+      "v": 75.48
+     },
+     {
+      "d": "2026-07-31",
+      "v": 75.44
+     },
+     {
+      "d": "2026-08-07",
+      "v": 73.63
+     },
+     {
+      "d": "2026-08-14",
+      "v": 74.34
+     },
+     {
+      "d": "2026-08-21",
+      "v": 74.55
+     },
+     {
+      "d": "2026-08-28",
+      "v": 74.59
+     },
+     {
+      "d": "2026-09-04",
+      "v": 76.11
+     },
+     {
+      "d": "2026-09-11",
+      "v": 76.61
+     },
+     {
+      "d": "2026-09-18",
+      "v": 77.31
+     },
+     {
+      "d": "2026-09-25",
+      "v": 78.08
+     },
+     {
+      "d": "2026-10-02",
+      "v": 78.34
+     },
+     {
+      "d": "2026-10-09",
+      "v": 78.09
+     },
+     {
+      "d": "2026-10-16",
+      "v": 78.86
+     },
+     {
+      "d": "2026-10-23",
+      "v": 80.79
+     },
+     {
+      "d": "2026-10-30",
+      "v": 81.58
+     },
+     {
+      "d": "2026-11-06",
+      "v": 81.4
+     },
+     {
+      "d": "2026-11-13",
+      "v": 81.71
+     }
+    ],
+    "trend": {
+     "change": 4.4,
+     "over": "8 weeks",
+     "high_52": 81.71,
+     "low_52": 66.33
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 346,
+     "window_hits": null,
+     "model_p": 0.64,
+     "expected": 81.99,
+     "sd": 0.66,
+     "threshold": 81.7053003084,
+     "backtest": {
+      "n": 326,
+      "ok": true,
+      "base": 0.5,
+      "brier_model": 0.183,
+      "brier_base": 0.25,
+      "skill": 0.268,
+      "hit_rate": 0.73
+     },
+     "weight": 1,
+     "base_rate": 0.5,
+     "final_p": 0.64
+    },
+    "resolution": "Uses the last value on or before 20 November 2026 (not older than four days) from Indeed Hiring Lab, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-18-us-vix",
+   "made": "2026-11-18",
+   "resolves": "2026-11-29",
+   "kind": "indicator",
+   "indicator": "us-vix",
+   "domain": "economy",
+   "label": "VIX volatility index",
+   "term": "us-vix",
+   "h_steps": 1,
+   "target_date": "2026-11-23",
+   "threshold": 22.91,
+   "direction": "higher",
+   "p": 0.48,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the VIX volatility index close higher on 23 November 2026 than on 16 November 2026 (22.91)?",
+   "context": {
+    "measure": {
+     "why": "The market's expected swing in US stocks over the next 30 days, drawn from option prices and often called the fear gauge. Low readings mean calm, spikes mean investors are paying for protection.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "VIXCLS",
+      "name": "Chicago Board Options Exchange, via FRED",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-16",
+     "value": 22.91
+    },
+    "history": [
+     {
+      "d": "2026-03-16",
+      "v": 23.51
+     },
+     {
+      "d": "2026-03-23",
+      "v": 26.15
+     },
+     {
+      "d": "2026-03-30",
+      "v": 30.61
+     },
+     {
+      "d": "2026-04-06",
+      "v": 24.17
+     },
+     {
+      "d": "2026-04-13",
+      "v": 19.12
+     },
+     {
+      "d": "2026-04-20",
+      "v": 18.87
+     },
+     {
+      "d": "2026-04-27",
+      "v": 18.02
+     },
+     {
+      "d": "2026-05-04",
+      "v": 18.29
+     },
+     {
+      "d": "2026-05-11",
+      "v": 18.38
+     },
+     {
+      "d": "2026-05-18",
+      "v": 17.82
+     },
+     {
+      "d": "2026-05-25",
+      "v": 16.59
+     },
+     {
+      "d": "2026-06-01",
+      "v": 16.05
+     },
+     {
+      "d": "2026-06-08",
+      "v": 18.92
+     },
+     {
+      "d": "2026-06-15",
+      "v": 16.2
+     },
+     {
+      "d": "2026-06-22",
+      "v": 17.28
+     },
+     {
+      "d": "2026-06-29",
+      "v": 17.65
+     },
+     {
+      "d": "2026-07-06",
+      "v": 15.57
+     },
+     {
+      "d": "2026-07-13",
+      "v": 17.16
+     },
+     {
+      "d": "2026-07-20",
+      "v": 18.65
+     },
+     {
+      "d": "2026-07-27",
+      "v": 18.67
+     },
+     {
+      "d": "2026-08-03",
+      "v": 15.86
+     },
+     {
+      "d": "2026-08-10",
+      "v": 15.46
+     },
+     {
+      "d": "2026-08-17",
+      "v": 15.19
+     },
+     {
+      "d": "2026-08-24",
+      "v": 15.85
+     },
+     {
+      "d": "2026-08-31",
+      "v": 14.92
+     },
+     {
+      "d": "2026-09-07",
+      "v": 15.3
+     },
+     {
+      "d": "2026-09-14",
+      "v": 17.1
+     },
+     {
+      "d": "2026-09-21",
+      "v": 14.87
+     },
+     {
+      "d": "2026-09-28",
+      "v": 16.07
+     },
+     {
+      "d": "2026-10-05",
+      "v": 15.52
+     },
+     {
+      "d": "2026-10-12",
+      "v": 15.21
+     },
+     {
+      "d": "2026-10-19",
+      "v": 18.44
+     },
+     {
+      "d": "2026-10-26",
+      "v": 18.39
+     },
+     {
+      "d": "2026-11-02",
+      "v": 21.15
+     },
+     {
+      "d": "2026-11-09",
+      "v": 19.92
+     },
+     {
+      "d": "2026-11-16",
+      "v": 22.91
+     }
+    ],
+    "trend": {
+     "change": 8.04,
+     "over": "8 weeks",
+     "high_52": 30.61,
+     "low_52": 14.08
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 1916,
+     "window_hits": null,
+     "model_p": 0.61,
+     "expected": 23.526,
+     "sd": 2.136,
+     "threshold": 22.91,
+     "backtest": {
+      "n": 1896,
+      "ok": true,
+      "base": 0.478,
+      "brier_model": 0.269,
+      "brier_base": 0.25,
+      "skill": -0.079,
+      "hit_rate": 0.425
+     },
+     "weight": 0,
+     "base_rate": 0.478,
+     "final_p": 0.48
+    },
+    "resolution": "Uses the last value on or before 23 November 2026 (not older than four days) from Chicago Board Options Exchange, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -15468,23 +15949,23 @@
     "mean_brier": 0.32
    },
    "burst-persistence-v2": {
-    "resolved": 15,
-    "open": 12,
-    "mean_brier": 0.202
+    "resolved": 19,
+    "open": 8,
+    "mean_brier": 0.204
    },
    "indicator-v1": {
-    "resolved": 33,
-    "open": 18,
+    "resolved": 36,
+    "open": 17,
     "mean_brier": 0.262
    }
   },
-  "open": 30,
-  "resolved": 63,
+  "open": 25,
+  "resolved": 70,
   "voided": 0,
-  "mean_brier": 0.262,
+  "mean_brier": 0.259,
   "benchmark_brier": 0.25,
-  "skill": -0.05,
-  "mean_log_score": 0.719,
+  "skill": -0.04,
+  "mean_log_score": 0.713,
   "calibration": [
    {
     "range": "0-34%",
@@ -15494,9 +15975,9 @@
    },
    {
     "range": "34-67%",
-    "n": 50,
+    "n": 57,
     "mean_p": 0.5,
-    "observed": 0.28
+    "observed": 0.3
    },
    {
     "range": "67-100%",
