@@ -13554,10 +13554,11 @@
     "resolution": "Uses the last value on or before 18 November 2026 (not older than four days) from US Energy Information Administration, via FRED. Yes if it is above the starting value."
    },
    "inputs": {},
-   "outcome": null,
-   "observed": null,
-   "brier": null,
-   "log_score": null
+   "outcome": 0,
+   "observed": 89.53,
+   "brier": 0.281,
+   "log_score": 0.755,
+   "result_note": "The value was 89.53, against 89.62 at the start (-0.09)."
   },
   {
    "id": "f-2026-11-14-us-10y-yield",
@@ -15938,6 +15939,444 @@
    "observed": null,
    "brier": null,
    "log_score": null
+  },
+  {
+   "id": "f-2026-11-19-us-stocks",
+   "made": "2026-11-19",
+   "resolves": "2026-12-01",
+   "kind": "indicator",
+   "indicator": "us-stocks",
+   "domain": "economy",
+   "label": "S&P 500 stock index",
+   "term": "us-stocks",
+   "h_steps": 1,
+   "target_date": "2026-11-25",
+   "threshold": 7323.63,
+   "direction": "higher",
+   "p": 0.61,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the S&P 500 stock index close higher on 25 November 2026 than on 18 November 2026 (7,323.63)?",
+   "context": {
+    "measure": {
+     "why": "An index of 500 large US companies, the usual shorthand for the stock market. These questions teach base rates: the index rises in more weeks than it falls, yet any single week is close to a coin flip.",
+     "unit": "points",
+     "source": {
+      "kind": "fred",
+      "series": "SP500",
+      "name": "S&P Dow Jones Indices, via FRED",
+      "url": "https://fred.stlouisfed.org/series/SP500"
+     },
+     "lag": "daily close",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-18",
+     "value": 7323.63
+    },
+    "history": [
+     {
+      "d": "2026-03-18",
+      "v": 6624.7
+     },
+     {
+      "d": "2026-03-25",
+      "v": 6591.9
+     },
+     {
+      "d": "2026-04-01",
+      "v": 6575.32
+     },
+     {
+      "d": "2026-04-08",
+      "v": 6782.81
+     },
+     {
+      "d": "2026-04-15",
+      "v": 7022.95
+     },
+     {
+      "d": "2026-04-22",
+      "v": 7137.9
+     },
+     {
+      "d": "2026-04-29",
+      "v": 7135.95
+     },
+     {
+      "d": "2026-05-06",
+      "v": 7365.12
+     },
+     {
+      "d": "2026-05-13",
+      "v": 7444.25
+     },
+     {
+      "d": "2026-05-20",
+      "v": 7432.97
+     },
+     {
+      "d": "2026-05-27",
+      "v": 7520.36
+     },
+     {
+      "d": "2026-06-03",
+      "v": 7553.68
+     },
+     {
+      "d": "2026-06-10",
+      "v": 7266.99
+     },
+     {
+      "d": "2026-06-17",
+      "v": 7420.1
+     },
+     {
+      "d": "2026-06-24",
+      "v": 7358.22
+     },
+     {
+      "d": "2026-07-01",
+      "v": 7483.23
+     },
+     {
+      "d": "2026-07-08",
+      "v": 7482.71
+     },
+     {
+      "d": "2026-07-15",
+      "v": 7572.4
+     },
+     {
+      "d": "2026-07-22",
+      "v": 7498.96
+     },
+     {
+      "d": "2026-07-29",
+      "v": 7316.15
+     },
+     {
+      "d": "2026-08-05",
+      "v": 7723.55
+     },
+     {
+      "d": "2026-08-12",
+      "v": 7748.5
+     },
+     {
+      "d": "2026-08-19",
+      "v": 7707.98
+     },
+     {
+      "d": "2026-08-26",
+      "v": 7675.7
+     },
+     {
+      "d": "2026-09-02",
+      "v": 7666.6
+     },
+     {
+      "d": "2026-09-09",
+      "v": 7636.36
+     },
+     {
+      "d": "2026-09-16",
+      "v": 7551.81
+     },
+     {
+      "d": "2026-09-23",
+      "v": 7706.03
+     },
+     {
+      "d": "2026-09-30",
+      "v": 7651.54
+     },
+     {
+      "d": "2026-10-07",
+      "v": 7801.77
+     },
+     {
+      "d": "2026-10-14",
+      "v": 7718.94
+     },
+     {
+      "d": "2026-10-21",
+      "v": 7757.17
+     },
+     {
+      "d": "2026-10-28",
+      "v": 7743.98
+     },
+     {
+      "d": "2026-11-04",
+      "v": 7688.62
+     },
+     {
+      "d": "2026-11-11",
+      "v": 7619.38
+     },
+     {
+      "d": "2026-11-18",
+      "v": 7323.63
+     }
+    ],
+    "trend": {
+     "change": -382.4,
+     "over": "8 weeks",
+     "high_52": 7801.77,
+     "low_52": 6575.32
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 514,
+     "window_hits": null,
+     "model_p": 0.35,
+     "expected": 7283.785,
+     "sd": 107.06,
+     "threshold": 7323.63,
+     "backtest": {
+      "n": 494,
+      "ok": true,
+      "base": 0.611,
+      "brier_model": 0.26,
+      "brier_base": 0.238,
+      "skill": -0.094,
+      "hit_rate": 0.52
+     },
+     "weight": 0,
+     "base_rate": 0.611,
+     "final_p": 0.61
+    },
+    "resolution": "Uses the last value on or before 25 November 2026 (not older than four days) from S&P Dow Jones Indices, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
+  },
+  {
+   "id": "f-2026-11-19-us-oil",
+   "made": "2026-11-19",
+   "resolves": "2026-11-30",
+   "kind": "indicator",
+   "indicator": "us-oil",
+   "domain": "economy",
+   "label": "WTI crude oil price",
+   "term": "us-oil",
+   "h_steps": 1,
+   "target_date": "2026-11-24",
+   "threshold": 89.53,
+   "direction": "higher",
+   "p": 0.53,
+   "model": "indicator-v1",
+   "basis": "indicator",
+   "question": "Will the WTI crude oil price close higher on 24 November 2026 than on 17 November 2026 (89.53)?",
+   "context": {
+    "measure": {
+     "why": "The spot price of West Texas Intermediate crude oil, a benchmark for energy costs that feed into inflation and transport prices. Day-to-day moves are close to a coin flip.",
+     "unit": "USD per barrel",
+     "source": {
+      "kind": "fred",
+      "series": "DCOILWTICO",
+      "name": "US Energy Information Administration, via FRED",
+      "url": "https://fred.stlouisfed.org/series/DCOILWTICO"
+     },
+     "lag": "daily, with a short delay",
+     "freq": "daily"
+    },
+    "latest": {
+     "date": "2026-11-17",
+     "value": 89.53
+    },
+    "history": [
+     {
+      "d": "2026-03-17",
+      "v": 96.01
+     },
+     {
+      "d": "2026-03-24",
+      "v": 93.18
+     },
+     {
+      "d": "2026-03-31",
+      "v": 102.86
+     },
+     {
+      "d": "2026-04-07",
+      "v": 114.58
+     },
+     {
+      "d": "2026-04-14",
+      "v": 93.07
+     },
+     {
+      "d": "2026-04-21",
+      "v": 93.64
+     },
+     {
+      "d": "2026-04-28",
+      "v": 103.45
+     },
+     {
+      "d": "2026-05-05",
+      "v": 105.66
+     },
+     {
+      "d": "2026-05-12",
+      "v": 105.78
+     },
+     {
+      "d": "2026-05-19",
+      "v": 112.09
+     },
+     {
+      "d": "2026-05-26",
+      "v": 97.63
+     },
+     {
+      "d": "2026-06-02",
+      "v": 97.47
+     },
+     {
+      "d": "2026-06-09",
+      "v": 91.9
+     },
+     {
+      "d": "2026-06-16",
+      "v": 79.8
+     },
+     {
+      "d": "2026-06-23",
+      "v": 74.62
+     },
+     {
+      "d": "2026-06-30",
+      "v": 70.56
+     },
+     {
+      "d": "2026-07-07",
+      "v": 71.53
+     },
+     {
+      "d": "2026-07-14",
+      "v": 80.44
+     },
+     {
+      "d": "2026-07-21",
+      "v": 86.04
+     },
+     {
+      "d": "2026-07-28",
+      "v": 80.91
+     },
+     {
+      "d": "2026-08-04",
+      "v": 77.33
+     },
+     {
+      "d": "2026-08-11",
+      "v": 84.77
+     },
+     {
+      "d": "2026-08-18",
+      "v": 86.48
+     },
+     {
+      "d": "2026-08-25",
+      "v": 83.9
+     },
+     {
+      "d": "2026-09-01",
+      "v": 91.48
+     },
+     {
+      "d": "2026-09-08",
+      "v": 94.21
+     },
+     {
+      "d": "2026-09-15",
+      "v": 107.02
+     },
+     {
+      "d": "2026-09-22",
+      "v": 96.41
+     },
+     {
+      "d": "2026-09-29",
+      "v": 96.16
+     },
+     {
+      "d": "2026-10-06",
+      "v": 96.24
+     },
+     {
+      "d": "2026-10-13",
+      "v": 95.39
+     },
+     {
+      "d": "2026-10-20",
+      "v": 107.89
+     },
+     {
+      "d": "2026-10-27",
+      "v": 103.37
+     },
+     {
+      "d": "2026-11-03",
+      "v": 99.64
+     },
+     {
+      "d": "2026-11-10",
+      "v": 89.62
+     },
+     {
+      "d": "2026-11-17",
+      "v": 89.53
+     }
+    ],
+    "trend": {
+     "change": -6.88,
+     "over": "8 weeks",
+     "high_52": 114.58,
+     "low_52": 55.44
+    },
+    "reasoning": {
+     "method": "normal",
+     "q": "higher",
+     "k": 6,
+     "win": null,
+     "h": 1,
+     "window_n": 2115,
+     "window_hits": null,
+     "model_p": 0.44,
+     "expected": 88.971,
+     "sd": 3.805,
+     "threshold": 89.53,
+     "backtest": {
+      "n": 2095,
+      "ok": true,
+      "base": 0.532,
+      "brier_model": 0.26,
+      "brier_base": 0.249,
+      "skill": -0.046,
+      "hit_rate": 0.501
+     },
+     "weight": 0,
+     "base_rate": 0.532,
+     "final_p": 0.53
+    },
+    "resolution": "Uses the last value on or before 24 November 2026 (not older than four days) from US Energy Information Administration, via FRED. Yes if it is above the starting value."
+   },
+   "inputs": {},
+   "outcome": null,
+   "observed": null,
+   "brier": null,
+   "log_score": null
   }
  ],
  "summary": {
@@ -15954,13 +16393,13 @@
     "mean_brier": 0.204
    },
    "indicator-v1": {
-    "resolved": 36,
-    "open": 17,
-    "mean_brier": 0.262
+    "resolved": 37,
+    "open": 18,
+    "mean_brier": 0.263
    }
   },
-  "open": 25,
-  "resolved": 70,
+  "open": 26,
+  "resolved": 71,
   "voided": 0,
   "mean_brier": 0.259,
   "benchmark_brier": 0.25,
@@ -15975,9 +16414,9 @@
    },
    {
     "range": "34-67%",
-    "n": 57,
+    "n": 58,
     "mean_p": 0.5,
-    "observed": 0.3
+    "observed": 0.29
    },
    {
     "range": "67-100%",
